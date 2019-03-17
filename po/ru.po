@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 19:22+0100\n"
-"PO-Revision-Date: 2019-02-05 10:33+0200\n"
+"POT-Creation-Date: 2019-03-16 11:34+0330\n"
+"PO-Revision-Date: 2019-03-17 13:14+0200\n"
 "Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
 "Language-Team: openPLi Dimitrij\n"
 "Language: ru\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 2.0.4\n"
 
 msgid ""
 "\n"
@@ -432,10 +432,6 @@ msgstr "%s%% Авто инсталляция %s"
 #, python-format
 msgid "%s%d min"
 msgstr "%s%d мин"
-
-#, python-format
-msgid "%s%d%s"
-msgstr "%s%d%s"
 
 #, python-format
 msgid "%s/%s: %s"
@@ -3160,7 +3156,7 @@ msgstr "Энигма (ре)стартов: %d\n"
 
 #, python-format
 msgid "Enigma debug level: %d\n"
-msgstr "Enigma - уровень отладки: %d\n"
+msgstr "Энигма - уровень отладки: %d\n"
 
 msgid "Enigma version: "
 msgstr "Версия энигмы: "
@@ -6112,6 +6108,18 @@ msgstr "Подготовка... Пожалуйста, подождите"
 msgid "Press '0' to toggle PiP mode"
 msgstr "Нажмите '0', для смены режима PiP."
 
+msgid "Press 'OK' for attach function."
+msgstr "Нажмите 'OK' для назначения функции."
+
+msgid "Press 'OK' for attach next function or 'CH+/-' for edit attached."
+msgstr "Нажмите 'OK'для назначения следуещей функции или 'CH+/-' для редактирования назначенного."
+
+msgid "Press 'OK' for remove item or 'CH+/-' for toggle to list of features."
+msgstr "Нажмите 'OK' для удаления записи или 'CH+/-' для переключения к списку функций."
+
+msgid "Press 'OK' for remove item or < > for change order or 'CH+/-' for toggle to list of features."
+msgstr "Нажмите 'OK'  для удаления записи или  < > для изменения порядка или 'CH+/-' для переключения к списку функций."
+
 msgid "Press INFO on your remote control for additional information."
 msgstr "Нажмите кнопку INFO на Вашем пульте Д/У для дополнительной информации."
 
@@ -6160,6 +6168,12 @@ msgstr "Нажмите ОК для подтверждения или отмен�
 
 msgid "Press OK, save and exit..."
 msgstr "Нажмите ОК, сохранить и выйти..."
+
+msgid "Press or select button and then press 'OK' for attach function."
+msgstr "Нажмите или выберите кнопку, а затем нажмите 'OK' для назначения функции."
+
+msgid "Press or select button and then press 'OK' for attach next function or edit attached."
+msgstr "Нажмите или выберите кнопку, а затем нажмите 'OK' для назначения функции или редактирования назначенного."
 
 msgid "Press yellow to set this interface as default interface."
 msgstr "Нажмите желтую кнопку для установки этого интерфейса как дефолтный."
@@ -11506,3 +11520,6 @@ msgstr "переключено"
 
 msgid "®"
 msgstr "®"
+
+msgid " min"
+msgstr " мин"
