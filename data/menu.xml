@@ -13,6 +13,79 @@
 	<code> .. code .. </code>
 		"exec"s code
 -->
+
+
+	<!-- Menu / SatLodge by lululla-->
+	<menu weight="1" level="0" text="SatLodge" entryID="SatLodge">
+		<id val="SatLodge" />    
+	    <item weight="5" level="0" text="SatLodge Panel" entryID="slPanel">  
+    <code>
+from Plugins.SatLodge.slPanel.plugin import *
+self.session.open(logoStrt)
+</code>
+        </item>  
+        
+	    <item weight="10" level="0" text="SatLodge Manager" entryID="slManager">  
+    <code>
+from Plugins.SatLodge.slManager.plugin import *
+self.session.open(slManager)
+</code>
+        </item>  
+      
+	    <item weight="12" level="0" text="SatLodge Image" entryID="STBmodel">  
+    <code>
+from Plugins.SatLodge.slPanel.main import STBmodel
+self.session.open(STBmodel)
+</code>
+        </item>          
+        
+	    <item weight="15" level="0" text="EPG Cache Path" entryID="EPGCacheSetupScreen">  
+    <code>
+from Plugins.SatLodge.EPGCacheSelector.plugin import * 
+self.session.open(EPGCacheSetupScreen)
+</code>
+        </item>  
+        
+        
+	    <item weight="17" level="0" text="Picon Path" entryID="SetPiconPath">  
+    <code>
+from Plugins.SatLodge.PiconPathSet.plugin import * 
+self.session.open(SetPiconPath)
+</code>
+        </item>  
+                
+	    <item weight="20" level="0" text="Ipkg Install" entryID="IpkgInstaller">  
+    <code>
+from Tools.Directories import fileExists
+if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaScanner/plugin.pyo"):
+    from Plugins.Extensions.MediaScanner.plugin import main
+    main(self.session)
+else: 
+    from Screens.MessageBox import MessageBox
+    self.session.open(MessageBox, _("Sorry, %s has not been installed!") % ("MediaScanner"), MessageBox.TYPE_INFO, timeout = 5)
+
+</code>
+        </item>  
+<!--        
+	    <item weight="25" level="0" text="Mount Manager" entryID="DevicesMountPanel">  
+    <code>
+    
+from Plugins.SystemPlugins.MountManager.plugin import * 
+self.session.open(DevicesMountPanel)
+</code>
+        </item>         
+-->        
+                
+<item weight="30" level="0" text="Software update" entryID="software_update"><screen module="SoftwareUpdate" screen="UpdatePlugin"/></item>        
+        
+<item weight="40" level="0" text="About SatLodge"  entryID="about_screen"><screen module="About"/></item>
+
+             
+	</menu>
+    
+    
+
+
 		<item level="0" text="Timer" entryID="timer_edit"><screen module="TimerEdit" screen="TimerEditList"/></item>
 		<item level="1" text="VCR scart" entryID="scart_switch" configcondition="config.usage.show_vcr_scart" requires="ScartSwitch"><code>self.session.scart.VCRSbChanged(3)</code></item>
 
@@ -28,11 +101,13 @@
 			<id val="setup"/>
 			<menu weight="7" level="0" text="Service searching" entryID="service_searching_selection">
 				<id val="scan"/>
+                
 				<item text="Tuner configuration" entryID="tuner_setup" conditional="nimmanager.nim_slots"><screen module="Satconfig" screen="NimSelection"/></item>
 				<item text="Automatic scan" entryID="auto_scan" conditional="nimmanager.somethingConnected()"><screen module="ScanSetup" screen="ScanSimple"/></item>
 				<item text="Manual scan" entryID="manual_scan" conditional="nimmanager.somethingConnected()"><screen module="ScanSetup"/></item>
+
 				<item text="Fallback remote receiver setup" entryID="fallbacktuner_settings"><screen module="SetupFallbacktuner"/></item>
-                
+
 			</menu>
 			<menu weight="5" level="0" text="System" entryID="system_selection">
 				<id val="system"/>
