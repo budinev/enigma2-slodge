@@ -31,6 +31,13 @@ from Plugins.SatLodge.slManager.plugin import *
 self.session.open(slManager)
 </code>
         </item>  
+		
+	    <item weight="12" level="0" text="SatLodge Settings" entryID="slSettings">  
+    <code>
+from Plugins.SatLodge.slSettings.plugin import *
+self.session.open(MainSetting)
+</code>
+        </item>          
       
 	    <item weight="12" level="0" text="SatLodge Image" entryID="STBmodel">  
     <code>
