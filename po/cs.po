@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-25 06:50+0200\n"
+"POT-Creation-Date: 2019-06-24 19:27+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -441,6 +441,10 @@ msgstr "%s %s volného místa"
 #, python-format
 msgid "%s (%s)\n"
 msgstr "%s (%s)\n"
+
+#, python-format
+msgid "%s imported from fallback tuner"
+msgstr "%s importováno ze záložního přijímače"
 
 #. TRANSLATORS: The satellite with name '%s' is no longer used after a configuration change. The user is asked whether or not the satellite should be deleted.
 #, python-format
@@ -1942,13 +1946,6 @@ msgstr "Číslo kanálu, pikona a název programu"
 msgid "Channels and EPG"
 msgstr "Programy a EPG"
 
-#, python-format
-msgid "Channels from fallback tuner failed %s"
-msgstr "Import ze záložního přijímače selhal - %s"
-
-msgid "Channels from fallback tuner imported"
-msgstr "Import úspěšně dokončen"
-
 msgid "Channels only"
 msgstr "Pouze programy"
 
@@ -2843,7 +2840,6 @@ msgid "DVD titlelist"
 msgstr "DVD seznam titulů"
 
 #
-#, fuzzy
 msgid "DVDPlayer"
 msgstr "DVD přehrávač"
 
@@ -2890,56 +2886,56 @@ msgid "Define the location of the EPG Cache file."
 msgstr "Určuje umístění souboru pro EPG cache."
 
 msgid "Delay after change voltage before switch command"
-msgstr ""
+msgstr "Zpoždění po změně napětí před povelem pro přepínač"
 
 msgid "Delay after continuous tone disable before diseqc"
-msgstr ""
+msgstr "Zpoždění po vypnutí nepřetržitého tónu před diseqc"
 
 msgid "Delay after diseqc peripherial poweron command"
-msgstr ""
+msgstr "Zpoždění po diseqc povelu periferního napájení"
 
 msgid "Delay after diseqc reset command"
-msgstr ""
+msgstr "Zpoždění po povelu pro diseqc reset"
 
 msgid "Delay after enable voltage before motor command"
-msgstr ""
+msgstr "Zpoždění po povolení napětí před povelem pro motor"
 
 msgid "Delay after enable voltage before switch command"
-msgstr ""
+msgstr "Zpoždění po povolení napětí před povelem pro přepínač"
 
 msgid "Delay after final continuous tone change"
-msgstr ""
+msgstr "Zpoždění po poslední změně trvalého tónu"
 
 msgid "Delay after last diseqc command"
-msgstr ""
+msgstr "Zpoždění po posledním diseqc povelu"
 
 msgid "Delay after last voltage change"
-msgstr ""
+msgstr "Zpoždění po poslední změně napětí"
 
 msgid "Delay after motor stop command"
-msgstr ""
+msgstr "Zpoždění po povelu pro zastavení motoru"
 
 msgid "Delay after set voltage before measure motor power"
-msgstr ""
+msgstr "Zpoždění po nastavení napětí před měřením výkonu motoru"
 
 msgid "Delay after toneburst"
-msgstr ""
+msgstr "Zpoždění po toneburst"
 
 msgid "Delay after voltage change before motor command"
-msgstr ""
+msgstr "Zpoždění po změně napětí před povelem pro motor"
 
 #
 msgid "Delay before key repeat starts:"
 msgstr "Zpoždění před opakováním:"
 
 msgid "Delay before sequence repeat"
-msgstr ""
+msgstr "Zpoždění mezi opakováním sekvence"
 
 msgid "Delay between diseqc commands"
-msgstr ""
+msgstr "Zpoždění mezi diseqc povely"
 
 msgid "Delay between switch and motor command"
-msgstr ""
+msgstr "Zpoždění mezi povely přepínače a motoru"
 
 msgid "Delay for external subtitles"
 msgstr "Zpoždění externích titulků"
@@ -4829,8 +4825,9 @@ msgstr "Ze záložního přijímače se importují programy a/nebo EPG po spušt
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr "Ze záložního přijímače se importují programy a/nebo EPG také v případě, že jsou přijímač nebo enigma2 zrestartovány."
 
-msgid "Import channels from fallback tuner"
-msgstr "Import ze záložního přijímače"
+#, python-format
+msgid "Import from fallback tuner failed, %s"
+msgstr "Import ze záložního přijímače selhal, %s"
 
 msgid "Import from remote receiver URL"
 msgstr "Importovat ze záložního přijímače"
@@ -5532,6 +5529,9 @@ msgstr "Ruční prohledávání"
 msgid "Manual transponder"
 msgstr "ručně definovaný transpondér"
 
+msgid "Manually import from fallback tuner"
+msgstr "Import ze záložního přijímače"
+
 #
 msgid "Manufacturer"
 msgstr "Výrobce"
@@ -6037,9 +6037,8 @@ msgid "No HDD found or HDD not initialized!"
 msgstr "Žádný HDD nenalezen nebo není inicializován!"
 
 #
-#, fuzzy
 msgid "No active subservices available."
-msgstr " Žádné dostupné aktualizace."
+msgstr "Nejsou dostupné žádné podprogramy."
 
 msgid "No age block"
 msgstr "neblokovat"
@@ -6242,6 +6241,13 @@ msgstr "Norsky"
 
 msgid "Not Defined"
 msgstr "Nedefinován"
+
+#
+msgid "Not Installed"
+msgstr "Neinstalováno"
+
+msgid "Not Required"
+msgstr "Nepožadováno"
 
 msgid "Not associated"
 msgstr "Neasociováno"
@@ -6600,7 +6606,6 @@ msgid "Play DVD"
 msgstr "přehrát DVD"
 
 #
-#, fuzzy
 msgid "Play DVDs"
 msgstr "přehrát DVD"
 
@@ -8315,10 +8320,6 @@ msgid "Select interface"
 msgstr "Vyberte interface"
 
 #
-msgid "Select locale"
-msgstr "Zvolte rozložení"
-
-#
 msgid "Select location"
 msgstr "Zvolte umístění"
 
@@ -8420,6 +8421,9 @@ msgstr "Výběr lokalizace z menu"
 
 msgid "Select the virtual keyboard shifted character set"
 msgstr "Další rozložení znaků"
+
+msgid "Select the virtual keyboard shifted character set for the next character only"
+msgstr "Shift pro následující znak"
 
 #
 msgid "Select upgrade source"
@@ -8573,10 +8577,6 @@ msgstr "Service reference"
 msgid "Service scan"
 msgstr "Vyhledávání programů"
 
-#
-msgid "Service searching"
-msgstr "Hledání programů"
-
 msgid "Service title mode"
 msgstr "Názvy programů"
 
@@ -8727,6 +8727,9 @@ msgstr "Ostrost"
 
 msgid "Shellscript"
 msgstr "Skript"
+
+msgid "Shift"
+msgstr ""
 
 msgid "Short filenames"
 msgstr "Krátké názvy souborů"
@@ -9772,7 +9775,7 @@ msgstr ""
 "Pro případné korekce můžete kontaktovat autora\n"
 "na výše uvedené adrese.\n"
 "\n"
-"®22.5.2019"
+"®24.6.2019"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -10579,6 +10582,9 @@ msgstr "Stav tuneru:"
 #
 msgid "Tuner type"
 msgstr "Typ tuneru"
+
+msgid "Tuners & scanning"
+msgstr "Hledání programů, tunery"
 
 msgid "Tunisia"
 msgstr "Tunis"
@@ -12568,9 +12574,8 @@ msgstr "Standardní seznam"
 msgid "list style single line"
 msgstr "Jednořádkový seznam"
 
-#, fuzzy
 msgid "listens to hotplug events"
-msgstr "Zarovnání událostí"
+msgstr ""
 
 msgid "literature"
 msgstr "literatura"
