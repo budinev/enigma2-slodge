@@ -18,34 +18,41 @@
 	<!-- Menu / SatLodge by lululla-->
 	<menu weight="1" level="0" text="SatLodge" entryID="SatLodge">
 		<id val="SatLodge" />    
-	    <item weight="5" level="0" text="SatLodge Panel" entryID="slPanel">  
+	    <item weight="5" level="0" text="Addon Panel" entryID="slPanel">  
     <code>
 from Plugins.SatLodge.slPanel.plugin import *
 self.session.open(logoStrt)
 </code>
         </item>  
         
-	    <item weight="10" level="0" text="SatLodge Manager" entryID="slManager">  
+	    <item weight="10" level="0" text="Cam Manager" entryID="slManager">  
     <code>
 from Plugins.SatLodge.slManager.plugin import *
 self.session.open(slManager)
 </code>
         </item>  
 		
-	    <item weight="12" level="0" text="SatLodge Settings" entryID="slSettings">  
+	    <item weight="12" level="0" text="Settings Manager" entryID="slSettings">  
     <code>
 from Plugins.SatLodge.slSettings.plugin import *
 self.session.open(MainSetting)
 </code>
         </item>          
       
-	    <item weight="12" level="0" text="SatLodge Image" entryID="STBmodel">  
+	    <item weight="13" level="0" text="Image Manager" entryID="STBmodel">  
     <code>
 from Plugins.SatLodge.slPanel.main import STBmodel
 self.session.open(STBmodel)
 </code>
-        </item>          
-        
+        </item>     
+<!--
+	    <item weight="14" level="0" text="Image Backup" entryID="ImageBackup">  
+    <code>
+from Plugins.SatLodge.ImageBackup.main import *
+self.session.open(ImageBackup)
+</code>
+        </item>     
+-->       
 	    <item weight="15" level="0" text="EPG Cache Path" entryID="EPGCacheSetupScreen">  
     <code>
 from Plugins.SatLodge.EPGCacheSelector.plugin import * 
@@ -61,7 +68,7 @@ self.session.open(SetPiconPath)
 </code>
         </item>  
                 
-	    <item weight="20" level="0" text="Ipkg Install" entryID="IpkgInstaller">  
+	    <item weight="20" level="0" text="Ipkg Installer" entryID="IpkgInstaller">  
     <code>
 from Tools.Directories import fileExists
 if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaScanner/plugin.pyo"):
@@ -89,9 +96,6 @@ self.session.open(DevicesMountPanel)
 
              
 	</menu>
-    
-    
-
 
 		<item level="0" text="Timer" entryID="timer_edit"><screen module="TimerEdit" screen="TimerEditList"/></item>
 		<item level="1" text="VCR scart" entryID="scart_switch" configcondition="config.usage.show_vcr_scart" requires="ScartSwitch"><code>self.session.scart.VCRSbChanged(3)</code></item>
@@ -167,12 +171,12 @@ self.session.open(DevicesMountPanel)
 				<id val="cam"/>
 				<item weight="10" level="0" text="Common Interface" entryID="ci_setup" requires="CommonInterface"><screen module="Ci" screen="CiSelection"/></item>
 			</menu>
-           
-
+			<!--
 			<menu weight="15" text="EPG" entryID="epg_menu">
 				<id val="epg"/>
 				<item level="0" entryID="epg_setup"><setup id="epgsettings"/></item>
-			</menu>			
+			</menu>
+            -->			
 			<item weight="15" level="0" text="Parental control" entryID="parental_setup"><screen module="ParentalControlSetup" screen="ParentalControlSetup"/></item>
 			<item weight="15" level="0" text="Factory reset" entryID="factory_reset">
 				<code>
@@ -185,8 +189,9 @@ def msgClosed(ret):
 self.session.openWithCallback(msgClosed, FactoryReset)
 </code>
 			</item>
+			<!--
 			<item weight="15" level="0" text="Flash image" entryID="flash_image" requires="canFlashWithOfgwrite" ><screen module="FlashImage" screen="SelectImage"/></item>
-
+            -->
 			<item weight="15" level="0" text="Software update" entryID="software_update"><screen module="SoftwareUpdate" screen="UpdatePlugin"/></item>
 		</menu>
 		<menu text="Standby / restart" entryID="standby_restart_list">
