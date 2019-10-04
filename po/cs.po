@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-07 13:00+0200\n"
+"POT-Creation-Date: 2019-09-29 09:27+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -201,6 +201,14 @@ msgstr "%.0f MB"
 #, python-format
 msgid "%.0f kB"
 msgstr "%.0f kB"
+
+#, python-format
+msgid "%.1f°E"
+msgstr ""
+
+#, python-format
+msgid "%.1f°W"
+msgstr ""
 
 #, python-format
 msgid "%.2f GB"
@@ -1202,6 +1210,10 @@ msgstr "Arabsky"
 
 msgid "Are you sure to purge all deleted userbouquets?"
 msgstr "Opravdu chcete odstranit všechny smazané přehledy?"
+
+#
+msgid "Are you sure to reboot to"
+msgstr "Opravdu chcete restartovat do"
 
 #, python-format
 msgid "Are you sure to remove all %d.%d%s%s services?"
@@ -4139,7 +4151,6 @@ msgid "Fallback tuner setup"
 msgstr "Nastavení záložního tuneru"
 
 #
-#, fuzzy
 msgid "False"
 msgstr "Ne"
 
@@ -4330,8 +4341,8 @@ msgstr "Pá"
 msgid "Friday"
 msgstr "Pátek"
 
-msgid "From :"
-msgstr "Z :"
+msgid "From:"
+msgstr "Z:"
 
 #, python-format
 msgid "Frontprocessor version: %s"
@@ -4471,9 +4482,6 @@ msgstr "Přejít na"
 msgid "Goto 0"
 msgstr "Jít na pozici 0"
 
-msgid "Goto :"
-msgstr "Na:"
-
 msgid "Goto X"
 msgstr "Přejít na X"
 
@@ -4501,6 +4509,9 @@ msgstr "Přejít na primetime / aktuální čas"
 
 msgid "Goto specific date/time"
 msgstr "Přejít na zadané datum/čas"
+
+msgid "Goto:"
+msgstr "Na:"
 
 msgid "GotoX calibration"
 msgstr "Kalibrace Přejít na X"
@@ -7254,9 +7265,6 @@ msgstr "Primární DNS"
 msgid "Prime time"
 msgstr "Primetime"
 
-msgid "PrimeTime"
-msgstr "Primetime"
-
 #
 msgid "Priority"
 msgstr "Priorita"
@@ -9829,7 +9837,7 @@ msgstr ""
 "Pro případné korekce můžete kontaktovat autora\n"
 "na výše uvedené adrese.\n"
 "\n"
-"®2.8.2019"
+"®29.9.2019"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -10121,8 +10129,8 @@ msgstr "Umožňuje vyhledat další symbol rate až do %s."
 
 msgid ""
 "This info is for developers only.\n"
-"For a normal users it is not relevant.\n"
-"Don't panic please when you see values being displayed that you think look suspicious!"
+"For normal users it is not relevant.\n"
+"Please don't panic if you see values displayed looking suspicious!"
 msgstr ""
 "Tyto informace jsou určeny pro tvůrce software.\n"
 "Pro běžné uživatele nejsou důležité.\n"
@@ -10573,7 +10581,7 @@ msgid "Troubleshoot"
 msgstr "Řešení problémů"
 
 msgid "True"
-msgstr ""
+msgstr "Ano"
 
 #
 msgid "Try to find used transponders in cable network.. please wait..."
@@ -13292,6 +13300,9 @@ msgstr "do standby/restartu"
 msgid "update bookmarks"
 msgstr "Aktualizovat záložky"
 
+msgid "used"
+msgstr ""
+
 #
 msgid "user defined"
 msgstr "Uživatelské"
@@ -13389,6 +13400,9 @@ msgstr "Ano"
 #
 msgid "yes (keep feeds)"
 msgstr "Ano (uchovat zdroje)"
+
+msgid "yes, but not in multi selections"
+msgstr "Ano, ale ne ve vícenásobných výběrech"
 
 #
 msgid "zap"

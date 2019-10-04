@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-07 13:00+0200\n"
+"POT-Creation-Date: 2019-09-29 09:27+0200\n"
 "PO-Revision-Date: 2019-07-22 20:15+0700\n"
 "Last-Translator: krong\n"
 "Language-Team: none\n"
@@ -186,6 +186,14 @@ msgstr "%.0f MB"
 #, python-format
 msgid "%.0f kB"
 msgstr "%.0f kB"
+
+#, python-format
+msgid "%.1f°E"
+msgstr ""
+
+#, python-format
+msgid "%.1f°W"
+msgstr ""
 
 #, python-format
 msgid "%.2f GB"
@@ -1058,6 +1066,10 @@ msgstr "Tiếng Ả Rập"
 
 msgid "Are you sure to purge all deleted userbouquets?"
 msgstr "Bạn có chắc chắn để xóa tất cả các userbouquets đã xóa?"
+
+#, fuzzy
+msgid "Are you sure to reboot to"
+msgstr "Bạn có chắc chắn để loại bỏ mục này?"
 
 #, python-format
 msgid "Are you sure to remove all %d.%d%s%s services?"
@@ -3781,8 +3793,8 @@ msgstr "Thứ sáu"
 msgid "Friday"
 msgstr "Thứ sáu"
 
-msgid "From :"
-msgstr "Từ :"
+msgid "From:"
+msgstr "Từ:"
 
 #, python-format
 msgid "Frontprocessor version: %s"
@@ -3905,9 +3917,6 @@ msgstr "Đi đến"
 msgid "Goto 0"
 msgstr "Đi 0"
 
-msgid "Goto :"
-msgstr "Đi đến :"
-
 msgid "Goto X"
 msgstr "Đi X"
 
@@ -3934,6 +3943,9 @@ msgstr "Giờ nguyên thủy / bây giờ"
 
 msgid "Goto specific date/time"
 msgstr "Ngày / giờ cụ thể"
+
+msgid "Goto:"
+msgstr "Đi đến:"
 
 msgid "GotoX calibration"
 msgstr "Hiệu chuẩn GotoX"
@@ -6291,9 +6303,6 @@ msgid "Primary DNS"
 msgstr "DNS chính"
 
 msgid "Prime time"
-msgstr "Giờ chính"
-
-msgid "PrimeTime"
 msgstr "Giờ chính"
 
 msgid "Priority"
@@ -8788,8 +8797,8 @@ msgstr "Trường này cho phép bạn tìm kiếm tỷ lệ biểu tượng b�
 
 msgid ""
 "This info is for developers only.\n"
-"For a normal users it is not relevant.\n"
-"Don't panic please when you see values being displayed that you think look suspicious!"
+"For normal users it is not relevant.\n"
+"Please don't panic if you see values displayed looking suspicious!"
 msgstr ""
 "Thông tin này chỉ dành cho nhà phát triển.\n"
 "Đối với một người dùng bình thường, nó không liên quan.\n"
@@ -11563,6 +11572,9 @@ msgstr "cho đến khi chờ / khởi động lại"
 msgid "update bookmarks"
 msgstr "cập nhật dấu trang"
 
+msgid "used"
+msgstr ""
+
 msgid "user defined"
 msgstr "đã xác định người dùng"
 
@@ -11646,6 +11658,9 @@ msgstr "có"
 
 msgid "yes (keep feeds)"
 msgstr "có (giữ thức ăn)"
+
+msgid "yes, but not in multi selections"
+msgstr ""
 
 msgid "zap"
 msgstr "cú đánh"
