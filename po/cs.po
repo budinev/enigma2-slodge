@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 09:34+0200\n"
+"POT-Creation-Date: 2019-10-31 04:06+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -30,12 +30,8 @@ msgstr ""
 "\n"
 "Po stisknutí OK čekejte, prosím!"
 
-msgid ""
-"\n"
-"Backup your receiver settings."
-msgstr ""
-"\n"
-"Záloha nastavení Vašeho přijímače."
+msgid "Backup your receiver settings."
+msgstr "Záloha nastavení Vašeho přijímače."
 
 msgid ""
 "\n"
@@ -52,19 +48,11 @@ msgstr ""
 "\n"
 "Upravit adresy aktualizačních zdrojů."
 
-msgid ""
-"\n"
-"Manage extensions or plugins for your receiver"
-msgstr ""
-"\n"
-"Správa rozšíření nebo pluginů Vašeho přijímače"
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Správa rozšíření nebo pluginů Vašeho přijímače."
 
-msgid ""
-"\n"
-"Online update of your receiver software."
-msgstr ""
-"\n"
-"Online aktualizace programového vybavení přijímače."
+msgid "Online update of your receiver software."
+msgstr "Online aktualizace programového vybavení přijímače."
 
 #
 msgid ""
@@ -97,20 +85,12 @@ msgstr ""
 "\n"
 "Obnova záloh podle data."
 
-msgid ""
-"\n"
-"Restore your receiver settings."
-msgstr ""
-"\n"
-"Obnova nastavení Vašeho přijímače."
+msgid "Restore your receiver settings."
+msgstr "Obnova nastavení Vašeho přijímače."
 
 #
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"Vyhledat a nainstalovat místní rozšíření."
+msgid "Scan for local extensions and install them."
+msgstr "Vyhledat a nainstalovat místní rozšíření."
 
 #
 msgid ""
@@ -1975,9 +1955,6 @@ msgstr "Kanály"
 msgid "Channels and EPG"
 msgstr "Programy a EPG"
 
-msgid "Channels only"
-msgstr "Pouze programy"
-
 #
 msgid "Chap."
 msgstr "Kap."
@@ -3480,9 +3457,6 @@ msgstr "EPG jazyk 1"
 msgid "EPG language selection 2"
 msgstr "EPG jazyk 2"
 
-msgid "EPG only"
-msgstr "Pouze EPG"
-
 #
 msgid "EPG selection"
 msgstr "Výběr EPG"
@@ -4882,11 +4856,12 @@ msgstr ""
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby"
 msgstr "Ze záložního přijímače se importují programy a/nebo EPG také v případě probuzení z pohotovostního režimu."
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver is booted"
-msgstr "Ze záložního přijímače se importují programy a/nebo EPG po spuštění přijímače."
-
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr "Ze záložního přijímače se importují programy a/nebo EPG také v případě, že jsou přijímač nebo enigma2 zrestartovány."
+
+#, fuzzy
+msgid "Import channels from remote receiver URL when receiver is booted"
+msgstr "Ze záložního přijímače se importují programy a/nebo EPG po spuštění přijímače."
 
 #, python-format
 msgid "Import from fallback tuner failed, %s"

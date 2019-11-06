@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 09:34+0200\n"
+"POT-Creation-Date: 2019-10-31 04:08+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Budiarno Pedode\n"
 "Language-Team: \n"
@@ -27,12 +27,8 @@ msgstr ""
 "\n"
 "Setelah tekan OK, silakan tunggu!"
 
-msgid ""
-"\n"
-"Backup your receiver settings."
-msgstr ""
-"\n"
-"Buat berkas cadangan penyetelan Rx anda"
+msgid "Backup your receiver settings."
+msgstr "Buat berkas cadangan penyetelan Rx anda."
 
 msgid ""
 "\n"
@@ -48,19 +44,11 @@ msgstr ""
 "\n"
 "Ubah alamat sumber peningkatan."
 
-msgid ""
-"\n"
-"Manage extensions or plugins for your receiver"
-msgstr ""
-"\n"
-"Kelola ekstensi atau plugin pada Rx anda"
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Kelola ekstensi atau plugin pada Rx anda."
 
-msgid ""
-"\n"
-"Online update of your receiver software."
-msgstr ""
-"\n"
-"Pembaruan daring perangkat lunak Rx anda."
+msgid "Online update of your receiver software."
+msgstr "Pembaruan daring perangkat lunak Rx anda."
 
 msgid ""
 "\n"
@@ -87,19 +75,11 @@ msgstr ""
 "\n"
 "Pulihkan data cadangan anda berdasarkan tanggal."
 
-msgid ""
-"\n"
-"Restore your receiver settings."
-msgstr ""
-"\n"
-"Pulihkan penyetelan Rx anda."
+msgid "Restore your receiver settings."
+msgstr "Pulihkan penyetelan Rx anda."
 
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"Pindai ekstensi lokal kemudian pasang."
+msgid "Scan for local extensions and install them."
+msgstr "Pindai ekstensi lokal kemudian pasang."
 
 msgid ""
 "\n"
@@ -1750,10 +1730,6 @@ msgstr "Kanal"
 msgid "Channels and EPG"
 msgstr "Kanal dan EPG"
 
-#, fuzzy
-msgid "Channels only"
-msgstr "Kanal saja"
-
 msgid "Chap."
 msgstr "Bab"
 
@@ -3086,9 +3062,6 @@ msgstr "Pemilihan bahasa EPG 1"
 msgid "EPG language selection 2"
 msgstr "Pemilihan bahasa EPG 2"
 
-msgid "EPG only"
-msgstr "Hanya EPG"
-
 msgid "EPG selection"
 msgstr "Pemilihan EPG"
 
@@ -4377,11 +4350,12 @@ msgstr "Image: "
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby"
 msgstr "Impor kanal dan/atau EPG dari URL Rx jauh juga ketika Rx itu keluar dari posisi standby"
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver is booted"
-msgstr "Impor kanal dan/atau EPG dari URL Rx jauh ketika Rx dihidupkan."
-
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr "Impor kanal dan/atau EPG dari URL Rx jauh ketika Rx atau enigma2 dimulai ulang"
+
+#, fuzzy
+msgid "Import channels from remote receiver URL when receiver is booted"
+msgstr "Impor kanal dan/atau EPG dari URL Rx jauh ketika Rx dihidupkan."
 
 #, fuzzy, python-format
 msgid "Import from fallback tuner failed, %s"

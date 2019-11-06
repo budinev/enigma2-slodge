@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 09:34+0200\n"
+"POT-Creation-Date: 2019-10-31 04:08+0100\n"
 "PO-Revision-Date: 2011-05-07 12:23+0200\n"
 "Last-Translator: Baldur <bsveinsson@gmail.com>\n"
 "Language-Team: Polar Team/LT Team <baddi@oreind.is>\n"
@@ -32,9 +32,7 @@ msgstr ""
 "\n"
 "Bíðið eftir að hafa ýtt á OK!"
 
-msgid ""
-"\n"
-"Backup your receiver settings."
+msgid "Backup your receiver settings."
 msgstr ""
 
 msgid ""
@@ -49,14 +47,10 @@ msgstr ""
 "\n"
 "Breyta veffangi uppfærslu uppruna."
 
-msgid ""
-"\n"
-"Manage extensions or plugins for your receiver"
+msgid "Manage extensions or plugins for your receiver."
 msgstr ""
 
-msgid ""
-"\n"
-"Online update of your receiver software."
+msgid "Online update of your receiver software."
 msgstr ""
 
 #
@@ -87,17 +81,11 @@ msgstr ""
 "\n"
 "Setja inn stilligar eftir dagsetningu."
 
-msgid ""
-"\n"
-"Restore your receiver settings."
+msgid "Restore your receiver settings."
 msgstr ""
 
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"Leita að viðbótum á móttakara og setja þær upp."
+msgid "Scan for local extensions and install them."
+msgstr "Leita að viðbótum á móttakara og setja þær upp."
 
 #
 msgid ""
@@ -1858,10 +1846,6 @@ msgstr "Rás"
 msgid "Channels and EPG"
 msgstr "Valmynd rásalista"
 
-#, fuzzy
-msgid "Channels only"
-msgstr "Rás"
-
 msgid "Chap."
 msgstr "Kafli."
 
@@ -3307,9 +3291,6 @@ msgstr ""
 msgid "EPG language selection 2"
 msgstr ""
 
-msgid "EPG only"
-msgstr ""
-
 #
 #, fuzzy
 msgid "EPG selection"
@@ -4692,10 +4673,10 @@ msgstr ""
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby"
 msgstr ""
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver is booted"
+msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr ""
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
+msgid "Import channels from remote receiver URL when receiver is booted"
 msgstr ""
 
 #, python-format

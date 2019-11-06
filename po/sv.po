@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 09:34+0200\n"
+"POT-Creation-Date: 2019-10-31 04:08+0100\n"
 "PO-Revision-Date: 2017-03-05 13:24+0100\n"
 "Last-Translator: Magnus Nilsson <mag_nilsson@hotmail.com>\n"
 "Language-Team: \n"
@@ -31,12 +31,8 @@ msgstr ""
 "\n"
 "Efter att ha tryckt OK, var god vänta!"
 
-msgid ""
-"\n"
-"Backup your receiver settings."
-msgstr ""
-"\n"
-"Säkerhetskopiera din mottagares inställningar."
+msgid "Backup your receiver settings."
+msgstr "Säkerhetskopiera din mottagares inställningar."
 
 msgid ""
 "\n"
@@ -53,19 +49,11 @@ msgstr ""
 "\n"
 "Ändra uppdateringskällans adress."
 
-msgid ""
-"\n"
-"Manage extensions or plugins for your receiver"
-msgstr ""
-"\n"
-"Hantera utökningar eller plugins för din mottagare"
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Hantera utökningar eller plugins för din mottagare."
 
-msgid ""
-"\n"
-"Online update of your receiver software."
-msgstr ""
-"\n"
-"Online uppdatering av din mottagares mjukvara."
+msgid "Online update of your receiver software."
+msgstr "Online uppdatering av din mottagares mjukvara."
 
 #
 msgid ""
@@ -97,20 +85,12 @@ msgstr ""
 "\n"
 "Återställ dina säkerhetskopior med datum."
 
-msgid ""
-"\n"
-"Restore your receiver settings."
-msgstr ""
-"\n"
-"Återställ mottagares inställningar."
+msgid "Restore your receiver settings."
+msgstr "Återställ mottagares inställningar."
 
 #
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"Sök efter lokala utökningar och installera dem."
+msgid "Scan for local extensions and install them."
+msgstr "Sök efter lokala utökningar och installera dem."
 
 #
 msgid ""
@@ -1932,10 +1912,6 @@ msgstr "Kanal"
 msgid "Channels and EPG"
 msgstr "Kanal info"
 
-#, fuzzy
-msgid "Channels only"
-msgstr "Kanal info"
-
 #
 msgid "Chap."
 msgstr "Kap."
@@ -3427,9 +3403,6 @@ msgstr "Val av EPG språk 1"
 msgid "EPG language selection 2"
 msgstr "Val av EPG språk 2"
 
-msgid "EPG only"
-msgstr ""
-
 #
 msgid "EPG selection"
 msgstr "EPG val"
@@ -4814,11 +4787,12 @@ msgstr "Image : "
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby"
 msgstr ""
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver is booted"
-msgstr ""
-
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr ""
+
+#, fuzzy
+msgid "Import channels from remote receiver URL when receiver is booted"
+msgstr "URL för reserv fjärrmottagare"
 
 #, python-format
 msgid "Import from fallback tuner failed, %s"

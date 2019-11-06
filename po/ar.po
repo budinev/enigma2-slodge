@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 09:34+0200\n"
+"POT-Creation-Date: 2019-10-31 04:06+0100\n"
 "PO-Revision-Date: 2018-12-17 02:51+0200\n"
 "Last-Translator: Hazem <moustafagamal@hotmail.com>\n"
 "Language-Team: Arabic <moustafagamal@hotmail.com>\n"
@@ -30,12 +30,8 @@ msgstr ""
 "\n"
 "بعد الضغط على موافق ، يرجى الانتظار!"
 
-msgid ""
-"\n"
-"Backup your receiver settings."
-msgstr ""
-"\n"
-"نسخ احتياطي لإعدادات جهازك."
+msgid "Backup your receiver settings."
+msgstr "نسخ احتياطي لإعدادات جهازك."
 
 msgid ""
 "\n"
@@ -52,19 +48,11 @@ msgstr ""
 "\n"
 "تحرير عنوان مصدر الترقية."
 
-msgid ""
-"\n"
-"Manage extensions or plugins for your receiver"
-msgstr ""
-"\n"
-"إدارة الملحقات أو الإضافات لجهازك"
+msgid "Manage extensions or plugins for your receiver."
+msgstr "إدارة الملحقات أو الإضافات لجهازك."
 
-msgid ""
-"\n"
-"Online update of your receiver software."
-msgstr ""
-"\n"
-"تحديث النظام عبر الإنترنت."
+msgid "Online update of your receiver software."
+msgstr "تحديث النظام عبر الإنترنت."
 
 #
 msgid ""
@@ -97,20 +85,12 @@ msgstr ""
 "\n"
 "استعادة نسخة احتياطية حسب التاريخ."
 
-msgid ""
-"\n"
-"Restore your receiver settings."
-msgstr ""
-"\n"
-"إستعادة إعدادات جهاز الاستقبال."
+msgid "Restore your receiver settings."
+msgstr "إستعادة إعدادات جهاز الاستقبال."
 
 #
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"بحث عن ملحقات مخزنة محليا وتثبيتها."
+msgid "Scan for local extensions and install them."
+msgstr "بحث عن ملحقات مخزنة محليا وتثبيتها."
 
 msgid ""
 "\n"
@@ -1858,10 +1838,6 @@ msgstr "قناة"
 msgid "Channels and EPG"
 msgstr "القنوات و EPG"
 
-#
-msgid "Channels only"
-msgstr "قنوات فقط"
-
 msgid "Chap."
 msgstr "فصل."
 
@@ -3211,9 +3187,6 @@ msgstr "لغة دليل البرامج الالكتروني 1"
 msgid "EPG language selection 2"
 msgstr "لغة دليل البرامج الالكتروني 2"
 
-msgid "EPG only"
-msgstr ""
-
 #
 #, fuzzy
 msgid "EPG selection"
@@ -4524,10 +4497,10 @@ msgstr ""
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby"
 msgstr ""
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver is booted"
+msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr ""
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
+msgid "Import channels from remote receiver URL when receiver is booted"
 msgstr ""
 
 #, python-format

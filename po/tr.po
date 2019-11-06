@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OPENPLi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 09:34+0200\n"
+"POT-Creation-Date: 2019-10-31 04:08+0100\n"
 "PO-Revision-Date: 2015-12-18 21:05+0200\n"
 "Last-Translator: Yetkin AYDIN <yetkina@gmail.com>\n"
 "Language-Team: http://www.hurforum.com <yetkina@gmail.com>\n"
@@ -33,12 +33,8 @@ msgstr ""
 "\n"
 "Lütfen OK'a bastıktan sonra bekleyin!"
 
-msgid ""
-"\n"
-"Backup your receiver settings."
-msgstr ""
-"\n"
-"Alıcı ayarlarını Yedekle."
+msgid "Backup your receiver settings."
+msgstr "Alıcı ayarlarını Yedekle."
 
 msgid ""
 "\n"
@@ -52,19 +48,11 @@ msgstr ""
 "\n"
 "Güncelleme sunucusu adresini düzenleyin."
 
-msgid ""
-"\n"
-"Manage extensions or plugins for your receiver"
-msgstr ""
-"\n"
-"Alıcınız için uzantıları veya eklentileri yönetin"
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Alıcınız için uzantıları veya eklentileri yönetin."
 
-msgid ""
-"\n"
-"Online update of your receiver software."
-msgstr ""
-"\n"
-"Alıcının yazılımı online güncelle...."
+msgid "Online update of your receiver software."
+msgstr "Alıcının yazılımı online güncelle."
 
 msgid ""
 "\n"
@@ -93,19 +81,11 @@ msgstr ""
 "\n"
 "Yedeklerinizi tarihe göre geri yükleyin."
 
-msgid ""
-"\n"
-"Restore your receiver settings."
-msgstr ""
-"\n"
-"Alıcının ayarlarını geri yükle."
+msgid "Restore your receiver settings."
+msgstr "Alıcının ayarlarını geri yükle."
 
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"Yereldeki eklentileri arayın ve kurun"
+msgid "Scan for local extensions and install them."
+msgstr "Yereldeki eklentileri arayın ve kurun."
 
 msgid ""
 "\n"
@@ -1734,10 +1714,6 @@ msgstr "Kanal"
 msgid "Channels and EPG"
 msgstr "Kanal Bilgisi"
 
-#, fuzzy
-msgid "Channels only"
-msgstr "Kanal Bilgisi"
-
 msgid "Chap."
 msgstr "Bölüm"
 
@@ -3068,9 +3044,6 @@ msgstr "EPG Dil seçimi 1"
 msgid "EPG language selection 2"
 msgstr "EPG Dil seçimi 2"
 
-msgid "EPG only"
-msgstr ""
-
 msgid "EPG selection"
 msgstr "EPG Dil seçimi"
 
@@ -4337,11 +4310,12 @@ msgstr "Imaj: "
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby"
 msgstr ""
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver is booted"
-msgstr ""
-
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr ""
+
+#, fuzzy
+msgid "Import channels from remote receiver URL when receiver is booted"
+msgstr "Yedek cihaz  URL"
 
 #, python-format
 msgid "Import from fallback tuner failed, %s"

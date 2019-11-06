@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 09:34+0200\n"
+"POT-Creation-Date: 2019-10-31 04:08+0100\n"
 "PO-Revision-Date: 2019-02-13 20:52+0200\n"
 "Last-Translator: jamu\n"
 "Language-Team: BoxFreak/jamu\n"
@@ -31,12 +31,8 @@ msgstr ""
 "\n"
 "Kun olet painanut OK-näppäintä, odota!"
 
-msgid ""
-"\n"
-"Backup your receiver settings."
-msgstr ""
-"\n"
-"Varmuuskopioi vastaanottimesi asetukset."
+msgid "Backup your receiver settings."
+msgstr "Varmuuskopioi vastaanottimesi asetukset."
 
 msgid ""
 "\n"
@@ -51,19 +47,11 @@ msgstr ""
 "\n"
 "Muokkaa päivityksen lähdeosoitetta."
 
-msgid ""
-"\n"
-"Manage extensions or plugins for your receiver"
-msgstr ""
-"\n"
-"Hallitse lisäosia tai plugineja"
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Hallitse lisäosia tai plugineja."
 
-msgid ""
-"\n"
-"Online update of your receiver software."
-msgstr ""
-"\n"
-"Päivitä ohjelmisto verkosta."
+msgid "Online update of your receiver software."
+msgstr "Päivitä ohjelmisto verkosta."
 
 #
 msgid ""
@@ -95,20 +83,12 @@ msgstr ""
 "\n"
 "Palauta varmuuskopiot päivän mukaan."
 
-msgid ""
-"\n"
-"Restore your receiver settings."
-msgstr ""
-"\n"
-"Palauta vastaanottimesi asetukset."
+msgid "Restore your receiver settings."
+msgstr "Palauta vastaanottimesi asetukset."
 
 #
-msgid ""
-"\n"
-"Scan for local extensions and install them."
-msgstr ""
-"\n"
-"Etsi paikallisia lisäosia ja asenna ne."
+msgid "Scan for local extensions and install them."
+msgstr "Etsi paikallisia lisäosia ja asenna ne."
 
 #
 msgid ""
@@ -1889,10 +1869,6 @@ msgid "Channels and EPG"
 msgstr "Kanavat ja ohjelmaopas"
 
 #
-msgid "Channels only"
-msgstr "Vain kanavat"
-
-#
 msgid "Chap."
 msgstr "Osa"
 
@@ -3342,9 +3318,6 @@ msgstr "Ohjelmaoppaan kieli 1"
 msgid "EPG language selection 2"
 msgstr "Ohjelmaoppaan kieli 2"
 
-msgid "EPG only"
-msgstr "Vain ohjelmaopas"
-
 #
 msgid "EPG selection"
 msgstr "Ohjelmaoppaan valinta"
@@ -4704,10 +4677,11 @@ msgstr "Ohjelmisto: "
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby"
 msgstr "Tuo kanavat ja/tai ohjelmaopas etävastaanottimelta valmiustilasta poistuttaessa"
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver is booted"
+msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr "Tuo kanavat ja/tai ohjelmaopas etävastaanottimelta uudelleenkäynnistyksen yhteydessä"
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
+#, fuzzy
+msgid "Import channels from remote receiver URL when receiver is booted"
 msgstr "Tuo kanavat ja/tai ohjelmaopas etävastaanottimelta uudelleenkäynnistyksen yhteydessä"
 
 #, fuzzy, python-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 09:34+0200\n"
+"POT-Creation-Date: 2019-10-31 04:08+0100\n"
 "PO-Revision-Date: 2010-03-09 21:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: HDTV ROMANIA(superonic,costel_mbc,neutrin,otheitis,cipy_1982,neutrin,runcanion)\n"
@@ -31,9 +31,7 @@ msgstr ""
 "\n"
 "Dupa apasarea OK, va rog asteptati!"
 
-msgid ""
-"\n"
-"Backup your receiver settings."
+msgid "Backup your receiver settings."
 msgstr ""
 
 msgid ""
@@ -48,14 +46,10 @@ msgstr ""
 "\n"
 "Editati pe adresa de update."
 
-msgid ""
-"\n"
-"Manage extensions or plugins for your receiver"
+msgid "Manage extensions or plugins for your receiver."
 msgstr ""
 
-msgid ""
-"\n"
-"Online update of your receiver software."
+msgid "Online update of your receiver software."
 msgstr ""
 
 msgid ""
@@ -83,14 +77,10 @@ msgstr ""
 "\n"
 "Restaurare backups dupa data."
 
-msgid ""
-"\n"
-"Restore your receiver settings."
+msgid "Restore your receiver settings."
 msgstr ""
 
-msgid ""
-"\n"
-"Scan for local extensions and install them."
+msgid "Scan for local extensions and install them."
 msgstr ""
 
 msgid ""
@@ -1740,10 +1730,6 @@ msgstr "Canal"
 msgid "Channels and EPG"
 msgstr "Meniul lista de canale"
 
-#, fuzzy
-msgid "Channels only"
-msgstr "Canal"
-
 msgid "Chap."
 msgstr "Cap."
 
@@ -3097,9 +3083,6 @@ msgstr ""
 msgid "EPG language selection 2"
 msgstr ""
 
-msgid "EPG only"
-msgstr ""
-
 #, fuzzy
 msgid "EPG selection"
 msgstr "Selectie EPG"
@@ -4367,10 +4350,10 @@ msgstr ""
 msgid "Import channels and/or EPG from remote receiver URL also when the receiver is getting out of standby"
 msgstr ""
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver is booted"
+msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr ""
 
-msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
+msgid "Import channels from remote receiver URL when receiver is booted"
 msgstr ""
 
 #, python-format
