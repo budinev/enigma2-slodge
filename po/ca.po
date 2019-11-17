@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:06+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2007-08-14 10:23+0200\n"
 "Last-Translator: Oriol Pellicer <oriol@elsud.org>\n"
 "Language-Team: \n"
@@ -20,9 +20,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #
-msgid ""
-"\n"
-"Advanced options and settings."
+msgid "Advanced options and settings."
 msgstr ""
 
 #
@@ -31,24 +29,13 @@ msgid ""
 "After pressing OK, please wait!"
 msgstr ""
 
-msgid "Backup your receiver settings."
-msgstr ""
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
 msgstr ""
 
 #
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr ""
-
-msgid "Online update of your receiver software."
+msgid "Edit the update source address."
 msgstr ""
 
 #
@@ -70,22 +57,11 @@ msgid ""
 msgstr ""
 
 #
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-
-msgid "Restore your receiver settings."
+msgid "Restore your backups by date."
 msgstr ""
 
 #
-msgid "Scan for local extensions and install them."
-msgstr ""
-
-#
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
 msgstr ""
 
@@ -96,9 +72,7 @@ msgid ""
 msgstr ""
 
 #
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
+msgid "View, install and remove available or installed packages."
 msgstr ""
 
 msgid " (0 - all networks)"
@@ -1459,6 +1433,9 @@ msgstr "Sí, fes un backup de la configuració!"
 
 #
 msgid "Backup system settings"
+msgstr ""
+
+msgid "Backup your receiver settings."
 msgstr ""
 
 msgid "Bahamas"
@@ -3429,7 +3406,7 @@ msgid "Edit title"
 msgstr ""
 
 #
-msgid "Edit update source url."
+msgid "Edit update source url"
 msgstr ""
 
 msgid "Education/Science/..."
@@ -5423,6 +5400,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr ""
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr ""
+
 #
 msgid "Manage your receiver's software"
 msgstr ""
@@ -6280,6 +6260,9 @@ msgstr ""
 #
 msgid "One"
 msgstr "Un"
+
+msgid "Online update of your receiver software."
+msgstr ""
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
@@ -7619,6 +7602,9 @@ msgstr ""
 msgid "Restore system settings"
 msgstr ""
 
+msgid "Restore your receiver settings."
+msgstr ""
+
 #
 #, fuzzy
 msgid "Restoring..."
@@ -7954,6 +7940,10 @@ msgstr "Ha fallat la sintonització!"
 #, fuzzy
 msgid "Scan files..."
 msgstr "Arxius gravats..."
+
+#
+msgid "Scan for local extensions and install them."
+msgstr ""
 
 msgid "Scan options"
 msgstr ""
@@ -8376,7 +8366,7 @@ msgid "Select update source"
 msgstr "Seleccionar una pel·lícula"
 
 #
-msgid "Select update source to edit."
+msgid "Select update source to edit"
 msgstr ""
 
 #

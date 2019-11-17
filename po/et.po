@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Openpli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2019-04-03 06:49+0300\n"
 "Last-Translator: \n"
 "Language-Team: Raivo, Henkka, eesatfan, rimas, zeros\\n faas, sateks, valgekotkas, tigekala, rootsikunn\\n kain, i70, mustkass, pelmeen, Scott\\n <digi-tv.ee>\n"
@@ -14,12 +14,8 @@ msgstr ""
 "X-Generator: Poedit 2.2.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Lisavalikud ja seadistused."
+msgid "Advanced options and settings."
+msgstr "Lisavalikud ja seadistused."
 
 msgid ""
 "\n"
@@ -28,9 +24,6 @@ msgstr ""
 "\n"
 "Vajuta OK ja oota!"
 
-msgid "Backup your receiver settings."
-msgstr "Varunda vastuvõtja seaded."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -38,18 +31,8 @@ msgstr ""
 "\n"
 "Konflikti avastamine keelatud!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Muuda uuenduste allika aadressi."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Halda laiendusi."
-
-msgid "Online update of your receiver software."
-msgstr "Vastuvõtja internetiuuendused."
+msgid "Edit the update source address."
+msgstr "Muuda uuenduste allika aadressi."
 
 msgid ""
 "\n"
@@ -71,26 +54,12 @@ msgstr ""
 "\n"
 "Salvestus on käimas."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Taasta oma varukoopiad kuupäeva järgi."
+msgid "Restore your backups by date."
+msgstr "Taasta oma varukoopiad kuupäeva järgi."
 
-msgid "Restore your receiver settings."
-msgstr "Taasta vastuvõtja seaded."
-
-msgid "Scan for local extensions and install them."
-msgstr "Otsi kohalikke laiendusi ja paigalda need."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Vali seade varukoopia jaoks.\n"
+msgstr "Vali seade varukoopia jaoks.\n"
 "Praegune seade: "
 
 #, python-format
@@ -101,12 +70,8 @@ msgstr ""
 "\n"
 "Taimer '%s'  keelatud!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Vaata, paigalda ja eemalda saadavaid või paigaldatud tarkvara pakette."
+msgid "View, install and remove available or installed packages."
+msgstr "Vaata, paigalda ja eemalda saadavaid või paigaldatud tarkvara pakette."
 
 msgid " (0 - all networks)"
 msgstr " (0 - kõik võrgud)"
@@ -1335,6 +1300,9 @@ msgstr "Varundamise seaded"
 
 msgid "Backup system settings"
 msgstr "Loo süsteemi seadete varukoopia"
+
+msgid "Backup your receiver settings."
+msgstr "Varunda vastuvõtja seaded."
 
 msgid "Bahamas"
 msgstr "Bahama"
@@ -3068,8 +3036,8 @@ msgstr "Muuda taimerit"
 msgid "Edit title"
 msgstr "Muuda pealkirja"
 
-msgid "Edit update source url."
-msgstr "Muuda uuenduste allika url."
+msgid "Edit update source url"
+msgstr "Muuda uuenduste allika url"
 
 msgid "Education/Science/..."
 msgstr "Haridus/teadus"
@@ -4851,6 +4819,9 @@ msgstr "Malta"
 msgid "Manage extensions"
 msgstr "Halda laiendusi"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Halda laiendusi."
+
 msgid "Manage your receiver's software"
 msgstr "Uuenda vastuvõtja tarkvara"
 
@@ -5579,6 +5550,9 @@ msgstr "Kehtivate ONID puhul eira sageduse alavõrgu osa"
 
 msgid "One"
 msgstr "Üks"
+
+msgid "Online update of your receiver software."
+msgstr "Vastuvõtja internetiuuendused."
 
 #, fuzzy
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
@@ -6728,6 +6702,9 @@ msgstr "Taasta varukoopia"
 msgid "Restore system settings"
 msgstr "Taasta seaded"
 
+msgid "Restore your receiver settings."
+msgstr "Taasta vastuvõtja seaded."
+
 msgid "Restoring..."
 msgstr "Taastamine..."
 
@@ -7018,6 +6995,9 @@ msgstr "Otsing nurjus!"
 
 msgid "Scan files..."
 msgstr "Uuri faile..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Otsi kohalikke laiendusi ja paigalda need."
 
 msgid "Scan options"
 msgstr "Otsingu valikud"
@@ -7378,8 +7358,8 @@ msgstr ""
 msgid "Select update source"
 msgstr "Vali uuenduste allikas"
 
-msgid "Select update source to edit."
-msgstr "Vali uuenduste allikas muutmiseks."
+msgid "Select update source to edit"
+msgstr "Vali uuenduste allikas muutmiseks"
 
 msgid "Select video input with up/down buttons"
 msgstr "Vali video sisend"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2013-10-20 19:13-0300\n"
 "Last-Translator: Diogo <pingflood@gmail.com>\n"
 "Language-Team: Traduzido por Frank Viana <franksrviana@gmail.com>\n"
@@ -17,12 +17,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Configurações e opções avançadas."
+msgid "Advanced options and settings."
+msgstr "Configurações e opções avançadas."
 
 msgid ""
 "\n"
@@ -31,26 +27,13 @@ msgstr ""
 "\n"
 "Após pressionar OK, aguarde..."
 
-msgid "Backup your receiver settings."
-msgstr "Faça um backup das configurações."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Editar o endereço do repositório de atualizações."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Gerenciador de extensões ou plugins para o receptor."
-
-msgid "Online update of your receiver software."
-msgstr "Atualização online do software do receptor."
+msgid "Edit the update source address."
+msgstr "Editar o endereço do repositório de atualizações."
 
 msgid ""
 "\n"
@@ -70,26 +53,12 @@ msgid ""
 "Recording in progress."
 msgstr ""
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Restaurar os backups por data."
+msgid "Restore your backups by date."
+msgstr "Restaurar os backups por data."
 
-msgid "Restore your receiver settings."
-msgstr "Restaurar as configurações do receptor."
-
-msgid "Scan for local extensions and install them."
-msgstr "Buscar e instalar extensões locais."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Selecione o dispositivo para backup.\n"
+msgstr "Selecione o dispositivo para backup.\n"
 "Dispositivo atual: "
 
 #, python-format
@@ -98,12 +67,8 @@ msgid ""
 "Timer '%s' disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Ver, instalar e remover pacotes instalados ou disponíveis."
+msgid "View, install and remove available or installed packages."
+msgstr "Ver, instalar e remover pacotes instalados ou disponíveis."
 
 msgid " (0 - all networks)"
 msgstr ""
@@ -1334,6 +1299,9 @@ msgstr "Salvar configurações do sistema"
 
 msgid "Backup system settings"
 msgstr "Salvar configurações do sistema"
+
+msgid "Backup your receiver settings."
+msgstr "Faça um backup das configurações."
 
 msgid "Bahamas"
 msgstr ""
@@ -3088,8 +3056,8 @@ msgstr ""
 msgid "Edit title"
 msgstr "Editar título"
 
-msgid "Edit update source url."
-msgstr "Editar URL da fonte de atualização."
+msgid "Edit update source url"
+msgstr "Editar URL da fonte de atualização"
 
 msgid "Education/Science/..."
 msgstr "Educação/Ciência"
@@ -4874,6 +4842,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr "Gerenciar extensões"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Gerenciador de extensões ou plugins para o receptor."
+
 msgid "Manage your receiver's software"
 msgstr "Gerenciar o software do receptor"
 
@@ -5614,6 +5585,9 @@ msgstr ""
 
 msgid "One"
 msgstr "Um"
+
+msgid "Online update of your receiver software."
+msgstr "Atualização online do software do receptor."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
@@ -6774,6 +6748,9 @@ msgstr "Restaurar backups"
 msgid "Restore system settings"
 msgstr "Restaurar configurações do sistema"
 
+msgid "Restore your receiver settings."
+msgstr "Restaurar as configurações do receptor."
+
 msgid "Restoring..."
 msgstr "Restaurando..."
 
@@ -7066,6 +7043,9 @@ msgstr "A busca falhou!"
 
 msgid "Scan files..."
 msgstr "Buscar arquivos"
+
+msgid "Scan for local extensions and install them."
+msgstr "Buscar e instalar extensões locais."
 
 msgid "Scan options"
 msgstr ""
@@ -7428,7 +7408,7 @@ msgstr ""
 msgid "Select update source"
 msgstr "Servidores de atualizações"
 
-msgid "Select update source to edit."
+msgid "Select update source to edit"
 msgstr "Selecione a fonte de atualizações para editar"
 
 msgid "Select video input with up/down buttons"

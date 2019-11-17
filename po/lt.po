@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
-"PO-Revision-Date: 2019-10-26 09:58+0200\n"
+"POT-Creation-Date: 2019-11-10 14:33+0100\n"
+"PO-Revision-Date: 2019-11-04 15:35+0200\n"
 "Last-Translator: Audronis Grincevicius <adga45@gmail.com>\n"
 "Language-Team: Adga (C) <adga45@gmail.com>\n"
 "Language: lt_LT\n"
@@ -12,14 +12,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Išplėstinės funkcijos ir nustatymai."
+msgid "Advanced options and settings."
+msgstr "Išplėstinės funkcijos ir nustatymai."
 
 msgid ""
 "\n"
@@ -28,9 +24,6 @@ msgstr ""
 "\n"
 "Paspaudus OK, prašome laukti!"
 
-msgid "Backup your receiver settings."
-msgstr "Atsarginė imtuvo nustatymų kopija."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -38,18 +31,8 @@ msgstr ""
 "\n"
 "Konfliktų aptikimas išjungtas!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Redaguoti atnaujinimo šaltinių adresus."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Valdykite savo imtuvo priedus ir išplėtimus."
-
-msgid "Online update of your receiver software."
-msgstr "Atnaujinti imtuvo programinę įrangą internetu."
+msgid "Edit the update source address."
+msgstr "Redaguoti atnaujinimo šaltinių adresus."
 
 msgid ""
 "\n"
@@ -72,26 +55,12 @@ msgstr ""
 "\n"
 "Vyksta įrašymas."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Atkurti atsarginę kopiją pagal datą."
+msgid "Restore your backups by date."
+msgstr "Atkurkite savo atsarginę kopiją pagal datą."
 
-msgid "Restore your receiver settings."
-msgstr "Atkurti imtuvo nustatymus."
-
-msgid "Scan for local extensions and install them."
-msgstr "Ieškoti vietinių išplėtimų ir juos įdiegti."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Pasirinkite savo įrenginį atsarginei kopijai.\n"
+msgstr "Pasirinkite savo įrenginį atsarginei kopijai.\n"
 "Dabar pasirinktas: "
 
 #, python-format
@@ -102,12 +71,8 @@ msgstr ""
 "\n"
 "Laikmatis '%s' išjungtas!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Galėsite peržiūrėti ir įdiegti galimus, arba pašalinti jau įdiegtus paketus."
+msgid "View, install and remove available or installed packages."
+msgstr "Galėsite peržiūrėti ir įdiegti galimus, arba pašalinti jau įdiegtus paketus."
 
 msgid " (0 - all networks)"
 msgstr " (0 - visi tinklai)"
@@ -1341,6 +1306,9 @@ msgstr "Atsarginio kopijavimo nustatymai"
 
 msgid "Backup system settings"
 msgstr "Atsarginė sistemos nustatymų kopija"
+
+msgid "Backup your receiver settings."
+msgstr "Sukurkite atsarginę imtuvo nustatymų kopiją."
 
 msgid "Bahamas"
 msgstr "Bahamai"
@@ -3078,8 +3046,8 @@ msgstr "Redaguoti laikmatį"
 msgid "Edit title"
 msgstr "Redaguoti pavadinimą"
 
-msgid "Edit update source url."
-msgstr "Redaguoti atnaujinimo šaltinio internetinį adresą."
+msgid "Edit update source url"
+msgstr "Redaguoti atnaujinimo šaltinio internetinį adresą"
 
 msgid "Education/Science/..."
 msgstr "Švietimas, mokslas, ..."
@@ -4275,9 +4243,8 @@ msgstr "Importuoti kanalus ir/arba EPG iš nuotolinio imtuvo URL taip pat, kai i
 msgid "Import channels and/or EPG from remote receiver URL when receiver or enigma2 is restarted"
 msgstr "Importuoti kanalus ir/arba EPG iš nuotolinio imtuvo URL, kai imtuvas arba enigma2 yra paleidžiami iš naujo"
 
-#, fuzzy
 msgid "Import channels from remote receiver URL when receiver is booted"
-msgstr "Importuoti kanalus ir/arba EPG iš nuotolinio imtuvo URL, kai imtuvas yra paleistas"
+msgstr "Importuokite kanalus iš nuotolinio imtuvo URL, kai imtuvas paleidžiamas"
 
 #, python-format
 msgid "Import from fallback tuner failed, %s"
@@ -4854,6 +4821,9 @@ msgstr "Malta"
 
 msgid "Manage extensions"
 msgstr "Plėtinių valdymas"
+
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Valdykite savo imtuvo priedus ir išplėtimus."
 
 msgid "Manage your receiver's software"
 msgstr "Valdykite savo imtuvo programinę įrangą"
@@ -5576,6 +5546,9 @@ msgstr "Esant galiojantiems ONID, ignoruokite dažnio sub tinklo dalį"
 
 msgid "One"
 msgstr "Vienas"
+
+msgid "Online update of your receiver software."
+msgstr "Internetinis jūsų imtuvo programinės įrangos atnaujinimas."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr "Pakeiskite tik šį parametrą, jei naudojate SCR įrenginį, kuris buvo perprogramuotas su pasirinktu programuotoju. Dėl išsamesnės informacijos susisiekite su asmeniu, kad perprogramuoti įrenginį."
@@ -6713,6 +6686,9 @@ msgstr "Atkurti atsargines kopijas"
 msgid "Restore system settings"
 msgstr "Atkurti sistemos nustatymus"
 
+msgid "Restore your receiver settings."
+msgstr "Atkurkite imtuvo nustatymus."
+
 msgid "Restoring..."
 msgstr "Atkuriama..."
 
@@ -7001,6 +6977,9 @@ msgstr "Paieška nepavyko!"
 
 msgid "Scan files..."
 msgstr "Failų paieška..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Skenuokite vietinius paketus ir įdiekite juos."
 
 msgid "Scan options"
 msgstr "Paieškos parinktys"
@@ -7355,8 +7334,8 @@ msgstr "Pasirinkite tik pakeistą virtualios klaviatūros simbolių rinkinį"
 msgid "Select update source"
 msgstr "Pasirinkite atnaujinimo šaltinį"
 
-msgid "Select update source to edit."
-msgstr "Pasirinkite atnaujinimo šaltinį redagavimui."
+msgid "Select update source to edit"
+msgstr "Pasirinkite atnaujinimo šaltinį redagavimui"
 
 msgid "Select video input with up/down buttons"
 msgstr "Mygtukais aukštyn/žemyn pasirinkite vaizdo įvestį"
@@ -8446,7 +8425,7 @@ msgid "Swedish"
 msgstr "Švedų"
 
 msgid "Switch"
-msgstr "Jungiklis"
+msgstr "Perjungti"
 
 msgid "Switch TV to correct input"
 msgstr "Perjungti TV į teisingą įvestį"
@@ -8506,13 +8485,13 @@ msgid "Switzerland"
 msgstr "Šveicarų"
 
 msgid "Symbol rate"
-msgstr "Simbolių sparta"
+msgstr "Simbolių dažnis"
 
 msgid "Symbol rate & FEC"
-msgstr "Simbolių sparta ir FEC"
+msgstr "Simbolių dažnis ir FEC"
 
 msgid "Symbol rate:"
-msgstr "Simbolių sparta:"
+msgstr "Simbolių dažnis:"
 
 msgid "Sync failure moving back to origin !"
 msgstr "Sinchronizavimo klaida, grįžtame prie originalo!"
@@ -8542,7 +8521,7 @@ msgstr "T2MI RAW režimas"
 msgid "TRANSLATOR_INFO"
 msgstr ""
 "P&C Adga, adga45@gmail.com\n"
-"Pasvalys, 2019-10-18 versija"
+"Pasvalys, 2019-11-04 versija"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "TS failas per didelis 1 lygio ISO9660!"

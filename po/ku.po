@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 Kurdish translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2013-04-22 04:29+0330\n"
 "Last-Translator: dimili21\n"
 "Language-Team: \n"
@@ -20,12 +20,8 @@ msgstr ""
 "X-Poedit-Language: Kurdish\n"
 "X-Poedit-Country: IRAQ\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Ayaré Zéde "
+msgid "Advanced options and settings."
+msgstr "Ayaré Zéde "
 
 msgid ""
 "\n"
@@ -34,26 +30,13 @@ msgstr ""
 "\n"
 "Pay Ok bine bisekin!"
 
-msgid "Backup your receiver settings."
-msgstr "yedeka bigre..."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Update ra Eyaran Çékin"
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Manage extensions or plugins for your receiver."
-
-msgid "Online update of your receiver software."
-msgstr "Zindi Update bikin."
+msgid "Edit the update source address."
+msgstr "Update ra Eyaran Çékin"
 
 msgid ""
 "\n"
@@ -73,26 +56,12 @@ msgid ""
 "Recording in progress."
 msgstr ""
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"backup xwu restore bikin"
+msgid "Restore your backups by date."
+msgstr "backup xwu restore bikin"
 
-msgid "Restore your receiver settings."
-msgstr "Risiver restore bikin."
-
-msgid "Scan for local extensions and install them."
-msgstr "Giradiye mehali bigeri."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Select your backup device.\n"
+msgstr "Select your backup device.\n"
 "Current device: "
 
 #, python-format
@@ -101,12 +70,8 @@ msgid ""
 "Timer '%s' disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"View, install and remove available or installed packages."
+msgid "View, install and remove available or installed packages."
+msgstr "View, install and remove available or installed packages."
 
 msgid " (0 - all networks)"
 msgstr ""
@@ -1339,6 +1304,9 @@ msgstr "Eyari Backup system"
 
 msgid "Backup system settings"
 msgstr "Eyari Backup system"
+
+msgid "Backup your receiver settings."
+msgstr "yedeka bigre..."
 
 msgid "Bahamas"
 msgstr ""
@@ -3093,8 +3061,8 @@ msgstr ""
 msgid "Edit title"
 msgstr "Edit title"
 
-msgid "Edit update source url."
-msgstr "Edit update source url."
+msgid "Edit update source url"
+msgstr "Edit update source url"
 
 msgid "Education/Science/..."
 msgstr "Education/Science/..."
@@ -4880,6 +4848,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr "Manage extensions"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Manage extensions or plugins for your receiver."
+
 msgid "Manage your receiver's software"
 msgstr "Manage your receiver's software"
 
@@ -5621,6 +5592,9 @@ msgstr ""
 
 msgid "One"
 msgstr "One"
+
+msgid "Online update of your receiver software."
+msgstr "Zindi Update bikin."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
@@ -6779,6 +6753,9 @@ msgstr "Restore backups"
 msgid "Restore system settings"
 msgstr "Restore system settings"
 
+msgid "Restore your receiver settings."
+msgstr "Risiver restore bikin."
+
 msgid "Restoring..."
 msgstr "Restoring..."
 
@@ -7072,6 +7049,9 @@ msgstr "Scanning failed!"
 
 msgid "Scan files..."
 msgstr "Scan files..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Giradiye mehali bigeri."
 
 msgid "Scan options"
 msgstr ""
@@ -7434,8 +7414,8 @@ msgstr ""
 msgid "Select update source"
 msgstr "Select update source"
 
-msgid "Select update source to edit."
-msgstr "Select update source to edit."
+msgid "Select update source to edit"
+msgstr "Select update source to edit"
 
 msgid "Select video input with up/down buttons"
 msgstr "Select video input with up/down buttons"

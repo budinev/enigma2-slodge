@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi-enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2018-05-22 13:54+0200\n"
 "Last-Translator: Gringo <openpli@tiscali.it>\n"
 "Language-Team: www.linsat.net <spaeleus@croci.org>\n"
@@ -20,12 +20,8 @@ msgstr ""
 "X-Generator: Poedit 1.8.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Opzioni ed impostazioni avanzate."
+msgid "Advanced options and settings."
+msgstr "Opzioni ed impostazioni avanzate."
 
 msgid ""
 "\n"
@@ -34,9 +30,6 @@ msgstr ""
 "\n"
 "Dopo aver premuto OK, attendere!"
 
-msgid "Backup your receiver settings."
-msgstr "Backup delle impostazioni del ricevitore."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -44,18 +37,8 @@ msgstr ""
 "\n"
 "L'individuazione dei conflitti è disabilitata!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Modificare l'indirizzo dell'origine degli aggiornamenti."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Gestire le estensioni ed i plugin del ricevitore."
-
-msgid "Online update of your receiver software."
-msgstr "Aggiornamento online del software del ricevitore."
+msgid "Edit the update source address."
+msgstr "Modificare l'indirizzo dell'origine degli aggiornamenti."
 
 msgid ""
 "\n"
@@ -77,26 +60,12 @@ msgstr ""
 "\n"
 "Registrazione in corso."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Ripristinare i backup per data."
+msgid "Restore your backups by date."
+msgstr "Ripristinare i backup per data."
 
-msgid "Restore your receiver settings."
-msgstr "Ripristinare le impostazioni del ricevitore."
-
-msgid "Scan for local extensions and install them."
-msgstr "Ricercare le estensioni locali ed installarle."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Selezionare il supporto per il backup.\n"
+msgstr "Selezionare il supporto per il backup.\n"
 "Supporto attuale: "
 
 #, python-format
@@ -107,12 +76,8 @@ msgstr ""
 "\n"
 "Timer '%s' disabilitato!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Elencare, installare ed eliminare i pacchetti disponibili o installati."
+msgid "View, install and remove available or installed packages."
+msgstr "Elencare, installare ed eliminare i pacchetti disponibili o installati."
 
 msgid " (0 - all networks)"
 msgstr " (0 - tutte le reti)"
@@ -1341,6 +1306,9 @@ msgstr "Impostazioni di backup"
 
 msgid "Backup system settings"
 msgstr "Backup configurazioni di sistema"
+
+msgid "Backup your receiver settings."
+msgstr "Backup delle impostazioni del ricevitore."
 
 msgid "Bahamas"
 msgstr "Bahamas"
@@ -3078,8 +3046,8 @@ msgstr "Modificare il timer"
 msgid "Edit title"
 msgstr "Modificare il titolo"
 
-msgid "Edit update source url."
-msgstr "Modificare l'URL di origine degli aggiornamenti."
+msgid "Edit update source url"
+msgstr "Modificare l'URL di origine degli aggiornamenti"
 
 msgid "Education/Science/..."
 msgstr "Istruzione/Scienza/..."
@@ -4873,6 +4841,9 @@ msgstr "Malta"
 msgid "Manage extensions"
 msgstr "Gestire le estensioni"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Gestire le estensioni ed i plugin del ricevitore."
+
 msgid "Manage your receiver's software"
 msgstr "Gestire il software del ricevitore"
 
@@ -5602,6 +5573,9 @@ msgstr "In caso di ONID validi, ignorare la parte di frequenza della sottorete."
 
 msgid "One"
 msgstr "Uno"
+
+msgid "Online update of your receiver software."
+msgstr "Aggiornamento online del software del ricevitore."
 
 #, fuzzy
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
@@ -6752,6 +6726,9 @@ msgstr "Ripristino dei backup"
 msgid "Restore system settings"
 msgstr "Ripristino delle impostazioni di sistema"
 
+msgid "Restore your receiver settings."
+msgstr "Ripristinare le impostazioni del ricevitore."
+
 msgid "Restoring..."
 msgstr "Ripristino in corso..."
 
@@ -7042,6 +7019,9 @@ msgstr "Ricerca non riuscita!"
 
 msgid "Scan files..."
 msgstr "Ricercare i file"
+
+msgid "Scan for local extensions and install them."
+msgstr "Ricercare le estensioni locali ed installarle."
 
 msgid "Scan options"
 msgstr "Opzioni di ricerca"
@@ -7402,8 +7382,8 @@ msgstr ""
 msgid "Select update source"
 msgstr "Selezionare l'origine degli aggiornamenti"
 
-msgid "Select update source to edit."
-msgstr "Selezionare l'origine degli aggiornamenti da modificare."
+msgid "Select update source to edit"
+msgstr "Selezionare l'origine degli aggiornamenti da modificare"
 
 msgid "Select video input with up/down buttons"
 msgstr "Selezionare l'ingresso video con i tasti Su/Giù"

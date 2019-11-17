@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OPENPLi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2015-12-18 21:05+0200\n"
 "Last-Translator: Yetkin AYDIN <yetkina@gmail.com>\n"
 "Language-Team: http://www.hurforum.com <yetkina@gmail.com>\n"
@@ -19,12 +19,8 @@ msgstr ""
 "X-Generator: Poedit 1.8.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Gelişmiş seçenekler ve ayarlar."
+msgid "Advanced options and settings."
+msgstr "Gelişmiş seçenekler ve ayarlar."
 
 msgid ""
 "\n"
@@ -33,26 +29,13 @@ msgstr ""
 "\n"
 "Lütfen OK'a bastıktan sonra bekleyin!"
 
-msgid "Backup your receiver settings."
-msgstr "Alıcı ayarlarını Yedekle."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Güncelleme sunucusu adresini düzenleyin."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Alıcınız için uzantıları veya eklentileri yönetin."
-
-msgid "Online update of your receiver software."
-msgstr "Alıcının yazılımı online güncelle."
+msgid "Edit the update source address."
+msgstr "Güncelleme sunucusu adresini düzenleyin."
 
 msgid ""
 "\n"
@@ -74,26 +57,12 @@ msgstr ""
 "\n"
 "Kayıt devam ediyor."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Yedeklerinizi tarihe göre geri yükleyin."
+msgid "Restore your backups by date."
+msgstr "Yedeklerinizi tarihe göre geri yükleyin."
 
-msgid "Restore your receiver settings."
-msgstr "Alıcının ayarlarını geri yükle."
-
-msgid "Scan for local extensions and install them."
-msgstr "Yereldeki eklentileri arayın ve kurun."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Yedekleme aygıtını seçin.\n"
+msgstr "Yedekleme aygıtını seçin.\n"
 "Mevcut aygıt: "
 
 #, python-format
@@ -104,12 +73,8 @@ msgstr ""
 "\n"
 "'%s' Zamanlayıcı devre dışı!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Paketleri görün, yükleyin veya yüklü paketleri kaldırın."
+msgid "View, install and remove available or installed packages."
+msgstr "Paketleri görün, yükleyin veya yüklü paketleri kaldırın."
 
 msgid " (0 - all networks)"
 msgstr ""
@@ -1335,6 +1300,9 @@ msgstr "Sistem ayarlarını yedekle"
 
 msgid "Backup system settings"
 msgstr "Sistem ayarlarını yedekle"
+
+msgid "Backup your receiver settings."
+msgstr "Alıcı ayarlarını Yedekle."
 
 msgid "Bahamas"
 msgstr ""
@@ -3099,8 +3067,8 @@ msgstr "Zamanlayıcıyı Düzenle"
 msgid "Edit title"
 msgstr "Başlığı düzenle"
 
-msgid "Edit update source url."
-msgstr "Güncelleme sunucusu adresini düzenleyin."
+msgid "Edit update source url"
+msgstr "Güncelleme sunucusu adresini düzenleyin"
 
 msgid "Education/Science/..."
 msgstr "Eğitim/Bilim/..."
@@ -4901,6 +4869,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr "Eklentileri yönet"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Alıcınız için uzantıları veya eklentileri yönetin."
+
 msgid "Manage your receiver's software"
 msgstr "Sistem Yazılımımı Yönetimi"
 
@@ -5642,6 +5613,9 @@ msgstr ""
 
 msgid "One"
 msgstr "Bir"
+
+msgid "Online update of your receiver software."
+msgstr "Alıcının yazılımı online güncelle."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
@@ -6806,6 +6780,9 @@ msgstr "Yedekten geri yükle"
 msgid "Restore system settings"
 msgstr "Sistem ayarlarını geri yükle"
 
+msgid "Restore your receiver settings."
+msgstr "Alıcının ayarlarını geri yükle."
+
 msgid "Restoring..."
 msgstr "Geri yükleniyor ..."
 
@@ -7100,6 +7077,9 @@ msgstr "Tarama başarısız!"
 
 msgid "Scan files..."
 msgstr "Dosyaları Tara..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Yereldeki eklentileri arayın ve kurun."
 
 msgid "Scan options"
 msgstr "Tarama seçenekleri"
@@ -7460,8 +7440,8 @@ msgstr ""
 msgid "Select update source"
 msgstr "Güncelleme kaynağı seçin"
 
-msgid "Select update source to edit."
-msgstr "Düzenlemek istediğiniz güncelleme kaynağını seçin."
+msgid "Select update source to edit"
+msgstr "Düzenlemek istediğiniz güncelleme kaynağını seçin"
 
 msgid "Select video input with up/down buttons"
 msgstr "Yukarı / aşağı düğmeleri ile  video girişi seçin"

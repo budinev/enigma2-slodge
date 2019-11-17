@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2019-07-22 20:15+0700\n"
 "Last-Translator: krong\n"
 "Language-Team: none\n"
@@ -13,12 +13,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Poedit 2.2.3\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Tùy chọn và cài đặt nâng cao."
+msgid "Advanced options and settings."
+msgstr "Tùy chọn và cài đặt nâng cao."
 
 msgid ""
 "\n"
@@ -27,9 +23,6 @@ msgstr ""
 "\n"
 "Sau khi nhấn OK, vui lòng đợi!"
 
-msgid "Backup your receiver settings."
-msgstr "Sao lưu cài đặt máy thu của bạn."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -37,18 +30,8 @@ msgstr ""
 "\n"
 "Phát hiện xung đột bị vô hiệu hóa!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Chỉnh sửa địa chỉ nguồn nâng cấp."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Quản lý tiện ích mở rộng hoặc plugin cho đầu thu của bạn."
-
-msgid "Online update of your receiver software."
-msgstr "Cập nhật trực tuyến phần mềm nhận của bạn."
+msgid "Edit the update source address."
+msgstr "Chỉnh sửa địa chỉ nguồn nâng cấp."
 
 msgid ""
 "\n"
@@ -71,26 +54,12 @@ msgstr ""
 "\n"
 "Ghi âm trong tiến trình."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Khôi phục bản sao lưu của bạn theo ngày."
+msgid "Restore your backups by date."
+msgstr "Khôi phục bản sao lưu của bạn theo ngày."
 
-msgid "Restore your receiver settings."
-msgstr "Khôi phục cài đặt máy thu của bạn."
-
-msgid "Scan for local extensions and install them."
-msgstr "Quét các tiện ích mở rộng cục bộ và cài đặt chúng."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Chọn thiết bị sao lưu của bạn.\n"
+msgstr "Chọn thiết bị sao lưu của bạn.\n"
 "Thiêt bị hiện tại: "
 
 #, python-format
@@ -101,12 +70,8 @@ msgstr ""
 "\n"
 "Hẹn giờ '%s' bị vô hiệu hóa!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Xem, cài đặt và loại bỏ các gói có sẵn hoặc cài đặt."
+msgid "View, install and remove available or installed packages."
+msgstr "Xem, cài đặt và loại bỏ các gói có sẵn hoặc cài đặt."
 
 msgid " (0 - all networks)"
 msgstr " (0 - tất cả các mạng)"
@@ -1327,6 +1292,9 @@ msgstr "Cài đặt sao lưu"
 
 msgid "Backup system settings"
 msgstr "Cài đặt hệ thống sao lưu"
+
+msgid "Backup your receiver settings."
+msgstr "Sao lưu cài đặt máy thu của bạn."
 
 msgid "Bahamas"
 msgstr "Ba Tư"
@@ -3061,8 +3029,8 @@ msgstr "Chỉnh sửa bộ đếm thời gian"
 msgid "Edit title"
 msgstr "Chỉnh sửa tiêu đề"
 
-msgid "Edit update source url."
-msgstr "Chỉnh sửa url nguồn nâng cấp."
+msgid "Edit update source url"
+msgstr "Chỉnh sửa url nguồn nâng cấp"
 
 msgid "Education/Science/..."
 msgstr "Giáo dục / Khoa học / ..."
@@ -4841,6 +4809,9 @@ msgstr "Malta"
 msgid "Manage extensions"
 msgstr "Quản lý tiện ích mở rộng"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Quản lý tiện ích mở rộng hoặc plugin cho đầu thu của bạn."
+
 msgid "Manage your receiver's software"
 msgstr "Quản lý phần mềm người nhận của bạn"
 
@@ -5562,6 +5533,9 @@ msgstr "Trên các ONID hợp lệ, bỏ qua phần mạng phụ tần số"
 
 msgid "One"
 msgstr "Một"
+
+msgid "Online update of your receiver software."
+msgstr "Cập nhật trực tuyến phần mềm nhận của bạn."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr "Chỉ thay đổi cài đặt này nếu bạn đang sử dụng thiết bị SCR đã được lập trình lại với một lập trình viên tùy chỉnh. Để biết thêm thông tin, hãy kiểm tra với người đã lập trình lại thiết bị."
@@ -6699,6 +6673,9 @@ msgstr "Khôi phục bản sao lưu"
 msgid "Restore system settings"
 msgstr "Khôi phục cài đặt hệ thống"
 
+msgid "Restore your receiver settings."
+msgstr "Khôi phục cài đặt máy thu của bạn."
+
 msgid "Restoring..."
 msgstr "Khôi phục ..."
 
@@ -6986,6 +6963,9 @@ msgstr "Quét thất bại!"
 
 msgid "Scan files..."
 msgstr "Quét tập tin ..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Quét các tiện ích mở rộng cục bộ và cài đặt chúng."
 
 msgid "Scan options"
 msgstr "Tùy chọn quét"
@@ -7338,8 +7318,8 @@ msgstr "Chọn bộ ký tự dịch chuyển bàn phím ảo cho chỉ ký tự 
 msgid "Select update source"
 msgstr "Chọn nguồn nâng cấp"
 
-msgid "Select update source to edit."
-msgstr "Chọn nguồn nâng cấp để chỉnh sửa."
+msgid "Select update source to edit"
+msgstr "Chọn nguồn nâng cấp để chỉnh sửa"
 
 msgid "Select video input with up/down buttons"
 msgstr "Chọn đầu vào video với các nút lên / xuống"

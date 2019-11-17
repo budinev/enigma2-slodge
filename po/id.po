@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Budiarno Pedode\n"
 "Language-Team: \n"
@@ -13,12 +13,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Pilihan dan penyetelan tingkat lanjut"
+msgid "Advanced options and settings."
+msgstr "Pilihan dan penyetelan tingkat lanjut."
 
 msgid ""
 "\n"
@@ -27,9 +23,6 @@ msgstr ""
 "\n"
 "Setelah tekan OK, silakan tunggu!"
 
-msgid "Backup your receiver settings."
-msgstr "Buat berkas cadangan penyetelan Rx anda."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -37,18 +30,8 @@ msgstr ""
 "\n"
 "Deteksi konflik dimatikan!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Ubah alamat sumber peningkatan."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Kelola ekstensi atau plugin pada Rx anda."
-
-msgid "Online update of your receiver software."
-msgstr "Pembaruan daring perangkat lunak Rx anda."
+msgid "Edit the update source address."
+msgstr "Ubah alamat sumber peningkatan."
 
 msgid ""
 "\n"
@@ -68,26 +51,12 @@ msgid ""
 "Recording in progress."
 msgstr ""
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Pulihkan data cadangan anda berdasarkan tanggal."
+msgid "Restore your backups by date."
+msgstr "Pulihkan data cadangan anda berdasarkan tanggal."
 
-msgid "Restore your receiver settings."
-msgstr "Pulihkan penyetelan Rx anda."
-
-msgid "Scan for local extensions and install them."
-msgstr "Pindai ekstensi lokal kemudian pasang."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Pilih perangkat untuk berkas cadangan anda.\n"
+msgstr "Pilih perangkat untuk berkas cadangan anda.\n"
 "Perangkat dipakai: "
 
 #, python-format
@@ -98,12 +67,8 @@ msgstr ""
 "\n"
 "Pewaktu '%s' dimatikan!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Tinjau, pasang dan hapus paket yang tersedia atau terpasang."
+msgid "View, install and remove available or installed packages."
+msgstr "Tinjau, pasang dan hapus paket yang tersedia atau terpasang."
 
 msgid " (0 - all networks)"
 msgstr " (0 - semua jaringan)"
@@ -1351,6 +1316,9 @@ msgstr "Buat berkas cadangan penyetelan sistem"
 
 msgid "Backup system settings"
 msgstr "Buat berkas cadangan penyetelan sistem"
+
+msgid "Backup your receiver settings."
+msgstr "Buat berkas cadangan penyetelan Rx anda."
 
 msgid "Bahamas"
 msgstr "Bahama"
@@ -3117,8 +3085,8 @@ msgstr "Ubah pewaktu"
 msgid "Edit title"
 msgstr "Ubah judul"
 
-msgid "Edit update source url."
-msgstr "Ubah url sumber update."
+msgid "Edit update source url"
+msgstr "Ubah url sumber update"
 
 msgid "Education/Science/..."
 msgstr "Edukasi/Sains/..."
@@ -4948,6 +4916,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr "Kelola ekstensi"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Kelola ekstensi atau plugin pada Rx anda."
+
 msgid "Manage your receiver's software"
 msgstr "Kelola perangkat lunak rx anda"
 
@@ -5690,6 +5661,9 @@ msgstr "Pada ONID valid, abaikan bagian sub jaringan frekuensi"
 
 msgid "One"
 msgstr "Satu"
+
+msgid "Online update of your receiver software."
+msgstr "Pembaruan daring perangkat lunak Rx anda."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr "Ubah setelan ini hanya jika anda menggunakan perangkat SCR yg telah diprogram dgn pemrogram kustom. Untuk info lanjut periksa orang yg memrogram perangkat tsb."
@@ -6852,6 +6826,9 @@ msgstr "Pulihkan cadangan"
 msgid "Restore system settings"
 msgstr "Pulihkan setelan sistem"
 
+msgid "Restore your receiver settings."
+msgstr "Pulihkan penyetelan Rx anda."
+
 msgid "Restoring..."
 msgstr "Memulihkan..."
 
@@ -7146,6 +7123,9 @@ msgstr "Pelacakan gagal!"
 
 msgid "Scan files..."
 msgstr "Pindai file..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Pindai ekstensi lokal kemudian pasang."
 
 msgid "Scan options"
 msgstr "Pilihan lacak"
@@ -7509,8 +7489,8 @@ msgstr "Pilih set karakter geser pada papankunci virtual"
 msgid "Select update source"
 msgstr "Pilih sumber update"
 
-msgid "Select update source to edit."
-msgstr "Pilih sumber update untuk diubah."
+msgid "Select update source to edit"
+msgstr "Pilih sumber update untuk diubah"
 
 msgid "Select video input with up/down buttons"
 msgstr "Pilih input video dengan tombol up/down"

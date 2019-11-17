@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2017-03-05 13:24+0100\n"
 "Last-Translator: Magnus Nilsson <mag_nilsson@hotmail.com>\n"
 "Language-Team: \n"
@@ -17,12 +17,8 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Avancerade val och inställningar."
+msgid "Advanced options and settings."
+msgstr "Avancerade val och inställningar."
 
 msgid ""
 "\n"
@@ -30,9 +26,6 @@ msgid ""
 msgstr ""
 "\n"
 "Efter att ha tryckt OK, var god vänta!"
-
-msgid "Backup your receiver settings."
-msgstr "Säkerhetskopiera din mottagares inställningar."
 
 msgid ""
 "\n"
@@ -42,18 +35,8 @@ msgstr ""
 "Konfliktdetektering avstängd!"
 
 #
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Ändra uppdateringskällans adress."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Hantera utökningar eller plugins för din mottagare."
-
-msgid "Online update of your receiver software."
-msgstr "Online uppdatering av din mottagares mjukvara."
+msgid "Edit the update source address."
+msgstr "Ändra uppdateringskällans adress."
 
 #
 msgid ""
@@ -78,28 +61,13 @@ msgstr ""
 "Inspelning pågår."
 
 #
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Återställ dina säkerhetskopior med datum."
-
-msgid "Restore your receiver settings."
-msgstr "Återställ mottagares inställningar."
+msgid "Restore your backups by date."
+msgstr "Återställ dina säkerhetskopior med datum."
 
 #
-msgid "Scan for local extensions and install them."
-msgstr "Sök efter lokala utökningar och installera dem."
-
-#
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Välj enhet för säkerhetskopia.\n"
+msgstr "Välj enhet för säkerhetskopia.\n"
 "Nuvarande enhet : "
 
 #, python-format
@@ -111,12 +79,8 @@ msgstr ""
 "Timer '%s' avstängd!"
 
 #
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Visa, installera och ta bort tillgängliga eller installerade paket."
+msgid "View, install and remove available or installed packages."
+msgstr "Visa, installera och ta bort tillgängliga eller installerade paket."
 
 msgid " (0 - all networks)"
 msgstr "(0 - alla nätverk)"
@@ -1492,6 +1456,9 @@ msgstr "Säkerhetskopiera systeminställningar"
 #
 msgid "Backup system settings"
 msgstr "Säkerhetskopiera systeminställningar"
+
+msgid "Backup your receiver settings."
+msgstr "Säkerhetskopiera din mottagares inställningar."
 
 msgid "Bahamas"
 msgstr ""
@@ -3466,8 +3433,8 @@ msgstr "Ändra timer"
 msgid "Edit title"
 msgstr "Ändra titel"
 
-msgid "Edit update source url."
-msgstr "Ändra uppdateringskällans url."
+msgid "Edit update source url"
+msgstr "Ändra uppdateringskällans url"
 
 msgid "Education/Science/..."
 msgstr "Utbildning / Vetenskap / ..."
@@ -5465,6 +5432,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr "Hantera utökningar"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Hantera utökningar eller plugins för din mottagare."
+
 #
 msgid "Manage your receiver's software"
 msgstr "Hantera din mottagares mjukvara"
@@ -6308,6 +6278,9 @@ msgstr ""
 #
 msgid "One"
 msgstr "En"
+
+msgid "Online update of your receiver software."
+msgstr "Online uppdatering av din mottagares mjukvara."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
@@ -7647,6 +7620,9 @@ msgstr "Återställ säkerhetskopia"
 msgid "Restore system settings"
 msgstr "Återskapa systeminställningar"
 
+msgid "Restore your receiver settings."
+msgstr "Återställ mottagares inställningar."
+
 #
 msgid "Restoring..."
 msgstr "Återställer..."
@@ -7983,6 +7959,10 @@ msgstr "Sökning misslyckades!"
 #
 msgid "Scan files..."
 msgstr "Sök filer..."
+
+#
+msgid "Scan for local extensions and install them."
+msgstr "Sök efter lokala utökningar och installera dem."
 
 msgid "Scan options"
 msgstr "Sök val"
@@ -8385,8 +8365,8 @@ msgid "Select update source"
 msgstr "Ange uppdateringskälla."
 
 #
-msgid "Select update source to edit."
-msgstr "Ange uppdateringskälla att ändra."
+msgid "Select update source to edit"
+msgstr "Ange uppdateringskälla att ändra"
 
 #
 msgid "Select video input with up/down buttons"

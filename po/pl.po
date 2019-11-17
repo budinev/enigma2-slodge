@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2019-09-13 12:44+0200\n"
 "Last-Translator: blzr <blzr@o2.pl>\n"
 "Language-Team: \n"
@@ -13,12 +13,8 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Poedit 2.0.6\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Zaawansowane opcje i ustawienia."
+msgid "Advanced options and settings."
+msgstr "Zaawansowane opcje i ustawienia."
 
 msgid ""
 "\n"
@@ -27,9 +23,6 @@ msgstr ""
 "\n"
 "Po naciśnięciu OK czekaj!"
 
-msgid "Backup your receiver settings."
-msgstr "Wykonaj kopię ustawień."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -37,18 +30,8 @@ msgstr ""
 "\n"
 "Wykrywanie konfliktów wyłączone!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Edytuj adres aktualizacji."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Zarządzaj rozszerzeniami i wtyczkami."
-
-msgid "Online update of your receiver software."
-msgstr "Aktualizacja oprogramowania online."
+msgid "Edit the update source address."
+msgstr "Edytuj adres aktualizacji."
 
 msgid ""
 "\n"
@@ -71,26 +54,12 @@ msgstr ""
 "\n"
 "Nagrywanie w toku."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Przywróć backup według daty."
+msgid "Restore your backups by date."
+msgstr "Przywróć backup według daty."
 
-msgid "Restore your receiver settings."
-msgstr "Przywróć własne ustawienia odbiornika."
-
-msgid "Scan for local extensions and install them."
-msgstr "Szukaj lokalnych rozszerzeń i zainstaluj je."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Wybierz lokalizację dla backupu.\n"
+msgstr "Wybierz lokalizację dla backupu.\n"
 "Aktualna lokalizacja: "
 
 #, python-format
@@ -101,12 +70,8 @@ msgstr ""
 "\n"
 "Timer '%s' wyłączony!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Zobacz, zainstaluj lub usuń dostępne lub zainstalowane pakiety."
+msgid "View, install and remove available or installed packages."
+msgstr "Zobacz, zainstaluj lub usuń dostępne lub zainstalowane pakiety."
 
 msgid " (0 - all networks)"
 msgstr " (0 - wszystkie sieci)"
@@ -1341,6 +1306,9 @@ msgstr "Kopia zapasowa ustawień"
 
 msgid "Backup system settings"
 msgstr "Backup ustawień systemowych"
+
+msgid "Backup your receiver settings."
+msgstr "Wykonaj kopię ustawień."
 
 msgid "Bahamas"
 msgstr "Bahamy"
@@ -3076,7 +3044,7 @@ msgstr "Edytuj timer"
 msgid "Edit title"
 msgstr "Edytuj tytuł"
 
-msgid "Edit update source url."
+msgid "Edit update source url"
 msgstr "Edytuj adres aktualizacji"
 
 msgid "Education/Science/..."
@@ -4856,6 +4824,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr "Zarządzaj rozszerzeniami"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Zarządzaj rozszerzeniami i wtyczkami."
+
 msgid "Manage your receiver's software"
 msgstr "Zarządzaj oprogramowaniem odbiornika"
 
@@ -5577,6 +5548,9 @@ msgstr "Dla prawidłowych ONID, ignoruj częstotliwość podsieci"
 
 msgid "One"
 msgstr "Jeden"
+
+msgid "Online update of your receiver software."
+msgstr "Aktualizacja oprogramowania online."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr "Zmień to ustawienie tylko wtedy, jeżeli używasz urządzenia unicable / SCR, które zostało przeprogramowane specjalnym programatorem. Więcej informacji uzyskasz od osoby, która przeprogramowała urządzenie."
@@ -6714,6 +6688,9 @@ msgstr "Przywróć backup"
 msgid "Restore system settings"
 msgstr "Przywróć ustawienia systemowe"
 
+msgid "Restore your receiver settings."
+msgstr "Przywróć własne ustawienia odbiornika."
+
 msgid "Restoring..."
 msgstr "Przywracanie..."
 
@@ -7002,6 +6979,9 @@ msgstr "Skanowanie nie powiodło się!"
 
 msgid "Scan files..."
 msgstr "Przeszukaj pliki..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Szukaj lokalnych rozszerzeń i zainstaluj je."
 
 msgid "Scan options"
 msgstr "Opcje skanowania"
@@ -7356,7 +7336,7 @@ msgstr "Wybierz alternatywny znak (z SHIFT) klawiatury wirtualnej tylko dla kole
 msgid "Select update source"
 msgstr "Wybierz źródło aktualizacji"
 
-msgid "Select update source to edit."
+msgid "Select update source to edit"
 msgstr "Wybierz źródło aktualizacji do edycji"
 
 msgid "Select video input with up/down buttons"

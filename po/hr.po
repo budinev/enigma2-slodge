@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:17+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2019-10-31 04:18+0100\n"
 "Last-Translator: Željko <zeljko2@hi.ht.hr>\n"
 "Language-Team: Željko\n"
@@ -13,12 +13,8 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.2.3\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Napredne opcije i postavke."
+msgid "Advanced options and settings."
+msgstr "Napredne opcije i postavke."
 
 msgid ""
 "\n"
@@ -27,9 +23,6 @@ msgstr ""
 "\n"
 "Nakon pritiska na OK, molimo pričekajte!"
 
-msgid "Backup your receiver settings."
-msgstr "Napravite kopiju postavki vašeg resivera."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -37,18 +30,8 @@ msgstr ""
 "\n"
 "Otkrivanje sukoba je onemogućeno!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Uredite adresu za ažuriranje."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Omogućiti proširenja ili dodatke za vaš prijemnik."
-
-msgid "Online update of your receiver software."
-msgstr "Online ažuriranje softvera vašeg prijemnika."
+msgid "Edit the update source address."
+msgstr "Uredite adresu za ažuriranje."
 
 msgid ""
 "\n"
@@ -71,26 +54,12 @@ msgstr ""
 "\n"
 "Snimanje je u tijeku."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Vratite rezervnu kopiju po datumu."
+msgid "Restore your backups by date."
+msgstr "Vratite rezervnu kopiju po datumu."
 
-msgid "Restore your receiver settings."
-msgstr "Vratite postavke prijemnika."
-
-msgid "Scan for local extensions and install them."
-msgstr "Tražite lokalna proširenja i instalirajte ih."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Odaberite uređaj za spremanje kopija.\n"
+msgstr "Odaberite uređaj za spremanje kopija.\n"
 "Aktualni uređaj: "
 
 #, python-format
@@ -101,12 +70,8 @@ msgstr ""
 "\n"
 "Таjmer '%s' onemogućen!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Pogled, instalacija dostupnih ili uklanjanje instaliranih paketa."
+msgid "View, install and remove available or installed packages."
+msgstr "Pogled, instalacija dostupnih ili uklanjanje instaliranih paketa."
 
 msgid " (0 - all networks)"
 msgstr " (0 - sve mreže)"
@@ -1339,6 +1304,9 @@ msgstr "Postavke sigurnosne kopije"
 
 msgid "Backup system settings"
 msgstr "Postavke sigurnosne kopije sustava"
+
+msgid "Backup your receiver settings."
+msgstr "Napravite kopiju postavki vašeg resivera."
 
 msgid "Bahamas"
 msgstr "Bahami"
@@ -3076,8 +3044,8 @@ msgstr "Uredite tajmer"
 msgid "Edit title"
 msgstr "Uredite titlove"
 
-msgid "Edit update source url."
-msgstr "Uredite ažuriranje izvornog url-a."
+msgid "Edit update source url"
+msgstr "Uredite ažuriranje izvornog url-a"
 
 msgid "Education/Science/..."
 msgstr "Obrazovanje/znanost/..."
@@ -4855,6 +4823,9 @@ msgstr "Malta"
 msgid "Manage extensions"
 msgstr "Upravljanje proširenjima"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Omogućiti proširenja ili dodatke za vaš prijemnik."
+
 msgid "Manage your receiver's software"
 msgstr "Upravljanje proširenjima"
 
@@ -5576,6 +5547,9 @@ msgstr "Na važećim ONID-ovima, zanemarite dio mrežne frekvencije."
 
 msgid "One"
 msgstr "Jedan"
+
+msgid "Online update of your receiver software."
+msgstr "Online ažuriranje softvera vašeg prijemnika."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr "Promijenite ovu postavku samo ako koristite SCR uređaj koji je reprogramiran pomoću prilagođenog programatora. Za daljnje informacije provjerite kod osobe koja je reprogramirala uređaj."
@@ -6713,6 +6687,9 @@ msgstr "Vraćanje sigurnosnih kopija"
 msgid "Restore system settings"
 msgstr "Vraćanje sistemskih postavki"
 
+msgid "Restore your receiver settings."
+msgstr "Vratite postavke prijemnika."
+
 msgid "Restoring..."
 msgstr "Vraćanje..."
 
@@ -7001,6 +6978,9 @@ msgstr "Pretraživanje nije uspjelo!"
 
 msgid "Scan files..."
 msgstr "Pretraživanje datoteka......"
+
+msgid "Scan for local extensions and install them."
+msgstr "Tražite lokalna proširenja i instalirajte ih."
 
 msgid "Scan options"
 msgstr "Opcije pretraživanja"
@@ -7355,8 +7335,8 @@ msgstr "Odaberite skup znakova virtualne tipkovnice pomaknut samo za sljedeći z
 msgid "Select update source"
 msgstr "Odaberite izvor ažuriranja"
 
-msgid "Select update source to edit."
-msgstr "Odaberite izvor ažuriranja za uređivanje."
+msgid "Select update source to edit"
+msgstr "Odaberite izvor ažuriranja za uređivanje"
 
 msgid "Select video input with up/down buttons"
 msgstr "Odaberite video ulaz pomoću tipki gore/dolje"

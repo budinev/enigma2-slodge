@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:06+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2017-01-18 16:38+0100\n"
 "Last-Translator: lupine <a_ecklon@hotmail.com>\n"
 "Language-Team: \n"
@@ -16,12 +16,8 @@ msgstr ""
 "X-Poedit-SourceCharset: iso-8859-15\n"
 
 #
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Indstillinger og avancerede indstillinger."
+msgid "Advanced options and settings."
+msgstr "Indstillinger og avancerede indstillinger."
 
 #
 msgid ""
@@ -31,9 +27,6 @@ msgstr ""
 "\n"
 "Efter tryk på OK, vent venligst!"
 
-msgid "Backup your receiver settings."
-msgstr "Lav en backup af din receivers indstillinger. "
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -42,18 +35,8 @@ msgstr ""
 "Konflikt detektion deaktiveret!"
 
 #
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Rediger kildeadressen til opgradering."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Indstil udvidelser eller plugins på din receiver."
-
-msgid "Online update of your receiver software."
-msgstr "Online opdatering af din receiver software."
+msgid "Edit the update source address."
+msgstr "Rediger kildeadressen til opgradering."
 
 #
 msgid ""
@@ -78,28 +61,13 @@ msgstr ""
 "Optagelse i gang."
 
 #
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Gendan dine backups efter dato."
-
-msgid "Restore your receiver settings."
-msgstr "Genetabler receiverens indstillinger."
+msgid "Restore your backups by date."
+msgstr "Gendan dine backups efter dato."
 
 #
-msgid "Scan for local extensions and install them."
-msgstr "Søg efter lokale udvidelser og installer dem."
-
-#
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Vælg din backup enhed.\n"
+msgstr "Vælg din backup enhed.\n"
 "Nuværende enhed: "
 
 #, python-format
@@ -111,12 +79,8 @@ msgstr ""
 "Timer '%s' deaktiveret!"
 
 #
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Se, installer og fjern nuværende eller installerede pakker."
+msgid "View, install and remove available or installed packages."
+msgstr "Se, installer og fjern nuværende eller installerede pakker."
 
 msgid " (0 - all networks)"
 msgstr "(0 - alle netværk)"
@@ -1491,6 +1455,9 @@ msgstr "Lav backup af systemindstillinger"
 #
 msgid "Backup system settings"
 msgstr "Lav backup af systemindstillinger"
+
+msgid "Backup your receiver settings."
+msgstr "Lav en backup af din receivers indstillinger. "
 
 msgid "Bahamas"
 msgstr ""
@@ -3477,8 +3444,8 @@ msgid "Edit title"
 msgstr "Rediger titel"
 
 #
-msgid "Edit update source url."
-msgstr "Rediger url for opgraderingskilde."
+msgid "Edit update source url"
+msgstr "Rediger url for opgraderingskilde"
 
 msgid "Education/Science/..."
 msgstr "Uddannelse/Videnskab/..."
@@ -5487,6 +5454,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr "Håndter udvidelser"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Indstil udvidelser eller plugins på din receiver."
+
 #
 msgid "Manage your receiver's software"
 msgstr "Styring af din modtagers software"
@@ -6338,6 +6308,9 @@ msgstr ""
 #
 msgid "One"
 msgstr "En"
+
+msgid "Online update of your receiver software."
+msgstr "Online opdatering af din receiver software."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
@@ -7685,6 +7658,9 @@ msgstr "Gendan backup"
 msgid "Restore system settings"
 msgstr "Gendan system opsætning"
 
+msgid "Restore your receiver settings."
+msgstr "Genetabler receiverens indstillinger."
+
 #
 msgid "Restoring..."
 msgstr "Genetablerer..."
@@ -8021,6 +7997,10 @@ msgstr "Søgning fejlet"
 #
 msgid "Scan files..."
 msgstr "Søg filer..."
+
+#
+msgid "Scan for local extensions and install them."
+msgstr "Søg efter lokale udvidelser og installer dem."
 
 msgid "Scan options"
 msgstr "Skan muligheder"
@@ -8425,8 +8405,8 @@ msgid "Select update source"
 msgstr "Vælg opgraderingskilde"
 
 #
-msgid "Select update source to edit."
-msgstr "Vælg opgraderingskilde til redigering."
+msgid "Select update source to edit"
+msgstr "Vælg opgraderingskilde til redigering"
 
 #
 msgid "Select video input with up/down buttons"

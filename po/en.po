@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: satdreamgr\n"
 "Language-Team: \n"
@@ -13,12 +13,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Advanced options and settings."
+msgid "Advanced options and settings."
+msgstr "Advanced options and settings."
 
 msgid ""
 "\n"
@@ -26,27 +22,14 @@ msgid ""
 msgstr ""
 "\n"
 "After pressing OK, please wait!"
-
-msgid "Backup your receiver settings."
-msgstr "Backup your receiver settings."
 
 msgid ""
 "\n"
 "Conflict detection disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Edit the update source address."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Manage extensions or plugins for your receiver."
-
-msgid "Online update of your receiver software."
-msgstr "Online update of your receiver software."
+msgid "Edit the update source address."
+msgstr "Edit the update source address."
 
 msgid ""
 "\n"
@@ -66,26 +49,12 @@ msgid ""
 "Recording in progress."
 msgstr ""
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Restore your backups by date."
+msgid "Restore your backups by date."
+msgstr "Restore your backups by date."
 
-msgid "Restore your receiver settings."
-msgstr "Restore your receiver settings."
-
-msgid "Scan for local extensions and install them."
-msgstr "Scan for local extensions and install them."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Select your backup device.\n"
+msgstr "Select your backup device.\n"
 "Current device: "
 
 #, python-format
@@ -94,12 +63,8 @@ msgid ""
 "Timer '%s' disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"View, install and remove available or installed packages."
+msgid "View, install and remove available or installed packages."
+msgstr "View, install and remove available or installed packages."
 
 msgid " (0 - all networks)"
 msgstr ""
@@ -1333,6 +1298,9 @@ msgstr "Backup system settings"
 
 msgid "Backup system settings"
 msgstr "Backup system settings"
+
+msgid "Backup your receiver settings."
+msgstr "Backup your receiver settings."
 
 msgid "Bahamas"
 msgstr ""
@@ -3087,8 +3055,8 @@ msgstr ""
 msgid "Edit title"
 msgstr "Edit title"
 
-msgid "Edit update source url."
-msgstr "Edit update source url."
+msgid "Edit update source url"
+msgstr "Edit update source url"
 
 msgid "Education/Science/..."
 msgstr "Education/Science/..."
@@ -4876,6 +4844,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr "Manage extensions"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Manage extensions or plugins for your receiver."
+
 msgid "Manage your receiver's software"
 msgstr "Manage your receiver's software"
 
@@ -5617,6 +5588,9 @@ msgstr ""
 
 msgid "One"
 msgstr "One"
+
+msgid "Online update of your receiver software."
+msgstr "Online update of your receiver software."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
@@ -6775,6 +6749,9 @@ msgstr "Restore backups"
 msgid "Restore system settings"
 msgstr "Restore system settings"
 
+msgid "Restore your receiver settings."
+msgstr "Restore your receiver settings."
+
 msgid "Restoring..."
 msgstr "Restoring..."
 
@@ -7068,6 +7045,9 @@ msgstr "Scanning failed!"
 
 msgid "Scan files..."
 msgstr "Scan files..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Scan for local extensions and install them."
 
 msgid "Scan options"
 msgstr ""
@@ -7430,8 +7410,8 @@ msgstr ""
 msgid "Select update source"
 msgstr "Select update source"
 
-msgid "Select update source to edit."
-msgstr "Select update source to edit."
+msgid "Select update source to edit"
+msgstr "Select update source to edit"
 
 msgid "Select video input with up/down buttons"
 msgstr "Select video input with up/down buttons"

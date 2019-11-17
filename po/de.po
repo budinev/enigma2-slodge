@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:06+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2019-07-24 20:23+0200\n"
 "Last-Translator: Pike_Bishop <alfredzngr023@gmail.com>\n"
 "Language-Team: Sfteam  angelo2807@hotmail.com\n"
@@ -14,12 +14,8 @@ msgstr ""
 "X-Generator: Poedit 1.8.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Erweiterte Optionen und Einstellungen."
+msgid "Advanced options and settings."
+msgstr "Erweiterte Optionen und Einstellungen."
 
 msgid ""
 "\n"
@@ -28,9 +24,6 @@ msgstr ""
 "\n"
 "Nachdem Sie OK gedrückt haben, bitte warten!"
 
-msgid "Backup your receiver settings."
-msgstr "Sichern Ihrer Receiver-Einstellungen."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -38,18 +31,8 @@ msgstr ""
 "\n"
 "Konflikterkennung deaktiviert!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Update-Quell-Adresse bearbeiten."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Verwalten Sie die Erweiterungen und Plugins Ihres Receivers."
-
-msgid "Online update of your receiver software."
-msgstr "Online-Update Ihrer Receiver-Software."
+msgid "Edit the update source address."
+msgstr "Update-Quell-Adresse bearbeiten."
 
 msgid ""
 "\n"
@@ -72,26 +55,12 @@ msgstr ""
 "\n"
 "Aufnahme läuft."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Wiederherstellen Ihrer Sicherungen nach Datum."
+msgid "Restore your backups by date."
+msgstr "Wiederherstellen Ihrer Sicherungen nach Datum."
 
-msgid "Restore your receiver settings."
-msgstr "Wiederherstellen Ihrer Receiver-Einstellungen."
-
-msgid "Scan for local extensions and install them."
-msgstr "Nach lokalen Erweiterungen suchen und diese installieren."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Wählen Sie Ihr Sicherungs-Laufwerk.\n"
+msgstr "Wählen Sie Ihr Sicherungs-Laufwerk.\n"
 "Aktuelles Laufwerk: "
 
 #, python-format
@@ -102,12 +71,8 @@ msgstr ""
 "\n"
 "Timer '%s' deaktiviert!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Anzeigen, installieren und entfernen verfügbarer oder installierter Pakete."
+msgid "View, install and remove available or installed packages."
+msgstr "Anzeigen, installieren und entfernen verfügbarer oder installierter Pakete."
 
 msgid " (0 - all networks)"
 msgstr "(0 - alle Netzwerke)"
@@ -1331,6 +1296,9 @@ msgstr "Backup-Einstellungen"
 
 msgid "Backup system settings"
 msgstr "Einstellungen sichern"
+
+msgid "Backup your receiver settings."
+msgstr "Sichern Ihrer Receiver-Einstellungen."
 
 msgid "Bahamas"
 msgstr "Bahamas"
@@ -3065,8 +3033,8 @@ msgstr "Timer editieren"
 msgid "Edit title"
 msgstr "Titel ändern"
 
-msgid "Edit update source url."
-msgstr "Update Quell-URL bearbeiten."
+msgid "Edit update source url"
+msgstr "Update Quell-URL bearbeiten"
 
 msgid "Education/Science/..."
 msgstr "Bildung/Wissenschaft/…"
@@ -4849,6 +4817,9 @@ msgstr "Malta"
 msgid "Manage extensions"
 msgstr "Erweiterungen verwalten"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Verwalten Sie die Erweiterungen und Plugins Ihres Receivers."
+
 msgid "Manage your receiver's software"
 msgstr "Verwalten Sie die Software des Receivers."
 
@@ -5572,6 +5543,9 @@ msgstr "Ignoriere bei gültigen ONIDs die Frequenz vom Sub-Netzwerk Teil."
 
 msgid "One"
 msgstr "Eins"
+
+msgid "Online update of your receiver software."
+msgstr "Online-Update Ihrer Receiver-Software."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr "Ändern Sie diese Einstellung nur, wenn Sie ein Unicable/SCR-Gerät verwenden, das mit einem benutzerdefinierten Programmiergerät neu programmiert wurde. Weitere Informationen erhalten Sie von der Person, die das Gerät neu programmiert hat."
@@ -6713,6 +6687,9 @@ msgstr "Einstellungen wiederherstellen"
 msgid "Restore system settings"
 msgstr "Einstellungen wiederherstellen"
 
+msgid "Restore your receiver settings."
+msgstr "Wiederherstellen Ihrer Receiver-Einstellungen."
+
 msgid "Restoring..."
 msgstr "Wiederherstellung…"
 
@@ -7000,6 +6977,9 @@ msgstr "Scan fehlgeschlagen!"
 
 msgid "Scan files..."
 msgstr "Dateien durchsuchen…"
+
+msgid "Scan for local extensions and install them."
+msgstr "Nach lokalen Erweiterungen suchen und diese installieren."
 
 msgid "Scan options"
 msgstr "Scan Optionen"
@@ -7352,8 +7332,8 @@ msgstr "Shift nur für das nächste Zeichen benutzen"
 msgid "Select update source"
 msgstr "Wählen Sie eine Update-Quelle"
 
-msgid "Select update source to edit."
-msgstr "Wählen Sie eine Update-Quelle zum Bearbeiten."
+msgid "Select update source to edit"
+msgstr "Wählen Sie eine Update-Quelle zum Bearbeiten"
 
 msgid "Select video input with up/down buttons"
 msgstr "Wählen Sie den Video-Eingang mit den Hoch/Runter-Tasten"

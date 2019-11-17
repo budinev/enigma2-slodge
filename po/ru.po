@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2019-07-25 17:52+0300\n"
 "Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
 "Language-Team: openPLi Dimitrij\n"
@@ -13,12 +13,8 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.0.4\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Дополнительные опции и настройки."
+msgid "Advanced options and settings."
+msgstr "Дополнительные опции и настройки."
 
 msgid ""
 "\n"
@@ -27,9 +23,6 @@ msgstr ""
 "\n"
 "После нажатия кнопки ОК, пожалуйста, подождите!"
 
-msgid "Backup your receiver settings."
-msgstr "Бэкап настроек Вашего ресивера."
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
@@ -37,18 +30,8 @@ msgstr ""
 "\n"
 "Обнаружение конфликтов отключено!"
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Редактировать адрес источника обновления."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr "Управление дополнениями или плагинами Вашего ресивера."
-
-msgid "Online update of your receiver software."
-msgstr "Онлайн обновление ПО Вашего ресивера."
+msgid "Edit the update source address."
+msgstr "Редактировать адрес источника обновления."
 
 msgid ""
 "\n"
@@ -71,26 +54,12 @@ msgstr ""
 "\n"
 "Запись в процессе."
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Восстановить Ваши бэкапы по дате."
+msgid "Restore your backups by date."
+msgstr "Восстановить Ваши бэкапы по дате."
 
-msgid "Restore your receiver settings."
-msgstr "Восстановить настройки Вашего ресивера."
-
-msgid "Scan for local extensions and install them."
-msgstr "Сканирование для локальных дополнений и установка их."
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Выберите устройство для Вашего бэкапа.\n"
+msgstr "Выберите устройство для Вашего бэкапа.\n"
 "Текущее устройство: "
 
 #, python-format
@@ -101,12 +70,8 @@ msgstr ""
 "\n"
 "Таймер '%s' отключен!"
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Просмотр, установка и удаление доступных или установленных пакетов."
+msgid "View, install and remove available or installed packages."
+msgstr "Просмотр, установка и удаление доступных или установленных пакетов."
 
 msgid " (0 - all networks)"
 msgstr " (0 - все сети)"
@@ -1339,6 +1304,9 @@ msgstr "Настройки бекапа"
 
 msgid "Backup system settings"
 msgstr "Бэкап системных настроек"
+
+msgid "Backup your receiver settings."
+msgstr "Бэкап настроек Вашего ресивера."
 
 msgid "Bahamas"
 msgstr "Bahamas"
@@ -3074,7 +3042,7 @@ msgstr "Редактировать таймер"
 msgid "Edit title"
 msgstr "Редактировать название"
 
-msgid "Edit update source url."
+msgid "Edit update source url"
 msgstr "Редактировать URL-адрес источника обновления"
 
 msgid "Education/Science/..."
@@ -4854,6 +4822,9 @@ msgstr "Malta"
 msgid "Manage extensions"
 msgstr "Менеджер дополнений"
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr "Управление дополнениями или плагинами Вашего ресивера."
+
 msgid "Manage your receiver's software"
 msgstr "Менеджер ПО Вашего ресивера"
 
@@ -5577,6 +5548,9 @@ msgstr "При валидных ONID, игнорировать частотну�
 
 msgid "One"
 msgstr "Один"
+
+msgid "Online update of your receiver software."
+msgstr "Онлайн обновление ПО Вашего ресивера."
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr "Измените этот параметр только в том случае, если Вы используете устройство SCR, которое было перепрограммировано с помощью специального программиста. Для получения дополнительной информации обратитесь к человеку, который перепрограммировал устройство."
@@ -6716,6 +6690,9 @@ msgstr "Востановление бэкапов"
 msgid "Restore system settings"
 msgstr "Восстановить системные настройки"
 
+msgid "Restore your receiver settings."
+msgstr "Восстановить настройки Вашего ресивера."
+
 msgid "Restoring..."
 msgstr "Востановление..."
 
@@ -7004,6 +6981,9 @@ msgstr "Ошибка сканирования!"
 
 msgid "Scan files..."
 msgstr "Сканировать файлы..."
+
+msgid "Scan for local extensions and install them."
+msgstr "Сканирование для локальных дополнений и установка их."
 
 msgid "Scan options"
 msgstr "Параметры сканирования"
@@ -7358,8 +7338,8 @@ msgstr "Выберите набор символов со сдвигом вир�
 msgid "Select update source"
 msgstr "Выбор источника обновления"
 
-msgid "Select update source to edit."
-msgstr "Выбор источника обновления для редактирования."
+msgid "Select update source to edit"
+msgstr "Выбор источника обновления для редактирования"
 
 msgid "Select video input with up/down buttons"
 msgstr "Выберите видеовход кнопками вверх/вниз"

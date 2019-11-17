@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-31 04:08+0100\n"
+"POT-Creation-Date: 2019-11-10 14:32+0100\n"
 "PO-Revision-Date: 2010-03-09 21:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: HDTV ROMANIA(superonic,costel_mbc,neutrin,otheitis,cipy_1982,neutrin,runcanion)\n"
@@ -17,12 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid ""
-"\n"
-"Advanced options and settings."
-msgstr ""
-"\n"
-"Optiuni avansate si setarile"
+msgid "Advanced options and settings."
+msgstr "Optiuni avansate si setarile."
 
 msgid ""
 "\n"
@@ -31,26 +27,13 @@ msgstr ""
 "\n"
 "Dupa apasarea OK, va rog asteptati!"
 
-msgid "Backup your receiver settings."
-msgstr ""
-
 msgid ""
 "\n"
 "Conflict detection disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"Edit the update source address."
-msgstr ""
-"\n"
-"Editati pe adresa de update."
-
-msgid "Manage extensions or plugins for your receiver."
-msgstr ""
-
-msgid "Online update of your receiver software."
-msgstr ""
+msgid "Edit the update source address."
+msgstr "Editati pe adresa de update."
 
 msgid ""
 "\n"
@@ -70,26 +53,12 @@ msgid ""
 "Recording in progress."
 msgstr ""
 
-msgid ""
-"\n"
-"Restore your backups by date."
-msgstr ""
-"\n"
-"Restaurare backups dupa data."
+msgid "Restore your backups by date."
+msgstr "Restaurare backups dupa data."
 
-msgid "Restore your receiver settings."
-msgstr ""
-
-msgid "Scan for local extensions and install them."
-msgstr ""
-
-msgid ""
-"\n"
-"Select your backup device.\n"
+msgid "Select your backup device.\n"
 "Current device: "
-msgstr ""
-"\n"
-"Alege pe backup device. \n"
+msgstr "Alege pe backup device.\n"
 "Curent device: "
 
 #, python-format
@@ -98,12 +67,8 @@ msgid ""
 "Timer '%s' disabled!"
 msgstr ""
 
-msgid ""
-"\n"
-"View, install and remove available or installed packages."
-msgstr ""
-"\n"
-"Vezi,instalati si sa scoateti pachetele dinsponibile sau instalate"
+msgid "View, install and remove available or installed packages."
+msgstr "Vezi,instalati si sa scoateti pachetele dinsponibile sau instalate."
 
 msgid " (0 - all networks)"
 msgstr ""
@@ -1348,6 +1313,9 @@ msgstr "Copie de siguranta a setarilor de sistem"
 
 msgid "Backup system settings"
 msgstr "Copie de siguranta a setarilor de sistem"
+
+msgid "Backup your receiver settings."
+msgstr ""
 
 msgid "Bahamas"
 msgstr ""
@@ -3140,7 +3108,7 @@ msgstr ""
 msgid "Edit title"
 msgstr "Editare titlu"
 
-msgid "Edit update source url."
+msgid "Edit update source url"
 msgstr ""
 
 msgid "Education/Science/..."
@@ -4970,6 +4938,9 @@ msgstr ""
 msgid "Manage extensions"
 msgstr ""
 
+msgid "Manage extensions or plugins for your receiver."
+msgstr ""
+
 msgid "Manage your receiver's software"
 msgstr "Gestioneaza software-ul receiverului tau"
 
@@ -5728,6 +5699,9 @@ msgstr ""
 
 msgid "One"
 msgstr "Unu"
+
+msgid "Online update of your receiver software."
+msgstr ""
 
 msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
@@ -6905,6 +6879,9 @@ msgstr ""
 msgid "Restore system settings"
 msgstr "Revenire la setarile sistemului"
 
+msgid "Restore your receiver settings."
+msgstr ""
+
 #, fuzzy
 msgid "Restoring..."
 msgstr "se inregistreaza"
@@ -7203,6 +7180,9 @@ msgstr "Acordare esuata!"
 #, fuzzy
 msgid "Scan files..."
 msgstr "Scanare fisiere..."
+
+msgid "Scan for local extensions and install them."
+msgstr ""
 
 msgid "Scan options"
 msgstr ""
@@ -7582,7 +7562,7 @@ msgstr ""
 msgid "Select update source"
 msgstr "Alege sursa de actualizare"
 
-msgid "Select update source to edit."
+msgid "Select update source to edit"
 msgstr ""
 
 msgid "Select video input with up/down buttons"
