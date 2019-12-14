@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-18 18:59+0100\n"
-"PO-Revision-Date: 2019-11-17 11:41+0100\n"
+"POT-Creation-Date: 2019-12-11 19:39+0200\n"
+"PO-Revision-Date: 2019-12-06 15:54+0100\n"
 "Last-Translator: GeirJ <dummy@dummy.com>\n"
 "Language-Team: GeirJ\n"
 "Language: nb\n"
@@ -112,7 +112,7 @@ msgid " packages selected."
 msgstr " valgte pakker."
 
 msgid " updates available."
-msgstr " det finnes nye oppdateringer."
+msgstr " oppdateringer tilgjengelig."
 
 #, python-format
 msgid "%.0f GB"
@@ -127,12 +127,12 @@ msgid "%.0f kB"
 msgstr "%.0f kB"
 
 #, python-format
-msgid "%.1f°E"
-msgstr "%.1f°E"
+msgid "%.1f° E"
+msgstr "%.1f° E"
 
 #, python-format
-msgid "%.1f°W"
-msgstr "%.1f°W"
+msgid "%.1f° W"
+msgstr "%.1f° W"
 
 #, python-format
 msgid "%.2f GB"
@@ -756,6 +756,17 @@ msgstr "ATSC distributør"
 msgid "Abort"
 msgstr "Avbryt"
 
+msgid "Abort alternatives edit"
+msgstr "Avbryt redigering"
+
+#
+msgid "Abort bouquet edit"
+msgstr "Avbryt redigering av kanalliste"
+
+#
+msgid "Abort favourites edit"
+msgstr "Avbryt redigering av favorittliste"
+
 #
 msgid "About"
 msgstr "Om"
@@ -814,13 +825,20 @@ msgid "Add a new title"
 msgstr "Legg til ny overskrift"
 
 #
+msgid "Add alternatives"
+msgstr "Legg til alternativer"
+
+#
 msgid "Add bookmark"
 msgstr "Legg til bokmerke"
 
 #
-#, fuzzy
 msgid "Add bouquet"
-msgstr "legg til kanalliste"
+msgstr "Legg til favorittliste"
+
+#
+msgid "Add bouquet to parental protection"
+msgstr "Legg til kanalliste i foreldrekontroll"
 
 msgid "Add directory to playlist"
 msgstr "Legg til mappe i opptaksliste"
@@ -832,6 +850,9 @@ msgstr "Legg til fil i opptaksliste"
 #
 msgid "Add files to playlist"
 msgstr "Legg til filer i opptaksliste"
+
+msgid "Add marker"
+msgstr "Legg til markør"
 
 #
 msgid "Add provider"
@@ -855,9 +876,14 @@ msgstr "Legg til et et opptak (stopp etter gjeldende program)"
 msgid "Add service"
 msgstr "Legg til kanal"
 
-#, fuzzy
+msgid "Add service to bouquet"
+msgstr "Legg til denne kanal i kanalliste"
+
+msgid "Add service to favourites"
+msgstr "Legg til denne kanal i favorittliste"
+
 msgid "Add services to this bouquet?"
-msgstr "legg til denne kanal i kanalliste"
+msgstr "Legg til kanaler i denne favorittlisten?"
 
 #
 msgid "Add timer"
@@ -874,6 +900,10 @@ msgstr "Legg til i kanalliste"
 #
 msgid "Add to favourites"
 msgstr "Legg til i favorittliste"
+
+#
+msgid "Add to parental protection"
+msgstr "Legg til i foreldrekontroll"
 
 msgid "Add/remove change timer for current event"
 msgstr "Legg til/slett timer i dette program"
@@ -1098,7 +1128,7 @@ msgstr "Enhver aktivitet"
 msgid "Arabic"
 msgstr "Arabisk"
 
-msgid "Are you sure to purge all deleted userbouquets?"
+msgid "Are you sure to purge all deleted user bouquets?"
 msgstr "Er du sikker på at du vil fjerne alle slettede kanallister?"
 
 #
@@ -2018,7 +2048,7 @@ msgstr "Kommando rekkefølge"
 
 #
 msgid "Commit info"
-msgstr "Commit info"
+msgstr "Informasjon om utføring"
 
 #
 msgid "Common Interface"
@@ -2059,6 +2089,10 @@ msgstr "Still inn søkedetaljer"
 msgid "Config resolution of pictures"
 msgstr "Still inn oppløsning for bildeframviser"
 
+#
+msgid "Configuration"
+msgstr "Konfigurasjon"
+
 msgid "Configuration mode"
 msgstr "Aktiveringsvalg"
 
@@ -2066,10 +2100,6 @@ msgstr "Aktiveringsvalg"
 #, python-format
 msgid "Configuration mode: %s"
 msgstr "Oppsettstype: %s"
-
-#
-msgid "Configuration..."
-msgstr "Innstilling..."
 
 #
 msgid "Configure ATSC"
@@ -2481,6 +2511,10 @@ msgstr "Cookøyene"
 msgid "Copy"
 msgstr "Kopier"
 
+#
+msgid "Copy to bouquets"
+msgstr "Kopier til kanallister"
+
 msgid "Costa Rica"
 msgstr "Costa Rica"
 
@@ -2816,13 +2850,13 @@ msgid "Delay for external subtitles"
 msgstr "Ekstern undertekst forsinkelse"
 
 msgid "Delay in miliseconds after finish scrolling text on display."
-msgstr "Forsinkelse i millisekunder etter å ha skrollet i tekst på display."
+msgstr "Forsinkelse i millisekunder etter at den rullende teksten er ferdig på skjermen."
 
 msgid "Delay in miliseconds before start of scrolling text on display."
-msgstr "Forsinkelse i millisekunder før skrolling av tekst på display."
+msgstr "Forsinkelse i millisekunder før starten av rullende tekst på skjermen."
 
 msgid "Delay in miliseconds between scrolling characters on display."
-msgstr "Forsinkelse i millisekunder under skrolling av bokstaver på display."
+msgstr "Forsinkelse i millisekunder mellom rullende tegn på skjermen."
 
 #
 msgid "Delete"
@@ -2981,11 +3015,14 @@ msgid "Disable Picture in Picture"
 msgstr "Stopp bilde i bilde funksjon"
 
 msgid "Disable background scanning"
-msgstr "Deaktiver bakgrunnssøk"
+msgstr "Deaktiver bakgrunnsskanning"
 
 #
 msgid "Disable current event but not coming events"
 msgstr "Fjern nåværende program men ikke kommende program"
+
+msgid "Disable move mode"
+msgstr "Slå av flytte modus"
 
 #
 msgid "Disable timer"
@@ -3328,6 +3365,9 @@ msgstr "Rediger"
 msgid "Edit DNS"
 msgstr "Rediger DNS"
 
+msgid "Edit alternatives"
+msgstr "Rediger alternativer"
+
 msgid "Edit chapters of current title"
 msgstr "Rediger visningsnavn i tittel"
 
@@ -3432,17 +3472,29 @@ msgid "Enable auto fast scan for %s"
 msgstr "Aktiver auto hurtig søk for %s"
 
 #
+msgid "Enable bouquet edit"
+msgstr "Aktiver redigering i kanallisten"
+
+#
 msgid "Enable bouquet selection in multi-EPG"
 msgstr "Aktiver kanallistevalg i multi-EPG"
 
 msgid "Enable fallback remote receiver"
 msgstr "Bruk ekstern reservemottaker"
 
+#
+msgid "Enable favourites edit"
+msgstr "Aktiver redigering i favorittlisten"
+
 msgid "Enable freesat EPG"
 msgstr "Aktiver freesat EPG"
 
 msgid "Enable import timer from fallback tuner"
 msgstr "Aktiver import timer fra reserve tuner"
+
+#
+msgid "Enable move mode"
+msgstr "Aktiver kanalflytting i kanallisten"
 
 #
 msgid "Enable multiple bouquets"
@@ -3499,6 +3551,18 @@ msgstr "Krypteringsnøkkel type"
 #
 msgid "Encryption:"
 msgstr "Kryptering:"
+
+#
+msgid "End alternatives edit"
+msgstr "Avslutt redigering"
+
+#
+msgid "End bouquet edit"
+msgstr "Avslutt redigering av kanalliste"
+
+#
+msgid "End favourites edit"
+msgstr "Avslutt redigering av favorittliste"
 
 #
 msgid "End time"
@@ -3775,10 +3839,6 @@ msgstr "Avslutt nettverksveiviser"
 msgid "Exit the wizard"
 msgstr "Avslutt veiviseren"
 
-#
-msgid "Exit/OK"
-msgstr "Avslutt/OK"
-
 msgid "Expand"
 msgstr "Utvid"
 
@@ -4033,6 +4093,9 @@ msgstr "Siste posisjon i liste"
 
 msgid "Final scroll delay"
 msgstr "Endelig skroll forsinkelse"
+
+msgid "Find currently playing service"
+msgstr "Gå til aktiv kanal"
 
 msgid "Fine movement"
 msgstr "Sakte bevegelse"
@@ -5295,7 +5358,7 @@ msgstr "MMC kort"
 
 #
 msgid "MORE"
-msgstr "MORE"
+msgstr "MER"
 
 msgid "Macao"
 msgstr "Macao"
@@ -6418,6 +6481,9 @@ msgstr "Spill av DVD"
 msgid "Play DVDs"
 msgstr "Spill av DVDer"
 
+msgid "Play as Picture in Picture"
+msgstr "Start opp bilde i bilde visning"
+
 msgid "Play audio-CD..."
 msgstr "Spill av lyd CD..."
 
@@ -6438,6 +6504,9 @@ msgstr "Spill av fra neste merke i opptaksliste"
 #
 msgid "Play from previous mark or playlist entry"
 msgstr "Spill av fra siste merke i opptaksliste"
+
+msgid "Play in main window"
+msgstr "Spill i hovedvinduet"
 
 msgid "Play music..."
 msgstr "Spill av musikk..."
@@ -7053,6 +7122,9 @@ msgstr "Distributører"
 msgid "Puerto Rico"
 msgstr "Puerto Rico"
 
+msgid "Purge deleted user bouquets"
+msgstr "Tøm slettede kanallister"
+
 msgid "Put TV in standby"
 msgstr "Slå av TV"
 
@@ -7279,12 +7351,25 @@ msgstr "Slett et merke"
 msgid "Remove a nameserver entry"
 msgstr "Fjern en navneserver oppføring"
 
+msgid "Remove all alternatives"
+msgstr "Fjern alle alternativer"
+
 msgid "Remove all logfiles"
 msgstr "Fjern alle loggfiler"
+
+msgid "Remove all new found flags"
+msgstr "Fjern alle nye flagg"
 
 #
 msgid "Remove bookmark"
 msgstr "Fjern bokmerke"
+
+msgid "Remove bouquet from parental protection"
+msgstr "Fjern kanallisten fra foreldrekontroll beskyttelsen"
+
+#
+msgid "Remove cable services"
+msgstr "Fjern kabel TV kanaler"
 
 msgid "Remove completed timers after (days)"
 msgstr "Slett ferdige timere etter (dager)"
@@ -7296,12 +7381,28 @@ msgstr "Fjern gjeldende valgte tittel"
 msgid "Remove directory"
 msgstr "Fjern mappe"
 
+msgid "Remove entry"
+msgstr "Fjern denne kanal fra kanallisten"
+
+msgid "Remove from parental protection"
+msgstr "Fjern fra foreldrekontroll beskyttelsen"
+
 msgid "Remove items from trash can after (days)"
 msgstr "Tøm papirkurven etter (dager)"
+
+msgid "Remove new found flag"
+msgstr "Fjern nye flagg"
 
 #
 msgid "Remove plugins"
 msgstr "Fjern tillegg"
+
+msgid "Remove selected satellite"
+msgstr "Fjern den valgte satellitt"
+
+#
+msgid "Remove terrestrial services"
+msgstr "Fjern bakkenett kanaler"
 
 #
 msgid "Remove this logfile"
@@ -7325,6 +7426,9 @@ msgstr "Fjerner partisjonstabellen"
 #
 msgid "Rename"
 msgstr "Gi nytt navn"
+
+msgid "Rename entry"
+msgstr "Endre kanalnavn"
 
 msgid "Rename name and description for new events"
 msgstr "Gi nytt navn og beskrivelse for nye kanaler"
@@ -7370,7 +7474,7 @@ msgid "Request for vendor report"
 msgstr "Forespørsel etter leverandør rapport"
 
 msgid "Require authentication for http streams"
-msgstr "Krever autentisering for http stream"
+msgstr "Bruk autentisering for http streams"
 
 #
 msgid "Required medium type:"
@@ -7451,6 +7555,9 @@ msgstr "Gjenopprett"
 #
 msgid "Restore backups"
 msgstr "Gjenopprett sikkerhetskopier"
+
+msgid "Restore deleted user bouquets"
+msgstr "Gjenopprett slettede kanallister"
 
 #
 msgid "Restore system settings"
@@ -8270,6 +8377,9 @@ msgstr "Kanal & PIDs"
 msgid "Service ID"
 msgstr "Kanal ID"
 
+msgid "Service belongs to a parental protected bouquet"
+msgstr "Kanalen er beskyttet av foreldrekontroll"
+
 msgid "Service has been added to the favourites."
 msgstr "Kanalen har blitt lagt til i favorittliste."
 
@@ -8354,6 +8464,9 @@ msgstr "Sett alle snarveistaster til standard?"
 
 msgid "Set alternative fallback tuners for DVB-T/C or ATSC"
 msgstr "Angi alternative reserve mottakere for DVB-T/C eller ATSC"
+
+msgid "Set as startup service"
+msgstr "Bruk denne som oppstartskanal"
 
 msgid "Set blocktimes by weekday"
 msgstr "Still inn blokkeringstid med ukedager"
@@ -8518,6 +8631,10 @@ msgstr "Vis VCR scart på hovedmenyen"
 #
 msgid "Show WLAN status"
 msgstr "Vis WLAN status"
+
+#
+msgid "Show alternatives"
+msgstr "Vis alternativer"
 
 msgid "Show animation while busy"
 msgstr "Vis varsling når opptatt"
@@ -8723,6 +8840,10 @@ msgstr "Vis radio spilleren..."
 #
 msgid "Show the tv player..."
 msgstr "Vis TV spilleren..."
+
+#
+msgid "Show transponder info"
+msgstr "Vis transponder info"
 
 msgid "Show underline characters in filenames"
 msgstr "Vis understrekingstegn i filnavn"
@@ -9269,6 +9390,9 @@ msgstr "Stopp timeskift"
 msgid "Stop timeshift?"
 msgstr "Stopp timeskift?"
 
+msgid "Stop using as startup service"
+msgstr "Slutt å bruke som oppstartskanal"
+
 msgid "Stopped"
 msgstr "Stoppet"
 
@@ -9313,10 +9437,10 @@ msgid "Subtitle border width"
 msgstr "Undertekst kontrast"
 
 msgid "Subtitle delay when timing is bad"
-msgstr "Undertekst forsinkelse når tidtakingen er dårlig"
+msgstr "Undertekst synkronisering"
 
 msgid "Subtitle delay when timing lacks"
-msgstr "Undertekst forsinkelse når tidtaking mangler"
+msgstr "Undertekst synkronisering uten tidtaking"
 
 msgid "Subtitle font size"
 msgstr "Undertekst skriftstørrelse"
@@ -9507,7 +9631,7 @@ msgstr "T2MI RAW-modus"
 
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
-msgstr "Oversettelse oppdatert: 17.11.2019"
+msgstr "Oversettelse oppdatert: 06.12.2019"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -9538,6 +9662,9 @@ msgstr "Innhold for samlingen"
 #
 msgid "Tags"
 msgstr "Merker"
+
+msgid "Taiwan"
+msgstr ""
 
 msgid "Tajikistan"
 msgstr "Tajikistan"
@@ -10692,7 +10819,7 @@ msgid "Using tuner %s"
 msgstr "Bruker tuner %s"
 
 msgid "Usually when the subtitle language is the same as the audio language, the subtitles will not be used. Enable this option to allow these subtitles to be used."
-msgstr "Når undertekst språk er samme som lydspråk vil teksting normalt ikke brukes. Aktiver dette for å bruke denne undertekst allikevel."
+msgstr "Vanligvis når undertekstspråket er det samme som lydspråket, vil undertekstene ikke brukes. Aktiver dette alternativet for å tillate at disse undertekstene kan brukes."
 
 msgid "Uzbekistan"
 msgstr "Usbekistan"
@@ -10923,7 +11050,7 @@ msgid "Waiting for partition"
 msgstr "Venter på partisjon"
 
 msgid "Wake On LAN"
-msgstr "Bruk Wake-on-LAN"
+msgstr "Wake On LAN"
 
 msgid "Wakeup"
 msgstr "Våkne"
@@ -11039,16 +11166,16 @@ msgid "What type of service scan do you want?"
 msgstr "Hvilken type kanalsøk vil du bruke?"
 
 msgid "When enabled enigma2 will load unlinked userbouquets. This means that userbouquets that are available, but not included in the bouquets.tv or bouquets.radio files, will still be loaded. This allows you for example to keep your own user bouquet while installed settings are updated"
-msgstr "Når dette er på, vil Enigma2 laste kanallister som ikke er tilknyttet mottakeren. Dette betyr at kanallister som er tilgjengelige, men som ikke er tilknyttet radio eller TV filer fortsatt vil bli lastet. Dette gjør at du kan holde egne favorittlister mens installerte innstillinger er oppdatert"
+msgstr "Når dette er på, vil enigma2 laste kanallister som ikke er tilknyttet mottakeren. Dette betyr at kanallister som er tilgjengelige, men som ikke er tilknyttet radio eller TV filer fortsatt vil bli lastet. Dette gjør at du kan holde egne favorittlister mens installerte innstillinger er oppdatert"
 
 msgid "When enabled the PiP can be closed by the exit button."
-msgstr "Når dette er på, vil PiP (bilde i bilde) avsluttes med exit tast."
+msgstr "Når dette er på, kan PiP (bilde i bilde) avsluttes med exit knapp."
 
 msgid "When enabled the arrow buttons around the OK button will follow the 'neutrino' style zap controls instead of the enigma2 style."
 msgstr "Når dette er på, vil piltastene rundt OK, følge 'neutrino stil' zapping istedenfor enigma2 stil på fjernkontrollen."
 
 msgid "When enabled the left, right, CH+/-, B+/-, P+/- buttons will follow the 'neutrino' style zap controls instead of the enigma2 style."
-msgstr "Når dette er på, vil venstre, høyre, opp, ned, + og - tastene følge 'neutrino' kanalvalg istedenfor enigma2 stil på fjernkontrollen."
+msgstr "Når dette er på, vil venstre, høyre, CH +/-, B +/-, P +/-knappene vil følge 'neutrino' stil zap kontroller i stedet for enigma2 stil."
 
 msgid "When enabled the set top box is able to wakeup on LAN"
 msgstr "Når dette er på, vil mottakeren slås på ved ved hjelp av Wake-on-LAN funksjonen"
@@ -11075,7 +11202,7 @@ msgid "When enabled you can specify an extra timeframe when the inactivity sleep
 msgstr "Når aktivert, kan du velge et ekstra tidsrom slik at inaktiv timer overstyres. Deteksjonen slår seg ikke av i tidsrommet, men ubrukt timeout fjernes"
 
 msgid "When enabled you can zap channels with the  CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
-msgstr "Når dette er på, vil kanalbytte foregå med venstre, høyre, opp, ned, + og - tastene istedenfor at kanallisten åpnes."
+msgstr "Når dette er på, kan du zappe kanaler med CH +/-, B +/-, P +/-knapper i stedet for å åpne kanallisten."
 
 msgid "When enabled you get the channel selection list via the OK button, the infobar toggle is then transfered to exit button"
 msgstr "Når dette er på, vil kanallisten vises på OK tast. Infobar skrus av/på ved hjelp av exit tast"
@@ -11090,19 +11217,19 @@ msgid "When enabled, EIT data will be included in http streams. This allows a cl
 msgstr "Når dette er på, vil EIT data inngå i http stream. Dette tillater klient mottakeren å vise EPG."
 
 msgid "When enabled, HDMI-CEC is enabled with standard configuration"
-msgstr "Når den er på, er HDMI-CEC aktivert med standard innstilling"
+msgstr "Når dette er på, blir HDMI-CEC aktivert med standard innstilling"
 
 msgid "When enabled, a popup message will be shown when a movie has finished and the next one will start."
 msgstr "Når dette er på, vil et skjermvarsel vises når en avspilling er ferdig før en ny starter."
 
 msgid "When enabled, a popup message will be shown when a recording starts."
-msgstr "Når dette er på, vil et varsel vises når et opptak starter."
+msgstr "Når dette er på, vises en popup-melding når et opptak starter."
 
 msgid "When enabled, a radio background image will be visible while listening to a radio channel."
-msgstr "Når dette er på, vil et bakgrunnsbilde vises på skjermen ved radiolytting."
+msgstr "Når dette er på, vil et radio bakgrunnsbilde være synlig mens du lytter til en radiokanal."
 
 msgid "When enabled, a recording is allowed to interrupt live tv, when there are no free tuners."
-msgstr "Når dette er på, vil et opptak kunne avbryte direktesendt TV hvis det ikke finnes ledige tunere."
+msgstr "Når dette er på, kan en innspilling avbryte direktesendt TV når det ikke er noen ledige tunere."
 
 msgid "When enabled, a warning will be displayed and the user will get an option to stop or to continue the timeshift."
 msgstr "Når dette er på, vil et varsel vises med valget stopp eller fortsett timeskift."
@@ -11111,7 +11238,7 @@ msgid "When enabled, always descramble receiving http streams. This takes up mor
 msgstr "Når dette er på, vil mottatt http stream dekodes. Dette bruker mere data ressurser (dekode, demuxere bilde) og brukes bare når det er nødvendig. Individuelle streams er alltid dekodet hvis 0x100 er tillagt i service typen, uavhengig av denne innstillingen. Standardinnstilling er av."
 
 msgid "When enabled, authentication is required to watch http streams."
-msgstr "Når dette er på, vil autentisering kreves for å se http streams."
+msgstr "Når dette er på, brukes autentisering for å se http streams."
 
 msgid "When enabled, channel numbering will start at '1' for each bouquet."
 msgstr "Når dette er på, vil kanal nummer starte på '1' i hver enkelt kanalliste."
@@ -11135,7 +11262,7 @@ msgid "When enabled, error messages related to zapping will not be shown."
 msgstr "Når dette er på, vil feilmeldinger knyttet til kanalbytte ikke vises."
 
 msgid "When enabled, external subtitles will be always turned on for playback movie."
-msgstr "Når dette er på, vil ekstern undertekst bli skrudd på i avspilling av opptak."
+msgstr "Når dette er på, vil eksterne undertekster alltid være slått på ved avspilling av film."
 
 msgid "When enabled, graphical DVB subtitles are preferred over teletext subtitles, when both types are available."
 msgstr "Når dette er på, vil det foretrekkes DVB undertekst framfor tekst-TV undertekst når begge typer er tilgjengelig."
@@ -11159,7 +11286,7 @@ msgid "When enabled, measure power consumption to detect when the rotor stops tu
 msgstr "Når dette er på, vil motorens strømforbruk bli målt for å oppdage når motorbevegelsen stopper (hvis det støttes av tuner)."
 
 msgid "When enabled, number markers will be hidden."
-msgstr "Når aktivert, vil nummer markører bli skjult."
+msgstr "Når dette er på, vil nummer markører bli skjult."
 
 msgid "When enabled, reformat subtitles to match the width of the screen."
 msgstr "Når dette er på, vil undertekst tilpasses skjermbredden."
@@ -11602,7 +11729,7 @@ msgid "Zap focus to main screen"
 msgstr "Gå til hovedmeny"
 
 msgid "Zap mode"
-msgstr "Kanalbytte valg"
+msgstr "Zappe modus"
 
 msgid "Zap to"
 msgstr "Gå til"
@@ -11643,9 +11770,6 @@ msgstr "Zimbabwe"
 msgid "[REC]"
 msgstr "[REC]"
 
-msgid "[a]"
-msgstr "[a]"
-
 #
 msgid "[alternative edit]"
 msgstr "[rediger]"
@@ -11668,17 +11792,6 @@ msgstr "et grafisk utseende for tildeling av kanaler/distributører til kortlese
 msgid "a gui to assign services/providers/caids to common interface modules"
 msgstr "et grafisk utseende for tildeling av kanaler/distributører/caids til kortleser moduler"
 
-msgid "abort alternatives edit"
-msgstr "avbryt alternativ redigering"
-
-#
-msgid "abort bouquet edit"
-msgstr "avbryt redigering av kanalliste"
-
-#
-msgid "abort favourites edit"
-msgstr "avbryt redigering av favorittliste"
-
 #
 msgid "about to start"
 msgstr "starter opp"
@@ -11693,31 +11806,6 @@ msgstr "aktiv"
 #
 msgid "actual time only"
 msgstr "aktuell tid"
-
-#
-msgid "add alternatives"
-msgstr "legg til alternativer"
-
-#
-msgid "add bouquet"
-msgstr "legg til kanalliste"
-
-#
-msgid "add bouquet to parental protection"
-msgstr "legg til kanalliste i foreldrekontrollen"
-
-msgid "add marker"
-msgstr "legg til merke"
-
-msgid "add service to bouquet"
-msgstr "legg til denne kanal i kanalliste"
-
-msgid "add service to favourites"
-msgstr "legg til denne kanal i favorittlisten"
-
-#
-msgid "add to parental protection"
-msgstr "legg til i foreldrekontrollen"
 
 msgid "adult movie/drama"
 msgstr "voksenfilm/drama"
@@ -11876,7 +11964,7 @@ msgid "config menu"
 msgstr "config meny"
 
 msgid "configure in which resolution pictures are displayed with the picture viewer and movieplayer"
-msgstr "still inn bildeoppløsningen som vises med bildeviseren og filmspilleren"
+msgstr "still inn bildeoppløsningen som skal vises med bildeviseren og filmspilleren"
 
 #
 msgid "confirmed"
@@ -11891,10 +11979,6 @@ msgstr "kontrollert av HDMI"
 
 msgid "cooking"
 msgstr "matlaging"
-
-#
-msgid "copy to bouquets"
-msgstr "kopier til kanallister"
 
 #
 msgid "daily"
@@ -11924,9 +12008,6 @@ msgstr "deaktiver"
 
 msgid "disable intro screen"
 msgstr "deaktiver intro skjerm"
-
-msgid "disable move mode"
-msgstr "slå av flytte modus"
 
 #
 msgid "disabled"
@@ -11959,9 +12040,6 @@ msgstr "øst"
 msgid "economics/social advisory"
 msgstr "økonomi/sosial rådgivende"
 
-msgid "edit alternatives"
-msgstr "rediger alternativer"
-
 msgid "education/science/factual topics (general)"
 msgstr "utdanning/vitenskap/faktaprogram (generelt)"
 
@@ -11976,40 +12054,16 @@ msgstr "tom"
 msgid "enable"
 msgstr "aktiver"
 
-#
-msgid "enable bouquet edit"
-msgstr "aktiver redigering i kanallisten"
-
-#
-msgid "enable favourite edit"
-msgstr "aktiver redigering i favorittlisten"
-
 msgid "enable intro screen"
 msgstr "aktiver introduksjons skjerm"
-
-#
-msgid "enable move mode"
-msgstr "aktiver kanalflytting i kanallisten"
 
 #
 msgid "enabled"
 msgstr "aktivert"
 
 #
-msgid "end alternatives edit"
-msgstr "avslutt redigering"
-
-#
-msgid "end bouquet edit"
-msgstr "avslutt redigering i kanallister"
-
-#
 msgid "end cut here"
 msgstr "avslutt klippet her"
-
-#
-msgid "end favourites edit"
-msgstr "avslutt redigering i favorittlister"
 
 msgid "entertainment (10-16 year old)"
 msgstr "underholdning (10-16 år)"
@@ -12085,9 +12139,6 @@ msgstr "filnavn"
 
 msgid "film/cinema"
 msgstr "film/kino"
-
-msgid "find currently played service"
-msgstr "gå til aktiv kanal"
 
 msgid "fine arts"
 msgstr "kunst"
@@ -12469,12 +12520,6 @@ msgstr "pause"
 msgid "performing arts"
 msgstr "scenekunst"
 
-msgid "play as picture in picture"
-msgstr "bruk bilde i bilde visning"
-
-msgid "play in mainwindow"
-msgstr "start i hovedvinduet"
-
 msgid "please press OK when ready"
 msgstr "trykk OK for å fortsette"
 
@@ -12487,9 +12532,6 @@ msgstr "populær kultur/tradisjonell kunst"
 
 msgid "pre-school children's program"
 msgstr "førskole barneprogram"
-
-msgid "purge deleted userbouquets"
-msgstr "fjern slettede kanallister"
 
 msgid "receiver software because updates are available."
 msgstr "mottaker programvare fordi oppdateringer er tilgjengelige."
@@ -12515,43 +12557,11 @@ msgstr "bemerkelsesverdige mennesker"
 msgid "remove after this position"
 msgstr "slett etter denne posisjon"
 
-msgid "remove all alternatives"
-msgstr "slett alle alternativer"
-
-msgid "remove all new found flags"
-msgstr "fjern alle nye flagg"
-
 msgid "remove before this position"
 msgstr "slett før denne posisjonen"
 
-msgid "remove bouquet from parental protection"
-msgstr "fjern kanallisten fra foreldrekontroll beskyttelsen"
-
-#
-msgid "remove cable services"
-msgstr "fjern kabel TV kanaler"
-
-msgid "remove entry"
-msgstr "fjern denne kanal fra kanallisten"
-
-msgid "remove from parental protection"
-msgstr "fjern fra foreldrekontroll beskyttelsen"
-
-msgid "remove new found flag"
-msgstr "fjern nye flagg"
-
-msgid "remove selected satellite"
-msgstr "slett den valgte satellitt"
-
-#
-msgid "remove terrestrial services"
-msgstr "fjern bakkenett kanaler"
-
 msgid "remove this mark"
 msgstr "fjern dette merket"
-
-msgid "rename entry"
-msgstr "endre kanalnavn"
 
 #
 msgid "repeated"
@@ -12559,9 +12569,6 @@ msgstr "gjentatt"
 
 msgid "reserved for future use"
 msgstr "reservert for framtidig bruk"
-
-msgid "restore deleted userbouquets"
-msgstr "gjenopprett slettede kanallister"
 
 msgid "reverse by date"
 msgstr "bakover etter dato"
@@ -12613,14 +12620,8 @@ msgstr "seriøs musikk/klassisk musikk"
 msgid "serious/classical/religious/historical movie/drama"
 msgstr "seriøs/klassisk/religiøs/historisk film/drama"
 
-msgid "service is in bouquet parental protection"
-msgstr "kanallisten er beskyttet av foreldrekontroll"
-
 msgid "service off-air"
 msgstr "kanalen sender ikke"
-
-msgid "set as startup service"
-msgstr "bruk denne som oppstartskanal"
 
 #
 msgid "show DVD main menu"
@@ -12628,10 +12629,6 @@ msgstr "vis DVD hovedmeny"
 
 msgid "show all tags"
 msgstr "vis alle merker"
-
-#
-msgid "show alternatives"
-msgstr "vis alternativer"
 
 #
 msgid "show event details"
@@ -12642,10 +12639,6 @@ msgstr "vis programvareoppsett"
 
 msgid "show softwaremanager on blue button"
 msgstr "vis programvareoppsett på blå tast"
-
-#
-msgid "show transponder info"
-msgstr "vis transponder info"
 
 msgid "show/game show (general)"
 msgstr "underholdning/spørreprogram (generelt)"
@@ -12746,9 +12739,6 @@ msgstr "trinn lengde"
 #
 msgid "stereo"
 msgstr "stereo"
-
-msgid "stop using as startup service"
-msgstr "slutte å bruke som oppstartskanal"
 
 msgid "successful"
 msgstr "vellykket"
