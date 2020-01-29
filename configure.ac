@@ -252,6 +252,7 @@ Makefile
 data/Makefile
 data/fonts/Makefile
 data/countries/Makefile
+data/display/Makefile
 data/extensions/Makefile
 data/keymaps/Makefile
 data/hw_info/Makefile
@@ -301,8 +302,6 @@ lib/python/Plugins/Extensions/PicturePlayer/data/Makefile
 lib/python/Plugins/Extensions/SocketMMI/Makefile
 lib/python/Plugins/Extensions/SocketMMI/meta/Makefile
 lib/python/Plugins/Extensions/SocketMMI/src/Makefile
-lib/python/Plugins/Extensions/TuxboxPlugins/Makefile
-lib/python/Plugins/Extensions/TuxboxPlugins/meta/Makefile
 lib/python/Plugins/PLi/Makefile
 lib/python/Plugins/SystemPlugins/CommonInterfaceAssignment/Makefile
 lib/python/Plugins/SystemPlugins/CommonInterfaceAssignment/meta/Makefile
@@ -323,8 +322,6 @@ lib/python/Plugins/SystemPlugins/SatelliteEquipmentControl/Makefile
 lib/python/Plugins/SystemPlugins/SatelliteEquipmentControl/meta/Makefile
 lib/python/Plugins/SystemPlugins/Satfinder/Makefile
 lib/python/Plugins/SystemPlugins/Satfinder/meta/Makefile
-lib/python/Plugins/SystemPlugins/SkinSelector/Makefile
-lib/python/Plugins/SystemPlugins/SkinSelector/meta/Makefile
 lib/python/Plugins/SystemPlugins/SoftwareManager/Makefile
 lib/python/Plugins/SystemPlugins/SoftwareManager/meta/Makefile
 lib/python/Plugins/SystemPlugins/VideoEnhancement/Makefile

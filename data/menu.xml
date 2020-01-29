@@ -15,31 +15,31 @@
 -->
 
 
-	<!-- Menu / SatLodge by lululla-->
+	<!-- Menu / SatLodge by sl -->
 	<menu weight="1" level="0" text="SatLodge" entryID="SatLodge">
 		<id val="SatLodge" />    
-	    <item weight="5" level="0" text="Addon Panel" entryID="slPanel">  
+	    <item weight="5" level="0" text="Addon Panel" entryID="SatLodge">  
     <code>
 from Plugins.SatLodge.slPanel.plugin import *
 self.session.open(logoStrt)
 </code>
         </item>  
         
-	    <item weight="10" level="0" text="Cam Manager" entryID="slManager">  
+	    <item weight="10" level="0" text="Cam Manager" entryID="SatLodge">  
     <code>
 from Plugins.SatLodge.slManager.plugin import *
 self.session.open(slManager)
 </code>
         </item>  
 		
-	    <item weight="12" level="0" text="Settings Manager" entryID="slSettings">  
+	    <item weight="12" level="0" text="Settings Manager" entryID="SatLodge">  
     <code>
 from Plugins.SatLodge.slSettings.plugin import *
 self.session.open(MainSetting)
 </code>
         </item>          
       
-	    <item weight="13" level="0" text="Image Manager" entryID="STBmodel">  
+	    <item weight="13" level="0" text="Image Manager" entryID="SatLodge">  
     <code>
 from Plugins.SatLodge.slPanel.main import STBmodel
 self.session.open(STBmodel)
@@ -53,7 +53,7 @@ self.session.open(ImageBackup)
 </code>
         </item>     
 -->       
-	    <item weight="15" level="0" text="EPG Cache Path" entryID="EPGCacheSetupScreen">  
+	    <item weight="15" level="0" text="EPG Cache Path" entryID="SatLodge">  
     <code>
 from Plugins.SatLodge.EPGCacheSelector.plugin import * 
 self.session.open(EPGCacheSetupScreen)
@@ -61,14 +61,14 @@ self.session.open(EPGCacheSetupScreen)
         </item>  
         
         
-	    <item weight="17" level="0" text="Picon Path" entryID="SetPiconPath">  
+	    <item weight="17" level="0" text="Picon Path" entryID="SatLodge">  
     <code>
 from Plugins.SatLodge.PiconPathSet.plugin import * 
 self.session.open(SetPiconPath)
 </code>
         </item>  
                 
-	    <item weight="20" level="0" text="Ipkg Installer" entryID="IpkgInstaller">  
+	    <item weight="20" level="0" text="Ipkg Installer" entryID="SatLodge">  
     <code>
 from Tools.Directories import fileExists
 if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/MediaScanner/plugin.pyo"):
@@ -134,6 +134,8 @@ self.session.open(DevicesMountPanel)
 					<item level="0" text="Language" entryID="language_setup"><screen module="LanguageSelection"/></item>
 					<item level="0" entryID="timezone_setup"><setup id="timezone"/></item>
 					<item level="0" entryID="user_interface"><setup id="userinterface"/></item>
+					<item level="0" text="GUI Skin" entryID="primary_skin_selector"><screen module="SkinSelector" screen="SkinSelector"/></item>
+					<item level="0" text="Display Skin" entryID="display_skin_selector"><screen module="SkinSelector" screen="LcdSkinSelector"/></item>
 				</menu>
 				<menu level="0" text="EPG" entryID="epg_menu">
 					<id val="epg"/>
@@ -159,7 +161,7 @@ self.session.open(DevicesMountPanel)
 				<item level="1" text="Hotkey" entryID="hotkey_setup"><screen module="Hotkey" screen="HotkeySetup"/></item>
 				</menu>
 			</menu>
-                <!-- lululla  
+                <!-- sl  
 			<menu weight="10" text="SoftCam / CI" entryID="cam_setup">
 				<id val="cam"/>
 				<item weight="10" level="0" text="Softcam Setup" entryID="softcam_setup"><screen module="SoftcamSetup" screen="SoftcamSetup"/></item>
@@ -178,21 +180,8 @@ self.session.open(DevicesMountPanel)
 			</menu>
             -->			
 			<item weight="15" level="0" text="Parental control" entryID="parental_setup"><screen module="ParentalControlSetup" screen="ParentalControlSetup"/></item>
-			<item weight="15" level="0" text="Factory reset" entryID="factory_reset">
-				<code>
-from Screens.FactoryReset import FactoryReset
-def msgClosed(ret):
-	if ret:
-		open('/etc/.doNotAutoinstall', 'w')
-		from os import system, _exit
-		system("rm -R /etc/enigma2")
-		_exit(0)
-self.session.openWithCallback(msgClosed, FactoryReset)
-</code>
-			</item>
-			<!--
+			<item weight="15" level="0" text="Factory reset" entryID="factory_reset"><screen module="FactoryReset" screen="FactoryReset"/></item>
 			<item weight="15" level="0" text="Flash image" entryID="flash_image" requires="canFlashWithOfgwrite" ><screen module="FlashImage" screen="SelectImage"/></item>
-            -->
 			<item weight="15" level="0" text="Software update" entryID="software_update"><screen module="SoftwareUpdate" screen="UpdatePlugin"/></item>
 		</menu>
 		<menu text="Standby / restart" entryID="standby_restart_list">
