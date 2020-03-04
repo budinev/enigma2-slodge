@@ -67,7 +67,7 @@ from Plugins.SatLodge.PiconPathSet.plugin import *
 self.session.open(SetPiconPath)
 </code>
         </item>  
-                
+<!--                
 	    <item weight="20" level="0" text="Ipkg Installer" entryID="SatLodge">  
     <code>
 from Tools.Directories import fileExists
@@ -79,7 +79,8 @@ else:
     self.session.open(MessageBox, _("Sorry, %s has not been installed!") % ("MediaScanner"), MessageBox.TYPE_INFO, timeout = 5)
 
 </code>
-        </item>  
+        </item>
+-->  
 <!--        
 	    <item weight="25" level="0" text="Mount Manager" entryID="DevicesMountPanel">  
     <code>
