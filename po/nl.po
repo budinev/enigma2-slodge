@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frenske <voorzitter@openpli.org>\n"
 "Language-Team: PLiteam <translators@openpli.org>\n"
@@ -2507,10 +2507,6 @@ msgstr "Kon geen geschikt medium vinden - Verwijder aub enkele gedownloade image
 msgid "Could not load medium! No disc inserted?"
 msgstr "Kon het medium niet laden! Is er geen schijf geplaatst?"
 
-#, fuzzy
-msgid "Could not locate epg file on fallback tuner"
-msgstr "Activeer de import van timers van de Fallback tuner"
-
 msgid "Could not open Picture in Picture"
 msgstr "Kan Picture In Picture niet openen"
 
@@ -3251,6 +3247,10 @@ msgstr "EPG:"
 msgid "ERROR - failed to scan (%s)!"
 msgstr "Fout - zoeken mislukt (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 msgid "East"
 msgstr "Oost"
 
@@ -3540,6 +3540,10 @@ msgstr "Eritrea"
 msgid "Error"
 msgstr "Fout"
 
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "Fout"
+
 msgid "Error code"
 msgstr "Foutcode"
 
@@ -3572,10 +3576,25 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Fout stop de stream!"
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+#, fuzzy
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+"Fout tijdens het ophalen van de Fallback timer informatie\n"
+"%s"
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+"Fout tijdens het ophalen van de Fallback timer informatie\n"
+"%s"
+
+#, fuzzy
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 "Fout tijdens het ophalen van de Fallback timer informatie\n"
 "%s"
@@ -5595,6 +5614,9 @@ msgstr "Geen beschrijving beschikbaar."
 msgid "No displayable files on this medium found!"
 msgstr "Geen weer te geven bestanden op dit medium gevonden!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 msgid "No event info found, recording indefinitely."
 msgstr "Geen EPG gegevens gevonden. Opname voor onbepaalde tijd."
 
@@ -5636,9 +5658,6 @@ msgstr "Geen uitzending"
 
 msgid "No services/providers selected"
 msgstr "Geen zender/provider gekozen"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 msgid "No standby"
 msgstr "Geen stand-by"
@@ -5883,6 +5902,15 @@ msgstr "Open tunerinstellingen "
 
 msgid "Open the movie list"
 msgstr "Open de opnamelijst"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr "Opkg"
@@ -7687,6 +7715,10 @@ msgstr "Kies de satelliet die u wilt configureren. Zodra deze satelliet is gecon
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Kies de satelliet die door uw schotel ontvangen wordt. Bij twijfel kies dan voor 'automatisch' en de ontvanger zal proberen om deze automatisch te bepalen."
 
+#, fuzzy
+msgid "Select the time zone within the area or region."
+msgstr "Kies de horizontale resolutie:"
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Kies de tuner die de gemotoriseerde schotel aanstuurt."
 
@@ -7751,6 +7783,10 @@ msgstr "Kies uw provider en druk op 'Ok' om de scan te starten."
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr "Kies uw regio. Indien niet beschikbaar wijzig dan het land naar 'alle' en kies één van de aanwezige alternatieven."
+
+#, fuzzy
+msgid "Select your time zone area or region."
+msgstr "Kies de horizontale resolutie:"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Kies satelieten1 (USALS)"
@@ -8855,6 +8891,16 @@ msgstr "Schakel een zender terug"
 msgid "Switch channel up"
 msgstr "Schakel een zender verder"
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "Bekijk het overzicht van de beschikbare display- en gebruikersinterface applicaties."
+
 msgid "Switch to TV mode"
 msgstr "Schakel naar de TV modus"
 
@@ -9452,6 +9498,14 @@ msgstr "Tijd"
 
 msgid "Time scale"
 msgstr "Tijdschaal"
+
+#, fuzzy
+msgid "Time zone"
+msgstr "Tijdzone"
+
+#, fuzzy
+msgid "Time zone area"
+msgstr "Tijdzone"
 
 msgid "Timer"
 msgstr "Timer"
@@ -10633,6 +10687,20 @@ msgstr "Met fouten:"
 
 msgid "With popup"
 msgstr "Met popup"
+
+#, fuzzy
+msgid "With this option you can switch off the display during operation."
+msgstr "Deze instelling biedt de optie om het display uit te schakelen."
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+#, fuzzy
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr "Deze instelling biedt de optie om het display uit te schakelen."
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr ""
 
 msgid "Without popup"
 msgstr "Zonder popup"
@@ -11926,6 +11994,9 @@ msgstr "Variété/Show"
 
 msgid "vertical"
 msgstr "verticaal"
+
+msgid "violet"
+msgstr ""
 
 msgid "wait for ci..."
 msgstr "wacht op CI..."

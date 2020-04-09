@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
-"PO-Revision-Date: 2020-03-04 22:12+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"PO-Revision-Date: 2020-03-22 22:42+0100\n"
 "Last-Translator: Pr2\n"
 "Language-Team: french\n"
 "Language: fr\n"
@@ -2331,9 +2331,6 @@ msgstr "Impossible de trouver un média qui convient - Veuillez effacer certaine
 msgid "Could not load medium! No disc inserted?"
 msgstr "Impossible de charger le support! Aucun disque inséré?"
 
-msgid "Could not locate epg file on fallback tuner"
-msgstr "Impossible de localiser le fichier epg sur le récepteur de repli distant"
-
 msgid "Could not open Picture in Picture"
 msgstr "Impossible d’ouvrir l’incrustation d’image (PiP)"
 
@@ -3064,6 +3061,10 @@ msgstr "EPG:"
 msgid "ERROR - failed to scan (%s)!"
 msgstr "ERREUR - échec lors de la recherche (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr "ERREUR lors du téléchargement du fichier %s"
+
 msgid "East"
 msgstr "Est"
 
@@ -3346,6 +3347,10 @@ msgstr "Eritrée"
 msgid "Error"
 msgstr "Erreur"
 
+#, python-format
+msgid "Error %s"
+msgstr "Erreur %s"
+
 msgid "Error code"
 msgstr "Code d'erreur"
 
@@ -3378,6 +3383,12 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Erreur arrêt du stream (diffusion)!"
 
+msgid "Error when writing epg.dat on server"
+msgstr "Erreur lors de l’écriture du epg.dat sur le serveur"
+
+msgid "Error while retreiving epg.dat from server"
+msgstr "Erreur lors de la récupération du epg.dat sur le serveur"
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
@@ -3385,6 +3396,9 @@ msgid ""
 msgstr ""
 "Erreur lors de la récupération des informations de programmation de repli\n"
 "%s"
+
+msgid "Error while retreiving location of epg.dat on server"
+msgstr "Erreur lors de la localisation du epg.dat sur le serveur"
 
 #, python-format
 msgid ""
@@ -5391,6 +5405,9 @@ msgstr "Description non disponible."
 msgid "No displayable files on this medium found!"
 msgstr "Aucun fichier affichable trouvé sur ce support!"
 
+msgid "No epg.dat file found server"
+msgstr "Pas de epg.dat trouvé sur le serveur"
+
 msgid "No event info found, recording indefinitely."
 msgstr "Aucune information sur l’événement trouvée, enregistrement indéfini."
 
@@ -5432,9 +5449,6 @@ msgstr "Pas de service"
 
 msgid "No services/providers selected"
 msgstr "Aucun services/opérateurs sélectionnés"
-
-msgid "No settings files to download on fallback tuner"
-msgstr "Pas de fichiers de configuration à télécharger sur le récepteur de repli distant"
 
 msgid "No standby"
 msgstr "Pas de veille"
@@ -5674,6 +5688,15 @@ msgstr "Ouvrir la configuration du tuner "
 
 msgid "Open the movie list"
 msgstr "Ouvrir la liste de films"
+
+msgid "Operating LED status in deep standby mode"
+msgstr "État de la LED de fonctionnement en veille profonde"
+
+msgid "Operating LED status in standby mode"
+msgstr "État de la LED de fonctionnement en veille"
+
+msgid "Operating LED status while running."
+msgstr "État de la LED de fonctionnement en activité"
 
 msgid "Opkg"
 msgstr "Opkg"
@@ -7449,6 +7472,9 @@ msgstr "Sélectionnez le satellite que vous voulez configurer. Lorsque ce satell
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Sélectionnez le satellite que reçoit votre antenne. Si vous n’êtes pas certains choisissez ‘automatique’ et le receveur va essayer de déterminer ceci pour vous."
 
+msgid "Select the time zone within the area or region."
+msgstr "Sélectionnez le fuseau horaire dans la zone ou la région."
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Sélectionnez le tuner qui contrôle l’antenne motorisée."
 
@@ -7512,6 +7538,9 @@ msgstr "Sélectionnez votre opérateur, et appuyez sur OK pour lancer la recherc
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr "Sélectionnez votre région. Si non disponible changer ‘Pays’ à ‘tous’ et sélectionnez une des alternatives par défaut."
+
+msgid "Select your time zone area or region."
+msgstr "Sélectionnez votre fuseau horaire ou région."
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Sélectionner satellites 1 (USALS)"
@@ -8607,6 +8636,15 @@ msgstr "Basculer vers la chaîne suivante"
 msgid "Switch channel up"
 msgstr "Basculer vers la chaîne précédente"
 
+msgid "Switch off the display during Standby Mode"
+msgstr "Éteindre l’écran en mode veille"
+
+msgid "Switch off the display during Suspend Mode"
+msgstr "Eteindre l’affichage pendant la veille profonde"
+
+msgid "Switch off the display during operation."
+msgstr "Eteindre l’affichage en fonctionnement."
+
 msgid "Switch to TV mode"
 msgstr "Basculer en mode TV"
 
@@ -8693,7 +8731,7 @@ msgstr ""
 "\n"
 "Traducteur: Pr2\n"
 "Support: www.openpli.org\n"
-"Dernière MAJ: 04-03-2020"
+"Dernière MAJ: 25-03-2020"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "Fichier TS trop grand pour le niveau 1 ISO9660!"
@@ -9192,6 +9230,12 @@ msgstr "Heure"
 
 msgid "Time scale"
 msgstr "Echelle de temps"
+
+msgid "Time zone"
+msgstr "Fuseau horaire"
+
+msgid "Time zone area"
+msgstr "Zone horaire"
 
 msgid "Timer"
 msgstr "Programmation"
@@ -10333,6 +10377,18 @@ msgstr "Avec erreurs:"
 
 msgid "With popup"
 msgstr "Avec le popup"
+
+msgid "With this option you can switch off the display during operation."
+msgstr "Avec cette option, vous pouvez éteindre l’affichage en fonctionnement."
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr "Avec cette option vous pouvez désactiver l’écran en mode veille profonde."
+
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr "Avec cette option, vous pouvez désactiver l’affichage en mode veille."
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr "Avec cette option, vous pouvez changer la couleur LED ou désactiver la LED."
 
 msgid "Without popup"
 msgstr "Sans le popup"
@@ -11620,6 +11676,9 @@ msgstr "Spectacle de variété"
 
 msgid "vertical"
 msgstr "Verticale"
+
+msgid "violet"
+msgstr "violet"
 
 msgid "wait for ci..."
 msgstr "Attente pour ci..."

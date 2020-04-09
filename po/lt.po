@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-02 20:03+0100\n"
-"PO-Revision-Date: 2020-02-29 08:52+0200\n"
+"POT-Creation-Date: 2020-03-25 21:00+0100\n"
+"PO-Revision-Date: 2020-03-23 00:18+0200\n"
 "Last-Translator: Audronis Grincevicius <adga45@gmail.com>\n"
 "Language-Team: Adga (C) <adga45@gmail.com>\n"
 "Language: lt_LT\n"
@@ -2343,9 +2343,6 @@ msgstr "Nepavyko rasti tinkamos laikmenos - Pašalinkite kai kuriuos atsisiųstu
 msgid "Could not load medium! No disc inserted?"
 msgstr "Nepavyko atverti laikmenos! Neįdėtas diskas?"
 
-msgid "Could not locate epg file on fallback tuner"
-msgstr "Nepavyko rasti epg failo atsarginiame imtuve"
-
 msgid "Could not open Picture in Picture"
 msgstr "Vaizdo vaizde atverti nepavyko"
 
@@ -3079,6 +3076,10 @@ msgstr "Elektroninis programų vadovas:"
 msgid "ERROR - failed to scan (%s)!"
 msgstr "KLAIDA - paieška nepavyko (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr "KLAIDA, parsiunčiant failą %s"
+
 msgid "East"
 msgstr "Rytai"
 
@@ -3361,6 +3362,10 @@ msgstr "Eritrėja"
 msgid "Error"
 msgstr "Klaida"
 
+#, python-format
+msgid "Error %s"
+msgstr "Klaida %s"
+
 msgid "Error code"
 msgstr "Klaidos kodas"
 
@@ -3393,6 +3398,12 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Srauto stabdymo klaida!"
 
+msgid "Error when writing epg.dat on server"
+msgstr "Klaida, įrašant epg.dat serveryje"
+
+msgid "Error while retreiving epg.dat from server"
+msgstr "Klaida, ieškant epg.data iš serverio"
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
@@ -3400,6 +3411,9 @@ msgid ""
 msgstr ""
 "Klaida atsisiunčiant atsarginio imtuvo laikmačio informaciją\n"
 "%s"
+
+msgid "Error while retreiving location of epg.dat on server"
+msgstr "Klaida atkūrus epg.dat vietą serveryje"
 
 #, python-format
 msgid ""
@@ -5406,6 +5420,9 @@ msgstr "Joks aprašymas nepasiekiamas."
 msgid "No displayable files on this medium found!"
 msgstr "Jokių failų čia nerasta!"
 
+msgid "No epg.dat file found server"
+msgstr "Failo epg.dat serveryje nerasta"
+
 msgid "No event info found, recording indefinitely."
 msgstr "Informacija apie įvykius nerasta, tęsiamas įrašymas."
 
@@ -5447,9 +5464,6 @@ msgstr "Nėra kanalų"
 
 msgid "No services/providers selected"
 msgstr "Nepasirinkti kanalai/teikėjai"
-
-msgid "No settings files to download on fallback tuner"
-msgstr "Negalima atsisiųsti nustatymų failų naudojant atsarginį imtuvą"
 
 msgid "No standby"
 msgstr "Nebudėti"
@@ -5689,6 +5703,15 @@ msgstr "Atidaryti imtuvo konfigūravimą "
 
 msgid "Open the movie list"
 msgstr "Atidaryti filmų sąrašą"
+
+msgid "Operating LED status in deep standby mode"
+msgstr "LED būsenos veikimas gilaus laukimo režimu"
+
+msgid "Operating LED status in standby mode"
+msgstr "LED būsenos veikimas laukimo režimu"
+
+msgid "Operating LED status while running."
+msgstr "LED būsena veikimo metu."
 
 msgid "Opkg"
 msgstr "Opkg"
@@ -7467,6 +7490,9 @@ msgstr "Pasirinkite palydovą, kurį norite konfigūruoti. Kai šis palydovas bu
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Pasirinkite palydovą, kurį jūsų antena gauna. Jei nesate tikri, pasirinkite 'automatinis' ir imtuvas bandys tai nustatyti pats."
 
+msgid "Select the time zone within the area or region."
+msgstr "Pasirinkite laiko juostą, toje teritorijoje arba regione."
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Pasirinkite imtuvą, kuris kontroliuoja motorizuotą anteną."
 
@@ -7530,6 +7556,9 @@ msgstr "Pasirinkite tiekėją ir paieškai pradėti, spauskite OK"
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr "Pasirinkite savo regioną. Jei negalima, pakeiskite 'Šalis' į 'visos' ir pasirinkite vieną iš numatytųjų alternatyvų."
+
+msgid "Select your time zone area or region."
+msgstr "Pasirinkite laiko juostos teritoriją arba regioną."
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Pasirenkami palydovai 1 (USALS)"
@@ -8627,6 +8656,15 @@ msgstr "Perjungti kanalą žemyn"
 msgid "Switch channel up"
 msgstr "Perjungti kanalą aukštyn"
 
+msgid "Switch off the display during Standby Mode"
+msgstr "Budėjimo režime išjunkite ekraną"
+
+msgid "Switch off the display during Suspend Mode"
+msgstr "Laukimo režime išjunkite ekraną"
+
+msgid "Switch off the display during operation."
+msgstr "Veikimo metu išjunkite ekraną."
+
 msgid "Switch to TV mode"
 msgstr "Perjungti į TV režimą"
 
@@ -8706,7 +8744,7 @@ msgstr "T2MI RAW režimas"
 msgid "TRANSLATOR_INFO"
 msgstr ""
 "P&C Adga, adga45@gmail.com\n"
-"Pasvalys, 2020-02-29 versija"
+"Pasvalys, 2020-03-23 versija"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "TS failas per didelis 1 lygio ISO9660!"
@@ -9205,6 +9243,12 @@ msgstr "Laikas"
 
 msgid "Time scale"
 msgstr "Laiko skalė"
+
+msgid "Time zone"
+msgstr "Laiko juosta"
+
+msgid "Time zone area"
+msgstr "Laiko juostos teritorija"
 
 msgid "Timer"
 msgstr "Laikmatis"
@@ -10343,6 +10387,18 @@ msgstr "Su klaidomis:"
 
 msgid "With popup"
 msgstr "Su iškylančiu pranešimu"
+
+msgid "With this option you can switch off the display during operation."
+msgstr "Naudodami šią parinktį, galite išjungti ekraną veikimo metu."
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr "Naudodami šią parinktį galite išjungti ekraną gilaus budėjimo režime."
+
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr "Naudodami šią parinktį galite išjungti ekraną budėjimo režime."
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr "Naudodami šią parinktį galite įjungti LED spalvą arba išjungti LED."
 
 msgid "Without popup"
 msgstr "Be iškylančio pranešimo"
@@ -11632,6 +11688,9 @@ msgstr "įvairūs šou"
 
 msgid "vertical"
 msgstr "vertikali"
+
+msgid "violet"
+msgstr "violetinė"
 
 msgid "wait for ci..."
 msgstr "laukite CI atsako..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1-En-Th\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2010-04-08 18:13+0700\n"
 "Last-Translator: Tony - Thaidreambox\n"
 "Language-Team: Tony @ Thai Dreambox <tonyboyth@gmail.com>\n"
@@ -2393,9 +2393,6 @@ msgstr ""
 msgid "Could not load medium! No disc inserted?"
 msgstr "โหลดไม่ได้ ยังไม่ได้ใส่แผ่นหรือเปล่า?"
 
-msgid "Could not locate epg file on fallback tuner"
-msgstr ""
-
 msgid "Could not open Picture in Picture"
 msgstr ""
 
@@ -3163,6 +3160,10 @@ msgstr ""
 msgid "ERROR - failed to scan (%s)!"
 msgstr "ผิดพลาด - การค้นหา (%s) ล้มเหลว"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 msgid "East"
 msgstr "ตะวันออก"
 
@@ -3453,6 +3454,10 @@ msgstr ""
 msgid "Error"
 msgstr "ผิดพลาด"
 
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "ผิดพลาด"
+
 msgid "Error code"
 msgstr ""
 
@@ -3478,10 +3483,19 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr ""
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 
 #, python-format
@@ -5584,6 +5598,9 @@ msgstr "ไม่มีรายละเอียดเพิ่มเติม
 msgid "No displayable files on this medium found!"
 msgstr "ไม่พบชนิดไฟล์ที่สามารถเล่นได้ในสื่อบันทีกนี้!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 msgid "No event info found, recording indefinitely."
 msgstr "ไม่พบข้อมูลเวลากำกับ บันทึกรายโดยไม่มีข้อกำหนด"
 
@@ -5627,9 +5644,6 @@ msgstr ""
 #, fuzzy
 msgid "No services/providers selected"
 msgstr "ยังไม่ได้เลือกบริการหรือผู้ให้บริการ"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 #, fuzzy
 msgid "No standby"
@@ -5885,6 +5899,15 @@ msgstr ""
 #, fuzzy
 msgid "Open the movie list"
 msgstr "กลับไปยังสารบัญภาพยนต์"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr ""
@@ -7745,6 +7768,9 @@ msgstr ""
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr ""
 
+msgid "Select the time zone within the area or region."
+msgstr ""
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr ""
 
@@ -7809,6 +7835,9 @@ msgid "Select your provider, and press OK to start the scan"
 msgstr ""
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
+msgstr ""
+
+msgid "Select your time zone area or region."
 msgstr ""
 
 msgid "Selecting satellites 1 (USALS)"
@@ -8972,6 +9001,16 @@ msgstr ""
 msgid "Switch channel up"
 msgstr ""
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "แสดงรายการส่วนเพิ่มเติมสำหรับส่วนติดต่อผู้ใช้"
+
 msgid "Switch to TV mode"
 msgstr ""
 
@@ -9539,6 +9578,14 @@ msgstr "เวลา"
 #, fuzzy
 msgid "Time scale"
 msgstr "เลือกการตั้งเวลา"
+
+#, fuzzy
+msgid "Time zone"
+msgstr "เส้นแบ่งเวลา"
+
+#, fuzzy
+msgid "Time zone area"
+msgstr "เส้นแบ่งเวลา"
 
 msgid "Timer"
 msgstr "ตั้งเวลา"
@@ -10709,6 +10756,18 @@ msgid "With errors:"
 msgstr ""
 
 msgid "With popup"
+msgstr ""
+
+msgid "With this option you can switch off the display during operation."
+msgstr ""
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr ""
+
+msgid "With this option you can switch the LED color or deactivate the LED."
 msgstr ""
 
 msgid "Without popup"
@@ -11987,6 +12046,9 @@ msgstr ""
 
 msgid "vertical"
 msgstr "แนวตั้ง (V)"
+
+msgid "violet"
+msgstr ""
 
 msgid "wait for ci..."
 msgstr "รอ CI"

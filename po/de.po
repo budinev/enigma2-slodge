@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2019-11-28 17:53+0100\n"
 "Last-Translator: Pike_Bishop <alfredzngr023@gmail.com>\n"
 "Language-Team: Sfteam  angelo2807@hotmail.com\n"
@@ -2343,10 +2343,6 @@ msgstr "Es konnte kein geeignetes Medium gefunden werden. Bitte entfernen Sie ei
 msgid "Could not load medium! No disc inserted?"
 msgstr "Konnte das Medium nicht laden! Keine DVD eingelegt?"
 
-#, fuzzy
-msgid "Could not locate epg file on fallback tuner"
-msgstr "Aktivieren Sie den Import-Timer vom Reserve-Tuner"
-
 msgid "Could not open Picture in Picture"
 msgstr "Bild im Bild konnte nicht geladen werden."
 
@@ -3075,6 +3071,10 @@ msgstr ""
 msgid "ERROR - failed to scan (%s)!"
 msgstr "FEHLER - Suche fehlgeschlagen (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 msgid "East"
 msgstr "Ost"
 
@@ -3360,6 +3360,10 @@ msgstr "Eritrea"
 msgid "Error"
 msgstr "Fehler"
 
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "Fehler"
+
 msgid "Error code"
 msgstr "Fehler-Code"
 
@@ -3392,10 +3396,25 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Fehler beim Stoppen des Streams!"
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+#, fuzzy
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+"Fehler beim Wiederherstellen der Reserve-Timer-Informationen\n"
+"% s"
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+"Fehler beim Wiederherstellen der Reserve-Timer-Informationen\n"
+"% s"
+
+#, fuzzy
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 "Fehler beim Wiederherstellen der Reserve-Timer-Informationen\n"
 "% s"
@@ -5415,6 +5434,9 @@ msgstr "Keine Beschreibung verfügbar."
 msgid "No displayable files on this medium found!"
 msgstr "Keine anzeigbaren Dateien auf diesem Medium gefunden!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 msgid "No event info found, recording indefinitely."
 msgstr "Keine EPG-Daten gefunden. Starte unbegrenzte Aufnahme."
 
@@ -5456,9 +5478,6 @@ msgstr "Kein Sender"
 
 msgid "No services/providers selected"
 msgstr "Keine Sender/Anbieter ausgewählt"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 msgid "No standby"
 msgstr "Kein Standby"
@@ -5698,6 +5717,15 @@ msgstr "Öffnen Sie den Setup-Tuner"
 
 msgid "Open the movie list"
 msgstr "Zurück zur Videoliste"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr ""
@@ -7480,6 +7508,10 @@ msgstr "Wählen Sie den Satelliten aus, den Sie konfigurieren wollen. Sobald die
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Wählen Sie den Satelliten, von dem Ihr Gerät empfängt. Wenn Sie sich nicht sicher sind, wählen Sie “automatisch” und der Empfänger wird versuchen, dies für Sie zu ermitteln."
 
+#, fuzzy
+msgid "Select the time zone within the area or region."
+msgstr "Wählen Sie die horizontale Auflösung:"
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Wählen Sie den Tuner, der die motorisierte Schüssel steuert."
 
@@ -7543,6 +7575,10 @@ msgstr "Bitte wählen Sie den Anbieter aus und bestätigen Sie mit OK, um die Su
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr "Wählen Sie Ihre Region. Wenn nicht verfügbar, ändern Sie “Land” in “alle” und wählen Sie eine der Standardalternativen."
+
+#, fuzzy
+msgid "Select your time zone area or region."
+msgstr "Wählen Sie die horizontale Auflösung:"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Wähle Satelliten 1 (USALS)"
@@ -8643,6 +8679,16 @@ msgstr "Kanal umschalten"
 msgid "Switch channel up"
 msgstr "Kanal hochschalten"
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "Eine Liste der verfügbaren Display- und Userinterface-Erweiterungen anzeigen."
+
 msgid "Switch to TV mode"
 msgstr "Wechsel zum TV Modus"
 
@@ -9223,6 +9269,14 @@ msgstr "Zeit"
 
 msgid "Time scale"
 msgstr "Zeitskala"
+
+#, fuzzy
+msgid "Time zone"
+msgstr "Zeitzone"
+
+#, fuzzy
+msgid "Time zone area"
+msgstr "Zeitzone"
 
 msgid "Timer"
 msgstr "Timer"
@@ -10367,6 +10421,20 @@ msgstr "Mit Fehlern:"
 
 msgid "With popup"
 msgstr "mit Popup"
+
+#, fuzzy
+msgid "With this option you can switch off the display during operation."
+msgstr "Mit dieser Option können Sie das Display ausschalten."
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+#, fuzzy
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr "Mit dieser Option können Sie das Display ausschalten."
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr ""
 
 msgid "Without popup"
 msgstr "ohne Popup"
@@ -11660,6 +11728,9 @@ msgstr "Abwechslungsreiche Sendung"
 
 msgid "vertical"
 msgstr "Vertikal"
+
+msgid "violet"
+msgstr ""
 
 msgid "wait for ci..."
 msgstr "Warte auf CI…"

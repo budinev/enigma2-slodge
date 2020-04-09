@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2014-12-15 19:38-0000\n"
 "Last-Translator: Phenom <phenomxy@gmail.com>\n"
 "Language-Team: Muaitai <muaitai@gmail.com>\n"
@@ -2662,9 +2662,6 @@ msgstr ""
 msgid "Could not load medium! No disc inserted?"
 msgstr "Foi impossível carregar a media! Disco não inserido?"
 
-msgid "Could not locate epg file on fallback tuner"
-msgstr ""
-
 #
 msgid "Could not open Picture in Picture"
 msgstr "Não foi possível abrir o Picture in Picture"
@@ -3538,6 +3535,10 @@ msgstr ""
 msgid "ERROR - failed to scan (%s)!"
 msgstr "ERRO - falha na pesquisa (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 #
 msgid "East"
 msgstr "Este"
@@ -3867,6 +3868,11 @@ msgstr "Stream"
 msgid "Error"
 msgstr "Erro"
 
+#
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "Erro"
+
 msgid "Error code"
 msgstr "Código de erro"
 
@@ -3892,10 +3898,19 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr ""
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 
 #
@@ -6248,6 +6263,9 @@ msgstr "Descrição não disponível."
 msgid "No displayable files on this medium found!"
 msgstr "Não foram encontrados ficheiros reproduzíveis!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 #
 msgid "No event info found, recording indefinitely."
 msgstr "Não foi encontrada informação do programa, a gravar indefinidamente."
@@ -6299,9 +6317,6 @@ msgstr "Nenhum canal."
 #, fuzzy
 msgid "No services/providers selected"
 msgstr "Nenhum Serviço/Operador seleccionado"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 #
 #, fuzzy
@@ -6593,6 +6608,15 @@ msgstr ""
 #, fuzzy
 msgid "Open the movie list"
 msgstr "Voltar à Lista de Filmes"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr ""
@@ -8738,6 +8762,10 @@ msgstr ""
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr ""
 
+#, fuzzy
+msgid "Select the time zone within the area or region."
+msgstr "Seleccione método de ordenação:"
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr ""
 
@@ -8810,6 +8838,10 @@ msgstr "Seleccione o seu operador, e pressione OK para iniciar a pesquisa"
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr ""
+
+#, fuzzy
+msgid "Select your time zone area or region."
+msgstr "Seleccione método de ordenação:"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr ""
@@ -10113,6 +10145,17 @@ msgstr ""
 msgid "Switch channel up"
 msgstr ""
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "Ver lista de extensões de ecrã e interface de utilizador disponíveis"
+
 msgid "Switch to TV mode"
 msgstr ""
 
@@ -10753,6 +10796,16 @@ msgstr "Hora"
 #, fuzzy
 msgid "Time scale"
 msgstr "Escala de tempo"
+
+#
+#, fuzzy
+msgid "Time zone"
+msgstr "Zona horária"
+
+#
+#, fuzzy
+msgid "Time zone area"
+msgstr "Zona horária"
 
 #
 msgid "Timer"
@@ -12087,6 +12140,18 @@ msgstr ""
 
 msgid "With popup"
 msgstr "Com janela"
+
+msgid "With this option you can switch off the display during operation."
+msgstr ""
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr ""
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr ""
 
 msgid "Without popup"
 msgstr "Sem janela"
@@ -13551,6 +13616,9 @@ msgstr "espectáculos variados"
 #
 msgid "vertical"
 msgstr "vertical"
+
+msgid "violet"
+msgstr ""
 
 #
 msgid "wait for ci..."

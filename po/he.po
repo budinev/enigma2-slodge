@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2012-03-08 10:40+0330\n"
 "Last-Translator: \n"
 "Language-Team: Arabic <moustafagamal@hotmail.com>\n"
@@ -2498,9 +2498,6 @@ msgstr ""
 msgid "Could not load medium! No disc inserted?"
 msgstr "Could not load Medium! No disc inserted?"
 
-msgid "Could not locate epg file on fallback tuner"
-msgstr ""
-
 msgid "Could not open Picture in Picture"
 msgstr "לא יכול לפתוח תמונה בתוך תמונה"
 
@@ -3294,6 +3291,10 @@ msgstr ""
 msgid "ERROR - failed to scan (%s)!"
 msgstr "(%s) !שגיאה - נכשל בסריקה"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 #
 msgid "East"
 msgstr "מזרח"
@@ -3605,6 +3606,10 @@ msgstr ""
 msgid "Error"
 msgstr "שגיאה"
 
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "שגיאה"
+
 msgid "Error code"
 msgstr ""
 
@@ -3630,10 +3635,19 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr ""
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 
 #, python-format
@@ -5856,6 +5870,9 @@ msgstr "אין מידע נוסף"
 msgid "No displayable files on this medium found!"
 msgstr "!לא נמצאו קבצים מתאימים לתצוגה על המדיה הזו"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 #
 msgid "No event info found, recording indefinitely."
 msgstr ""
@@ -5903,9 +5920,6 @@ msgid "No service"
 msgstr ""
 
 msgid "No services/providers selected"
-msgstr ""
-
-msgid "No settings files to download on fallback tuner"
 msgstr ""
 
 #, fuzzy
@@ -6178,6 +6192,15 @@ msgstr ""
 #, fuzzy
 msgid "Open the movie list"
 msgstr "חזור לרשימת הסרטים"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr ""
@@ -8131,6 +8154,9 @@ msgstr ""
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr ""
 
+msgid "Select the time zone within the area or region."
+msgstr ""
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr ""
 
@@ -8196,6 +8222,9 @@ msgid "Select your provider, and press OK to start the scan"
 msgstr ""
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
+msgstr ""
+
+msgid "Select your time zone area or region."
 msgstr ""
 
 msgid "Selecting satellites 1 (USALS)"
@@ -9439,6 +9468,16 @@ msgstr ""
 msgid "Switch channel up"
 msgstr ""
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "View list of available Display and Userinterface extensions."
+
 msgid "Switch to TV mode"
 msgstr ""
 
@@ -10033,6 +10072,16 @@ msgstr "זמן"
 #, fuzzy
 msgid "Time scale"
 msgstr "בחירת טיימר"
+
+#
+#, fuzzy
+msgid "Time zone"
+msgstr "איזור זמן"
+
+#
+#, fuzzy
+msgid "Time zone area"
+msgstr "איזור זמן"
 
 #
 msgid "Timer"
@@ -11274,6 +11323,18 @@ msgid "With errors:"
 msgstr ""
 
 msgid "With popup"
+msgstr ""
+
+msgid "With this option you can switch off the display during operation."
+msgstr ""
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr ""
+
+msgid "With this option you can switch the LED color or deactivate the LED."
 msgstr ""
 
 msgid "Without popup"
@@ -12608,6 +12669,9 @@ msgstr ""
 #
 msgid "vertical"
 msgstr "vertical"
+
+msgid "violet"
+msgstr ""
 
 #
 msgid "wait for ci..."

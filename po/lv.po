@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2014-11-12 00:49+0200\n"
 "Last-Translator: Taapat <taapat@gmail.com>\n"
 "Language-Team: Taapat <taapat@gmail.com>\n"
@@ -2344,10 +2344,6 @@ msgstr "Nav pieejams piemērots datu nesējs - lūdzu izdzēsiet kādu imidžu v
 msgid "Could not load medium! No disc inserted?"
 msgstr "Nevar ielādēt datu nesēju! Disks nav ievietots?"
 
-#, fuzzy
-msgid "Could not locate epg file on fallback tuner"
-msgstr "Importēt taimerus no attālinātā uztvērēja"
-
 msgid "Could not open Picture in Picture"
 msgstr "Nevar atvērt attēlu attēlā"
 
@@ -3085,6 +3081,10 @@ msgstr ""
 msgid "ERROR - failed to scan (%s)!"
 msgstr "KĻŪDA - meklēšana neizdevās (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 msgid "East"
 msgstr "Austrumi"
 
@@ -3370,6 +3370,10 @@ msgstr "Eritreja"
 msgid "Error"
 msgstr "Kļūda"
 
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "Kļūda"
+
 msgid "Error code"
 msgstr "Kļūdas kods"
 
@@ -3402,10 +3406,25 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Kļūda apturot straumēšanu!"
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+#, fuzzy
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+"Kļūda iegūstot taimerus no attālinātā uztvērēja\n"
+"%s"
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+"Kļūda iegūstot taimerus no attālinātā uztvērēja\n"
+"%s"
+
+#, fuzzy
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 "Kļūda iegūstot taimerus no attālinātā uztvērēja\n"
 "%s"
@@ -5429,6 +5448,9 @@ msgstr "Apraksts nav pieejams."
 msgid "No displayable files on this medium found!"
 msgstr "Šinī datu nesējā nav atrasti attēlojami faili!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 msgid "No event info found, recording indefinitely."
 msgstr "Nav atrasta informācija par pārraidi, ierakstīs nepārtraukti."
 
@@ -5471,9 +5493,6 @@ msgstr "Nav kanāla"
 
 msgid "No services/providers selected"
 msgstr "Kanāli/operatori nav izvēlēti"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 msgid "No standby"
 msgstr "Nav gaidstāves"
@@ -5715,6 +5734,15 @@ msgstr "Atvērt iestatījumus uztvērējam "
 
 msgid "Open the movie list"
 msgstr "Atvērt mediju sarakstu"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr ""
@@ -7499,6 +7527,10 @@ msgstr "Izvēlieties satelītu, kuru vēlaties konfigurēt. Tiklīdz šis satel�
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Izvēlieties satelītu kuru uztverat ar satelītantenu. Ja neesat pārliecināts, izvēlieties 'automātiski', un uztvērējs mēģinās to noteikt pats."
 
+#, fuzzy
+msgid "Select the time zone within the area or region."
+msgstr "Izvēlieties izšķirtspēju:"
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Izvēlieties uztvērēju, kas kontrolē motorizēto satelītantenu."
 
@@ -7563,6 +7595,10 @@ msgstr "Izvēlieties jūsu operatoru un nospiediet OK lai sāktu meklēt"
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr "Izvēlieties jūsu reģionu. Ja tas nav pieejams, izmainiet valsti uz 'visam', un izvēlieties citu kanālu meklēšanas veidu."
+
+#, fuzzy
+msgid "Select your time zone area or region."
+msgstr "Izvēlieties izšķirtspēju:"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Izvēlieties pavadoni 1 (USALS)"
@@ -8660,6 +8696,16 @@ msgstr "Pārslēgt kanālu uz leju"
 msgid "Switch channel up"
 msgstr "Pārslēgt kanālu uz augšu"
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "Skatīt sarakstu ar pieejamiem attēla un lietotāja interfeisa paplašinājumiem."
+
 msgid "Switch to TV mode"
 msgstr "Pārslēgt uz TV režīmu"
 
@@ -9237,6 +9283,14 @@ msgstr "Laiks"
 
 msgid "Time scale"
 msgstr "Laika skala"
+
+#, fuzzy
+msgid "Time zone"
+msgstr "Laika josla"
+
+#, fuzzy
+msgid "Time zone area"
+msgstr "Laika josla"
 
 msgid "Timer"
 msgstr "Taimeri"
@@ -10378,6 +10432,20 @@ msgstr "Ar kļūdām:"
 
 msgid "With popup"
 msgstr "Ar uznirstošo logu"
+
+#, fuzzy
+msgid "With this option you can switch off the display during operation."
+msgstr "Atļauj izslēgt displeju."
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+#, fuzzy
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr "Atļauj izslēgt displeju."
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr ""
 
 msgid "Without popup"
 msgstr "Bez uznirstošā loga"
@@ -11672,6 +11740,9 @@ msgstr "varietē šovi"
 
 msgid "vertical"
 msgstr "vertikālā"
+
+msgid "violet"
+msgstr ""
 
 msgid "wait for ci..."
 msgstr "gaidiet atbildi no CI..."

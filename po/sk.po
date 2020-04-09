@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2020-02-10 12:49+0100\n"
 "Last-Translator: Andrej Tobola <andrej.tobola@gmail.com>\n"
 "Language-Team: \n"
@@ -2343,10 +2343,6 @@ msgstr "Nebolo možné nájsť vhodné médium - odstráňte prosím stiahnuté 
 msgid "Could not load medium! No disc inserted?"
 msgstr "Nemôžem použiť médium. Je vložený disk?"
 
-#, fuzzy
-msgid "Could not locate epg file on fallback tuner"
-msgstr "Povoliť import časovača zo záložného tuneru"
-
 msgid "Could not open Picture in Picture"
 msgstr "Nedá sa otvoriť obraz v obraze"
 
@@ -3078,6 +3074,10 @@ msgstr "EPG:"
 msgid "ERROR - failed to scan (%s)!"
 msgstr "CHYBA - zlyhalo vyhľadávanie (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 msgid "East"
 msgstr "Východne"
 
@@ -3360,6 +3360,10 @@ msgstr "Eritrea"
 msgid "Error"
 msgstr "Chyba"
 
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "Chyba"
+
 msgid "Error code"
 msgstr "Kód chyby"
 
@@ -3392,10 +3396,25 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Chyba zastavenia streamu!"
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+#, fuzzy
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+"Chyba počas načítania informácie záložného časovača\n"
+"%s"
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+"Chyba počas načítania informácie záložného časovača\n"
+"%s"
+
+#, fuzzy
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 "Chyba počas načítania informácie záložného časovača\n"
 "%s"
@@ -5410,6 +5429,9 @@ msgstr "Opis nie je k dispozícii."
 msgid "No displayable files on this medium found!"
 msgstr "Na tomto médiu sa nenašli žiadne zobraziteľné súbory!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 msgid "No event info found, recording indefinitely."
 msgstr "Žiadne informácie z EPG, spúšťam nekonečné nahrávanie."
 
@@ -5451,9 +5473,6 @@ msgstr "Žiadna stanica"
 
 msgid "No services/providers selected"
 msgstr "Žiadne služby/poskytovatelia nie sú zvolené"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 msgid "No standby"
 msgstr "Neprechádzať do pohotovostného režimu"
@@ -5693,6 +5712,15 @@ msgstr "Otvoriť nastavenia tunera "
 
 msgid "Open the movie list"
 msgstr "Otvoriť zoznam filmov"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr "Opkg"
@@ -7469,6 +7497,10 @@ msgstr "Vyberte satelit, ktorý chcete nastaviť. Po tom, čo bude tento satelit
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Vyberte satelit, ktorý sa prijíma z vašej paraboly. Ak si nie ste istý, vyberte voľbu 'automaticky', prijímač sa to pokúsi zistiť za vás."
 
+#, fuzzy
+msgid "Select the time zone within the area or region."
+msgstr "Voľba horizontálneho rozlíšenia:"
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Vyberte tuner, ktorý ovláda motorizovanú parabolu."
 
@@ -7532,6 +7564,10 @@ msgstr "Vyberte poskytovateľa a stlačte OK pre spustenie skenovania"
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr "Vyberte váš región. Ak nie je dostupný, zmeňte krajinu na 'všetky' a zvolte jeden z predvolených alternatív."
+
+#, fuzzy
+msgid "Select your time zone area or region."
+msgstr "Voľba horizontálneho rozlíšenia:"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Výber satelitov 1 (USALS)"
@@ -8627,6 +8663,16 @@ msgstr "Prepnúť kanál dozadu"
 msgid "Switch channel up"
 msgstr "Prepnúť kanál dopredu"
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "Zobraziť zoznam dostupných rozšírení zobrazenia a užívateľského rozhrania."
+
 msgid "Switch to TV mode"
 msgstr "Prepnúť na mód TV"
 
@@ -9206,6 +9252,14 @@ msgstr "Čas"
 
 msgid "Time scale"
 msgstr "Časová mierka"
+
+#, fuzzy
+msgid "Time zone"
+msgstr "Časové pásmo"
+
+#, fuzzy
+msgid "Time zone area"
+msgstr "Časové pásmo"
 
 msgid "Timer"
 msgstr "Časovač"
@@ -10342,6 +10396,20 @@ msgstr "S chybami:"
 
 msgid "With popup"
 msgstr "S vyskakovacím oknom"
+
+#, fuzzy
+msgid "With this option you can switch off the display during operation."
+msgstr "Táto voľba umožňuje vypnutie obrazovky."
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+#, fuzzy
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr "Táto voľba umožňuje vypnutie obrazovky."
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr ""
 
 msgid "Without popup"
 msgstr "Bez vyskakovacieho okna"
@@ -11629,6 +11697,9 @@ msgstr "varieté"
 
 msgid "vertical"
 msgstr "vertikálna"
+
+msgid "violet"
+msgstr ""
 
 msgid "wait for ci..."
 msgstr "čakať na ci..."

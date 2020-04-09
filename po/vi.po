@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2019-11-19 08:58+0700\n"
 "Last-Translator: krong\n"
 "Language-Team: none\n"
@@ -2335,10 +2335,6 @@ msgstr "Không thể tìm thấy phương tiện phù hợp - Vui lòng xóa m�
 msgid "Could not load medium! No disc inserted?"
 msgstr "Không thể tải trung bình! Không có đĩa được đưa vào?"
 
-#, fuzzy
-msgid "Could not locate epg file on fallback tuner"
-msgstr "Kích hoạt tính năng hẹn giờ nhập từ bộ điều chỉnh dự phòng"
-
 msgid "Could not open Picture in Picture"
 msgstr "Không thể mở Ảnh trong Ảnh"
 
@@ -3071,6 +3067,10 @@ msgstr ""
 msgid "ERROR - failed to scan (%s)!"
 msgstr "ERROR - failed to scan (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 msgid "East"
 msgstr "Đông"
 
@@ -3353,6 +3353,10 @@ msgstr "Eritrea"
 msgid "Error"
 msgstr "Lỗi"
 
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "Lỗi"
+
 msgid "Error code"
 msgstr "Mã lỗi"
 
@@ -3385,10 +3389,25 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr "Lỗi dừng luồng!"
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+#, fuzzy
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+"Lỗi trong khi truy xuất thông tin hẹn giờ dự phòng\n"
+"%s"
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+"Lỗi trong khi truy xuất thông tin hẹn giờ dự phòng\n"
+"%s"
+
+#, fuzzy
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 "Lỗi trong khi truy xuất thông tin hẹn giờ dự phòng\n"
 "%s"
@@ -5405,6 +5424,9 @@ msgstr "Không có mô tả."
 msgid "No displayable files on this medium found!"
 msgstr "Không tìm thấy tập tin nào trên phương tiện này!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 msgid "No event info found, recording indefinitely."
 msgstr "Không tìm thấy thông tin sự kiện, ghi lại vô thời hạn."
 
@@ -5446,9 +5468,6 @@ msgstr "Không dịch vụ"
 
 msgid "No services/providers selected"
 msgstr "Không có dịch vụ / nhà cung cấp nào được chọn"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 msgid "No standby"
 msgstr "Không có chế độ chờ"
@@ -5688,6 +5707,15 @@ msgstr "Mở bộ chỉnh cài đặt "
 
 msgid "Open the movie list"
 msgstr "Mở danh sách phim"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr ""
@@ -7466,6 +7494,10 @@ msgstr "Chọn vệ tinh bạn muốn cấu hình. Khi vệ tinh đó được �
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Chọn vệ tinh mà món ăn của bạn nhận được từ. Nếu bạn không chắc chắn, hãy chọn 'tự động' và người nhận sẽ cố gắng xác định điều này cho bạn."
 
+#, fuzzy
+msgid "Select the time zone within the area or region."
+msgstr "Chọn độ phân giải ngang:"
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Chọn bộ chỉnh điều khiển đĩa cơ giới."
 
@@ -7529,6 +7561,10 @@ msgstr "Chọn nhà cung cấp của bạn và nhấn OK để bắt đầu qué
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr "Chọn vùng của bạn. Nếu không có sẵn, hãy thay đổi 'Quốc gia' thành 'tất cả' và chọn một trong các lựa chọn thay thế mặc định."
+
+#, fuzzy
+msgid "Select your time zone area or region."
+msgstr "Chọn độ phân giải ngang:"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Chọn vệ tinh 1 (USALS)"
@@ -8625,6 +8661,16 @@ msgstr "Chuyển kênh xuống"
 msgid "Switch channel up"
 msgstr "Chuyển kênh lên"
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "Xem danh sách các phần mở rộng hiển thị và giao diện người dùng."
+
 msgid "Switch to TV mode"
 msgstr "Chuyển sang chế độ TV"
 
@@ -9201,6 +9247,14 @@ msgstr "Thời gian"
 
 msgid "Time scale"
 msgstr "Quy mô thời gian"
+
+#, fuzzy
+msgid "Time zone"
+msgstr "Múi giờ"
+
+#, fuzzy
+msgid "Time zone area"
+msgstr "Múi giờ"
 
 msgid "Timer"
 msgstr "Hẹn giờ"
@@ -10339,6 +10393,20 @@ msgstr "Có lỗi:"
 
 msgid "With popup"
 msgstr "Với cửa sổ bật lên"
+
+#, fuzzy
+msgid "With this option you can switch off the display during operation."
+msgstr "Tùy chọn này cho phép bạn tắt nguồn màn hình."
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+#, fuzzy
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr "Tùy chọn này cho phép bạn tắt nguồn màn hình."
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr ""
 
 msgid "Without popup"
 msgstr "Không có cửa sổ bật lên"
@@ -11628,6 +11696,9 @@ msgstr "chương trình tạp kỹ"
 
 msgid "vertical"
 msgstr "theo chiều dọc"
+
+msgid "violet"
+msgstr ""
 
 msgid "wait for ci..."
 msgstr "chờ tôi ..."

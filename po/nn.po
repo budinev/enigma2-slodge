@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2013-10-23 19:15+0100\n"
 "Last-Translator: andy1 <dmmm8000pvr@gmail.com>\n"
 "Language-Team: none\n"
@@ -2546,9 +2546,6 @@ msgstr ""
 msgid "Could not load medium! No disc inserted?"
 msgstr "Kunne ikke laste medium! Ingen plate er satt inn?"
 
-msgid "Could not locate epg file on fallback tuner"
-msgstr ""
-
 msgid "Could not open Picture in Picture"
 msgstr "Kunne ikke åpne bilde i bilde"
 
@@ -3381,6 +3378,10 @@ msgstr ""
 msgid "ERROR - failed to scan (%s)!"
 msgstr "FEIL - kunne ikke søke (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 #
 msgid "East"
 msgstr "Øst"
@@ -3700,6 +3701,11 @@ msgstr "Datastrøm"
 msgid "Error"
 msgstr "Feil"
 
+#
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "Feil"
+
 msgid "Error code"
 msgstr "Feil kode"
 
@@ -3725,10 +3731,19 @@ msgstr ""
 msgid "Error stop stream!"
 msgstr ""
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 
 #
@@ -5978,6 +5993,9 @@ msgstr "Ingen forklaring er tilgjengelig."
 msgid "No displayable files on this medium found!"
 msgstr "Ingen visbare filer på dette mediet funnet!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 #
 msgid "No event info found, recording indefinitely."
 msgstr "Ingen kanalinfo er funnet, innspiller på ubestemt tid."
@@ -6028,9 +6046,6 @@ msgstr "Ingen service"
 
 msgid "No services/providers selected"
 msgstr "Ingen kanaler/leverandører er valgt"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 #
 msgid "No standby"
@@ -6298,6 +6313,15 @@ msgstr ""
 
 msgid "Open the movie list"
 msgstr "Åpne spillisten"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr ""
@@ -8269,6 +8293,9 @@ msgstr ""
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr ""
 
+msgid "Select the time zone within the area or region."
+msgstr ""
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr ""
 
@@ -8336,6 +8363,9 @@ msgid "Select your provider, and press OK to start the scan"
 msgstr "Velg leverandør og trykk OK for å starte søk"
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
+msgstr ""
+
+msgid "Select your time zone area or region."
 msgstr ""
 
 msgid "Selecting satellites 1 (USALS)"
@@ -9550,6 +9580,16 @@ msgstr ""
 msgid "Switch channel up"
 msgstr ""
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "Vis en liste over alle brukergrensesnitt og skjermvalg"
+
 msgid "Switch to TV mode"
 msgstr ""
 
@@ -10156,6 +10196,16 @@ msgstr "Tid"
 #
 msgid "Time scale"
 msgstr "Tids måler"
+
+#
+#, fuzzy
+msgid "Time zone"
+msgstr "Tidssone"
+
+#
+#, fuzzy
+msgid "Time zone area"
+msgstr "Tidssone"
 
 #
 msgid "Timer"
@@ -11409,6 +11459,18 @@ msgstr ""
 
 msgid "With popup"
 msgstr "Med varsel"
+
+msgid "With this option you can switch off the display during operation."
+msgstr ""
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr ""
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr ""
 
 msgid "Without popup"
 msgstr "Uten varsel"
@@ -12844,6 +12906,9 @@ msgstr "varieté show"
 #
 msgid "vertical"
 msgstr "vertikal"
+
+msgid "violet"
+msgstr ""
 
 #
 msgid "wait for ci..."

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-28 22:31+0100\n"
+"POT-Creation-Date: 2020-03-22 22:37+0100\n"
 "PO-Revision-Date: 2020-02-19 11:12+0100\n"
 "Last-Translator: mcfly82\n"
 "Language-Team: mcfly82 & wysless\n"
@@ -2330,10 +2330,6 @@ msgstr "Nem található megfelelő adathordozó. Kérem, töröljön néhány le
 msgid "Could not load medium! No disc inserted?"
 msgstr "Nem lehet betölteni a hordozót! Van bennt lemez?"
 
-#, fuzzy
-msgid "Could not locate epg file on fallback tuner"
-msgstr "Csatornák importálása a tartalék tunerből"
-
 msgid "Could not open Picture in Picture"
 msgstr "A Kép-a-Képben funkció nem indítható el"
 
@@ -3062,6 +3058,10 @@ msgstr "EPG:"
 msgid "ERROR - failed to scan (%s)!"
 msgstr "HIBA - nem sikerült a keresés (%s)!"
 
+#, python-format
+msgid "ERROR downloading file %s"
+msgstr ""
+
 msgid "East"
 msgstr "Kelet"
 
@@ -3344,6 +3344,10 @@ msgstr "Eritrea"
 msgid "Error"
 msgstr "Hiba"
 
+#, fuzzy, python-format
+msgid "Error %s"
+msgstr "Hiba"
+
 msgid "Error code"
 msgstr "Hibakód"
 
@@ -3372,10 +3376,25 @@ msgstr "Hiba az image kicsomagolása során %s"
 msgid "Error stop stream!"
 msgstr "A stream leállítása sikertelen!"
 
+msgid "Error when writing epg.dat on server"
+msgstr ""
+
+#, fuzzy
+msgid "Error while retreiving epg.dat from server"
+msgstr ""
+"Hiba történt a tartalék tuner időzítők letöltésekor\n"
+"%s"
+
 #, python-format
 msgid ""
 "Error while retreiving fallback timer information\n"
 "%s"
+msgstr ""
+"Hiba történt a tartalék tuner időzítők letöltésekor\n"
+"%s"
+
+#, fuzzy
+msgid "Error while retreiving location of epg.dat on server"
 msgstr ""
 "Hiba történt a tartalék tuner időzítők letöltésekor\n"
 "%s"
@@ -5389,6 +5408,9 @@ msgstr "Nincs elérhető leírás."
 msgid "No displayable files on this medium found!"
 msgstr "A hordozón nem található lejátszható fájl!"
 
+msgid "No epg.dat file found server"
+msgstr ""
+
 msgid "No event info found, recording indefinitely."
 msgstr "Nincs esemény infó, felvétel korlátlanul."
 
@@ -5430,9 +5452,6 @@ msgstr "Nincs csatorna"
 
 msgid "No services/providers selected"
 msgstr "Nincs szolgáltató kiválasztva"
-
-msgid "No settings files to download on fallback tuner"
-msgstr ""
 
 msgid "No standby"
 msgstr "Nincs kikapcsolás"
@@ -5674,6 +5693,15 @@ msgstr "Tuner beállító megnyitása "
 
 msgid "Open the movie list"
 msgstr "Filmlista megnyitása"
+
+msgid "Operating LED status in deep standby mode"
+msgstr ""
+
+msgid "Operating LED status in standby mode"
+msgstr ""
+
+msgid "Operating LED status while running."
+msgstr ""
 
 msgid "Opkg"
 msgstr "Opkg"
@@ -7447,6 +7475,10 @@ msgstr "Válassza ki a beállítandó műholdat. Ha egy műholdat beállított, 
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Válassza ki, hogy mely műholdra van állítva az antennája. Ha nem tudja, válassza az 'Automatikus'-t, ekkor a készüléke megpróbálja azonosítani."
 
+#, fuzzy
+msgid "Select the time zone within the area or region."
+msgstr "Válasszon függőleges felbontást:"
+
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Válassza ki azt a tunert, amely vezérli a forgatómotort."
 
@@ -7510,6 +7542,10 @@ msgstr "Válassza ki a szolgáltatóját, majd nyomja le az OK-t a keresés ind�
 
 msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
 msgstr "Válassza ki a régióját. Amennyiben nem elérhető, módosítsa az 'Ország' beállítását 'mind'-re, majd válasszon egyet a lehetőségek közül."
+
+#, fuzzy
+msgid "Select your time zone area or region."
+msgstr "Válasszon függőleges felbontást:"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Műholdak kiválasztása 1. (USALS)"
@@ -8606,6 +8642,16 @@ msgstr "Csatorna léptetés lefelé"
 msgid "Switch channel up"
 msgstr "Csatorna léptetés felfelé"
 
+msgid "Switch off the display during Standby Mode"
+msgstr ""
+
+msgid "Switch off the display during Suspend Mode"
+msgstr ""
+
+#, fuzzy
+msgid "Switch off the display during operation."
+msgstr "Az elérhető képernyő- és felhasználói felület bővítmények listázása."
+
 msgid "Switch to TV mode"
 msgstr "Váltás TV módra"
 
@@ -9188,6 +9234,14 @@ msgstr "Idő"
 
 msgid "Time scale"
 msgstr "Időskála"
+
+#, fuzzy
+msgid "Time zone"
+msgstr "Időzóna"
+
+#, fuzzy
+msgid "Time zone area"
+msgstr "Időzóna"
 
 msgid "Timer"
 msgstr "Időzítő"
@@ -10321,6 +10375,20 @@ msgstr "Hibákkal:"
 
 msgid "With popup"
 msgstr "Figyelmeztetéssel"
+
+#, fuzzy
+msgid "With this option you can switch off the display during operation."
+msgstr "Ezzel kikapcsolhatja a kijelzőt."
+
+msgid "With this option you can switch off the display in Deep Standby Mode."
+msgstr ""
+
+#, fuzzy
+msgid "With this option you can switch off the display in Standby Mode."
+msgstr "Ezzel kikapcsolhatja a kijelzőt."
+
+msgid "With this option you can switch the LED color or deactivate the LED."
+msgstr ""
 
 msgid "Without popup"
 msgstr "Figyelmeztetés nélkül"
@@ -11611,6 +11679,9 @@ msgstr "varieté"
 
 msgid "vertical"
 msgstr "vertikális"
+
+msgid "violet"
+msgstr ""
 
 msgid "wait for ci..."
 msgstr "várakozás modulra..."
