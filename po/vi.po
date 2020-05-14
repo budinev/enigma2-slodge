@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"POT-Creation-Date: 2020-05-10 20:18+0200\n"
 "PO-Revision-Date: 2019-11-19 08:58+0700\n"
 "Last-Translator: krong\n"
 "Language-Team: none\n"
@@ -1050,6 +1050,10 @@ msgstr "Bất kỳ hoạt động"
 msgid "Arabic"
 msgstr "Tiếng Ả Rập"
 
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr "Bạn có chắc để khởi động lại"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr "Bạn có chắc chắn để xóa tất cả các userbouquets đã xóa?"
 
@@ -1068,6 +1072,10 @@ msgstr "Bạn có chắc chắn loại bỏ tất cả các dịch vụ trên m�
 
 msgid "Are you sure to remove this entry?"
 msgstr "Bạn có chắc chắn để loại bỏ mục này?"
+
+#, fuzzy
+msgid "Are you sure to restore all deleted images"
+msgstr "Bạn có chắc chắn để loại bỏ tất cả các dịch vụ cáp?"
 
 msgid ""
 "Are you sure you want to activate this network configuration?\n"
@@ -1862,6 +1870,10 @@ msgstr "Cài đặt bộ sưu tập"
 msgid "Colombia"
 msgstr "Colombia"
 
+#, fuzzy
+msgid "Color"
+msgstr "Colombia"
+
 msgid "Color format"
 msgstr "Định dạng màu"
 
@@ -2641,6 +2653,10 @@ msgstr "Độ trễ tính bằng mili giây giữa các ký tự cuộn trên m�
 msgid "Delete"
 msgstr "Xóa bỏ"
 
+#, fuzzy
+msgid "Delete Image"
+msgstr "Xóa hình ảnh"
+
 msgid "Delete entry"
 msgstr "Xóa mục nhập"
 
@@ -2659,10 +2675,15 @@ msgstr "Xóa mục nhập danh sách phát"
 msgid "Delete saved playlist"
 msgstr "Xóa danh sách phát đã lưu"
 
-msgid "Delete the character to the left of text buffer cursor"
+msgid "Delete the all the text"
+msgstr ""
+
+#, fuzzy
+msgid "Delete the character to the left of text cursor"
 msgstr "Xóa ký tự bên trái con trỏ bộ đệm văn bản"
 
-msgid "Delete the character under the text buffer cursor"
+#, fuzzy
+msgid "Delete the character under the text cursor"
 msgstr "Xóa ký tự dưới con trỏ bộ đệm văn bản"
 
 msgid "Delete timer"
@@ -2670,6 +2691,10 @@ msgstr "Xóa bộ đếm thời gian"
 
 msgid "Deleted"
 msgstr "Đã xóa"
+
+#, fuzzy
+msgid "Deleted image"
+msgstr "Xóa hình ảnh"
 
 msgid "Deleted items"
 msgstr "Các mục đã xóa"
@@ -2951,7 +2976,7 @@ msgstr "Bạn có muốn thoát khỏi thuật sĩ quét quá mức?"
 msgid "Do you want to reboot your receiver?"
 msgstr "Bạn có muốn khởi động lại máy thu của bạn?"
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr "Bạn muốn xóa tất cả các tệp nhật ký sự cố"
 
 msgid "Do you want to remove the package:\n"
@@ -5120,29 +5145,37 @@ msgstr "Di chuyển hình ảnh trong hình ảnh"
 msgid "Move east"
 msgstr "Di chuyển về phía đông"
 
-msgid "Move the text buffer cursor left"
-msgstr "Di chuyển con trỏ bộ đệm văn bản sang trái"
-
-msgid "Move the text buffer cursor right"
-msgstr "Di chuyển con trỏ bộ đệm văn bản sang phải"
-
-msgid "Move the text buffer cursor to the first character"
-msgstr "Di chuyển con trỏ bộ đệm văn bản đến ký tự đầu tiên"
-
-msgid "Move the text buffer cursor to the last character"
-msgstr "Di chuyển con trỏ bộ đệm văn bản đến ký tự cuối cùng"
-
-msgid "Move the virtual keyboard cursor down"
+#, fuzzy
+msgid "Move the keyboard cursor down"
 msgstr "Di chuyển con trỏ bàn phím ảo xuống"
 
-msgid "Move the virtual keyboard cursor left"
+#, fuzzy
+msgid "Move the keyboard cursor left"
 msgstr "Di chuyển con trỏ bàn phím ảo sang trái"
 
-msgid "Move the virtual keyboard cursor right"
+#, fuzzy
+msgid "Move the keyboard cursor right"
 msgstr "Di chuyển con trỏ bàn phím ảo sang phải"
 
-msgid "Move the virtual keyboard cursor up"
+#, fuzzy
+msgid "Move the keyboard cursor up"
 msgstr "Di chuyển con trỏ bàn phím ảo lên"
+
+#, fuzzy
+msgid "Move the text cursor left"
+msgstr "Di chuyển con trỏ bộ đệm văn bản sang trái"
+
+#, fuzzy
+msgid "Move the text cursor right"
+msgstr "Di chuyển con trỏ bộ đệm văn bản sang phải"
+
+#, fuzzy
+msgid "Move the text cursor to the first character"
+msgstr "Di chuyển con trỏ bộ đệm văn bản đến ký tự đầu tiên"
+
+#, fuzzy
+msgid "Move the text cursor to the last character"
+msgstr "Di chuyển con trỏ bộ đệm văn bản đến ký tự cuối cùng"
 
 msgid "Move to position X"
 msgstr "Di chuyển đến vị trí X"
@@ -6869,6 +6902,10 @@ msgstr "Khôi phục bản sao lưu"
 msgid "Restore defaults"
 msgstr "Đặt mặc định"
 
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "Khôi phục lại những người dùng đã xóa"
+
 msgid "Restore deleted user bouquets"
 msgstr "Khôi phục lại những người dùng đã xóa"
 
@@ -6903,9 +6940,6 @@ msgstr "Tiếp tục phát lại"
 
 msgid "Retrieving image list - Please wait..."
 msgstr "Lấy danh sách hình ảnh - Vui lòng đợi ..."
-
-msgid "Retrieving image slots - Please wait..."
-msgstr "Lấy các khe hình ảnh - Vui lòng đợi .."
 
 msgid "Return to movie list"
 msgstr "Quay trở lại danh sách phim"
@@ -7461,8 +7495,13 @@ msgstr "Chọn tần số Dải người dùng sẽ được chỉ định cho b
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr "Chọn Dải người dùng sẽ được chỉ định cho bộ chỉnh này. Đây là một chỉ mục trong bảng tần số mà công tắc SCR hoặc SCR LNB sử dụng để truyền bộ phát đáp được yêu cầu đến bộ chỉnh tần số."
 
-msgid "Select the character or action under the virtual keyboard cursor"
+#, fuzzy
+msgid "Select the character or action under the keyboard cursor"
 msgstr "Chọn nhân vật hoặc hành động dưới con trỏ bàn phím ảo"
+
+#, fuzzy
+msgid "Select the locale from a menu"
+msgstr "Chọn ngôn ngữ bàn phím ảo từ menu"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr "Chọn nhà sản xuất thiết bị SCR của bạn. Nếu nhà sản xuất không được liệt kê, hãy đặt 'SCR' thành 'người dùng xác định' và nhập thủ công các thông số thiết bị theo bảng thông số kỹ thuật của nó."
@@ -7495,6 +7534,14 @@ msgid "Select the satellite your dish receives from. If you are unsure select 'a
 msgstr "Chọn vệ tinh mà món ăn của bạn nhận được từ. Nếu bạn không chắc chắn, hãy chọn 'tự động' và người nhận sẽ cố gắng xác định điều này cho bạn."
 
 #, fuzzy
+msgid "Select the shifted character set"
+msgstr "Chọn bộ ký tự dịch chuyển bàn phím ảo"
+
+#, fuzzy
+msgid "Select the shifted character set for the next character only"
+msgstr "Chọn bộ ký tự dịch chuyển bàn phím ảo cho chỉ ký tự tiếp theo"
+
+#, fuzzy
 msgid "Select the time zone within the area or region."
 msgstr "Chọn độ phân giải ngang:"
 
@@ -7512,15 +7559,6 @@ msgstr "Chọn loại LNB / thiết bị đang được sử dụng (thông thư
 
 msgid "Select the type of Single Cable Reception device you are using."
 msgstr "Chọn loại thiết bị Tiếp nhận cáp đơn bạn đang sử dụng."
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr "Chọn ngôn ngữ bàn phím ảo từ menu"
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr "Chọn bộ ký tự dịch chuyển bàn phím ảo"
-
-msgid "Select the virtual keyboard shifted character set for the next character only"
-msgstr "Chọn bộ ký tự dịch chuyển bàn phím ảo cho chỉ ký tự tiếp theo"
 
 msgid "Select update source"
 msgstr "Chọn nguồn nâng cấp"
@@ -8746,6 +8784,9 @@ msgstr "T2MI PLP ID"
 msgid "T2MI RAW Mode"
 msgstr "Chế độ RAW T2MI"
 
+msgid "TEXT"
+msgstr ""
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr "THÔNG TIN TRUYỀN THÔNG (QUỐC OAI  BMT)"
@@ -9376,6 +9417,10 @@ msgstr "Chuyển đổi hiển thị / ẩn"
 
 msgid "Toggle the tv and the radio player..."
 msgstr "Chuyển đổi tv và trình phát radio ..."
+
+#, fuzzy
+msgid "Toggle videomode"
+msgstr "Chọn chế độ video"
 
 msgid "Togo"
 msgstr "Togo"
@@ -10593,6 +10638,9 @@ msgstr "Bạn phải đợi%s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr "Bạn phải chuyển sang dịch vụ%s (%s - '%s')!\n"
+
+msgid "You seem to be in timeshift!"
+msgstr ""
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Bộ sưu tập của bạn vượt quá kích thước của một phương tiện một lớp, bạn sẽ cần một đĩa DVD hai lớp trống!"

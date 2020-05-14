@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OPENPLi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"POT-Creation-Date: 2020-05-10 20:18+0200\n"
 "PO-Revision-Date: 2015-12-18 21:05+0200\n"
 "Last-Translator: Yetkin AYDIN <yetkina@gmail.com>\n"
 "Language-Team: http://www.hurforum.com <yetkina@gmail.com>\n"
@@ -1049,6 +1049,10 @@ msgstr "Etkinlik"
 msgid "Arabic"
 msgstr "Arapça"
 
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr "Bu giriş silinecek. Emin misin?"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr "Bütün Buketler silinecek. Emin misin?"
 
@@ -1068,6 +1072,10 @@ msgstr "Tüm karasal servisler silinecek. Emin misin?"
 
 msgid "Are you sure to remove this entry?"
 msgstr "Bu giriş silinecek. Emin misin?"
+
+#, fuzzy
+msgid "Are you sure to restore all deleted images"
+msgstr "Bütün kablo servisleri silinecek. Emin misin?"
 
 msgid ""
 "Are you sure you want to activate this network configuration?\n"
@@ -1865,6 +1873,10 @@ msgstr "Koleksiyon ayarları"
 
 #, fuzzy
 msgid "Colombia"
+msgstr "Renk formatı"
+
+#, fuzzy
+msgid "Color"
 msgstr "Renk formatı"
 
 msgid "Color format"
@@ -2667,6 +2679,10 @@ msgstr "Ekranda yazı kaydırken, geçiş/bekleme zamanını milisaniye..."
 msgid "Delete"
 msgstr "Sil"
 
+#, fuzzy
+msgid "Delete Image"
+msgstr "Zamanlayıcıyı sil"
+
 msgid "Delete entry"
 msgstr "Seçimi sil"
 
@@ -2686,10 +2702,13 @@ msgstr "Çalma listesi girdisini silin"
 msgid "Delete saved playlist"
 msgstr "Kayıtlı çalma listesini silin"
 
-msgid "Delete the character to the left of text buffer cursor"
+msgid "Delete the all the text"
 msgstr ""
 
-msgid "Delete the character under the text buffer cursor"
+msgid "Delete the character to the left of text cursor"
+msgstr ""
+
+msgid "Delete the character under the text cursor"
 msgstr ""
 
 msgid "Delete timer"
@@ -2697,6 +2716,10 @@ msgstr "Zamanlayıcıyı sil"
 
 msgid "Deleted"
 msgstr "Silinmiş"
+
+#, fuzzy
+msgid "Deleted image"
+msgstr "Zamanlayıcıyı sil"
 
 msgid "Deleted items"
 msgstr "Silinmiş öğeler"
@@ -2988,7 +3011,7 @@ msgstr ""
 msgid "Do you want to reboot your receiver?"
 msgstr "Yeniden başlatmak istiyor musunuz?"
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr ""
 
 msgid "Do you want to remove the package:\n"
@@ -5186,28 +5209,30 @@ msgstr "Resim içinde resim (RiR)'i taşı"
 msgid "Move east"
 msgstr "Doğuya taşı"
 
-msgid "Move the text buffer cursor left"
+msgid "Move the keyboard cursor down"
 msgstr ""
 
-msgid "Move the text buffer cursor right"
+msgid "Move the keyboard cursor left"
 msgstr ""
 
-msgid "Move the text buffer cursor to the first character"
+msgid "Move the keyboard cursor right"
 msgstr ""
 
-msgid "Move the text buffer cursor to the last character"
+msgid "Move the keyboard cursor up"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor down"
+#, fuzzy
+msgid "Move the text cursor left"
+msgstr "Sonraki açıyı seç"
+
+#, fuzzy
+msgid "Move the text cursor right"
+msgstr "Bir alta taşı"
+
+msgid "Move the text cursor to the first character"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor left"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor right"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor up"
+msgid "Move the text cursor to the last character"
 msgstr ""
 
 msgid "Move to position X"
@@ -6975,6 +7000,10 @@ msgstr "Yedekten geri yükle"
 msgid "Restore defaults"
 msgstr "Varsayılan olarak ayarla"
 
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "Silinen buketleri geri yükle"
+
 msgid "Restore deleted user bouquets"
 msgstr "Silinen buketleri geri yükle"
 
@@ -7010,10 +7039,6 @@ msgstr "Oynatmaya devam ediliyor"
 #, fuzzy
 msgid "Retrieving image list - Please wait..."
 msgstr "Eklenti bilgisi getiriliyor. Lütfen bekleyin..."
-
-#, fuzzy
-msgid "Retrieving image slots - Please wait..."
-msgstr "Güncellemeler kontrol ediliyor. Lütfen bekleyin..."
 
 msgid "Return to movie list"
 msgstr "Film listesine geri dön"
@@ -7580,8 +7605,12 @@ msgstr ""
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the character or action under the virtual keyboard cursor"
+msgid "Select the character or action under the keyboard cursor"
 msgstr ""
+
+#, fuzzy
+msgid "Select the locale from a menu"
+msgstr "Film yolunu seçin"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr ""
@@ -7614,6 +7643,13 @@ msgid "Select the satellite your dish receives from. If you are unsure select 'a
 msgstr ""
 
 #, fuzzy
+msgid "Select the shifted character set"
+msgstr "Film yolunu seçin"
+
+msgid "Select the shifted character set for the next character only"
+msgstr ""
+
+#, fuzzy
 msgid "Select the time zone within the area or region."
 msgstr "Seçileni sıralama yöntemi:"
 
@@ -7630,15 +7666,6 @@ msgid "Select the type of LNB/device being used (normally 'Universal'). If your 
 msgstr ""
 
 msgid "Select the type of Single Cable Reception device you are using."
-msgstr ""
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set for the next character only"
 msgstr ""
 
 msgid "Select update source"
@@ -8891,6 +8918,9 @@ msgstr "PLP ID"
 msgid "T2MI RAW Mode"
 msgstr ""
 
+msgid "TEXT"
+msgstr ""
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr ""
@@ -9525,6 +9555,10 @@ msgstr ""
 
 msgid "Toggle the tv and the radio player..."
 msgstr ""
+
+#, fuzzy
+msgid "Toggle videomode"
+msgstr "Video modu seç"
 
 msgid "Togo"
 msgstr ""
@@ -10756,6 +10790,9 @@ msgstr "Bekleme süresi : %s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr " %s (%s - '%s') servisine geçmen gerekir!\n"
+
+msgid "You seem to be in timeshift!"
+msgstr ""
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Koleksiyonunuz tek katman DVD'ye sığmıyor, çift katman DVD kullanmanız gerekiyor!"

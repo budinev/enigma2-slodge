@@ -2,6 +2,7 @@ SUBDIRS = countries display fonts extensions keymaps skin_default skin_fallback_
 
 dist_pkgdata_DATA = \
 	black.mvi \
+	radio.mvi \
 	encoding.conf \
 	freesat.t1 \
 	freesat.t2 \
@@ -13,7 +14,6 @@ dist_pkgdata_DATA = \
 	otv_011a0000_0002_07d4.dict \
 	otv_06180000_1000_0011.dict \
 	otv_06400000_00a9_0003.dict \
-	radio.mvi \
 	rcpositions.xml \
 	setup.xml \
 	skin_subtitles.xml \

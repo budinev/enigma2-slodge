@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-25 21:00+0100\n"
-"PO-Revision-Date: 2020-03-23 00:18+0200\n"
+"POT-Creation-Date: 2020-05-10 20:19+0200\n"
+"PO-Revision-Date: 2020-05-10 20:17+0200\n"
 "Last-Translator: Audronis Grincevicius <adga45@gmail.com>\n"
 "Language-Team: Adga (C) <adga45@gmail.com>\n"
 "Language: lt_LT\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 
 msgid ""
 "\n"
@@ -1057,6 +1057,10 @@ msgstr "Bet kokia veikla"
 msgid "Arabic"
 msgstr "Arabų"
 
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr "Ar norite paleisti iš naujo į"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr "Ar tikrai norite išvalyti visus ištrintus vartotojo paketus?"
 
@@ -1075,6 +1079,10 @@ msgstr "Ar tikrai norite pašalinti visus antžeminius kanalus?"
 
 msgid "Are you sure to remove this entry?"
 msgstr "Ar tikrai norite pašalinti šį įrašą?"
+
+#, fuzzy
+msgid "Are you sure to restore all deleted images"
+msgstr "Ar tikrai norite pašalinti visus kabelinius kanalus?"
 
 msgid ""
 "Are you sure you want to activate this network configuration?\n"
@@ -1871,6 +1879,9 @@ msgstr "Kolekcijos nustatymai"
 msgid "Colombia"
 msgstr "Kolumbija"
 
+msgid "Color"
+msgstr "Spalva"
+
 msgid "Color format"
 msgstr "Spalvų formatas"
 
@@ -2648,6 +2659,10 @@ msgstr "Delsa (msek) tarp simbolių slinkimo."
 msgid "Delete"
 msgstr "Ištrinti"
 
+#, fuzzy
+msgid "Delete Image"
+msgstr "Ištrinti atvaizdą"
+
 msgid "Delete entry"
 msgstr "Ištrinti įrašą"
 
@@ -2666,17 +2681,24 @@ msgstr "Ištrinti įrašą iš grojaraščio"
 msgid "Delete saved playlist"
 msgstr "Ištrinti išsaugotą grojaraštį"
 
-msgid "Delete the character to the left of text buffer cursor"
-msgstr "Ištrinti teksto buferio žymeklio kairėje esantį ženklą"
+msgid "Delete the all the text"
+msgstr "Trinti visą tekstą"
 
-msgid "Delete the character under the text buffer cursor"
-msgstr "Ištrinti simbolį po teksto buferio žymekliu"
+msgid "Delete the character to the left of text cursor"
+msgstr "Trinti simbolį teksto žymeklio kairėje"
+
+msgid "Delete the character under the text cursor"
+msgstr "Trinti po teksto žymekliu esantį simbolį"
 
 msgid "Delete timer"
 msgstr "Ištrinti laikmatį"
 
 msgid "Deleted"
 msgstr "Ištrinta"
+
+#, fuzzy
+msgid "Deleted image"
+msgstr "Ištrinti atvaizdą"
 
 msgid "Deleted items"
 msgstr "Ištrinti elementai"
@@ -2959,7 +2981,7 @@ msgstr "Ar norite išeiti iš rodomos vaizdo kraštinės vedlio?"
 msgid "Do you want to reboot your receiver?"
 msgstr "Ar norite iš naujo paleisti savo imtuvą?"
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr "Ar norite pašalinti visus \"lūžimo\" žurnalų failus"
 
 msgid "Do you want to remove the package:\n"
@@ -5121,29 +5143,29 @@ msgstr "Perkelti vaizdą vaizde"
 msgid "Move east"
 msgstr "Sukti į rytus"
 
-msgid "Move the text buffer cursor left"
-msgstr "Perkelti teksto buferio žymeklį kairėn"
+msgid "Move the keyboard cursor down"
+msgstr "Perkelkite klaviatūros žymeklį žemyn"
 
-msgid "Move the text buffer cursor right"
-msgstr "Perkelti teksto buferio žymeklį dešinėn"
+msgid "Move the keyboard cursor left"
+msgstr "Perkelkite klaviatūros žymeklį į kairę"
 
-msgid "Move the text buffer cursor to the first character"
-msgstr "Perkelti teksto buferio žymeklį į pirmąjį simbolį"
+msgid "Move the keyboard cursor right"
+msgstr "Perkelkite klaviatūros žymeklį į dešinę"
 
-msgid "Move the text buffer cursor to the last character"
-msgstr "Perkelti teksto buferio žymeklį į paskutinį simbolį"
+msgid "Move the keyboard cursor up"
+msgstr "Perkelkite klaviatūros žymeklį aukštyn"
 
-msgid "Move the virtual keyboard cursor down"
-msgstr "Perkelti virtualiosios klaviatūros žymeklį žemyn"
+msgid "Move the text cursor left"
+msgstr "Perkelkite teksto žymeklį į kairę"
 
-msgid "Move the virtual keyboard cursor left"
-msgstr "Perkelti virtualiosios klaviatūros žymeklį kairėn"
+msgid "Move the text cursor right"
+msgstr "Perkelkite teksto žymeklį į dešinę"
 
-msgid "Move the virtual keyboard cursor right"
-msgstr "Perkelti virtualiosios klaviatūros žymeklį dešinėn"
+msgid "Move the text cursor to the first character"
+msgstr "Perkelkite teksto žymeklį į pirmąjį ženklą"
 
-msgid "Move the virtual keyboard cursor up"
-msgstr "Perkelti virtualiosios klaviatūros žymeklį aukštyn"
+msgid "Move the text cursor to the last character"
+msgstr "Perkelkite teksto žymeklį į paskutinį simbolį"
 
 msgid "Move to position X"
 msgstr "Sukti į poziciją X"
@@ -6863,6 +6885,10 @@ msgstr "Atkurti atsargines kopijas"
 msgid "Restore defaults"
 msgstr "Atkurti numatytąsias reikšmes"
 
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "Atkurti ištrintus vartotojo paketus"
+
 msgid "Restore deleted user bouquets"
 msgstr "Atkurti ištrintus vartotojo paketus"
 
@@ -6897,9 +6923,6 @@ msgstr "Tęsti žiūrėjimą"
 
 msgid "Retrieving image list - Please wait..."
 msgstr "Gaunamas atvaizdų sąrašas - prašome laukti..."
-
-msgid "Retrieving image slots - Please wait..."
-msgstr "Gaunami atvaizdo siužetai - prašome laukti..."
 
 msgid "Return to movie list"
 msgstr "Grįžti į filmų sąrašą"
@@ -7457,8 +7480,11 @@ msgstr "Pasirinkite vartotojo juostos dažnį, kuris bus priskirtas šiam imtuvu
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr "Pasirinkite vartotojo diapazoną, kuris bus priskirtas šiam imtuvui. Tai yra dažnių lentelėje esantis indeksas, kurį SCR jungiklis arba SCR LNB naudoja prašomam atsakikliui perduoti į imtuvą."
 
-msgid "Select the character or action under the virtual keyboard cursor"
-msgstr "Pasirinkite simbolį arba veiksmą po virtualiu klaviatūros kursoriumi"
+msgid "Select the character or action under the keyboard cursor"
+msgstr "Pasirinkite simbolį arba veiksmą po klaviatūros žymekliu"
+
+msgid "Select the locale from a menu"
+msgstr "Pasirinkite lokalę iš meniu"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr "Pasirinkite SCR įrenginio gamintoją. Jei gamintojas nėra įtrauktas į sąrašą, 'SCR' pasirinkite į 'vartotojo nustatytas' ir rankiniu būdu įveskite prietaiso parametrus pagal specifikacijų lapą."
@@ -7490,6 +7516,12 @@ msgstr "Pasirinkite palydovą, kurį norite konfigūruoti. Kai šis palydovas bu
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Pasirinkite palydovą, kurį jūsų antena gauna. Jei nesate tikri, pasirinkite 'automatinis' ir imtuvas bandys tai nustatyti pats."
 
+msgid "Select the shifted character set"
+msgstr "Pasirinkite perkeltą simbolių rinkinį"
+
+msgid "Select the shifted character set for the next character only"
+msgstr "Pasirinkite paslinktų simbolių rinkinį tik kitam simboliui"
+
 msgid "Select the time zone within the area or region."
 msgstr "Pasirinkite laiko juostą, toje teritorijoje arba regione."
 
@@ -7507,15 +7539,6 @@ msgstr "Pasirinkite naudojamo LNB/įrenginio tipą (paprastai 'Universal'). Jei 
 
 msgid "Select the type of Single Cable Reception device you are using."
 msgstr "Pasirinkite vieno kabelio priėmimo įrenginio tipą, kurį jūs naudojate."
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr "Pasirinkite virtualiosios klaviatūros vietą iš meniu"
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr "Pasirinkite simbolių rinkinį su virtualia klaviatūra"
-
-msgid "Select the virtual keyboard shifted character set for the next character only"
-msgstr "Pasirinkite tik pakeistą virtualios klaviatūros simbolių rinkinį"
 
 msgid "Select update source"
 msgstr "Pasirinkite atnaujinimo šaltinį"
@@ -8740,11 +8763,14 @@ msgstr "T2MI PLP ID"
 msgid "T2MI RAW Mode"
 msgstr "T2MI RAW režimas"
 
+msgid "TEXT"
+msgstr "TEKSTAS"
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr ""
 "P&C Adga, adga45@gmail.com\n"
-"Pasvalys, 2020-03-23 versija"
+"Pasvalys, 2020-05-07versija"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "TS failas per didelis 1 lygio ISO9660!"
@@ -9369,6 +9395,9 @@ msgstr "Perjungti rodyti/slėpti"
 
 msgid "Toggle the tv and the radio player..."
 msgstr "Perjungti tv ir radijo grotuvus..."
+
+msgid "Toggle videomode"
+msgstr "Perjungti vaizdo režimą"
 
 msgid "Togo"
 msgstr "Togas"
@@ -10588,6 +10617,9 @@ msgstr "Jūs turite laukti %s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr "Jūs turite perjungti į %s (%s - '%s') kanalą!\n"
+
+msgid "You seem to be in timeshift!"
+msgstr "Panašu, kad naudojamas laiko poslinkis!"
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Jūsų kolekcija viršyja vieno sluoksnio DVD disko dydį, jums reikės tuščio dvigubo sluoksnio DVD!"

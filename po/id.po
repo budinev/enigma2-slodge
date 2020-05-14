@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"POT-Creation-Date: 2020-05-10 20:18+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Budiarno Pedode\n"
 "Language-Team: \n"
@@ -1064,6 +1064,10 @@ msgstr "Aktifitas apapun"
 msgid "Arabic"
 msgstr "Arab"
 
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr "Anda yakin ingin menghapus entri ini?"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr "Anda yakin ingin membersihkan semua buket pengguna yg dihapus?"
 
@@ -1083,6 +1087,10 @@ msgstr "Anda yakin ingin menghapus semua layanan teresterial?"
 
 msgid "Are you sure to remove this entry?"
 msgstr "Anda yakin ingin menghapus entri ini?"
+
+#, fuzzy
+msgid "Are you sure to restore all deleted images"
+msgstr "Anda yakin ingin menghapus semua layanan kabel?"
 
 msgid ""
 "Are you sure you want to activate this network configuration?\n"
@@ -1886,6 +1894,10 @@ msgstr "Penyetelan koleksi"
 msgid "Colombia"
 msgstr "Kolombia"
 
+#, fuzzy
+msgid "Color"
+msgstr "Kolombia"
+
 msgid "Color format"
 msgstr "Format warna"
 
@@ -2685,6 +2697,10 @@ msgstr "Tunda dalam mili detik antara menggulung karakter pada display"
 msgid "Delete"
 msgstr "Hapus"
 
+#, fuzzy
+msgid "Delete Image"
+msgstr "Hapus pewaktu"
+
 msgid "Delete entry"
 msgstr "Hapus entri"
 
@@ -2704,10 +2720,15 @@ msgstr "Hapus entri daftar putar"
 msgid "Delete saved playlist"
 msgstr "Hapus daftar putar tersimpan"
 
-msgid "Delete the character to the left of text buffer cursor"
+msgid "Delete the all the text"
+msgstr ""
+
+#, fuzzy
+msgid "Delete the character to the left of text cursor"
 msgstr "Hapus karakter di kiri kursor tulisan"
 
-msgid "Delete the character under the text buffer cursor"
+#, fuzzy
+msgid "Delete the character under the text cursor"
 msgstr "Hapus karakter di bawah kursor tulisan"
 
 msgid "Delete timer"
@@ -2715,6 +2736,10 @@ msgstr "Hapus pewaktu"
 
 msgid "Deleted"
 msgstr "Dihapus"
+
+#, fuzzy
+msgid "Deleted image"
+msgstr "Hapus pewaktu"
 
 msgid "Deleted items"
 msgstr "Item dihapus"
@@ -3005,7 +3030,7 @@ msgstr "Anda ingin keluar dari wizar overscan?"
 msgid "Do you want to reboot your receiver?"
 msgstr "Anda ingin mereboot Rx anda?"
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr "Anda ingin menghapus semua berkas log crash"
 
 msgid "Do you want to remove the package:\n"
@@ -5240,29 +5265,37 @@ msgstr "Pindahkan Picture in Picture"
 msgid "Move east"
 msgstr "Bergerak ke timur"
 
-msgid "Move the text buffer cursor left"
-msgstr "Pindahkan kursos tulisan ke kiri"
-
-msgid "Move the text buffer cursor right"
-msgstr "Pindahkan kursor tulisan ke kanan"
-
-msgid "Move the text buffer cursor to the first character"
-msgstr "Pindahkan kursor tulisan ke karakter awal"
-
-msgid "Move the text buffer cursor to the last character"
-msgstr "Pindahkan kursor tulisan ke karakter akhir"
-
-msgid "Move the virtual keyboard cursor down"
+#, fuzzy
+msgid "Move the keyboard cursor down"
 msgstr "Pindahkan kursor papankunci virtual ke bawah"
 
-msgid "Move the virtual keyboard cursor left"
+#, fuzzy
+msgid "Move the keyboard cursor left"
 msgstr "Pindahkan kursor papankunci virtual ke kiri"
 
-msgid "Move the virtual keyboard cursor right"
+#, fuzzy
+msgid "Move the keyboard cursor right"
 msgstr "Pindahkan kursor papankunci virtual ke kanan"
 
-msgid "Move the virtual keyboard cursor up"
+#, fuzzy
+msgid "Move the keyboard cursor up"
 msgstr "Pindahkan kursor papankunci virtual ke atas"
+
+#, fuzzy
+msgid "Move the text cursor left"
+msgstr "Pindahkan kursos tulisan ke kiri"
+
+#, fuzzy
+msgid "Move the text cursor right"
+msgstr "Pindahkan kursor tulisan ke kanan"
+
+#, fuzzy
+msgid "Move the text cursor to the first character"
+msgstr "Pindahkan kursor tulisan ke karakter awal"
+
+#, fuzzy
+msgid "Move the text cursor to the last character"
+msgstr "Pindahkan kursor tulisan ke karakter akhir"
 
 msgid "Move to position X"
 msgstr "Bergerak ke posisi X"
@@ -7027,6 +7060,10 @@ msgstr "Pulihkan cadangan"
 msgid "Restore defaults"
 msgstr "Atur bawaan"
 
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "Kembalikan buketpengguna yg dihapus"
+
 msgid "Restore deleted user bouquets"
 msgstr "Kembalikan buketpengguna yg dihapus"
 
@@ -7062,10 +7099,6 @@ msgstr "Kembali ke pemutaran"
 #, fuzzy
 msgid "Retrieving image list - Please wait..."
 msgstr "Mendapatkan info plugin. Silakan tunggu..."
-
-#, fuzzy
-msgid "Retrieving image slots - Please wait..."
-msgstr "Mendapatkan slot image - Mohon tunggu..."
 
 msgid "Return to movie list"
 msgstr "Kembali ke daftar film"
@@ -7634,8 +7667,13 @@ msgstr "Pilih frekuensi Pita Pengguna untuk ditetapkan pada penala ini. Ini adal
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr "Pilih Pita Pengguna untuk ditetapkan pada tuner ini. Ini adalah indeks pada tabel frekuensi yg saklar SCR atau LNB SCR gunakan untuk meneruskan transponder diminta ke penala."
 
-msgid "Select the character or action under the virtual keyboard cursor"
+#, fuzzy
+msgid "Select the character or action under the keyboard cursor"
 msgstr "Pilih karakter atau tindakan dibawah kursor papankunci virtual"
+
+#, fuzzy
+msgid "Select the locale from a menu"
+msgstr "Pilih lokal papankunci virtual dari menu"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr "Pilih pabrikan peralatan SCR anda. Jika pabrikan tidak tertera, set 'SCR' ke 'ditentukan pengguna' dan masuk ke parameter peralatan secara manual sesuai lembar speknya."
@@ -7668,6 +7706,14 @@ msgid "Select the satellite your dish receives from. If you are unsure select 'a
 msgstr "Pilih satelit yg diterima parabola anda. Jika anda tidak yakin, pilih 'otomatis' dan Rx akan mencoba menentukannya untuk anda."
 
 #, fuzzy
+msgid "Select the shifted character set"
+msgstr "Pilih set karakter geser pada papankunci virtual"
+
+#, fuzzy
+msgid "Select the shifted character set for the next character only"
+msgstr "Pilih set karakter geser pada papankunci virtual"
+
+#, fuzzy
 msgid "Select the time zone within the area or region."
 msgstr "Pilih resolusi horizontal:"
 
@@ -7685,16 +7731,6 @@ msgstr "Pilih jenis LNB/peralatan yg digunakan (biasanya 'Universal'). Jika jeni
 
 msgid "Select the type of Single Cable Reception device you are using."
 msgstr "Pilih jenis peralatan SCR yang anda gunakan."
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr "Pilih lokal papankunci virtual dari menu"
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr "Pilih set karakter geser pada papankunci virtual"
-
-#, fuzzy
-msgid "Select the virtual keyboard shifted character set for the next character only"
-msgstr "Pilih set karakter geser pada papankunci virtual"
 
 msgid "Select update source"
 msgstr "Pilih sumber update"
@@ -8947,6 +8983,9 @@ msgstr "ID PLP"
 msgid "T2MI RAW Mode"
 msgstr "Mode RAW T2MI"
 
+msgid "TEXT"
+msgstr ""
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr ""
@@ -9586,6 +9625,10 @@ msgstr "Alihkan tampilkan/sembunyikan"
 
 msgid "Toggle the tv and the radio player..."
 msgstr "Alihkan pemutar tv dan radio..."
+
+#, fuzzy
+msgid "Toggle videomode"
+msgstr "Pilih mode video"
 
 msgid "Togo"
 msgstr ""
@@ -10837,6 +10880,9 @@ msgstr "Anda harus menunggu %s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr "Anda harus beralih ke layanan %s (%s - '%s')!\n"
+
+msgid "You seem to be in timeshift!"
+msgstr ""
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Koleksi anda melebihi ukuran media satu lapis, anda memerlukan sebuah DVD dua lapis!"

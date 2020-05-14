@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 3.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"POT-Creation-Date: 2020-05-10 20:18+0200\n"
 "PO-Revision-Date: 2018-11-12 20:51+0200\n"
 "Last-Translator: Мартин Петков <marto74bg@yahoo.co.uk>\n"
 "Language-Team: Bulgarian\n"
@@ -1051,6 +1051,10 @@ msgstr "Което и да е действие"
 msgid "Arabic"
 msgstr "Арабски"
 
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr "Наистина ли искате да изтриете избраното?"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr "Наистина ли искате да премахнете всички изтрити букети?"
 
@@ -1070,6 +1074,10 @@ msgstr "Наистина ли искате да изтриете всички н
 
 msgid "Are you sure to remove this entry?"
 msgstr "Наистина ли искате да изтриете избраното?"
+
+#, fuzzy
+msgid "Are you sure to restore all deleted images"
+msgstr "Наистина ли искате да изтриете всички кабелни канали?"
 
 msgid ""
 "Are you sure you want to activate this network configuration?\n"
@@ -1862,6 +1870,10 @@ msgstr "Настройки на Колекция"
 msgid "Colombia"
 msgstr "Колумбия"
 
+#, fuzzy
+msgid "Color"
+msgstr "Колумбия"
+
 msgid "Color format"
 msgstr "Цветови формат"
 
@@ -2651,6 +2663,10 @@ msgstr "Закъснение в милисекунди между превърт
 msgid "Delete"
 msgstr "Изтриване"
 
+#, fuzzy
+msgid "Delete Image"
+msgstr "Изтриване на имидж"
+
 msgid "Delete entry"
 msgstr "Изтриване запис"
 
@@ -2669,10 +2685,13 @@ msgstr "Изтриване на записа в плейлиста"
 msgid "Delete saved playlist"
 msgstr "Изтриване на записания плейлист"
 
-msgid "Delete the character to the left of text buffer cursor"
+msgid "Delete the all the text"
 msgstr ""
 
-msgid "Delete the character under the text buffer cursor"
+msgid "Delete the character to the left of text cursor"
+msgstr ""
+
+msgid "Delete the character under the text cursor"
 msgstr ""
 
 msgid "Delete timer"
@@ -2680,6 +2699,10 @@ msgstr "Изтриване на таймер"
 
 msgid "Deleted"
 msgstr "Изтрит"
+
+#, fuzzy
+msgid "Deleted image"
+msgstr "Изтриване на имидж"
 
 msgid "Deleted items"
 msgstr "Изтрити елементи"
@@ -2965,7 +2988,7 @@ msgstr "Искате ли да излезете от помощника за с�
 msgid "Do you want to reboot your receiver?"
 msgstr "Искате ли да рестартирам вашия приемник?"
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr "Искате ли да изтриете всички краш файлове?"
 
 msgid "Do you want to remove the package:\n"
@@ -5163,28 +5186,30 @@ msgstr "Местене PiP"
 msgid "Move east"
 msgstr "Завърти на изток"
 
-msgid "Move the text buffer cursor left"
+msgid "Move the keyboard cursor down"
 msgstr ""
 
-msgid "Move the text buffer cursor right"
+msgid "Move the keyboard cursor left"
 msgstr ""
 
-msgid "Move the text buffer cursor to the first character"
+msgid "Move the keyboard cursor right"
 msgstr ""
 
-msgid "Move the text buffer cursor to the last character"
+msgid "Move the keyboard cursor up"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor down"
+#, fuzzy
+msgid "Move the text cursor left"
+msgstr "превкл. на следващ ъгъл"
+
+#, fuzzy
+msgid "Move the text cursor right"
+msgstr "премести надолу към следващия запис"
+
+msgid "Move the text cursor to the first character"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor left"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor right"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor up"
+msgid "Move the text cursor to the last character"
 msgstr ""
 
 msgid "Move to position X"
@@ -6928,6 +6953,10 @@ msgstr "Възстановяване backups"
 msgid "Restore defaults"
 msgstr "Задаване по подразбиране"
 
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "Възстанови изтритите букети"
+
 msgid "Restore deleted user bouquets"
 msgstr "Възстанови изтритите букети"
 
@@ -6962,9 +6991,6 @@ msgstr "Възобновяване на възпроизвеждането"
 
 msgid "Retrieving image list - Please wait..."
 msgstr "Получаване на списъка с имиджи - Моля, изчакайте..."
-
-msgid "Retrieving image slots - Please wait..."
-msgstr "Получаване на слотовете за имиджи - Моля, изчакайте..."
 
 msgid "Return to movie list"
 msgstr "Връщане към списъка с филми"
@@ -7528,8 +7554,12 @@ msgstr ""
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the character or action under the virtual keyboard cursor"
+msgid "Select the character or action under the keyboard cursor"
 msgstr ""
+
+#, fuzzy
+msgid "Select the locale from a menu"
+msgstr "Изберете път към филма"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr ""
@@ -7562,6 +7592,13 @@ msgid "Select the satellite your dish receives from. If you are unsure select 'a
 msgstr "Изберете сателита който се приема от антената Ви. Ако не сте сигурни, изберете ‘автоматично’ и приемника ще се опита да определи това за Вас."
 
 #, fuzzy
+msgid "Select the shifted character set"
+msgstr "Изберете път към филма"
+
+msgid "Select the shifted character set for the next character only"
+msgstr ""
+
+#, fuzzy
 msgid "Select the time zone within the area or region."
 msgstr "Избор на хоризонтална резолюция:"
 
@@ -7579,15 +7616,6 @@ msgid "Select the type of LNB/device being used (normally 'Universal'). If your 
 msgstr "Изберете типа LNB/устройство което се използва (обикновено 'Универсален' Ако Вашия LNB тип не е наличе, изберете ‘потребителски'."
 
 msgid "Select the type of Single Cable Reception device you are using."
-msgstr ""
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set for the next character only"
 msgstr ""
 
 msgid "Select update source"
@@ -8827,6 +8855,9 @@ msgstr "PLP ID"
 msgid "T2MI RAW Mode"
 msgstr ""
 
+msgid "TEXT"
+msgstr ""
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr "Мартин Петков - България - 03.02.2020"
@@ -9454,6 +9485,10 @@ msgstr "Превключвател покажи/скрий"
 
 msgid "Toggle the tv and the radio player..."
 msgstr "Превключване между тв и радио плеъри..."
+
+#, fuzzy
+msgid "Toggle videomode"
+msgstr "Изберете видео режим"
 
 msgid "Togo"
 msgstr "Того"
@@ -10673,6 +10708,9 @@ msgstr "Трябва да изчакате %s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr "Трябва да превключите на канал %s (%s - '%s')!\n"
+
+msgid "You seem to be in timeshift!"
+msgstr ""
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Ваашата колекция надвишава размера на еднослоен диск, ще ви трябва празен двуслоен DVD!"

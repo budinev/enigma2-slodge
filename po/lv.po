@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"POT-Creation-Date: 2020-05-10 20:18+0200\n"
 "PO-Revision-Date: 2014-11-12 00:49+0200\n"
 "Last-Translator: Taapat <taapat@gmail.com>\n"
 "Language-Team: Taapat <taapat@gmail.com>\n"
@@ -1067,6 +1067,10 @@ msgstr "Jebkura aktivitāte"
 msgid "Arabic"
 msgstr "Arābu"
 
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr "Vai tiešām vēlaties dzēst šo ierakstu?"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr "Vai tiešām vēlaties iztīrīt visas dzēstās buķetes?"
 
@@ -1086,6 +1090,10 @@ msgstr "Vai tiešām vēlaties nodzēst visus televīzijas kanālus?"
 
 msgid "Are you sure to remove this entry?"
 msgstr "Vai tiešām vēlaties dzēst šo ierakstu?"
+
+#, fuzzy
+msgid "Are you sure to restore all deleted images"
+msgstr "Vai tiešām vēlaties nodzēst visus kabeļu kanālus?"
 
 msgid ""
 "Are you sure you want to activate this network configuration?\n"
@@ -1871,6 +1879,10 @@ msgstr "Kolekcijas iestatījumi"
 msgid "Colombia"
 msgstr "Kolumbija"
 
+#, fuzzy
+msgid "Color"
+msgstr "Kolumbija"
+
 msgid "Color format"
 msgstr "Krāsu formāts"
 
@@ -2651,6 +2663,10 @@ msgstr "Aizture milisekundēs simbolu ritināšanas ātrumam displejā."
 msgid "Delete"
 msgstr "Dzēst"
 
+#, fuzzy
+msgid "Delete Image"
+msgstr "Izdzēst imidžu"
+
 msgid "Delete entry"
 msgstr "Dzēst ierakstu "
 
@@ -2669,10 +2685,15 @@ msgstr "Dzēst repertuāra ierakstu"
 msgid "Delete saved playlist"
 msgstr "Dzēst saglabāto repertuāru"
 
-msgid "Delete the character to the left of text buffer cursor"
+msgid "Delete the all the text"
+msgstr ""
+
+#, fuzzy
+msgid "Delete the character to the left of text cursor"
 msgstr "Dzēst burtu pa kreisi"
 
-msgid "Delete the character under the text buffer cursor"
+#, fuzzy
+msgid "Delete the character under the text cursor"
 msgstr "Dzēst burtu"
 
 msgid "Delete timer"
@@ -2680,6 +2701,10 @@ msgstr "Dzēst taimeri"
 
 msgid "Deleted"
 msgstr "Izdzēsts"
+
+#, fuzzy
+msgid "Deleted image"
+msgstr "Izdzēst imidžu"
 
 msgid "Deleted items"
 msgstr "Dzēsts"
@@ -2964,7 +2989,7 @@ msgstr "Vai tiešām vēlaties iziet no šī veidņa?"
 msgid "Do you want to reboot your receiver?"
 msgstr "Vai vēlaties pārstartēt uztvērēju?"
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr "Vai vēlaties dzēst visus žurnāla failus"
 
 msgid "Do you want to remove the package:\n"
@@ -5143,29 +5168,37 @@ msgstr "Pārvietot attēlu attēlā"
 msgid "Move east"
 msgstr "Griezt uz austrumiem"
 
-msgid "Move the text buffer cursor left"
-msgstr "Pārvietot kursoru pa kreisi"
-
-msgid "Move the text buffer cursor right"
-msgstr "Pārvietot kursoru pa labi"
-
-msgid "Move the text buffer cursor to the first character"
-msgstr "Pārvietot kursoru uz pirmo burtu"
-
-msgid "Move the text buffer cursor to the last character"
-msgstr "Pārvietot kursoru uz pēdējo burtu"
-
-msgid "Move the virtual keyboard cursor down"
+#, fuzzy
+msgid "Move the keyboard cursor down"
 msgstr "Pārvietot kursoru uz leju"
 
-msgid "Move the virtual keyboard cursor left"
+#, fuzzy
+msgid "Move the keyboard cursor left"
 msgstr "Pārvietot kursoru pa kreisi"
 
-msgid "Move the virtual keyboard cursor right"
+#, fuzzy
+msgid "Move the keyboard cursor right"
 msgstr "Pārvietot kursoru pa labi"
 
-msgid "Move the virtual keyboard cursor up"
+#, fuzzy
+msgid "Move the keyboard cursor up"
 msgstr "Pārvietot kursoru uz augšu"
+
+#, fuzzy
+msgid "Move the text cursor left"
+msgstr "Pārvietot kursoru pa kreisi"
+
+#, fuzzy
+msgid "Move the text cursor right"
+msgstr "Pārvietot kursoru pa labi"
+
+#, fuzzy
+msgid "Move the text cursor to the first character"
+msgstr "Pārvietot kursoru uz pirmo burtu"
+
+#, fuzzy
+msgid "Move the text cursor to the last character"
+msgstr "Pārvietot kursoru uz pēdējo burtu"
 
 msgid "Move to position X"
 msgstr "Griezt uz pozīciju X"
@@ -6898,6 +6931,10 @@ msgstr "Atjaunot dublējumkopiju"
 msgid "Restore defaults"
 msgstr "Pēc noklusējuma"
 
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "Atjaunot dzēstās buķetes"
+
 msgid "Restore deleted user bouquets"
 msgstr "Atjaunot dzēstās buķetes"
 
@@ -6932,9 +6969,6 @@ msgstr "Turpina atskaņošanu"
 
 msgid "Retrieving image list - Please wait..."
 msgstr "Iegūst imidžu sarakstu - Lūdzu gaidiet..."
-
-msgid "Retrieving image slots - Please wait..."
-msgstr "Iegūst pieejamos slotus - Lūdzu uzgaidiet..."
 
 msgid "Return to movie list"
 msgstr "Atgriezties uz mediju sarakstu"
@@ -7494,8 +7528,13 @@ msgstr "Izvēlieties joslas frekvenci (User Band frequency) kuru piešķirt šim
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr "Izvēlieties joslu (User Band) kuru piešķirt šim uztvērējam. Tas ir indekss SCR slēdža frekvenču tabulā vai SCR LNB, kuru tie izmanto lai piešķirtu pieprasīto transponderi uztvērējam."
 
-msgid "Select the character or action under the virtual keyboard cursor"
+#, fuzzy
+msgid "Select the character or action under the keyboard cursor"
 msgstr "Izvēlieties darbību virtuālās tastatūras kursoram"
+
+#, fuzzy
+msgid "Select the locale from a menu"
+msgstr "Izvēlieties virtuālās tastatūras lokalizāciju"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr "Izvēlieties savas SCR ierīces ražotāju. Ja ražotājs nav norādīts, iestatiet 'SCR' uz 'lietotāja definēts' un ievadiet ierīces parametrus manuāli, atbilstoši tā specifikācijai."
@@ -7528,6 +7567,14 @@ msgid "Select the satellite your dish receives from. If you are unsure select 'a
 msgstr "Izvēlieties satelītu kuru uztverat ar satelītantenu. Ja neesat pārliecināts, izvēlieties 'automātiski', un uztvērējs mēģinās to noteikt pats."
 
 #, fuzzy
+msgid "Select the shifted character set"
+msgstr "Izvēlieties virtuālās tastatūras speciālo izkārtojumu"
+
+#, fuzzy
+msgid "Select the shifted character set for the next character only"
+msgstr "Izvēlieties virtuālās tastatūras speciālo izkārtojumu"
+
+#, fuzzy
 msgid "Select the time zone within the area or region."
 msgstr "Izvēlieties izšķirtspēju:"
 
@@ -7545,16 +7592,6 @@ msgstr "Izvēlieties izmantojamās LNB veidu (parasti 'Universālā LNB'). Ja j�
 
 msgid "Select the type of Single Cable Reception device you are using."
 msgstr "Izvēlieties SCR ierīces veidu kuru izmantojat."
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr "Izvēlieties virtuālās tastatūras lokalizāciju"
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr "Izvēlieties virtuālās tastatūras speciālo izkārtojumu"
-
-#, fuzzy
-msgid "Select the virtual keyboard shifted character set for the next character only"
-msgstr "Izvēlieties virtuālās tastatūras speciālo izkārtojumu"
 
 msgid "Select update source"
 msgstr "Izvēlieties atjaunināšanas avotu"
@@ -8783,6 +8820,9 @@ msgstr "PLP ID"
 msgid "T2MI RAW Mode"
 msgstr "T2MI RAW režīms"
 
+msgid "TEXT"
+msgstr ""
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr "Taapat, Madars Auns Latvija, Talsi"
@@ -9412,6 +9452,10 @@ msgstr "Pārslēdz parādīt/slēpt"
 
 msgid "Toggle the tv and the radio player..."
 msgstr "Pārslēgt tv vai radio atskaņošanu..."
+
+#, fuzzy
+msgid "Toggle videomode"
+msgstr "Izvēlieties video režīmu"
 
 msgid "Togo"
 msgstr "Togo"
@@ -10633,6 +10677,9 @@ msgstr "Jums jāuzgaida %s!"
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr "Pārslēgsies uz kanālu %s (%s - '%s')!\n"
+
+msgid "You seem to be in timeshift!"
+msgstr ""
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Jūsu kolekcija pārsniedz diska lielumu, jums ir nepieciešams tukšs dubultslāņa DVD!"

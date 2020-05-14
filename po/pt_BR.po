@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"POT-Creation-Date: 2020-05-10 20:18+0200\n"
 "PO-Revision-Date: 2013-10-20 19:13-0300\n"
 "Last-Translator: Diogo <pingflood@gmail.com>\n"
 "Language-Team: Traduzido por Frank Viana <franksrviana@gmail.com>\n"
@@ -1051,6 +1051,10 @@ msgstr "Qualquer atividade"
 msgid "Arabic"
 msgstr "Árabe"
 
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr "Remover o seguinte backup:\n"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr ""
 
@@ -1069,6 +1073,10 @@ msgstr ""
 
 msgid "Are you sure to remove this entry?"
 msgstr ""
+
+#, fuzzy
+msgid "Are you sure to restore all deleted images"
+msgstr "Limpar lixeira"
 
 msgid ""
 "Are you sure you want to activate this network configuration?\n"
@@ -1860,6 +1868,10 @@ msgstr "Configurar coleção"
 
 #, fuzzy
 msgid "Colombia"
+msgstr "Formato da cor"
+
+#, fuzzy
+msgid "Color"
 msgstr "Formato da cor"
 
 msgid "Color format"
@@ -2657,6 +2669,10 @@ msgstr ""
 msgid "Delete"
 msgstr "Remover"
 
+#, fuzzy
+msgid "Delete Image"
+msgstr "Remover arquivo"
+
 msgid "Delete entry"
 msgstr "Remover item"
 
@@ -2676,10 +2692,13 @@ msgstr "Remover item da lista de reprodução"
 msgid "Delete saved playlist"
 msgstr "Remover lista de reprodução salva"
 
-msgid "Delete the character to the left of text buffer cursor"
+msgid "Delete the all the text"
 msgstr ""
 
-msgid "Delete the character under the text buffer cursor"
+msgid "Delete the character to the left of text cursor"
+msgstr ""
+
+msgid "Delete the character under the text cursor"
 msgstr ""
 
 msgid "Delete timer"
@@ -2687,6 +2706,10 @@ msgstr ""
 
 msgid "Deleted"
 msgstr "Removido"
+
+#, fuzzy
+msgid "Deleted image"
+msgstr "Remover arquivo"
 
 msgid "Deleted items"
 msgstr "Itens removidos"
@@ -2974,7 +2997,7 @@ msgstr ""
 msgid "Do you want to reboot your receiver?"
 msgstr "Deseja reiniciar o receptor?"
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr ""
 
 msgid "Do you want to remove the package:\n"
@@ -5155,28 +5178,30 @@ msgstr "Mover PiP"
 msgid "Move east"
 msgstr "Mover leste"
 
-msgid "Move the text buffer cursor left"
+msgid "Move the keyboard cursor down"
 msgstr ""
 
-msgid "Move the text buffer cursor right"
+msgid "Move the keyboard cursor left"
 msgstr ""
 
-msgid "Move the text buffer cursor to the first character"
+msgid "Move the keyboard cursor right"
 msgstr ""
 
-msgid "Move the text buffer cursor to the last character"
+msgid "Move the keyboard cursor up"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor down"
+#, fuzzy
+msgid "Move the text cursor left"
+msgstr "Ver próximo ângulo"
+
+#, fuzzy
+msgid "Move the text cursor right"
+msgstr "Ir para a entrada seguinte"
+
+msgid "Move the text cursor to the first character"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor left"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor right"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor up"
+msgid "Move the text cursor to the last character"
 msgstr ""
 
 msgid "Move to position X"
@@ -6938,6 +6963,10 @@ msgstr "Restaurar backups"
 msgid "Restore defaults"
 msgstr "Restaurar backups"
 
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "Restaurar backups"
+
 msgid "Restore deleted user bouquets"
 msgstr ""
 
@@ -6973,10 +7002,6 @@ msgstr "Continuando..."
 #, fuzzy
 msgid "Retrieving image list - Please wait..."
 msgstr "Obtendo informações. Aguarde..."
-
-#, fuzzy
-msgid "Retrieving image slots - Please wait..."
-msgstr "Buscando atualizações disponíveis. Aguarde..."
 
 msgid "Return to movie list"
 msgstr "Voltar à lista de vídeos"
@@ -7543,8 +7568,12 @@ msgstr ""
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the character or action under the virtual keyboard cursor"
+msgid "Select the character or action under the keyboard cursor"
 msgstr ""
+
+#, fuzzy
+msgid "Select the locale from a menu"
+msgstr "Selecione o diretório de gravações"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr ""
@@ -7576,6 +7605,13 @@ msgstr ""
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr ""
 
+#, fuzzy
+msgid "Select the shifted character set"
+msgstr "Selecione o diretório de gravações"
+
+msgid "Select the shifted character set for the next character only"
+msgstr ""
+
 msgid "Select the time zone within the area or region."
 msgstr ""
 
@@ -7592,15 +7628,6 @@ msgid "Select the type of LNB/device being used (normally 'Universal'). If your 
 msgstr ""
 
 msgid "Select the type of Single Cable Reception device you are using."
-msgstr ""
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set for the next character only"
 msgstr ""
 
 msgid "Select update source"
@@ -8851,6 +8878,9 @@ msgstr ""
 msgid "T2MI RAW Mode"
 msgstr ""
 
+msgid "TEXT"
+msgstr ""
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr ""
@@ -9467,6 +9497,10 @@ msgstr ""
 
 msgid "Toggle the tv and the radio player..."
 msgstr ""
+
+#, fuzzy
+msgid "Toggle videomode"
+msgstr "Selecione o modo de vídeo"
 
 msgid "Togo"
 msgstr ""
@@ -10693,6 +10727,9 @@ msgstr "Aguarde %s!"
 
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
+msgstr ""
+
+msgid "You seem to be in timeshift!"
 msgstr ""
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"POT-Creation-Date: 2020-05-10 20:18+0200\n"
 "PO-Revision-Date: 2008-12-29 16:22+0100\n"
 "Last-Translator: gerrit <gerrit@nedlinux.nl>\n"
 "Language-Team: gerrit <fy@li.org>\n"
@@ -1182,6 +1182,13 @@ msgstr ""
 msgid "Arabic"
 msgstr "Arabysk"
 
+#
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr ""
+"witte jo seker dizze werom te setten\n"
+"de extra kopie:\n"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr ""
 
@@ -1199,6 +1206,9 @@ msgid "Are you sure to remove all terrestrial services?"
 msgstr ""
 
 msgid "Are you sure to remove this entry?"
+msgstr ""
+
+msgid "Are you sure to restore all deleted images"
 msgstr ""
 
 #
@@ -2099,6 +2109,11 @@ msgstr "Kolleksje ynstellingen"
 #
 #, fuzzy
 msgid "Colombia"
+msgstr "Kleur formaat"
+
+#
+#, fuzzy
+msgid "Color"
 msgstr "Kleur formaat"
 
 #
@@ -3004,6 +3019,11 @@ msgid "Delete"
 msgstr "Ferwiderje"
 
 #
+#, fuzzy
+msgid "Delete Image"
+msgstr "triem ferwiderje"
+
+#
 msgid "Delete entry"
 msgstr "Ferwiderje ynfier"
 
@@ -3031,10 +3051,13 @@ msgstr "ofspiellyst rigele ferwiderje"
 msgid "Delete saved playlist"
 msgstr "ferwiderje opsleine ofspiellyst"
 
-msgid "Delete the character to the left of text buffer cursor"
+msgid "Delete the all the text"
 msgstr ""
 
-msgid "Delete the character under the text buffer cursor"
+msgid "Delete the character to the left of text cursor"
+msgstr ""
+
+msgid "Delete the character under the text cursor"
 msgstr ""
 
 msgid "Delete timer"
@@ -3042,6 +3065,11 @@ msgstr ""
 
 msgid "Deleted"
 msgstr ""
+
+#
+#, fuzzy
+msgid "Deleted image"
+msgstr "triem ferwiderje"
 
 msgid "Deleted items"
 msgstr ""
@@ -3374,7 +3402,7 @@ msgstr ""
 msgid "Do you want to reboot your receiver?"
 msgstr ""
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr ""
 
 #
@@ -5876,28 +5904,32 @@ msgstr "Ferpleats Byld yn Byld"
 msgid "Move east"
 msgstr "Draai nei east"
 
-msgid "Move the text buffer cursor left"
+msgid "Move the keyboard cursor down"
 msgstr ""
 
-msgid "Move the text buffer cursor right"
+msgid "Move the keyboard cursor left"
 msgstr ""
 
-msgid "Move the text buffer cursor to the first character"
+msgid "Move the keyboard cursor right"
 msgstr ""
 
-msgid "Move the text buffer cursor to the last character"
+msgid "Move the keyboard cursor up"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor down"
+#
+#, fuzzy
+msgid "Move the text cursor left"
+msgstr "foarút nei it folgende haadstik"
+
+#
+#, fuzzy
+msgid "Move the text cursor right"
+msgstr "Nei it folgende menu item gean"
+
+msgid "Move the text cursor to the first character"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor left"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor right"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor up"
+msgid "Move the text cursor to the last character"
 msgstr ""
 
 msgid "Move to position X"
@@ -7957,6 +7989,11 @@ msgstr ""
 msgid "Restore defaults"
 msgstr "lyst styl standert"
 
+#
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "lyst styl standert"
+
 msgid "Restore deleted user bouquets"
 msgstr ""
 
@@ -7999,11 +8036,6 @@ msgstr "Fierder gean mei ôfspieljen"
 #
 #, fuzzy
 msgid "Retrieving image list - Please wait..."
-msgstr "Binnenhelje fan ynstekker ynformaasje...."
-
-#
-#, fuzzy
-msgid "Retrieving image slots - Please wait..."
 msgstr "Binnenhelje fan ynstekker ynformaasje...."
 
 #
@@ -8668,8 +8700,13 @@ msgstr ""
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the character or action under the virtual keyboard cursor"
+msgid "Select the character or action under the keyboard cursor"
 msgstr ""
+
+#
+#, fuzzy
+msgid "Select the locale from a menu"
+msgstr "kies it film paad"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr ""
@@ -8703,6 +8740,14 @@ msgstr ""
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr ""
 
+#
+#, fuzzy
+msgid "Select the shifted character set"
+msgstr "kies it film paad"
+
+msgid "Select the shifted character set for the next character only"
+msgstr ""
+
 msgid "Select the time zone within the area or region."
 msgstr ""
 
@@ -8719,15 +8764,6 @@ msgid "Select the type of LNB/device being used (normally 'Universal'). If your 
 msgstr ""
 
 msgid "Select the type of Single Cable Reception device you are using."
-msgstr ""
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set for the next character only"
 msgstr ""
 
 #
@@ -10160,6 +10196,9 @@ msgstr ""
 msgid "T2MI RAW Mode"
 msgstr ""
 
+msgid "TEXT"
+msgstr ""
+
 #
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
@@ -10848,6 +10887,11 @@ msgstr ""
 
 msgid "Toggle the tv and the radio player..."
 msgstr ""
+
+#
+#, fuzzy
+msgid "Toggle videomode"
+msgstr "Kies fideo moadus"
 
 msgid "Togo"
 msgstr ""
@@ -12212,6 +12256,9 @@ msgstr "Jo moatte %s wachtsje!"
 
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
+msgstr ""
+
+msgid "You seem to be in timeshift!"
 msgstr ""
 
 #

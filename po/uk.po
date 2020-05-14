@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 22:37+0100\n"
+"POT-Creation-Date: 2020-05-10 20:18+0200\n"
 "PO-Revision-Date: 2016-11-17 12:51+0200\n"
 "Last-Translator: vovan43<vovan43@ex.ua>, sety <tim1065@mail.ru>, Irkoff <irkoff@gmail.com>\n"
 "Language-Team: gisclub.tv <http://gisclub.tv/>\n"
@@ -1069,6 +1069,10 @@ msgstr "Будь яка активність"
 msgid "Arabic"
 msgstr "Арабський"
 
+#, fuzzy
+msgid "Are you sure to delete image:"
+msgstr "Ви впевнені, щоб видалити цей запис?"
+
 msgid "Are you sure to purge all deleted user bouquets?"
 msgstr "Ви впевнені, що хочете очистити всі видалені призначені для користувача букети?"
 
@@ -1088,6 +1092,10 @@ msgstr "Ви впевнені, щоб видалити всі наземні с�
 
 msgid "Are you sure to remove this entry?"
 msgstr "Ви впевнені, щоб видалити цей запис?"
+
+#, fuzzy
+msgid "Are you sure to restore all deleted images"
+msgstr "Ви впевнені, щоб видалити всі кабельні послуги?"
 
 msgid ""
 "Are you sure you want to activate this network configuration?\n"
@@ -1889,6 +1897,10 @@ msgstr "Налаштування колекції"
 
 #, fuzzy
 msgid "Colombia"
+msgstr "Формат кольору"
+
+#, fuzzy
+msgid "Color"
 msgstr "Формат кольору"
 
 msgid "Color format"
@@ -2693,6 +2705,10 @@ msgstr "Затримка в мілісекундах між прокрутки �
 msgid "Delete"
 msgstr "Видалити"
 
+#, fuzzy
+msgid "Delete Image"
+msgstr "Видалити таймер"
+
 msgid "Delete entry"
 msgstr "Видалити вибране"
 
@@ -2712,10 +2728,13 @@ msgstr "Видалити запис з плейлиста"
 msgid "Delete saved playlist"
 msgstr "Видалити збережений плейлист"
 
-msgid "Delete the character to the left of text buffer cursor"
+msgid "Delete the all the text"
 msgstr ""
 
-msgid "Delete the character under the text buffer cursor"
+msgid "Delete the character to the left of text cursor"
+msgstr ""
+
+msgid "Delete the character under the text cursor"
 msgstr ""
 
 msgid "Delete timer"
@@ -2723,6 +2742,10 @@ msgstr "Видалити таймер"
 
 msgid "Deleted"
 msgstr "Видалено"
+
+#, fuzzy
+msgid "Deleted image"
+msgstr "Видалити таймер"
 
 msgid "Deleted items"
 msgstr "Видалені"
@@ -3014,7 +3037,7 @@ msgstr "Ви хочете вийти з майстра налаштувань е
 msgid "Do you want to reboot your receiver?"
 msgstr "Ви хочете перезавантажити ваш ресивер?"
 
-msgid "Do you want to remove all the crahs logfiles"
+msgid "Do you want to remove all the crash logfiles"
 msgstr ""
 
 msgid "Do you want to remove the package:\n"
@@ -5231,28 +5254,30 @@ msgstr "Перемістити картинку в картинці"
 msgid "Move east"
 msgstr "Переміщення на схід"
 
-msgid "Move the text buffer cursor left"
+msgid "Move the keyboard cursor down"
 msgstr ""
 
-msgid "Move the text buffer cursor right"
+msgid "Move the keyboard cursor left"
 msgstr ""
 
-msgid "Move the text buffer cursor to the first character"
+msgid "Move the keyboard cursor right"
 msgstr ""
 
-msgid "Move the text buffer cursor to the last character"
+msgid "Move the keyboard cursor up"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor down"
+#, fuzzy
+msgid "Move the text cursor left"
+msgstr "перейти в наступній кут"
+
+#, fuzzy
+msgid "Move the text cursor right"
+msgstr "перемістити вниз до наступного запису"
+
+msgid "Move the text cursor to the first character"
 msgstr ""
 
-msgid "Move the virtual keyboard cursor left"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor right"
-msgstr ""
-
-msgid "Move the virtual keyboard cursor up"
+msgid "Move the text cursor to the last character"
 msgstr ""
 
 msgid "Move to position X"
@@ -7022,6 +7047,10 @@ msgstr "Відновлення резрвних копій"
 msgid "Restore defaults"
 msgstr "Встановити за замовчуванням"
 
+#, fuzzy
+msgid "Restore deleted images"
+msgstr "Відновити видалені  букети  користувача"
+
 msgid "Restore deleted user bouquets"
 msgstr "Відновити видалені  букети  користувача"
 
@@ -7057,10 +7086,6 @@ msgstr "Відновлення відтворення"
 #, fuzzy
 msgid "Retrieving image list - Please wait..."
 msgstr "Отримання інформації про плагін. Будь ласка чекайте..."
-
-#, fuzzy
-msgid "Retrieving image slots - Please wait..."
-msgstr "Пошук доступних оновлень. Будь ласка зачекайте ..."
 
 msgid "Return to movie list"
 msgstr "Повернутися до списку фільмів"
@@ -7636,8 +7661,12 @@ msgstr ""
 msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the character or action under the virtual keyboard cursor"
+msgid "Select the character or action under the keyboard cursor"
 msgstr ""
+
+#, fuzzy
+msgid "Select the locale from a menu"
+msgstr "Вибрати шлях до відео"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr ""
@@ -7670,6 +7699,13 @@ msgid "Select the satellite your dish receives from. If you are unsure select 'a
 msgstr ""
 
 #, fuzzy
+msgid "Select the shifted character set"
+msgstr "Вибрати шлях до відео"
+
+msgid "Select the shifted character set for the next character only"
+msgstr ""
+
+#, fuzzy
 msgid "Select the time zone within the area or region."
 msgstr "Впорядкувати по:"
 
@@ -7686,15 +7722,6 @@ msgid "Select the type of LNB/device being used (normally 'Universal'). If your 
 msgstr ""
 
 msgid "Select the type of Single Cable Reception device you are using."
-msgstr ""
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr ""
-
-msgid "Select the virtual keyboard shifted character set for the next character only"
 msgstr ""
 
 msgid "Select update source"
@@ -8950,6 +8977,9 @@ msgstr "PLP ID"
 msgid "T2MI RAW Mode"
 msgstr ""
 
+msgid "TEXT"
+msgstr ""
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr "vovan43 <vovan43@ex.ua>."
@@ -9608,6 +9638,10 @@ msgstr "Переключення показати / приховати"
 
 msgid "Toggle the tv and the radio player..."
 msgstr "Телевізор та радіо плеєр..."
+
+#, fuzzy
+msgid "Toggle videomode"
+msgstr "Виберіть відеорежим"
 
 msgid "Togo"
 msgstr ""
@@ -10871,6 +10905,9 @@ msgid "You must switch to the service %s (%s - '%s')!\n"
 msgstr ""
 "Ви повинні переключитися на обслуговування  %s (%s - '%s')!\n"
 "\n"
+
+msgid "You seem to be in timeshift!"
+msgstr ""
 
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Ваша колекція перевищує розмір одношарового диска. Вам потрібен чистий двошаровий DVD!"
