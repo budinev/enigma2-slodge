@@ -60,10 +60,12 @@ class HardwareInfo:
 			self.machine_name = "et1x000"
 		elif self.device_model.startswith("H9 "):
 			self.device_name = self.device_model
-			self.device_model = "h9combo"
+			self.device_model = self.device_name.replace(" ", "").lower()
+			self.machine_name = "h9combo"
 		elif self.device_model.startswith("H9"):
 			self.device_name = self.device_model
-			self.device_model = "h9"
+			self.device_model = self.device_name.lower()
+			self.machine_name = "h9"
 
 		if self.device_revision:
 			self.device_string = "%s (%s-%s)" % (self.device_model, self.device_revision, self.device_version)
