@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-10 21:34+0200\n"
-"PO-Revision-Date: 2020-11-06 16:59+0100\n"
+"POT-Creation-Date: 2020-11-21 15:48+0100\n"
+"PO-Revision-Date: 2020-11-21 16:12+0100\n"
 "Last-Translator: blzr <blzr@o2.pl>\n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 msgid ""
 "\n"
@@ -4358,6 +4358,9 @@ msgstr "Ignoruj przestrzeń nazw podsieci DVB-T"
 msgid "Ignore conflict"
 msgstr "Ignoruj konflikt"
 
+msgid "Image View On"
+msgstr ""
+
 #, python-format
 msgid ""
 "Image to install is invalid\n"
@@ -4711,7 +4714,7 @@ msgid "Lao People's Democratic Republic"
 msgstr "Laos"
 
 msgid "Large"
-msgstr "Duży"
+msgstr "Duża"
 
 msgid "Last config"
 msgstr "Ostatnie ustawienia"
@@ -5478,9 +5481,6 @@ msgstr "Nie znaleziono sieci"
 msgid "No new plugins found"
 msgstr "Nie znaleziono nowych wtyczek"
 
-msgid "No positioner capable frontend found."
-msgstr "Nie znaleziono pozycjonera."
-
 msgid "No priority"
 msgstr "Bez priorytetu"
 
@@ -5513,9 +5513,6 @@ msgstr "Nie dla wszystkich"
 
 msgid "No transparency"
 msgstr "Brak"
-
-msgid "No tuner is configured for use with a diseqc positioner!"
-msgstr "Brak skonfigurowanego tunera do współpracy z pozycjonerem diseqc!"
 
 msgid ""
 "No tuner is enabled!\n"
@@ -7865,7 +7862,7 @@ msgid "Show SNR percentage instead of dB value"
 msgstr "SNR w procentach zamiast dB"
 
 msgid "Show True/False as graphical switch"
-msgstr "Wyświtalaj Tak / Nie jako przełącznik graficzny"
+msgstr "Wyświetlaj Tak / Nie jako przełącznik graficzny"
 
 msgid "Show VCR scart on main menu"
 msgstr "VCR scart w głównym menu"
@@ -8009,7 +8006,7 @@ msgid "Show record indicator"
 msgstr "Wskaźnik nagrywania"
 
 msgid "Show screen path"
-msgstr "Pokaż ścieżkę ekranu"
+msgstr "Wyświetlaj ścieżkę menu"
 
 msgid "Show screensaver"
 msgstr "Wygaszacz ekranu"
@@ -8218,7 +8215,7 @@ msgid "Slow motion speeds"
 msgstr "Prędkości odtwarzanie w zwolnionym tempie"
 
 msgid "Small"
-msgstr "Mały"
+msgstr "Mała"
 
 msgid "Small progress"
 msgstr "Postęp (mały)"
@@ -8867,6 +8864,9 @@ msgstr "Obrazy testowe"
 msgid "Testscreens that are helpfull to fine-tune your display"
 msgstr "Ekrany testowe pomocne w precyzyjnym dostrojeniu obrazu"
 
+msgid "Text View On"
+msgstr ""
+
 msgid "Text color"
 msgstr "Kolor tekstu"
 
@@ -9163,7 +9163,7 @@ msgid "This option allows you to show menu and/or plugin number quick links."
 msgstr "Ta opcja pozwala włączyć numeryczne skróty pozycji menu oraz wtyczek."
 
 msgid "This option allows you to show the full screen path leading to the current screen."
-msgstr "Opcja ta pozwala na wyświetlenie pełnej ścieżki prowadzącej do bieżącego ekranu."
+msgstr "Opcja ta pozwala na wyświetlenie pełnej ścieżki prowadzącej do bieżącego ekranu menu."
 
 msgid "This option allows you to view the old and new settings side by side."
 msgstr "Ta opcja pozwala zobaczyć stare i nowe ustawienia obok siebie."
@@ -10120,6 +10120,9 @@ msgstr "Wybudzenie"
 
 msgid "Wakeup TV from standby"
 msgstr "Wybudzaj TV ze stanu czuwania"
+
+msgid "Wakeup command for TV"
+msgstr "Komenda wybudzenia dla TV"
 
 msgid "Wakeup receiver for start timer"
 msgstr "Wybudzaj odbiornik aby uruchomić timer"

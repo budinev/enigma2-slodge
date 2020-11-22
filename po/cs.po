@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-04 13:13+0200\n"
+"POT-Creation-Date: 2020-11-21 15:48+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #
 msgid ""
@@ -4972,6 +4972,9 @@ msgstr "Ignorovat DVB-T namespace podsítě"
 msgid "Ignore conflict"
 msgstr "Ignorovat konflikt"
 
+msgid "Image View On"
+msgstr ""
+
 #, python-format
 msgid ""
 "Image to install is invalid\n"
@@ -6284,10 +6287,6 @@ msgstr "Žádné sítě nenalezeny"
 msgid "No new plugins found"
 msgstr "Žádný nový plugin nenalezen."
 
-#
-msgid "No positioner capable frontend found."
-msgstr "Nebyl nalezen žádný vhodný pozicioner."
-
 msgid "No priority"
 msgstr "Žádná priorita"
 
@@ -6327,10 +6326,6 @@ msgstr "Ne pro všechny"
 #
 msgid "No transparency"
 msgstr "Neprůhledné"
-
-#
-msgid "No tuner is configured for use with a diseqc positioner!"
-msgstr "Žádný tuner není nakonfigurován pro používání s diseqc pozicionerem!"
 
 #
 msgid ""
@@ -10149,7 +10144,7 @@ msgstr ""
 "Pro případné korekce můžete kontaktovat autora\n"
 "na výše uvedené adrese.\n"
 "\n"
-"®25.10.2020"
+"®21.11.2020"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -10220,6 +10215,9 @@ msgstr "Testovací obrazce"
 
 msgid "Testscreens that are helpfull to fine-tune your display"
 msgstr "Testovací obrazce pomáhají doladit obrazovku"
+
+msgid "Text View On"
+msgstr ""
 
 #
 msgid "Text color"
@@ -11646,6 +11644,9 @@ msgstr "Probudit"
 
 msgid "Wakeup TV from standby"
 msgstr "Probouzet TV ze standby"
+
+msgid "Wakeup command for TV"
+msgstr "Signál probuzení pro TV"
 
 msgid "Wakeup receiver for start timer"
 msgstr "Probouzet přijímač pro spuštění časovače"
