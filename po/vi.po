@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-21 15:48+0100\n"
+"POT-Creation-Date: 2020-11-27 17:04+0100\n"
 "PO-Revision-Date: 2019-11-19 08:58+0700\n"
 "Last-Translator: krong\n"
 "Language-Team: none\n"
@@ -955,6 +955,10 @@ msgstr "Cho phép phụ đề cho người khiếm thính"
 msgid "Allow unsupported modes"
 msgstr "Cho phép các chế độ không được hỗ trợ"
 
+#, fuzzy
+msgid "Allows the TV remote to be used to control the receiver."
+msgstr "Sử dụng điều khiển từ xa"
+
 msgid "Alpha"
 msgstr "Alpha"
 
@@ -1270,6 +1274,9 @@ msgstr "Đánh dấu tự động"
 msgid "Automatic scan"
 msgstr "Quét tự động"
 
+msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
+msgstr ""
+
 msgid "Automatically start timeshift after"
 msgstr "Tự động bắt đầu timeshift sau"
 
@@ -1363,6 +1370,9 @@ msgstr "Thông tin cơ bản về PID"
 
 msgid "Basque"
 msgstr "Basque"
+
+msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgstr ""
 
 msgid "Begin time"
 msgstr "Thời gian bắt đầu"
@@ -1884,6 +1894,9 @@ msgstr "Thực hiện lệnh .."
 
 msgid "Command order"
 msgstr "Lệnh"
+
+msgid "Command the TV to switch to the correct HDMI input when zap timers activate."
+msgstr ""
 
 msgid "Commit info"
 msgstr "Thông tin cam kết"
@@ -2636,6 +2649,9 @@ msgstr "Trì hoãn trước khi lặp lại khóa bắt đầu:"
 msgid "Delay before sequence repeat"
 msgstr "Trì hoãn trước khi lặp lại trình tự"
 
+msgid "Delay between CEC commands when sending a series of commands. Some devices require this delay for correct functioning, usually between 50-150ms."
+msgstr ""
+
 msgid "Delay between diseqc commands"
 msgstr "Độ trễ giữa các lệnh diseqc"
 
@@ -3212,11 +3228,12 @@ msgstr "Kích hoạt Virgin EPG"
 msgid "Enable auto cable scan"
 msgstr "Cho phép quét cáp tự động"
 
-msgid "Enable auto fast scan"
+#, fuzzy
+msgid "Enable auto fastscan"
 msgstr "Cho phép tự động quét nhanh"
 
-#, python-format
-msgid "Enable auto fast scan for %s"
+#, fuzzy, python-format
+msgid "Enable auto fastscan for %s"
 msgstr "Cho phép tự động quét nhanh cho%s"
 
 msgid "Enable bouquet edit"
@@ -3242,6 +3259,10 @@ msgstr "Cho phép chế độ di chuyển"
 
 msgid "Enable multiple bouquets"
 msgstr "Cho phép nhiều gói kênh"
+
+#, fuzzy
+msgid "Enable or disable using HDMI-CEC."
+msgstr "Kích hoạt HDMI-CEC"
 
 msgid "Enable parental protection"
 msgstr "Cho phép bảo vệ cha mẹ"
@@ -3744,14 +3765,19 @@ msgstr "Nhanh"
 msgid "Fast DiSEqC"
 msgstr "DiSEqC nhanh"
 
-msgid "Fast Scan"
-msgstr "Quét nhanh"
-
 msgid "Fast epoch"
 msgstr "Kỷ nguyên nhanh"
 
 msgid "Fast forward speeds"
 msgstr "Tốc độ chuyển tiếp nhanh"
+
+#, fuzzy
+msgid "FastScan"
+msgstr "Quét nhanh"
+
+#, fuzzy
+msgid "Fastscan"
+msgstr "Quét nhanh"
 
 msgid "Favourites"
 msgstr "Yêu thích"
@@ -4311,6 +4337,9 @@ msgstr "Biểu tượng"
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr "Nếu bị tắt, các ký tự gạch chân trong tên tệp và thư mục sẽ không được hiển thị và được thay thế bằng dấu cách."
 
+msgid "If enabled, a log will be kept of CEC protocol traffic ('hdmicec.log')"
+msgstr ""
+
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
 msgstr "Nếu được bật, dấu trang sẽ được cập nhật với vị trí mới khi bạn di chuyển hoặc sao chép bản ghi."
 
@@ -4328,6 +4357,9 @@ msgstr "Nếu được đặt là 'Có', thì âm thanh chỉ được phát ở
 
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "Nếu được đặt thành giá trị tín hiệu 'có' (SNR, v.v.) sẽ được tính từ API V3. Đây là một phiên bản API cũ đã được thay thế."
+
+msgid "If set to 'yes' the same commands will be sent to the TV for deep standby events, as are sent during regular standby events."
+msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
 msgstr "Nếu sử dụng nhiều chuyển mạch không được cam kết, các lệnh DiSEqC phải được gửi nhiều lần. Đặt thành số lượng công tắc không được cam kết trong chuỗi trừ đi một."
@@ -6420,6 +6452,10 @@ msgstr "Nhấn OK để chọn dịch vụ."
 msgid "Press OK to select satellites"
 msgstr "Nhấn OK để chọn vệ tinh"
 
+#, fuzzy
+msgid "Press OK to select the save location of the log file."
+msgstr "Chọn thư mục cho logfile"
+
 msgid "Press OK to select/deselect a CAId."
 msgstr "Nhấn OK để chọn / bỏ chọn CAId."
 
@@ -6531,6 +6567,10 @@ msgstr "Puerto Rico"
 
 msgid "Purge deleted user bouquets"
 msgstr "Thanh lọc người dùng đã xóa"
+
+#, fuzzy
+msgid "Put A/V receiver to standby too."
+msgstr "Đặt máy thu ở chế độ chờ"
 
 msgid "Put TV in standby"
 msgstr "Đặt TV ở chế độ chờ"
@@ -8296,6 +8336,9 @@ msgstr "Quần đảo Solomon"
 msgid "Somalia"
 msgstr "Somalia"
 
+msgid "Some TVs do not wake from standby when they receive the 'Image View On' command. If this is the case try the 'Text View On' command instead."
+msgstr ""
+
 msgid "Some plugins are not available:\n"
 msgstr "Một số plugin không có sẵn:\n"
 
@@ -8940,6 +8983,9 @@ msgstr "Mã PIN đã được lưu thành công."
 
 msgid "The PIN codes you entered are different."
 msgstr "Mã PIN bạn đã nhập là khác nhau."
+
+msgid "The command to wake from standby will be sent multiple times."
+msgstr ""
 
 #, python-format
 msgid ""
@@ -10122,6 +10168,9 @@ msgstr "Âm lượng"
 msgid "Volume down"
 msgstr "Giảm âm lượng"
 
+msgid "Volume keys on the receiver remote will control the TV volume."
+msgstr ""
+
 msgid "Volume up"
 msgstr "Tăng âm lượng"
 
@@ -10158,8 +10207,15 @@ msgstr "Chờ phân vùng"
 msgid "Wake On LAN"
 msgstr "Đường dây mạng LAN"
 
+msgid "Wake the receiver from standby when selected wake command is sent from the TV."
+msgstr ""
+
 msgid "Wakeup"
 msgstr "Thức dậy"
+
+#, fuzzy
+msgid "Wakeup A/V receiver from standby too."
+msgstr "Nhận thức dậy từ chế độ chờ"
 
 msgid "Wakeup TV from standby"
 msgstr "Wake Up TV từ chế độ chờ"
@@ -10282,6 +10338,14 @@ msgstr "Khi được bật, các nút mũi tên xung quanh nút OK sẽ tuân th
 
 msgid "When enabled the left, right, CH+/-, B+/-, P+/- buttons will follow the 'neutrino' style zap controls instead of the enigma2 style."
 msgstr "Khi được bật các nút trái, phải, CH +/-, B +/-, P +/- sẽ tuân theo các điều khiển zap kiểu 'neutrino' thay vì kiểu enigma2."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically return to standby when the TV is turned off."
+msgstr "Khi được bật, máy thu sẽ tự động sử dụng đoạn âm thanh mà bạn đã chọn trước đó."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically wake from standby when the TV is turned on."
+msgstr "Khi được bật, máy thu sẽ tự động sử dụng đoạn âm thanh mà bạn đã chọn trước đó."
 
 msgid "When enabled the set top box is able to wakeup on LAN"
 msgstr "Khi được bật, hộp trên cùng có thể thức dậy trên mạng LAN"
@@ -10473,6 +10537,9 @@ msgstr "Khi khác, một bản ghi sẽ bắt đầu sớm hơn thời gian bắ
 msgid "When nonzero, a recording will stop later than the ending time indicated by the EPG."
 msgstr "Khi khác 0, bản ghi sẽ dừng muộn hơn thời gian kết thúc được chỉ định bởi EPG."
 
+msgid "When receiver wakes from standby, it will command the TV to switch to the HDMI input the receiver is connected to."
+msgstr ""
+
 msgid "When selected this allows video modes to be selected even if they are not reported as supported."
 msgstr "Khi được chọn, điều này cho phép các chế độ video được chọn ngay cả khi chúng không được báo cáo là được hỗ trợ."
 
@@ -10481,6 +10548,9 @@ msgstr "Khi nội dung có tỷ lệ khung hình là 16: 9, hãy chọn có chia
 
 msgid "When the content has an aspect ratio of 4:3, choose whether to scale/stretch the picture."
 msgstr "Khi nội dung có tỷ lệ khung hình là 4: 3, hãy chọn chia tỷ lệ / kéo dài hình ảnh."
+
+msgid "When the receiver wakes from standby or deep standby, it will send a command to the TV to bring it out of standby too."
+msgstr ""
 
 msgid "Where to save temporary timeshift recordings?"
 msgstr "Lưu bản ghi timeshift tạm thời ở đâu?"

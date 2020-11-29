@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-21 15:48+0100\n"
+"POT-Creation-Date: 2020-11-27 17:04+0100\n"
 "PO-Revision-Date: 2020-10-26 12:33+0100\n"
 "Last-Translator: mcfly82\n"
 "Language-Team: mcfly82 & wysless\n"
@@ -951,6 +951,10 @@ msgstr "Hallássérülteknek szánt feliratok engedélyezése"
 msgid "Allow unsupported modes"
 msgstr "Nem támogatott módok engedélyezése"
 
+#, fuzzy
+msgid "Allows the TV remote to be used to control the receiver."
+msgstr "TV-távvezérlő használata"
+
 msgid "Alpha"
 msgstr "Alfa"
 
@@ -1267,6 +1271,9 @@ msgstr "Automatikus könyvjelzők"
 msgid "Automatic scan"
 msgstr "Automatikus keresés"
 
+msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
+msgstr ""
+
 msgid "Automatically start timeshift after"
 msgstr "Időcsúszatás automatikus bekapcsolása ennyi idő múlva"
 
@@ -1360,6 +1367,9 @@ msgstr "Alapvető PID info"
 
 msgid "Basque"
 msgstr "Baszk"
+
+msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgstr ""
 
 msgid "Begin time"
 msgstr "Kezdési idő"
@@ -1878,6 +1888,9 @@ msgstr "Parancs végrehajtása..."
 
 msgid "Command order"
 msgstr "Parancs sorrend"
+
+msgid "Command the TV to switch to the correct HDMI input when zap timers activate."
+msgstr ""
 
 msgid "Commit info"
 msgstr "Kötelező információk"
@@ -2624,6 +2637,9 @@ msgstr "Késleltetés a kulcs Ismétlések indítása előtt:"
 msgid "Delay before sequence repeat"
 msgstr "Késleltetés a sorozat ismétlése előtt"
 
+msgid "Delay between CEC commands when sending a series of commands. Some devices require this delay for correct functioning, usually between 50-150ms."
+msgstr ""
+
 msgid "Delay between diseqc commands"
 msgstr "Késleltetés a DiSEqC parancsok között"
 
@@ -3194,11 +3210,12 @@ msgstr "Virgin EPG engedélyezése"
 msgid "Enable auto cable scan"
 msgstr "Automatikus kábel keresés engedélyezése"
 
-msgid "Enable auto fast scan"
+#, fuzzy
+msgid "Enable auto fastscan"
 msgstr "Automatikus gyorskeresés engedélyezése"
 
-#, python-format
-msgid "Enable auto fast scan for %s"
+#, fuzzy, python-format
+msgid "Enable auto fastscan for %s"
 msgstr "Automatikus gyorskeresés engedélyezése ehhez: %s"
 
 msgid "Enable bouquet edit"
@@ -3224,6 +3241,10 @@ msgstr "Mozgatási mód engedélyezése"
 
 msgid "Enable multiple bouquets"
 msgstr "Többszörös listák engedélyezése"
+
+#, fuzzy
+msgid "Enable or disable using HDMI-CEC."
+msgstr "HDMI-CEC engedélyezése"
 
 msgid "Enable parental protection"
 msgstr "Gyermekzár védelem engedélyezése"
@@ -3715,14 +3736,19 @@ msgstr "Gyors"
 msgid "Fast DiSEqC"
 msgstr "Gyors DiSEqC"
 
-msgid "Fast Scan"
-msgstr "Szolgáltatói keresés"
-
 msgid "Fast epoch"
 msgstr "Gyors korszak"
 
 msgid "Fast forward speeds"
 msgstr "Előretekerési sebességek"
+
+#, fuzzy
+msgid "FastScan"
+msgstr "Szolgáltatói keresés"
+
+#, fuzzy
+msgid "Fastscan"
+msgstr "Szolgáltatói keresés"
 
 msgid "Favourites"
 msgstr "Kedvencek"
@@ -4278,6 +4304,9 @@ msgstr "Ikonok"
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr "Ha nem engedélyezi ezt a beállítást, akkor a fájlok és könyvtárak neveiben lévő aláhúzott karakterek szóközzel helyettesítődnek."
 
+msgid "If enabled, a log will be kept of CEC protocol traffic ('hdmicec.log')"
+msgstr ""
+
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
 msgstr "Ha engedélyezi, a könyvjelzők az új hely szerint lesznek frissítve amennyiben áthelyez vagy átmásol egy felvételt."
 
@@ -4297,6 +4326,9 @@ msgstr "Ha 'Igen'-re állítja, a hangfájlok lejátszása csak lista módban t�
 
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "'Igen' beállítás esetén a jelszint értékek (SNR, stb.) az API V3-ból lesznek kiszámítva. Ez egy régebbi API verzió, amely már elavult."
+
+msgid "If set to 'yes' the same commands will be sent to the TV for deep standby events, as are sent during regular standby events."
+msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
 msgstr "Ha több nem elkötelezett DiSEqC kapcsolót használ, a parancsokat többször kell elküldeni. Adja meg a rendszerében lévő kapcsolók számát eggyel csökkentve."
@@ -6380,6 +6412,10 @@ msgstr "Nyomja le az OK gombot egy szolgáltató kiválasztásához."
 msgid "Press OK to select satellites"
 msgstr "Nyomja le az OK gombot a műholdak kiválasztásához"
 
+#, fuzzy
+msgid "Press OK to select the save location of the log file."
+msgstr "Mappa választása naplófájloknak"
+
 msgid "Press OK to select/deselect a CAId."
 msgstr "Nyomja le az OK gombot a CAId ki/bejelöléséhez."
 
@@ -6491,6 +6527,10 @@ msgstr "Puerto Rico"
 
 msgid "Purge deleted user bouquets"
 msgstr "Törölt felhasználói listák végleges eltávolítása"
+
+#, fuzzy
+msgid "Put A/V receiver to standby too."
+msgstr "Készülék kikapcsolása"
 
 msgid "Put TV in standby"
 msgstr "TV kikapcsolása"
@@ -8242,6 +8282,9 @@ msgstr "Salamon-szigetek"
 msgid "Somalia"
 msgstr "Szomália"
 
+msgid "Some TVs do not wake from standby when they receive the 'Image View On' command. If this is the case try the 'Text View On' command instead."
+msgstr ""
+
 msgid "Some plugins are not available:\n"
 msgstr "Egyes bővítmények nem elérhetőek:\n"
 
@@ -8888,6 +8931,9 @@ msgstr "A PIN-kód sikeresen tárolva."
 
 msgid "The PIN codes you entered are different."
 msgstr "A megadott PIN-kódok eltérnek egymástól."
+
+msgid "The command to wake from standby will be sent multiple times."
+msgstr ""
 
 #, python-format
 msgid ""
@@ -10060,6 +10106,9 @@ msgstr "Hangerő"
 msgid "Volume down"
 msgstr "Hangerő le"
 
+msgid "Volume keys on the receiver remote will control the TV volume."
+msgstr ""
+
 msgid "Volume up"
 msgstr "Hangerő fel"
 
@@ -10096,8 +10145,15 @@ msgstr "Várakozás a partícióra"
 msgid "Wake On LAN"
 msgstr "Ébresztés LAN-on"
 
+msgid "Wake the receiver from standby when selected wake command is sent from the TV."
+msgstr ""
+
 msgid "Wakeup"
 msgstr "Felébresztés"
+
+#, fuzzy
+msgid "Wakeup A/V receiver from standby too."
+msgstr "A készülék felébresztése készenlétből"
 
 msgid "Wakeup TV from standby"
 msgstr "A TV felébresztése készenléti módból"
@@ -10217,6 +10273,14 @@ msgstr "Ha engedélyezi, az 'OK' gomb körül lévő nyíl gombok az 'enigma2' s
 
 msgid "When enabled the left, right, CH+/-, B+/-, P+/- buttons will follow the 'neutrino' style zap controls instead of the enigma2 style."
 msgstr "Ha engedélyezi, a bal, jobb, CH+/-, B+/-, P+/- gombok az 'enigma2' stílus helyett 'neutrino' stílusban fognak csatornát váltani."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically return to standby when the TV is turned off."
+msgstr "A készülék ugyanazt a hangsávot fogja legközelebb is kiválasztani, amit Ön legutoljára kiválasztott."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically wake from standby when the TV is turned on."
+msgstr "A készülék ugyanazt a hangsávot fogja legközelebb is kiválasztani, amit Ön legutoljára kiválasztott."
 
 msgid "When enabled the set top box is able to wakeup on LAN"
 msgstr "Ha engedélyezi, a készülék képes lesz LAN-on keresztül bekapcsolni."
@@ -10407,6 +10471,9 @@ msgstr "Ennyivel korábban kezdje a felvételt, mint amennyi időt mond az EPG."
 msgid "When nonzero, a recording will stop later than the ending time indicated by the EPG."
 msgstr "Ennyivel később fejezze be a felvételt, mint amennyi időt mond az EPG."
 
+msgid "When receiver wakes from standby, it will command the TV to switch to the HDMI input the receiver is connected to."
+msgstr ""
+
 msgid "When selected this allows video modes to be selected even if they are not reported as supported."
 msgstr "Ezzel engedélyezheti a nem támogatott videómódok kiválasztását."
 
@@ -10415,6 +10482,9 @@ msgstr "Egy 16:9-es kép méretarányú tartalom nagyítva vagy széthúzva legy
 
 msgid "When the content has an aspect ratio of 4:3, choose whether to scale/stretch the picture."
 msgstr "Egy 4:3-as kép méretarányú tartalom nagyítva vagy széthúzva legyen."
+
+msgid "When the receiver wakes from standby or deep standby, it will send a command to the TV to bring it out of standby too."
+msgstr ""
 
 msgid "Where to save temporary timeshift recordings?"
 msgstr "Hová kerüljenek az átmeneti időcsúsztatás felvételek?"

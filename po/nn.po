@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-21 15:48+0100\n"
+"POT-Creation-Date: 2020-11-27 17:04+0100\n"
 "PO-Revision-Date: 2013-10-23 19:15+0100\n"
 "Last-Translator: andy1 <dmmm8000pvr@gmail.com>\n"
 "Language-Team: none\n"
@@ -1022,6 +1022,10 @@ msgstr "Tillate underteksting for hørselshemmede"
 msgid "Allow unsupported modes"
 msgstr "ikke støttet"
 
+#, fuzzy
+msgid "Allows the TV remote to be used to control the receiver."
+msgstr "Bruk fjernkontroll tilhørende TV"
+
 #
 msgid "Alpha"
 msgstr "Alfa"
@@ -1375,6 +1379,9 @@ msgstr "Automatisk søk"
 msgid "Automatic scan"
 msgstr "Automatisk søk"
 
+msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
+msgstr ""
+
 msgid "Automatically start timeshift after"
 msgstr "Start automatisk timeshift etter"
 
@@ -1484,6 +1491,9 @@ msgstr ""
 
 msgid "Basque"
 msgstr "Baskisk"
+
+msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgstr ""
 
 #
 msgid "Begin time"
@@ -2058,6 +2068,9 @@ msgstr "Kommando utføres..."
 #
 msgid "Command order"
 msgstr "Kommando rekkefølge"
+
+msgid "Command the TV to switch to the correct HDMI input when zap timers activate."
+msgstr ""
 
 msgid "Commit info"
 msgstr ""
@@ -2885,6 +2898,9 @@ msgstr "Tidsforsinkelse før repeterende tast starter:"
 msgid "Delay before sequence repeat"
 msgstr ""
 
+msgid "Delay between CEC commands when sending a series of commands. Some devices require this delay for correct functioning, usually between 50-150ms."
+msgstr ""
+
 msgid "Delay between diseqc commands"
 msgstr ""
 
@@ -3537,11 +3553,11 @@ msgstr ""
 msgid "Enable auto cable scan"
 msgstr ""
 
-msgid "Enable auto fast scan"
+msgid "Enable auto fastscan"
 msgstr ""
 
 #, python-format
-msgid "Enable auto fast scan for %s"
+msgid "Enable auto fastscan for %s"
 msgstr ""
 
 #
@@ -3572,6 +3588,10 @@ msgstr "Aktivere flytte modus"
 #
 msgid "Enable multiple bouquets"
 msgstr "Aktivere flere kanallister"
+
+#, fuzzy
+msgid "Enable or disable using HDMI-CEC."
+msgstr "Aktivere EIT EPG"
 
 msgid "Enable parental protection"
 msgstr ""
@@ -4104,15 +4124,20 @@ msgstr "Hurtig"
 msgid "Fast DiSEqC"
 msgstr "Hurtig DiSEqC"
 
-msgid "Fast Scan"
-msgstr "Hurtigsøk"
-
 msgid "Fast epoch"
 msgstr "Hurtig epoch"
 
 #
 msgid "Fast forward speeds"
 msgstr "Framoverspolings hastigheter"
+
+#, fuzzy
+msgid "FastScan"
+msgstr "Hurtigsøk"
+
+#, fuzzy
+msgid "Fastscan"
+msgstr "Hurtigsøk"
 
 #
 msgid "Favourites"
@@ -4727,6 +4752,9 @@ msgstr "Varsler"
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr ""
 
+msgid "If enabled, a log will be kept of CEC protocol traffic ('hdmicec.log')"
+msgstr ""
+
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
 msgstr ""
 
@@ -4744,6 +4772,9 @@ msgid "If set as 'Yes', then audiofiles are played in 'list mode' only, instead 
 msgstr ""
 
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
+msgstr ""
+
+msgid "If set to 'yes' the same commands will be sent to the TV for deep standby events, as are sent during regular standby events."
 msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
@@ -7102,6 +7133,10 @@ msgstr "Trykk OK for å velge en leverandør."
 msgid "Press OK to select satellites"
 msgstr ""
 
+#, fuzzy
+msgid "Press OK to select the save location of the log file."
+msgstr "Oppretter katalog %s mislyktes."
+
 msgid "Press OK to select/deselect a CAId."
 msgstr "Trykk OK for å velge/fjerne en CAId."
 
@@ -7222,6 +7257,10 @@ msgstr ""
 
 msgid "Purge deleted user bouquets"
 msgstr ""
+
+#, fuzzy
+msgid "Put A/V receiver to standby too."
+msgstr "Slå av mottaker"
 
 msgid "Put TV in standby"
 msgstr "Slå av TV"
@@ -9163,6 +9202,9 @@ msgstr ""
 msgid "Somalia"
 msgstr ""
 
+msgid "Some TVs do not wake from standby when they receive the 'Image View On' command. If this is the case try the 'Text View On' command instead."
+msgstr ""
+
 #
 msgid "Some plugins are not available:\n"
 msgstr "Noen programtillegg er ikke tilgjengelig:\n"
@@ -9873,6 +9915,9 @@ msgstr ""
 
 msgid "The PIN codes you entered are different."
 msgstr "Du har tastet inn feil PIN kode"
+
+msgid "The command to wake from standby will be sent multiple times."
+msgstr ""
 
 #, fuzzy, python-format
 msgid ""
@@ -11170,6 +11215,9 @@ msgstr "Volum"
 msgid "Volume down"
 msgstr ""
 
+msgid "Volume keys on the receiver remote will control the TV volume."
+msgstr ""
+
 msgid "Volume up"
 msgstr ""
 
@@ -11213,8 +11261,15 @@ msgstr "Venter på partisjon"
 msgid "Wake On LAN"
 msgstr ""
 
+msgid "Wake the receiver from standby when selected wake command is sent from the TV."
+msgstr ""
+
 msgid "Wakeup"
 msgstr "Våkne"
+
+#, fuzzy
+msgid "Wakeup A/V receiver from standby too."
+msgstr "Våkne mottakeren fra avslått stilling"
 
 msgid "Wakeup TV from standby"
 msgstr "Våkne TV fra avslått stilling"
@@ -11338,6 +11393,14 @@ msgstr ""
 
 msgid "When enabled the left, right, CH+/-, B+/-, P+/- buttons will follow the 'neutrino' style zap controls instead of the enigma2 style."
 msgstr ""
+
+#, fuzzy
+msgid "When enabled the receiver will automatically return to standby when the TV is turned off."
+msgstr "Når dette er valgt, vil mottakeren automatisk bruke lyd som tidligere ble aktivert."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically wake from standby when the TV is turned on."
+msgstr "Når dette er valgt, vil mottakeren automatisk bruke lyd som tidligere ble aktivert."
 
 msgid "When enabled the set top box is able to wakeup on LAN"
 msgstr ""
@@ -11533,6 +11596,9 @@ msgstr "Når annet enn null er valgt vil et opptak starte tidligere enn starttid
 msgid "When nonzero, a recording will stop later than the ending time indicated by the EPG."
 msgstr "Når annet enn null er valgt vil et opptak stoppe senere enn sluttidspunktet angitt av EPG."
 
+msgid "When receiver wakes from standby, it will command the TV to switch to the HDMI input the receiver is connected to."
+msgstr ""
+
 msgid "When selected this allows video modes to be selected even if they are not reported as supported."
 msgstr ""
 
@@ -11541,6 +11607,9 @@ msgstr "Når innholdet har et sideforhold på 16:9, velg om bildet skal skaleres
 
 msgid "When the content has an aspect ratio of 4:3, choose whether to scale/stretch the picture."
 msgstr "Når innholdet har et sideforhold på 4:3, velg om bildet skal skaleres/strekkes ut."
+
+msgid "When the receiver wakes from standby or deep standby, it will send a command to the TV to bring it out of standby too."
+msgstr ""
 
 msgid "Where to save temporary timeshift recordings?"
 msgstr "Hvor skal midlertidige tidtakeropptak lagres?"

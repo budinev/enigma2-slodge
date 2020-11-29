@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Openpli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-21 15:48+0100\n"
+"POT-Creation-Date: 2020-11-27 17:04+0100\n"
 "PO-Revision-Date: 2019-04-03 06:49+0300\n"
 "Last-Translator: \n"
 "Language-Team: Raivo, Henkka, eesatfan, rimas, zeros\\n faas, sateks, valgekotkas, tigekala, rootsikunn\\n kain, i70, mustkass, pelmeen, Scott\\n <digi-tv.ee>\n"
@@ -955,6 +955,10 @@ msgstr "Luba vaegkuuljate subtiitrid"
 msgid "Allow unsupported modes"
 msgstr ""
 
+#, fuzzy
+msgid "Allows the TV remote to be used to control the receiver."
+msgstr "Kasuta teleri pulti"
+
 msgid "Alpha"
 msgstr "Alfa"
 
@@ -1279,6 +1283,9 @@ msgstr "Automaatne järjehoidjad"
 msgid "Automatic scan"
 msgstr "Automaatotsing"
 
+msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
+msgstr ""
+
 msgid "Automatically start timeshift after"
 msgstr "Ajanihke automaatne käivitus pärast"
 
@@ -1373,6 +1380,9 @@ msgstr ""
 
 msgid "Basque"
 msgstr "Baski"
+
+msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgstr ""
 
 msgid "Begin time"
 msgstr "Algusaeg"
@@ -1882,6 +1892,9 @@ msgstr "Käskude täitmine"
 
 msgid "Command order"
 msgstr "Käskude järjekord"
+
+msgid "Command the TV to switch to the correct HDMI input when zap timers activate."
+msgstr ""
 
 msgid "Commit info"
 msgstr "Kande info"
@@ -2640,6 +2653,9 @@ msgstr "Viiteaeg enne võtme kordamise algust:"
 msgid "Delay before sequence repeat"
 msgstr "Viide enne jada kordamist"
 
+msgid "Delay between CEC commands when sending a series of commands. Some devices require this delay for correct functioning, usually between 50-150ms."
+msgstr ""
+
 msgid "Delay between diseqc commands"
 msgstr "Viide diseqc käskude vahel"
 
@@ -3222,11 +3238,12 @@ msgstr "Luba Virgin EPG"
 msgid "Enable auto cable scan"
 msgstr "Luba automaatne kaabliotsing"
 
-msgid "Enable auto fast scan"
+#, fuzzy
+msgid "Enable auto fastscan"
 msgstr "Luba automaatne kiirotsing"
 
-#, python-format
-msgid "Enable auto fast scan for %s"
+#, fuzzy, python-format
+msgid "Enable auto fastscan for %s"
 msgstr "Luba kiire automaatotsing %s jaoks"
 
 msgid "Enable bouquet edit"
@@ -3252,6 +3269,10 @@ msgstr "Luba liigutamine nimekirjades"
 
 msgid "Enable multiple bouquets"
 msgstr "Luba mitmed nimekirjad"
+
+#, fuzzy
+msgid "Enable or disable using HDMI-CEC."
+msgstr "Luba HDMI-CEC"
 
 msgid "Enable parental protection"
 msgstr "Luba vanemate poolne kontroll"
@@ -3749,14 +3770,19 @@ msgstr "Kiire"
 msgid "Fast DiSEqC"
 msgstr "Kiire DiSEqC"
 
-msgid "Fast Scan"
-msgstr "Kiirotsing"
-
 msgid "Fast epoch"
 msgstr "Kiire kerimine"
 
 msgid "Fast forward speeds"
 msgstr "Edasikerimise kiirused"
+
+#, fuzzy
+msgid "FastScan"
+msgstr "Kiirotsing"
+
+#, fuzzy
+msgid "Fastscan"
+msgstr "Kiirotsing"
 
 msgid "Favourites"
 msgstr "Lemmikud"
@@ -4318,6 +4344,9 @@ msgstr "Ikoonid"
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr ""
 
+msgid "If enabled, a log will be kept of CEC protocol traffic ('hdmicec.log')"
+msgstr ""
+
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
 msgstr ""
 
@@ -4335,6 +4364,9 @@ msgstr ""
 
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "Määrates 'jah', arvutatakse signaali väärused (SNR, jms.) API V3 põhjal. See on vana API versioon, mis on nüüd asendatud uuega."
+
+msgid "If set to 'yes' the same commands will be sent to the TV for deep standby events, as are sent during regular standby events."
+msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
 msgstr ""
@@ -6438,6 +6470,10 @@ msgstr "Kanali valimiseks vajuta OK."
 msgid "Press OK to select satellites"
 msgstr "Vajuta OK satelliitide valikuks"
 
+#, fuzzy
+msgid "Press OK to select the save location of the log file."
+msgstr "Vali logifaili kaust"
+
 msgid "Press OK to select/deselect a CAId."
 msgstr "Vajuta OK valik/valik maha CAId."
 
@@ -6549,6 +6585,10 @@ msgstr "Puerto Rico"
 
 msgid "Purge deleted user bouquets"
 msgstr "Kustutatud lemmiknimekirjade puhastamine"
+
+#, fuzzy
+msgid "Put A/V receiver to standby too."
+msgstr "Pane vastuvõtja ooterežiimi"
 
 msgid "Put TV in standby"
 msgstr "Lülita TV välja"
@@ -8331,6 +8371,9 @@ msgstr "Saalomoni saared"
 msgid "Somalia"
 msgstr "Somaalia"
 
+msgid "Some TVs do not wake from standby when they receive the 'Image View On' command. If this is the case try the 'Text View On' command instead."
+msgstr ""
+
 msgid "Some plugins are not available:\n"
 msgstr "Mõned laiendused pole saadaval:\n"
 
@@ -8986,6 +9029,9 @@ msgstr "PIN kood on edukalt salvestatud"
 
 msgid "The PIN codes you entered are different."
 msgstr "Sisestatud PIN koodid on erinevad."
+
+msgid "The command to wake from standby will be sent multiple times."
+msgstr ""
 
 #, python-format
 msgid ""
@@ -10194,6 +10240,9 @@ msgstr "Helitugevus"
 msgid "Volume down"
 msgstr "Vaiksemaks"
 
+msgid "Volume keys on the receiver remote will control the TV volume."
+msgstr ""
+
 msgid "Volume up"
 msgstr "Valjemaks"
 
@@ -10230,8 +10279,15 @@ msgstr "Oodatakse partitsiooni"
 msgid "Wake On LAN"
 msgstr "Kohtvõrgus äratamine WOL"
 
+msgid "Wake the receiver from standby when selected wake command is sent from the TV."
+msgstr ""
+
 msgid "Wakeup"
 msgstr "Ärata"
+
+#, fuzzy
+msgid "Wakeup A/V receiver from standby too."
+msgstr "Käivita vastuvõtja"
 
 msgid "Wakeup TV from standby"
 msgstr "Käivita teler"
@@ -10354,6 +10410,14 @@ msgstr "Määrates 'jah', toimivad noolenupud ümber OK nupu 'neutrino' stiilis 
 
 msgid "When enabled the left, right, CH+/-, B+/-, P+/- buttons will follow the 'neutrino' style zap controls instead of the enigma2 style."
 msgstr "Määrates 'jah', toimivad vasak, parem, CH+/-, B+/-, P+/- nupud 'neutrino' stiilis kanalivahetusega E2 stiili asemel."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically return to standby when the TV is turned off."
+msgstr "Määrates 'jah', kasutab vastuvõtja automaatselt varem valitud heliriba."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically wake from standby when the TV is turned on."
+msgstr "Määrates 'jah', kasutab vastuvõtja automaatselt varem valitud heliriba."
 
 msgid "When enabled the set top box is able to wakeup on LAN"
 msgstr "Määrates 'jah', on vastuvõtja võimeline aktiveeruma LAN võrgu abil"
@@ -10550,6 +10614,9 @@ msgstr "Salvestamist alustatakse enne saatekavas näidatud aega."
 msgid "When nonzero, a recording will stop later than the ending time indicated by the EPG."
 msgstr "Salvestamine lõpetatakse pärast saatekavas näidatud aega."
 
+msgid "When receiver wakes from standby, it will command the TV to switch to the HDMI input the receiver is connected to."
+msgstr ""
+
 msgid "When selected this allows video modes to be selected even if they are not reported as supported."
 msgstr ""
 
@@ -10558,6 +10625,9 @@ msgstr "Määra, kas 16:9 pildisuhtega sisu tuleb skaleerida/venitada."
 
 msgid "When the content has an aspect ratio of 4:3, choose whether to scale/stretch the picture."
 msgstr "Määra, kas 4:3 pildisuhtega sisu tuleb skaleerida/venitada."
+
+msgid "When the receiver wakes from standby or deep standby, it will send a command to the TV to bring it out of standby too."
+msgstr ""
 
 msgid "Where to save temporary timeshift recordings?"
 msgstr "Kuhu salvestada ajanihke sisu?"

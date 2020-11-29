@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLI Enigma2 Official Greek Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-21 15:48+0100\n"
+"POT-Creation-Date: 2020-11-27 17:04+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: 344784320@qq.com\n"
 "Language-Team: Openpli Team\n"
@@ -943,6 +943,10 @@ msgstr "允许为听障者提供辅助字幕"
 msgid "Allow unsupported modes"
 msgstr "允许不支持的模式"
 
+#, fuzzy
+msgid "Allows the TV remote to be used to control the receiver."
+msgstr "用电视遥控"
+
 msgid "Alpha"
 msgstr "阿尔法"
 
@@ -1260,6 +1264,9 @@ msgstr "自动书签"
 msgid "Automatic scan"
 msgstr "自动扫描"
 
+msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
+msgstr ""
+
 msgid "Automatically start timeshift after"
 msgstr "自动开始时光平移"
 
@@ -1353,6 +1360,9 @@ msgstr "基本PID信息"
 
 msgid "Basque"
 msgstr "巴斯克"
+
+msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgstr ""
 
 msgid "Begin time"
 msgstr "开始时间"
@@ -1871,6 +1881,9 @@ msgstr "执行命令..."
 
 msgid "Command order"
 msgstr "命令顺序"
+
+msgid "Command the TV to switch to the correct HDMI input when zap timers activate."
+msgstr ""
 
 msgid "Commit info"
 msgstr "提交信息"
@@ -2621,6 +2634,9 @@ msgstr "按键重按延迟时间："
 msgid "Delay before sequence repeat"
 msgstr "重复序列前延迟"
 
+msgid "Delay between CEC commands when sending a series of commands. Some devices require this delay for correct functioning, usually between 50-150ms."
+msgstr ""
+
 msgid "Delay between diseqc commands"
 msgstr "DISEQC命令间的延迟时间"
 
@@ -3187,11 +3203,12 @@ msgstr "启用未开发 EPG"
 msgid "Enable auto cable scan"
 msgstr "启用自动扫描"
 
-msgid "Enable auto fast scan"
+#, fuzzy
+msgid "Enable auto fastscan"
 msgstr "启用快速扫描"
 
-#, python-format
-msgid "Enable auto fast scan for %s"
+#, fuzzy, python-format
+msgid "Enable auto fastscan for %s"
 msgstr "为 %s 启用快速自动扫描"
 
 msgid "Enable bouquet edit"
@@ -3217,6 +3234,10 @@ msgstr "允许移动模式"
 
 msgid "Enable multiple bouquets"
 msgstr "启用多自定义列表"
+
+#, fuzzy
+msgid "Enable or disable using HDMI-CEC."
+msgstr "启用HDMI-CEC"
 
 msgid "Enable parental protection"
 msgstr "启用家长保护"
@@ -3712,14 +3733,19 @@ msgstr "快速"
 msgid "Fast DiSEqC"
 msgstr "快速DiSEqC"
 
-msgid "Fast Scan"
-msgstr "快速扫描"
-
 msgid "Fast epoch"
 msgstr "快速时期"
 
 msgid "Fast forward speeds"
 msgstr "快进速度"
+
+#, fuzzy
+msgid "FastScan"
+msgstr "快速扫描"
+
+#, fuzzy
+msgid "Fastscan"
+msgstr "快速扫描"
 
 msgid "Favourites"
 msgstr "收藏夹"
@@ -4277,6 +4303,9 @@ msgstr "图标"
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr "如果禁用，则不显示文件名和目录名中的下划线字符，并用空格替换。"
 
+msgid "If enabled, a log will be kept of CEC protocol traffic ('hdmicec.log')"
+msgstr ""
+
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
 msgstr "如果启用，则在移动或复制录制时，书签将随新位置更新。"
 
@@ -4294,6 +4323,9 @@ msgstr "如果设置为“是”，则音频文件仅在“列表模式”下播
 
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "如果设置为“是”，信号值（信噪比等）将从API V3计算。这是一个旧的api版本，现已被取代。"
+
+msgid "If set to 'yes' the same commands will be sent to the TV for deep standby events, as are sent during regular standby events."
+msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
 msgstr "如果使用多个未提交的开关，则必须多次发送diseqc命令。设置为链中未提交的开关数减去1。"
@@ -6371,6 +6403,10 @@ msgstr "按OK键选择一个服务。"
 msgid "Press OK to select satellites"
 msgstr "按OK键选择一颗卫星。"
 
+#, fuzzy
+msgid "Press OK to select the save location of the log file."
+msgstr "选择日志文件的目录"
+
 msgid "Press OK to select/deselect a CAId."
 msgstr "按OK键 选择/取消 CAID"
 
@@ -6482,6 +6518,10 @@ msgstr "波多黎各"
 
 msgid "Purge deleted user bouquets"
 msgstr "清除已删除的自定义频道组"
+
+#, fuzzy
+msgid "Put A/V receiver to standby too."
+msgstr "设置机顶盒待机"
 
 msgid "Put TV in standby"
 msgstr "待机"
@@ -8235,6 +8275,9 @@ msgstr ""
 msgid "Somalia"
 msgstr ""
 
+msgid "Some TVs do not wake from standby when they receive the 'Image View On' command. If this is the case try the 'Text View On' command instead."
+msgstr ""
+
 msgid "Some plugins are not available:\n"
 msgstr "一些插件不可用:\n"
 
@@ -8880,6 +8923,9 @@ msgstr "已成功保存PIN码。"
 
 msgid "The PIN codes you entered are different."
 msgstr "密码输入不相同。"
+
+msgid "The command to wake from standby will be sent multiple times."
+msgstr ""
 
 #, python-format
 msgid ""
@@ -10058,6 +10104,9 @@ msgstr "音量"
 msgid "Volume down"
 msgstr "音量减"
 
+msgid "Volume keys on the receiver remote will control the TV volume."
+msgstr ""
+
 msgid "Volume up"
 msgstr "音量加"
 
@@ -10094,8 +10143,15 @@ msgstr "等待分区"
 msgid "Wake On LAN"
 msgstr "唤醒网络"
 
+msgid "Wake the receiver from standby when selected wake command is sent from the TV."
+msgstr ""
+
 msgid "Wakeup"
 msgstr "唤醒"
+
+#, fuzzy
+msgid "Wakeup A/V receiver from standby too."
+msgstr "从待机状态唤醒电视"
 
 msgid "Wakeup TV from standby"
 msgstr "唤醒电视"
@@ -10218,6 +10274,14 @@ msgstr "一旦启用，OK键周围的箭头键将使用 'neutrino'作为切换�
 
 msgid "When enabled the left, right, CH+/-, B+/-, P+/- buttons will follow the 'neutrino' style zap controls instead of the enigma2 style."
 msgstr "一旦启用，左右键以及 CH+/-, B+/-, P+/- 键将使用 'neutrino'切换类型而不是enigma2类型。"
+
+#, fuzzy
+msgid "When enabled the receiver will automatically return to standby when the TV is turned off."
+msgstr "一旦启用，接收机将会自动使用你之前所选择的音轨。"
+
+#, fuzzy
+msgid "When enabled the receiver will automatically wake from standby when the TV is turned on."
+msgstr "一旦启用，接收机将会自动使用你之前所选择的音轨。"
 
 msgid "When enabled the set top box is able to wakeup on LAN"
 msgstr "一旦启用，机顶盒将可以通过LAN唤醒。"
@@ -10409,6 +10473,9 @@ msgstr "非零时，录制将早于EPG注明的时间开始。"
 msgid "When nonzero, a recording will stop later than the ending time indicated by the EPG."
 msgstr "非零时，录制将会晚于EPG注明的时间结束。"
 
+msgid "When receiver wakes from standby, it will command the TV to switch to the HDMI input the receiver is connected to."
+msgstr ""
+
 msgid "When selected this allows video modes to be selected even if they are not reported as supported."
 msgstr "选择此选项后，即使未报告支持视频模式，也可以选择视频模式。"
 
@@ -10417,6 +10484,9 @@ msgstr "当内容为16：9横纵比时，选择是否拉伸画面。"
 
 msgid "When the content has an aspect ratio of 4:3, choose whether to scale/stretch the picture."
 msgstr "当内容为4：3横纵比时，选择是否拉伸画面。"
+
+msgid "When the receiver wakes from standby or deep standby, it will send a command to the TV to bring it out of standby too."
+msgstr ""
 
 msgid "Where to save temporary timeshift recordings?"
 msgstr "在哪里保存时光平移临时录制的内容?"

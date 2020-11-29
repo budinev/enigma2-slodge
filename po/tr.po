@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OPENPLi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-21 15:48+0100\n"
+"POT-Creation-Date: 2020-11-27 17:04+0100\n"
 "PO-Revision-Date: 2015-12-18 21:05+0200\n"
 "Last-Translator: Yetkin AYDIN <yetkina@gmail.com>\n"
 "Language-Team: http://www.hurforum.com <yetkina@gmail.com>\n"
@@ -949,6 +949,10 @@ msgstr "Işitme engelliler için altyazı sağlar"
 msgid "Allow unsupported modes"
 msgstr "Desteklenmiyor"
 
+#, fuzzy
+msgid "Allows the TV remote to be used to control the receiver."
+msgstr "TV uzaktan kumandasını kullan"
+
 msgid "Alpha"
 msgstr "Saydamlık"
 
@@ -1277,6 +1281,9 @@ msgstr "Otomatik Tarama"
 msgid "Automatic scan"
 msgstr "Otomatik Tarama"
 
+msgid "Automatically put the TV in standby whenever the receiver goes into standby or deep standby."
+msgstr ""
+
 msgid "Automatically start timeshift after"
 msgstr "Kayıt bitince otomatik başlat"
 
@@ -1372,6 +1379,9 @@ msgstr ""
 
 msgid "Basque"
 msgstr "Basque"
+
+msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgstr ""
 
 msgid "Begin time"
 msgstr "Başlama zamanı"
@@ -1889,6 +1899,9 @@ msgstr "Komut çalıştırılıyor..."
 
 msgid "Command order"
 msgstr "Komut sırası"
+
+msgid "Command the TV to switch to the correct HDMI input when zap timers activate."
+msgstr ""
 
 msgid "Commit info"
 msgstr ""
@@ -2661,6 +2674,9 @@ msgstr "Key (şifre) beklemeden önce tekrar süresi:"
 msgid "Delay before sequence repeat"
 msgstr "Dizi tekrarı önce Gecikme"
 
+msgid "Delay between CEC commands when sending a series of commands. Some devices require this delay for correct functioning, usually between 50-150ms."
+msgstr ""
+
 msgid "Delay between diseqc commands"
 msgstr "Diseqc komutları arasındaki gecikme"
 
@@ -3252,12 +3268,13 @@ msgstr "Virgin EPG Aktif"
 msgid "Enable auto cable scan"
 msgstr "Otomatik kablo taramayı etkinleştir"
 
-msgid "Enable auto fast scan"
+#, fuzzy
+msgid "Enable auto fastscan"
 msgstr "Otomatik hızlı taramayı etkinleştir"
 
-#, python-format
-msgid "Enable auto fast scan for %s"
-msgstr ""
+#, fuzzy, python-format
+msgid "Enable auto fastscan for %s"
+msgstr "Otomatik hızlı taramayı etkinleştir"
 
 msgid "Enable bouquet edit"
 msgstr "Buket düzenlemeyi aç"
@@ -3282,6 +3299,10 @@ msgstr "Taşıma kipini aç"
 
 msgid "Enable multiple bouquets"
 msgstr "Çoklu buket kullanımını etkin"
+
+#, fuzzy
+msgid "Enable or disable using HDMI-CEC."
+msgstr "EIT EPG Aktif"
 
 msgid "Enable parental protection"
 msgstr "Aile koruması etkin"
@@ -3776,14 +3797,19 @@ msgstr "Hızlı"
 msgid "Fast DiSEqC"
 msgstr "Hızlı DiSEqC"
 
-msgid "Fast Scan"
-msgstr "Hızlı Tarama"
-
 msgid "Fast epoch"
 msgstr "Hızlı tur"
 
 msgid "Fast forward speeds"
 msgstr "Hızlı ileri sarma hızı"
+
+#, fuzzy
+msgid "FastScan"
+msgstr "Hızlı Tarama"
+
+#, fuzzy
+msgid "Fastscan"
+msgstr "Hızlı Tarama"
 
 msgid "Favourites"
 msgstr "Favoriler"
@@ -4359,6 +4385,9 @@ msgstr "Simgeler"
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr ""
 
+msgid "If enabled, a log will be kept of CEC protocol traffic ('hdmicec.log')"
+msgstr ""
+
 msgid "If enabled, bookmarks will be updated with the new location when you move or copy a recording."
 msgstr ""
 
@@ -4376,6 +4405,9 @@ msgid "If set as 'Yes', then audiofiles are played in 'list mode' only, instead 
 msgstr ""
 
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
+msgstr ""
+
+msgid "If set to 'yes' the same commands will be sent to the TV for deep standby events, as are sent during regular standby events."
 msgstr ""
 
 msgid "If using multiple uncommitted switches the DiSEqC commands must be sent multiple times. Set to the number of uncommitted switches in the chain minus one."
@@ -6509,6 +6541,10 @@ msgstr "Bir sağlayıcı seçmek için OK tuşuna basın."
 msgid "Press OK to select satellites"
 msgstr "Uydu seçmek için OK tuşuna basın"
 
+#, fuzzy
+msgid "Press OK to select the save location of the log file."
+msgstr "%s klasörü oluşturulamadı."
+
 msgid "Press OK to select/deselect a CAId."
 msgstr "CAId seçmek/bırakmak için OK'a basın."
 
@@ -6620,6 +6656,10 @@ msgstr ""
 
 msgid "Purge deleted user bouquets"
 msgstr "Buketleri Sil"
+
+#, fuzzy
+msgid "Put A/V receiver to standby too."
+msgstr "Alıcıyı bekleme konumuna al"
 
 msgid "Put TV in standby"
 msgstr "TV yi bekleme konumuna al"
@@ -8419,6 +8459,9 @@ msgstr ""
 msgid "Somalia"
 msgstr ""
 
+msgid "Some TVs do not wake from standby when they receive the 'Image View On' command. If this is the case try the 'Text View On' command instead."
+msgstr ""
+
 msgid "Some plugins are not available:\n"
 msgstr "Bazı eklentiler kullanılabilir değil:\n"
 
@@ -9082,6 +9125,9 @@ msgstr ""
 
 msgid "The PIN codes you entered are different."
 msgstr "Girdiğiniz PIN kodları farklı."
+
+msgid "The command to wake from standby will be sent multiple times."
+msgstr ""
 
 #, fuzzy, python-format
 msgid ""
@@ -10281,6 +10327,9 @@ msgstr "Ses"
 msgid "Volume down"
 msgstr "Ses Kıs"
 
+msgid "Volume keys on the receiver remote will control the TV volume."
+msgstr ""
+
 msgid "Volume up"
 msgstr "Ses Aç"
 
@@ -10317,8 +10366,15 @@ msgstr "Bölümleme bekleniyor"
 msgid "Wake On LAN"
 msgstr "LAN etkinse uyandır."
 
+msgid "Wake the receiver from standby when selected wake command is sent from the TV."
+msgstr ""
+
 msgid "Wakeup"
 msgstr "Wake Up"
+
+#, fuzzy
+msgid "Wakeup A/V receiver from standby too."
+msgstr "Bekleme Modunda açılış saati"
 
 msgid "Wakeup TV from standby"
 msgstr "TV'nin bekleme modundan çıkmasını bekle"
@@ -10438,6 +10494,14 @@ msgstr "OK tuşu etrafında ok düğmelerini etkin olduğunda 'neutrino' tarzı 
 
 msgid "When enabled the left, right, CH+/-, B+/-, P+/- buttons will follow the 'neutrino' style zap controls instead of the enigma2 style."
 msgstr "Sol, Sağ, CH +/-, B +/- P +/- düğmeleri etkin olduğunda 'neutrino' tarzı kanal değiştirmek kontrolleri yerine enigma2 tarzını takip edecektir."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically return to standby when the TV is turned off."
+msgstr "Alıcı otomatik olarak önceden seçilen sesi izini kullanır."
+
+#, fuzzy
+msgid "When enabled the receiver will automatically wake from standby when the TV is turned on."
+msgstr "Alıcı otomatik olarak önceden seçilen sesi izini kullanır."
 
 msgid "When enabled the set top box is able to wakeup on LAN"
 msgstr "Cihazda LAN uyandırma yapabiliyor etkin olduğunda"
@@ -10633,6 +10697,9 @@ msgstr "Boş değilse, kayıt başlangıç ​​zamanı EPG ile gösterilenden 
 msgid "When nonzero, a recording will stop later than the ending time indicated by the EPG."
 msgstr "Boş değilse, kayıt EPG zamanından önce tamamlanır."
 
+msgid "When receiver wakes from standby, it will command the TV to switch to the HDMI input the receiver is connected to."
+msgstr ""
+
 msgid "When selected this allows video modes to be selected even if they are not reported as supported."
 msgstr ""
 
@@ -10641,6 +10708,9 @@ msgstr "16:9 en boy oranı varsa, resmi büyütme/uzatma için seçebilirsiniz."
 
 msgid "When the content has an aspect ratio of 4:3, choose whether to scale/stretch the picture."
 msgstr "4:3 en boy oranı varsa, resmi büyütme/uzatma için seçebilirsiniz."
+
+msgid "When the receiver wakes from standby or deep standby, it will send a command to the TV to bring it out of standby too."
+msgstr ""
 
 msgid "Where to save temporary timeshift recordings?"
 msgstr "Geçici zaman bükücü kayıtları nereye yapılsın?"
