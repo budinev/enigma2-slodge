@@ -22,7 +22,7 @@ import os
 
 config.misc.firstrun = ConfigBoolean(default = True)
 config.misc.languageselected = ConfigBoolean(default = True)
-config.misc.do_overscanwizard = ConfigBoolean(default = OverscanWizard and config.skin.primary_skin.value == "CinoGriPLiFhd/skin.xml")
+config.misc.do_overscanwizard = ConfigBoolean(default = OverscanWizard and config.skin.primary_skin.value == "MX_Graphite/skin.xml")
 config.misc.check_developimage = ConfigBoolean(default = True)
 
 class StartWizard(WizardLanguage, Rc):
