@@ -9,10 +9,7 @@ from skin import applySkinFactor, fonts, parameters
 
 
 def PluginEntryComponent(plugin, width=440):
-	if plugin.icon is None:
-		png = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/plugin.png"))
-	else:
-		png = plugin.icon
+	png = plugin.icon or LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/plugin.png"))
 	nx, ny, nh = parameters.get("PluginBrowserName", applySkinFactor(120, 5, 25))
 	dx, dy, dh = parameters.get("PluginBrowserDescr", applySkinFactor(120, 26, 17))
 	ix, iy, iw, ih = parameters.get("PluginBrowserIcon", applySkinFactor(10, 5, 100, 40))
@@ -35,10 +32,7 @@ def PluginCategoryComponent(name, png, width=440):
 
 
 def PluginDownloadComponent(plugin, name, version=None, width=440):
-	if plugin.icon is None:
-		png = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/plugin.png"))
-	else:
-		png = plugin.icon
+	png = plugin.icon or LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "icons/plugin.png"))
 	if version:
 		if "+git" in version:
 			# remove git "hash"
