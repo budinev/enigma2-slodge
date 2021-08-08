@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 11:54+0200\n"
+"POT-Creation-Date: 2021-08-06 08:40+0200\n"
 "PO-Revision-Date: 2021-03-11 01:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: kvinto\n"
@@ -4979,9 +4979,6 @@ msgstr "БІЛЬШЕ"
 msgid "Macao"
 msgstr "Макао"
 
-msgid "Macedonia (the former Yugoslav Republic of)"
-msgstr "Македонія (колишня Югославська Республіка)"
-
 msgid "Madagascar"
 msgstr "Мадагаскар"
 
@@ -5659,6 +5656,9 @@ msgstr "Стандартний режим"
 
 msgid "North"
 msgstr "Північ"
+
+msgid "North Macedonia (The Republic of)"
+msgstr "Північна Македонія (Республіка)"
 
 msgid "Northern Mariana Islands"
 msgstr "Північні Маріанські острови"
@@ -10276,6 +10276,9 @@ msgstr ""
 "Увага!\n"
 "Це опція для досвідчених користувачів.\n"
 "Дійсно вимкнути виявлення конфлікту за таймером?"
+
+msgid "Warning: FBC-C V1 tuner should be connected to the first slot to work correctly. Otherwise, only 2 out of 8 demodulators will be available when connected in the second slot. "
+msgstr "Попередження: для коректної роботи тюнер FBC-C V1 слід вставити у перший слот. В іншому випадку лише 2 з 8 декодерів будуть доступні при підключенні у другому слоті. "
 
 msgid "Warning: no LNB; using factory defaults."
 msgstr "Увага: немає конвертора; використовуються налаштування за замовчуванням."
