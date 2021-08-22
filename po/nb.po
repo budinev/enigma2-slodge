@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 08:40+0200\n"
+"POT-Creation-Date: 2021-08-17 23:01+0300\n"
 "PO-Revision-Date: 2021-06-19 13:08+0200\n"
 "Last-Translator: GeirJ <dummy@dummy.com>\n"
 "Language-Team: GeirJ\n"
@@ -131,6 +131,20 @@ msgid " updates available."
 msgstr " oppdateringer tilgjengelig."
 
 #, python-format
+msgid "%(freespace)s %(percent)s free disk space"
+msgstr "%(freespace)s %(percent)s ledig diskplass"
+
+#. TRANSLATORS: short time representation hour:minute
+#, python-format
+msgid "%(hour)2d:%(min)02d"
+msgstr ""
+
+#. TRANSLATORS: full time representation hour:minute:seconds
+#, python-format
+msgid "%(hour)2d:%(min)02d:%(sec)02d"
+msgstr ""
+
+#, python-format
 msgid "%.0f GB"
 msgstr "%.0f GB"
 
@@ -165,16 +179,6 @@ msgstr "%03d MB"
 #, python-format
 msgid "%2.1f sec"
 msgstr "%2.1f sek"
-
-#. TRANSLATORS: short time representation hour:minute
-#, python-format
-msgid "%2d:%02d"
-msgstr "%2d:%02d"
-
-#. TRANSLATORS: full time representation hour:minute:seconds
-#, python-format
-msgid "%2d:%02d:%02d"
-msgstr "%2d:%02d:%02d"
 
 #, python-format
 msgid "%3.01f dB"
@@ -371,10 +375,6 @@ msgstr ""
 #, python-format
 msgid "%s %d.%d"
 msgstr "%s %d.%d"
-
-#, python-format
-msgid "%s %s free disk space"
-msgstr "%s %s ledig diskplass"
 
 #, python-format
 msgid "%s (%s)\n"
@@ -6308,8 +6308,8 @@ msgid "Not defined"
 msgstr "Ikke definert"
 
 #, python-format
-msgid "Not enough disk space. Please free up some disk space and try again. (%d MB required, %d MB available)"
-msgstr "Ikke nok diskplass. Frigjør litt diskplass og prøv på nytt. (%d MB nødvendig, %d MB tilgjengelig)"
+msgid "Not enough disk space. Please free up some disk space and try again. (%(req)d MB required, %(avail)d MB available)"
+msgstr "Ikke nok diskplass. Frigjør litt diskplass og prøv på nytt. (%(req)d MB nødvendig, %(avail)d MB tilgjengelig)"
 
 msgid "Not tested:"
 msgstr "Ikke testet:"
@@ -10682,12 +10682,12 @@ msgid "True"
 msgstr "Sann"
 
 #
-msgid "Try to find used transponders in cable network.. please wait..."
-msgstr "Leter etter aktive frekvenser i kabel-TV nettet.. vennligst vent litt..."
+msgid "Looking for active transponders in the cable network. Please wait..."
+msgstr "Leter etter aktive frekvenser i kabel-TV nettet. Vent litt..."
 
 #
-msgid "Try to find used transponders in terrestrial network... please wait..."
-msgstr "Leter etter aktive frekvenser i det digitale bakkenettet... vent litt..."
+msgid "Looking for active transponders in the terrestrial network. Please wait..."
+msgstr "Leter etter aktive frekvenser i det digitale bakkenettet. Vent litt..."
 
 #
 msgid "Trying to download a new packetlist. Please wait..."
@@ -11101,6 +11101,14 @@ msgstr "Kanalsøkevalg"
 
 msgid "User - bouquets"
 msgstr "Kanallister"
+
+#, python-format
+msgid "User Band %d"
+msgstr ""
+
+#, python-format
+msgid "User Band %d (%s)"
+msgstr ""
 
 #
 msgid "User ID"

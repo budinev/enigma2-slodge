@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 3.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 08:40+0200\n"
+"POT-Creation-Date: 2021-08-17 23:01+0300\n"
 "PO-Revision-Date: 2020-11-29 22:07+0200\n"
 "Last-Translator: Мартин Петков <marto74bg@yahoo.co.uk>\n"
 "Language-Team: Bulgarian\n"
@@ -121,6 +121,20 @@ msgid " updates available."
 msgstr " налични актуализации."
 
 #, python-format
+msgid "%(freespace)s %(percent)s free disk space"
+msgstr "%(freespace)s %(percent)s свободно място на диска"
+
+#. TRANSLATORS: short time representation hour:minute
+#, python-format
+msgid "%(hour)2d:%(min)02d"
+msgstr ""
+
+#. TRANSLATORS: full time representation hour:minute:seconds
+#, python-format
+msgid "%(hour)2d:%(min)02d:%(sec)02d"
+msgstr ""
+
+#, python-format
 msgid "%.0f GB"
 msgstr "%.0f ГБ"
 
@@ -155,16 +169,6 @@ msgstr "%03d MB"
 #, python-format
 msgid "%2.1f sec"
 msgstr "%2.1f сек"
-
-#. TRANSLATORS: short time representation hour:minute
-#, python-format
-msgid "%2d:%02d"
-msgstr "%2d:%02d"
-
-#. TRANSLATORS: full time representation hour:minute:seconds
-#, python-format
-msgid "%2d:%02d:%02d"
-msgstr "%2d:%02d:%02d"
 
 #, python-format
 msgid "%3.01f dB"
@@ -356,10 +360,6 @@ msgstr ""
 #, python-format
 msgid "%s %d.%d"
 msgstr "%s %d.%d"
-
-#, python-format
-msgid "%s %s free disk space"
-msgstr "%s %s свободно място на диска"
 
 #, python-format
 msgid "%s (%s)\n"
@@ -5669,8 +5669,8 @@ msgid "Not defined"
 msgstr "Не определен"
 
 #, python-format
-msgid "Not enough disk space. Please free up some disk space and try again. (%d MB required, %d MB available)"
-msgstr "Няма достатъчно място на диска. Моля освободете място на диска и опитайте отново. (%d MB трябват, %d MB налични)"
+msgid "Not enough disk space. Please free up some disk space and try again. (%(req)d MB required, %(avail)d MB available)"
+msgstr "Няма достатъчно място на диска. Моля освободете място на диска и опитайте отново. (%(req)d MB трябват, %(avail)d MB налични)"
 
 msgid "Not tested:"
 msgstr "Не е тестван:"
@@ -9590,11 +9590,11 @@ msgstr "Решение на проблем"
 msgid "True"
 msgstr ""
 
-msgid "Try to find used transponders in cable network.. please wait..."
-msgstr "Опит за откриване на валидни транспондери в кабелната мрежа... моля изчакайте..."
+msgid "Looking for active transponders in the cable network. Please wait..."
+msgstr "Опит за откриване на валидни транспондери в кабелната мрежа. Моля изчакайте..."
 
-msgid "Try to find used transponders in terrestrial network... please wait..."
-msgstr "Опит за откриване на валидни транспондери в наземната мрежа... моля изчакайте..."
+msgid "Looking for active transponders in the terrestrial network. Please wait..."
+msgstr "Опит за откриване на валидни транспондери в наземната мрежа. Моля изчакайте..."
 
 msgid "Trying to download a new packetlist. Please wait..."
 msgstr "Опит за изтегляне на нов списък с пакети. Моля изчакайте..."
@@ -9968,6 +9968,14 @@ msgstr "Тип сканиране на канали"
 
 msgid "User - bouquets"
 msgstr "Потребителски - букети"
+
+#, python-format
+msgid "User Band %d"
+msgstr ""
+
+#, python-format
+msgid "User Band %d (%s)"
+msgstr ""
 
 msgid "User ID"
 msgstr "Потребителско Име"

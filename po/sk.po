@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 08:40+0200\n"
+"POT-Creation-Date: 2021-08-17 23:01+0300\n"
 "PO-Revision-Date: 2021-08-02 08:54+0200\n"
 "Last-Translator: Andrej Tobola <andrej.tobola@gmail.com>\n"
 "Language-Team: \n"
@@ -120,6 +120,20 @@ msgid " updates available."
 msgstr " dostupných aktualizácií."
 
 #, python-format
+msgid "%(freespace)s %(percent)s free disk space"
+msgstr "%(freespace)s %(percent)s voľného miesta na disku"
+
+#. TRANSLATORS: short time representation hour:minute
+#, python-format
+msgid "%(hour)2d:%(min)02d"
+msgstr ""
+
+#. TRANSLATORS: full time representation hour:minute:seconds
+#, python-format
+msgid "%(hour)2d:%(min)02d:%(sec)02d"
+msgstr ""
+
+#, python-format
 msgid "%.0f GB"
 msgstr "%.0f GB"
 
@@ -154,16 +168,6 @@ msgstr "%03d MB"
 #, python-format
 msgid "%2.1f sec"
 msgstr "%2.1f sek"
-
-#. TRANSLATORS: short time representation hour:minute
-#, python-format
-msgid "%2d:%02d"
-msgstr "%2d:%02d"
-
-#. TRANSLATORS: full time representation hour:minute:seconds
-#, python-format
-msgid "%2d:%02d:%02d"
-msgstr "%2d:%02d:%02d"
 
 #, python-format
 msgid "%3.01f dB"
@@ -366,10 +370,6 @@ msgstr ""
 #, python-format
 msgid "%s %d.%d"
 msgstr "%s %d.%d"
-
-#, python-format
-msgid "%s %s free disk space"
-msgstr "%s %s voľného miesta na disku"
 
 #, python-format
 msgid "%s (%s)\n"
@@ -5679,8 +5679,8 @@ msgid "Not defined"
 msgstr "Nedefinované"
 
 #, python-format
-msgid "Not enough disk space. Please free up some disk space and try again. (%d MB required, %d MB available)"
-msgstr "Nie je dostatok miesta na disku. Uvoľnite miesto na disku a a skúste to znova. (Potrebných je %d MB, ale voľných je iba %d MB.)"
+msgid "Not enough disk space. Please free up some disk space and try again. (%(req)d MB required, %(avail)d MB available)"
+msgstr "Nie je dostatok miesta na disku. Uvoľnite miesto na disku a a skúste to znova. (Potrebných je %(req)d MB, ale voľných je iba %(avail)d MB.)"
 
 msgid "Not tested:"
 msgstr "Netestované:"
@@ -9609,11 +9609,11 @@ msgstr "Riešenie problémov"
 msgid "True"
 msgstr "Platné"
 
-msgid "Try to find used transponders in cable network.. please wait..."
-msgstr "Pokúšam sa nájsť použité transpondéry v káblovej sieti... prosím čakajte..."
+msgid "Looking for active transponders in the cable network. Please wait..."
+msgstr "Pokúšam sa nájsť použité transpondéry v káblovej sieti. Prosím čakajte..."
 
-msgid "Try to find used transponders in terrestrial network... please wait..."
-msgstr "Pokúšam sa nájsť používané transpondéry v terestriálnej sieti... Prosím čakajte..."
+msgid "Looking for active transponders in the terrestrial network. Please wait..."
+msgstr "Pokúšam sa nájsť používané transpondéry v terestriálnej sieti. Prosím čakajte..."
 
 msgid "Trying to download a new packetlist. Please wait..."
 msgstr "Pokúšam sa stiahnuť nový zoznam balíčkov. Prosím čakajte..."
@@ -9988,6 +9988,14 @@ msgstr "Typ vyhľadávania staníc"
 
 msgid "User - bouquets"
 msgstr "Užívateľ - prehľady"
+
+#, python-format
+msgid "User Band %d"
+msgstr ""
+
+#, python-format
+msgid "User Band %d (%s)"
+msgstr ""
 
 msgid "User ID"
 msgstr "Užívateľské ID"

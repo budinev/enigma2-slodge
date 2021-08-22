@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 08:40+0200\n"
+"POT-Creation-Date: 2021-08-17 23:01+0300\n"
 "PO-Revision-Date: 2021-07-31 17:00+0800\n"
 "Last-Translator: 孤独之剑 <haotzyy1970@yahoo.com>\n"
 "Language-Team: 孤独之剑 <haotzyy1970@yahoo.com>\n"
@@ -120,6 +120,20 @@ msgid " updates available."
 msgstr " 更新可用."
 
 #, python-format
+msgid "%(freespace)s %(percent)s free disk space"
+msgstr "%(freespace)s %(percent)s 空闲空间"
+
+#. TRANSLATORS: short time representation hour:minute
+#, python-format
+msgid "%(hour)2d:%(min)02d"
+msgstr ""
+
+#. TRANSLATORS: full time representation hour:minute:seconds
+#, python-format
+msgid "%(hour)2d:%(min)02d:%(sec)02d"
+msgstr ""
+
+#, python-format
 msgid "%.0f GB"
 msgstr "%.0f GB"
 
@@ -154,16 +168,6 @@ msgstr "%03d MB"
 #, python-format
 msgid "%2.1f sec"
 msgstr "%2.1f 秒"
-
-#. TRANSLATORS: short time representation hour:minute
-#, python-format
-msgid "%2d:%02d"
-msgstr "%2d:%02d"
-
-#. TRANSLATORS: full time representation hour:minute:seconds
-#, python-format
-msgid "%2d:%02d:%02d"
-msgstr "%2d:%02d:%02d"
 
 #, python-format
 msgid "%3.01f dB"
@@ -355,10 +359,6 @@ msgstr ""
 #, python-format
 msgid "%s %d.%d"
 msgstr "%s %d.%d"
-
-#, python-format
-msgid "%s %s free disk space"
-msgstr "%s %s 空闲空间"
 
 #, python-format
 msgid "%s (%s)\n"
@@ -5659,8 +5659,8 @@ msgid "Not defined"
 msgstr "未定义"
 
 #, python-format
-msgid "Not enough disk space. Please free up some disk space and try again. (%d MB required, %d MB available)"
-msgstr "磁盘空间不足.请释放一些磁盘空间并重试.（%d MB 被请求,%d MB 可用）"
+msgid "Not enough disk space. Please free up some disk space and try again. (%(req)d MB required, %(avail)d MB available)"
+msgstr "磁盘空间不足.请释放一些磁盘空间并重试.（%(req)d MB 被请求, %(avail)d MB 可用）"
 
 msgid "Not tested:"
 msgstr "还未测试:"
@@ -9586,11 +9586,11 @@ msgstr "疑难解答"
 msgid "True"
 msgstr "正确"
 
-msgid "Try to find used transponders in cable network.. please wait..."
+msgid "Looking for active transponders in the cable network. Please wait..."
 msgstr "尝试从电缆找寻可用的转发器.请稍候..."
 
-msgid "Try to find used transponders in terrestrial network... please wait..."
-msgstr "尝试从电缆找寻可用的转发器...请稍候..."
+msgid "Looking for active transponders in the terrestrial network. Please wait..."
+msgstr "尝试从电缆找寻可用的转发器.请稍候..."
 
 msgid "Trying to download a new packetlist. Please wait..."
 msgstr "尝试下载新的软件包列表.请稍候..."
@@ -9966,6 +9966,14 @@ msgstr "按频道类型搜索"
 
 msgid "User - bouquets"
 msgstr "自定义组"
+
+#, python-format
+msgid "User Band %d"
+msgstr ""
+
+#, python-format
+msgid "User Band %d (%s)"
+msgstr ""
 
 msgid "User ID"
 msgstr "用户ID"

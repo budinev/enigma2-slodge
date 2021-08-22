@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-06 08:40+0200\n"
+"POT-Creation-Date: 2021-08-17 23:01+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -129,6 +129,21 @@ msgstr " unicable LNB vstup rotoru"
 msgid " updates available."
 msgstr " dostupných aktualizací."
 
+#
+#, python-format
+msgid "%(freespace)s %(percent)s free disk space"
+msgstr "%(freespace)s %(percent)s volného místa"
+
+#. TRANSLATORS: short time representation hour:minute
+#, python-format
+msgid "%(hour)2d:%(min)02d"
+msgstr ""
+
+#. TRANSLATORS: full time representation hour:minute:seconds
+#, python-format
+msgid "%(hour)2d:%(min)02d:%(sec)02d"
+msgstr ""
+
 #, python-format
 msgid "%.0f GB"
 msgstr "%.0f GB"
@@ -164,16 +179,6 @@ msgstr "%03d MB"
 #, python-format
 msgid "%2.1f sec"
 msgstr "%2.1f sec"
-
-#. TRANSLATORS: short time representation hour:minute
-#, python-format
-msgid "%2d:%02d"
-msgstr "%2d:%02d"
-
-#. TRANSLATORS: full time representation hour:minute:seconds
-#, python-format
-msgid "%2d:%02d:%02d"
-msgstr "%2d:%02d:%02d"
 
 #, python-format
 msgid "%3.01f dB"
@@ -385,11 +390,6 @@ msgstr ""
 #, python-format
 msgid "%s %d.%d"
 msgstr "%s %d.%d"
-
-#
-#, python-format
-msgid "%s %s free disk space"
-msgstr "%s %s volného místa"
 
 #
 #, python-format
@@ -6508,8 +6508,8 @@ msgstr "Nedefinován"
 
 #
 #, python-format
-msgid "Not enough disk space. Please free up some disk space and try again. (%d MB required, %d MB available)"
-msgstr "Nedostatek místa na disku. Uvolněte prostor na disku a zkuste znovu. (%d MB požadováno, %d MB k dispozici)"
+msgid "Not enough disk space. Please free up some disk space and try again. (%(req)d MB required, %(avail)d MB available)"
+msgstr "Nedostatek místa na disku. Uvolněte prostor na disku a zkuste znovu. (%(req)d MB požadováno, %(avail)d MB k dispozici)"
 
 msgid "Not tested:"
 msgstr "Netestováno:"
@@ -10243,7 +10243,7 @@ msgstr ""
 "Pro případné korekce můžete kontaktovat autora\n"
 "na výše uvedené adrese.\n"
 "\n"
-"®17.7.2021"
+"®13.8.2021"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -11038,11 +11038,11 @@ msgid "True"
 msgstr "Ano"
 
 #
-msgid "Try to find used transponders in cable network.. please wait..."
-msgstr "Zkouším najít použité transpondéry v kabelové síti ... prosím, čekejte ..."
+msgid "Looking for active transponders in the cable network. Please wait..."
+msgstr "Zkouším najít použité transpondéry v kabelové síti. Prosím, čekejte..."
 
-msgid "Try to find used transponders in terrestrial network... please wait..."
-msgstr "Hledají se použité transpondéry v pozemní síti... Čekejte, prosím..."
+msgid "Looking for active transponders in the terrestrial network. Please wait..."
+msgstr "Hledají se použité transpondéry v pozemní síti. Prosím, čekejte..."
 
 #
 msgid "Trying to download a new packetlist. Please wait..."
@@ -11471,13 +11471,21 @@ msgstr "Použítý typ vyhledávání programu"
 msgid "User - bouquets"
 msgstr "Oblíbené"
 
+#, python-format
+msgid "User Band %d"
+msgstr "Uživatelské pásmo %d"
+
+#, python-format
+msgid "User Band %d (%s)"
+msgstr "Uživatelské pásmo %d (%s)"
+
 #
 msgid "User ID"
 msgstr "Uživatel"
 
 #
 msgid "User Mode"
-msgstr "Uživatelsky mód"
+msgstr "Uživatelský mód"
 
 #
 msgid "User defined"
@@ -11806,7 +11814,7 @@ msgstr ""
 "Opravdu chcete zakázat kontrolu konfliktů časovačů?"
 
 msgid "Warning: FBC-C V1 tuner should be connected to the first slot to work correctly. Otherwise, only 2 out of 8 demodulators will be available when connected in the second slot. "
-msgstr ""
+msgstr "Varování: aby vše pracovalo správně, FBC-C V1 tuner musí být vložen do prvního slotu. Jestliže je vložen do druhého slotu, budou k dispozici pouze 2 z 8 demodulátorů."
 
 msgid "Warning: no LNB; using factory defaults."
 msgstr "Varování: žádný LNB; používáno tovární nastavení."
