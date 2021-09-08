@@ -217,7 +217,7 @@ class UpdatePluginMenu(Screen):
 	def getUpdateInfos(self):
 		if iSoftwareTools.NetworkConnectionAvailable is True:
 			if iSoftwareTools.available_updates is not 0:
-				self.text = _("There are at least %s updates available.") % (str(iSoftwareTools.available_updates))
+				self.text = _("There are at least %d updates available.") % iSoftwareTools.available_updates
 			else:
 				self.text = "" #_("There are no updates available.")
 			if iSoftwareTools.list_updating is True:
@@ -648,7 +648,7 @@ class PluginManager(Screen, PackageInfoHandler):
 		if retval is not None:
 			if retval is True:
 				if iSoftwareTools.available_updates is not 0:
-					self["status"].setText(_("There are at least ") + str(iSoftwareTools.available_updates) + _(" updates available."))
+					self["status"].setText(_("There are at least %d updates available.") % iSoftwareTools.available_updates)
 				else:
 					self["status"].setText(_("There are no updates available."))
 				self.rebuildList()
@@ -656,7 +656,7 @@ class PluginManager(Screen, PackageInfoHandler):
 				if iSoftwareTools.lastDownloadDate is None:
 					self.setState('error')
 					if iSoftwareTools.NetworkConnectionAvailable:
-						self["status"].setText(_("Updatefeed not available."))
+						self["status"].setText(_("Update feed not available."))
 					else:
 						self["status"].setText(_("No network connection available."))
 				else:
@@ -692,7 +692,7 @@ class PluginManager(Screen, PackageInfoHandler):
 				self["key_yellow"].setText(_("View details"))
 				self["key_blue"].setText("")
 				if len(self.selectedFiles) == 0 and iSoftwareTools.available_updates is not 0:
-					self["status"].setText(_("There are at least ") + str(iSoftwareTools.available_updates) + _(" updates available."))
+					self["status"].setText(_("There are at least %d updates available.") % iSoftwareTools.available_updates)
 				elif len(self.selectedFiles) is not 0:
 					self["status"].setText(str(len(self.selectedFiles)) + _(" packages selected."))
 				else:
@@ -703,7 +703,7 @@ class PluginManager(Screen, PackageInfoHandler):
 				self["key_yellow"].setText("")
 				self["key_blue"].setText("")
 				if len(self.selectedFiles) == 0 and iSoftwareTools.available_updates is not 0:
-					self["status"].setText(_("There are at least ") + str(iSoftwareTools.available_updates) + _(" updates available."))
+					self["status"].setText(_("There are at least %d updates available.") % iSoftwareTools.available_updates)
 					self["key_yellow"].setText(_("Update"))
 				elif len(self.selectedFiles) is not 0:
 					self["status"].setText(str(len(self.selectedFiles)) + _(" packages selected."))

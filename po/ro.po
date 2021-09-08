@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 23:01+0300\n"
+"POT-Creation-Date: 2021-09-02 01:12+0300\n"
 "PO-Revision-Date: 2010-03-09 21:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: HDTV ROMANIA(superonic,costel_mbc,neutrin,otheitis,cipy_1982,neutrin,runcanion)\n"
@@ -23,11 +23,6 @@ msgid ""
 msgstr ""
 "\n"
 "Dupa apasarea OK, va rog asteptati!"
-
-msgid ""
-"\n"
-"Conflict detection disabled!"
-msgstr ""
 
 msgid ""
 "\n"
@@ -119,16 +114,6 @@ msgstr ""
 #, fuzzy, python-format
 msgid "%(freespace)s %(percent)s free disk space"
 msgstr "spatiu liber pe disk"
-
-#. TRANSLATORS: short time representation hour:minute
-#, python-format
-msgid "%(hour)2d:%(min)02d"
-msgstr ""
-
-#. TRANSLATORS: full time representation hour:minute:seconds
-#, python-format
-msgid "%(hour)2d:%(min)02d:%(sec)02d"
-msgstr ""
 
 #, python-format
 msgid "%.0f GB"
@@ -370,16 +355,8 @@ msgid_plural "%s updated packages available"
 msgstr[0] ""
 msgstr[1] ""
 
-#, fuzzy, python-format
-msgid "%s%% Autoinstalling %s"
-msgstr "Instaleaza"
-
 #, python-format
 msgid "%s%d min"
-msgstr ""
-
-#, python-format
-msgid "%s/%s: %s"
 msgstr ""
 
 msgid "(VU+ type)"
@@ -445,28 +422,16 @@ msgstr ""
 msgid "100 MB/s"
 msgstr ""
 
-msgid "10bit"
-msgstr ""
-
 msgid "12V output"
 msgstr ""
 
-msgid "12bit"
-msgstr ""
-
 msgid "13 V"
-msgstr ""
-
-msgid "16:10"
 msgstr ""
 
 msgid "16:10 Letterbox"
 msgstr ""
 
 msgid "16:10 PanScan"
-msgstr ""
-
-msgid "16:9"
 msgstr ""
 
 msgid "16:9 Letterbox"
@@ -483,6 +448,10 @@ msgstr ""
 
 msgid "2"
 msgstr ""
+
+#, fuzzy
+msgid "2 new lines"
+msgstr "arata Infoline"
 
 msgid "20 MB/s"
 msgstr ""
@@ -520,18 +489,6 @@ msgstr ""
 msgid "4"
 msgstr ""
 
-msgid "420"
-msgstr ""
-
-msgid "422"
-msgstr ""
-
-msgid "444"
-msgstr ""
-
-msgid "4:3"
-msgstr ""
-
 msgid "4:3 Letterbox"
 msgstr ""
 
@@ -557,9 +514,6 @@ msgid "8"
 msgstr ""
 
 msgid "8K"
-msgstr ""
-
-msgid "8bit"
 msgstr ""
 
 msgid "9"
@@ -694,9 +648,6 @@ msgid "ACQUIRING TSID/ONID"
 msgstr ""
 
 msgid "AGC:"
-msgstr ""
-
-msgid "ASS File"
 msgstr ""
 
 msgid "ASS file"
@@ -1070,8 +1021,9 @@ msgstr ""
 msgid "Are you sure to reboot to"
 msgstr ""
 
+#. TRANSLATORS: The user is asked to delete all satellite services from a specific orbital position after a configuration change
 #, python-format
-msgid "Are you sure to remove all %d.%d%s%s services?"
+msgid "Are you sure to remove all %s services?"
 msgstr ""
 
 msgid "Are you sure to remove all cable services?"
@@ -1276,15 +1228,16 @@ msgstr "Doriti efectuarea unei scanari a serviciilor?"
 msgid "Auto scart switching"
 msgstr "Auto scart switching"
 
+#, fuzzy, python-format
+msgid "Autoinstalling %s"
+msgstr "Instaleaza"
+
 #, fuzzy
 msgid "Autoinstalling Completed"
 msgstr "Instalare terminata"
 
 msgid "Autoinstalling please wait for packages being updated"
 msgstr ""
-
-msgid "Automatic"
-msgstr "Automat"
 
 msgid "Automatic Scan"
 msgstr ""
@@ -1324,15 +1277,6 @@ msgstr "BER"
 
 msgid "BER:"
 msgstr "BER:"
-
-msgid "BT 2020 CL"
-msgstr ""
-
-msgid "BT 2020 NCL"
-msgstr ""
-
-msgid "BT 709"
-msgstr ""
 
 msgid "Back"
 msgstr "Inapoi"
@@ -1578,9 +1522,6 @@ msgstr ""
 
 msgid "CPU: "
 msgstr ""
-
-msgid "CVBS"
-msgstr "CVBS"
 
 msgid "Cable"
 msgstr "Cablu"
@@ -2070,6 +2011,9 @@ msgstr ""
 msgid "Configure remote control type"
 msgstr "Tip control parental"
 
+msgid "Configure separator type used in full description for separate short and extended descriptions."
+msgstr ""
+
 msgid "Configure the DiSEqC mode for this LNB."
 msgstr ""
 
@@ -2329,6 +2273,9 @@ msgstr ""
 msgid "Configuring"
 msgstr "Se configureaza"
 
+msgid "Conflict detection disabled!"
+msgstr ""
+
 msgid "Conflict not resolved!"
 msgstr ""
 
@@ -2546,9 +2493,6 @@ msgstr "Ceha"
 
 msgid "D"
 msgstr "D"
-
-msgid "DAC"
-msgstr ""
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -2892,7 +2836,7 @@ msgid "Directory browser"
 msgstr ""
 
 #, fuzzy, python-format
-msgid "Directory contains %s and %s."
+msgid "Directory contains %(file)s and %(subdir)s."
 msgstr "Directorul %s nu exista."
 
 msgid "Disable"
@@ -3107,9 +3051,6 @@ msgstr "Doriti restaurarea setarilor dvs?"
 msgid "Do you want to update your receiver?"
 msgstr ""
 
-msgid "Dolby"
-msgstr ""
-
 msgid "Dominica"
 msgstr ""
 
@@ -3268,9 +3209,6 @@ msgstr ""
 
 msgid "Electronic Program Guide"
 msgstr "Ghid Electronic de Programe (EPG)"
-
-msgid "Embedded"
-msgstr ""
 
 msgid "Emergency"
 msgstr ""
@@ -4015,6 +3953,9 @@ msgstr ""
 msgid "Frontprocessor version: %s"
 msgstr ""
 
+msgid "Full description separator"
+msgstr ""
+
 #. TRANSLATORS: (aspect ratio policy: display as fullscreen, even if the content aspect ratio does not match the screen ratio)
 msgid "Full screen"
 msgstr ""
@@ -4036,6 +3977,10 @@ msgstr ""
 
 msgid "G"
 msgstr ""
+
+#, fuzzy
+msgid "GB"
+msgstr "RGB"
 
 #, fuzzy
 msgid "GUI Settings"
@@ -4237,9 +4182,6 @@ msgstr ""
 msgid "HD60/Multibox/Multibox SE"
 msgstr ""
 
-msgid "HDMI"
-msgstr ""
-
 msgid "HDMI Colordepth"
 msgstr ""
 
@@ -4261,9 +4203,6 @@ msgstr ""
 msgid "HDMI-CEC setup"
 msgstr ""
 
-msgid "HDR10"
-msgstr ""
-
 msgid "HDR10 support"
 msgstr ""
 
@@ -4271,9 +4210,6 @@ msgid "HDx1/HD1xxx/HD5x0C/VS1x00/et7x00/et8500/et7000mini"
 msgstr ""
 
 msgid "HELP"
-msgstr ""
-
-msgid "HLG"
 msgstr ""
 
 msgid "HLG support"
@@ -4695,16 +4631,13 @@ msgstr "Instaleaza"
 msgid "Installing software..."
 msgstr "Instaleaza software"
 
-msgid "Instant record"
-msgstr ""
+#, fuzzy
+msgid "Instant recording"
+msgstr "Inregistrare instant"
 
 #, fuzzy
 msgid "Instant recording location"
 msgstr "schimba inregistrare (durata)"
-
-#, fuzzy
-msgid "Instant recording..."
-msgstr "Inregistrare instant"
 
 msgid "Interface: "
 msgstr ""
@@ -5092,6 +5025,12 @@ msgstr "Apasare lunga pe tasta"
 msgid "Longitude"
 msgstr "Longitudine"
 
+msgid "Looking for active transponders in the cable network. Please wait..."
+msgstr "Cautare transpondere folosite in reteaua de cablu. Va rugam asteptati..."
+
+msgid "Looking for active transponders in the terrestrial network. Please wait..."
+msgstr ""
+
 msgid "Loop through from"
 msgstr ""
 
@@ -5103,6 +5042,10 @@ msgstr ""
 
 msgid "Luxembourgish"
 msgstr ""
+
+#, fuzzy
+msgid "MB"
+msgstr "B"
 
 #, fuzzy
 msgid "MMC card"
@@ -6033,16 +5976,10 @@ msgstr "Configurare tuner"
 msgid "PAL"
 msgstr "PAL"
 
-msgid "PCM"
-msgstr ""
-
 msgid "PCR PID"
 msgstr ""
 
 msgid "PDC"
-msgstr ""
-
-msgid "PGS File"
 msgstr ""
 
 msgid "PGS file"
@@ -6071,7 +6008,7 @@ msgstr ""
 msgid "PPanel"
 msgstr ""
 
-msgid "PULSe 4K"
+msgid "PULSe 4K(mini)"
 msgstr ""
 
 msgid "Package list update"
@@ -6826,9 +6763,6 @@ msgstr ""
 msgid "RF output"
 msgstr "Iesire RF"
 
-msgid "RGB"
-msgstr "RGB"
-
 msgid "Radio"
 msgstr "Radio"
 
@@ -7107,6 +7041,9 @@ msgstr "Repeta"
 msgid "Replace `- ` in dialogs with colored text per speaker (like teletext subtitles for the hearing impaired)"
 msgstr ""
 
+msgid "Replace newlines in EPG"
+msgstr ""
+
 msgid "Request for physical address report"
 msgstr ""
 
@@ -7299,9 +7236,6 @@ msgstr ""
 msgid "Rwanda"
 msgstr ""
 
-msgid "S-Video"
-msgstr "S-Video"
-
 msgid "SCPC optimized search range"
 msgstr ""
 
@@ -7314,10 +7248,6 @@ msgstr ""
 msgid "SCR Unicable"
 msgstr ""
 
-#, fuzzy
-msgid "SDR"
-msgstr "SNR"
-
 msgid "SINGLE LAYER DVD"
 msgstr ""
 
@@ -7327,16 +7257,7 @@ msgstr "SNR"
 msgid "SNR:"
 msgstr "SNR:"
 
-msgid "SPDIF"
-msgstr ""
-
-msgid "SRT File"
-msgstr ""
-
 msgid "SRT file"
-msgstr ""
-
-msgid "SSA File"
 msgstr ""
 
 msgid "SSA file"
@@ -7733,6 +7654,9 @@ msgstr ""
 msgid "Select channel to record from"
 msgstr "Selectare canal de inregistrat"
 
+msgid "Select char for replacing newlines in epg."
+msgstr ""
+
 msgid "Select copy destination for:"
 msgstr ""
 
@@ -7768,6 +7692,10 @@ msgstr ""
 
 msgid "Select how you want your receiver to keep the correct time, either from the DVB transponder, or from the internet using NTP. Or use Auto, which will favour using NTP, but will fall back to transponder time when no internet connection is available."
 msgstr ""
+
+#, fuzzy
+msgid "Select image"
+msgstr "sterge file"
 
 msgid "Select input device"
 msgstr ""
@@ -9446,7 +9374,7 @@ msgid "There are at least "
 msgstr ""
 
 #, python-format
-msgid "There are at least %s updates available."
+msgid "There are at least %d updates available."
 msgstr ""
 
 msgid "There are currently no outstanding actions."
@@ -9935,12 +9863,6 @@ msgstr ""
 msgid "True"
 msgstr ""
 
-msgid "Looking for active transponders in the cable network. Please wait..."
-msgstr "Cautare transpondere folosite in reteaua de cablu. Va rugam asteptati..."
-
-msgid "Looking for active transponders in the terrestrial network. Please wait..."
-msgstr ""
-
 msgid "Trying to download a new packetlist. Please wait..."
 msgstr "Descarcare a unei noi liste de pachete. Va rugam asteptati..."
 
@@ -10194,10 +10116,10 @@ msgstr ""
 msgid "Update failed. Your receiver does not have a working internet connection."
 msgstr ""
 
-msgid "Update has completed."
+msgid "Update feed not available."
 msgstr ""
 
-msgid "Updatefeed not available."
+msgid "Update has completed."
 msgstr ""
 
 msgid "Updating"
@@ -10384,9 +10306,6 @@ msgstr "Locatie"
 
 msgid "VMGM (intro trailer)"
 msgstr "VMGM (intro trailer)"
-
-msgid "VOB File"
-msgstr ""
 
 msgid "VOB file"
 msgstr ""
@@ -11003,20 +10922,8 @@ msgstr "Scriere esuata"
 msgid "Write to /tmp/positionersetup.log"
 msgstr ""
 
-msgid "YCbCr420"
-msgstr ""
-
-msgid "YCbCr422"
-msgstr ""
-
-msgid "YCbCr444"
-msgstr ""
-
 msgid "YES"
 msgstr ""
-
-msgid "YPbPr"
-msgstr "YPbPr"
 
 msgid "Year"
 msgstr "An"
@@ -11145,8 +11052,8 @@ msgid "You didn't select a channel to record from."
 msgstr ""
 
 #, python-format
-msgid "You have to wait %s!"
-msgstr "Ai de asteptat %s!"
+msgid "You have to wait %(min)d minutes, %(sec)d seconds!"
+msgstr ""
 
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
@@ -11801,9 +11708,6 @@ msgstr "meniu"
 msgid "mins"
 msgstr "min"
 
-msgid "minutes"
-msgstr "minute"
-
 msgid "month"
 msgstr "luna"
 
@@ -11831,9 +11735,6 @@ msgstr ""
 msgid "multi"
 msgstr ""
 
-msgid "multinorm"
-msgstr "multinorma"
-
 msgid "music/ballet/dance (general)"
 msgstr ""
 
@@ -11845,6 +11746,10 @@ msgstr ""
 
 msgid "never"
 msgstr "niciodata"
+
+#, fuzzy
+msgid "new line"
+msgstr "arata Infoline"
 
 msgid "new media"
 msgstr ""
@@ -11907,6 +11812,10 @@ msgstr ""
 msgid "not_tested"
 msgstr ""
 
+#, fuzzy
+msgid "nothing"
+msgstr "nu face nimic"
+
 msgid "nothing connected"
 msgstr "nimic conectat"
 
@@ -11923,6 +11832,9 @@ msgid "off or wpa2 on"
 msgstr ""
 
 msgid "offset is"
+msgstr ""
+
+msgid "omit"
 msgstr ""
 
 msgid "on"
@@ -12009,9 +11921,6 @@ msgstr ""
 msgid "rewind to the previous chapter"
 msgstr "deruleaza la capitolul anterior"
 
-msgid "rgb"
-msgstr ""
-
 msgid "right"
 msgstr "dreapta"
 
@@ -12039,9 +11948,6 @@ msgstr "starea scanarii"
 
 msgid "science fiction/fantasy/horror"
 msgstr ""
-
-msgid "seconds"
-msgstr "secunde"
 
 msgid "select CAId's"
 msgstr "selecteaza CAId-uri"
@@ -12139,6 +12045,9 @@ msgid "social/political issues/economics (general)"
 msgstr ""
 
 msgid "social/spiritual science"
+msgstr ""
+
+msgid "space"
 msgstr ""
 
 msgid "special events"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 23:01+0300\n"
+"POT-Creation-Date: 2021-09-02 01:12+0300\n"
 "PO-Revision-Date: 2021-04-30 16:06+0200\n"
 "Last-Translator: kueken\n"
 "Language-Team: OpenPLi\n"
@@ -20,13 +20,6 @@ msgid ""
 msgstr ""
 "\n"
 "Nachdem Sie OK gedrückt haben, bitte warten!"
-
-msgid ""
-"\n"
-"Conflict detection disabled!"
-msgstr ""
-"\n"
-"Konflikterkennung deaktiviert!"
 
 msgid ""
 "\n"
@@ -123,16 +116,6 @@ msgstr " Aktualisierungen verfügbar."
 #, python-format
 msgid "%(freespace)s %(percent)s free disk space"
 msgstr "%(freespace)s %(percent)s freier Festplattenspeicher"
-
-#. TRANSLATORS: short time representation hour:minute
-#, python-format
-msgid "%(hour)2d:%(min)02d"
-msgstr ""
-
-#. TRANSLATORS: full time representation hour:minute:seconds
-#, python-format
-msgid "%(hour)2d:%(min)02d:%(sec)02d"
-msgstr ""
 
 #, python-format
 msgid "%.0f GB"
@@ -381,16 +364,8 @@ msgstr[0] "%s Aktualisierung verfügbar"
 msgstr[1] "%s Aktualisierungen verfügbar"
 
 #, python-format
-msgid "%s%% Autoinstalling %s"
-msgstr "%s%% Automatische Installation %s"
-
-#, python-format
 msgid "%s%d min"
 msgstr "%s%d min"
-
-#, python-format
-msgid "%s/%s: %s"
-msgstr "%s/%s: %s"
 
 msgid "(VU+ type)"
 msgstr "(VU + Typ)"
@@ -454,29 +429,17 @@ msgstr "10 MB/s"
 msgid "100 MB/s"
 msgstr "100 MB/s"
 
-msgid "10bit"
-msgstr "10bit"
-
 msgid "12V output"
 msgstr "12V-Ausgang"
 
-msgid "12bit"
-msgstr "12bit"
-
 msgid "13 V"
 msgstr "13 V"
-
-msgid "16:10"
-msgstr "16:10"
 
 msgid "16:10 Letterbox"
 msgstr "16:10 Letterbox"
 
 msgid "16:10 PanScan"
 msgstr "16:10 PanScan"
-
-msgid "16:9"
-msgstr "16:9"
 
 msgid "16:9 Letterbox"
 msgstr "16:9 Letterbox"
@@ -492,6 +455,10 @@ msgstr "18 V"
 
 msgid "2"
 msgstr "2"
+
+#, fuzzy
+msgid "2 new lines"
+msgstr "Zweizeilig"
 
 msgid "20 MB/s"
 msgstr "20 MB/s"
@@ -529,18 +496,6 @@ msgstr "3D-Modus"
 msgid "4"
 msgstr "4"
 
-msgid "420"
-msgstr "420"
-
-msgid "422"
-msgstr "422"
-
-msgid "444"
-msgstr "444"
-
-msgid "4:3"
-msgstr "4:3"
-
 msgid "4:3 Letterbox"
 msgstr "4:3 Letterbox"
 
@@ -567,9 +522,6 @@ msgstr "8"
 
 msgid "8K"
 msgstr "8K"
-
-msgid "8bit"
-msgstr "8bit"
 
 msgid "9"
 msgstr "9"
@@ -712,9 +664,6 @@ msgstr "ACQUIRING TSID/ONID"
 
 msgid "AGC:"
 msgstr "AGC:"
-
-msgid "ASS File"
-msgstr "ASS-Datei"
 
 msgid "ASS file"
 msgstr "ASS-Datei"
@@ -1061,9 +1010,10 @@ msgstr "Sind Sie sicher, alle gelöschten Userbouquets zu entfernen?"
 msgid "Are you sure to reboot to"
 msgstr "Sind Sie sicher neuzustarten zu"
 
+#. TRANSLATORS: The user is asked to delete all satellite services from a specific orbital position after a configuration change
 #, python-format
-msgid "Are you sure to remove all %d.%d%s%s services?"
-msgstr "Sind Sie sicher, dass %d.%d%s%s entfernt werden soll?"
+msgid "Are you sure to remove all %s services?"
+msgstr "Sind Sie sicher, dass %s entfernt werden soll?"
 
 msgid "Are you sure to remove all cable services?"
 msgstr "Sind Sie sicher, dass alle Kabel-Dienste entfernt werden sollen?"
@@ -1262,14 +1212,15 @@ msgstr "Im Radio Modus letzten Sender automatisch abspielen"
 msgid "Auto scart switching"
 msgstr "Automatische Scart-Umschaltung"
 
+#, python-format
+msgid "Autoinstalling %s"
+msgstr "Automatische Installation %s"
+
 msgid "Autoinstalling Completed"
 msgstr "Automatische Installation abgeschlossen"
 
 msgid "Autoinstalling please wait for packages being updated"
 msgstr "Automatische Installation, bitte warten bis alle Pakete geupdated sind"
-
-msgid "Automatic"
-msgstr "Automatisch"
 
 msgid "Automatic Scan"
 msgstr "Automatische Suche"
@@ -1306,15 +1257,6 @@ msgstr "BER"
 
 msgid "BER:"
 msgstr "BER:"
-
-msgid "BT 2020 CL"
-msgstr "BT 2020 CL"
-
-msgid "BT 2020 NCL"
-msgstr "BT 2020 NCL"
-
-msgid "BT 709"
-msgstr "BT 709"
 
 msgid "Back"
 msgstr "Zurück"
@@ -1553,9 +1495,6 @@ msgstr "CI-Slot: "
 
 msgid "CPU: "
 msgstr "Prozessor: "
-
-msgid "CVBS"
-msgstr "CVBS"
 
 msgid "Cable"
 msgstr "Kabel"
@@ -2034,6 +1973,9 @@ msgstr "Auswahl der Speichermedien, bei denen die Hintergrund-Löschung aktivier
 msgid "Configure remote control type"
 msgstr "Fernbedienungstyp einstellen"
 
+msgid "Configure separator type used in full description for separate short and extended descriptions."
+msgstr ""
+
 msgid "Configure the DiSEqC mode for this LNB."
 msgstr "DiSEqC Modus Einstellung für diesen LNB."
 
@@ -2290,6 +2232,9 @@ msgstr "Wahl des Video-Ausgangs Anschluss."
 msgid "Configuring"
 msgstr "Konfiguriere"
 
+msgid "Conflict detection disabled!"
+msgstr "Konflikterkennung deaktiviert!"
+
 msgid "Conflict not resolved!"
 msgstr "Konflikt nicht behoben!"
 
@@ -2498,9 +2443,6 @@ msgstr "Tschechien"
 
 msgid "D"
 msgstr "D"
-
-msgid "DAC"
-msgstr "DAC"
 
 msgid "DHCP"
 msgstr "DHCP"
@@ -2823,8 +2765,8 @@ msgid "Directory browser"
 msgstr "Verzeichnis Browser"
 
 #, python-format
-msgid "Directory contains %s and %s."
-msgstr "Das Verzeichnis enthält %s und %s."
+msgid "Directory contains %(file)s and %(subdir)s."
+msgstr "Das Verzeichnis enthält %(file)s und %(subdir)s."
 
 msgid "Disable"
 msgstr "Aus"
@@ -3024,9 +2966,6 @@ msgstr "Wollen Sie Ihren Receiver auf %s aktualisieren?"
 msgid "Do you want to update your receiver?"
 msgstr "Wollen Sie Ihren Receiver aktualisieren?"
 
-msgid "Dolby"
-msgstr "Dolby"
-
 msgid "Dominica"
 msgstr "Dominica"
 
@@ -3178,9 +3117,6 @@ msgstr "El Salvador"
 
 msgid "Electronic Program Guide"
 msgstr "Elektronischer Programmführer"
-
-msgid "Embedded"
-msgstr "Integriert"
 
 msgid "Emergency"
 msgstr "Notfall"
@@ -3924,6 +3860,9 @@ msgstr "Von:"
 msgid "Frontprocessor version: %s"
 msgstr "Frontprozessor-Version: %s"
 
+msgid "Full description separator"
+msgstr ""
+
 #. TRANSLATORS: (aspect ratio policy: display as fullscreen, even if the content aspect ratio does not match the screen ratio)
 msgid "Full screen"
 msgstr "Vollbild"
@@ -3945,6 +3884,10 @@ msgstr "Weitere Optionen"
 
 msgid "G"
 msgstr "G"
+
+#, fuzzy
+msgid "GB"
+msgstr "RGB"
 
 msgid "GUI Settings"
 msgstr "GUI-Einstellungen"
@@ -4133,9 +4076,6 @@ msgstr "HD2400"
 msgid "HD60/Multibox/Multibox SE"
 msgstr "HD60/Multibox/Multibox SE"
 
-msgid "HDMI"
-msgstr "HDMI"
-
 msgid "HDMI Colordepth"
 msgstr "HDMI Farbtiefe"
 
@@ -4157,9 +4097,6 @@ msgstr "HDMI-CEC-Quelle inaktiv"
 msgid "HDMI-CEC setup"
 msgstr "HDMI-CEC Konfiguration"
 
-msgid "HDR10"
-msgstr "HDR10"
-
 msgid "HDR10 support"
 msgstr "HDR10 Unterstützung"
 
@@ -4168,9 +4105,6 @@ msgstr "HDx1/HD1xxx/HD5x0C/VS1x00/et7x00/et8500/et7000mini"
 
 msgid "HELP"
 msgstr "HILFE"
-
-msgid "HLG"
-msgstr "HLG"
 
 msgid "HLG support"
 msgstr "HLG-Unterstützung"
@@ -4578,14 +4512,11 @@ msgstr "Installiere"
 msgid "Installing software..."
 msgstr "Installiere Software. Bitte warten…"
 
-msgid "Instant record"
+msgid "Instant recording"
 msgstr "Sofortaufnahme"
 
 msgid "Instant recording location"
 msgstr "Sofortaufnahme-Verzeichnis"
-
-msgid "Instant recording..."
-msgstr "Sofortaufnahme…"
 
 msgid "Interface: "
 msgstr "Interface: "
@@ -4949,6 +4880,12 @@ msgstr "langer Tastendruck"
 msgid "Longitude"
 msgstr "Längengrad"
 
+msgid "Looking for active transponders in the cable network. Please wait..."
+msgstr "Suche benutzte Transponder im Kabel Netzwerk. Bitte warten…"
+
+msgid "Looking for active transponders in the terrestrial network. Please wait..."
+msgstr "Suche benutzte Transponder im terrestrischen Netzwerk. Bitte warten…"
+
 msgid "Loop through from"
 msgstr "Verbunden mit"
 
@@ -4960,6 +4897,10 @@ msgstr "Luxemburg"
 
 msgid "Luxembourgish"
 msgstr "Luxemburgisch"
+
+#, fuzzy
+msgid "MB"
+msgstr "B"
 
 msgid "MMC card"
 msgstr "MMC-Karte"
@@ -5845,17 +5786,11 @@ msgstr "Konfigurationsdateien überschreiben?"
 msgid "PAL"
 msgstr "PAL"
 
-msgid "PCM"
-msgstr "PCM"
-
 msgid "PCR PID"
 msgstr "PCR PID"
 
 msgid "PDC"
 msgstr "PDC "
-
-msgid "PGS File"
-msgstr "PGS Datei"
 
 msgid "PGS file"
 msgstr "PGS Datei"
@@ -5881,7 +5816,7 @@ msgstr "PMT PID"
 msgid "PPanel"
 msgstr "PPanel"
 
-msgid "PULSe 4K"
+msgid "PULSe 4K(mini)"
 msgstr ""
 
 msgid "Package list update"
@@ -6613,9 +6548,6 @@ msgstr "REC"
 msgid "RF output"
 msgstr "RF-Ausgang"
 
-msgid "RGB"
-msgstr "RGB"
-
 msgid "Radio"
 msgstr "Radio"
 
@@ -6888,6 +6820,9 @@ msgstr "Wiederholungen"
 msgid "Replace `- ` in dialogs with colored text per speaker (like teletext subtitles for the hearing impaired)"
 msgstr "Diese Option ersetzt `- ` durch farbigen Text je Sprecher in Dialogen (so wie bei Teletext-Untertitel für Hörgeschädigte)."
 
+msgid "Replace newlines in EPG"
+msgstr ""
+
 msgid "Request for physical address report"
 msgstr "Anfrage für den physischen Adressbericht"
 
@@ -7073,9 +7008,6 @@ msgstr "Russische Föderation"
 msgid "Rwanda"
 msgstr "Rwanda"
 
-msgid "S-Video"
-msgstr "S-Video"
-
 msgid "SCPC optimized search range"
 msgstr "SCPC-optimierter Suchbereich"
 
@@ -7088,9 +7020,6 @@ msgstr "SCR JESS"
 msgid "SCR Unicable"
 msgstr "SCR Unicable"
 
-msgid "SDR"
-msgstr "SDR"
-
 msgid "SINGLE LAYER DVD"
 msgstr "SINGLE LAYER DVD"
 
@@ -7100,17 +7029,8 @@ msgstr "SNR"
 msgid "SNR:"
 msgstr "SNR:"
 
-msgid "SPDIF"
-msgstr "SPDIF"
-
-msgid "SRT File"
-msgstr "SRT Datei"
-
 msgid "SRT file"
 msgstr "SRT Datei"
-
-msgid "SSA File"
-msgstr "SSA Datei"
 
 msgid "SSA file"
 msgstr "SSA Datei"
@@ -7482,6 +7402,9 @@ msgstr "Kanal auswählen"
 msgid "Select channel to record from"
 msgstr "Kanal auswählen, von dem aufgenommen werden soll"
 
+msgid "Select char for replacing newlines in epg."
+msgstr ""
+
 msgid "Select copy destination for:"
 msgstr "Wähle Zielverzeichnis für:"
 
@@ -7514,6 +7437,10 @@ msgstr "Wählen Sie, wie die Satellitenschüssel eingerichtet wird. d.h. feste S
 
 msgid "Select how you want your receiver to keep the correct time, either from the DVB transponder, or from the internet using NTP. Or use Auto, which will favour using NTP, but will fall back to transponder time when no internet connection is available."
 msgstr "Wähle die bevorzugte Zeitsynchronisation. Transponder ->DVB, Internet->NTP oder \"Auto\". Auswahl \"Auto\" favorisiert NTP und nutzt automatisch den Transponder falls kein Internet vorhanden ist."
+
+#, fuzzy
+msgid "Select image"
+msgstr "Lösche Image"
 
 msgid "Select input device"
 msgstr "Eingabegerät auswählen."
@@ -9133,8 +9060,8 @@ msgid "There are at least "
 msgstr "Es sind mindestens "
 
 #, python-format
-msgid "There are at least %s updates available."
-msgstr "Es sind mindestens %s Aktualisierungen verfügbar."
+msgid "There are at least %d updates available."
+msgstr "Es sind mindestens %d Aktualisierungen verfügbar."
 
 msgid "There are currently no outstanding actions."
 msgstr "Es sind keine Aktivitäten geplant."
@@ -9612,12 +9539,6 @@ msgstr "Fehlersuche"
 msgid "True"
 msgstr "Richtig"
 
-msgid "Looking for active transponders in the cable network. Please wait..."
-msgstr "Suche benutzte Transponder im Kabel Netzwerk. Bitte warten…"
-
-msgid "Looking for active transponders in the terrestrial network. Please wait..."
-msgstr "Suche benutzte Transponder im terrestrischen Netzwerk. Bitte warten…"
-
 msgid "Trying to download a new packetlist. Please wait..."
 msgstr "Versuche eine neue Aktualisierungsliste herunterzuladen. Bitte warten Sie…"
 
@@ -9861,11 +9782,11 @@ msgstr "Aktualisierung abgeschlossen. Wollen Sie den Receiver neu starten?"
 msgid "Update failed. Your receiver does not have a working internet connection."
 msgstr "Aktualisierung fehlgeschlagen. Ihr Receiver hat keine Verbindung zum Internet aufbauen können."
 
+msgid "Update feed not available."
+msgstr "Update-Feed nicht verfügbar."
+
 msgid "Update has completed."
 msgstr "Aktualisierung abgeschlossen."
-
-msgid "Updatefeed not available."
-msgstr "Update-Feed nicht verfügbar."
 
 msgid "Updating"
 msgstr "Aktualisiere"
@@ -10039,9 +9960,6 @@ msgstr "VLAN-Verbindung"
 
 msgid "VMGM (intro trailer)"
 msgstr "VMGM (Intro-Trailer)"
-
-msgid "VOB File"
-msgstr "VOB Datei"
 
 msgid "VOB file"
 msgstr "VOB Datei"
@@ -10656,20 +10574,8 @@ msgstr "Schreiben fehlgeschlagen!"
 msgid "Write to /tmp/positionersetup.log"
 msgstr "Schreibe in /tmp/positionersetup.log"
 
-msgid "YCbCr420"
-msgstr "YCbCr420"
-
-msgid "YCbCr422"
-msgstr "YCbCr422"
-
-msgid "YCbCr444"
-msgstr "YCbCr444"
-
 msgid "YES"
 msgstr "JA"
-
-msgid "YPbPr"
-msgstr "YPbPr"
 
 msgid "Year"
 msgstr "Jahr"
@@ -10812,8 +10718,8 @@ msgid "You didn't select a channel to record from."
 msgstr "Sie haben keinen Sender zum Aufnehmen ausgewählt."
 
 #, python-format
-msgid "You have to wait %s!"
-msgstr "Sie müssen %s warten!"
+msgid "You have to wait %(min)d minutes, %(sec)d seconds!"
+msgstr ""
 
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
@@ -11481,9 +11387,6 @@ msgstr "Menü"
 msgid "mins"
 msgstr "Minuten"
 
-msgid "minutes"
-msgstr "Minuten"
-
 msgid "month"
 msgstr "Monat"
 
@@ -11511,9 +11414,6 @@ msgstr "Film/Drama (Allgemein)"
 msgid "multi"
 msgstr "multi"
 
-msgid "multinorm"
-msgstr "Multinorm"
-
 msgid "music/ballet/dance (general)"
 msgstr "Musik/Ballett/Tanz (Allgemein)"
 
@@ -11525,6 +11425,10 @@ msgstr "Natur/Tiere/Umwelt"
 
 msgid "never"
 msgstr "Niemals"
+
+#, fuzzy
+msgid "new line"
+msgstr "Zweizeilig"
 
 msgid "new media"
 msgstr "Neue Medien"
@@ -11586,6 +11490,10 @@ msgstr "Keinen Tuner gefunden"
 msgid "not_tested"
 msgstr "nicht_getestet"
 
+#, fuzzy
+msgid "nothing"
+msgstr "Nichts tun"
+
 msgid "nothing connected"
 msgstr "Nichts angeschlossen"
 
@@ -11603,6 +11511,9 @@ msgstr "aus oder wpa2 an"
 
 msgid "offset is"
 msgstr "Endstellung auf"
+
+msgid "omit"
+msgstr ""
 
 msgid "on"
 msgstr "An"
@@ -11688,9 +11599,6 @@ msgstr "Umgekehrt nach Datum"
 msgid "rewind to the previous chapter"
 msgstr "Zum vorherigen Kapitel zurück"
 
-msgid "rgb"
-msgstr "rgb"
-
 msgid "right"
 msgstr "Rechts"
 
@@ -11717,9 +11625,6 @@ msgstr "Status"
 
 msgid "science fiction/fantasy/horror"
 msgstr "Science-Fiction/Fantasie/Horror"
-
-msgid "seconds"
-msgstr "Sekunden"
 
 msgid "select CAId's"
 msgstr "CAIDs auswählen"
@@ -11817,6 +11722,9 @@ msgstr "Soziale/Politische Angelegenheiten/Wirtschaft (Allgemein)"
 
 msgid "social/spiritual science"
 msgstr "Sozial/Geisteswissenschaft"
+
+msgid "space"
+msgstr ""
 
 msgid "special events"
 msgstr "Sondersendung"
