@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-02 01:12+0300\n"
+"POT-Creation-Date: 2021-09-10 01:42+0300\n"
 "PO-Revision-Date: 2021-03-11 01:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: kvinto\n"
@@ -108,9 +108,6 @@ msgstr " пакетів вибрано."
 msgid " unicable LNB input of rotor"
 msgstr " одноканальний LNB-вхід для двигуна"
 
-msgid " updates available."
-msgstr " доступно оновлень."
-
 #, python-format
 msgid "%(freespace)s %(percent)s free disk space"
 msgstr "%(freespace)s %(percent)s вільне місце на диску"
@@ -142,10 +139,6 @@ msgstr "%.2f ГБ"
 #, python-format
 msgid "%02d:%02d"
 msgstr "%2d:%02d"
-
-#, python-format
-msgid "%03d MB"
-msgstr "%03d MБ"
 
 #, python-format
 msgid "%2.1f sec"
@@ -306,10 +299,6 @@ msgstr "%d-%m"
 msgid "%d.%02d. %02d:%02d"
 msgstr "%d.%02d. %02d:%02d"
 
-#, python-format
-msgid "%d.%03d GB"
-msgstr "%d.%03d ГБ"
-
 msgid "%d.%B %Y"
 msgstr "%d.%B %Y"
 
@@ -354,10 +343,6 @@ msgid "%s %d.%d"
 msgstr "%s %d.%d"
 
 #, python-format
-msgid "%s (%s)\n"
-msgstr "%s (%s)\n"
-
-#, python-format
 msgid "%s imported from fallback tuner"
 msgstr "%s імпортовані з резервного тюнера"
 
@@ -372,10 +357,6 @@ msgid_plural "%s updated packages available"
 msgstr[0] "%s оновлення пакету доступно"
 msgstr[1] "%s оновлення пакетів доступно"
 msgstr[2] "%s оновлень пакетів доступно"
-
-#, python-format
-msgid "%s%d min"
-msgstr "%s%d хв"
 
 msgid "(VU+ type)"
 msgstr "(тип VU+)"
@@ -412,9 +393,6 @@ msgstr "-НЕМАЄ КАНАЛІВ\n"
 msgid "-SERVICE ERROR:%d\n"
 msgstr "-ПОМИЛКА КАНАЛУ:%d\n"
 
-msgid "/T"
-msgstr ""
-
 msgid "/s"
 msgstr "/сек"
 
@@ -423,15 +401,6 @@ msgstr "0"
 
 msgid "1"
 msgstr "1"
-
-msgid "1.0"
-msgstr "1.0"
-
-msgid "1.1"
-msgstr "1.1"
-
-msgid "1.2"
-msgstr "1.2"
 
 msgid "10 MB/s"
 msgstr "10 MБ/с"
@@ -466,9 +435,8 @@ msgstr "18 В"
 msgid "2"
 msgstr "2"
 
-#, fuzzy
 msgid "2 new lines"
-msgstr "Два рядки"
+msgstr "Два нових рядки"
 
 msgid "20 MB/s"
 msgstr "20 MБ/с"
@@ -677,9 +645,6 @@ msgstr "AGC:"
 
 msgid "ASS file"
 msgstr "ASS файл"
-
-msgid "ATSC"
-msgstr "ATSC"
 
 msgid "ATSC provider"
 msgstr "ATSC провайдер"
@@ -1985,7 +1950,7 @@ msgid "Configure remote control type"
 msgstr "Налаштування типу пульта керування"
 
 msgid "Configure separator type used in full description for separate short and extended descriptions."
-msgstr ""
+msgstr "Налаштуйте тип розділювача, що використовується в повному описі, для окремих коротких та розширених описів."
 
 msgid "Configure the DiSEqC mode for this LNB."
 msgstr "Налаштування DiSEqC режиму для цього конвертора."
@@ -2480,27 +2445,6 @@ msgstr "Прозорість DVB субтитрів"
 
 msgid "DVB type"
 msgstr "DVB тип"
-
-msgid "DVB-C"
-msgstr "DVB-C"
-
-msgid "DVB-C ANNEX B"
-msgstr "DVB-C ANNEX B"
-
-msgid "DVB-C ANNEX C"
-msgstr "DVB-C ANNEX C"
-
-msgid "DVB-S"
-msgstr "DVB-S"
-
-msgid "DVB-S2"
-msgstr "DVB-S2"
-
-msgid "DVB-T"
-msgstr "DVB-T"
-
-msgid "DVB-T2"
-msgstr "DVB-T2"
 
 msgid "DVD Burn"
 msgstr "Запис DVD"
@@ -3870,7 +3814,7 @@ msgid "Frontprocessor version: %s"
 msgstr "Версія фронтпроцесора: %s"
 
 msgid "Full description separator"
-msgstr ""
+msgstr "Повний опис розділювача"
 
 #. TRANSLATORS: (aspect ratio policy: display as fullscreen, even if the content aspect ratio does not match the screen ratio)
 msgid "Full screen"
@@ -3977,7 +3921,7 @@ msgid "Go up the list"
 msgstr "Перейти до початку списку"
 
 msgid "Gold"
-msgstr ""
+msgstr "Gold"
 
 msgid "Goto"
 msgstr "Перейти до"
@@ -4073,7 +4017,7 @@ msgid "H"
 msgstr "H"
 
 msgid "HD"
-msgstr ""
+msgstr "HD"
 
 msgid "HD list"
 msgstr "Список HD"
@@ -4082,7 +4026,7 @@ msgid "HD2400"
 msgstr "HD2400"
 
 msgid "HD60/Multibox/Multibox SE"
-msgstr ""
+msgstr "HD60/Multibox/Multibox SE"
 
 msgid "HDMI Colordepth"
 msgstr "Глибина кольору HDMI"
@@ -4109,7 +4053,7 @@ msgid "HDR10 support"
 msgstr "Підтримка HDR10"
 
 msgid "HDx1/HD1xxx/HD5x0C/VS1x00/et7x00/et8500/et7000mini"
-msgstr ""
+msgstr "HDx1/HD1xxx/HD5x0C/VS1x00/et7x00/et8500/et7000mini"
 
 msgid "HELP"
 msgstr "ДОПОМОГА"
@@ -4819,11 +4763,11 @@ msgid "List type"
 msgstr "Вигляд списку"
 
 #, python-format
-msgid "List version %d, found %d channel"
-msgid_plural "List version %d, found %d channels"
-msgstr[0] "Версія списку %d, знайдено %d канал"
-msgstr[1] "Версія списку %d, знайдено %d канали"
-msgstr[2] "Версія списку %d, знайдено %d каналів"
+msgid "List version %(ver)d, found %(num)d channel"
+msgid_plural "List version %(ver)d, found %(num)d channels"
+msgstr[0] "Версія списку %(ver)d, знайдено %(num)d канал"
+msgstr[1] "Версія списку %(ver)d, знайдено %(num)d канали"
+msgstr[2] "Версія списку %(ver)d, знайдено %(num)d каналів"
 
 msgid "Listen to the radio..."
 msgstr "Слухати радіо..."
@@ -5821,9 +5765,8 @@ msgstr "ПІД РМТ"
 msgid "PPanel"
 msgstr ""
 
-#, fuzzy
 msgid "PULSe 4K(mini)"
-msgstr "PULSe 4K"
+msgstr "PULSe 4K(mini)"
 
 msgid "Package list update"
 msgstr "Оновлення списку пакетів"
@@ -6823,7 +6766,7 @@ msgid "Replace `- ` in dialogs with colored text per speaker (like teletext subt
 msgstr "Замінити `- ` в діалогових вікнах з кольоровим текстом на лектора (як субтитри телетексту для людей з вадами слуху)"
 
 msgid "Replace newlines in EPG"
-msgstr ""
+msgstr "Замінити нові рядки в EPG"
 
 msgid "Request for physical address report"
 msgstr "Запит на звіт про фізичну адресу"
@@ -7232,9 +7175,6 @@ msgstr[0] "Сканування завершено, знайдений % d ка�
 msgstr[1] "Сканування завершено, знайдено %d канали"
 msgstr[2] "Сканування завершено, знайдено %d каналів"
 
-msgid "Scanning failed!"
-msgstr "Сканування не вдалося!"
-
 msgid "Scanning..."
 msgstr "Сканування..."
 
@@ -7408,7 +7348,7 @@ msgid "Select channel to record from"
 msgstr "Вибір каналу для запису з"
 
 msgid "Select char for replacing newlines in epg."
-msgstr ""
+msgstr "Виберіть символ для заміни нових рядків у epg."
 
 msgid "Select copy destination for:"
 msgstr "Виберіть місце для копіювання:"
@@ -8818,7 +8758,7 @@ msgstr ""
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr ""
-"Переклад:  kvinto - 28.08.2021\n"
+"Переклад:  kvinto - 09.09.2021\n"
 "Сторінка:    https://gisclub.tv\n"
 "                  kvinto@rambler.ru"
 
@@ -9055,9 +8995,6 @@ msgid ""
 msgstr ""
 "Додаток Wі-Fі мережі не встановлений!\n"
 "Будь ласка, встановіть його."
-
-msgid "There are at least "
-msgstr "Є принаймні "
 
 #, python-format
 msgid "There are at least %d updates available."
@@ -9644,9 +9581,6 @@ msgstr "URL"
 msgid "URL of fallback remote receiver"
 msgstr "URL-адреса віддаленого резервного приймача"
 
-msgid "USALS"
-msgstr "USALS"
-
 msgid "USALS automatically moves a motorised dish to the correct satellite based on the coordinates entered by the user. Without USALS each satellite will need to be setup and saved individually."
 msgstr "USALS автоматично переміщує антену до потрібного супутника на основі координат, введених користувачем. Без USALS кожний супутник потрібно буде налаштувати та зберігати індивідуально."
 
@@ -10126,20 +10060,8 @@ msgstr "Гучність вище"
 msgid "W"
 msgstr "W"
 
-msgid "WEP"
-msgstr "WEP"
-
 msgid "WLAN connection"
 msgstr "Безпровідне з'єднання WLAN"
-
-msgid "WPA"
-msgstr "WPA"
-
-msgid "WPA or WPA2"
-msgstr "WPA або WPA2"
-
-msgid "WPA2"
-msgstr "WPA2"
 
 msgid "WSS on 4:3"
 msgstr "WSS on 4:3"
@@ -10713,7 +10635,7 @@ msgstr "Ви не обрали канал для запису."
 
 #, python-format
 msgid "You have to wait %(min)d minutes, %(sec)d seconds!"
-msgstr ""
+msgstr "Вам потрібно почекати %(min)d хвилин, %(sec)d секунд!"
 
 #, python-format
 msgid "You must switch to the service %s (%s - '%s')!\n"
@@ -11416,9 +11338,8 @@ msgstr "природа/тварини/навколишнє середовище"
 msgid "never"
 msgstr "ніколи"
 
-#, fuzzy
 msgid "new line"
-msgstr "Два рядки"
+msgstr "новий рядок"
 
 msgid "new media"
 msgstr "нові медіа"
@@ -11480,9 +11401,8 @@ msgstr "недійсний інтерфейс"
 msgid "not_tested"
 msgstr "не_тестується"
 
-#, fuzzy
 msgid "nothing"
-msgstr "Нічого не робити"
+msgstr "нічого"
 
 msgid "nothing connected"
 msgstr "нічого не під'єднано"
