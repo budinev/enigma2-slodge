@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-10 01:42+0300\n"
+"POT-Creation-Date: 2021-09-17 22:15+0300\n"
 "PO-Revision-Date: 2021-08-02 08:54+0200\n"
 "Last-Translator: Andrej Tobola <andrej.tobola@gmail.com>\n"
 "Language-Team: \n"
@@ -94,17 +94,11 @@ msgstr " - Unicable/JESS LNB nenájdené"
 msgid " Warning: the selected tuner should not use SCR Unicable type for LNBs because each tuner need a own SCR number."
 msgstr " Upozornenie: zvolený tuner by nemal používať typ LNB - SCR Unicable, pretože každý tuner potrebuje vlastné SCR číslo."
 
-msgid " extensions."
-msgstr " rozšírenia."
-
 msgid " min"
 msgstr " min"
 
 msgid " ms"
 msgstr " ms"
-
-msgid " packages selected."
-msgstr " balíčkov zvolených."
 
 msgid " unicable LNB input of rotor"
 msgstr " unicable LNB vstup rotora"
@@ -112,18 +106,6 @@ msgstr " unicable LNB vstup rotora"
 #, python-format
 msgid "%(freespace)s %(percent)s free disk space"
 msgstr "%(freespace)s %(percent)s voľného miesta na disku"
-
-#, python-format
-msgid "%.0f GB"
-msgstr "%.0f GB"
-
-#, python-format
-msgid "%.0f MB"
-msgstr "%.0f MB"
-
-#, python-format
-msgid "%.0f kB"
-msgstr "%.0f kB"
 
 #, python-format
 msgid "%.1f° E"
@@ -174,14 +156,6 @@ msgstr "%a %e/%m"
 #. TRANSLATORS: long date representation short dayname daynum short monthname hour:minute in strftime() format! See 'man strftime'
 msgid "%a %e/%m  %-H:%M"
 msgstr "%a %e/%m  %-H:%M"
-
-#, python-format
-msgid "%d B"
-msgstr "%d B"
-
-#, python-format
-msgid "%d GB"
-msgstr "%d GB"
 
 #, python-format
 msgid "%d MB"
@@ -235,10 +209,6 @@ msgstr[1] "%d úlohy bežia na pozadí!"
 msgstr[2] "%d úloh beží na pozadí!"
 
 #, python-format
-msgid "%d kB"
-msgstr "%d kB"
-
-#, python-format
 msgid "%d kB/s"
 msgstr "%d kB/s"
 
@@ -260,6 +230,13 @@ msgstr "%d minút"
 #, python-format
 msgid "%d ms"
 msgstr "%d ms"
+
+#, fuzzy, python-format
+msgid "%d package selected."
+msgid_plural "%d packages selected."
+msgstr[0] " balíčkov zvolených."
+msgstr[1] " balíčkov zvolených."
+msgstr[2] " balíčkov zvolených."
 
 #, python-format
 msgid "%d pixel wide"
@@ -370,7 +347,7 @@ msgstr "(Prepnúť)"
 
 #, python-format
 msgid "(activated +%d min)"
-msgstr "(aktivovaný  +%d min)"
+msgstr "(aktivovaný +%d min)"
 
 msgid "(empty)"
 msgstr "(prázdne)"
@@ -530,45 +507,25 @@ msgstr "??"
 msgid "A"
 msgstr "A"
 
-#, python-format
-msgid ""
-"A configuration file (%s) has been modified since it was installed.\n"
-"Do you want to keep your modifications?"
-msgstr ""
-"Konfiguračný súbor (%s) bol od inštalácie zmenený.\n"
-"Chcete zachovať Vaše zmeny?"
+msgid "A completed recording timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "Ukončený časovač nahrávania chce prepnúť Váš prijímač do pohotovostného režimu. Prepnúť teraz?"
+
+msgid "A completed recording timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "Ukončený časovač nahrávania chce vypnúť Váš prijímač. Vypnúť teraz?"
 
 #, python-format
-msgid ""
-"A configuration file (%s) was modified since Installation.\n"
-"Do you want to keep your version?"
-msgstr ""
-"Konfiguračný súbor (%s) bol od inštalácie zmenený.\n"
-"Chcete zachovať Vašu verziu?"
+msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
+msgstr "Konfiguračný súbor (%s) bol od inštalácie zmenený. Chcete zachovať Vaše zmeny?"
 
 msgid "A file from media is in use!"
 msgstr "Súbor sa na disku používa!"
-
-msgid ""
-"A finished record timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"Ukončený časovač nahrávania chce prepnúť Váš\n"
-"prijímač do pohotovostného režimu. Prepnúť teraz?"
-
-msgid ""
-"A finished record timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"Ukončený časovač nahrávania chce vypnúť\n"
-"Váš prijímač. Vypnúť teraz?"
 
 msgid "A graphical EPG for all services of a specific bouquet"
 msgstr "Grafické EPG pre všetky stanice zvoleného prehľadu staníc"
 
 #, python-format
 msgid ""
-"A record has been started:\n"
+"A recording has started:\n"
 "%s"
 msgstr ""
 "Nahrávanie začalo:\n"
@@ -584,11 +541,14 @@ msgstr ""
 "Práve sa nahráva.\n"
 "Čo chcete urobiť?"
 
-msgid "A recording is currently running. Please stop the recording before trying to scan."
+msgid "A recording is currently running. Please stop the recording before starting a DiSEqC test."
+msgstr "Záznam je práve spustený. Prosím, zastavte nahrávanie pred pokusom o spustenie testovania DiSEqC."
+
+msgid "A recording is currently running. Please stop the recording before starting a service scan."
 msgstr "Práve sa nahráva. Zastavte nahrávanie pred spustením vyhľadávača satelitov."
 
-msgid "A recording is currently running. Please stop the recording before trying to start a testing DiSEqC."
-msgstr "Záznam je práve spustený. Prosím, zastavte nahrávanie pred pokusom o spustenie testovania DiSEqC."
+msgid "A repeating event is currently recording. What would you like to do?"
+msgstr "Práve sa nahráva opakovaná udalosť. Čo chcete urobiť?"
 
 #, python-format
 msgid "A required tool (%s) was not found."
@@ -605,19 +565,11 @@ msgstr ""
 "Bolo nájdené druhé nakonfigurované rozhranie.\n"
 "Chcete vypnúť druhé sieťové rozhranie?"
 
-msgid ""
-"A sleep timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"Zaspávací časovač chce prepnúť prijímač\n"
-"do pohotovostného režimu. Prepnúť teraz?"
+msgid "A sleep timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "Zaspávací časovač chce prepnúť prijímač do pohotovostného režimu. Prepnúť teraz?"
 
-msgid ""
-"A sleep timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"Zaspávací časovač chce vypnúť\n"
-"Váš prijímač. Vypnúť teraz?"
+msgid "A sleep timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "Zaspávací časovač chce vypnúť Váš prijímač. Vypnúť teraz?"
 
 msgid "A small overview of the available icon states and actions."
 msgstr "Tu je malý prehľad dostupných ikon štátov a činností."
@@ -665,7 +617,7 @@ msgstr "Zrušiť úpravu obľúbených"
 msgid "About"
 msgstr "O prijímači"
 
-msgid "Accesspoint:"
+msgid "Access point:"
 msgstr "Prístupový bod:"
 
 msgid "Activate HbbTV (Redbutton)"
@@ -878,10 +830,7 @@ msgstr "Povoliť 10bit"
 msgid "Allow 12bit"
 msgstr "Povoliť 12bit"
 
-msgid "Allow quit movieplayer with exit"
-msgstr "Povoliť ukončenie prehrávača filmov stlačením tlačidla Exit"
-
-msgid "Allow quitting movieplayer with exit"
+msgid "Allow quitting movie player with exit"
 msgstr "Povoliť ukončenie prehrávača filmov tlačidlom Exit"
 
 msgid "Allow subtitle language to equal audio language"
@@ -1159,7 +1108,7 @@ msgstr "Režim autorizácie"
 msgid "Auto"
 msgstr "Auto"
 
-msgid "Auto Diseqc"
+msgid "Auto DiSEqC"
 msgstr "Auto DiSEqC"
 
 msgid "Auto EXIF Orientation rotation/flipping"
@@ -1174,8 +1123,8 @@ msgstr "Automatické flešovanie"
 msgid "Auto focus"
 msgstr "Automatické zaostrenie"
 
-msgid "Auto focus commencing ..."
-msgstr "Automatické zaostrenie spustením ..."
+msgid "Auto focus commencing..."
+msgstr "Automatické zaostrenie spustením..."
 
 msgid "Auto language selection"
 msgstr "Automatický výber jazyka"
@@ -1536,7 +1485,7 @@ msgstr ""
 "purpurová\n"
 "žltá\n"
 "\n"
-"Obrazy meníte tlačidlami vľavo/vpravo alebo na prepnutie použite červené, zelené  a modré tlačidlo.\n"
+"Obrazy meníte tlačidlami vľavo/vpravo alebo na prepnutie použite červené, zelené a modré tlačidlo.\n"
 "Žltým tlačdlom sa vrátite späť na túto obrazovku"
 
 msgid "Can only find a network drive to store the backup this means after the flash the autorestore will not work. Alternativaly you can mount the network drive after the flash and perform a manufacurer reset to autorestore"
@@ -2086,7 +2035,7 @@ msgid "Configure the refresh rate of the screen."
 msgstr "Obnovovacia frekvencia obrazovky."
 
 msgid "Configure the screen resolution in PC output mode."
-msgstr "Nastaviť rozlíšenie obrazovky v režime výstupu na PC ."
+msgstr "Nastaviť rozlíšenie obrazovky v režime výstupu na PC."
 
 msgid "Configure the second audio language."
 msgstr "Sekundárny jazyk audio stopy."
@@ -2657,13 +2606,13 @@ msgstr "Údaje o doplnku: "
 msgid "Detect next boxes before standby"
 msgstr "Detekcia ďalších prijímačov pred prechodom do pohot. režimu"
 
-msgid "Detected HDD:"
-msgstr "Zistený pevný disk:"
-
 msgid "Detected NIMs:"
 msgstr "Zistené tunery:"
 
-msgid "Devicename:"
+msgid "Detected storage devices:"
+msgstr "Zistený pevný disk:"
+
+msgid "Device name:"
 msgstr "Názov zariadenia:"
 
 msgid "DiSEqC"
@@ -2968,6 +2917,9 @@ msgstr "Sťahovanie"
 msgid "Downloading Image"
 msgstr "Sťahuje sa image"
 
+msgid "Downloading a new packet list. Please wait..."
+msgstr "Pokúšam sa stiahnuť nový zoznam balíčkov. Prosím čakajte..."
+
 msgid "Downloading plugin information. Please wait..."
 msgstr "Sťahujem informácie o doplnkoch. Prosím čakajte..."
 
@@ -3246,6 +3198,9 @@ msgstr "IP adresa"
 msgid "Enter PIN"
 msgstr "Vložte PIN"
 
+msgid "Enter PIN code"
+msgstr "Zadajte kód PIN"
+
 msgid "Enter URL"
 msgstr "Vložte URL"
 
@@ -3264,9 +3219,6 @@ msgstr "Otvoriť hlavné menu..."
 msgid "Enter persistent PIN code"
 msgstr "Vložte trvalý PIN kód"
 
-msgid "Enter pin code"
-msgstr "Zadajte kód PIN"
-
 msgid "Enter the frequency at which you LNB switches between low band and high band. For more information consult the spec sheet of your LNB."
 msgstr "Vložte frekvenciu, pri ktorej sa váš LNB prepína medzi nízkym a vysokým pásmom. Pre viac informácií si preštudujte špecifikáciu LNB."
 
@@ -3276,7 +3228,7 @@ msgstr "Vložte veľkosť kroku frekvencie tuneru, ktorá sa použije pri prehľ
 msgid "Enter the number stored in the positioner that corresponds to this satellite."
 msgstr "Vložte číslo uložené v pozicionéri, ktoré korešponduje s týmto satelitom."
 
-msgid "Enter the service pin"
+msgid "Enter the service PIN"
 msgstr "Zadajte PIN stanice"
 
 msgid "Enter valid ONID/TSID"
@@ -3971,7 +3923,7 @@ msgid "GotoX calibration"
 msgstr "Kalibrácia Otočiť na X"
 
 msgid "GraphMultiEpg Settings"
-msgstr "Nastavenie grafického multi Epg"
+msgstr "Nastavenie grafického multi EPG"
 
 msgid "Graphical Multi EPG"
 msgstr "Grafický Multi EPG"
@@ -4250,7 +4202,7 @@ msgid "If is enabled and movie playback is finished, then after return to moviel
 msgstr "Ak je povolené a film skoncí, po návrate do zoznamu filmov sa automaticky nespustí posledná navolená stanica."
 
 msgid "If set as 'Yes', then audiofiles are played in 'list mode' only, instead in full screen player."
-msgstr "Ak je nastavená na 'Áno',  zvukové súbory budú prehrávané iba vo 'Formáte zobrazenia zoznamu' namiesto režimu celej obrazovky."
+msgstr "Ak je nastavená na 'Áno', zvukové súbory budú prehrávané iba vo 'Formáte zobrazenia zoznamu' namiesto režimu celej obrazovky."
 
 msgid "If set to 'yes' signal values (SNR, etc) will be calculated from API V3. This is an old API version that has now been superseded."
 msgstr "Ak je nastavené na 'áno' , hodnoty signálu (SNR, atď) budú vypočítané z API v3. Toto je stará API verzia, ktorá je už nahradená novšou."
@@ -5179,14 +5131,14 @@ msgstr "Menu zoznamu filmov"
 msgid "Moving"
 msgstr "Otáčam"
 
-msgid "Moving east ..."
-msgstr "Otáčam na východ ..."
+msgid "Moving east..."
+msgstr "Otáčam na východ..."
 
 msgid "Moving to position"
 msgstr "Otáčam na pozíciu"
 
-msgid "Moving west ..."
-msgstr "Otáčam na západ ..."
+msgid "Moving west..."
+msgstr "Otáčam na západ..."
 
 msgid "Mozambique"
 msgstr "Mozambik"
@@ -5323,7 +5275,7 @@ msgid "Network test"
 msgstr "Test siete"
 
 msgid "Network test..."
-msgstr "Test siete ..."
+msgstr "Test siete..."
 
 msgid "Network test: "
 msgstr "Test siete: "
@@ -5418,7 +5370,7 @@ msgstr "Súbor epg.dat na serveri nenájdený"
 msgid "No event info found, recording indefinitely."
 msgstr "Žiadne informácie z EPG, spúšťam nekonečné nahrávanie."
 
-msgid "No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"
+msgid "No fast winding possible yet... but you can use the number buttons to skip forward/backward!"
 msgstr "Ešte nie je možné prevíjanie, ale pomocou číselných tlačidiel môžete skočiť dopredu alebo dozadu!"
 
 msgid "No free index available"
@@ -5486,7 +5438,7 @@ msgid "No updates available. Please try again later."
 msgstr "Žiadne dostupné aktualizácie. Skúste to neskôr."
 
 msgid "No wireless networks found! Searching..."
-msgstr "Nenájdená bezdrôtová sieť. Hľadám ..."
+msgstr "Nenájdená bezdrôtová sieť. Hľadám..."
 
 msgid ""
 "No working local network adapter found.\n"
@@ -5579,7 +5531,7 @@ msgid ""
 "Please setup your tuner settings before you start a service scan."
 msgstr ""
 "Nič na vyhľadávanie!\n"
-"Pred začatím vyhľadávania nastavte tuner ."
+"Pred začatím vyhľadávania nastavte tuner."
 
 msgid "Nothing to scan! Setup your tuner and try again."
 msgstr "Nie je čo prehľadávať! Nastavte tuner a skúste to znovu."
@@ -5989,7 +5941,7 @@ msgstr "Prosím, zadajte nový popis:"
 msgid "Please enter new name:"
 msgstr "Prosím, zadajte nový názov:"
 
-msgid "Please enter the correct pin code"
+msgid "Please enter the correct PIN code"
 msgstr "Prosím, zadajte správny PIN kód"
 
 msgid "Please enter the new PIN code"
@@ -6121,7 +6073,7 @@ msgstr "Prosím čakajte (aktualizujú sa balíčky)"
 msgid "Please wait for activation of your network configuration..."
 msgstr "Prosím čakajte na aktivovanie nastavenia siete..."
 
-msgid "Please wait while scanning is in progress..."
+msgid "Please wait while scanning..."
 msgstr "Čakajte, kým prebieha vyhľadávanie..."
 
 msgid "Please wait while we configure your network..."
@@ -6365,7 +6317,7 @@ msgid "Press OK to toggle the selection."
 msgstr "Stlačte OK pre prepnutie výberu."
 
 msgid "Press OK, save and exit..."
-msgstr "Stlačte OK, uložiť a ukončiť ..."
+msgstr "Stlačte OK, uložiť a ukončiť..."
 
 msgid "Press or select button and then press 'OK' for attach function."
 msgstr "Stlačte alebo zvolte tlačidlo a potom stlačte 'OK' pre funkciu pripojenia."
@@ -6437,7 +6389,7 @@ msgstr "Chrániť zoradenie menu"
 msgid "Protect movie list"
 msgstr "Chrániť zoznam filmov"
 
-msgid "Protect on epg age"
+msgid "Protect on EPG age"
 msgstr "Chrániť podľa veku z EPG"
 
 msgid "Protect plugin browser"
@@ -6657,7 +6609,7 @@ msgid "Remote control type setup"
 msgstr "Nastavenie typu diaľkového ovládača"
 
 msgid "Removal has completed."
-msgstr "Odstránenie bolo  dokončené."
+msgstr "Odstránenie bolo dokončené."
 
 msgid "Remove"
 msgstr "Odstrániť"
@@ -6752,14 +6704,6 @@ msgstr "Zopakovať zoznam prehrávok"
 
 msgid "Repeat type"
 msgstr "Druh opakovania"
-
-msgid ""
-"Repeating event currently recording.\n"
-"What do you want to do?"
-msgstr "Práve sa nahráva opakovaná udalosť... Čo chcete urobiť?"
-
-msgid "Repeating event currently recording... What do you want to do?"
-msgstr "Práve sa nahráva opakovaná udalosť... Čo chcete urobiť?"
 
 msgid "Repeats"
 msgstr "Opakovania"
@@ -7201,8 +7145,8 @@ msgstr "Hľadať západne"
 msgid "Searching"
 msgstr "Hľadanie"
 
-msgid "Searching east ..."
-msgstr "Hľadanie na východ ..."
+msgid "Searching east..."
+msgstr "Hľadanie na východ..."
 
 msgid "Searching for available updates. Please wait..."
 msgstr "Hľadám dostupné aktualizácie. Prosím čakajte..."
@@ -7210,8 +7154,8 @@ msgstr "Hľadám dostupné aktualizácie. Prosím čakajte..."
 msgid "Searching for new installed or removed packages. Please wait..."
 msgstr "Hľadám novo inštalované alebo odstránené balíčky. Čakajte, prosím..."
 
-msgid "Searching west ..."
-msgstr "Hľadanie na západ ..."
+msgid "Searching west..."
+msgstr "Hľadanie na západ..."
 
 msgid "Second cable of motorized LNB"
 msgstr "Druhý kábel motorizovaného LNB"
@@ -7349,7 +7293,7 @@ msgstr "Vyberte stanicu"
 msgid "Select channel to record from"
 msgstr "Vyberte stanicu, z ktorej chcete nahrávať"
 
-msgid "Select char for replacing newlines in epg."
+msgid "Select char for replacing newlines in EPG."
 msgstr ""
 
 msgid "Select copy destination for:"
@@ -7388,6 +7332,9 @@ msgstr "Vyberte možnosť, ako má prijímač udržiavať správny čas. Buď z 
 #, fuzzy
 msgid "Select image"
 msgstr "Vymazať image"
+
+msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
+msgstr "Nastavenie, v akom rozlíšení sú obrázky zobrazené v prehliadači obrázkov a prehrávači filmov."
 
 msgid "Select input device"
 msgstr "Zvoľte vstupné zariadenie"
@@ -7702,7 +7649,7 @@ msgstr "Nastaviť limity"
 msgid "Set movielist type."
 msgstr "Nastavenie typu zoznamu filmov."
 
-msgid "Set pin code persistent"
+msgid "Set persistent PIN code"
 msgstr "Nastaviť trvalý PIN kód"
 
 msgid "Set sequence repeats if your aerial system requires this. Normally if the aerial system has been configured correctly sequence repeats will not be necessary. If yours does, recheck you have command order set correctly."
@@ -8867,6 +8814,9 @@ msgstr "PIN kód bol úspešne zmenený."
 msgid "The PIN code has been saved successfully."
 msgstr "PIN kód bol úspešne uložený."
 
+msgid "The PIN code you entered is wrong."
+msgstr "Zadaný PIN kód je nesprávny."
+
 msgid "The PIN codes you entered are different."
 msgstr "PIN kódy, ktoré ste zadali, sú odlišné."
 
@@ -8905,7 +8855,7 @@ msgstr ""
 msgid ""
 "The overscan wizard has been completed.\n"
 "\n"
-"Note: you can always start the Overscan wizard later,  via\n"
+"Note: you can always start the Overscan wizard later, via\n"
 "\n"
 "Menu->Installation->System->Audio/Video->Overscan wizard"
 msgstr ""
@@ -8945,9 +8895,6 @@ msgstr ""
 #, python-format
 msgid "The path %s already exists."
 msgstr "Cesta %s už existuje."
-
-msgid "The pin code you entered is wrong."
-msgstr "Zadaný PIN kód je nesprávny."
 
 #, python-format
 msgid "The results have been written to %s"
@@ -9027,6 +8974,9 @@ msgstr ""
 
 msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
 msgstr "Toto médium DVD RW je už naformátované - opätovným formátovaním sa vymaže celý obsah disku."
+
+msgid "This bouquet is protected by a parental control PIN"
+msgstr "Tento zoznam je chránený rodičovskou kontrolou"
 
 msgid "This can be useful when using the CI(+) module. After the end of the recording, the service will be automatically stopped."
 msgstr "Toto môže byť vhodné pri použití CI(+) modulu. Po skončení nahrávania bude služba automaticky zastavená."
@@ -9140,11 +9090,11 @@ msgstr "Táto voľba môže byť vhodná pre dlhé HDMI káble."
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
 msgstr "Táto voľba nastavuje potlačenie komárieho šumu (komárí šum je náhodné vzorkovanie spôsobené silnou kompresiou). Voľba má vplyv na kvalitu obrazových detailov."
 
-msgid "This option sets  the picture contrast."
-msgstr "Táto možnosť nastavuje kontrast obrazu."
-
 msgid "This option sets the picture brightness."
 msgstr "Táto možnosť nastavuje jas obrazu."
+
+msgid "This option sets the picture contrast."
+msgstr "Táto možnosť nastavuje kontrast obrazu."
 
 msgid "This option sets the picture flesh tones."
 msgstr "Táto možnosť nastavuje odtiene v obraze."
@@ -9179,6 +9129,9 @@ msgstr "Tento doplnok sa odstráni."
 #, python-format
 msgid "This receiver cannot decode %s streams!"
 msgstr "Tento prijímač nemôže dekódovať %s stremov!"
+
+msgid "This service is protected by a parental control PIN"
+msgstr "Táto stanica je chránená rodičovskou kontrolou"
 
 msgid "This setting allows the tuner configuration to be a duplication of how another tuner is already configured."
 msgstr "Táto voľba umožňuje vytvoriť duplicitnú konfiguráciu z iného tuneru, ktorý je už nakonfigurovaný."
@@ -9225,10 +9178,10 @@ msgstr ""
 msgid ""
 "This test checks whether your LAN adapter is set up for automatic IP address configuration with DHCP.\n"
 "If you get a \"disabled\" message:\n"
-" - then your LAN adapter is configured for manual IP setup\n"
+"- then your LAN adapter is configured for manual IP setup\n"
 "- verify thay you have entered the correct IP information in the adapter setup dialog.\n"
 "If you get an \"enabeld\" message:\n"
-"-verify that you have a configured and working DHCP server in your network."
+"- verify that you have a configured and working DHCP server in your network."
 msgstr ""
 "Tento test overuje, či máte sieťovú kartu nastavenú na automatické nastavenie IP adresy z DHCP.\n"
 "Ak dostanete hlásenie „vypnuté“:\n"
@@ -9430,9 +9383,8 @@ msgstr "Tonga"
 msgid "Top and bottom"
 msgstr "Hore a dole"
 
-#, python-format
-msgid "Total clients streaming: %d (%s)"
-msgstr "Celkovo streamujúcich  klientov: %d (%s)"
+msgid "Total clients streaming: "
+msgstr "Celkovo streamujúcich  klientov: "
 
 msgid "Track"
 msgstr "Stopa"
@@ -9475,9 +9427,6 @@ msgstr "Riešenie problémov"
 
 msgid "True"
 msgstr "Platné"
-
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "Pokúšam sa stiahnuť nový zoznam balíčkov. Prosím čakajte..."
 
 msgid "Tue"
 msgstr "Ut"
@@ -9844,9 +9793,6 @@ msgstr "Používanie koša v zozname filmov"
 msgid "Used service scan type"
 msgstr "Typ vyhľadávania staníc"
 
-msgid "User - bouquets"
-msgstr "Užívateľ - prehľady"
-
 #, python-format
 msgid "User Band %d"
 msgstr ""
@@ -9860,6 +9806,9 @@ msgstr "Užívateľské ID"
 
 msgid "User Mode"
 msgstr "Užívateľský režim"
+
+msgid "User bouquets"
+msgstr "Užívateľ prehľady"
 
 msgid "User defined"
 msgstr "Užívateľsky definované"
@@ -9882,7 +9831,7 @@ msgid "Using tuner %s"
 msgstr "Používa sa tuner %s"
 
 msgid "Usually when the subtitle language is the same as the audio language, the subtitles will not be used. Enable this option to allow these subtitles to be used."
-msgstr "Zvyčajne, ak je jazyk titulkov rovnaký ako jazyk zvuku, nebudú použité titulky. Povoľte toto nastavenie, aby sa tieto titulky použili ."
+msgstr "Zvyčajne, ak je jazyk titulkov rovnaký ako jazyk zvuku, nebudú použité titulky. Povoľte toto nastavenie, aby sa tieto titulky použili."
 
 msgid "Uzbekistan"
 msgstr "Uzbekistan"
@@ -9977,8 +9926,9 @@ msgstr "Zobraziť RASS interaktívne..."
 msgid "View details"
 msgstr "Zobraziť podrobnosti"
 
-msgid "View list of available "
-msgstr "Zobraziť zoznam dostupných "
+#, fuzzy, python-format
+msgid "View list of available %s extensions."
+msgstr "Zobraziť zoznam dostupných rozšírení EPG."
 
 msgid "View list of available CommonInterface extensions"
 msgstr "Zobraziť zoznam dostupných rozšírení CommonInterface"
@@ -10213,7 +10163,7 @@ msgid "When enabled the arrow buttons around the OK button will follow the 'neut
 msgstr "Ak povolené, tlačidlá so šípkami okolo tlačidla OK budú mať funkcie prepínania ako v systéme \"neutríno\" namiesto funkcií v Enigma2 štýle."
 
 msgid "When enabled the left, right, CH+/-, B+/-, P+/- buttons will follow the 'neutrino' style zap controls instead of the enigma2 style."
-msgstr "Ak povolené, funkcie tlačidiel doľava, doprava, CH +/-, B+ /-,  P+ /- budú  fungovať v \"neutríno\" štýle ovládania namiesto štýlu Enigma2."
+msgstr "Ak povolené, funkcie tlačidiel doľava, doprava, CH +/-, B+ /-, P+ /- budú fungovať v \"neutríno\" štýle ovládania namiesto štýlu Enigma2."
 
 msgid "When enabled the receiver will automatically return to standby when the TV is turned off."
 msgstr "Ak je povolené, prijímač sa automaticky vráti do pohotovostného režimu pri vypnutí TV."
@@ -10245,7 +10195,7 @@ msgstr "Ak je povolené, môžete zadať časový rámec, v ktorom bude ignorova
 msgid "When enabled you can specify an extra timeframe when the inactivity sleeptimer is ignored. Not the detection is disabled during this timeframe but the inactivity timeout is disabled"
 msgstr "Ak je povolené, môžete zadať ďalší časový rámec, v ktorom bude ignorovaná nečinnosť časovača vypnutia. Nie detekcia, ale časový rámec nečinnosti je zakázaný."
 
-msgid "When enabled you can zap channels with the  CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
+msgid "When enabled you can zap channels with the CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
 msgstr "Ak je povolené, môžete prepínať kanály tlačidlami CH +/-,B+/-, P+/- namiesto otvorenia zoznamu staníc."
 
 msgid "When enabled you get the channel selection list via the OK button, the infobar toggle is then transfered to exit button"
@@ -10323,7 +10273,7 @@ msgstr "Ak je povolené, budú grafické DVB titulky zobrazované žltou farbou,
 msgid "When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on."
 msgstr "Ak je povolené, HTTP streamy sú dekódované na strane servera. Vzdialený klientsky prijímač nemusí dekódovať. Predvolené - zapnuté."
 
-msgid "When enabled, it is possible to leave the movieplayer with exit."
+msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "Povoliť ukončenie prehrávača filmov tlačidlom EXIT."
 
 msgid "When enabled, it will automatically play to the last saved radio service when switching to radio mode."
@@ -10369,7 +10319,7 @@ msgid "When enabled, the infobar will be displayed when changing channels."
 msgstr "Ak povolené, pri prepínaní staníc sa zobrazí informačný panel."
 
 msgid "When enabled, the infobar will be displayed when skipping forwards/backwards during media playback."
-msgstr "Ak povolené, počas skoku vpred/vzad pri prehrávaní médií sa zobrazí informačný panel ."
+msgstr "Ak povolené, počas skoku vpred/vzad pri prehrávaní médií sa zobrazí informačný panel."
 
 msgid "When enabled, the lenght of each recording will be shown in the movielist (this might cause some additional loading time)."
 msgstr "Ak povolené, zobrazí sa dĺžka každej nahrávky v zozname filmov (môže to spôsobiť predĺženie načítavania)."
@@ -10549,9 +10499,6 @@ msgstr "Áno, bez zálohovania"
 msgid "Yesterday"
 msgstr "Včera"
 
-msgid "You PIN code is 0000. This is the default PIN code and it disables parental control!\n"
-msgstr "Váš PIN kód je 0000. Toto je predvolený PIN kód a vypína rodičovskú kontrolu!\n"
-
 #, python-format
 msgid ""
 "You already have a channel list installed,\n"
@@ -10569,7 +10516,7 @@ msgid "You can cancel the removal."
 msgstr "Môžete zrušiť odstránenie."
 
 msgid "You can continue watching TV etc. while this is running."
-msgstr "Počas tohto procesu môžete naďalej sledovať TV ..."
+msgstr "Počas tohto procesu môžete naďalej sledovať TV..."
 
 msgid "You can enable if will be displayed extended EPG description for item."
 msgstr "Môže byť povolené ak bude zobrazený rozšírený popis EPG."
@@ -10582,9 +10529,6 @@ msgstr "Môžete napáliť iba nahrávky z prijímača!"
 
 msgid "You can remove this plugin."
 msgstr "Tento doplnok môžete odstrániť."
-
-msgid "You can set how will be finished movieplayer with 'Exit' button."
-msgstr "Môžete nastaviť, ako bude ukončený prehrávač filmov stlačením tlačidla 'Exit'."
 
 msgid "You can set selected directory as 'root' directory for movie player."
 msgstr "Môžete nastaviť zvolený adresár ako 'Koreňový adresár' pre prehrávač filmov."
@@ -10602,7 +10546,7 @@ msgid ""
 "\n"
 "When you select a different skin, the user interface of your receiver will restart.\n"
 "\n"
-"Note: you can always start the Overscan wizard later,  via\n"
+"Note: you can always start the Overscan wizard later, via\n"
 "\n"
 "menu->installation->system->Overscan wizard"
 msgstr ""
@@ -10645,6 +10589,9 @@ msgstr "Prepnite na stanicu %s (%s - '%s')\n"
 msgid "You seem to be in timeshift!"
 msgstr "Práve prebieha časový posun!"
 
+msgid "Your PIN code is 0000. This is the default PIN code and it disables parental control!\n"
+msgstr "Váš PIN kód je 0000. Toto je predvolený PIN kód a vypína rodičovskú kontrolu!\n"
+
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Zostava presahuje kapacitu jednovrstvového média. Budete potrebovať prázdny dvojvrstvový disk DVD!"
 
@@ -10668,14 +10615,14 @@ msgstr ""
 "Zvoľte prosím, čo chcete robiť ďalej."
 
 #, python-format
-msgid "Your internet connection is working (ip: %s)"
-msgstr "Vaše pripojenie k internetu je funkčné (ip: %s)"
+msgid "Your internet connection is working (IP address: %s)"
+msgstr "Vaše pripojenie k internetu je funkčné (IP: %s)"
 
 msgid "Your network configuration has been activated."
 msgstr "Konfigurácia siete bola aktivovaná."
 
 msgid "Your receiver can use SCPC optimized search range. Consult your receiver's manual for more information."
-msgstr "Váš prijímač dokáže využiť optimalizovaný vyhľadávací rozsah SCPC . Pre viac informácií si prečítajte návod k prijímaču."
+msgstr "Váš prijímač dokáže využiť optimalizovaný vyhľadávací rozsah SCPC. Pre viac informácií si prečítajte návod k prijímaču."
 
 msgid "Your receiver can use tone amplitude. Consult your receiver's manual for more information."
 msgstr "Váš prijímač dokáže využiť tónovú amplitúdu. Pre viac informácií si prečítajte návod k prijímaču."
@@ -10909,6 +10856,9 @@ msgstr "späť"
 msgid "background image"
 msgstr "obraz v pozadí"
 
+msgid "backup EPG cache"
+msgstr "záloha pamäte EPG"
+
 msgid "ballet"
 msgstr "balet"
 
@@ -10972,9 +10922,6 @@ msgstr "komédia"
 
 msgid "config menu"
 msgstr "menu nastavení"
-
-msgid "configure in which resolution pictures are displayed with the picture viewer and movieplayer"
-msgstr "Nastavenie, v akom rozlíšení sú obrázky zobrazené v prehliadači obrázkov a prehrávači filmov"
 
 msgid "confirmed"
 msgstr "potvrdené"
@@ -11066,13 +11013,10 @@ msgstr "zábavný (10 až 16 rokov)"
 msgid "entertainment (6-14 year old)"
 msgstr "zábavný (6 až 14 rokov)"
 
-msgid "epg cache backup"
-msgstr "záloha pamäte epg"
-
 msgid "equestrian"
 msgstr "jazdectvo"
 
-msgid "error starting scanning"
+msgid "error starting scan"
 msgstr "nepodarilo sa spustiť vyhľadávanie"
 
 msgid "error while scanning"
@@ -11233,6 +11177,10 @@ msgstr "skok vpred na nasledujúci titul"
 
 msgid "jump to chapter by number"
 msgstr "skok na kapitolu podľa čísla"
+
+#, fuzzy
+msgid "kB"
+msgstr "B"
 
 msgid "languages"
 msgstr "jazyky"
@@ -11696,14 +11644,8 @@ msgstr "tenis/squash"
 msgid "testing"
 msgstr "pracujem"
 
-msgid "this bouquet is protected by a parental control pin"
-msgstr "tento zoznam je chránený rodičovskou kontrolou"
-
 msgid "this recording"
 msgstr "táto nahrávka"
-
-msgid "this service is protected by a parental control pin"
-msgstr "táto stanica je chránená rodičovskou kontrolou"
 
 msgid "toggle time, chapter, audio, subtitle info"
 msgstr "prepnúť informácie medzi časom, kapitolou, zvukovou stopou a titulkami"

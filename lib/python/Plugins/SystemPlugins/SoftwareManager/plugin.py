@@ -374,7 +374,7 @@ class SoftwareManagerSetup(Screen, ConfigListScreen):
 		self.list.append(self.overwriteConfigfilesEntry)
 		self.list.append(getConfigListEntry(_("show softwaremanager in setup menu"), config.plugins.softwaremanager.onSetupMenu))
 		self.list.append(getConfigListEntry(_("show softwaremanager on blue button"), config.plugins.softwaremanager.onBlueButton))
-		self.list.append(getConfigListEntry(_("epg cache backup"), config.plugins.softwaremanager.epgcache))
+		self.list.append(getConfigListEntry(_("backup EPG cache"), config.plugins.softwaremanager.epgcache))
 
 		self["config"].list = self.list
 		self["config"].l.setSeperation(400)
@@ -677,7 +677,7 @@ class PluginManager(Screen, PackageInfoHandler):
 				if len(self.selectedFiles) == 0 and iSoftwareTools.available_updates is not 0:
 					self["status"].setText(_("There are at least %d updates available.") % iSoftwareTools.available_updates)
 				elif len(self.selectedFiles) is not 0:
-					self["status"].setText(str(len(self.selectedFiles)) + _(" packages selected."))
+					self["status"].setText(ngettext("%d package selected.", "%d packages selected.", len(self.selectedFiles)) % len(self.selectedFiles))
 				else:
 					self["status"].setText(_("There are currently no outstanding actions."))
 			elif self.currList == "category":
@@ -689,7 +689,7 @@ class PluginManager(Screen, PackageInfoHandler):
 					self["status"].setText(_("There are at least %d updates available.") % iSoftwareTools.available_updates)
 					self["key_yellow"].setText(_("Update"))
 				elif len(self.selectedFiles) is not 0:
-					self["status"].setText(str(len(self.selectedFiles)) + _(" packages selected."))
+					self["status"].setText(ngettext("%d package selected.", "%d packages selected.", len(self.selectedFiles)) % len(self.selectedFiles))
 					self["key_yellow"].setText(_("Process"))
 				else:
 					self["status"].setText(_("There are currently no outstanding actions."))
@@ -879,7 +879,7 @@ class PluginManager(Screen, PackageInfoHandler):
 			elif tag == 'Communication':
 				return((_("Communication"), _("View list of available communication extensions."), tag, divpng))
 			else: # dynamically generate non existent tags
-				return((str(tag), _("View list of available ") + str(tag) + _(" extensions."), tag, divpng))
+				return((str(tag), _("View list of available %s extensions.") % str(tag), tag, divpng))
 
 	def prepareInstall(self):
 		self.cmdList = []
@@ -1595,7 +1595,7 @@ class PacketManager(Screen, NumericalTextInput):
 			divpng = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_SKIN, "div-h.png"))
 			if status == 'update':
 				statuspng = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/SoftwareManager/upgrade.png"))
-				self.statuslist.append((_("Package list update"), '', _("Trying to download a new packetlist. Please wait..."), '', statuspng, divpng))
+				self.statuslist.append((_("Package list update"), '', _("Downloading a new packet list. Please wait..."), '', statuspng, divpng))
 				self['list'].setList(self.statuslist)
 			elif status == 'error':
 				statuspng = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/SoftwareManager/remove.png"))

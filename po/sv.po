@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-10 01:42+0300\n"
+"POT-Creation-Date: 2021-09-17 22:15+0300\n"
 "PO-Revision-Date: 2017-03-05 13:24+0100\n"
 "Last-Translator: Magnus Nilsson <mag_nilsson@hotmail.com>\n"
 "Language-Team: \n"
@@ -100,20 +100,12 @@ msgstr ""
 msgid " Warning: the selected tuner should not use SCR Unicable type for LNBs because each tuner need a own SCR number."
 msgstr ""
 
-#
-msgid " extensions."
-msgstr " utökningar."
-
 #, fuzzy
 msgid " min"
 msgstr "%d min"
 
 msgid " ms"
 msgstr " ms"
-
-#
-msgid " packages selected."
-msgstr " valda paket."
 
 msgid " unicable LNB input of rotor"
 msgstr ""
@@ -122,18 +114,6 @@ msgstr ""
 #, python-format
 msgid "%(freespace)s %(percent)s free disk space"
 msgstr "%(freespace)s %(percent)s ledigt diskutrymme"
-
-#, python-format
-msgid "%.0f GB"
-msgstr ""
-
-#, python-format
-msgid "%.0f MB"
-msgstr ""
-
-#, python-format
-msgid "%.0f kB"
-msgstr ""
 
 #, python-format
 msgid "%.1f° E"
@@ -188,14 +168,6 @@ msgid "%a %e/%m  %-H:%M"
 msgstr "%a %e/%m  %-H:%M"
 
 #, python-format
-msgid "%d B"
-msgstr ""
-
-#, python-format
-msgid "%d GB"
-msgstr ""
-
-#, python-format
 msgid "%d MB"
 msgstr ""
 
@@ -242,10 +214,6 @@ msgstr[0] "%d jobb körs i bakgrunden!"
 msgstr[1] "%d jobb körs i bakgrunden!"
 
 #, python-format
-msgid "%d kB"
-msgstr ""
-
-#, python-format
 msgid "%d kB/s"
 msgstr ""
 
@@ -266,6 +234,13 @@ msgstr "%d minuter"
 #, python-format
 msgid "%d ms"
 msgstr ""
+
+#
+#, fuzzy, python-format
+msgid "%d package selected."
+msgid_plural "%d packages selected."
+msgstr[0] " valda paket."
+msgstr[1] " valda paket."
 
 #, python-format
 msgid "%d pixel wide"
@@ -560,40 +535,19 @@ msgstr "??"
 msgid "A"
 msgstr "A"
 
-#
-#, python-format
-msgid ""
-"A configuration file (%s) has been modified since it was installed.\n"
-"Do you want to keep your modifications?"
-msgstr ""
-"En konfigurationsfil (%s) har ändrats sedan installationen.\n"
-"Vill du behålla din ändring?"
+msgid "A completed recording timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "En avslutad inspelningstimer vill försätta din mottagare i viloläge. Utföra det nu?"
+
+msgid "A completed recording timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "En avslutad inspelningstimer vill stänga av din mottagare. Stänga av nu?"
 
 #
 #, python-format
-msgid ""
-"A configuration file (%s) was modified since Installation.\n"
-"Do you want to keep your version?"
-msgstr ""
-"En konfigurationsfil (%s) har ändrats sedan installationen.\n"
-"Vill du behålla din version?"
+msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
+msgstr "En konfigurationsfil (%s) har ändrats sedan installationen. Vill du behålla din ändring?"
 
 msgid "A file from media is in use!"
 msgstr ""
-
-msgid ""
-"A finished record timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"En avslutad inspelningstimer vill försätta din\n"
-"mottagare i viloläge. Utföra det nu?"
-
-msgid ""
-"A finished record timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"En avslutad inspelningstimer vill stänga av\n"
-"din mottagare. Stänga av nu?"
 
 #
 #, fuzzy
@@ -603,7 +557,7 @@ msgstr "En grafisk EPG för alla kanaler i en specifik favoritlista."
 #
 #, python-format
 msgid ""
-"A record has been started:\n"
+"A recording has started:\n"
 "%s"
 msgstr ""
 "En inspelning har påbörjats :\n"
@@ -621,11 +575,15 @@ msgstr ""
 "En inspelning pågår redan.\n"
 "Vad vill du göra?"
 
-msgid "A recording is currently running. Please stop the recording before trying to scan."
+msgid "A recording is currently running. Please stop the recording before starting a DiSEqC test."
+msgstr "En inspelning pågår för närvarande. Avsluta inspelning innan du försöker starta DiSEqC test."
+
+msgid "A recording is currently running. Please stop the recording before starting a service scan."
 msgstr "En inspelning pågår för närvarande. Avsluta inspelning innan du försöker skanna."
 
-msgid "A recording is currently running. Please stop the recording before trying to start a testing DiSEqC."
-msgstr "En inspelning pågår för närvarande. Avsluta inspelning innan du försöker starta DiSEqC test."
+#
+msgid "A repeating event is currently recording. What would you like to do?"
+msgstr "Ett upprepande program spelas in. Vad vill du göra?"
 
 #
 #, python-format
@@ -646,19 +604,11 @@ msgstr ""
 "\n"
 "Vill du avaktivera sekundärt nätverkskort?"
 
-msgid ""
-"A sleep timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"En insomningstimer vill försätta din\n"
-"mottagare i viloläge. Utföra det nu?"
+msgid "A sleep timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "En insomningstimer vill försätta din mottagare i viloläge. Utföra det nu?"
 
-msgid ""
-"A sleep timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"En insomningstimer vill stänga av\n"
-"din mottagare. Stänga av nu?"
+msgid "A sleep timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "En insomningstimer vill stänga av din mottagare. Stänga av nu?"
 
 #
 msgid "A small overview of the available icon states and actions."
@@ -715,7 +665,7 @@ msgid "About"
 msgstr "Om"
 
 #
-msgid "Accesspoint:"
+msgid "Access point:"
 msgstr "Accesspunkt :"
 
 msgid "Activate HbbTV (Redbutton)"
@@ -971,11 +921,8 @@ msgstr ""
 msgid "Allow 12bit"
 msgstr ""
 
-msgid "Allow quit movieplayer with exit"
-msgstr "Avsluta movieplayer med exitknappen"
-
 #, fuzzy
-msgid "Allow quitting movieplayer with exit"
+msgid "Allow quitting movie player with exit"
 msgstr "Avsluta movieplayer med exitknappen"
 
 msgid "Allow subtitle language to equal audio language"
@@ -1291,7 +1238,7 @@ msgstr "Författarläge"
 msgid "Auto"
 msgstr "Auto"
 
-msgid "Auto Diseqc"
+msgid "Auto DiSEqC"
 msgstr ""
 
 msgid "Auto EXIF Orientation rotation/flipping"
@@ -1308,7 +1255,7 @@ msgstr "Auto hudfärg"
 msgid "Auto focus"
 msgstr "Autofokus"
 
-msgid "Auto focus commencing ..."
+msgid "Auto focus commencing..."
 msgstr "Autofokus startar..."
 
 msgid "Auto language selection"
@@ -2220,7 +2167,7 @@ msgid "Configure the behavior when reaching the end of a movie, during movie pla
 msgstr "Konfigurera beteendet när man når slutet av en film, under filmuppspelning."
 
 msgid "Configure the border width of the subtitles. The dark border makes the subtitles easier to read on a light background."
-msgstr "Konfigurera undertextens kantbred . Den mörka gränsen gör att undertexter är lättare att läsa på en ljus bakgrund."
+msgstr "Konfigurera undertextens kantbred. Den mörka gränsen gör att undertexter är lättare att läsa på en ljus bakgrund."
 
 msgid "Configure the brightness level of the front panel display during standby."
 msgstr "Konfigurera ljusstyrkan på frontpanelens display i viloläge."
@@ -2235,7 +2182,7 @@ msgid "Configure the color of the teletext subtitles."
 msgstr "Konfigurera färgen på teletext undertexter."
 
 msgid "Configure the contrast level of the front panel display."
-msgstr "Konfigurera kontrastnivån på  frontpanelens display."
+msgstr "Konfigurera kontrastnivån på frontpanelens display."
 
 msgid "Configure the cursor behaviour in the channel selection list. When opening the channel selection list you can keep on the current service or already select up/down and you are able to revert the B+/B- buttons."
 msgstr "Konfigurera markörbeteende i kanallistan. Vid öppning av kanallistan kan du behålla den aktuella kanalen eller välja upp / ner samt att du har möjlighet att växla tillbaka till B+ / B- knapparna."
@@ -2994,14 +2941,14 @@ msgstr "Detaljer för plugin : "
 msgid "Detect next boxes before standby"
 msgstr ""
 
-msgid "Detected HDD:"
-msgstr "Hittad HDD :"
-
 #
 msgid "Detected NIMs:"
 msgstr "Hittade tuners :"
 
-msgid "Devicename:"
+msgid "Detected storage devices:"
+msgstr "Hittad HDD :"
+
+msgid "Device name:"
 msgstr "Enhetens namn :"
 
 #
@@ -3118,7 +3065,7 @@ msgstr "Spara endast timeshift för aktuellt program"
 #
 #, fuzzy
 msgid "Display EPG list for current channel"
-msgstr "Visa EPG för aktuell kanal ..."
+msgstr "Visa EPG för aktuell kanal..."
 
 #
 #, fuzzy
@@ -3365,6 +3312,10 @@ msgstr "Laddar ner"
 #, fuzzy
 msgid "Downloading Image"
 msgstr "Laddar ner"
+
+#
+msgid "Downloading a new packet list. Please wait..."
+msgstr "Försöker att ladda ner ny paketlista. Vänligen vänta..."
 
 #
 msgid "Downloading plugin information. Please wait..."
@@ -3689,6 +3640,10 @@ msgstr "IP adress"
 msgid "Enter PIN"
 msgstr "Ange PIN"
 
+#
+msgid "Enter PIN code"
+msgstr "Ange PIN-kod"
+
 #, fuzzy
 msgid "Enter URL"
 msgstr "Ange PIN"
@@ -3709,10 +3664,6 @@ msgstr "Gå till huvudmeny..."
 msgid "Enter persistent PIN code"
 msgstr "Ange beständig PIN-kod"
 
-#
-msgid "Enter pin code"
-msgstr "Ange PIN-kod"
-
 msgid "Enter the frequency at which you LNB switches between low band and high band. For more information consult the spec sheet of your LNB."
 msgstr ""
 
@@ -3722,8 +3673,8 @@ msgstr ""
 msgid "Enter the number stored in the positioner that corresponds to this satellite."
 msgstr ""
 
-msgid "Enter the service pin"
-msgstr "Ange kanal pin"
+msgid "Enter the service PIN"
+msgstr "Ange kanal PIN"
 
 msgid "Enter valid ONID/TSID"
 msgstr ""
@@ -5885,13 +5836,13 @@ msgstr "Meny för filmlista"
 msgid "Moving"
 msgstr "Flyttar"
 
-msgid "Moving east ..."
+msgid "Moving east..."
 msgstr "Flyttar mot öst..."
 
 msgid "Moving to position"
 msgstr "Flyttar till position"
 
-msgid "Moving west ..."
+msgid "Moving west..."
 msgstr "Flyttar mot väst..."
 
 msgid "Mozambique"
@@ -6160,7 +6111,7 @@ msgstr ""
 msgid "No event info found, recording indefinitely."
 msgstr "Ingen programinfo hittades, inspelning oändlig."
 
-msgid "No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"
+msgid "No fast winding possible yet... but you can use the number buttons to skip forward/backward!"
 msgstr "Ingen snabbspolning möjlig än... men du kan använda nummerknapparna för att hoppa framåt / bakåt!"
 
 msgid "No free index available"
@@ -6817,7 +6768,7 @@ msgstr "Vänligen ange ny beskrivning :"
 msgid "Please enter new name:"
 msgstr "Vänligen ange nytt namn :"
 
-msgid "Please enter the correct pin code"
+msgid "Please enter the correct PIN code"
 msgstr "Vänligen ange den korrekta PIN-koden"
 
 msgid "Please enter the new PIN code"
@@ -6977,7 +6928,7 @@ msgid "Please wait for activation of your network configuration..."
 msgstr "Vänligen vänta för aktivering av din nätverkskonfiguration..."
 
 #
-msgid "Please wait while scanning is in progress..."
+msgid "Please wait while scanning..."
 msgstr "Vänligen vänta medan sökning pågår..."
 
 #
@@ -7350,7 +7301,7 @@ msgstr "Skydda meny sort."
 msgid "Protect movie list"
 msgstr "Skydda filmlista"
 
-msgid "Protect on epg age"
+msgid "Protect on EPG age"
 msgstr "Ålder på EPG skydd"
 
 msgid "Protect plugin browser"
@@ -7720,17 +7671,6 @@ msgstr "Upprepa spellista"
 #
 msgid "Repeat type"
 msgstr "Upprepningstyp"
-
-msgid ""
-"Repeating event currently recording.\n"
-"What do you want to do?"
-msgstr ""
-"Ett upprepande program spelas in.\n"
-"Vad vill du göra?"
-
-#
-msgid "Repeating event currently recording... What do you want to do?"
-msgstr "Ett upprepande program spelas in... Vad vill du göra?"
 
 #
 msgid "Repeats"
@@ -8246,7 +8186,7 @@ msgstr "Sök väst"
 msgid "Searching"
 msgstr "Söker"
 
-msgid "Searching east ..."
+msgid "Searching east..."
 msgstr "Söker öst..."
 
 #
@@ -8257,7 +8197,7 @@ msgstr "Söker efter tillgängliga uppdateringar. Vänligen vänta..."
 msgid "Searching for new installed or removed packages. Please wait..."
 msgstr "Sök efter nyinstallerade eller borttagna paket. Vänligen vänta..."
 
-msgid "Searching west ..."
+msgid "Searching west..."
 msgstr "Söker väst..."
 
 msgid "Second cable of motorized LNB"
@@ -8416,7 +8356,7 @@ msgstr "Välj kanal"
 msgid "Select channel to record from"
 msgstr "Välj kanal att spela in från"
 
-msgid "Select char for replacing newlines in epg."
+msgid "Select char for replacing newlines in EPG."
 msgstr ""
 
 msgid "Select copy destination for:"
@@ -8462,6 +8402,9 @@ msgstr ""
 #, fuzzy
 msgid "Select image"
 msgstr "Radera timer"
+
+msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
+msgstr "Konfigurera i vilken upplösning bilderna skall visas med bildvisaren och movie player."
 
 msgid "Select input device"
 msgstr "Välj inmatningsenhet"
@@ -8822,7 +8765,7 @@ msgstr "Sätt gränserna"
 msgid "Set movielist type."
 msgstr "Skydda filmlista"
 
-msgid "Set pin code persistent"
+msgid "Set persistent PIN code"
 msgstr "Ange beständig PIN-kod"
 
 msgid "Set sequence repeats if your aerial system requires this. Normally if the aerial system has been configured correctly sequence repeats will not be necessary. If yours does, recheck you have command order set correctly."
@@ -8927,7 +8870,7 @@ msgstr "Visa EIT nu / nästa i infobalken"
 
 #
 msgid "Show EPG for current channel..."
-msgstr "Visa EPG för aktuell kanal ..."
+msgstr "Visa EPG för aktuell kanal..."
 
 #
 msgid "Show EPG..."
@@ -10147,7 +10090,10 @@ msgid "The PIN code has been changed successfully."
 msgstr "PIN-koden har ändrats!"
 
 msgid "The PIN code has been saved successfully."
-msgstr "PIN-koden har sparats ."
+msgstr "PIN-koden har sparats."
+
+msgid "The PIN code you entered is wrong."
+msgstr "PIN-koden du angav är fel."
 
 msgid "The PIN codes you entered are different."
 msgstr "PIN-koden matchar inte."
@@ -10191,7 +10137,7 @@ msgstr ""
 msgid ""
 "The overscan wizard has been completed.\n"
 "\n"
-"Note: you can always start the Overscan wizard later,  via\n"
+"Note: you can always start the Overscan wizard later, via\n"
 "\n"
 "Menu->Installation->System->Audio/Video->Overscan wizard"
 msgstr ""
@@ -10233,9 +10179,6 @@ msgstr ""
 #, python-format
 msgid "The path %s already exists."
 msgstr "Sökvägen %s existerar redan."
-
-msgid "The pin code you entered is wrong."
-msgstr "Pin-koden du angav är fel."
 
 #, python-format
 msgid "The results have been written to %s"
@@ -10331,6 +10274,9 @@ msgstr ""
 #
 msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
 msgstr "Detta DVD RW media är redan formaterat - om formatering kommer ta bort all data på skivan."
+
+msgid "This bouquet is protected by a parental control PIN"
+msgstr "Denna favoritlista är skyddad av föräldraskyddskod"
 
 msgid "This can be useful when using the CI(+) module. After the end of the recording, the service will be automatically stopped."
 msgstr ""
@@ -10468,10 +10414,10 @@ msgstr ""
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
 msgstr ""
 
-msgid "This option sets  the picture contrast."
+msgid "This option sets the picture brightness."
 msgstr ""
 
-msgid "This option sets the picture brightness."
+msgid "This option sets the picture contrast."
 msgstr ""
 
 msgid "This option sets the picture flesh tones."
@@ -10511,6 +10457,10 @@ msgstr "Detta plugin kommer att tas bort."
 #, python-format
 msgid "This receiver cannot decode %s streams!"
 msgstr "Den här mottagaren kan inte avkoda %s strömmar!"
+
+#
+msgid "This service is protected by a parental control PIN"
+msgstr "Denna kanal är föräldraskyddad"
 
 msgid "This setting allows the tuner configuration to be a duplication of how another tuner is already configured."
 msgstr ""
@@ -10561,10 +10511,10 @@ msgstr ""
 msgid ""
 "This test checks whether your LAN adapter is set up for automatic IP address configuration with DHCP.\n"
 "If you get a \"disabled\" message:\n"
-" - then your LAN adapter is configured for manual IP setup\n"
+"- then your LAN adapter is configured for manual IP setup\n"
 "- verify thay you have entered the correct IP information in the adapter setup dialog.\n"
 "If you get an \"enabeld\" message:\n"
-"-verify that you have a configured and working DHCP server in your network."
+"- verify that you have a configured and working DHCP server in your network."
 msgstr ""
 "Detta test kontrollerar om din LAN adapter är konfigurerad för automatisk IP adress tilldelning med DHCP.\n"
 "Om du får ett \"avstängt\" meddelande :\n"
@@ -10804,9 +10754,8 @@ msgstr ""
 msgid "Top and bottom"
 msgstr "Längst upp och längst ner"
 
-#, python-format
-msgid "Total clients streaming: %d (%s)"
-msgstr "Klienter som strömmar : %d (%s)"
+msgid "Total clients streaming: "
+msgstr "Klienter som strömmar : "
 
 #
 msgid "Track"
@@ -10859,10 +10808,6 @@ msgstr "Felsök"
 
 msgid "True"
 msgstr ""
-
-#
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "Försöker att ladda ner ny paketlista. Vänligen vänta..."
 
 #
 msgid "Tue"
@@ -11287,9 +11232,6 @@ msgstr "Använd papperskorgen i filmlistan"
 msgid "Used service scan type"
 msgstr "Använd kanalsökningstyp"
 
-msgid "User - bouquets"
-msgstr "Användare - favoritlistor"
-
 #, python-format
 msgid "User Band %d"
 msgstr ""
@@ -11307,6 +11249,9 @@ msgstr "Användardefinierat"
 #, fuzzy
 msgid "User Mode"
 msgstr "Användardefinierat"
+
+msgid "User bouquets"
+msgstr "Användare favoritlistor"
 
 #
 msgid "User defined"
@@ -11444,8 +11389,9 @@ msgid "View details"
 msgstr "Visa detaljer"
 
 #
-msgid "View list of available "
-msgstr "Visa lista över tillgängliga "
+#, fuzzy, python-format
+msgid "View list of available %s extensions."
+msgstr "Visa lista över tillgängliga EPG utökningar."
 
 #
 msgid "View list of available CommonInterface extensions"
@@ -11456,7 +11402,7 @@ msgid "View list of available EPG extensions."
 msgstr "Visa lista över tillgängliga EPG utökningar."
 
 msgid "View list of available Satellite equipment extensions."
-msgstr "Visa  lista över tillgängliga Satellitutrustningsutökningar."
+msgstr "Visa lista över tillgängliga Satellitutrustningsutökningar."
 
 #
 msgid "View list of available communication extensions."
@@ -11751,7 +11697,7 @@ msgstr "Vid aktiverad kan du ange en tidsperiod när inaktiv insomningstimer är
 msgid "When enabled you can specify an extra timeframe when the inactivity sleeptimer is ignored. Not the detection is disabled during this timeframe but the inactivity timeout is disabled"
 msgstr "Vid aktiverad kan du ange en tidsperiod när inaktiv insomningstimer är ignorerad. Detektering är inte avstängd under denna tidsperiod men den inaktiva timeouten är avstängd."
 
-msgid "When enabled you can zap channels with the  CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
+msgid "When enabled you can zap channels with the CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
 msgstr "Vid aktiverad kan du zappa kanalerna med CH+/-, B+/-, P+/- knapparna istället för att öppna kanallistan."
 
 msgid "When enabled you get the channel selection list via the OK button, the infobar toggle is then transfered to exit button"
@@ -11831,7 +11777,7 @@ msgstr "Vid aktiverad kommer grafiska DVB undertexter att visas i gult, i ställ
 msgid "When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on."
 msgstr "Vid aktiverad kommer http strömmar avkodas på serversidan. (Fjärr) klientmottagaren behöver inte göra avkodning. Standard på."
 
-msgid "When enabled, it is possible to leave the movieplayer with exit."
+msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "Vid aktiverad kan man avsluta movieplayer med exitknappen."
 
 #, fuzzy
@@ -12081,10 +12027,6 @@ msgstr "Återställ säkerhetskopia"
 msgid "Yesterday"
 msgstr "Igår"
 
-#, fuzzy
-msgid "You PIN code is 0000. This is the default PIN code and it disables parental control!\n"
-msgstr "Din PIN-kod är 0000. Detta är standard PIN-koden och den stänger av föräldrakontrollen!\n"
-
 #, python-format
 msgid ""
 "You already have a channel list installed,\n"
@@ -12120,9 +12062,6 @@ msgstr "Du kan bara bränna mottagarens inspelningar!"
 msgid "You can remove this plugin."
 msgstr "Du kan ta bort detta plugin."
 
-msgid "You can set how will be finished movieplayer with 'Exit' button."
-msgstr ""
-
 msgid "You can set selected directory as 'root' directory for movie player."
 msgstr ""
 
@@ -12142,7 +12081,7 @@ msgid ""
 "\n"
 "When you select a different skin, the user interface of your receiver will restart.\n"
 "\n"
-"Note: you can always start the Overscan wizard later,  via\n"
+"Note: you can always start the Overscan wizard later, via\n"
 "\n"
 "menu->installation->system->Overscan wizard"
 msgstr ""
@@ -12186,6 +12125,10 @@ msgstr "Du måste växla till denna kanal %s (%s- '%s')!\n"
 msgid "You seem to be in timeshift!"
 msgstr ""
 
+#, fuzzy
+msgid "Your PIN code is 0000. This is the default PIN code and it disables parental control!\n"
+msgstr "Din PIN-kod är 0000. Detta är standard PIN-koden och den stänger av föräldrakontrollen!\n"
+
 #
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Din samling överstiger storleken på single layer media, du kommer behöva en tom dual layer DVD!"
@@ -12212,7 +12155,7 @@ msgstr ""
 "Vänligen välj vad du vill göra härnäst."
 
 #, python-format
-msgid "Your internet connection is working (ip: %s)"
+msgid "Your internet connection is working (IP address: %s)"
 msgstr "Din Internetanslutning fungerar (ip : %s)"
 
 #
@@ -12476,6 +12419,9 @@ msgstr "tillbaka"
 msgid "background image"
 msgstr "bakgrundsbild"
 
+msgid "backup EPG cache"
+msgstr "EPG cache kopia"
+
 msgid "ballet"
 msgstr "balett"
 
@@ -12548,9 +12494,6 @@ msgstr "komedi"
 #
 msgid "config menu"
 msgstr "konfigurationsmeny"
-
-msgid "configure in which resolution pictures are displayed with the picture viewer and movieplayer"
-msgstr "Konfigurera i vilken upplösning bilderna skall visas med bildvisaren och movieplayer."
 
 #
 msgid "confirmed"
@@ -12657,13 +12600,10 @@ msgstr "underhållning (10-16 år)"
 msgid "entertainment (6-14 year old)"
 msgstr "underhållning (6-14 år)"
 
-msgid "epg cache backup"
-msgstr "EPG cache kopia"
-
 msgid "equestrian"
 msgstr "hästsport"
 
-msgid "error starting scanning"
+msgid "error starting scan"
 msgstr "fel vid start av skanning"
 
 msgid "error while scanning"
@@ -12852,6 +12792,11 @@ msgstr "hoppa framåt till nästa titel"
 
 msgid "jump to chapter by number"
 msgstr "hoppa till kapitel med nummer"
+
+#
+#, fuzzy
+msgid "kB"
+msgstr "B"
 
 msgid "languages"
 msgstr "språk"
@@ -13387,16 +13332,9 @@ msgstr "tennis / squash"
 msgid "testing"
 msgstr "arbetar"
 
-msgid "this bouquet is protected by a parental control pin"
-msgstr "denna favoritlista är skyddad av föräldraskyddskod"
-
 #
 msgid "this recording"
 msgstr "denna inspelning"
-
-#
-msgid "this service is protected by a parental control pin"
-msgstr "denna kanal är föräldraskyddad"
 
 #
 msgid "toggle time, chapter, audio, subtitle info"

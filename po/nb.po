@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-10 01:42+0300\n"
+"POT-Creation-Date: 2021-09-17 22:15+0300\n"
 "PO-Revision-Date: 2021-06-19 13:08+0200\n"
 "Last-Translator: GeirJ <dummy@dummy.com>\n"
 "Language-Team: GeirJ\n"
@@ -104,18 +104,11 @@ msgid " Warning: the selected tuner should not use SCR Unicable type for LNBs be
 msgstr " Advarsel: Den valgte tuner bør ikke bruke SCR Unicable LNB-er fordi hver tuner trenger et eget SCR-nummer."
 
 #
-msgid " extensions."
-msgstr " utvidelser."
-
-#
 msgid " min"
 msgstr " min"
 
 msgid " ms"
 msgstr " ms"
-
-msgid " packages selected."
-msgstr " valgte pakker."
 
 msgid " unicable LNB input of rotor"
 msgstr " unicable LNB-inngang av rotor"
@@ -123,18 +116,6 @@ msgstr " unicable LNB-inngang av rotor"
 #, python-format
 msgid "%(freespace)s %(percent)s free disk space"
 msgstr "%(freespace)s %(percent)s ledig diskplass"
-
-#, python-format
-msgid "%.0f GB"
-msgstr "%.0f GB"
-
-#, python-format
-msgid "%.0f MB"
-msgstr "%.0f MB"
-
-#, python-format
-msgid "%.0f kB"
-msgstr "%.0f kB"
 
 #, python-format
 msgid "%.1f° E"
@@ -187,14 +168,6 @@ msgid "%a %e/%m  %-H:%M"
 msgstr "%a %e/%m  %-H:%M"
 
 #, python-format
-msgid "%d B"
-msgstr "%d B"
-
-#, python-format
-msgid "%d GB"
-msgstr "%d GB"
-
-#, python-format
 msgid "%d MB"
 msgstr "%d MB"
 
@@ -241,10 +214,6 @@ msgstr[0] "%d prosess kjører i bakgrunnen!"
 msgstr[1] "%d prosesser kjører i bakgrunnen!"
 
 #, python-format
-msgid "%d kB"
-msgstr "%d kB"
-
-#, python-format
 msgid "%d kB/s"
 msgstr "%d kB/s"
 
@@ -267,6 +236,12 @@ msgstr "%d minutter"
 #, python-format
 msgid "%d ms"
 msgstr "%d ms"
+
+#, fuzzy, python-format
+msgid "%d package selected."
+msgid_plural "%d packages selected."
+msgstr[0] " valgte pakker."
+msgstr[1] " valgte pakker."
 
 #, python-format
 msgid "%d pixel wide"
@@ -564,40 +539,19 @@ msgstr "??"
 msgid "A"
 msgstr "A"
 
-#
-#, python-format
-msgid ""
-"A configuration file (%s) has been modified since it was installed.\n"
-"Do you want to keep your modifications?"
-msgstr ""
-"En konfigurasjonsfil (%s) har blitt endret siden den ble installert.\n"
-"Skal siste endring beholdes?"
+msgid "A completed recording timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "Et timer opptak er ferdig og vil slå av din mottaker til standby. Slå av nå?"
+
+msgid "A completed recording timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "Et timer opptak er ferdig og vil slå av din mottaker. Slå av nå?"
 
 #
 #, python-format
-msgid ""
-"A configuration file (%s) was modified since Installation.\n"
-"Do you want to keep your version?"
-msgstr ""
-"En konfigurasjonsfil (%s) ble endret etter siste installasjon.\n"
-"Skal siste versjon beholdes?"
+msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
+msgstr "En konfigurasjonsfil (%s) har blitt endret siden den ble installert. Skal siste endring beholdes?"
 
 msgid "A file from media is in use!"
 msgstr "En media fil er i bruk!"
-
-msgid ""
-"A finished record timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"Et timer opptak er ferdig og vil slå av din\n"
-"mottaker til standby. Slå av nå?"
-
-msgid ""
-"A finished record timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"Et timer opptak er ferdig og vil slå av din\n"
-"mottaker. Slå av nå?"
 
 #
 msgid "A graphical EPG for all services of a specific bouquet"
@@ -605,7 +559,7 @@ msgstr "En grafisk EPG for alle kanaler i en bestemt kanalliste"
 
 #, python-format
 msgid ""
-"A record has been started:\n"
+"A recording has started:\n"
 "%s"
 msgstr ""
 "Et opptak har startet:\n"
@@ -621,11 +575,15 @@ msgstr ""
 "Et opptak pågår.\n"
 "Hva vil du gjøre?"
 
-msgid "A recording is currently running. Please stop the recording before trying to scan."
+msgid "A recording is currently running. Please stop the recording before starting a DiSEqC test."
+msgstr "Et opptak pågår. Vennligst stopp opptaket før DiSEqC testing kan utføres."
+
+msgid "A recording is currently running. Please stop the recording before starting a service scan."
 msgstr "Et opptak pågår. Vennligst stopp opptaket før kanalsøk kan utføres."
 
-msgid "A recording is currently running. Please stop the recording before trying to start a testing DiSEqC."
-msgstr "Et opptak pågår. Vennligst stopp opptaket før DiSEqC testing kan utføres."
+#
+msgid "A repeating event is currently recording. What would you like to do?"
+msgstr "Opptaker tar opp uten stopp. Hva skal gjøres?"
 
 #
 #, python-format
@@ -644,19 +602,11 @@ msgstr ""
 "\n"
 "Skal dette nettverkskortet frakobles?"
 
-msgid ""
-"A sleep timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"Dvale timer vil slå av din\n"
-"mottaker til standby. Slå av nå?"
+msgid "A sleep timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "Dvale timer vil slå av din mottaker til standby. Slå av nå?"
 
-msgid ""
-"A sleep timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"Dvale timer vil å slå av\n"
-"din mottaker. Slå av nå?"
+msgid "A sleep timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "Dvale timer vil å slå av din mottaker. Slå av nå?"
 
 msgid "A small overview of the available icon states and actions."
 msgstr "En liten oversikt over indikatorens status og handlinger."
@@ -710,7 +660,7 @@ msgid "About"
 msgstr "Om"
 
 #
-msgid "Accesspoint:"
+msgid "Access point:"
 msgstr "Aksesspunkt:"
 
 msgid "Activate HbbTV (Redbutton)"
@@ -954,10 +904,7 @@ msgstr "Tillat 10bit"
 msgid "Allow 12bit"
 msgstr "Tillat 12bit"
 
-msgid "Allow quit movieplayer with exit"
-msgstr "Tillat stopp avspiller med exit tast"
-
-msgid "Allow quitting movieplayer with exit"
+msgid "Allow quitting movie player with exit"
 msgstr "Tillat stopp avspiller med exit tast"
 
 msgid "Allow subtitle language to equal audio language"
@@ -1264,7 +1211,7 @@ msgid "Auto"
 msgstr "Auto"
 
 #
-msgid "Auto Diseqc"
+msgid "Auto DiSEqC"
 msgstr "Auto DiSEqC"
 
 msgid "Auto EXIF Orientation rotation/flipping"
@@ -1281,8 +1228,8 @@ msgstr "Auto rens"
 msgid "Auto focus"
 msgstr "Auto fokusering"
 
-msgid "Auto focus commencing ..."
-msgstr "Auto fokusering begynner ..."
+msgid "Auto focus commencing..."
+msgstr "Auto fokusering begynner..."
 
 msgid "Auto language selection"
 msgstr "Automatisk språk innstilling"
@@ -1685,7 +1632,7 @@ msgstr ""
 "Gul for tilbake til intro"
 
 msgid "Can only find a network drive to store the backup this means after the flash the autorestore will not work. Alternativaly you can mount the network drive after the flash and perform a manufacurer reset to autorestore"
-msgstr "Finner bare en nettverks disk å lagre backup på. Dette betyr at automatisk gjenoppretting ikke vil virke etter installasjonen . Alternativt kan du montere nettverksstasjonen etter installasjonen og utføre en fabrikkreset før autogjenoppretting"
+msgstr "Finner bare en nettverks disk å lagre backup på. Dette betyr at automatisk gjenoppretting ikke vil virke etter installasjonen. Alternativt kan du montere nettverksstasjonen etter installasjonen og utføre en fabrikkreset før autogjenoppretting"
 
 msgid "Canada"
 msgstr "Canada"
@@ -2920,14 +2867,14 @@ msgid "Detect next boxes before standby"
 msgstr "Merk neste hendelser før standby"
 
 #
-msgid "Detected HDD:"
-msgstr "Harddisk type:"
-
-#
 msgid "Detected NIMs:"
 msgstr "Tuner type:"
 
-msgid "Devicename:"
+#
+msgid "Detected storage devices:"
+msgstr "Harddisk type:"
+
+msgid "Device name:"
 msgstr "Enhetsnavn:"
 
 msgid "DiSEqC"
@@ -3255,7 +3202,7 @@ msgstr "Utført"
 #, python-format
 msgid "Done - Installed, updated or removed %d package (%s)"
 msgid_plural "Done - Installed, updated or removed %d packages (%s)"
-msgstr[0] "Ferdig installert, oppdatert eller slettet% d pakke ( %s)"
+msgstr[0] "Ferdig installert, oppdatert eller slettet %d pakke (%s)"
 msgstr[1] "Ferdig - Installert, oppdatert eller slettet %d pakker (%s)"
 
 #
@@ -3277,6 +3224,10 @@ msgstr "Laster ned"
 #
 msgid "Downloading Image"
 msgstr "Laster ned operativsystem"
+
+#
+msgid "Downloading a new packet list. Please wait..."
+msgstr "Forsøker å laste ned en ny pakkeliste. Vent litt..."
 
 #
 msgid "Downloading plugin information. Please wait..."
@@ -3588,6 +3539,10 @@ msgstr "Tast IP adresse"
 msgid "Enter PIN"
 msgstr "Tast inn PIN"
 
+#
+msgid "Enter PIN code"
+msgstr "Tast inn PIN kode"
+
 msgid "Enter URL"
 msgstr "Tast URL"
 
@@ -3608,10 +3563,6 @@ msgstr "Åpne hovedmenyen..."
 msgid "Enter persistent PIN code"
 msgstr "Tast inn gjeldende PIN kode"
 
-#
-msgid "Enter pin code"
-msgstr "Tast inn pin kode"
-
 msgid "Enter the frequency at which you LNB switches between low band and high band. For more information consult the spec sheet of your LNB."
 msgstr "Angi frekvensen der LNB bytter mellom lavbånd og høybånd. For mer informasjon, se spesifikasjonsarket til LNB."
 
@@ -3622,8 +3573,8 @@ msgid "Enter the number stored in the positioner that corresponds to this satell
 msgstr "Skriv inn nummeret som er lagret i posisjonerer som tilsvarer denne satellitten."
 
 #
-msgid "Enter the service pin"
-msgstr "Tast inn kanal pin"
+msgid "Enter the service PIN"
+msgstr "Tast inn kanal PIN"
 
 msgid "Enter valid ONID/TSID"
 msgstr "Angi gyldig ONID / TSID"
@@ -4883,7 +4834,7 @@ msgid "Initialize"
 msgstr "Igangsetting"
 
 msgid "Initializing storage device..."
-msgstr "Igangsetter lagringsenhet ..."
+msgstr "Igangsetter lagringsenhet..."
 
 #
 msgid "Input"
@@ -5746,13 +5697,13 @@ msgstr "Opptaksliste meny"
 msgid "Moving"
 msgstr "Kjører"
 
-msgid "Moving east ..."
+msgid "Moving east..."
 msgstr "Kjører østover..."
 
 msgid "Moving to position"
 msgstr "Kjører til posisjon"
 
-msgid "Moving west ..."
+msgid "Moving west..."
 msgstr "Kjører vestover..."
 
 msgid "Mozambique"
@@ -6019,8 +5970,8 @@ msgstr "Fant ikke noe EPG på server"
 msgid "No event info found, recording indefinitely."
 msgstr "Ingen kanalinfo ble funnet, tar opp på ubestemt tid."
 
-msgid "No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"
-msgstr "Ingen hurtigspoling er mulig nå .. men talltastene kan brukes for å spole framover/bakover!"
+msgid "No fast winding possible yet... but you can use the number buttons to skip forward/backward!"
+msgstr "Ingen hurtigspoling er mulig nå... men talltastene kan brukes for å spole framover/bakover!"
 
 msgid "No free index available"
 msgstr "Ingen ledig innholdfortegnelse tilgjengelig"
@@ -6656,7 +6607,7 @@ msgstr "Vennligst skriv inn ny beskrivelse:"
 msgid "Please enter new name:"
 msgstr "Tast inn nytt navn:"
 
-msgid "Please enter the correct pin code"
+msgid "Please enter the correct PIN code"
 msgstr "Tast inn den riktige PIN kode"
 
 msgid "Please enter the new PIN code"
@@ -6812,7 +6763,7 @@ msgstr "Vent litt (oppdaterer pakker)"
 msgid "Please wait for activation of your network configuration..."
 msgstr "Vent litt, aktiverer nettverks konfigurasjonen..."
 
-msgid "Please wait while scanning is in progress..."
+msgid "Please wait while scanning..."
 msgstr "Vent litt mens søking pågår..."
 
 #
@@ -6828,7 +6779,7 @@ msgid "Please wait while we test your network..."
 msgstr "Vent litt mens vi tester nettverket..."
 
 msgid "Please wait while your network is restarting..."
-msgstr "Vent litt mens nettverket starter på nytt ..."
+msgstr "Vent litt mens nettverket starter på nytt..."
 
 #
 msgid "Please wait, restarting cardserver."
@@ -6892,15 +6843,15 @@ msgstr "Inngang A"
 
 #
 msgid "Port B"
-msgstr "Inngang  B"
+msgstr "Inngang B"
 
 #
 msgid "Port C"
-msgstr "Inngang  C"
+msgstr "Inngang C"
 
 #
 msgid "Port D"
-msgstr "Inngang  D"
+msgstr "Inngang D"
 
 msgid "Port of fallback remote receiver"
 msgstr "Ekstern reserve mottakers port"
@@ -7060,7 +7011,7 @@ msgid "Press OK to select a group of satellites to configure in one block."
 msgstr "Trykk OK for å velge en gruppe av satellitter som skal konfigureres i ett."
 
 msgid "Press OK to select a provider."
-msgstr "Trykk OK for å velge en distributør ."
+msgstr "Trykk OK for å velge en distributør."
 
 msgid "Press OK to select a service."
 msgstr "Trykk OK for å velge en tjeneste."
@@ -7164,8 +7115,8 @@ msgid "Protect movie list"
 msgstr "Beskytt opptaksliste"
 
 #
-msgid "Protect on epg age"
-msgstr "Beskytt på epg alder"
+msgid "Protect on EPG age"
+msgstr "Beskytt på EPG alder"
 
 #
 msgid "Protect plugin browser"
@@ -7268,7 +7219,7 @@ msgstr "Er du sikker på å slette ferdige timere?"
 
 #
 msgid "Really exit the subservices quickzap?"
-msgstr "Skal  på underleverandører avsluttes?"
+msgstr "Skal på underleverandører avsluttes?"
 
 msgid "Really perform a manufacturer reset now?"
 msgstr "Vil du utføre en tilbakestilling nå?"
@@ -7521,18 +7472,6 @@ msgstr "Gjenta spilleliste"
 #
 msgid "Repeat type"
 msgstr "Gjentakelse type"
-
-#
-msgid ""
-"Repeating event currently recording.\n"
-"What do you want to do?"
-msgstr ""
-"Opptaker tar opp uten stopp.\n"
-"Hva skal gjøres?"
-
-#
-msgid "Repeating event currently recording... What do you want to do?"
-msgstr "Opptaker tar opp uten stopp... Hva skal gjøres?"
 
 #
 msgid "Repeats"
@@ -8016,17 +7955,17 @@ msgstr "Søk vest"
 msgid "Searching"
 msgstr "Søker"
 
-msgid "Searching east ..."
+msgid "Searching east..."
 msgstr "Søker østover..."
 
 msgid "Searching for available updates. Please wait..."
-msgstr "Søker etter tilgjengelige oppdateringer. Vent litt ..."
+msgstr "Søker etter tilgjengelige oppdateringer. Vent litt..."
 
 #
 msgid "Searching for new installed or removed packages. Please wait..."
-msgstr "Søker etter nylig installerte eller avinstallerte pakker. Vent litt ..."
+msgstr "Søker etter nylig installerte eller avinstallerte pakker. Vent litt..."
 
-msgid "Searching west ..."
+msgid "Searching west..."
 msgstr "Søker vestover..."
 
 #
@@ -8185,7 +8124,7 @@ msgstr "Velg kanal"
 msgid "Select channel to record from"
 msgstr "Velg kanal for opptak"
 
-msgid "Select char for replacing newlines in epg."
+msgid "Select char for replacing newlines in EPG."
 msgstr ""
 
 msgid "Select copy destination for:"
@@ -8228,6 +8167,9 @@ msgstr "Velg hvordan du vil at mottakeren skal beholde riktig tid, enten fra DVB
 #, fuzzy
 msgid "Select image"
 msgstr "Slett programvare"
+
+msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
+msgstr "Still inn bildeoppløsningen som skal vises med bildeviseren og filmspilleren."
 
 msgid "Select input device"
 msgstr "Velg enhet"
@@ -8567,7 +8509,7 @@ msgstr "Sett grenser"
 msgid "Set movielist type."
 msgstr "Velg type opptaksliste."
 
-msgid "Set pin code persistent"
+msgid "Set persistent PIN code"
 msgstr "Velg gyldig PIN kode"
 
 msgid "Set sequence repeats if your aerial system requires this. Normally if the aerial system has been configured correctly sequence repeats will not be necessary. If yours does, recheck you have command order set correctly."
@@ -9864,6 +9806,10 @@ msgstr "PIN-koden har blitt endret."
 msgid "The PIN code has been saved successfully."
 msgstr "PIN koden har blitt lagret."
 
+#
+msgid "The PIN code you entered is wrong."
+msgstr "PIN koden er feil."
+
 msgid "The PIN codes you entered are different."
 msgstr "PIN-kodene du har angitt, er forskjellige."
 
@@ -9903,13 +9849,13 @@ msgstr ""
 msgid ""
 "The overscan wizard has been completed.\n"
 "\n"
-"Note: you can always start the Overscan wizard later,  via\n"
+"Note: you can always start the Overscan wizard later, via\n"
 "\n"
 "Menu->Installation->System->Audio/Video->Overscan wizard"
 msgstr ""
 "Veiviseren for ekte bildestørrelse er ferdig.\n"
 "\n"
-"NB: Du kan alltid starte veiviseren ved en senere anledning,  via \n"
+"NB: Du kan alltid starte veiviseren ved en senere anledning, via \n"
 "\n"
 "Meny->Innstilling->System->Veiviser for ekte bildestørrelse"
 
@@ -9944,10 +9890,6 @@ msgstr ""
 #, python-format
 msgid "The path %s already exists."
 msgstr "Banen %s finnes allerede."
-
-#
-msgid "The pin code you entered is wrong."
-msgstr "Pin koden er feil."
 
 #
 #, python-format
@@ -10038,6 +9980,10 @@ msgstr ""
 #
 msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
 msgstr "Dette DVD RW-mediet er allerede formatert-ved å reformatere, slettes alt innholdet på platen."
+
+#
+msgid "This bouquet is protected by a parental control PIN"
+msgstr "Denne kanalliste er beskyttet av en PIN kode i foreldrekontrollen"
 
 msgid "This can be useful when using the CI(+) module. After the end of the recording, the service will be automatically stopped."
 msgstr "Dette kan være nyttig når du bruker CI (+) modulen. Etter at opptaket er avsluttet, stoppes tjenesten automatisk."
@@ -10151,11 +10097,11 @@ msgstr "Dette alternativet kan være nyttig for lange HDMI-kabler."
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
 msgstr "Med dette alternativet kan du finjustere mosquito støy (Mosquito støy er tilfeldig aliasing som følge av kraftig komprimering). Tydeligvis går dette på bekostning av bildedetaljer."
 
-msgid "This option sets  the picture contrast."
-msgstr "Dette alternativet angir bildekontrasten."
-
 msgid "This option sets the picture brightness."
 msgstr "Dette alternativet angir bildets lysstyrke."
+
+msgid "This option sets the picture contrast."
+msgstr "Dette alternativet angir bildekontrasten."
 
 msgid "This option sets the picture flesh tones."
 msgstr "Dette alternativet angir bildets fargetoner."
@@ -10194,6 +10140,10 @@ msgstr "Denne utvidelse vil slettes."
 #, python-format
 msgid "This receiver cannot decode %s streams!"
 msgstr "Denne mottakeren kan ikke dekode %s strømmer!"
+
+#
+msgid "This service is protected by a parental control PIN"
+msgstr "Denne kanalen er beskyttet av en foreldrekontroll kode"
 
 msgid "This setting allows the tuner configuration to be a duplication of how another tuner is already configured."
 msgstr "Denne innstillingen dupliserer mottaker konfigurasjonen hvordan en annen mottaker allerede er konfigurert."
@@ -10243,10 +10193,10 @@ msgstr ""
 msgid ""
 "This test checks whether your LAN adapter is set up for automatic IP address configuration with DHCP.\n"
 "If you get a \"disabled\" message:\n"
-" - then your LAN adapter is configured for manual IP setup\n"
+"- then your LAN adapter is configured for manual IP setup\n"
 "- verify thay you have entered the correct IP information in the adapter setup dialog.\n"
 "If you get an \"enabeld\" message:\n"
-"-verify that you have a configured and working DHCP server in your network."
+"- verify that you have a configured and working DHCP server in your network."
 msgstr ""
 "Denne testen kontrollerer om ditt LAN-kort er satt opp for automatisk IP-adressekonfigurasjon med DHCP.\n"
 "Hvis du får en \"deaktivert\" melding:\n"
@@ -10482,9 +10432,8 @@ msgstr "Tonga"
 msgid "Top and bottom"
 msgstr "Topp og bunn"
 
-#, python-format
-msgid "Total clients streaming: %d (%s)"
-msgstr "Antall strømme klienter: %d (%s)"
+msgid "Total clients streaming: "
+msgstr "Antall strømme klienter: "
 
 #
 msgid "Track"
@@ -10537,10 +10486,6 @@ msgstr "Feilsøk"
 
 msgid "True"
 msgstr "Sann"
-
-#
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "Forsøker å laste ned en ny pakkeliste. Vent litt..."
 
 #
 msgid "Tue"
@@ -10944,9 +10889,6 @@ msgstr "Bruk papirkurven i opptaksliste"
 msgid "Used service scan type"
 msgstr "Kanalsøkevalg"
 
-msgid "User - bouquets"
-msgstr "Kanallister"
-
 #, python-format
 msgid "User Band %d"
 msgstr ""
@@ -10962,6 +10904,9 @@ msgstr "Bruker ID"
 #
 msgid "User Mode"
 msgstr "Brukermodus"
+
+msgid "User bouquets"
+msgstr "Kanallister"
 
 #
 msgid "User defined"
@@ -11096,8 +11041,9 @@ msgstr "Vis Rass interaktiv..."
 msgid "View details"
 msgstr "Vis detaljer"
 
-msgid "View list of available "
-msgstr "Vis tilgjengelighet "
+#, fuzzy, python-format
+msgid "View list of available %s extensions."
+msgstr "Vis liste over alle EPG valg."
 
 msgid "View list of available CommonInterface extensions"
 msgstr "Vis liste over alle Common Interface-valg"
@@ -11377,7 +11323,7 @@ msgstr "Hvis aktivert, kan du velge et ekstra tidsrom slik at inaktiv dvale time
 msgid "When enabled you can specify an extra timeframe when the inactivity sleeptimer is ignored. Not the detection is disabled during this timeframe but the inactivity timeout is disabled"
 msgstr "Hvis aktivert, kan du velge et ekstra tidsrom slik at inaktiv timer overstyres. Deteksjonen slår seg ikke av i tidsrommet, men ubrukt timeout fjernes"
 
-msgid "When enabled you can zap channels with the  CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
+msgid "When enabled you can zap channels with the CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
 msgstr "Hvis aktivert, kan du zappe kanaler med CH +/-, B +/-, P +/-knapper i stedet for å åpne kanallisten."
 
 msgid "When enabled you get the channel selection list via the OK button, the infobar toggle is then transfered to exit button"
@@ -11455,7 +11401,7 @@ msgstr "Hvis aktivert, vil DVB undertekst vises i gult i stedet for den original
 msgid "When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on."
 msgstr "Hvis aktivert, vil http strømmer bli dekodet på serversiden. Ekstern klient trenger ikke foreta dekodingen. Standardinnstilling er på."
 
-msgid "When enabled, it is possible to leave the movieplayer with exit."
+msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "Hvis aktivert, er det mulig å forlate mediespiller med exit."
 
 msgid "When enabled, it will automatically play to the last saved radio service when switching to radio mode."
@@ -11694,9 +11640,6 @@ msgstr "Ja, uten sikkerhetskopi"
 msgid "Yesterday"
 msgstr "I går"
 
-msgid "You PIN code is 0000. This is the default PIN code and it disables parental control!\n"
-msgstr "Din PIN-kode er 0000. Dette er standard PIN-kode og deaktiverer foreldrekontroll!\n"
-
 #, python-format
 msgid ""
 "You already have a channel list installed,\n"
@@ -11732,9 +11675,6 @@ msgstr "Du kan kun kopiere til DVD, mottakerens innspillinger!"
 msgid "You can remove this plugin."
 msgstr "Du kan slette denne utvidelse."
 
-msgid "You can set how will be finished movieplayer with 'Exit' button."
-msgstr "Her kan du kan angi avslutningsvalg for filmavspiller med 'exit' knappen."
-
 msgid "You can set selected directory as 'root' directory for movie player."
 msgstr "Her kan du angi den valgte mappen som hovedkatalog for filmavspiller."
 
@@ -11752,7 +11692,7 @@ msgid ""
 "\n"
 "When you select a different skin, the user interface of your receiver will restart.\n"
 "\n"
-"Note: you can always start the Overscan wizard later,  via\n"
+"Note: you can always start the Overscan wizard later, via\n"
 "\n"
 "menu->installation->system->Overscan wizard"
 msgstr ""
@@ -11795,6 +11735,9 @@ msgstr "Gå til kanalen %s (%s - '%s')!\n"
 msgid "You seem to be in timeshift!"
 msgstr "Du ser ut til å være i timeshift!"
 
+msgid "Your PIN code is 0000. This is the default PIN code and it disables parental control!\n"
+msgstr "Din PIN-kode er 0000. Dette er standard PIN-kode og deaktiverer foreldrekontroll!\n"
+
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Samlingen overstiger ledig plass på enkeltlagsplaten, en tolags DVD må brukes!"
 
@@ -11819,8 +11762,8 @@ msgstr ""
 "Vennligst velg hva du vil gjøre videre."
 
 #, python-format
-msgid "Your internet connection is working (ip: %s)"
-msgstr "Internett forbindelsen fungerer (ip:%s)"
+msgid "Your internet connection is working (IP address: %s)"
+msgstr "Internett forbindelsen fungerer (IP: %s)"
 
 #
 msgid "Your network configuration has been activated."
@@ -12083,6 +12026,9 @@ msgstr "tilbake"
 msgid "background image"
 msgstr "bakgrunns bilde"
 
+msgid "backup EPG cache"
+msgstr "sikkerhetskopi av EPG-hurtigbuffer"
+
 msgid "ballet"
 msgstr "ballett"
 
@@ -12154,9 +12100,6 @@ msgstr "komedie"
 #
 msgid "config menu"
 msgstr "config meny"
-
-msgid "configure in which resolution pictures are displayed with the picture viewer and movieplayer"
-msgstr "still inn bildeoppløsningen som skal vises med bildeviseren og filmspilleren"
 
 #
 msgid "confirmed"
@@ -12263,13 +12206,10 @@ msgstr "underholdning (10-16 år)"
 msgid "entertainment (6-14 year old)"
 msgstr "underholdning (6-14 år)"
 
-msgid "epg cache backup"
-msgstr "sikkerhetskopi av EPG-hurtigbuffer"
-
 msgid "equestrian"
 msgstr "hestesport"
 
-msgid "error starting scanning"
+msgid "error starting scan"
 msgstr "feil ved start av søket"
 
 msgid "error while scanning"
@@ -12453,6 +12393,11 @@ msgstr "gå framover til neste tittel"
 
 msgid "jump to chapter by number"
 msgstr "gå til kapittel ved hjelp av nummer"
+
+#
+#, fuzzy
+msgid "kB"
+msgstr "B"
 
 msgid "languages"
 msgstr "språk"
@@ -12977,16 +12922,8 @@ msgstr "tennis/squash"
 msgid "testing"
 msgstr "testing"
 
-#
-msgid "this bouquet is protected by a parental control pin"
-msgstr "denne kanalliste er beskyttet av en pin kode i foreldrekontrollen"
-
 msgid "this recording"
 msgstr "dette opptaket"
-
-#
-msgid "this service is protected by a parental control pin"
-msgstr "denne kanalen er beskyttet av en foreldrekontroll kode"
 
 msgid "toggle time, chapter, audio, subtitle info"
 msgstr "juster tid, kapittel, lyd, undertekst info"

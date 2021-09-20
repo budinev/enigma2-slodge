@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-10 01:42+0300\n"
+"POT-Creation-Date: 2021-09-17 22:15+0300\n"
 "PO-Revision-Date: 2020-05-16 18:41+0200\n"
 "Last-Translator: jamu\n"
 "Language-Team: BoxFreak/jamu\n"
@@ -102,9 +102,6 @@ msgstr ""
 msgid " Warning: the selected tuner should not use SCR Unicable type for LNBs because each tuner need a own SCR number."
 msgstr ""
 
-msgid " extensions."
-msgstr " lisäosaa."
-
 #
 #, fuzzy
 msgid " min"
@@ -113,9 +110,6 @@ msgstr "%d min"
 msgid " ms"
 msgstr " ms"
 
-msgid " packages selected."
-msgstr " pakettia valittu."
-
 msgid " unicable LNB input of rotor"
 msgstr ""
 
@@ -123,18 +117,6 @@ msgstr ""
 #, python-format
 msgid "%(freespace)s %(percent)s free disk space"
 msgstr "%(freespace)s %(percent)s vapaata levytilaa"
-
-#, python-format
-msgid "%.0f GB"
-msgstr "%.0f GB"
-
-#, python-format
-msgid "%.0f MB"
-msgstr "%.0f MB"
-
-#, python-format
-msgid "%.0f kB"
-msgstr "%.0f kB"
 
 #, python-format
 msgid "%.1f° E"
@@ -187,14 +169,6 @@ msgid "%a %e/%m  %-H:%M"
 msgstr "%a %e.%-m  %-H:%M"
 
 #, python-format
-msgid "%d B"
-msgstr "%d B"
-
-#, python-format
-msgid "%d GB"
-msgstr "%d GB"
-
-#, python-format
 msgid "%d MB"
 msgstr "%d MB"
 
@@ -242,10 +216,6 @@ msgstr[0] "%d työ on taustalla käynnissä!"
 msgstr[1] "%d työtä on taustalla käynnissä!"
 
 #, python-format
-msgid "%d kB"
-msgstr "%d kB"
-
-#, python-format
 msgid "%d kB/s"
 msgstr ""
 
@@ -268,6 +238,12 @@ msgstr "%d minuuttia"
 #, python-format
 msgid "%d ms"
 msgstr "%d ms"
+
+#, fuzzy, python-format
+msgid "%d package selected."
+msgid_plural "%d packages selected."
+msgstr[0] " pakettia valittu."
+msgstr[1] " pakettia valittu."
 
 #, python-format
 msgid "%d pixel wide"
@@ -555,39 +531,18 @@ msgstr "??"
 msgid "A"
 msgstr "A"
 
-#, python-format
-msgid ""
-"A configuration file (%s) has been modified since it was installed.\n"
-"Do you want to keep your modifications?"
-msgstr ""
-"Asetustiedostoa (%s) on muokattu asennuksen jälkeen.\n"
-"Haluatko säilyttää oman versiosi?"
+msgid "A completed recording timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "Päättynyt ajastus haluaa asettaa vastaanottimesi valmiustilaan. Tehdäänkö niin nyt?"
 
-#
+msgid "A completed recording timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "Päättynyt ajastus haluaa sammuttaa vastaanottimesi. Sammutetaanko nyt?"
+
 #, python-format
-msgid ""
-"A configuration file (%s) was modified since Installation.\n"
-"Do you want to keep your version?"
-msgstr ""
-"Asetustiedostoa (%s) on muokattu asennuksen jälkeen.\n"
-"Haluatko säilyttää oman versiosi?"
+msgid "A configuration file (%s) has been modified since it was installed. Would you like to keep the modified version?"
+msgstr "Asetustiedostoa (%s) on muokattu asennuksen jälkeen. Haluatko säilyttää oman versiosi?"
 
 msgid "A file from media is in use!"
 msgstr ""
-
-msgid ""
-"A finished record timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"Päättynyt ajastus haluaa asettaa vastaanottimesi\n"
-"valmiustilaan. Tehdäänkö niin nyt?"
-
-msgid ""
-"A finished record timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"Päättynyt ajastus haluaa sammuttaa\n"
-"vastaanottimesi. Sammutetaanko nyt?"
 
 #
 msgid "A graphical EPG for all services of a specific bouquet"
@@ -596,7 +551,7 @@ msgstr "Graafinen ohjelmaopas kaikille suosikkilistan kanaville"
 #
 #, python-format
 msgid ""
-"A record has been started:\n"
+"A recording has started:\n"
 "%s"
 msgstr ""
 "Tallennus on alkanut:\n"
@@ -613,11 +568,15 @@ msgstr ""
 "Tallennus on parhaillaan käynnissä.\n"
 "Mitä haluat tehdä?"
 
-msgid "A recording is currently running. Please stop the recording before trying to scan."
+msgid "A recording is currently running. Please stop the recording before starting a DiSEqC test."
+msgstr ""
+
+msgid "A recording is currently running. Please stop the recording before starting a service scan."
 msgstr "Tallennus on käynnissä. Sammuta se ennen kanavanhakua."
 
-msgid "A recording is currently running. Please stop the recording before trying to start a testing DiSEqC."
-msgstr ""
+#
+msgid "A repeating event is currently recording. What would you like to do?"
+msgstr "Toistuvaa ajastusta tallennetaan. Mitä haluat tehdä?"
 
 #
 #, python-format
@@ -637,19 +596,11 @@ msgstr ""
 "\n"
 "Kytketäänkö se pois päältä?"
 
-msgid ""
-"A sleep timer wants to set your\n"
-"receiver to standby. Do that now?"
-msgstr ""
-"Uniajastin haluaa asettaa vastaanottimesi\n"
-"valmiustilaan. Tehdäänkö niin nyt?"
+msgid "A sleep timer is about to put your receiver in standby mode. Would you like to proceed?"
+msgstr "Uniajastin haluaa asettaa vastaanottimesi valmiustilaan. Tehdäänkö niin nyt?"
 
-msgid ""
-"A sleep timer wants to shut down\n"
-"your receiver. Shutdown now?"
-msgstr ""
-"Uniajastin haluaan sammuttaa vastaanottimesi.\n"
-"Sammutetaanko nyt?"
+msgid "A sleep timer is about to shut down your receiver. Would you like to proceed?"
+msgstr "Uniajastin haluaan sammuttaa vastaanottimesi. Sammutetaanko nyt?"
 
 msgid "A small overview of the available icon states and actions."
 msgstr "Kuvaus kuvakkeiden tiloista ja toiminnoista."
@@ -708,7 +659,7 @@ msgid "About"
 msgstr "Tietoja"
 
 #
-msgid "Accesspoint:"
+msgid "Access point:"
 msgstr "Tukiasema:"
 
 msgid "Activate HbbTV (Redbutton)"
@@ -965,10 +916,7 @@ msgstr ""
 msgid "Allow 12bit"
 msgstr ""
 
-msgid "Allow quit movieplayer with exit"
-msgstr "Salli tallenteista poistuminen exit-napilla"
-
-msgid "Allow quitting movieplayer with exit"
+msgid "Allow quitting movie player with exit"
 msgstr "Salli tallenteista poistuminen exit-napilla"
 
 msgid "Allow subtitle language to equal audio language"
@@ -1270,7 +1218,7 @@ msgstr ""
 msgid "Auto"
 msgstr "Autom."
 
-msgid "Auto Diseqc"
+msgid "Auto DiSEqC"
 msgstr ""
 
 msgid "Auto EXIF Orientation rotation/flipping"
@@ -1288,7 +1236,7 @@ msgstr "Ihonvärin korostus"
 msgid "Auto focus"
 msgstr "Autom.hienosäätö"
 
-msgid "Auto focus commencing ..."
+msgid "Auto focus commencing..."
 msgstr "Automaattinen hienosäätö käynnistyy..."
 
 msgid "Auto language selection"
@@ -2924,14 +2872,14 @@ msgid "Detect next boxes before standby"
 msgstr ""
 
 #
-msgid "Detected HDD:"
-msgstr "Kiintolevy:"
-
-#
 msgid "Detected NIMs:"
 msgstr "Virittimet:"
 
-msgid "Devicename:"
+#
+msgid "Detected storage devices:"
+msgstr "Kiintolevy:"
+
+msgid "Device name:"
 msgstr "Laitenimi:"
 
 #
@@ -3293,6 +3241,10 @@ msgid "Downloading Image"
 msgstr "Ladataan ohjelmistokuvaa"
 
 #
+msgid "Downloading a new packet list. Please wait..."
+msgstr "Ladataan uusinta IPKG-ohjelmapakettiluetteloa. Odota..."
+
+#
 msgid "Downloading plugin information. Please wait..."
 msgstr "Ladataan tietoja lisäosista. Odota..."
 
@@ -3612,6 +3564,9 @@ msgstr "Syötä IP-osoite"
 msgid "Enter PIN"
 msgstr "Syötä PIN-koodi"
 
+msgid "Enter PIN code"
+msgstr "Syötä PIN-koodi"
+
 msgid "Enter URL"
 msgstr "Syötä URL"
 
@@ -3631,9 +3586,6 @@ msgstr "Mene päävalikkoon..."
 msgid "Enter persistent PIN code"
 msgstr "Syötä katselun PIN-koodi"
 
-msgid "Enter pin code"
-msgstr "Syötä PIN-koodi"
-
 msgid "Enter the frequency at which you LNB switches between low band and high band. For more information consult the spec sheet of your LNB."
 msgstr ""
 
@@ -3644,7 +3596,7 @@ msgid "Enter the number stored in the positioner that corresponds to this satell
 msgstr ""
 
 #
-msgid "Enter the service pin"
+msgid "Enter the service PIN"
 msgstr "Syötä kanavan tunnusluku"
 
 msgid "Enter valid ONID/TSID"
@@ -5773,7 +5725,7 @@ msgid "Moving"
 msgstr "Siirretään"
 
 #
-msgid "Moving east ..."
+msgid "Moving east..."
 msgstr "Liikkuu itään..."
 
 #
@@ -5781,7 +5733,7 @@ msgid "Moving to position"
 msgstr "Siirrytään sijaintiin"
 
 #
-msgid "Moving west ..."
+msgid "Moving west..."
 msgstr "Liikkuu länteen..."
 
 msgid "Mozambique"
@@ -6057,7 +6009,7 @@ msgstr ""
 "Lähetyksessä ei ole tietoa ohjelman loppumisajasta.\n"
 "Ohjelma tallennetaan jatkuvana tallennuksena."
 
-msgid "No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"
+msgid "No fast winding possible yet... but you can use the number buttons to skip forward/backward!"
 msgstr "Pikakelaus ei ole vielä mahdollista... mutta voit hyppiä eteen/taakse numeronäppäimien avulla."
 
 #
@@ -6707,7 +6659,7 @@ msgid "Please enter new name:"
 msgstr "Syötä uusi nimi:"
 
 #
-msgid "Please enter the correct pin code"
+msgid "Please enter the correct PIN code"
 msgstr "Syötä oikea tunnusluku"
 
 msgid "Please enter the new PIN code"
@@ -6862,7 +6814,7 @@ msgid "Please wait for activation of your network configuration..."
 msgstr "Odota, verkkomääritykset aktivoidaan..."
 
 #
-msgid "Please wait while scanning is in progress..."
+msgid "Please wait while scanning..."
 msgstr "Odota, haku on käynnissä..."
 
 #
@@ -7235,8 +7187,8 @@ msgid "Protect movie list"
 msgstr "Suojaa tallennusvalikko"
 
 #
-msgid "Protect on epg age"
-msgstr "Suojaa epg"
+msgid "Protect on EPG age"
+msgstr "Suojaa EPG"
 
 msgid "Protect plugin browser"
 msgstr "Suojaa lisäosavalikko"
@@ -7608,17 +7560,6 @@ msgstr "Toista soittolista"
 #
 msgid "Repeat type"
 msgstr "Ajastus toistetaan"
-
-msgid ""
-"Repeating event currently recording.\n"
-"What do you want to do?"
-msgstr ""
-"Toistuvaa ajastusta tallennetaan.\n"
-"Mitä haluat tehdä?"
-
-#
-msgid "Repeating event currently recording... What do you want to do?"
-msgstr "Toistuvaa ajastusta tallennetaan... Mitä haluat tehdä?"
 
 #
 msgid "Repeats"
@@ -8116,7 +8057,7 @@ msgid "Searching"
 msgstr "Etsitään"
 
 #
-msgid "Searching east ..."
+msgid "Searching east..."
 msgstr "Etsitään itään..."
 
 #
@@ -8128,7 +8069,7 @@ msgid "Searching for new installed or removed packages. Please wait..."
 msgstr "Etsitään asennettuja tai poistettuja ohjelmapaketteja. Odota..."
 
 #
-msgid "Searching west ..."
+msgid "Searching west..."
 msgstr "Etsitään länteen..."
 
 #
@@ -8286,7 +8227,7 @@ msgstr "Valitse kanava"
 msgid "Select channel to record from"
 msgstr "Valitse tallennettava kanava"
 
-msgid "Select char for replacing newlines in epg."
+msgid "Select char for replacing newlines in EPG."
 msgstr ""
 
 msgid "Select copy destination for:"
@@ -8329,6 +8270,9 @@ msgstr ""
 #, fuzzy
 msgid "Select image"
 msgstr "Poista ohjelmistokuva"
+
+msgid "Select in which resolution pictures are displayed with picture viewer or movie player."
+msgstr "Määritä missä resoluutiossa kuvat näytetään, kun käytetään kuvien katselua tai katsotaan tallenteita."
 
 msgid "Select input device"
 msgstr "Valitse syöttölaite"
@@ -8689,7 +8633,7 @@ msgstr "Aseta rajat"
 msgid "Set movielist type."
 msgstr "Valitse listauksen tyyli."
 
-msgid "Set pin code persistent"
+msgid "Set persistent PIN code"
 msgstr "Aseta PIN-koodi katselulle"
 
 msgid "Set sequence repeats if your aerial system requires this. Normally if the aerial system has been configured correctly sequence repeats will not be necessary. If yours does, recheck you have command order set correctly."
@@ -10012,6 +9956,10 @@ msgstr "PIN-koodin vaihto onnistui."
 msgid "The PIN code has been saved successfully."
 msgstr "PIN-koodin tallennus onnistui."
 
+#
+msgid "The PIN code you entered is wrong."
+msgstr "Syötit virheellisen tunnusluvun."
+
 msgid "The PIN codes you entered are different."
 msgstr "Syöttämäsi PIN-koodit olivat erilaiset."
 
@@ -10051,7 +9999,7 @@ msgstr ""
 msgid ""
 "The overscan wizard has been completed.\n"
 "\n"
-"Note: you can always start the Overscan wizard later,  via\n"
+"Note: you can always start the Overscan wizard later, via\n"
 "\n"
 "Menu->Installation->System->Audio/Video->Overscan wizard"
 msgstr ""
@@ -10092,10 +10040,6 @@ msgstr ""
 #, python-format
 msgid "The path %s already exists."
 msgstr "Hakemisto %s on jo olemassa."
-
-#
-msgid "The pin code you entered is wrong."
-msgstr "Syötit virheellisen tunnusluvun."
 
 #, python-format
 msgid "The results have been written to %s"
@@ -10182,6 +10126,10 @@ msgstr ""
 #
 msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
 msgstr "Tämä DVD-RW levy on jo alustettu - uudelleenalustus tuhoaa levyn kaiken sisällön."
+
+#
+msgid "This bouquet is protected by a parental control PIN"
+msgstr "Tämä kanava on suojattu lapsilukolla"
 
 msgid "This can be useful when using the CI(+) module. After the end of the recording, the service will be automatically stopped."
 msgstr ""
@@ -10294,11 +10242,11 @@ msgstr ""
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
 msgstr "Tämä asetus määrittää mosquito-kohinan vaimennuksen määrän (mosquito-kohina on suuren pakkauksen aiheuttama kuvavirhe). Tämä säätö pehmentää kuvan yksityiskohtia."
 
-msgid "This option sets  the picture contrast."
-msgstr ""
-
 msgid "This option sets the picture brightness."
 msgstr "Tämä asetus määrittää kuvan kirkkauden."
+
+msgid "This option sets the picture contrast."
+msgstr ""
 
 msgid "This option sets the picture flesh tones."
 msgstr "Tämä asetus määrittää ihonvärin sävyn."
@@ -10337,6 +10285,10 @@ msgstr "Tämä lisäosa poistetaan."
 #, python-format
 msgid "This receiver cannot decode %s streams!"
 msgstr "Tämä vastaanotin ei osaa purkaa %s striimejä!"
+
+#
+msgid "This service is protected by a parental control PIN"
+msgstr "Tämä kanava on suojattu lapsilukolla"
 
 msgid "This setting allows the tuner configuration to be a duplication of how another tuner is already configured."
 msgstr "Tämä asetus sallii viritinasetusten kopioinnin jo valmiiksi säädetystä virittimestä."
@@ -10387,10 +10339,10 @@ msgstr ""
 msgid ""
 "This test checks whether your LAN adapter is set up for automatic IP address configuration with DHCP.\n"
 "If you get a \"disabled\" message:\n"
-" - then your LAN adapter is configured for manual IP setup\n"
+"- then your LAN adapter is configured for manual IP setup\n"
 "- verify thay you have entered the correct IP information in the adapter setup dialog.\n"
 "If you get an \"enabeld\" message:\n"
-"-verify that you have a configured and working DHCP server in your network."
+"- verify that you have a configured and working DHCP server in your network."
 msgstr ""
 "Tämä testi tarkistaa, onko verkkosovittimelle määritetty automaattinen IP-osoite DHCP:n kautta.\n"
 "Jos näet \"ei käytössä\" ilmoituksen:\n"
@@ -10627,9 +10579,8 @@ msgstr "Tonga"
 msgid "Top and bottom"
 msgstr "Ylä ja ala"
 
-#, python-format
-msgid "Total clients streaming: %d (%s)"
-msgstr "Etäasiakkaita: %d (%s)"
+msgid "Total clients streaming: "
+msgstr "Etäasiakkaita: "
 
 #
 msgid "Track"
@@ -10681,10 +10632,6 @@ msgstr "Vianhaku"
 
 msgid "True"
 msgstr ""
-
-#
-msgid "Trying to download a new packetlist. Please wait..."
-msgstr "Ladataan uusinta IPKG-ohjelmapakettiluetteloa. Odota..."
 
 #
 msgid "Tue"
@@ -11101,9 +11048,6 @@ msgstr "Käytä roskakoria tallenneluettelossa"
 msgid "Used service scan type"
 msgstr "Käytetty kanavahakutyyppi"
 
-msgid "User - bouquets"
-msgstr "Käyttäjä - suosikit"
-
 #, python-format
 msgid "User Band %d"
 msgstr ""
@@ -11119,6 +11063,9 @@ msgstr "Käyttäjä"
 #
 msgid "User Mode"
 msgstr "Asetustila"
+
+msgid "User bouquets"
+msgstr "Käyttäjä suosikit"
 
 #
 msgid "User defined"
@@ -11250,8 +11197,9 @@ msgid "View details"
 msgstr "Lisätiedot"
 
 #
-msgid "View list of available "
-msgstr "Näytä saatavilla olevat"
+#, fuzzy, python-format
+msgid "View list of available %s extensions."
+msgstr "Näytä saatavilla olevat EPG-laajennukset"
 
 #
 msgid "View list of available CommonInterface extensions"
@@ -11549,7 +11497,7 @@ msgstr "Kun päällä, voit määritellä aikaikkunan jonka aikana valmiustilaan
 msgid "When enabled you can specify an extra timeframe when the inactivity sleeptimer is ignored. Not the detection is disabled during this timeframe but the inactivity timeout is disabled"
 msgstr "Kun päällä, voit määritellä lisäaikavälin jonka aikana valmiustilaan siirtyminen on pois päältä"
 
-msgid "When enabled you can zap channels with the  CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
+msgid "When enabled you can zap channels with the CH+/-, B+/-, P+/- buttons instead of opening the channel selection list."
 msgstr "Kun päällä, voit vaihtaa kanavaa CH+/-, B+/- ja P+/- näppäimillä kanavalistan avaamisen sijasta."
 
 msgid "When enabled you get the channel selection list via the OK button, the infobar toggle is then transfered to exit button"
@@ -11595,7 +11543,7 @@ msgid "When enabled, content with an aspect ratio of 4:3 will be stretched to fi
 msgstr "Kun päällä, 4:3 kuvasuhteen kuva venytetään koko näytölle."
 
 msgid "When enabled, continue to the next bouquet when the last channel of the current bouquet is reached while changing channels."
-msgstr "Kun päällä,  siirrytään kanavanvaihdolla suosikkilistan viimeiseltä kanavalta eteenpäin seuraavaan suosikkilistaan."
+msgstr "Kun päällä, siirrytään kanavanvaihdolla suosikkilistan viimeiseltä kanavalta eteenpäin seuraavaan suosikkilistaan."
 
 msgid "When enabled, deleted recordings are moved to the trash can, instead of being deleted immediately."
 msgstr "Kun päällä, poistetut tallenteet siirretään roskakoriin, sen sijaan että ne tuhottaisiin välittömästi."
@@ -11627,7 +11575,7 @@ msgstr "Kun päällä, DVB-tekstitys näytetään keltaisena alkuperäisen väri
 msgid "When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on."
 msgstr "Kun valittuna, http-striimit puretaan lähettävässä päässä. Asiakas etävastaanotimessa ei tällöin ole purkua. Oletus: Kyllä."
 
-msgid "When enabled, it is possible to leave the movieplayer with exit."
+msgid "When enabled, it is possible to leave the movie player with exit."
 msgstr "Kun päällä, on mahdollista poistua tallenteista exit-napilla."
 
 #, fuzzy
@@ -11870,9 +11818,6 @@ msgstr "Kyllä, ilman varmuuskopita"
 msgid "Yesterday"
 msgstr "Eilen"
 
-msgid "You PIN code is 0000. This is the default PIN code and it disables parental control!\n"
-msgstr ""
-
 #, python-format
 msgid ""
 "You already have a channel list installed,\n"
@@ -11908,9 +11853,6 @@ msgstr "Sinä voit polttaa ainoastaan vastaanottimesi nauhoituksia!"
 msgid "You can remove this plugin."
 msgstr "Voit poistaa tämän lisäosan."
 
-msgid "You can set how will be finished movieplayer with 'Exit' button."
-msgstr "Voit asettaa poistutaanko (ja miten) tallenteen toistosta 'Exit' näppäimellä"
-
 msgid "You can set selected directory as 'root' directory for movie player."
 msgstr "Asettaa määritetyn hakemiston tallenteiden päähakemistoksi."
 
@@ -11928,7 +11870,7 @@ msgid ""
 "\n"
 "When you select a different skin, the user interface of your receiver will restart.\n"
 "\n"
-"Note: you can always start the Overscan wizard later,  via\n"
+"Note: you can always start the Overscan wizard later, via\n"
 "\n"
 "menu->installation->system->Overscan wizard"
 msgstr ""
@@ -11965,6 +11907,9 @@ msgstr "Sinun täytyy vaihtaa kanavalle %s (%s - '%s')!\n"
 msgid "You seem to be in timeshift!"
 msgstr ""
 
+msgid "Your PIN code is 0000. This is the default PIN code and it disables parental control!\n"
+msgstr ""
+
 msgid "Your collection exceeds the size of a single layer medium, you will need a blank dual layer DVD!"
 msgstr "Tallenteet eivät mahdu yksipuoliselle DVD:lle, tarvitset tyhjän dual layer DVD-levyn."
 
@@ -11989,8 +11934,8 @@ msgstr ""
 "Valitse mitä haluat tehdä seuraavaksi."
 
 #, python-format
-msgid "Your internet connection is working (ip: %s)"
-msgstr "Internet-yhteys toimii (ip: %s)"
+msgid "Your internet connection is working (IP address: %s)"
+msgstr "Internet-yhteys toimii (IP: %s)"
 
 #
 msgid "Your network configuration has been activated."
@@ -12249,6 +12194,9 @@ msgstr "Takaisin"
 msgid "background image"
 msgstr "Taustakuva"
 
+msgid "backup EPG cache"
+msgstr "Ohjelmaoppaan välimuistin varmuuskopio"
+
 msgid "ballet"
 msgstr "baletti"
 
@@ -12320,9 +12268,6 @@ msgstr "komedia"
 #
 msgid "config menu"
 msgstr "asetusvalikko"
-
-msgid "configure in which resolution pictures are displayed with the picture viewer and movieplayer"
-msgstr "Määritä missä resoluutiossa kuvat näytetään, kun käytetään kuvien katselua tai katsotaan tallenteita"
 
 #
 msgid "confirmed"
@@ -12430,13 +12375,10 @@ msgstr "viihde (10-16 vuotiaat)"
 msgid "entertainment (6-14 year old)"
 msgstr "viihde (6-14 vuotiaat)"
 
-msgid "epg cache backup"
-msgstr "Ohjelmaoppaan välimuistin varmuuskopio"
-
 msgid "equestrian"
 msgstr "ratsastus"
 
-msgid "error starting scanning"
+msgid "error starting scan"
 msgstr "Virhe haun aloituksessa"
 
 msgid "error while scanning"
@@ -12617,6 +12559,11 @@ msgstr "Hyppää eteenpäin seuraavaan kappaleeseen"
 
 msgid "jump to chapter by number"
 msgstr ""
+
+#
+#, fuzzy
+msgid "kB"
+msgstr "B"
 
 msgid "languages"
 msgstr "kielet"
@@ -13154,16 +13101,8 @@ msgid "testing"
 msgstr "Työskentelee"
 
 #
-msgid "this bouquet is protected by a parental control pin"
-msgstr "Tämä kanava on suojattu lapsilukolla"
-
-#
 msgid "this recording"
 msgstr "Tämä tallennus"
-
-#
-msgid "this service is protected by a parental control pin"
-msgstr "Tämä kanava on suojattu lapsilukolla"
 
 #
 msgid "toggle time, chapter, audio, subtitle info"
