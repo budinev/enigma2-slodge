@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-07 10:36+0100\n"
+"POT-Creation-Date: 2021-12-08 15:28+0100\n"
 "PO-Revision-Date: 2021-05-24 17:48+0300\n"
 "Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
 "Language-Team: openPLi Dimitrij\n"
@@ -126,6 +126,10 @@ msgid "%.2f GB"
 msgstr "%.2f GB"
 
 #, python-format
+msgid "%.3f MHz"
+msgstr "%.3f MHz"
+
+#, python-format
 msgid "%02d:%02d"
 msgstr "%2d:%02d"
 
@@ -237,11 +241,12 @@ msgstr "%d минут"
 msgid "%d ms"
 msgstr "%d мс"
 
+#, python-format
 msgid "%d package selected."
 msgid_plural "%d packages selected."
-msgstr[0] " пакетов выбрано."
-msgstr[1] " пакет выбран."
-msgstr[2] " пакетов выбрано."
+msgstr[0] "%d пакетов выбрано."
+msgstr[1] "%d пакет выбран."
+msgstr[2] "%d пакета(ов) выбрано."
 
 #, python-format
 msgid "%d pixel wide"
@@ -324,6 +329,14 @@ msgstr ""
 #, python-format
 msgid "%s %d.%d"
 msgstr "%s %d.%d"
+
+#, python-format
+msgid "%s KSymb/s"
+msgstr "%s KSymb/s"
+
+#, python-format
+msgid "%s MHz"
+msgstr "%s MHz"
 
 #, python-format
 msgid "%s imported from fallback tuner"
@@ -1066,6 +1079,9 @@ msgstr "Аудио PID, кодек & язык"
 msgid "Audio auto volume level"
 msgstr "Уровень авто громкости звука"
 
+msgid "Audio description for the visually impaired"
+msgstr "Аудиоописание для слабовидящих"
+
 msgid "Audio language selection 1"
 msgstr "Выбор языка аудио 1"
 
@@ -1687,6 +1703,12 @@ msgstr "Выбор тюнера"
 
 msgid "Choose bouquet"
 msgstr "Выбор букета"
+
+msgid "Choose whether to scan a single transponder, one satellite or multiple satellites."
+msgstr "Выберите, сканировать ли один транспондер, один спутник или несколько спутников."
+
+msgid "Choose whether to scan for free services only or whether to include paid/encrypted services too."
+msgstr "Выберите, следует ли сканировать только открытые сервисы или включать также платные/кодированные сервисы."
 
 msgid "Choose which tuner to configure."
 msgstr "Выберите тюнер для настройки."
@@ -4815,6 +4837,9 @@ msgstr "Люксембургский"
 msgid "MB"
 msgstr "MB"
 
+msgid "MHz"
+msgstr "MHz"
+
 msgid "MMC card"
 msgstr "MMC карта"
 
@@ -5674,6 +5699,9 @@ msgstr "Обычный"
 
 msgid "Original"
 msgstr "Оригинал"
+
+msgid "Original audio"
+msgstr "Оригинальное аудио"
 
 msgid "Other"
 msgstr "Другая"
@@ -6679,6 +6707,9 @@ msgstr "Удалить выбранный спутник"
 msgid "Remove terrestrial services"
 msgstr "Удалить наземные сервисы"
 
+msgid "Remove the services on scanned transponders before re-adding services?"
+msgstr "Удалить сервисы на отсканированных транспондерах перед повторным добавлением сервисов?"
+
 msgid "Remove this logfile"
 msgstr "Удалить этот лог-файл"
 
@@ -7107,6 +7138,9 @@ msgstr "Параметры сканирования"
 msgid "Scan state"
 msgstr "состояние поиска"
 
+msgid "Scan using transponders on NIT table? 'No' will use transponders in xml file."
+msgstr "Сканирование с использованием транспондеров из таблицы NIT? 'Нет', будут использоваться только транспондеры из файла xml ресивера."
+
 msgid "Scan wireless networks"
 msgstr "Сканирование беспроводных сетей"
 
@@ -7468,6 +7502,15 @@ msgstr "Выберите видеорежим"
 
 msgid "Select whether your SCR device is externally powered."
 msgstr "Выберите, имеет ли Ваше устройство SCR внешнее питание."
+
+msgid "Select which satellite to scan."
+msgstr "Выберите спутник для сканирования."
+
+msgid "Select which transponder to scan."
+msgstr "Выберите транспондер для сканирования."
+
+msgid "Select which tuner to use for the scan."
+msgstr "Выберите, какой тюнер использовать для сканирования."
 
 msgid "Select wireless network"
 msgstr "Выберите беспроводную сеть"
@@ -8723,7 +8766,7 @@ msgstr "TEXT"
 
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
-msgstr "Dimitrij - 26.08.2021"
+msgstr "Dmitrij - 8.12.2021"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "TS файл слишком большой для ISO9660 level 1!"
