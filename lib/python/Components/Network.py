@@ -291,6 +291,8 @@ class Network:
 		return self.ifaces.keys()
 
 	def getAdapterAttribute(self, iface, attribute):
+		if not self.ifaces[iface]['up']:
+			self.getAddrInet(iface, callback=None)
 		return self.ifaces.get(iface, {}).get(attribute)
 
 	def setAdapterAttribute(self, iface, attribute, value):
