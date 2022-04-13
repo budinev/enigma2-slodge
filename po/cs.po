@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-27 12:31+0200\n"
+"POT-Creation-Date: 2022-04-12 12:11+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: IMS <ims@openpli.org>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -673,8 +673,22 @@ msgstr "Nastavení A/V"
 msgid "AAC downmix"
 msgstr "AAC downmix"
 
+#
+msgid "AAC transcoding"
+msgstr "AAC transkódování"
+
+msgid "AAC+ downmix"
+msgstr "AAC+ downmix"
+
+msgid "AC3"
+msgstr ""
+
 msgid "AC3 downmix"
 msgstr "AC3 downmix"
+
+#
+msgid "AC3 transcoding"
+msgstr "AC3 transkódování"
 
 msgid "ACQUIRING TSID/ONID"
 msgstr "ACQUIRING TSID/ONID"
@@ -1948,6 +1962,18 @@ msgstr "Zvolte tuner"
 msgid "Choose bouquet"
 msgstr "Zvolte přehled"
 
+msgid "Choose whether AAC sound tracks should be transcoded."
+msgstr "Zvolte, zda by měly být zvukové stopy AAC překódovány."
+
+msgid "Choose whether AC3 sound tracks should be transcoded."
+msgstr "Zvolte, zda by měly být zvukové stopy AC3 překódovány."
+
+msgid "Choose whether WMA Pro sound tracks should be downmixed."
+msgstr "Zvolte, zda by měly být zvukové stopy WMA překódovány."
+
+msgid "Choose whether multi channel aac+ sound tracks should be downmixed to stereo."
+msgstr "Zvolte, zda by měly být vícekanálové acc+ stopy překódovány."
+
 msgid "Choose whether to scan a single transponder, one satellite or multiple satellites."
 msgstr "Vyberte, zda chcete prohledat jeden transpondér, jeden satelit nebo více satelitů."
 
@@ -2729,6 +2755,9 @@ msgstr "Česká republika"
 msgid "D"
 msgstr "D"
 
+msgid "DAC"
+msgstr "DAC"
+
 #
 msgid "DHCP"
 msgstr "DHCP"
@@ -2740,8 +2769,14 @@ msgstr "DMM rozšířené"
 msgid "DMM normal"
 msgstr "DMM normální"
 
+msgid "DTS"
+msgstr "DTS"
+
 msgid "DTS downmix"
 msgstr "DTS downmix"
+
+msgid "DTS-HD HR/DTS-HD MA/DTS"
+msgstr "DTS-HD HR/DTS-HD MA/DTS"
 
 #
 msgid "DUAL LAYER DVD"
@@ -3094,6 +3129,9 @@ msgstr "Adresář obsahuje %(file)s a %(subdir)s."
 msgid "Disable"
 msgstr "Zakázat"
 
+msgid "Disable FCC during recordings"
+msgstr "Zakázat FCC při nahrávání"
+
 #
 msgid "Disable Picture in Picture"
 msgstr "Vypnout obraz v obraze"
@@ -3402,6 +3440,9 @@ msgstr "Stahuje se nový seznam balíčků. Prosím, čekejte..."
 msgid "Downloading plugin information. Please wait..."
 msgstr "Stahuji informace o pluginech. Prosím, čekejte..."
 
+msgid "Downmix"
+msgstr ""
+
 msgid "Drama and Films"
 msgstr "drama a filmy"
 
@@ -3455,8 +3496,8 @@ msgid "ERROR - failed to scan (%s)!"
 msgstr "CHYBA - prohledávání selhalo (%s)!"
 
 #, python-format
-msgid "ERROR downloading file /etc/enigma2/%s"
-msgstr "CHYBA stažení souboru /etc/enigma2/%s"
+msgid "ERROR downloading file %s/%s"
+msgstr "CHYBA stažení souboru %s/%s"
 
 #
 msgid "East"
@@ -3592,6 +3633,10 @@ msgstr "Povolit automatický fastscan"
 #, python-format
 msgid "Enable auto fastscan for %s"
 msgstr "Povolit automatický fastscan pro %s"
+
+#
+msgid "Enable bluetooth audio"
+msgstr "Povolit bluetooth audio"
 
 #
 msgid "Enable bouquet edit"
@@ -4073,6 +4118,14 @@ msgstr ""
 "neaktivní"
 
 #
+msgid "FCC enabled"
+msgstr "FCC povolen"
+
+#
+msgid "FCCSetup"
+msgstr "Nastavení FCC"
+
+#
 msgid "FEC"
 msgstr "FEC"
 
@@ -4174,6 +4227,15 @@ msgstr "Faerské ostrovy"
 #
 msgid "Fast"
 msgstr "Rychle"
+
+msgid "Fast Channel Change"
+msgstr "Fast Channel Change"
+
+msgid "Fast Channel Change Setup"
+msgstr "Fast Channel Change Nastavení"
+
+msgid "Fast Channel Change setup"
+msgstr "Fast Channel Change nastavení"
 
 #
 msgid "Fast DiSEqC"
@@ -4421,6 +4483,10 @@ msgid "General PCM delay"
 msgstr "Hlavní PCM zpoždění"
 
 #
+msgid "General bluetooth audio delay"
+msgstr "Hlavní bluetooth audio zpoždění"
+
+#
 msgid "Genre"
 msgstr "Žánr"
 
@@ -4593,6 +4659,9 @@ msgstr "HD2400"
 msgid "HD60/HD66SE/Multibox/Multibox SE"
 msgstr "HD60/HD66SE/Multibox/Multibox SE"
 
+msgid "HDMI"
+msgstr "HDMI"
+
 msgid "HDMI Colordepth"
 msgstr "Barevná hloubka HDMI"
 
@@ -4707,6 +4776,9 @@ msgstr "Informace o hierarchii"
 #
 msgid "High bitrate support"
 msgstr "Podpora High bitrate"
+
+msgid "History Prev/Next"
+msgstr "Historie předchozí/další"
 
 msgid "History back"
 msgstr "Historie zpět"
@@ -5661,6 +5733,10 @@ msgstr "Mauretánie"
 #
 msgid "Mauritius"
 msgstr "Mauricius"
+
+#
+msgid "Max channels"
+msgstr "Maximálně kanálů"
 
 msgid "Max memory positions"
 msgstr "Maximum pozic paměti"
@@ -6659,6 +6735,9 @@ msgstr "Nastavení rodičovského zámku"
 msgid "Parental control setup"
 msgstr "Nastavení rodičovského zámku"
 
+msgid "Passthrough"
+msgstr ""
+
 msgid "Password"
 msgstr "Heslo"
 
@@ -7546,6 +7625,9 @@ msgstr "Rec"
 msgid "Recall to previous service"
 msgstr "Vyvolat předchozí program"
 
+msgid "Receiver or driver does not support FCC"
+msgstr "Přijímač nebo ovladač nepodporuje FCC"
+
 #
 msgid "Reception settings"
 msgstr "Nastavení příjmu"
@@ -8035,6 +8117,9 @@ msgstr "SNR"
 #
 msgid "SNR:"
 msgstr "SNR:"
+
+msgid "SPDIF"
+msgstr "SPDIF"
 
 msgid "SRT file"
 msgstr "SRT soubor"
@@ -10114,7 +10199,7 @@ msgstr ""
 "Pro případné korekce můžete kontaktovat autora\n"
 "na výše uvedené adrese.\n"
 "\n"
-"®27.3.2022"
+"®12.4.2022"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -10507,11 +10592,17 @@ msgstr "Zobrazuje čísla rychlých odkazů pro menu a/nebo pluginy."
 msgid "This option allows you to show the full screen path leading to the current screen."
 msgstr "Umožňuje zobrazovat plnou cestu ukazující k aktuální obrazovce - menu."
 
+msgid "This option allows you to switch audio to bluetooth speakers."
+msgstr "Umožňuje přepnout zvuk do bluetooth reproduktorů."
+
 msgid "This option allows you to view the old and new settings side by side."
 msgstr "Umožňuje zobrazit staré a nové nastavení vedle sebe."
 
 msgid "This option can be useful for long HDMI cables."
 msgstr "Nastavení může být užitečné pro dlouhé HDMI kabely."
+
+msgid "This option configures the general audio delay for bluetooth speakers."
+msgstr "Nastavuje hlavní zpoždění zvuku pro bluetooth reproduktory."
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
 msgstr "Nastavuje úroveň potlačení Mosquito Noise (Mosquito Noise je náhodný aliasing v důsledku silné komprese). Obvykle na úkor detailů obrazu."
@@ -11594,6 +11685,9 @@ msgstr "W"
 msgid "WLAN connection"
 msgstr "WLAN připojení"
 
+msgid "WMA Pro downmix"
+msgstr "WMA Pro downmix"
+
 #
 msgid "WSS on 4:3"
 msgstr "WSS na 4:3"
@@ -12315,6 +12409,9 @@ msgstr "Zambie"
 msgid "Zap"
 msgstr "Přepnout"
 
+msgid "Zap Up/Down"
+msgstr "Přepnout nahoru/dolů"
+
 #
 msgid "Zap back to previously tuned service?"
 msgstr "Přepnout zpět na předchozí naladěný program?"
@@ -12589,6 +12686,15 @@ msgstr "připojeno"
 msgid "controlled by HDMI"
 msgstr "řízeno pomocí HDMI"
 
+msgid "convert to AC3"
+msgstr "konvertovat do AC3"
+
+msgid "convert to DTS"
+msgstr "konvertovat do DTS"
+
+msgid "convert to multi-channel PCM"
+msgstr "konvertovat do vícekanálového PCM"
+
 msgid "cooking"
 msgstr "vaření"
 
@@ -12728,6 +12834,9 @@ msgstr "experimentální film/video"
 
 msgid "extra wide"
 msgstr "Extra široký"
+
+msgid "extrawide"
+msgstr "extra široký"
 
 #
 msgid "failed"
@@ -13160,6 +13269,10 @@ msgstr "program pro předškolní děti"
 msgid "preserve bookmarks in cuts"
 msgstr "uchovat záložky v cuts"
 
+#
+msgid "priority"
+msgstr "Priorita"
+
 msgid "receiver software because updates are available."
 msgstr "software přijímače, jelikož aktualizace jsou dostupné."
 
@@ -13473,6 +13586,12 @@ msgstr "netestovatelné"
 #
 msgid "until standby/restart"
 msgstr "do standby/restartu"
+
+msgid "use best / controlled by HDMI"
+msgstr "použít nejlepší / řízeno pomocí HDMI"
+
+msgid "use_hdmi_cacenter"
+msgstr ""
 
 #
 msgid "user defined"
