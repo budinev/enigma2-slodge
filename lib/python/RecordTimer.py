@@ -382,6 +382,12 @@ class RecordTimerEntry(timer.TimerEntry, object):
 			print "[TIMER] sourceactive was send"
 
 	def activate(self):
+		if not self.InfoBarInstance:
+			try:
+				self.InfoBarInstance = Screens.InfoBar.InfoBar.instance
+			except:
+				print "[RecordTimer] import 'Screens.InfoBar' failed"
+
 		next_state = self.state + 1
 		self.log(5, "activating state %d" % next_state)
 
@@ -1263,7 +1269,7 @@ class RecordTimer(timer.Timer):
 					type_offset = 5
 					if (timer_end - x.begin) <= 1:
 						timer_end += 60
-					if x.pipzap:
+					if x.pipzap and not x.repeated:
 						type_offset = 30
 				if x.always_zap:
 					type_offset = 10
