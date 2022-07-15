@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-21 18:47+0200\n"
+"POT-Creation-Date: 2022-07-06 22:43+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: 王彪 <satfan@163.com>\n"
 "Language-Team: 中國\n"
@@ -5079,12 +5079,8 @@ msgstr ""
 msgid "Media player"
 msgstr "媒體播放器"
 
-#, fuzzy
-msgid "Media player: GStreamer, version "
-msgstr "新版本:"
-
-msgid "Media player: ffmpeg, version "
-msgstr ""
+msgid "version"
+msgstr "版本"
 
 msgid "Media scanner"
 msgstr ""
@@ -5801,6 +5797,10 @@ msgstr ""
 
 msgid "Only on startup"
 msgstr ""
+
+#, fuzzy
+msgid "Only power off"
+msgstr "允許移動模式"
 
 msgid "Only select 'yes' if you are using a multiswich that requires a DiSEqC Port-A command signal. For all other setups select 'no'."
 msgstr ""
@@ -11299,10 +11299,6 @@ msgstr ""
 
 #, fuzzy
 msgid "extra wide"
-msgstr "附加欄位"
-
-#, fuzzy
-msgid "extrawide"
 msgstr "附加欄位"
 
 msgid "failed"

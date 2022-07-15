@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Openpli\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-21 18:47+0200\n"
+"POT-Creation-Date: 2022-07-06 22:43+0200\n"
 "PO-Revision-Date: 2019-04-03 06:49+0300\n"
 "Last-Translator: \n"
 "Language-Team: Raivo, Henkka, eesatfan, rimas, zeros\\n faas, sateks, valgekotkas, tigekala, rootsikunn\\n kain, i70, mustkass, pelmeen, Scott\\n <digi-tv.ee>\n"
@@ -5106,12 +5106,8 @@ msgstr "Mayotte"
 msgid "Media player"
 msgstr "Meediamängija"
 
-#, fuzzy
-msgid "Media player: GStreamer, version "
-msgstr "GStreameri versioon: "
-
-msgid "Media player: ffmpeg, version "
-msgstr ""
+msgid "version"
+msgstr "versioon"
 
 msgid "Media scanner"
 msgstr "Meediaotsija"
@@ -5819,6 +5815,10 @@ msgstr "Liiguta antenni kiiresti ainult enne seda kellaaega."
 
 msgid "Only on startup"
 msgstr "Ainult alustamisel"
+
+#, fuzzy
+msgid "Only power off"
+msgstr "Luba äratustaimer"
 
 msgid "Only select 'yes' if you are using a multiswich that requires a DiSEqC Port-A command signal. For all other setups select 'no'."
 msgstr "Vali 'jah' ainult juhul, kui kasutatav multiswich lüliti nõuab DiSEqC Port-A käsu signaali. Kõigil teistel juhtudel vali 'ei'."
@@ -11446,10 +11446,6 @@ msgid "experimental film/video"
 msgstr "eksperimentaalne film/video"
 
 msgid "extra wide"
-msgstr "eriti lai"
-
-#, fuzzy
-msgid "extrawide"
 msgstr "eriti lai"
 
 msgid "failed"

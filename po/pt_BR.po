@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-21 18:47+0200\n"
+"POT-Creation-Date: 2022-07-06 22:43+0200\n"
 "PO-Revision-Date: 2013-10-20 19:13-0300\n"
 "Last-Translator: Diogo <pingflood@gmail.com>\n"
 "Language-Team: Traduzido por Frank Viana <franksrviana@gmail.com>\n"
@@ -5119,12 +5119,8 @@ msgstr ""
 msgid "Media player"
 msgstr "Reprodutor de mídia"
 
-#, fuzzy
-msgid "Media player: GStreamer, version "
-msgstr "Versão do Kernel:"
-
-msgid "Media player: ffmpeg, version "
-msgstr ""
+msgid "version"
+msgstr "versão"
 
 msgid "Media scanner"
 msgstr "Buscar mídia"
@@ -5841,6 +5837,10 @@ msgstr ""
 
 msgid "Only on startup"
 msgstr ""
+
+#, fuzzy
+msgid "Only power off"
+msgstr "Organizar/mover itens"
 
 msgid "Only select 'yes' if you are using a multiswich that requires a DiSEqC Port-A command signal. For all other setups select 'no'."
 msgstr ""
@@ -11447,9 +11447,6 @@ msgid "experimental film/video"
 msgstr "Filme/vídeo experimental "
 
 msgid "extra wide"
-msgstr ""
-
-msgid "extrawide"
 msgstr ""
 
 msgid "failed"
