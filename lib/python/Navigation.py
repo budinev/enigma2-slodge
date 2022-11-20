@@ -1,4 +1,4 @@
-from enigma import eServiceCenter, eServiceReference, pNavigation, getBestPlayableServiceReference, iPlayableService, setPreferredTuner, eStreamServer, iRecordableServicePtr
+from enigma import eTimer, eServiceCenter, eServiceReference, pNavigation, getBestPlayableServiceReference, iPlayableService, setPreferredTuner, eStreamServer, iRecordableServicePtr
 from Components.ImportChannels import ImportChannels
 from Components.ParentalControl import parentalControl
 from Components.SystemInfo import SystemInfo
@@ -43,12 +43,12 @@ class Navigation:
 		self.__isRestartUI = config.misc.RestartUI.value
 		startup_to_standby = config.usage.startup_to_standby.value
 		wakeup_time_type = config.misc.prev_wakeup_time_type.value
-		wakeup_timer_enabled = False
+		self.wakeup_timer_enabled = False
 		if config.usage.remote_fallback_import_restart.value:
 			ImportChannels()
 		if self.__wasTimerWakeup:
-			wakeup_timer_enabled = wakeup_time_type == 3 and config.misc.prev_wakeup_time.value
-			if not wakeup_timer_enabled:
+			self.wakeup_timer_enabled = wakeup_time_type == 3 and config.misc.prev_wakeup_time.value
+			if not self.wakeup_timer_enabled:
 				RecordTimer.RecordTimerEntry.setWasInDeepStandby()
 		if config.misc.RestartUI.value:
 			config.misc.RestartUI.value = False
@@ -59,11 +59,17 @@ class Navigation:
 				ImportChannels()
 			if startup_to_standby == "yes" or self.__wasTimerWakeup and config.misc.prev_wakeup_time.value and (wakeup_time_type == 0 or wakeup_time_type == 1 or (wakeup_time_type == 3 and startup_to_standby == "except")):
 				if not Screens.Standby.inTryQuitMainloop:
-					Notifications.AddNotification(Screens.Standby.Standby, wakeup_timer_enabled and 1 or True)
+					self.standbytimer = eTimer()
+					self.standbytimer.callback.append(self.gotostandby)
+					self.standbytimer.start(15000, True) # Time increse 15 second for standby.
 		if config.misc.prev_wakeup_time.value:
 			config.misc.prev_wakeup_time.value = 0
 			config.misc.prev_wakeup_time.save()
 			configfile.save()
+
+	def gotostandby(self):
+		if not Screens.Standby.inStandby and not Screens.Standby.inTryQuitMainloop:
+			Notifications.AddNotification(Screens.Standby.Standby, self.wakeup_timer_enabled and 1 or True)
 
 	def wasTimerWakeup(self):
 		return self.__wasTimerWakeup
@@ -126,6 +132,11 @@ class Navigation:
 							print "[Navigation] Failed to start: ", alternativeref.toString()
 							self.currentlyPlayingServiceReference = None
 							self.currentlyPlayingServiceOrGroup = None
+							if oldref and "://" in oldref.getPath():
+								print "[Navigation] Streaming was active -> try again" # use timer to give the streamserver the time to deallocate the tuner
+								self.retryServicePlayTimer = eTimer()
+								self.retryServicePlayTimer.callback.append(boundFunction(self.playService, ref, checkParentalControl, forceRestart, adjust))
+								self.retryServicePlayTimer.start(500, True)
 						else:
 							print "[Navigation] alternative ref as simulate: ", alternativeref.toString()
 					return 0
@@ -178,6 +189,11 @@ class Navigation:
 					print "[Navigation] Failed to start: ", playref.toString()
 					self.currentlyPlayingServiceReference = None
 					self.currentlyPlayingServiceOrGroup = None
+					if oldref and "://" in oldref.getPath():
+						print "[Navigation] Streaming was active -> try again" # use timer to give the streamserver the time to deallocate the tuner
+						self.retryServicePlayTimer = eTimer()
+						self.retryServicePlayTimer.callback.append(boundFunction(self.playService, ref, checkParentalControl, forceRestart, adjust))
+						self.retryServicePlayTimer.start(500, True)
 				self.skipServiceReferenceReset = False
 				if setPriorityFrontend:
 					setPreferredTuner(int(config.usage.frontend_priority.value))
