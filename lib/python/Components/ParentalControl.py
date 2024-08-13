@@ -4,9 +4,8 @@ from Screens.InputBox import PinInput
 from Screens.MessageBox import MessageBox
 from Tools.BoundFunction import boundFunction
 from ServiceReference import ServiceReference
-from Tools import Notifications
 from Tools.Directories import resolveFilename, SCOPE_CONFIG
-from Tools.Notifications import AddPopup
+from Tools.Notifications import AddPopup, AddNotificationParentalControl, RemovePopup
 from enigma import eTimer, eServiceCenter, iServiceInformation, eServiceReference, eDVBDB
 import time
 
@@ -104,12 +103,12 @@ class ParentalControl:
 			service = ref.toCompareString()
 			title = 'FROM BOUQUET "userbouquet.' in service and _("This bouquet is protected by a parental control PIN") or _("This service is protected by a parental control PIN")
 			if session:
-				Notifications.RemovePopup("Parental control")
+				RemovePopup("Parental control")
 				if self.PinDlg:
 					self.PinDlg.close()
 				self.PinDlg = session.openWithCallback(boundFunction(self.servicePinEntered, ref), PinInput, triesEntry=config.ParentalControl.retries.servicepin, pinList=self.getPinList(), service=ServiceReference(ref).getServiceName(), title=title, windowTitle=_("Parental control"), simple=False, zap=True)
 			else:
-				Notifications.AddNotificationParentalControl(boundFunction(self.servicePinEntered, ref), PinInput, triesEntry=config.ParentalControl.retries.servicepin, pinList=self.getPinList(), service=ServiceReference(ref).getServiceName(), title=title, windowTitle=_("Parental control"), zap=True)
+				AddNotificationParentalControl(boundFunction(self.servicePinEntered, ref), PinInput, triesEntry=config.ParentalControl.retries.servicepin, pinList=self.getPinList(), service=ServiceReference(ref).getServiceName(), title=title, windowTitle=_("Parental control"), zap=True)
 			return False
 		else:
 			return True
@@ -195,7 +194,7 @@ class ParentalControl:
 
 	def saveListToFile(self, sWhichList, vList):
 		file = open(resolveFilename(SCOPE_CONFIG, sWhichList), 'w')
-		for sService, sType in vList.iteritems():
+		for sService, sType in vList.items():
 			if (TYPE_SERVICE in sType or TYPE_BOUQUET in sType) and not sService.startswith("-"):
 				file.write(str(sService) + "\n")
 		file.close()
@@ -252,7 +251,7 @@ class ParentalControl:
 			if not self.filesOpened:
 				self.open()
 				return getattr(self, name)
-		raise AttributeError, name
+		raise AttributeError(name)
 
 	def hideBlacklist(self):
 		if self.blacklist:

@@ -4,66 +4,39 @@ from Components.PluginComponent import plugins
 import os
 from mimetypes import guess_type, add_type
 
-add_type("audio/dts", ".dts")
-add_type("audio/mpeg", ".mp3")
-add_type("audio/x-wav", ".wav")
-add_type("audio/x-wav", ".wave")
-add_type("audio/x-wav", ".wv")
-add_type("audio/ogg", ".oga")
-add_type("audio/ogg", ".ogg")
-add_type("audio/flac", ".flac")
-add_type("audio/mp4", ".m4a")
-add_type("audio/mpeg", ".mp2")
-add_type("audio/mpeg", ".m2a")
-add_type("audio/x-ms-wma", ".wma")
-add_type("audio/ac3", ".ac3")
-add_type("audio/x-matroska", ".mka")
-add_type("audio/x-aac", ".aac")
-add_type("audio/x-monkeys-audio", ".ape")
-add_type("audio/mp4", ".alac")
-add_type("audio/amr", ".amr")
-add_type("audio/basic", ".au")
-add_type("audio/midi", ".mid")
-add_type("video/x-dvd-iso", ".iso")
-add_type("video/x-dvd-iso", ".img")
-add_type("video/x-dvd-iso", ".nrg")
-add_type("image/jpeg", ".jpg")
-add_type("image/png", ".png")
-add_type("image/gif", ".gif")
-add_type("image/bmp", ".bmp")
-add_type("image/jpeg", ".jpeg")
-add_type("image/jpeg", ".jpe")
-add_type("video/mpeg", ".mpg")
-add_type("video/dvd", ".vob")
-add_type("video/mp4", ".m4v")
-add_type("video/x-matroska", ".mkv")
-add_type("video/avi", ".avi")
-add_type("video/divx", ".divx")
-add_type("video/x-mpeg", ".dat")
-add_type("video/x-flv", ".flv")
-add_type("video/mp4", ".mp4")
-add_type("video/quicktime", ".mov")
-add_type("video/x-ms-wmv", ".wmv")
-add_type("video/x-ms-asf", ".asf")
-add_type("video/3gpp", ".3gp")
-add_type("video/3gpp2", ".3g2")
-add_type("video/mpeg", ".mpeg")
-add_type("video/mpeg", ".mpe")
-add_type("application/vnd.rn-realmedia", ".rm")
-add_type("application/vnd.rn-realmedia-vbr", ".rmvb")
-add_type("video/ogg", ".ogm")
-add_type("video/ogg", ".ogv")
-add_type("video/mp2t", ".m2ts")
-add_type("video/mts", ".mts")
-add_type("video/mp2t", ".ts")
-add_type("application/x-debian-package", ".ipk")
-add_type("application/x-dream-image", ".nfi")
-add_type("video/webm", ".webm")
-add_type("video/mpeg", ".pva")
-add_type("video/mpeg", ".wtv")
-
 
 def getType(file):
+	add_type("audio/dts", ".dts")
+	add_type("audio/x-wav", ".wave")
+	add_type("audio/x-wav", ".wv")
+	add_type("audio/mpeg", ".m2a")
+	add_type("audio/x-matroska", ".mka")
+	add_type("audio/x-aac", ".aac")
+	add_type("audio/x-monkeys-audio", ".ape")
+	add_type("audio/mp4", ".alac")
+	add_type("audio/amr", ".amr")
+	add_type("audio/midi", ".mid")
+	add_type("video/x-dvd-iso", ".iso")
+	add_type("video/x-dvd-iso", ".img")
+	add_type("video/x-dvd-iso", ".nrg")
+	add_type("video/dvd", ".vob")
+	add_type("video/avi", ".avi")
+	add_type("video/divx", ".divx")
+	add_type("video/x-mpeg", ".dat")
+	add_type("video/x-ms-asf", ".asf")
+	add_type("video/3gpp", ".3gp")
+	add_type("video/3gpp2", ".3g2")
+	add_type("application/vnd.rn-realmedia", ".rm")
+	add_type("application/vnd.rn-realmedia-vbr", ".rmvb")
+	add_type("video/ogg", ".ogm")
+	add_type("video/mp2t", ".m2ts")
+	add_type("video/mts", ".mts")
+	add_type("video/mp2t", ".ts")
+	add_type("application/x-debian-package", ".ipk")
+	add_type("application/x-dream-image", ".nfi")
+	add_type("video/mpeg", ".pva")
+	add_type("video/mpeg", ".wtv")
+
 	(type, _) = guess_type(file)
 	if type is None:
 		# Detect some unknown types
@@ -113,17 +86,12 @@ class ScanPath:
 	def __repr__(self):
 		return self.path + "(" + str(self.with_subdirs) + ")"
 
-	# we will use this in a set(), so we need to implement __hash__ and __cmp__
+	# we will use this in a set(), so we need to implement __hash__ and __eq__
 	def __hash__(self):
 		return self.path.__hash__() ^ self.with_subdirs.__hash__()
 
-	def __cmp__(self, other):
-		if self.path < other.path:
-			return -1
-		elif self.path > other.path:
-			return +1
-		else:
-			return self.with_subdirs.__cmp__(other.with_subdirs)
+	def __eq__(self, other):
+		return self.path == other.path
 
 
 class ScanFile:
@@ -140,7 +108,7 @@ class ScanFile:
 
 
 def execute(option):
-	print "execute", option
+	print("execute", option)
 	if option is None:
 		return
 
@@ -152,12 +120,12 @@ def scanDevice(mountpoint):
 	scanner = []
 
 	for p in plugins.getPlugins(PluginDescriptor.WHERE_FILESCAN):
-		l = p()
+		l = p.__call__()
 		if not isinstance(l, list):
 			l = [l]
 		scanner += l
 
-	print "scanner:", scanner
+	print("scanner:", scanner)
 
 	res = {}
 
@@ -172,7 +140,7 @@ def scanDevice(mountpoint):
 
 	# ...then remove with_subdir=False when same path exists
 	# with with_subdirs=True
-	for p in paths_to_scan:
+	for p in paths_to_scan.copy():
 		if p.with_subdirs == True and ScanPath(path=p.path) in paths_to_scan:
 			paths_to_scan.remove(ScanPath(path=p.path))
 
@@ -209,13 +177,13 @@ def openList(session, files):
 	scanner = []
 
 	for p in plugins.getPlugins(PluginDescriptor.WHERE_FILESCAN):
-		l = p()
+		l = p.__call__()
 		if not isinstance(l, list):
 			scanner.append(l)
 		else:
 			scanner += l
 
-	print "scanner:", scanner
+	print("scanner:", scanner)
 
 	res = {}
 

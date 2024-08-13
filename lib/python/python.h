@@ -6,8 +6,10 @@
 
 #include <string>
 #include <lib/base/object.h>
+#include "Python.h"
 
 #if !defined(SKIP_PART1) && !defined(SWIG)
+
 class ePyObject
 {
 	PyObject *m_ob;
@@ -27,7 +29,7 @@ public:
 	inline ePyObject(PyDictObject *ob);
 	inline ePyObject(PyTupleObject *ob);
 	inline ePyObject(PyListObject *ob);
-	inline ePyObject(PyStringObject *ob);
+	inline ePyObject(PyUnicodeObject *ob);
 	operator bool() const { return !!m_ob; }
 	operator bool() { return !!m_ob; }
 	ePyObject &operator=(const ePyObject &);
@@ -36,12 +38,12 @@ public:
 	ePyObject &operator=(PyDictObject *ob) { return operator=((PyObject*)ob); }
 	ePyObject &operator=(PyTupleObject *ob) { return operator=((PyObject*)ob); }
 	ePyObject &operator=(PyListObject *ob) { return operator=((PyObject*)ob); }
-	ePyObject &operator=(PyStringObject *ob) { return operator=((PyObject*)ob); }
+	ePyObject &operator=(PyUnicodeObject *ob) { return operator=((PyObject*)ob); }
 	operator PyObject*();
 	operator PyVarObject*() { return (PyVarObject*)operator PyObject*(); }
 	operator PyTupleObject*() { return (PyTupleObject*)operator PyObject*(); }
 	operator PyListObject*() { return (PyListObject*)operator PyObject*(); }
-	operator PyStringObject*() { return (PyStringObject*)operator PyObject*(); }
+	operator PyUnicodeObject*() { return (PyUnicodeObject*)operator PyObject*(); }
 	operator PyDictObject*() { return (PyDictObject*)operator PyObject*(); }
 	PyObject *operator->() { return operator PyObject*(); }
 #ifdef PYTHON_REFCOUNT_DEBUG
@@ -118,7 +120,7 @@ inline ePyObject::ePyObject(PyListObject *ob)
 {
 }
 
-inline ePyObject::ePyObject(PyStringObject *ob)
+inline ePyObject::ePyObject(PyUnicodeObject *ob)
 	:m_ob((PyObject*)ob)
 #ifdef PYTHON_REFCOUNT_DEBUG
 	,m_file(0), m_line(0), m_from(0), m_to(0), m_erased(false)
@@ -220,12 +222,12 @@ inline void Impl_Py_XINCREF(const char* file, int line, const ePyObject &obj)
 
 inline ePyObject Impl_PyTuple_New(const char* file, int line, int elements=0)
 {
-	return ePyObject(PyTuple_New(elements), file, line);
+	return ePyObject(PyTuple_New((Py_ssize_t)elements), file, line);
 }
 
 inline ePyObject Impl_PyList_New(const char* file, int line, int elements=0)
 {
-	return ePyObject(PyList_New(elements), file, line);
+	return ePyObject(PyList_New((Py_ssize_t)elements), file, line);
 }
 
 inline ePyObject Impl_PyDict_New(const char* file, int line)
@@ -233,23 +235,23 @@ inline ePyObject Impl_PyDict_New(const char* file, int line)
 	return ePyObject(PyDict_New(), file, line);
 }
 
-inline ePyObject Impl_PyString_FromString(const char* file, int line, const char *str)
+inline ePyObject Impl_PyUnicode_FromString(const char* file, int line, const char *str)
 {
-	return ePyObject(PyString_FromString(str), file, line);
+	return ePyObject(PyUnicode_FromString(str), file, line);
 }
 
 inline ePyObject Impl_PyString_FromFormat(const char* file, int line, const char *fmt, ...)
 {
 	va_list ap;
 	va_start(ap, fmt);
-	PyObject *ob = PyString_FromFormatV(fmt, ap);
+	PyObject *ob = PyUnicode_FromFormatV(fmt, ap);
 	va_end(ap);
 	return ePyObject(ob, file, line);
 }
 
-inline ePyObject Impl_PyInt_FromLong(const char* file, int line, long val)
+inline ePyObject Impl_PyLong_FromLong(const char* file, int line, long val)
 {
-	return ePyObject(PyInt_FromLong(val), file, line);
+	return ePyObject(PyLong_FromLong(val), file, line);
 }
 
 inline ePyObject Impl_PyLong_FromLong(const char* file, int line, long val)
@@ -273,7 +275,7 @@ inline ePyObject Impl_PyLong_FromUnsignedLongLong(const char* file, int line, un
 
 inline ePyObject Impl_PyList_GET_ITEM(const char *file, int line, ePyObject list, unsigned int pos)
 {
-	return ePyObject(PyList_GET_ITEM(list, pos), file, line);
+	return ePyObject(PyList_GET_ITEM(list, (Py_ssize_t)pos), file, line);
 }
 
 inline ePyObject Impl_PyTuple_GET_ITEM(const char *file, int line, ePyObject list, unsigned int pos)
@@ -305,12 +307,12 @@ inline void Impl_Py_XINCREF(const ePyObject &obj)
 
 inline ePyObject Impl_PyTuple_New(int elements=0)
 {
-	return PyTuple_New(elements);
+	return PyTuple_New((Py_ssize_t)elements);
 }
 
 inline ePyObject Impl_PyList_New(int elements=0)
 {
-	return PyList_New(elements);
+	return PyList_New((Py_ssize_t)elements);
 }
 
 inline ePyObject Impl_PyDict_New()
@@ -318,23 +320,13 @@ inline ePyObject Impl_PyDict_New()
 	return PyDict_New();
 }
 
-inline ePyObject Impl_PyString_FromString(const char *str)
-{
-	return PyString_FromString(str);
-}
-
 inline ePyObject Impl_PyString_FromFormat(const char *fmt, ...)
 {
 	va_list ap;
 	va_start(ap, fmt);
-	PyObject *ob = PyString_FromFormatV(fmt, ap);
+	PyObject *ob = PyUnicode_FromFormatV(fmt, ap);
 	va_end(ap);
 	return ePyObject(ob);
-}
-
-inline ePyObject Impl_PyInt_FromLong(long val)
-{
-	return PyInt_FromLong(val);
 }
 
 inline ePyObject Impl_PyLong_FromLong(long val)
@@ -363,7 +355,7 @@ inline ePyObject Impl_PyList_GET_ITEM(ePyObject list, unsigned int pos)
 
 inline ePyObject Impl_PyTuple_GET_ITEM(ePyObject list, unsigned int pos)
 {
-	return PyTuple_GET_ITEM(list, pos);
+	return PyTuple_GET_ITEM(list, (Py_ssize_t)pos);
 }
 #endif
 
@@ -392,9 +384,7 @@ inline void Impl_DECREF(PyObject *ob)
 #define PyList_New(args...) Impl_PyList_New(__FILE__, __LINE__, args)
 #define PyTuple_New(args...) Impl_PyTuple_New(__FILE__, __LINE__, args)
 #define PyDict_New(...) Impl_PyDict_New(__FILE__, __LINE__)
-#define PyString_FromString(str) Impl_PyString_FromString(__FILE__, __LINE__, str)
 #define PyString_FromFormat(str, args...) Impl_PyString_FromFormat(__FILE__, __LINE__, str, args)
-#define PyInt_FromLong(val) Impl_PyInt_FromLong(__FILE__, __LINE__, val)
 #define PyLong_FromLong(val) Impl_PyLong_FromLong(__FILE__, __LINE__, val)
 #define PyLong_FromUnsignedLong(val) Impl_PyLong_FromUnsignedLong(__FILE__, __LINE__, val)
 #define PyLong_FromLongLong(val) Impl_PyLong_FromLongLong(__FILE__, __LINE__, val)
@@ -409,9 +399,7 @@ inline void Impl_DECREF(PyObject *ob)
 #define PyList_New(args...) Impl_PyList_New(args)
 #define PyTuple_New(args...) Impl_PyTuple_New(args)
 #define PyDict_New(...) Impl_PyDict_New()
-#define PyString_FromString(str) Impl_PyString_FromString(str)
 #define PyString_FromFormat(str, args...) Impl_PyString_FromFormat(str, args)
-#define PyInt_FromLong(val) Impl_PyInt_FromLong(val)
 #define PyLong_FromLong(val) Impl_PyLong_FromLong(val)
 #define PyLong_FromUnsignedLong(val) Impl_PyLong_FromUnsignedLong(val)
 #define PyLong_FromLongLong(val) Impl_PyLong_FromLongLong(val)

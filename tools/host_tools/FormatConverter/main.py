@@ -27,7 +27,7 @@ while True:
 		break
 
 	while True:
-		print datasources[index].getStatus()
+		print(datasources[index].getStatus())
 		list = []
 		for action in datasources[index].getCapabilities():
 			list.append(action[0])

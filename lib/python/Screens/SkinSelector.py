@@ -87,7 +87,7 @@ class SkinSelector(Screen, HelpableScreen):
 			self["preview"].instance.setPixmap(ptr.__deref__())
 
 	def layoutFinished(self):
-		self.picload.setPara((self["preview"].instance.size().width(), self["preview"].instance.size().height(), 1.0, 1, 1, 1, "#ff000000"))
+		self.picload.setPara((self["preview"].instance.size().width(), self["preview"].instance.size().height(), 1, 1, 1, 1, "#ff000000"))
 		self.refreshList()
 
 	def refreshList(self):
@@ -108,7 +108,7 @@ class SkinSelector(Screen, HelpableScreen):
 					resolution = None
 					if skinFile == "skin.xml":
 						try:
-							with open(skinPath, "r") as fd:
+							with open(skinPath, "rb") as fd:
 								resolutions = {
 									"480": _("NTSC"),
 									"576": _("PAL"),
@@ -119,8 +119,8 @@ class SkinSelector(Screen, HelpableScreen):
 									"8640": _("16K")
 								}
 								mm = mmap.mmap(fd.fileno(), 0, prot=mmap.PROT_READ)
-								skinheight = re.search("\<?resolution.*?\syres\s*=\s*\"(\d+)\"", mm).group(1)
-								resolution = skinheight and resolutions.get(skinheight, None)
+								skinheight = re.search(b"\<?resolution.*?\syres\s*=\s*\"(\d+)\"", mm).group(1)
+								resolution = skinheight and resolutions.get(skinheight.decode(), None)
 								mm.close()
 						except:
 							pass
@@ -195,7 +195,7 @@ class SkinSelector(Screen, HelpableScreen):
 			restartBox.setTitle(_("SkinSelector: Restart GUI"))
 
 	def restartGUI(self, answer):
-		if answer is True:
+		if answer:
 			self.config.value = self.currentSelectedSkin[4]
 			self.config.save()
 			self.session.open(TryQuitMainloop, QUIT_RESTART)

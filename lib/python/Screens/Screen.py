@@ -1,11 +1,16 @@
+from os.path import isfile
+
 from enigma import eRCInput, eTimer, eWindow  # , getDesktop
 
-from skin import GUI_SKIN_ID, applyAllAttributes
+from skin import GUI_SKIN_ID, applyAllAttributes, menus, screens, setups
 from Components.config import config
 from Components.GUIComponent import GUIComponent
+from Components.Pixmap import Pixmap
 from Components.Sources.Source import Source
 from Components.Sources.StaticText import StaticText
 from Tools.CList import CList
+from Tools.Directories import SCOPE_GUISKIN, resolveFilename
+from Tools.LoadPixmap import LoadPixmap
 
 # The lines marked DEBUG: are proposals for further fixes or improvements.
 # Other commented out code is historic and should probably be deleted if it is not going to be used.
@@ -18,7 +23,8 @@ class Screen(dict):
 
 	def __init__(self, session, parent=None, mandatoryWidgets=None):
 		dict.__init__(self)
-		self.skinName = self.__class__.__name__
+		className = self.__class__.__name__
+		self.skinName = className
 		self.session = session
 		self.parent = parent
 		self.mandatoryWidgets = mandatoryWidgets
@@ -27,6 +33,7 @@ class Screen(dict):
 		self.onExecBegin = []
 		self.onExecEnd = []
 		self.onLayoutFinish = []
+		self.onContentChanged = []
 		self.onShown = []
 		self.onShow = []
 		self.onHide = []
@@ -49,6 +56,8 @@ class Screen(dict):
 		self["ScreenPath"] = StaticText()
 		self.screenPath = ""  # This is the current screen path without the title.
 		self.screenTitle = ""  # This is the current screen title without the path.
+		self.handledWidgets = []
+		self.setImage(className)
 
 	def __repr__(self):
 		return str(type(self))
@@ -70,7 +79,7 @@ class Screen(dict):
 					return
 			# assert self.session is None, "a screen can only exec once per time"
 			# self.session = session
-			for val in self.values() + self.renderer:
+			for val in list(self.values()) + self.renderer:
 				val.execBegin()
 				# DEBUG: if not self.standAlone and self.session.current_dialog != self:
 				if not self.stand_alone and self.session.current_dialog != self:
@@ -103,7 +112,7 @@ class Screen(dict):
 		for val in self.renderer:
 			val.disconnectAll()  # Disconnect converter/sources and probably destroy them. Sources will not be destroyed.
 		del self.session
-		for (name, val) in self.items():
+		for (name, val) in list(self.items()):
 			val.destroy()
 			del self[name]
 		self.renderer = []
@@ -126,7 +135,7 @@ class Screen(dict):
 		self.instance.show()
 		for x in self.onShow:
 			x()
-		for val in self.values() + self.renderer:
+		for val in list(self.values()) + self.renderer:
 			if isinstance(val, GUIComponent) or isinstance(val, Source):
 				val.onShow()
 
@@ -137,7 +146,7 @@ class Screen(dict):
 		self.instance.hide()
 		for x in self.onHide:
 			x()
-		for val in self.values() + self.renderer:
+		for val in list(self.values()) + self.renderer:
 			if isinstance(val, GUIComponent) or isinstance(val, Source):
 				val.onHide()
 
@@ -176,6 +185,14 @@ class Screen(dict):
 
 	title = property(getTitle, setTitle)
 
+	def setImage(self, image, source=None):
+		self.screenImage = None
+		if image and (images := {"menu": menus, "setup": setups}.get(source, screens)):
+			if (x := images.get(image, images.get("default", ""))) and isfile(x := resolveFilename(SCOPE_GUISKIN, x)):
+				self.screenImage = x
+				if self.screenImage and "Image" not in self:
+					self["Image"] = Pixmap()
+
 	def setFocus(self, o):
 		self.instance.setFocus(o.instance)
 
@@ -200,8 +217,7 @@ class Screen(dict):
 		self.desktop = desktop
 
 	def setAnimationMode(self, mode):
-		if self.instance:
-			self.instance.setAnimationMode(mode)
+		pass
 
 	def getRelatedScreen(self, name):
 		if name == "session":
@@ -216,6 +232,13 @@ class Screen(dict):
 		self.__callLaterTimer = eTimer()
 		self.__callLaterTimer.callback.append(function)
 		self.__callLaterTimer.start(0, True)
+
+	def screenContentChanged(self):
+		for f in self.onContentChanged:
+			if not isinstance(f, type(self.close)):
+				exec(f, globals(), locals())  # Python 3
+			else:
+				f()
 
 	def applySkin(self):
 		# DEBUG: baseRes = (getDesktop(GUI_SKIN_ID).size().width(), getDesktop(GUI_SKIN_ID).size().height())
@@ -256,17 +279,19 @@ class Screen(dict):
 					if depr:
 						print("[Screen] WARNING: OBSOLETE COMPONENT '%s' USED IN SKIN. USE '%s' INSTEAD!" % (key, depr[0]))
 						print("[Screen] OBSOLETE COMPONENT WILL BE REMOVED %s, PLEASE UPDATE!" % depr[1])
-				elif not depr:
+				elif not depr and key not in self.handledWidgets:
 					print("[Screen] Warning: Skin is missing element '%s' in %s." % (key, str(self)))
 		for w in self.additionalWidgets:
 			if not updateonly:
 				w.instance = w.widget(parent)
 				# w.instance.thisown = 0
 			applyAllAttributes(w.instance, desktop, w.skinAttributes, self.scale)
+		if self.screenImage:
+			self["Image"].setPixmap(LoadPixmap(self.screenImage))
 		for f in self.onLayoutFinish:
 			if not isinstance(f, type(self.close)):
-				exec f in globals(), locals()  # Python 2
-				# exec(f, globals(), locals())  # Python 3
+				# exec f in globals(), locals()  # Python 2
+				exec(f, globals(), locals())  # Python 3
 			else:
 				f()
 
@@ -279,11 +304,11 @@ class Screen(dict):
 		return None
 
 	def addSummary(self, summary):
-		if summary is not None:
+		if summary is not None and summary not in self.summaries:
 			self.summaries.append(summary)
 
 	def removeSummary(self, summary):
-		if summary is not None:
+		if summary is not None and summary in self.summaries:
 			self.summaries.remove(summary)
 
 
@@ -303,5 +328,8 @@ class ScreenSummary(Screen):
 		if not isinstance(names, list):
 			names = [names]
 		self.skinName = ["%sSummary" % x for x in names]
+		className = self.__class__.__name__
+		if className != "ScreenSummary" and className not in self.skinName:  # e.g. if a module uses Screens.Setup.SetupSummary the skin needs to be available directly
+			self.skinName.append(className)
 		self.skinName.append("ScreenSummary")
 		self.skin = parent.__dict__.get("skinSummary", self.skin)  # If parent has a "skinSummary" defined, use that as default.

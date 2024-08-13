@@ -1,35 +1,32 @@
-from Screen import Screen
-import ChannelSelection
+from Screens.Screen import Screen
+from Screens import ChannelSelection
 from ServiceReference import ServiceReference
-from Components.config import config, ConfigSelection, ConfigText, ConfigSubList, ConfigDateTime, ConfigClock, ConfigYesNo, getConfigListEntry
+from Components.config import config, ConfigSelection, ConfigText, ConfigSubList, ConfigDateTime, ConfigClock, ConfigYesNo
 from Components.ActionMap import NumberActionMap
 from Components.ConfigList import ConfigListScreen
-from Tools.BoundFunction import boundFunction
 from Components.MenuList import MenuList
 from Components.Sources.StaticText import StaticText
 from Components.Label import Label
 from Components.NimManager import nimmanager
-from Components.SystemInfo import SystemInfo
+from Components.SystemInfo import BoxInfo
 from Components.UsageConfig import defaultMoviePath
 from Screens.MovieSelection import getPreferredTagEditor
 from Screens.LocationBox import MovieLocationBox
 from Screens.ChoiceBox import ChoiceBox
 from Screens.MessageBox import MessageBox
 from Screens.VirtualKeyBoard import VirtualKeyBoard
-from Tools.Alternatives import GetWithAlternative
 from Tools.FallbackTimer import FallbackTimerDirs
 from RecordTimer import AFTEREVENT
 from enigma import eEPGCache, iRecordableServicePtr
 from time import localtime, mktime, time, strftime
 from datetime import datetime
-import urllib
 
 
 class TimerEntry(ConfigListScreen, Screen):
-	def __init__(self, session, timer):
+	def __init__(self, session, timer, newEntry=False):
 		Screen.__init__(self, session)
 		self.timer = timer
-
+		self.newEntry = newEntry
 		self.timer.service_ref_prev = self.timer.service_ref
 		self.timer.begin_prev = self.timer.begin
 		self.timer.end_prev = self.timer.end
@@ -107,11 +104,11 @@ class TimerEntry(ConfigListScreen, Screen):
 			repeated = None
 			weekday = int(strftime("%u", localtime(self.timer.begin))) - 1
 			day[weekday] = 1
-		self.timerentry_fallback = ConfigYesNo(default=self.timer.external_prev or config.usage.remote_fallback_external_timer.value and config.usage.remote_fallback.value and not nimmanager.somethingConnected())
+		self.timerentry_fallback = ConfigYesNo(default=self.timer.external_prev or self.newEntry and config.usage.remote_fallback_external_timer.value and config.usage.remote_fallback.value and config.usage.remote_fallback_external_timer_default.value)
 		self.timerentry_justplay = ConfigSelection(choices=[
 			("zap", _("zap")), ("record", _("record")), ("zap+record", _("zap and record"))],
 			default={0: "record", 1: "zap", 2: "zap+record"}[justplay + 2 * always_zap])
-		if SystemInfo["DeepstandbySupport"]:
+		if BoxInfo.getItem("DeepstandbySupport"):
 			shutdownString = _("go to deep standby")
 			choicelist = [("always", _("always")), ("from_standby", _("only from standby")), ("from_deep_standby", _("only from deep standby")), ("never", _("never"))]
 		else:
@@ -167,87 +164,87 @@ class TimerEntry(ConfigListScreen, Screen):
 
 	def createSetup(self, widget):
 		self.list = []
-		self.entryFallbackTimer = getConfigListEntry(_("Fallback Timer"), self.timerentry_fallback)
+		self.entryFallbackTimer = (_("Fallback Timer"), self.timerentry_fallback)
 		if config.usage.remote_fallback_external_timer.value and config.usage.remote_fallback.value and not hasattr(self, "timerentry_remote"):
 			self.list.append(self.entryFallbackTimer)
-		self.entryName = getConfigListEntry(_("Name"), self.timerentry_name)
+		self.entryName = (_("Name"), self.timerentry_name)
 		self.list.append(self.entryName)
-		self.entryDescription = getConfigListEntry(_("Description"), self.timerentry_description)
+		self.entryDescription = (_("Description"), self.timerentry_description)
 		self.list.append(self.entryDescription)
-		self.timerJustplayEntry = getConfigListEntry(_("Timer type"), self.timerentry_justplay)
+		self.timerJustplayEntry = (_("Timer type"), self.timerentry_justplay)
 		if config.usage.setup_level.index >= 1:
 			self.list.append(self.timerJustplayEntry)
-		self.timerTypeEntry = getConfigListEntry(_("Repeat type"), self.timerentry_type)
+		self.timerTypeEntry = (_("Repeat type"), self.timerentry_type)
 		self.list.append(self.timerTypeEntry)
 
 		if self.timerentry_type.value == "once":
 			self.frequencyEntry = None
 		else: # repeated
-			self.frequencyEntry = getConfigListEntry(_("Repeats"), self.timerentry_repeated)
+			self.frequencyEntry = (_("Repeats"), self.timerentry_repeated)
 			self.list.append(self.frequencyEntry)
-			self.repeatedbegindateEntry = getConfigListEntry(_("Starting on"), self.timerentry_repeatedbegindate)
+			self.repeatedbegindateEntry = (_("Starting on"), self.timerentry_repeatedbegindate)
 			self.list.append(self.repeatedbegindateEntry)
 			if self.timerentry_repeated.value == "daily":
 				pass
 			if self.timerentry_repeated.value == "weekdays":
 				pass
 			if self.timerentry_repeated.value == "weekly":
-				self.list.append(getConfigListEntry(_("Weekday"), self.timerentry_weekday))
+				self.list.append((_("Weekday"), self.timerentry_weekday))
 
 			if self.timerentry_repeated.value == "user":
-				self.list.append(getConfigListEntry(_("Monday"), self.timerentry_day[0]))
-				self.list.append(getConfigListEntry(_("Tuesday"), self.timerentry_day[1]))
-				self.list.append(getConfigListEntry(_("Wednesday"), self.timerentry_day[2]))
-				self.list.append(getConfigListEntry(_("Thursday"), self.timerentry_day[3]))
-				self.list.append(getConfigListEntry(_("Friday"), self.timerentry_day[4]))
-				self.list.append(getConfigListEntry(_("Saturday"), self.timerentry_day[5]))
-				self.list.append(getConfigListEntry(_("Sunday"), self.timerentry_day[6]))
+				self.list.append((_("Monday"), self.timerentry_day[0]))
+				self.list.append((_("Tuesday"), self.timerentry_day[1]))
+				self.list.append((_("Wednesday"), self.timerentry_day[2]))
+				self.list.append((_("Thursday"), self.timerentry_day[3]))
+				self.list.append((_("Friday"), self.timerentry_day[4]))
+				self.list.append((_("Saturday"), self.timerentry_day[5]))
+				self.list.append((_("Sunday"), self.timerentry_day[6]))
 			if self.timerentry_justplay.value != "zap":
-				self.list.append(getConfigListEntry(_("Rename name and description for new events"), self.timerentry_renamerepeat))
+				self.list.append((_("Rename name and description for new events"), self.timerentry_renamerepeat))
 
-		self.entryDate = getConfigListEntry(_("Date"), self.timerentry_date)
+		self.entryDate = (_("Date"), self.timerentry_date)
 		if self.timerentry_type.value == "once":
 			self.list.append(self.entryDate)
 
-		self.entryStartTime = getConfigListEntry(_("Start time"), self.timerentry_starttime)
+		self.entryStartTime = (_("Start time"), self.timerentry_starttime)
 		self.list.append(self.entryStartTime)
 
-		self.entryShowEndTime = getConfigListEntry(_("Set end time"), self.timerentry_showendtime)
-		self.entryZapWakeup = getConfigListEntry(_("Wakeup receiver for start timer"), self.timerentry_zapwakeup)
+		self.entryShowEndTime = (_("Set end time"), self.timerentry_showendtime)
+		self.entryZapWakeup = (_("Wakeup receiver for start timer"), self.timerentry_zapwakeup)
 		if self.timerentry_justplay.value == "zap":
 			self.list.append(self.entryZapWakeup)
-			if SystemInfo["PIPAvailable"]:
-				self.list.append(getConfigListEntry(_("Use as PiP if possible"), self.timerentry_pipzap))
+			if BoxInfo.getItem("PIPAvailable"):
+				self.list.append((_("Use as PiP if possible"), self.timerentry_pipzap))
 			self.list.append(self.entryShowEndTime)
 			self["key_blue"].setText(_("Wakeup type"))
 		else:
 			self["key_blue"].setText("")
-		self.entryEndTime = getConfigListEntry(_("End time"), self.timerentry_endtime)
+		self.entryEndTime = (_("End time"), self.timerentry_endtime)
 		if self.timerentry_justplay.value != "zap" or self.timerentry_showendtime.value:
 			self.list.append(self.entryEndTime)
 
-		self.channelEntry = getConfigListEntry(_("Channel"), self.timerentry_service)
+		self.channelEntry = (_("Channel"), self.timerentry_service)
 		self.list.append(self.channelEntry)
 
-		self.dirname = getConfigListEntry(_("Location"), self.timerentry_fallbackdirname) if self.timerentry_fallback.value and self.timerentry_fallbackdirname.value else getConfigListEntry(_("Location"), self.timerentry_dirname)
-		if config.usage.setup_level.index >= 2 and (self.timerentry_fallback.value and self.timerentry_fallbackdirname.value or self.timerentry_dirname.value): # expert+
+		self.dirname = (_("Location"), self.timerentry_fallbackdirname) if self.timerentry_fallback.value and self.timerentry_fallbackdirname.value else (_("Location"), self.timerentry_dirname)
+		if config.usage.setup_level.index >= 2 and ((self.timerentry_fallback.value and self.timerentry_fallbackdirname.value) or (self.timerentry_justplay.value != "zap" and self.timerentry_dirname.value)): # expert+
 			self.list.append(self.dirname)
 
-		self.conflictDetectionEntry = getConfigListEntry(_("Enable timer conflict detection"), self.timerentry_conflictdetection)
+		self.conflictDetectionEntry = (_("Enable timer conflict detection"), self.timerentry_conflictdetection)
 		if not self.timerentry_fallback.value:
 			self.list.append(self.conflictDetectionEntry)
 
-		self.tagsSet = getConfigListEntry(_("Tags"), self.timerentry_tagsset)
+		self.tagsSet = (_("Tags"), self.timerentry_tagsset)
 		if self.timerentry_justplay.value != "zap" and not self.timerentry_fallback.value:
 			if getPreferredTagEditor():
 				self.list.append(self.tagsSet)
-			self.list.append(getConfigListEntry(_("After event"), self.timerentry_afterevent))
-			self.list.append(getConfigListEntry(_("Recording type"), self.timerentry_recordingtype))
+			self.list.append((_("After event"), self.timerentry_afterevent))
+			self.list.append((_("Recording type"), self.timerentry_recordingtype))
 
 		self[widget].list = self.list
 
 	def newConfig(self):
-		print "[TimerEdit] newConfig", self["config"].getCurrent()
+		print("[TimerEdit] newConfig", self["config"].getCurrent())
 		if self["config"].getCurrent() in (self.timerTypeEntry, self.timerJustplayEntry, self.frequencyEntry, self.entryShowEndTime, self.entryFallbackTimer):
 			self.createSetup("config")
 
@@ -495,7 +492,7 @@ class TimerEntry(ConfigListScreen, Screen):
 
 	def changeTimerType(self):
 		self.timerentry_justplay.selectNext()
-		self.timerJustplayEntry = getConfigListEntry(_("Timer type"), self.timerentry_justplay)
+		self.timerJustplayEntry = (_("Timer type"), self.timerentry_justplay)
 		self["config"].invalidate(self.timerJustplayEntry)
 		self.createSetup("config")
 

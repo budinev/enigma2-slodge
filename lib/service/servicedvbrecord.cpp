@@ -512,7 +512,7 @@ RESULT eDVBServiceRecord::frontendInfo(ePtr<iFrontendInformation> &ptr)
 	return 0;
 }
 
-RESULT eDVBServiceRecord::connectEvent(const sigc::slot2<void,iRecordableService*,int> &event, ePtr<eConnection> &connection)
+RESULT eDVBServiceRecord::connectEvent(const sigc::slot<void(iRecordableService*,int)> &event, ePtr<eConnection> &connection)
 {
 	connection = new eConnection((iRecordableService*)this, m_event.connect(event));
 	return 0;
@@ -583,7 +583,12 @@ void eDVBServiceRecord::gotNewEvent(int /*error*/)
 
 void eDVBServiceRecord::saveCutlist()
 {
-			/* XXX: dupe of eDVBServicePlay::saveCuesheet, refactor plz */
+	/* XXX: dupe of eDVBServicePlay::saveCuesheet, refactor plz */
+
+	/* save cuesheet only when main file is accessible. */
+	if (::access(m_filename.c_str(), R_OK) < 0)
+		return;
+
 	std::string filename = m_filename + ".cuts";
 
 	eDVBTSTools tstools;

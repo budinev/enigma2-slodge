@@ -1,6 +1,6 @@
 from Tools.Directories import fileExists
 from Components.config import config, ConfigSubsection, ConfigInteger, ConfigText, ConfigSelection, ConfigSequence, ConfigSubList
-import DVDTitle
+from . import DVDTitle
 import xml.dom.minidom
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_FONTS
 
@@ -18,7 +18,7 @@ class ConfigFilename(ConfigText):
 		if self.text == "":
 			return ("mtext"[1 - selected:], "", 0)
 		cut_len = min(len(self.text), 40)
-		filename = (self.text.rstrip("/").rsplit("/", 1))[1].encode("utf-8")[:cut_len] + " "
+		filename = (self.text.rstrip("/").rsplit("/", 1))[1][:cut_len] + " "
 		if self.allmarked:
 			mark = range(0, len(filename))
 		else:
@@ -59,7 +59,7 @@ class DVDProject:
 		list.append('<?xml version="1.0" encoding="utf-8" ?>\n')
 		list.append('<DreamDVDBurnerProject>\n')
 		list.append('\t<settings ')
-		for key, val in self.settings.dict().iteritems():
+		for key, val in self.settings.dict().items():
 			list.append(key + '="' + str(val.getValue()) + '" ')
 		list.append('/>\n')
 		list.append('\t<titles>\n')
@@ -70,12 +70,12 @@ class DVDProject:
 			list.append('</path>\n')
 			list.append('\t\t\t<properties ')
 			audiotracks = []
-			for key, val in title.properties.dict().iteritems():
-				if type(val) is ConfigSubList:
+			for key, val in title.properties.dict().items():
+				if isinstance(val, ConfigSubList):
 					audiotracks.append('\t\t\t<audiotracks>\n')
 					for audiotrack in val:
 						audiotracks.append('\t\t\t\t<audiotrack ')
-						for subkey, subval in audiotrack.dict().iteritems():
+						for subkey, subval in audiotrack.dict().items():
 							audiotracks.append(subkey + '="' + str(subval.getValue()) + '" ')
 						audiotracks.append(' />\n')
 					audiotracks.append('\t\t\t</audiotracks>\n')
@@ -116,11 +116,11 @@ class DVDProject:
 				self.error = "xml file not found!"
 				#raise AttributeError
 			file = open(filename, "r")
-			data = file.read().decode("utf-8").replace('&', "&amp;").encode("ascii", 'xmlcharrefreplace')
+			data = file.read().replace('&', "&amp;").encode("ascii", 'xmlcharrefreplace').decode("utf-8")
 			file.close()
 			projectfiledom = xml.dom.minidom.parseString(data)
 			for node in projectfiledom.childNodes[0].childNodes:
-				print "node:", node
+				print("node:", node)
 				if node.nodeType == xml.dom.minidom.Element.nodeType:
 					if node.tagName == 'settings':
 						self.xmlAttributesToConfig(node, self.settings)
@@ -153,17 +153,17 @@ class DVDProject:
 				#raise AttributeError
 			while i < node.attributes.length:
 				item = node.attributes.item(i)
-				key = item.name.encode("utf-8")
+				key = item.name
 				try:
 					val = eval(item.nodeValue)
 				except (NameError, SyntaxError):
-					val = item.nodeValue.encode("utf-8")
+					val = item.nodeValue
 				try:
-					print "config[%s].setValue(%s)" % (key, val)
+					print("config[%s].setValue(%s)" % (key, val))
 					config.dict()[key].setValue(val)
 				except (KeyError):
 					self.error = "unknown attribute '%s'" % (key)
-					print "KeyError", self.error
+					print("KeyError", self.error)
 					raise AttributeError
 				i += 1
 		except AttributeError:
@@ -171,10 +171,10 @@ class DVDProject:
 			return False
 
 	def xmlGetTitleNodeRecursive(self, node, title_idx=-1):
-		print "[xmlGetTitleNodeRecursive]", title_idx, node
-		print node.childNodes
+		print("[xmlGetTitleNodeRecursive]", title_idx, node)
+		print(node.childNodes)
 		for subnode in node.childNodes:
-			print "xmlGetTitleNodeRecursive subnode:", subnode
+			print("xmlGetTitleNodeRecursive subnode:", subnode)
 			if subnode.nodeType == xml.dom.minidom.Element.nodeType:
 				if subnode.tagName == 'title':
 					title_idx += 1
@@ -182,15 +182,15 @@ class DVDProject:
 					self.titles.append(title)
 					self.xmlGetTitleNodeRecursive(subnode, title_idx)
 				if subnode.tagName == 'path':
-					print "path:", subnode.firstChild.data
+					print("path:", subnode.firstChild.data)
 					filename = subnode.firstChild.data
-					self.titles[title_idx].addFile(filename.encode("utf-8"))
+					self.titles[title_idx].addFile(filename)
 				if subnode.tagName == 'properties':
 					self.xmlAttributesToConfig(node, self.titles[title_idx].properties)
 				if subnode.tagName == 'audiotracks':
 					self.xmlGetTitleNodeRecursive(subnode, title_idx)
 				if subnode.tagName == 'audiotrack':
-					print "audiotrack...", subnode.toxml()
+					print("audiotrack...", subnode.toxml())
 
 	def getSize(self):
 		totalsize = 0
@@ -236,7 +236,7 @@ class MenuTemplate(DVDProject):
 		self.settings.thumb_size = ConfigSequence(seperator=',', default=[200, 158], limits=[(0, 576), (-1, 720)])
 		self.settings.thumb_border = ConfigInteger(default=2, limits=(0, 20))
 		self.filekeys = ["menubg", "menuaudio", "fontface_headline", "fontface_title", "fontface_subtitle"]
-		from TitleProperties import languageChoices
+		from .TitleProperties import languageChoices
 		self.settings.menulang = ConfigSelection(choices=languageChoices.choices, default=languageChoices.choices[1][0])
 		self.error = ""
 

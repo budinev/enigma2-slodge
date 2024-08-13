@@ -11,7 +11,7 @@ from Components.AVSwitch import AVSwitch
 from Components.Sources.List import List
 from Components.ConfigList import ConfigList, ConfigListScreen
 
-from Components.config import config, ConfigSubsection, ConfigInteger, ConfigSelection, ConfigText, ConfigYesNo, KEY_LEFT, KEY_RIGHT, getConfigListEntry
+from Components.config import config, ConfigSubsection, ConfigInteger, ConfigSelection, ConfigText, ConfigYesNo, KEY_LEFT, KEY_RIGHT
 from skin import applySkinFactor, parameters
 
 
@@ -152,30 +152,21 @@ class Pic_Setup(ConfigListScreen, Screen):
 		# for the skin: first try MediaPlayerSettings, then Setup, this allows individual skinning
 		self.skinName = ["PicturePlayerSetup", "Setup"]
 		self.setTitle(_("Settings"))
-		self["actions"] = ActionMap(["SetupActions", "MenuActions"],
-			{
-				"cancel": self.keyCancel,
-				"save": self.keySave,
-				"ok": self.keySave,
-				"menu": self.closeRecursive,
-			}, -2)
-		self["key_red"] = StaticText(_("Cancel"))
-		self["key_green"] = StaticText(_("Save"))
 
 		setup_list = [
-			getConfigListEntry(_("Slide show interval (sec.)"), config.pic.slidetime),
-			getConfigListEntry(_("Scaling mode"), config.pic.resize),
-			getConfigListEntry(_("Cache thumbnails"), config.pic.cache),
-			getConfigListEntry(_("Show info line"), config.pic.infoline),
-			getConfigListEntry(_("Frame size in full view"), config.pic.framesize),
-			getConfigListEntry(_("Slide picture in loop"), config.pic.loop),
-			getConfigListEntry(_("Background color"), config.pic.bgcolor),
-			getConfigListEntry(_("Text color"), config.pic.textcolor),
-			getConfigListEntry(_("Full view resolution"), config.usage.pic_resolution),
-			getConfigListEntry(_("Auto EXIF Orientation rotation/flipping"), config.pic.autoOrientation),
-			getConfigListEntry(_("Stop play TV"), config.pic.stopPlayTv),
+			(_("Slide show interval (sec.)"), config.pic.slidetime),
+			(_("Scaling mode"), config.pic.resize),
+			(_("Cache thumbnails"), config.pic.cache),
+			(_("Show info line"), config.pic.infoline),
+			(_("Frame size in full view"), config.pic.framesize),
+			(_("Slide picture in loop"), config.pic.loop),
+			(_("Background color"), config.pic.bgcolor),
+			(_("Text color"), config.pic.textcolor),
+			(_("Full view resolution"), config.usage.pic_resolution),
+			(_("Auto EXIF Orientation rotation/flipping"), config.pic.autoOrientation),
+			(_("Stop play TV"), config.pic.stopPlayTv),
 		]
-		ConfigListScreen.__init__(self, setup_list, session)
+		ConfigListScreen.__init__(self, setup_list, session, fullUI=True)
 
 
 class Pic_Exif(Screen):
@@ -235,8 +226,8 @@ class Pic_Thumb(Screen):
 
 		size_w = getDesktop(0).size().width()
 		size_h = getDesktop(0).size().height()
-		self.thumbsX = size_w / (self.spaceX + self.picX) # thumbnails in X
-		self.thumbsY = size_h / (self.spaceY + self.picY) # thumbnails in Y
+		self.thumbsX = size_w // (self.spaceX + self.picX) # thumbnails in X
+		self.thumbsY = size_h // (self.spaceY + self.picY) # thumbnails in Y
 		self.thumbsC = self.thumbsX * self.thumbsY # all thumbnails
 
 		self.positionlist = []
@@ -244,7 +235,7 @@ class Pic_Thumb(Screen):
 
 		posX = -1
 		for x in range(self.thumbsC):
-			posY = x / self.thumbsX
+			posY = x // self.thumbsX
 			posX += 1
 			if posX >= self.thumbsX:
 				posX = 0
@@ -543,7 +534,7 @@ class Pic_Full_View(Screen):
 			self.index = self.maxentry
 
 	def slidePic(self):
-		print "slide to next Picture index=" + str(self.lastindex)
+		print("slide to next Picture index=" + str(self.lastindex))
 		if config.pic.loop.value == False and self.lastindex == self.maxentry:
 			self.PlayPause()
 		self.shownow = True

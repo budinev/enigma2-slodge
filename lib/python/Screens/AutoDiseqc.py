@@ -2,7 +2,7 @@ from Screens.Screen import Screen
 from Components.ConfigList import ConfigListScreen
 from Components.ActionMap import ActionMap
 from Components.Sources.StaticText import StaticText
-from Components.config import config, configfile, getConfigListEntry
+from Components.config import config, configfile
 from Components.NimManager import nimmanager, InitNimManager
 from Components.TuneTest import Tuner
 from enigma import eDVBFrontendParametersSatellite, eDVBResourceManager, eTimer
@@ -214,16 +214,16 @@ class AutoDiseqc(ConfigListScreen, Screen):
 	]
 
 	circular_sat_frequencies = [
-		# Express AMU1 36.0E NHK World Japan
+		# Express AMU1 36.0E NTV Plus
 		(
-			12341,
+			11785,
 			27500,
-			eDVBFrontendParametersSatellite.Polarisation_CircularLeft,
+			eDVBFrontendParametersSatellite.Polarisation_CircularRight,
 			eDVBFrontendParametersSatellite.FEC_3_4,
 			eDVBFrontendParametersSatellite.Inversion_Off,
 			360,
-			eDVBFrontendParametersSatellite.System_DVB_S,
-			eDVBFrontendParametersSatellite.Modulation_Auto,
+			eDVBFrontendParametersSatellite.System_DVB_S2,
+			eDVBFrontendParametersSatellite.Modulation_8PSK,
 			eDVBFrontendParametersSatellite.RollOff_auto,
 			eDVBFrontendParametersSatellite.Pilot_Unknown,
 			eDVBFrontendParametersSatellite.No_Stream_Id_Filter,
@@ -231,7 +231,7 @@ class AutoDiseqc(ConfigListScreen, Screen):
 			eDVBFrontendParametersSatellite.PLS_Default_Gold_Code,
 			eDVBFrontendParametersSatellite.No_T2MI_PLP_Id,
 			eDVBFrontendParametersSatellite.T2MI_Default_Pid,
-			11,
+			13,
 			112,
 			"Express AMU1 36.0e"),
 	]
@@ -511,7 +511,7 @@ class AutoDiseqc(ConfigListScreen, Screen):
 		if len(self.found_sats) > 0:
 			self.list = []
 			for x in self.found_sats:
-				self.list.append(getConfigListEntry((_("DiSEqC port %s: %s") % (x[0], x[2]))))
+				self.list.append(_("DiSEqC port %s: %s") % (x[0], x[2]))
 			self["config"].l.setList(self.list)
 
 		if self.nr_of_ports == self.port_index:

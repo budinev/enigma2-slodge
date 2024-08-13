@@ -177,7 +177,7 @@ static void sigterm_handler(int num)
 
 void catchTermSignal()
 {
-	struct sigaction act;
+	struct sigaction act = {};
 
 	act.sa_handler = sigterm_handler;
 	act.sa_flags = SA_RESTART;
@@ -204,7 +204,7 @@ int main(int argc, char **argv)
 	printf("DVB_API_VERSION %d DVB_API_VERSION_MINOR %d\n", DVB_API_VERSION, DVB_API_VERSION_MINOR);
 
 	// get enigma2 debug level settings
-	debugLvl = getenv("ENIGMA_DEBUG_LVL") ? atoi(getenv("ENIGMA_DEBUG_LVL")) : 3;
+	debugLvl = getenv("ENIGMA_DEBUG_LVL") ? atoi(getenv("ENIGMA_DEBUG_LVL")) : 4;
 	if (debugLvl < 0)
 		debugLvl = 0;
 	printf("ENIGMA_DEBUG_LVL=%d\n", debugLvl);
@@ -264,7 +264,7 @@ int main(int argc, char **argv)
 		ePtr<gPixmap> wait[MAX_SPINNER];
 		for (i=0; i<MAX_SPINNER; ++i)
 		{
-			char filename[64];
+			char filename[64] = {};
 			std::string rfilename;
 			snprintf(filename, sizeof(filename), "${datadir}/enigma2/skin_default/spinner/wait%d.png", i + 1);
 			rfilename = eEnv::resolve(filename);
@@ -355,8 +355,13 @@ const char *getBoxType()
 void dump_malloc_stats(void)
 {
 #ifdef __GLIBC__
+#if __GLIBC__ > 2 || (__GLIBC__ == 2 && __GLIBC_MINOR__ >= 33)
+	struct mallinfo2 mi = mallinfo2();
+	eDebug("MALLOC: %zu total", mi.uordblks);
+#else
 	struct mallinfo mi = mallinfo();
 	eDebug("MALLOC: %d total", mi.uordblks);
+#endif
 #else
 	eDebug("MALLOC: info not exposed");
 #endif

@@ -204,7 +204,7 @@ int eDVBSatelliteEquipmentControl::canTune(const eDVBFrontendParametersSatellite
 					if (((linked_unicable != -1 || is_unicable) && diseqc && !rotor && no_compare_satpos) ||
 						(!is_unicable && ((csw != linked_csw) || (diseqc && (ucsw != linked_ucsw || toneburst != linked_toneburst)) ||
 						(rotor && ((linked_satpos_depends == -1 && rotor_pos != sat.orbital_position) || (!direct_connected && linked_satpos_depends != -1 && no_compare_satpos))))))
-					
+
 					{
 						ret = 0;
 						satcount = old_satcount;
@@ -399,7 +399,7 @@ RESULT eDVBSatelliteEquipmentControl::prepare(iDVBFrontend &frontend, const eDVB
 					diseqc_mode = eDVBSatelliteDiseqcParameters::V1_0;
 				else
 				{
-					if (!((eDVBFrontend*)&frontend)->is_FBCTuner()) 
+					if (!((eDVBFrontend*)&frontend)->is_FBCTuner())
 					{
 						// in eDVBFrontend::tuneLoop we call closeFrontend and ->inc_use() in this this condition (to put the kernel frontend thread into idle state)
 						// so we must resend all diseqc stuff (voltage is disabled when the frontend is closed)
@@ -1153,7 +1153,7 @@ void eDVBSatelliteEquipmentControl::prepareTurnOffSatCR(iDVBFrontend &frontend)
 
 	sec_sequence.push_back( eSecCommand(eSecCommand::IF_VOLTAGE_GOTO, compare) );
 	sec_sequence.push_back( eSecCommand(eSecCommand::SET_VOLTAGE, iDVBFrontend::voltage13) );
-	sec_sequence.push_back( eSecCommand(eSecCommand::SLEEP, m_params[DELAY_AFTER_ENABLE_VOLTAGE_BEFORE_SWITCH_CMDS]) );
+	sec_sequence.push_back( eSecCommand(eSecCommand::SLEEP, m_params[UNICABLE_DELAY_AFTER_ENABLE_VOLTAGE_BEFORE_SWITCH_CMDS] > m_lnbs[m_lnbidx].boot_up_time ? m_params[UNICABLE_DELAY_AFTER_ENABLE_VOLTAGE_BEFORE_SWITCH_CMDS] : m_lnbs[m_lnbidx].boot_up_time ) );
 
 	sec_sequence.push_back( eSecCommand(eSecCommand::SET_VOLTAGE, iDVBFrontend::voltage18_5) );
 	sec_sequence.push_back( eSecCommand(eSecCommand::SET_TONE, iDVBFrontend::toneOff) );
@@ -1171,7 +1171,7 @@ void eDVBSatelliteEquipmentControl::prepareTurnOffSatCR(iDVBFrontend &frontend)
 			//	data[3]		"data1": data[3][7..5]: user band, data[3][4..2]: bank, data[3][1..0]: T[9..8]
 			//	data[4]		"data2": data[4][7..0]: T[7..0]
 
-			unsigned int ub = userband & 0x01;
+			unsigned int ub = userband & 0x07;
 			unsigned int encoded_frequency_T = 0;
 			unsigned int mode = 0;
 			unsigned int position = 0;

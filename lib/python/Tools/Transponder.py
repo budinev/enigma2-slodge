@@ -4,24 +4,24 @@ from Components.config import config
 
 
 def orbpos(pos):
-	return pos > 3600 and "N/A" or "%d.%d\xc2\xb0%s" % (pos > 1800 and ((3600 - pos) / 10, (3600 - pos) % 10, "W") or (pos / 10, pos % 10, "E"))
+	return pos > 3600 and "N/A" or "%d.%d\xb0%s" % (pos > 1800 and ((3600 - pos) // 10, (3600 - pos) % 10, "W") or (pos // 10, pos % 10, "E"))
 
 
 def getTunerDescription(nim):
 	try:
 		return nimmanager.getTerrestrialDescription(nim)
 	except:
-		print "[Transponder] nimmanager.getTerrestrialDescription(nim) failed, nim:", nim
+		print("[Transponder] nimmanager.getTerrestrialDescription(nim) failed, nim:", nim)
 		try:
-			print "[Transponder] trying use fallback", config.usage.remote_fallback_dvbt_region.value
+			print("[Transponder] trying use fallback", config.usage.remote_fallback_dvbt_region.value)
 			return config.usage.remote_fallback_dvbt_region.value
 		except:
-			print "[Transponder] no description"
+			print("[Transponder] no description")
 	return ""
 
 
 def getMHz(frequency):
-	return (frequency + 50000) / 100000 / 10.
+	return (frequency + 50000) // 100000 // 10.
 
 # Note: newly added region add into ImportChannels to getTerrestrialRegion()
 #	due using for fallback tuner too
@@ -39,22 +39,22 @@ def getChannelNumber(frequency, nim):
 		if "Europe" in descr:
 			if 174 < f < 230: 	# III
 				d = (f + 1) % 7
-				return str(int(f - 174) / 7 + 5) + (d < 3 and "-" or d > 4 and "+" or "")
+				return str(int(f - 174) // 7 + 5) + (d < 3 and "-" or d > 4 and "+" or "")
 			elif 470 <= f < 863: 	# IV,V
 				d = (f + 2) % 8
-				return str(int(f - 470) / 8 + 21) + (d < 3.5 and "-" or d > 4.5 and "+" or "")
+				return str(int(f - 470) // 8 + 21) + (d < 3.5 and "-" or d > 4.5 and "+" or "")
 		elif "Australia" in descr:
 			d = (f + 1) % 7
 			ds = (d < 3 and "-" or d > 4 and "+" or "")
 			if 174 < f < 202: 	# CH6-CH9
-				return str(int(f - 174) / 7 + 6) + ds
+				return str(int(f - 174) // 7 + 6) + ds
 			elif 202 <= f < 209: 	# CH9A
 				return "9A" + ds
 			elif 209 <= f < 230: 	# CH10-CH12
-				return str(int(f - 209) / 7 + 10) + ds
+				return str(int(f - 209) // 7 + 10) + ds
 			elif 526 < f < 820: 	# CH28-CH69
 				d = (f - 1) % 7
-				return str(int(f - 526) / 7 + 28) + (d < 3 and "-" or d > 4 and "+" or "")
+				return str(int(f - 526) // 7 + 28) + (d < 3 and "-" or d > 4 and "+" or "")
 	return ""
 
 
@@ -256,7 +256,7 @@ def ConvertToHumanReadable(tp, tunertype=None):
 			eDVBFrontendParametersATSC.System_ATSC: "ATSC",
 			eDVBFrontendParametersATSC.System_DVB_C_ANNEX_B: "DVB-C ANNEX B"}.get(tp.get("system"))
 	elif tunertype != "None":
-		print "ConvertToHumanReadable: no or unknown tunertype in tpdata dict for tunertype:", tunertype
+		print("ConvertToHumanReadable: no or unknown tunertype in tpdata dict for tunertype:", tunertype)
 	for k, v in tp.items():
 		if k not in ret:
 			ret[k] = v

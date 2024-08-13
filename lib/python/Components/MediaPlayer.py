@@ -1,4 +1,4 @@
-from MenuList import MenuList
+from Components.MenuList import MenuList
 
 from Tools.Directories import SCOPE_CURRENT_SKIN, resolveFilename
 from os import path
@@ -38,7 +38,7 @@ class PlayList(MenuList):
 	def PlaylistEntryComponent(self, serviceref, state):
 		res = [serviceref]
 		text = serviceref.getName()
-		if text is "":
+		if text == "":
 			text = path.split(serviceref.getPath().split('/')[-1])[1]
 		x, y, w, h = parameters.get("PlayListName", applySkinFactor(25, 1, 470, 22))
 		res.append((eListboxPythonMultiContent.TYPE_TEXT, x, y, w, h, 0, RT_VALIGN_CENTER, text))

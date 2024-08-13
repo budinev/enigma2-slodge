@@ -1,4 +1,5 @@
 from Tools.CList import CList
+from functools import reduce
 
 # down                       up
 # Render Converter Converter Source
@@ -27,7 +28,7 @@ class ElementError(Exception):
 		return self.msg
 
 
-class Element(object):
+class Element:
 	CHANGED_DEFAULT = 0   # initial "pull" state
 	CHANGED_ALL = 1       # really everything changed
 	CHANGED_CLEAR = 2     # we're expecting a real update soon. don't bother polling NOW, but clear data.
@@ -43,6 +44,7 @@ class Element(object):
 		self.source = None
 		self.__suspended = True
 		self.cache = None
+		self.onChanged = []
 
 	def connectDownstream(self, downstream):
 		self.downstream_elements.append(downstream)
@@ -89,6 +91,8 @@ class Element(object):
 		self.cache = {}
 		self.downstream_elements.changed(*args, **kwargs)
 		self.cache = None
+		for x in self.onChanged:
+			x()
 
 	def setSuspend(self, suspended):
 		changed = self.__suspended != suspended

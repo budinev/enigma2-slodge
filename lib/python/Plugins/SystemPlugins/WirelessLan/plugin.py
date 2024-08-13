@@ -11,7 +11,7 @@ from Components.Console import Console
 from Plugins.Plugin import PluginDescriptor
 from Tools.Directories import resolveFilename, SCOPE_SKIN_IMAGE
 from Tools.LoadPixmap import LoadPixmap
-from Wlan import iWlan, iStatus, getWlanConfigName, existBcmWifi
+from Plugins.SystemPlugins.WirelessLan.Wlan import iWlan, iStatus, getWlanConfigName, existBcmWifi
 from time import time
 import re
 
@@ -104,7 +104,7 @@ class WlanStatus(Screen):
 
 	def getInfoCB(self, data, status):
 		if data is not None:
-			if data is True:
+			if data:
 				if status is not None:
 					if status[self.iface]["essid"] == "off":
 						essid = _("No Connection")
@@ -164,7 +164,7 @@ class WlanStatus(Screen):
 
 	def updateStatusLink(self, status):
 		if status is not None:
-			if status[self.iface]["essid"] == "off" or status[self.iface]["accesspoint"] == "Not-Associated" or status[self.iface]["accesspoint"] == False:
+			if status[self.iface]["essid"] == "off" or status[self.iface]["accesspoint"] == "Not-Associated" or not status[self.iface]["accesspoint"]:
 				self["statuspic"].setPixmapNum(1)
 			else:
 				self["statuspic"].setPixmapNum(0)
@@ -268,7 +268,7 @@ class WlanScan(Screen):
 
 	def buildEntryComponent(self, essid, bssid, encrypted, iface, maxrate, signal):
 		encryption = encrypted and _("Yes") or _("No")
-		return((essid, bssid, _("Signal: ") + str(signal), _("Max. bitrate: ") + str(maxrate), _("Encrypted: ") + encryption, _("Interface: ") + str(iface), self.divpng))
+		return ((essid, bssid, _("Signal: ") + str(signal), _("Max. bitrate: ") + str(maxrate), _("Encrypted: ") + encryption, _("Interface: ") + str(iface), self.divpng))
 
 	def updateAPList(self):
 		newList = []
@@ -308,7 +308,7 @@ class WlanScan(Screen):
 		self.cleanList = []
 		aps = iWlan.getNetworkList()
 		if aps is not None:
-			print "[WirelessLan.py] got Accespoints!"
+			print("[WirelessLan.py] got Accespoints!")
 			tmpList = []
 			compList = []
 			for ap in aps:
@@ -332,7 +332,7 @@ class WlanScan(Screen):
 		for entry in self.cleanList:
 			self.APList.append(self.buildEntryComponent(entry[0], entry[1], entry[2], entry[3], entry[4], entry[5]))
 
-		if refresh is False:
+		if not refresh:
 			self['list'].setList(self.APList)
 		self.listLength = len(self.APList)
 		self.setInfo()

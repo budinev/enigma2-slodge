@@ -32,9 +32,11 @@ class PluginComponent:
 			self.restartRequired = True
 
 	def removePlugin(self, plugin):
-		self.pluginList.remove(plugin)
+		if plugin in self.pluginList:
+			self.pluginList.remove(plugin)
 		for x in plugin.where:
-			self.plugins[x].remove(plugin)
+			if x in self.plugins:
+				self.plugins[x].remove(plugin)
 			if x == PluginDescriptor.WHERE_AUTOSTART:
 				plugin(reason=1)
 
@@ -46,23 +48,25 @@ class PluginComponent:
 			if not os.path.isdir(directory_category):
 				continue
 			for pluginname in os.listdir(directory_category):
+				if pluginname == "__pycache__":
+					continue
 				path = os.path.join(directory_category, pluginname)
 				if os.path.isdir(path):
 						profile('plugin ' + pluginname)
 						try:
 							plugin = my_import('.'.join(["Plugins", c, pluginname, "plugin"]))
 							plugins = plugin.Plugins(path=path)
-						except Exception, exc:
-							print "Plugin ", c + "/" + pluginname, "failed to load:", exc
+						except Exception as exc:
+							print("Plugin ", c + "/" + pluginname, "failed to load:", exc)
 							# supress errors due to missing plugin.py* files (badly removed plugin)
-							for fn in ('plugin.py', 'plugin.pyo'):
+							for fn in ('plugin.py', 'plugin.pyc'):
 								if os.path.exists(os.path.join(path, fn)):
 									self.warnings.append((c + "/" + pluginname, str(exc)))
 									from traceback import print_exc
 									print_exc()
 									break
 							else:
-								print "Plugin probably removed, but not cleanly in", path
+								print("Plugin probably removed, but not cleanly in", path)
 								try:
 									os.rmdir(path)
 								except:
@@ -74,16 +78,17 @@ class PluginComponent:
 							plugins = [plugins]
 
 						for p in plugins:
-							p.path = path
-							p.updateIcon(path)
-							new_plugins.append(p)
+							if p:
+								p.path = path
+								p.updateIcon(path)
+								new_plugins.append(p)
 
 						keymap = os.path.join(path, "keymap.xml")
 						if fileExists(keymap):
 							try:
 								keymapparser.readKeymap(keymap)
-							except Exception, exc:
-								print "keymap for plugin %s/%s failed to load: " % (c, pluginname), exc
+							except Exception as exc:
+								print("keymap for plugin %s/%s failed to load: " % (c, pluginname), exc)
 								self.warnings.append((c + "/" + pluginname, str(exc)))
 
 		# build a diff between the old list of plugins and the new one
@@ -101,7 +106,7 @@ class PluginComponent:
 			self.removePlugin(p)
 
 		for p in plugins_added:
-			if self.firstRun or p.needsRestart is False:
+			if self.firstRun or not p.needsRestart:
 				self.addPlugin(p)
 			else:
 				for installed_plugin in self.installedPluginList:
@@ -133,6 +138,16 @@ class PluginComponent:
 		for p in self.getPlugins(PluginDescriptor.WHERE_MENU):
 			res += p(menuid)
 		return res
+		
+	def getDescriptionForMenuEntryID(self, menuid, entryid ):
+		for p in self.getPlugins(PluginDescriptor.WHERE_MENU):
+			if p(menuid) and isinstance(p(menuid), (list,tuple)):
+				if p(menuid)[0][2] == entryid:
+					return p.description
+		return None
+		
+	def getPluginsForMenuWithDescription(self, menuid):
+		return [(x[0], p.description) for p in self.getPlugins(PluginDescriptor.WHERE_MENU) if (x := p(menuid))]
 
 	def clearPluginList(self):
 		self.pluginList = []

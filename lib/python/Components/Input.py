@@ -1,5 +1,5 @@
-from GUIComponent import GUIComponent
-from VariableText import VariableText
+from Components.GUIComponent import GUIComponent
+from Components.VariableText import VariableText
 
 from enigma import eLabel
 
@@ -11,7 +11,7 @@ class Input(VariableText, GUIComponent, NumericalTextInput):
 	PIN = 1
 	NUMBER = 2
 
-	def __init__(self, text="", maxSize=False, visible_width=False, type=TEXT, currPos=0, allMarked=True):
+	def __init__(self, text="", maxSize=False, visible_width=False, type=TEXT, currPos=0, allMarked=True, maxValue=False):
 		NumericalTextInput.__init__(self, self.right)
 		GUIComponent.__init__(self)
 		VariableText.__init__(self)
@@ -19,9 +19,10 @@ class Input(VariableText, GUIComponent, NumericalTextInput):
 		self.allmarked = allMarked and (text != "") and (type != self.PIN)
 		self.maxSize = maxSize
 		self.currPos = currPos
+		self.maxValue= maxValue
 		self.visible_width = visible_width
 		self.offset = 0
-		self.overwrite = maxSize
+		self.overwrite = maxSize or self.type == self.NUMBER
 		self.setText(text)
 
 	def __len__(self):
@@ -48,28 +49,25 @@ class Input(VariableText, GUIComponent, NumericalTextInput):
 				for x in self.Text[self.offset:self.offset + self.visible_width]:
 					self.text += (x == " " and " " or "*")
 			else:
-				self.text = self.Text[self.offset:self.offset + self.visible_width].encode("utf-8") + " "
+				self.text = self.Text[self.offset:self.offset + self.visible_width] + " "
 		else:
 			if self.type == self.PIN:
 				self.text = ""
 				for x in self.Text:
 					self.text += (x == " " and " " or "*")
 			else:
-				self.text = self.Text.encode("utf-8") + " "
+				self.text = self.Text + " "
 
 	def setText(self, text):
 		if not len(text):
 			self.currPos = 0
-			self.Text = u""
+			self.Text = ""
 		else:
-			if isinstance(text, str):
-				self.Text = text.decode("utf-8", "ignore")
-			else:
-				self.Text = text
+			self.Text = text
 		self.update()
 
 	def getText(self):
-		return self.Text.encode('utf-8')
+		return self.Text
 
 	def createWidget(self, parent):
 		if self.allmarked:
@@ -154,9 +152,18 @@ class Input(VariableText, GUIComponent, NumericalTextInput):
 			self.currPos = len(self.Text)
 		self.update()
 
+	def checkNumber(self):
+		if self.type == self.NUMBER and self.maxValue:
+			if self.Text and int(self.Text) > self.maxValue:
+				self.Text = self.Text[:self.currPos]
+			elif len(self.Text) > 1 and self.Text.startswith("0"):
+				self.Text = self.Text.lstrip("0")
+				self.currPos = len(self.Text)
+			if not self.Text:
+				self.Text = "0"
+				self.currPos = 1
+
 	def insertChar(self, ch, pos=False, owr=False, ins=False):
-		if isinstance(ch, str):
-			ch = ch.decode("utf-8", "ignore")
 		if not pos:
 			pos = self.currPos
 		if ins and not self.maxSize:
@@ -167,20 +174,24 @@ class Input(VariableText, GUIComponent, NumericalTextInput):
 			self.Text = self.Text[0:pos] + ch + self.Text[pos:-1]
 		else:
 			self.Text = self.Text[0:pos] + ch + self.Text[pos:]
+		self.checkNumber()
 
 	def deleteChar(self, pos):
 		if not self.maxSize:
 			self.Text = self.Text[0:pos] + self.Text[pos + 1:]
 		elif self.overwrite:
-			self.Text = self.Text[0:pos] + u" " + self.Text[pos + 1:]
+			self.Text = self.Text[0:pos] + " " + self.Text[pos + 1:]
 		else:
-			self.Text = self.Text[0:pos] + self.Text[pos + 1:] + u" "
+			self.Text = self.Text[0:pos] + self.Text[pos + 1:] + " "
+		self.checkNumber()
 
 	def deleteAllChars(self):
 		if self.maxSize:
-			self.Text = u" " * len(self.Text)
+			self.Text = " " * len(self.Text)
+		elif self.type == self.NUMBER:
+			self.Text = "0"
 		else:
-			self.Text = u""
+			self.Text = ""
 		self.currPos = 0
 
 	def tab(self):
@@ -190,7 +201,7 @@ class Input(VariableText, GUIComponent, NumericalTextInput):
 			self.deleteAllChars()
 			self.allmarked = False
 		else:
-			self.insertChar(u" ", self.currPos, False, True)
+			self.insertChar(" ", self.currPos, False, True)
 			self.innerright()
 		self.update()
 
@@ -242,7 +253,7 @@ class Input(VariableText, GUIComponent, NumericalTextInput):
 		if self.allmarked:
 			self.deleteAllChars()
 			self.allmarked = False
-		self.insertChar(unichr(code), self.currPos, False, False)
+		self.insertChar(chr(code), self.currPos, False, False)
 		self.innerright()
 		self.update()
 

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from Converter import Converter
+from Components.Converter.Converter import Converter
 from Components.Element import cached
 from Components.config import config
 from Tools.Transponder import orbpos
 from Components.NimManager import nimmanager
-from Components.SystemInfo import SystemInfo
+from Components.SystemInfo import BoxInfo
 from enigma import eDVBSatelliteEquipmentControl
 
 
@@ -23,7 +23,7 @@ class RotorPosition(Converter):
 	@cached
 	def getText(self):
 		value = config.misc.showrotorposition.value
-		if SystemInfo["isRotorTuner"] and value != "no":
+		if BoxInfo.getItem("isRotorTuner") and value != "no":
 			if value.isdigit():
 				nim_text = nimmanager.rotorLastPositionForNim(int(value), number=False)
 				if nim_text == _("undefined"):
@@ -41,7 +41,7 @@ class RotorPosition(Converter):
 			elif value == "all":
 				all_text = ""
 				for x in nimmanager.nim_slots:
-					print x.slot
+					print(x.slot)
 					nim_text = nimmanager.rotorLastPositionForNim(x.slot, number=False)
 					if nim_text != _("rotor is not used"):
 						if nim_text == _("undefined"):

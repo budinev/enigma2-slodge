@@ -11,7 +11,7 @@ from Screens.ChoiceBox import ChoiceBox
 
 # Generic
 from Tools.BoundFunction import boundFunction
-from Tools import Directories
+from Tools.Directories import createDir as directories_createDir, removeDir as directories_removeDir
 from Components.config import config
 import os
 
@@ -59,7 +59,7 @@ class LocationBox(Screen, NumericalTextInput, HelpableScreen):
 		HelpableScreen.__init__(self)
 
 		# Set useable chars
-		self.setUseableChars(u'1234567890abcdefghijklmnopqrstuvwxyz')
+		self.setUseableChars('1234567890abcdefghijklmnopqrstuvwxyz')
 
 		# Quickselect Timer
 		self.qs_timer = eTimer()
@@ -96,6 +96,7 @@ class LocationBox(Screen, NumericalTextInput, HelpableScreen):
 		self["key_red"] = Button(_("Cancel"))
 		self["key_yellow"] = StaticText(_("Rename"))
 		self["key_blue"] = StaticText(_("Remove bookmark") if self.realBookmarks else '')
+		self["key_menu"] = StaticText(_("MENU"))
 
 		# Background for Buttons
 		self["green"] = Pixmap()
@@ -266,7 +267,7 @@ class LocationBox(Screen, NumericalTextInput, HelpableScreen):
 		if res:
 			path = os.path.join(self["filelist"].current_directory, res)
 			if not os.path.exists(path):
-				if not Directories.createDir(path):
+				if not directories_createDir(path):
 					self.session.open(
 						MessageBox,
 						_("Creating directory %s failed.") % (path),
@@ -301,7 +302,7 @@ class LocationBox(Screen, NumericalTextInput, HelpableScreen):
 
 	def removeDirCallback(self, name, res):
 		if res:
-			if not Directories.removeDir(name):
+			if not directories_removeDir(name):
 				self.session.open(
 					MessageBox,
 					_("Removing directory %s failed. (Maybe not empty.)") % (name),
@@ -371,7 +372,7 @@ class LocationBox(Screen, NumericalTextInput, HelpableScreen):
 					def dirAction(choice):
 						if choice:
 							if choice[1] == "folder":
-								if not Directories.createDir(ret):
+								if not directories_createDir(ret):
 									self.session.open(MessageBox, _("Creating directory %s failed.") % (ret), type=MessageBox.TYPE_ERROR)
 									return
 							self.close(ret)
@@ -493,7 +494,7 @@ class LocationBox(Screen, NumericalTextInput, HelpableScreen):
 
 		# Get char and append to text
 		char = self.getKey(number)
-		self.quickselect = self.quickselect[:self.curr_pos] + unicode(char)
+		self.quickselect = self.quickselect[:self.curr_pos] + str(char)
 
 		# Start Timeout
 		self.qs_timer_type = 0

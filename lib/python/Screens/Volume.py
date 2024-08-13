@@ -11,6 +11,6 @@ class Volume(Screen):
 		self["VolumeText"] = Label("")
 
 	def setValue(self, vol):
-		print "[Volume] Volume set to %d." % vol
+		print("[Volume] Volume set to %d." % vol)
 		self.volumeBar.setValue(vol)
 		self["VolumeText"].text = str(vol)

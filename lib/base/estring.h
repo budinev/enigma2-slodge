@@ -22,6 +22,7 @@ std::string GEOSTD8ToUTF8(const char *szIn, int len, int *pconvertedLen=0);
 std::string convertDVBUTF8(const unsigned char *data, int len, int table=-1, int tsidonid=1,int *pconvertedLen=0);
 std::string convertLatin1UTF8(const std::string &string);
 int isUTF8(const std::string &string);
+std::string repairUTF8(const char *szIn, int len);
 unsigned int truncateUTF8(std::string &s, unsigned int newsize);
 
 std::string removeDVBChars(const std::string &s);
@@ -37,6 +38,7 @@ std::string urlDecode(const std::string &s);
 std::string string_to_hex(const std::string& input);
 std::string strip_non_graph(std::string s);
 std::vector<std::string> split(std::string s, const std::string& separator);
+void join_str(const std::vector<std::string>& v, char c, std::string& s);
 int strcasecmp(const std::string& s1, const std::string& s2);
 
 std::string formatNumber(size_t size, const std::string& suffix={}, bool binary = false);

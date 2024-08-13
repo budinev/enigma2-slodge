@@ -64,6 +64,10 @@ class PluginDescriptor:
 	# start as channellist context menu plugin. session, serviceref (currently selected)
 	WHERE_CHANNEL_CONTEXT_MENU = 15
 
+	# a method where a plugin can add an instantiate screen at the infobars
+	WHERE_INFOBAR_SCREEN = 16
+	WHERE_SECONDINFOBAR_SCREEN = 17
+
 	def __init__(self, name="Plugin", where=[], description="", icon=None, fnc=None, wakeupfnc=None, needsRestart=None, internal=False, weight=0):
 		self.name = name
 		self.internal = internal
@@ -86,7 +90,11 @@ class PluginDescriptor:
 
 		self.wakeupfnc = wakeupfnc
 
-		self.__call__ = fnc
+		self.fnc = fnc
+
+	def __call__(self, *args, **kwargs):
+		if callable(self.fnc):
+			return self.fnc(*args, **kwargs)
 
 	def updateIcon(self, path):
 		self.path = path
@@ -103,10 +111,10 @@ class PluginDescriptor:
 			return self._icon
 
 	def __eq__(self, other):
-		return self.__call__ == other.__call__
+		return self.fnc == other.fnc
 
 	def __ne__(self, other):
-		return self.__call__ != other.__call__
+		return self.fnc != other.fnc
 
 	def __lt__(self, other):
 		if self.weight < other.weight:

@@ -51,15 +51,18 @@ class PlaylistIOInternal(PlaylistIO):
 		except IOError:
 			return None
 		while True:
-			entry = file.readline().strip()
-			if entry == "":
-				break
-			self.addService(ServiceReference(entry))
+			try:
+				entry = file.readline().strip()
+				if entry == "":
+					break
+				self.addService(ServiceReference(entry))
+			except UnicodeDecodeError:
+				pass
 		file.close()
 		return self.list
 
 	def save(self, filename=None):
-		print "Writing playlist into file", filename
+		print("Writing playlist into file", filename)
 		file = open(filename, "w")
 		for x in self.list:
 			file.write(str(x) + "\n")

@@ -11,10 +11,10 @@ from Components.ConfigList import ConfigList
 from Components.Label import Label
 from Components.SelectionList import SelectionList
 from Components.MenuList import MenuList
-from Components.SystemInfo import SystemInfo
+from Components.SystemInfo import BoxInfo
 from ServiceReference import ServiceReference
 from Plugins.Plugin import PluginDescriptor
-from xml.etree.cElementTree import parse
+from xml.etree.ElementTree import parse
 from enigma import eDVBCI_UI, eDVBCIInterfaces, eEnv, eServiceCenter
 from Tools.BoundFunction import boundFunction
 from Tools.CIHelper import cihelper
@@ -46,9 +46,9 @@ class CIselectMainMenu(Screen):
 				"cancel": self.close
 			}, -1)
 
-		NUM_CI = SystemInfo["CommonInterface"]
+		NUM_CI = BoxInfo.getItem("CommonInterface")
 
-		print "[CI_Wizzard] FOUND %d CI Slots " % NUM_CI
+		print("[CI_Wizzard] FOUND %d CI Slots " % NUM_CI)
 
 		self.dlg = None
 		self.state = {}
@@ -81,9 +81,9 @@ class CIselectMainMenu(Screen):
 			action = cur[2]
 			slot = cur[3]
 			if action == 1:
-				print "[CI_Wizzard] there is no CI Slot in your receiver"
+				print("[CI_Wizzard] there is no CI Slot in your receiver")
 			else:
-				print "[CI_Wizzard] selected CI Slot : %d" % slot
+				print("[CI_Wizzard] selected CI Slot : %d" % slot)
 				if config.usage.setup_level.index > 1: # advanced
 					self.session.open(CIconfigMenu, slot)
 				else:
@@ -135,7 +135,7 @@ class CIconfigMenu(Screen):
 				"cancel": self.cancel
 			}, -1)
 
-		print "[CI_Wizzard_Config] Configuring CI Slots : %d  " % self.ci_slot
+		print("[CI_Wizzard_Config] Configuring CI Slots : %d  " % self.ci_slot)
 
 		i = 0
 		self.caidlist = []
@@ -143,7 +143,7 @@ class CIconfigMenu(Screen):
 			i += 1
 			self.caidlist.append((str(hex(int(caid))), str(caid), i))
 
-		print "[CI_Wizzard_Config_CI%d] read following CAIds from CI: %s" % (self.ci_slot, self.caidlist)
+		print("[CI_Wizzard_Config_CI%d] read following CAIds from CI: %s" % (self.ci_slot, self.caidlist))
 
 		self.selectedcaid = []
 		self.servicelist = []
@@ -181,7 +181,7 @@ class CIconfigMenu(Screen):
 			try:
 				os.remove(self.filename)
 			except:
-				print "[CI_Config_CI%d] error remove xml..." % self.ci_slot
+				print("[CI_Config_CI%d] error remove xml..." % self.ci_slot)
 			else:
 				self.session.openWithCallback(self.restartGui, MessageBox, _("Restart GUI now?"), MessageBox.TYPE_YESNO)
 
@@ -210,7 +210,7 @@ class CIconfigMenu(Screen):
 	def finishedChannelSelection(self, *args):
 		item = len(args)
 		if item > 0:
-			if item > 2 and args[2] is True:
+			if item > 2 and args[2]:
 				for ref in args[0]:
 					service_ref = ServiceReference(ref)
 					service_name = service_ref.getServiceName()
@@ -237,7 +237,7 @@ class CIconfigMenu(Screen):
 	def finishedProviderSelection(self, *args):
 		item = len(args)
 		if item > 1:
-			if item > 2 and args[2] is True:
+			if item > 2 and args[2]:
 				for ref in args[0]:
 					service_ref = ServiceReference(ref)
 					service_name = service_ref.getServiceName()
@@ -275,7 +275,7 @@ class CIconfigMenu(Screen):
 
 	def saveXML(self):
 		try:
-			fp = file(self.filename, 'w')
+			fp = open(self.filename, 'w')
 			fp.write("<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n")
 			fp.write("<ci>\n")
 			fp.write("\t<slot>\n")
@@ -293,12 +293,12 @@ class CIconfigMenu(Screen):
 					if item[2] == 1:
 						fp.write("\t\t<provider name=\"%s\" dvbnamespace=\"%s\" />\n" % (stringToXML(name), item[3]))
 					else:
-						fp.write("\t\t<service name=\"%s\" ref=\"%s\" />\n" % (stringToXML(name), item[3]))
+						fp.write("\t\t<service name=\"%s\" ref=\"%s\" />\n" % (stringToXML(name), ':'.join(item[3].split(':')[:11])))
 			fp.write("\t</slot>\n")
 			fp.write("</ci>\n")
 			fp.close()
 		except:
-			print "[CI_Config_CI%d] xml not written" % self.ci_slot
+			print("[CI_Config_CI%d] xml not written" % self.ci_slot)
 			os.unlink(self.filename)
 
 	def loadXML(self):
@@ -316,31 +316,31 @@ class CIconfigMenu(Screen):
 		try:
 			tree = parse(self.filename).getroot()
 			for slot in tree.findall("slot"):
-				read_slot = getValue(slot.findall("id"), False).encode("UTF-8")
+				read_slot = getValue(slot.findall("id"), False)
 				i = 0
 				for caid in slot.findall("caid"):
-					read_caid = caid.get("id").encode("UTF-8")
+					read_caid = caid.get("id")
 					self.selectedcaid.append((str(read_caid), str(read_caid), i))
-					self.usingcaid.append(long(read_caid, 16))
+					self.usingcaid.append(int(read_caid, 16))
 					i += 1
 
 				for service in slot.findall("service"):
-					read_service_name = service.get("name").encode("UTF-8")
-					read_service_ref = service.get("ref").encode("UTF-8")
+					read_service_name = service.get("name")
+					read_service_ref = service.get("ref")
 					self.read_services.append(read_service_ref)
 
 				for provider in slot.findall("provider"):
-					read_provider_name = provider.get("name").encode("UTF-8")
-					read_provider_dvbname = provider.get("dvbnamespace").encode("UTF-8")
+					read_provider_name = provider.get("name")
+					read_provider_dvbname = provider.get("dvbnamespace")
 					self.read_providers.append((read_provider_name, read_provider_dvbname))
 
 				self.ci_config.append((int(read_slot), (self.read_services, self.read_providers, self.usingcaid)))
 		except:
-			print "[CI_Config_CI%d] error parsing xml..." % self.ci_slot
+			print("[CI_Config_CI%d] error parsing xml..." % self.ci_slot)
 			try:
 				os.remove(self.filename)
 			except:
-				print "[CI_Activate_Config_CI%d] error remove damaged xml..." % self.ci_slot
+				print("[CI_Activate_Config_CI%d] error remove damaged xml..." % self.ci_slot)
 
 		for item in self.read_services:
 			if len(item):
@@ -680,7 +680,7 @@ def find_in_list(list, search, listpos=0):
 
 
 def isModule():
-	NUM_CI = SystemInfo["CommonInterface"]
+	NUM_CI = BoxInfo.getItem("CommonInterface")
 	if NUM_CI and NUM_CI > 0:
 		for slot in range(NUM_CI):
 			state = eDVBCI_UI.getInstance().getState(slot)
@@ -700,7 +700,7 @@ def sessionstart(reason, session):
 def autostart(reason, **kwargs):
 	global global_session
 	if reason == 0:
-		print "[CI_Assignment] activating ci configs:"
+		print("[CI_Assignment] activating ci configs:")
 		activate_all(global_session)
 	elif reason == 1:
 		global_session = None

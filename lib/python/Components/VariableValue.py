@@ -1,4 +1,4 @@
-class VariableValue(object):
+class VariableValue:
 	"""VariableValue can be used for components which have a variable value (like eSlider), based on any widget with setValue call"""
 
 	def __init__(self):
@@ -11,7 +11,6 @@ class VariableValue(object):
 			self.__value = 0
 		if self.instance:
 			self.instance.setValue(self.__value)
-
 
 	def getValue(self):
 		return self.__value

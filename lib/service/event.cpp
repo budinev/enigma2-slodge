@@ -28,6 +28,8 @@ DEFINE_REF(eComponentData);
 DEFINE_REF(eGenreData);
 DEFINE_REF(eParentalData);
 
+int eServiceEvent::m_UTF8CorrectMode = 0;
+
 /* search for the presence of language from given EIT event descriptors*/
 bool eServiceEvent::loadLanguage(Event *evt, const std::string &lang, int tsidonid)
 {
@@ -208,6 +210,28 @@ bool eServiceEvent::loadLanguage(Event *evt, const std::string &lang, int tsidon
 	// hack to fix split titles
 	undoAbbreviation(m_event_name, m_short_description);
 
+	if(eServiceEvent::m_UTF8CorrectMode > 0)
+	{
+		if(m_event_name.size() > 0 && !isUTF8(m_event_name))
+		{
+			if(eServiceEvent::m_UTF8CorrectMode == 2)
+				eDebug("[eServiceEvent] event name is not UTF8\nhex output:%s\nstr output:%s\n",string_to_hex(m_event_name).c_str(),m_event_name.c_str());
+			m_event_name = repairUTF8(m_event_name.c_str(), m_event_name.size());
+		}
+		if(m_short_description.size() > 0 && !isUTF8(m_short_description))
+		{
+			if(eServiceEvent::m_UTF8CorrectMode == 2)
+				eDebug("[eServiceEvent] short description is not UTF8\nhex output:%s\nstr output:%s\n",string_to_hex(m_short_description).c_str(),m_short_description.c_str());
+			m_short_description = repairUTF8(m_short_description.c_str(), m_short_description.size());
+		}
+		if(m_extended_description.size() > 0 && !isUTF8(m_extended_description))
+		{
+			if(eServiceEvent::m_UTF8CorrectMode == 2)
+				eDebug("[eServiceEvent] extended description is not UTF8\nhex output:%s\nstr output:%s\n",string_to_hex(m_extended_description).c_str(),m_extended_description.c_str());
+			m_extended_description = repairUTF8(m_extended_description.c_str(), m_extended_description.size());
+		}
+	}
+
 	return retval;
 }
 
@@ -299,10 +323,10 @@ PyObject *eServiceEvent::getGenreData() const
 	for (std::list<eGenreData>::const_iterator it(m_genres.begin()); it != m_genres.end(); ++it)
 	{
 		ePyObject tuple = PyTuple_New(4);
-		PyTuple_SET_ITEM(tuple, 0, PyInt_FromLong(it->getLevel1()));
-		PyTuple_SET_ITEM(tuple, 1, PyInt_FromLong(it->getLevel2()));
-		PyTuple_SET_ITEM(tuple, 2, PyInt_FromLong(it->getUser1()));
-		PyTuple_SET_ITEM(tuple, 3, PyInt_FromLong(it->getUser2()));
+		PyTuple_SET_ITEM(tuple, 0, PyLong_FromLong(it->getLevel1()));
+		PyTuple_SET_ITEM(tuple, 1, PyLong_FromLong(it->getLevel2()));
+		PyTuple_SET_ITEM(tuple, 2, PyLong_FromLong(it->getUser1()));
+		PyTuple_SET_ITEM(tuple, 3, PyLong_FromLong(it->getUser2()));
 		PyList_SET_ITEM(ret, cnt++, tuple);
 	}
 	return ret;
@@ -327,8 +351,8 @@ PyObject *eServiceEvent::getParentalData() const
 	for (std::list<eParentalData>::const_iterator it(m_ratings.begin()); it != m_ratings.end(); ++it)
 	{
 		ePyObject tuple = PyTuple_New(2);
-		PyTuple_SET_ITEM(tuple, 0, PyString_FromString(it->getCountryCode().c_str()));
-		PyTuple_SET_ITEM(tuple, 1, PyInt_FromLong(it->getRating()));
+		PyTuple_SET_ITEM(tuple, 0, PyUnicode_FromString(it->getCountryCode().c_str()));
+		PyTuple_SET_ITEM(tuple, 1, PyLong_FromLong(it->getRating()));
 		PyList_SET_ITEM(ret, cnt++, tuple);
 	}
 	return ret;
@@ -357,11 +381,11 @@ PyObject *eServiceEvent::getComponentData() const
 	for (std::list<eComponentData>::const_iterator it(m_component_data.begin()); it != m_component_data.end(); ++it)
 	{
 		ePyObject tuple = PyTuple_New(5);
-		PyTuple_SET_ITEM(tuple, 0, PyInt_FromLong(it->m_componentTag));
-		PyTuple_SET_ITEM(tuple, 1, PyInt_FromLong(it->m_componentType));
-		PyTuple_SET_ITEM(tuple, 2, PyInt_FromLong(it->m_streamContent));
-		PyTuple_SET_ITEM(tuple, 3, PyString_FromString(it->m_iso639LanguageCode.c_str()));
-		PyTuple_SET_ITEM(tuple, 4, PyString_FromString(it->m_text.c_str()));
+		PyTuple_SET_ITEM(tuple, 0, PyLong_FromLong(it->m_componentTag));
+		PyTuple_SET_ITEM(tuple, 1, PyLong_FromLong(it->m_componentType));
+		PyTuple_SET_ITEM(tuple, 2, PyLong_FromLong(it->m_streamContent));
+		PyTuple_SET_ITEM(tuple, 3, PyUnicode_FromString(it->m_iso639LanguageCode.c_str()));
+		PyTuple_SET_ITEM(tuple, 4, PyUnicode_FromString(it->m_text.c_str()));
 		PyList_SET_ITEM(ret, cnt++, tuple);
 	}
 	return ret;

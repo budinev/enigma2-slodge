@@ -23,7 +23,7 @@ class lamedb(datasource):
 		versionstring = lines[0].split('/')
 		version = int(versionstring[1])
 		if 3 > version or 4 < version:
-			print "unsupported lamedb version"
+			print("unsupported lamedb version")
 			return
 
 		transpondersreading = False
@@ -49,11 +49,9 @@ class lamedb(datasource):
 					data = line.strip().split(":")
 					tsid = str(int(data[1], 16))
 					onid = str(int(data[2], 16))
-		satlist = sats.keys()
-		satlist.sort()
 
-		for sat in satlist:
-			print sat
+		for sat in sorted(sats.keys()):
+			print(sat)
 			self.addSat(sat, sat)
 			transponders = sats[sat]
 			transponders.sort(key=lambda a: a[0])
@@ -61,7 +59,7 @@ class lamedb(datasource):
 				transponder = transpondertuple[0]
 				tsid = transpondertuple[1]
 				onid = transpondertuple[2]
-				print transponder, tsid, onid
+				print(transponder, tsid, onid)
 				tmp_transponder = {"frequency": transponder[0], "symbol_rate": transponder[1], "polarization": transponder[2], "fec": transponder[3]}
 				if version == 3:
 					if len(transponder) > 6:

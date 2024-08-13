@@ -1,12 +1,13 @@
 from Screens.MessageBox import MessageBox
 from enigma import eStreamServer
 
+
 class ServiceStopScreen:
 	def __init__(self):
 		try:
 			self.session
 		except:
-			print "[ServiceStopScreen] ERROR: no self.session set"
+			print("[ServiceStopScreen] ERROR: no self.session set")
 		self.oldref = self.oldAlternativeref = None
 		self.slot_number = -1
 		self.onClose.append(self.__onClose)
@@ -49,7 +50,7 @@ class ServiceStopScreen:
 					if hasattr(self.session, 'pip'):
 						del self.session.pip
 					self.session.pipshown = False
-			if eStreamServer.getInstance() and eStreamServer.getInstance().getConnectedClients():
+			if self.session.nav.getClientsStreaming():
 				eStreamServer.getInstance().stopStream()
 
 	def __onClose(self):
@@ -72,4 +73,3 @@ class ServiceStopScreen:
 			self.__onClose()
 			self.oldref = self.oldAlternativeref = None
 			self.slot_number = -1
-

@@ -1,45 +1,21 @@
-from Screens.Screen import Screen
+from Screens.Setup import Setup
 from Screens.LocationBox import MovieLocationBox, TimeshiftLocationBox
 from Screens.MessageBox import MessageBox
 from Components.Label import Label
-from Components.config import config, ConfigSelection, getConfigListEntry
-from Components.ConfigList import ConfigListScreen
-from Components.ActionMap import ActionMap
+from Components.config import config, ConfigSelection
 from Tools.Directories import fileExists
 from Components.UsageConfig import preferredPath
 
 
-class RecordPathsSettings(ConfigListScreen, Screen):
-	skin = """
-		<screen name="RecordPathsSettings" position="160,150" size="450,200" title="Recording paths">
-			<ePixmap pixmap="buttons/red.png" position="10,0" size="140,40" alphatest="on" />
-			<ePixmap pixmap="buttons/green.png" position="300,0" size="140,40" alphatest="on" />
-			<widget source="key_red" render="Label" position="10,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
-			<widget source="key_green" render="Label" position="300,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
-			<widget name="config" position="10,44" size="430,146" />
-		</screen>"""
-
+class RecordPathsSettings(Setup):
 	def __init__(self, session):
-		from Components.Sources.StaticText import StaticText
-		Screen.__init__(self, session)
-		self["key_red"] = StaticText(_("Cancel"))
-		self["key_green"] = StaticText(_("Save"))
+		self.createConfig()
+		Setup.__init__(self, session, None)
 		self.setTitle(_("Recording paths"))
-		ConfigListScreen.__init__(self, [])
-		self.initConfigList()
-
-		self["setupActions"] = ActionMap(["SetupActions", "ColorActions", "MenuActions"],
-		{
-			"green": self.save,
-			"red": self.keyCancel,
-			"cancel": self.keyCancel,
-			"ok": self.ok,
-			"menu": self.closeRecursive,
-		}, -2)
 
 	def checkReadWriteDir(self, configele):
 		value = configele.value
-		print "checkReadWrite: ", value
+		print("checkReadWrite: ", value)
 		if not value or value in [x[0] for x in self.styles] or fileExists(value, "w"):
 			configele.last_value = value
 			return True
@@ -52,7 +28,7 @@ class RecordPathsSettings(ConfigListScreen, Screen):
 				)
 			return False
 
-	def initConfigList(self):
+	def createConfig(self):
 		self.styles = [("<default>", _("<Default movie location>")), ("<current>", _("<Current movielist location>")), ("<timer>", _("<Last timer location>"))]
 		styles_keys = [x[0] for x in self.styles]
 		tmp = config.movielist.videodirs.value
@@ -60,50 +36,51 @@ class RecordPathsSettings(ConfigListScreen, Screen):
 		if default and default not in tmp:
 			tmp = tmp[:]
 			tmp.append(default)
-		print "DefaultPath: ", default, tmp
+		print("DefaultPath: ", default, tmp)
 		self.default_dirname = ConfigSelection(default=default, choices=[("", _("<Default movie location>"))] + tmp)
 		tmp = config.movielist.videodirs.value
 		default = config.usage.timer_path.value
 		if default not in tmp and default not in styles_keys:
 			tmp = tmp[:]
 			tmp.append(default)
-		print "TimerPath: ", default, tmp
+		print("TimerPath: ", default, tmp)
 		self.timer_dirname = ConfigSelection(default=default, choices=self.styles + tmp)
 		tmp = config.movielist.videodirs.value
 		default = config.usage.instantrec_path.value
 		if default not in tmp and default not in styles_keys:
 			tmp = tmp[:]
 			tmp.append(default)
-		print "InstantrecPath: ", default, tmp
+		print("InstantrecPath: ", default, tmp)
 		self.instantrec_dirname = ConfigSelection(default=default, choices=self.styles + tmp)
 		default = config.usage.timeshift_path.value
 		tmp = config.usage.allowed_timeshift_paths.value
 		if default not in tmp:
 			tmp = tmp[:]
 			tmp.append(default)
-		print "TimeshiftPath: ", default, tmp
+		print("TimeshiftPath: ", default, tmp)
 		self.timeshift_dirname = ConfigSelection(default=default, choices=tmp)
 		self.default_dirname.addNotifier(self.checkReadWriteDir, initial_call=False, immediate_feedback=False)
 		self.timer_dirname.addNotifier(self.checkReadWriteDir, initial_call=False, immediate_feedback=False)
 		self.instantrec_dirname.addNotifier(self.checkReadWriteDir, initial_call=False, immediate_feedback=False)
 		self.timeshift_dirname.addNotifier(self.checkReadWriteDir, initial_call=False, immediate_feedback=False)
 
+	def createSetup(self):
 		self.list = []
 		if config.usage.setup_level.index >= 2:
-			self.default_entry = getConfigListEntry(_("Default movie location"), self.default_dirname)
+			self.default_entry = (_("Default movie location"), self.default_dirname)
 			self.list.append(self.default_entry)
-			self.timer_entry = getConfigListEntry(_("Timer recording location"), self.timer_dirname)
+			self.timer_entry = (_("Timer recording location"), self.timer_dirname)
 			self.list.append(self.timer_entry)
-			self.instantrec_entry = getConfigListEntry(_("Instant recording location"), self.instantrec_dirname)
+			self.instantrec_entry = (_("Instant recording location"), self.instantrec_dirname)
 			self.list.append(self.instantrec_entry)
 		else:
-			self.default_entry = getConfigListEntry(_("Movie location"), self.default_dirname)
+			self.default_entry = (_("Movie location"), self.default_dirname)
 			self.list.append(self.default_entry)
-		self.timeshift_entry = getConfigListEntry(_("Timeshift location"), self.timeshift_dirname)
+		self.timeshift_entry = (_("Timeshift location"), self.timeshift_dirname)
 		self.list.append(self.timeshift_entry)
 		self["config"].setList(self.list)
 
-	def ok(self):
+	def keySelect(self):
 		currentry = self["config"].getCurrent()
 		self.lastvideodirs = config.movielist.videodirs.value
 		self.lasttimeshiftdirs = config.usage.allowed_timeshift_paths.value
@@ -178,7 +155,7 @@ class RecordPathsSettings(ConfigListScreen, Screen):
 			if self.entrydirname.last_value != res:
 				self.checkReadWriteDir(self.entrydirname)
 
-	def save(self):
+	def keySave(self):
 		currentry = self["config"].getCurrent()
 		if self.checkReadWriteDir(currentry[1]):
 			config.usage.default_path.value = self.default_dirname.value

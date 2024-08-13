@@ -1,5 +1,5 @@
-from Wizard import wizardManager
-from Screen import Screen
+from Screens.Wizard import wizardManager
+from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.WizardLanguage import WizardLanguage
 from Screens.Rc import Rc
@@ -9,19 +9,22 @@ try:
 except:
 	OverscanWizard = None
 
+from Components.Console import Console
 from Components.Pixmap import Pixmap
 from Components.ProgressBar import ProgressBar
 from Components.Label import Label
 from Components.ScrollLabel import ScrollLabel
+from Components.SystemInfo import BoxInfo
 from Components.config import config, ConfigBoolean, configfile
-from LanguageSelection import LanguageWizard
+from Screens.LanguageSelection import LanguageWizard
 from enigma import eConsoleAppContainer, eTimer, eActionMap
 
 import os
 
-config.misc.firstrun = ConfigBoolean(default = True)
-config.misc.languageselected = ConfigBoolean(default = True)
-config.misc.do_overscanwizard = ConfigBoolean(default = OverscanWizard and config.skin.primary_skin.value == "CinoGriPLiFhd/skin.xml")
+config.misc.firstrun = ConfigBoolean(default=True)
+config.misc.languageselected = ConfigBoolean(default=True)
+config.misc.do_overscanwizard = ConfigBoolean(default=OverscanWizard and config.skin.primary_skin.value == "PLi-FullNightHD/skin.xml")
+
 
 class StartWizard(WizardLanguage, Rc):
 	def __init__(self, session, silent=True, showSteps=False, neededTag=None):
@@ -50,6 +53,7 @@ def setLanguageFromBackup(backupfile):
 		for member in tar.getmembers():
 			if member.name == 'etc/enigma2/settings':
 				for line in tar.extractfile(member):
+					line = line.decode()
 					if line.startswith('config.osd.language'):
 						languageToSelect = line.strip().split('=')[1]
 						if languageToSelect:
@@ -74,9 +78,14 @@ class AutoRestoreWizard(MessageBox):
 
 	def close(self, value):
 		if value:
-			MessageBox.close(self, 43)
-		else:
-			MessageBox.close(self)
+			if os.path.isfile("/etc/.doNotAutoinstall"):
+				os.unlink("/etc/.doNotAutoinstall")
+				MessageBox.close(self, 44)
+			else:
+				# restore network config first, we need it to autoinstall
+				open('/etc/.doAutoinstall', 'w')
+				MessageBox.close(self, 43)
+		MessageBox.close(self)
 
 
 class AutoInstallWizard(Screen):
@@ -120,6 +129,7 @@ class AutoInstallWizard(Screen):
 					# make sure we have a valid package list before attempting to restore packages
 					self.container.execute("opkg update")
 					return
+
 		self.abort()
 
 	def run_console(self):
@@ -132,12 +142,14 @@ class AutoInstallWizard(Screen):
 		self["header"].setText(_("Autoinstalling %s") % self.package + " - %s%%" % self["progress"].value)
 		try:
 			if self.container.execute('opkg install "%s"' % self.package):
-				raise Exception, "failed to execute command!"
+				raise Exception("failed to execute command!")
 				self.appClosed(True)
-		except Exception, e:
+		except Exception as e:
 			self.appClosed(True)
 
 	def dataAvail(self, data):
+		if isinstance(data, bytes):
+			data = data.decode()
 		self["AboutScrollLabel"].appendText(data)
 		self.logfile.write(data)
 
@@ -167,14 +179,23 @@ class AutoInstallWizard(Screen):
 			self.container.dataAvail.remove(self.dataAvail)
 		self.container = None
 		self.logfile.close()
-		os.remove("/etc/.doAutoinstall")
-		self.close(3)
+		os.unlink("/etc/.doAutoinstall")
+		self.close(44)
+
+
+class IncorrectBoxInfoWizard(MessageBox):
+	def __init__(self, session):
+		MessageBox.__init__(self, session, _("The enigma.info file for the boxinformation is not available or the content is invalid.\nPress any key to continue?"), type=MessageBox.TYPE_WARNING, timeout=20, simple=True)
+
+	def close(self, value):
+		MessageBox.close(self)
 
 
 if not os.path.isfile("/etc/installed"):
 	from Components.Console import Console
 	Console().ePopen("opkg list_installed | cut -d ' ' -f 1 > /etc/installed;chmod 444 /etc/installed")
 
+wizardManager.registerWizard(IncorrectBoxInfoWizard, not BoxInfo.getItem("checksum"), priority=0)
 wizardManager.registerWizard(AutoInstallWizard, os.path.isfile("/etc/.doAutoinstall"), priority=0)
 wizardManager.registerWizard(AutoRestoreWizard, config.misc.languageselected.value and config.misc.firstrun.value and checkForAvailableAutoBackup(), priority=0)
 wizardManager.registerWizard(LanguageWizard, config.misc.languageselected.value, priority=10)

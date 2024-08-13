@@ -10,7 +10,7 @@ def __resolveColor(color):
 		try:
 			return parseColor(color).argb()
 		except Exception as err:
-			print "[MultiContent] Error: Resolve color '%s'" % str(err)
+			print("[MultiContent] Error: Resolve color '%s'" % str(err))
 		return None
 	return color
 
@@ -20,7 +20,7 @@ def __resolvePixmap(pixmap):
 		try:
 			return LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, pixmap))
 		except Exception as err:
-			print "[MultiContent] Error: Resolve pixmap '%s'" % str(err)
+			print("[MultiContent] Error: Resolve pixmap '%s'" % str(err))
 		return None
 	return pixmap
 
@@ -29,8 +29,8 @@ def MultiContentTemplateColor(n):
 	return 0xff000000 | n
 
 
-def MultiContentEntryText(pos=(0, 0), size=(0, 0), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP, text="", color=None, color_sel=None, backcolor=None, backcolor_sel=None, border_width=None, border_color=None):
-	return eListboxPythonMultiContent.TYPE_TEXT, pos[0], pos[1], size[0], size[1], font, flags, text, __resolveColor(color), __resolveColor(color_sel), __resolveColor(backcolor), __resolveColor(backcolor_sel), border_width, __resolveColor(border_color)
+def MultiContentEntryText(pos=(0, 0), size=(0, 0), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP, text="", color=None, color_sel=None, backcolor=None, backcolor_sel=None, border_width=None, border_color=None, corner_radius=0, corner_edges=15, textBWidth=0, textBColor=None):
+	return eListboxPythonMultiContent.TYPE_TEXT, pos[0], pos[1], size[0], size[1], font, flags, text, __resolveColor(color), __resolveColor(color_sel), __resolveColor(backcolor), __resolveColor(backcolor_sel), border_width, __resolveColor(border_color), corner_radius, corner_edges, textBWidth, __resolveColor(textBColor)
 
 
 def MultiContentEntryPixmap(pos=(0, 0), size=(0, 0), png=None, backcolor=None, backcolor_sel=None, flags=0):

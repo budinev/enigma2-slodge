@@ -1,10 +1,9 @@
 import os
 import re
-import unicodedata
-from Renderer import Renderer
+from Components.Renderer.Renderer import Renderer
 from enigma import ePixmap, ePicLoad, eServiceCenter, eServiceReference, iServiceInformation
 from Tools.Alternatives import GetWithAlternative
-from Tools.Directories import pathExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename
+from Tools.Directories import pathExists, SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, resolveFilename, sanitizeFilename
 from Components.Harddisk import harddiskmanager
 from ServiceReference import ServiceReference
 from Components.config import config
@@ -29,11 +28,11 @@ def onMountpointAdded(mountpoint):
 		if os.path.isdir(path) and path not in searchPaths:
 			for fn in os.listdir(path):
 				if fn.endswith('.png') or fn.endswith('.svg'):
-					print "[Picon] adding path:", path
+					print("[Picon] adding path:", path)
 					searchPaths.append(path)
 					break
-	except Exception, ex:
-		print "[Picon] Failed to investigate %s:" % mountpoint, ex
+	except Exception as ex:
+		print("[Picon] Failed to investigate %s:" % mountpoint, ex)
 
 
 def onMountpointRemoved(mountpoint):
@@ -41,7 +40,7 @@ def onMountpointRemoved(mountpoint):
 	path = os.path.join(mountpoint, 'picon') + '/'
 	try:
 		searchPaths.remove(path)
-		print "[Picon] removed path:", path
+		print("[Picon] removed path:", path)
 	except:
 		pass
 
@@ -95,15 +94,12 @@ def getPiconName(serviceRef):
 		fields[2] = '1'
 		pngname = findPicon('_'.join(fields))
 	if not pngname: # picon by channel name
-		name = ServiceReference(serviceRef).getServiceName()
-		name = unicodedata.normalize('NFKD', unicode(name, 'utf_8', errors='ignore')).encode('ASCII', 'ignore')
-		name = re.sub('[^a-z0-9]', '', name.replace('&', 'and').replace('+', 'plus').replace('*', 'star').lower())
+		utf8_name = sanitizeFilename(ServiceReference(serviceRef).getServiceName()).lower()
+		name = re.sub("[^a-z0-9]", "", utf8_name.replace("&", "and").replace("+", "plus").replace("*", "star"))
 		if name:
-			pngname = findPicon(name)
-			if not pngname and len(name) > 2 and name.endswith('hd'):
-				pngname = findPicon(name[:-2])
+			pngname = findPicon(name) or findPicon(re.sub("(fhd|uhd|hd|sd|4k)$", "", name).strip()) or findPicon(utf8_name)
 			if not pngname and len(name) > 6:
-				series = re.sub(r's[0-9]*e[0-9]*$', '', name)
+				series = re.sub(r"s[0-9]*e[0-9]*$", "", name)
 				pngname = findPicon(series)
 	return pngname
 
@@ -114,7 +110,7 @@ class Picon(Renderer):
 		self.usePicLoad = False
 		self.PicLoad = ePicLoad()
 		self.PicLoad.PictureData.get().append(self.updatePicon)
-		self.piconsize = (0,0)
+		self.piconsize = (0, 0)
 		self.pngname = ""
 		self.service_text = ""
 		self.lastPath = None

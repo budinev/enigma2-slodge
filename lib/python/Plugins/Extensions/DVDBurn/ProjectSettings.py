@@ -6,7 +6,7 @@ from Components.Sources.List import List
 from Components.Sources.StaticText import StaticText
 from Components.FileList import FileList
 from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, SCOPE_FONTS, SCOPE_HDD
-from Components.config import config, getConfigListEntry
+from Components.config import config
 from Components.ConfigList import ConfigListScreen
 
 
@@ -140,38 +140,38 @@ class ProjectSettings(ConfigListScreen, Screen):
 		authormode = self.settings.authormode.getValue()
 		output = self.settings.output.getValue()
 		self.list = []
-		self.list.append(getConfigListEntry(_("Collection name"), self.settings.name))
-		self.list.append(getConfigListEntry(_("Authoring mode"), self.settings.authormode))
-		self.list.append(getConfigListEntry(_("Output"), self.settings.output))
+		self.list.append((_("Collection name"), self.settings.name))
+		self.list.append((_("Authoring mode"), self.settings.authormode))
+		self.list.append((_("Output"), self.settings.output))
 		if output == "iso":
-			self.list.append(getConfigListEntry(_("ISO path"), self.settings.isopath))
+			self.list.append((_("ISO path"), self.settings.isopath))
 		if authormode.startswith("menu"):
-			self.list.append(getConfigListEntry(_("Menu") + ' ' + _("template file"), self.settings.menutemplate))
+			self.list.append((_("Menu") + ' ' + _("template file"), self.settings.menutemplate))
 			if config.usage.setup_level.index >= 2: # expert+
-				self.list.append(getConfigListEntry(_("Menu") + ' ' + _("Title"), self.project.menutemplate.settings.titleformat))
-				self.list.append(getConfigListEntry(_("Menu") + ' ' + _("Subtitles"), self.project.menutemplate.settings.subtitleformat))
-				self.list.append(getConfigListEntry(_("Menu") + ' ' + _("background image"), self.project.menutemplate.settings.menubg))
-				self.list.append(getConfigListEntry(_("Menu") + ' ' + _("Language selection"), self.project.menutemplate.settings.menulang))
-			#self.list.append(getConfigListEntry(_("Menu")+' '+_("headline")+' '+_("color"), self.settings.color_headline))
-			#self.list.append(getConfigListEntry(_("Menu")+' '+_("text")+' '+_("color"), self.settings.color_button))
-			#self.list.append(getConfigListEntry(_("Menu")+' '+_("highlighted button")+' '+_("color"), self.settings.color_highlight))
-			#self.list.append(getConfigListEntry(_("Menu")+' '+_("font face"), self.settings.font_face))
-			#self.list.append(getConfigListEntry(_("Font size")+' ('+_("headline")+', '+_("Title")+', '+_("Subtitles")+')', self.settings.font_size))
-			#self.list.append(getConfigListEntry(_("Menu")+' '+_("spaces (top, between rows, left)"), self.settings.space))
-			#self.list.append(getConfigListEntry(_("Menu")+' '+_("Audio"), self.settings.menuaudio))
+				self.list.append((_("Menu") + ' ' + _("Title"), self.project.menutemplate.settings.titleformat))
+				self.list.append((_("Menu") + ' ' + _("Subtitles"), self.project.menutemplate.settings.subtitleformat))
+				self.list.append((_("Menu") + ' ' + _("background image"), self.project.menutemplate.settings.menubg))
+				self.list.append((_("Menu") + ' ' + _("Language selection"), self.project.menutemplate.settings.menulang))
+			#self.list.append((_("Menu")+' '+_("headline")+' '+_("color"), self.settings.color_headline))
+			#self.list.append((_("Menu")+' '+_("text")+' '+_("color"), self.settings.color_button))
+			#self.list.append((_("Menu")+' '+_("highlighted button")+' '+_("color"), self.settings.color_highlight))
+			#self.list.append((_("Menu")+' '+_("font face"), self.settings.font_face))
+			#self.list.append((_("Font size")+' ('+_("headline")+', '+_("Title")+', '+_("Subtitles")+')', self.settings.font_size))
+			#self.list.append((_("Menu")+' '+_("spaces (top, between rows, left)"), self.settings.space))
+			#self.list.append((_("Menu")+' '+_("Audio"), self.settings.menuaudio))
 		if config.usage.setup_level.index >= 2: # expert+
 			if authormode != "data_ts":
-				self.list.append(getConfigListEntry(_("Titleset mode"), self.settings.titlesetmode))
+				self.list.append((_("Titleset mode"), self.settings.titlesetmode))
 				if self.settings.titlesetmode.getValue() == "single" or authormode == "just_linked":
-					self.list.append(getConfigListEntry(_("VMGM (intro trailer)"), self.settings.vmgm))
+					self.list.append((_("VMGM (intro trailer)"), self.settings.vmgm))
 			else:
-				self.list.append(getConfigListEntry(_("DVD data format"), self.settings.dataformat))
+				self.list.append((_("DVD data format"), self.settings.dataformat))
 
 		self["config"].setList(self.list)
 		self.keydict = {}
-		for key, val in self.settings.dict().iteritems():
+		for key, val in self.settings.dict().items():
 			self.keydict[val] = key
-		for key, val in self.project.menutemplate.settings.dict().iteritems():
+		for key, val in self.project.menutemplate.settings.dict().items():
 			self.keydict[val] = key
 
 	def keyLeft(self):
@@ -196,8 +196,8 @@ class ProjectSettings(ConfigListScreen, Screen):
 
 	def ok(self):
 		key = self.keydict[self["config"].getCurrent()[1]]
-		from DVDProject import ConfigFilename
-		if type(self["config"].getCurrent()[1]) == ConfigFilename:
+		from .DVDProject import ConfigFilename
+		if isinstance(self["config"].getCurrent()[1], ConfigFilename):
 			self.session.openWithCallback(self.FileBrowserClosed, FileBrowser, key, self["config"].getCurrent()[1])
 
 	def cancel(self):
@@ -220,14 +220,14 @@ class ProjectSettings(ConfigListScreen, Screen):
 	def FileBrowserClosed(self, path, scope, configRef):
 		if scope == "menutemplate":
 			if self.project.menutemplate.loadTemplate(path):
-				print "[ProjectSettings] menu template loaded"
+				print("[ProjectSettings] menu template loaded")
 				configRef.setValue(path)
 				self.initConfigList()
 			else:
 				self.session.open(MessageBox, self.project.error, MessageBox.TYPE_ERROR)
 		elif scope == "project":
 			self.path = path
-			print "len(self.titles)", len(self.project.titles)
+			print("len(self.titles)", len(self.project.titles))
 			if len(self.project.titles):
 				self.session.openWithCallback(self.askLoadCB, MessageBox, text=_("Your current collection will get lost!") + "\n" + _("Do you want to restore your settings?"), type=MessageBox.TYPE_YESNO)
 			else:

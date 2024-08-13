@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from Screen import Screen
+from Screens.Screen import Screen
 from Components.Pixmap import Pixmap
 from Components.config import config, ConfigInteger
 from Components.Sources.Boolean import Boolean
@@ -7,7 +7,7 @@ from Components.Label import Label
 from Components.ServiceEventTracker import ServiceEventTracker
 from enigma import eDVBSatelliteEquipmentControl, eTimer, iPlayableService, eServiceCenter, iServiceInformation
 from Components.NimManager import nimmanager
-from Components.SystemInfo import SystemInfo
+from Components.SystemInfo import BoxInfo
 from Components.Sources.FrontendStatus import FrontendStatus
 
 INVALID_POSITION = 9999
@@ -57,6 +57,8 @@ class Dish(Screen):
 		self.__state = self.STATE_HIDDEN
 		self.onShow.append(self.__onShow)
 		self.onHide.append(self.__onHide)
+		from Screens.InfoBarGenerics import streamrelay
+		self.streamrelay = streamrelay
 		self.__event_tracker = ServiceEventTracker(screen=self,
 			eventmap={
 				iPlayableService.evStart: self.__serviceStarted,
@@ -70,8 +72,11 @@ class Dish(Screen):
 				if sat[0] not in self.available_sat:
 					self.available_sat.append(sat[0])
 
+	def getRotorMovingState(self):
+		return eDVBSatelliteEquipmentControl.getInstance().isRotorMoving()
+
 	def updateRotorMovingState(self):
-		moving = eDVBSatelliteEquipmentControl.getInstance().isRotorMoving()
+		moving = self.getRotorMovingState()
 		if moving:
 			if self.rotor_sat is None:
 				self.rotor_sat = self.isSatRotorMode()
@@ -90,8 +95,10 @@ class Dish(Screen):
 			self["turnTime"].setText(self.FormatTurnTime(self.turn_time))
 			self.close_timeout -= 1
 			if self.close_timeout < 0:
-				print "[Dish] timeout!"
+				print("[Dish] timeout!")
 				self.__toHide()
+		elif self.streamrelay.checkService(self.session.nav.getCurrentlyPlayingServiceReference()) and not self.getRotorMovingState():
+			self.__toHide()
 
 	def __onShow(self):
 		self.__state = self.STATE_SHOWN
@@ -126,7 +133,7 @@ class Dish(Screen):
 	def __serviceStarted(self):
 		if self.__state == self.STATE_SHOWN:
 			self.hide()
-		if SystemInfo["isRotorTuner"] and self.showdish:
+		if BoxInfo.getItem("isRotorTuner") and self.showdish:
 			service = self.session.nav.getCurrentService()
 			info = service and service.info()
 			data = info and info.getInfoObject(iServiceInformation.sTransponderData)
@@ -148,7 +155,7 @@ class Dish(Screen):
 			self.hide()
 
 	def __serviceTunedIn(self):
-		if self.close_timeout is not None:
+		if self.close_timeout is not None and not self.streamrelay.checkService(self.session.nav.getCurrentlyPlayingServiceReference()):
 			self.pmt_timeout = self.close_timeout
 			self.timeoutTimer.start(500, False)
 
@@ -156,15 +163,15 @@ class Dish(Screen):
 		if self.pmt_timeout >= 0:
 			service = self.session.nav.getCurrentService()
 			info = service and service.info()
-			pmt = info and info.getInfo(iServiceInformation.sPMTPID)
+			pmt = info and info.getInfo(iServiceInformation.sPMTPID) or -1
 			if pmt >= 0:
-				print "[Dish] tuned, closing..."
+				print("[Dish] tuned, closing...")
 				self.__toHide()
 			else:
 				self.pmt_timeout -= 0.5
 		else:
 			self.__toHide()
-			print "[Dish] tuning failed"
+			print("[Dish] tuning failed")
 
 	def dishState(self):
 		return self.__state
@@ -204,8 +211,7 @@ class Dish(Screen):
 					return nim.turningspeedH.float
 			elif nimConfig.configMode.value == "advanced":
 				if self.cur_orbpos != INVALID_POSITION:
-					satlist = nimConfig.advanced.sat.keys()
-					if self.cur_orbpos in satlist:
+					if self.cur_orbpos in nimConfig.advanced.sat.keys():
 						currSat = nimConfig.advanced.sat[self.cur_orbpos]
 						lnbnum = int(currSat.lnb.value)
 						currLnb = lnbnum and nimConfig.advanced.lnb[lnbnum]
@@ -280,7 +286,7 @@ class Dishpip(Dish, Screen):
 		self.frontend = None
 		self["Frontend"] = FrontendStatus(service_source=lambda: self.frontend, update_interval=1000)
 		self.rotorTimer = eTimer()
-		self.rotorTimer.timeout.get().append(self.updateRotorMovingState)
+		self.rotorTimer.callback.append(self.updateRotorMovingState)
 		self.turnTimer = eTimer()
 		self.turnTimer.callback.append(self.turnTimerLoop)
 		self.timeoutTimer = eTimer()
@@ -292,16 +298,13 @@ class Dishpip(Dish, Screen):
 		self.onShow.append(self.__onShow)
 		self.onHide.append(self.__onHide)
 
-	def getRotorMovingState(self):
-		return eDVBSatelliteEquipmentControl.getInstance().isRotorMoving()
-
 	def updateRotorMovingState(self):
 		moving = self.getRotorMovingState()
 		if moving:
 			if self.__state == self.STATE_HIDDEN:
 				self.rotorTimer.stop()
 				self.moving_timeout = 0
-				if config.usage.showdish.value and SystemInfo["isRotorTuner"]:
+				if config.usage.showdish.value and BoxInfo.getItem("isRotorTuner"):
 					self.show()
 				if self.cur_orbpos != INVALID_POSITION and self.cur_orbpos != config.misc.lastrotorposition.value:
 					config.misc.lastrotorposition.value = self.cur_orbpos
@@ -328,7 +331,7 @@ class Dishpip(Dish, Screen):
 	def startPiPService(self, ref=None):
 		if self.__state == self.STATE_SHOWN:
 			self.__toHide()
-		if ref and SystemInfo["isRotorTuner"]:
+		if ref and BoxInfo.getItem("isRotorTuner"):
 			info = eServiceCenter.getInstance().info(ref)
 			data = info and info.getInfoObject(ref, iServiceInformation.sTransponderData)
 			if not data or data == -1:
@@ -339,9 +342,9 @@ class Dishpip(Dish, Screen):
 				if cur_orbpos in self.available_sat:
 					self.cur_orbpos = cur_orbpos
 					self.cur_polar = data.get("polarization", 0)
-					self.moving_timeout = 3
+					self.moving_timeout = 4
 					if not self.rotorTimer.isActive():
-						self.rotorTimer.start(500, True)
+						self.rotorTimer.start(1000, True)
 
 	def __onShow(self):
 		self.__state = self.STATE_SHOWN
@@ -388,7 +391,7 @@ class Dishpip(Dish, Screen):
 	def getCurrentTuner(self):
 		if hasattr(self.session, 'pipshown') and self.session.pipshown:
 			service = self.session.pip.pipservice
-			if service is False or service is None:
+			if not service:
 				return None
 			self.frontend = service
 			feinfo = service and service.frontendInfo()
