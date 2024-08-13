@@ -13,15 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-<<<<<<< HEAD
-    strategy:
-      matrix:
-        gcc: [8, 10]
-=======
     env:
       CC: "gcc-10"
       CXX: "g++-10"
->>>>>>> scarthgap
     steps:
     - uses: actions/checkout@v3
     - name: install python packages
