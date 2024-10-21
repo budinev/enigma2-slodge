@@ -81,6 +81,7 @@ listscreen = config.misc.graph_mepg.default_mode.value
 
 
 class EPGList(GUIComponent):
+	buildEntryExtensionFunctions = []
 	def __init__(self, selChangedCB=None, timer=None, time_epoch=120, overjump_empty=True, epg_bouquet=None):
 		GUIComponent.__init__(self)
 		self.cur_event = None
@@ -174,7 +175,7 @@ class EPGList(GUIComponent):
 
 	def applySkin(self, desktop, screen):
 		def EntryFont(value):
-			font = parseFont(value, ((1, 1), (1, 1)))
+			font = parseFont(value, screen.scale)
 			self.entryFontName = font.family
 			self.entryFontSize = font.pointSize
 
@@ -215,7 +216,7 @@ class EPGList(GUIComponent):
 			self.eventNamePadding = parseScale(value)
 
 		def ServiceFont(value):
-			self.serviceFont = parseFont(value, ((1, 1), (1, 1)))
+			self.serviceFont = parseFont(value, screen.scale)
 
 		def ServiceForegroundColor(value):
 			self.foreColorService = parseColor(value).argb()
@@ -734,6 +735,8 @@ class EPGList(GUIComponent):
 					size=(r2.w - 2 * self.eventBorderVerWidth, r2.h - 2 * self.eventBorderHorWidth),
 					png=self.selEvPix,
 					flags=BT_SCALE))
+		for f in EPGList.buildEntryExtensionFunctions:
+			f(res, self, service, service_name, events, picon, serviceref)
 		return res
 
 	def selEntry(self, dir, visible=True):
@@ -873,7 +876,7 @@ class TimelineText(GUIComponent):
 			self.backColor = parseColor(value).argb()
 
 		def font(value):
-			self.font = parseFont(value, ((1, 1), (1, 1)))
+			self.font = parseFont(value, screen.scale)
 		for (attrib, value) in list(self.skinAttributes):
 			try:
 				locals().get(attrib)(value)
@@ -974,7 +977,7 @@ class GraphMultiEPG(Screen, HelpableScreen):
 		self.selectBouquet = selectBouquet
 		self.epg_bouquet = epg_bouquet
 		self.serviceref = None
-		now = time() - config.epg.histminutes.getValue() * 60
+		now = time() - (int(config.epg.histminutes.value) * 60)
 		self.ask_time = now - now % int(config.misc.graph_mepg.roundTo.getValue())
 		self["key_red"] = Button("")
 		self["key_green"] = Button("")
@@ -1184,7 +1187,7 @@ class GraphMultiEPG(Screen, HelpableScreen):
 	def onDateTimeInputClosed(self, ret):
 		if len(ret) > 1:
 			if ret[0]:
-				now = time() - config.epg.histminutes.getValue() * 60
+				now = time() - (int(config.epg.histminutes.value) * 60)
 				self.ask_time = ret[1] if ret[1] >= now else now
 				self.ask_time = self.ask_time - self.ask_time % int(config.misc.graph_mepg.roundTo.getValue())
 				l = self["list"]
@@ -1196,7 +1199,7 @@ class GraphMultiEPG(Screen, HelpableScreen):
 
 	def setNewTime(self, type=''):
 		if type:
-			date = time() - config.epg.histminutes.getValue() * 60
+			date = time() - (int(config.epg.histminutes.value) * 60)
 			if type == "now_time":
 				self.time_mode = self.TIME_NOW
 				self["key_blue"].setText(_("Prime time"))
@@ -1244,7 +1247,7 @@ class GraphMultiEPG(Screen, HelpableScreen):
 		l.setEpoch(config.misc.graph_mepg.prev_time_period.value)
 		l.setOverjump_Empty(config.misc.graph_mepg.overjump.value)
 		l.setShowServiceMode(config.misc.graph_mepg.servicetitle_mode.value)
-		now = time() - config.epg.histminutes.getValue() * 60
+		now = time() - (int(config.epg.histminutes.value) * 60)
 		self.ask_time = now - now % int(config.misc.graph_mepg.roundTo.getValue())
 		self["timeline_text"].setDateFormat(config.misc.graph_mepg.servicetitle_mode.value)
 		l.fillMultiEPG(None, self.ask_time)
