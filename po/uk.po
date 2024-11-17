@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 15:02+0200\n"
+"POT-Creation-Date: 2024-11-08 13:16+0100\n"
 "PO-Revision-Date: 2022-09-27 16:12+0200\n"
 "Last-Translator: kvinto\n"
 "Language-Team: kvinto\n"
@@ -81,6 +81,10 @@ msgstr " (ТБ)"
 
 msgid " (auto detection)"
 msgstr " (автоматичне виявлення)"
+
+#, fuzzy
+msgid " (circular LNB)"
+msgstr "Використовувати круговий LNB"
 
 msgid " (disabled)"
 msgstr " (вимкнуто)"
@@ -278,6 +282,13 @@ msgid_plural "%d subdirectories"
 msgstr[0] "%d директорія"
 msgstr[1] "%d директорії"
 msgstr[2] "%d директорій"
+
+#, fuzzy, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "щотижня"
+msgstr[1] "щотижня"
+msgstr[2] "щотижня"
 
 #, python-format
 msgid "%d wireless network found!"
@@ -3879,6 +3890,9 @@ msgstr "Точне переміщення"
 msgid "Finetune"
 msgstr "Точне налаштування"
 
+msgid "Finetune the auto DiSEqC order to in your situation the satellites could be found faster."
+msgstr ""
+
 msgid "Finished"
 msgstr "Завершено"
 
@@ -4893,6 +4907,9 @@ msgstr "LAN з'єднання"
 
 msgid "LNB"
 msgstr "Конвертор"
+
+msgid "LOSTLOCK"
+msgstr ""
 
 msgid "Language"
 msgstr "Мова"
@@ -8091,6 +8108,9 @@ msgstr "Встановіть альтернативні резервні тюн�
 
 msgid "Set as startup service"
 msgstr "Зробити канал стартовим"
+
+msgid "Set auto DiSEqC search order"
+msgstr ""
 
 msgid "Set blocktimes by weekday"
 msgstr "Встановити блокування по буднях"
@@ -11571,9 +11591,6 @@ msgstr "щодня"
 msgid "day"
 msgstr "день"
 
-msgid "days"
-msgstr ""
-
 msgid "default"
 msgstr "за замовчуванням"
 
@@ -11778,14 +11795,6 @@ msgstr ""
 msgid "horizontal"
 msgstr "горизонталь"
 
-#, fuzzy
-msgid "hour"
-msgstr "%d година"
-
-#, fuzzy
-msgid "hours"
-msgstr "%d година"
-
 msgid "in menu and plugins"
 msgstr "в меню та плагінах"
 
@@ -11893,14 +11902,6 @@ msgstr "хв"
 
 msgid "mins"
 msgstr "хв"
-
-#, fuzzy
-msgid "minute"
-msgstr "%d хвилина"
-
-#, fuzzy
-msgid "minutes"
-msgstr "%d хвилин"
 
 msgid "module disabled"
 msgstr "модуль вимкнено"
@@ -12390,15 +12391,7 @@ msgstr "очікування"
 msgid "water sport"
 msgstr "водяний вид спорту"
 
-#, fuzzy
-msgid "week"
-msgstr "щотижня"
-
 msgid "weekly"
-msgstr "щотижня"
-
-#, fuzzy
-msgid "weeks"
 msgstr "щотижня"
 
 msgid "west"

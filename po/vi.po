@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 15:02+0200\n"
+"POT-Creation-Date: 2024-11-08 13:16+0100\n"
 "PO-Revision-Date: 2021-08-02 09:19+0700\n"
 "Last-Translator: krong\n"
 "Language-Team: none\n"
@@ -80,6 +80,10 @@ msgstr " (TV)"
 
 msgid " (auto detection)"
 msgstr " (tự động phát hiện)"
+
+#, fuzzy
+msgid " (circular LNB)"
+msgstr "Sử dụng LNB tròn"
 
 msgid " (disabled)"
 msgstr " (cho phép/không cho phép)"
@@ -256,6 +260,11 @@ msgstr[0] "%d giây"
 msgid "%d subdirectory"
 msgid_plural "%d subdirectories"
 msgstr[0] "%d thư mục con"
+
+#, fuzzy, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "hàng tuần"
 
 #, python-format
 msgid "%d wireless network found!"
@@ -3884,6 +3893,9 @@ msgstr "Phong trào tốt"
 msgid "Finetune"
 msgstr "Tinh chỉnh"
 
+msgid "Finetune the auto DiSEqC order to in your situation the satellites could be found faster."
+msgstr ""
+
 msgid "Finished"
 msgstr "Đã kết thúc"
 
@@ -4906,6 +4918,9 @@ msgstr "Kết nối mạng nội bộ"
 
 msgid "LNB"
 msgstr "LNB"
+
+msgid "LOSTLOCK"
+msgstr ""
 
 msgid "Language"
 msgstr "Ngôn ngữ"
@@ -8120,6 +8135,9 @@ msgstr "Đặt bộ điều chỉnh dự phòng thay thế cho DVB-T / C hoặc 
 
 msgid "Set as startup service"
 msgstr "Đặt làm dịch vụ khởi động"
+
+msgid "Set auto DiSEqC search order"
+msgstr ""
 
 msgid "Set blocktimes by weekday"
 msgstr "Đặt blocktimes theo ngày trong tuần"
@@ -11638,9 +11656,6 @@ msgstr "hằng ngày"
 msgid "day"
 msgstr "ngày"
 
-msgid "days"
-msgstr ""
-
 msgid "default"
 msgstr "mặc định"
 
@@ -11848,14 +11863,6 @@ msgstr ""
 msgid "horizontal"
 msgstr "ngang"
 
-#, fuzzy
-msgid "hour"
-msgstr "%d giờ"
-
-#, fuzzy
-msgid "hours"
-msgstr "%d giờ"
-
 msgid "in menu and plugins"
 msgstr "trong menu và plugin"
 
@@ -11966,14 +11973,6 @@ msgstr " min"
 
 msgid "mins"
 msgstr "phút"
-
-#, fuzzy
-msgid "minute"
-msgstr "%d phút"
-
-#, fuzzy
-msgid "minutes"
-msgstr "%d phút"
 
 #, fuzzy
 msgid "module disabled"
@@ -12476,15 +12475,7 @@ msgstr "đang chờ đợi"
 msgid "water sport"
 msgstr "thể thao dưới nước"
 
-#, fuzzy
-msgid "week"
-msgstr "hàng tuần"
-
 msgid "weekly"
-msgstr "hàng tuần"
-
-#, fuzzy
-msgid "weeks"
 msgstr "hàng tuần"
 
 msgid "west"

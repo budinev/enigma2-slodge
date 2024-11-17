@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 15:02+0200\n"
+"POT-Creation-Date: 2024-11-08 13:16+0100\n"
 "PO-Revision-Date: 2021-07-31 17:00+0800\n"
 "Last-Translator: 孤独之剑 <haotzyy1970@yahoo.com>\n"
 "Language-Team: 孤独之剑 <haotzyy1970@yahoo.com>\n"
@@ -81,6 +81,10 @@ msgstr " (电视)"
 
 msgid " (auto detection)"
 msgstr " 音频选择"
+
+#, fuzzy
+msgid " (circular LNB)"
+msgstr "使用圆极化高频头"
 
 msgid " (disabled)"
 msgstr " (禁用)"
@@ -268,6 +272,12 @@ msgid "%d subdirectory"
 msgid_plural "%d subdirectories"
 msgstr[0] "%d 子目录"
 msgstr[1] "%d 子目录"
+
+#, fuzzy, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "每周"
+msgstr[1] "每周"
 
 #, python-format
 msgid "%d wireless network found!"
@@ -3900,6 +3910,9 @@ msgstr "精确运动"
 msgid "Finetune"
 msgstr "微调"
 
+msgid "Finetune the auto DiSEqC order to in your situation the satellites could be found faster."
+msgstr ""
+
 msgid "Finished"
 msgstr "完成"
 
@@ -4919,6 +4932,9 @@ msgstr "局域网连接"
 
 msgid "LNB"
 msgstr "高频头"
+
+msgid "LOSTLOCK"
+msgstr ""
 
 msgid "Language"
 msgstr "语言设置"
@@ -8137,6 +8153,9 @@ msgstr "DVB-T/C或ATSC备用调谐器的识别"
 
 msgid "Set as startup service"
 msgstr "设置为启动频道"
+
+msgid "Set auto DiSEqC search order"
+msgstr ""
 
 msgid "Set blocktimes by weekday"
 msgstr "设置普通日(周六,日以外的任何一天)"
@@ -11659,9 +11678,6 @@ msgstr "每天"
 msgid "day"
 msgstr "天"
 
-msgid "days"
-msgstr ""
-
 msgid "default"
 msgstr "默认"
 
@@ -11869,14 +11885,6 @@ msgstr ""
 msgid "horizontal"
 msgstr "水平"
 
-#, fuzzy
-msgid "hour"
-msgstr "%d 个小时"
-
-#, fuzzy
-msgid "hours"
-msgstr "%d 个小时"
-
 msgid "in menu and plugins"
 msgstr "菜单和插件"
 
@@ -11987,14 +11995,6 @@ msgstr " 分钟"
 
 msgid "mins"
 msgstr "分钟"
-
-#, fuzzy
-msgid "minute"
-msgstr "%d 分钟"
-
-#, fuzzy
-msgid "minutes"
-msgstr "%d 分钟"
 
 #, fuzzy
 msgid "module disabled"
@@ -12497,15 +12497,7 @@ msgstr "等待"
 msgid "water sport"
 msgstr "水上运动"
 
-#, fuzzy
-msgid "week"
-msgstr "每周"
-
 msgid "weekly"
-msgstr "每周"
-
-#, fuzzy
-msgid "weeks"
 msgstr "每周"
 
 msgid "west"
