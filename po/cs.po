@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 15:02+0200\n"
+"POT-Creation-Date: 2024-11-08 13:16+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: IMS <ims@openpli.org>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -88,6 +88,9 @@ msgstr " (TV)"
 #
 msgid " (auto detection)"
 msgstr " (automatická detekce)"
+
+msgid " (circular LNB)"
+msgstr " (circular LNB)"
 
 #
 msgid " (disabled)"
@@ -295,6 +298,14 @@ msgid_plural "%d subdirectories"
 msgstr[0] "%d podadresář"
 msgstr[1] "%d podadresáře"
 msgstr[2] "%d podadresářů"
+
+#
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d týden"
+msgstr[1] "%d týdny"
+msgstr[2] "%d týdnů"
 
 #
 #, python-format
@@ -1502,7 +1513,7 @@ msgid "Basque"
 msgstr "Baskicky"
 
 msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
-msgstr "Před odesláním příkazu pro přepnutí TV do pohotovostního režimu satelitní příkaz testuje, zda ostatní přijímače zapojené do TV jsou také v pohotovostním režimu. Jestliže ne, odesílá se příkaz 'sourceinactive' místo 'standby'."
+msgstr "Před odesláním příkazu pro přepnutí TV do pohotovostního režimu přijímač testuje, zda ostatní přijímače zapojené do TV jsou též v pohotovostním režimu. Jestliže ne, odesílá se příkaz 'sourceinactive' místo 'standby'."
 
 #
 msgid "Begin time"
@@ -2047,7 +2058,7 @@ msgid "Christmas Island"
 msgstr "Vánoční ostrov"
 
 msgid "Circular LNB"
-msgstr "Kruhový LNB"
+msgstr "Circular LNB"
 
 #
 msgid "Circular left"
@@ -4419,6 +4430,9 @@ msgstr "Jemné natáčení"
 msgid "Finetune"
 msgstr "Jemné ladění"
 
+msgid "Finetune the auto DiSEqC order to in your situation the satellites could be found faster."
+msgstr "Zvolte nastavení pro autoDiSEqC, aby byly satelity ve vašem případě nalezeny rychleji."
+
 #
 msgid "Finished"
 msgstr "Dokončeno"
@@ -5559,6 +5573,9 @@ msgstr "LAN připojení"
 #
 msgid "LNB"
 msgstr "LNB"
+
+msgid "LOSTLOCK"
+msgstr ""
 
 #
 msgid "Language"
@@ -9273,6 +9290,9 @@ msgstr "Nastavení záložních tunerů pro DVB-T/C nebo ATSC"
 msgid "Set as startup service"
 msgstr "Nastavit jako program po spuštění"
 
+msgid "Set auto DiSEqC search order"
+msgstr "Nastavení pořadí vyhledávání pro autoDiSEqC"
+
 msgid "Set blocktimes by weekday"
 msgstr "Nastavit časy blokování podle dnů"
 
@@ -10597,7 +10617,7 @@ msgstr ""
 "Pro případné korekce můžete kontaktovat autora\n"
 "na výše uvedené adrese.\n"
 "\n"
-"®23.10.2024"
+"®8.11.2024"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -11797,7 +11817,7 @@ msgid "Use as PiP if possible"
 msgstr "Použít jako PiP"
 
 msgid "Use circular LNB"
-msgstr "Použít kruhový LNB"
+msgstr "Použít circular LNB"
 
 msgid "Use fastscan channel names"
 msgstr "Použít fastscan jména kanálů"
@@ -13177,9 +13197,6 @@ msgstr "Denně"
 msgid "day"
 msgstr "den"
 
-msgid "days"
-msgstr "dny"
-
 #
 msgid "default"
 msgstr "Výchozí"
@@ -13415,12 +13432,6 @@ msgstr "vysoký"
 msgid "horizontal"
 msgstr "Horizontální"
 
-msgid "hour"
-msgstr "hodina"
-
-msgid "hours"
-msgstr "hodiny"
-
 msgid "in menu and plugins"
 msgstr "V menu a pluginech"
 
@@ -13545,12 +13556,6 @@ msgstr " min"
 
 #
 msgid "mins"
-msgstr "minut"
-
-msgid "minute"
-msgstr "minuta"
-
-msgid "minutes"
 msgstr "minut"
 
 #
@@ -14126,16 +14131,8 @@ msgid "water sport"
 msgstr "vodní sporty"
 
 #
-msgid "week"
-msgstr "týden"
-
-#
 msgid "weekly"
 msgstr "Týdně"
-
-#
-msgid "weeks"
-msgstr "týdny"
 
 msgid "west"
 msgstr "západ"

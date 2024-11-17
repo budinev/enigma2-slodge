@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 15:02+0200\n"
+"POT-Creation-Date: 2024-11-08 13:16+0100\n"
 "PO-Revision-Date: 2024-04-10 19:08+0300\n"
 "Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
 "Language-Team: openPLi Dimitrij\n"
@@ -81,6 +81,10 @@ msgstr " (ТВ)"
 
 msgid " (auto detection)"
 msgstr " (авто детекция)"
+
+#, fuzzy
+msgid " (circular LNB)"
+msgstr "Использовать круговой LNB"
 
 msgid " (disabled)"
 msgstr " (отключен)"
@@ -278,6 +282,13 @@ msgid_plural "%d subdirectories"
 msgstr[0] "%d подкаталог"
 msgstr[1] "%d подкаталога"
 msgstr[2] "%d подкаталогов"
+
+#, fuzzy, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "неделя"
+msgstr[1] "неделя"
+msgstr[2] "неделя"
 
 #, python-format
 msgid "%d wireless network found!"
@@ -3869,6 +3880,9 @@ msgstr "Тонкое перемещение"
 msgid "Finetune"
 msgstr "Тонкая настройка"
 
+msgid "Finetune the auto DiSEqC order to in your situation the satellites could be found faster."
+msgstr ""
+
 msgid "Finished"
 msgstr "Завершено"
 
@@ -4881,6 +4895,9 @@ msgstr "Подключение LAN"
 
 msgid "LNB"
 msgstr "LNB"
+
+msgid "LOSTLOCK"
+msgstr ""
 
 msgid "Language"
 msgstr "Выбор языка"
@@ -8070,6 +8087,9 @@ msgstr "Установите резервный удаленный ресиве�
 
 msgid "Set as startup service"
 msgstr "Назначить сервис стартовым при загрузке"
+
+msgid "Set auto DiSEqC search order"
+msgstr ""
 
 msgid "Set blocktimes by weekday"
 msgstr "Установка время игнорирования по дням"
@@ -11543,9 +11563,6 @@ msgstr "ежедневно"
 msgid "day"
 msgstr "день"
 
-msgid "days"
-msgstr "дней"
-
 msgid "default"
 msgstr "по умолчанию"
 
@@ -11750,12 +11767,6 @@ msgstr "широкий"
 msgid "horizontal"
 msgstr "горизонтальная"
 
-msgid "hour"
-msgstr "час"
-
-msgid "hours"
-msgstr "часов"
-
 msgid "in menu and plugins"
 msgstr "меню и плагины"
 
@@ -11863,12 +11874,6 @@ msgstr "мин"
 
 msgid "mins"
 msgstr "мин"
-
-msgid "minute"
-msgstr "минута"
-
-msgid "minutes"
-msgstr "минут"
 
 msgid "module disabled"
 msgstr "модуль отключен"
@@ -12358,14 +12363,8 @@ msgstr "ожидание"
 msgid "water sport"
 msgstr "водный спорт"
 
-msgid "week"
-msgstr "неделя"
-
 msgid "weekly"
 msgstr "еженедельно"
-
-msgid "weeks"
-msgstr "недель"
 
 msgid "west"
 msgstr "запад"

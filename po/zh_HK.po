@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 15:02+0200\n"
+"POT-Creation-Date: 2024-11-08 13:16+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: 王彪 <satfan@163.com>\n"
 "Language-Team: 中國\n"
@@ -75,6 +75,10 @@ msgstr ""
 
 msgid " (auto detection)"
 msgstr ""
+
+#, fuzzy
+msgid " (circular LNB)"
+msgstr "左旋"
 
 msgid " (disabled)"
 msgstr ""
@@ -264,6 +268,12 @@ msgid "%d subdirectory"
 msgid_plural "%d subdirectories"
 msgstr[0] ""
 msgstr[1] ""
+
+#, fuzzy, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "每週"
+msgstr[1] "每週"
 
 #, python-format
 msgid "%d wireless network found!"
@@ -3874,6 +3884,9 @@ msgstr ""
 msgid "Finetune"
 msgstr "調整"
 
+msgid "Finetune the auto DiSEqC order to in your situation the satellites could be found faster."
+msgstr ""
+
 msgid "Finished"
 msgstr "完成"
 
@@ -4903,6 +4916,9 @@ msgstr ""
 
 msgid "LNB"
 msgstr "LNB"
+
+msgid "LOSTLOCK"
+msgstr ""
 
 msgid "Language"
 msgstr "語言"
@@ -8175,6 +8191,9 @@ msgid "Set alternative fallback tuners for DVB-T/C or ATSC"
 msgstr ""
 
 msgid "Set as startup service"
+msgstr ""
+
+msgid "Set auto DiSEqC search order"
 msgstr ""
 
 msgid "Set blocktimes by weekday"
@@ -11620,9 +11639,6 @@ msgstr "每天"
 msgid "day"
 msgstr "天"
 
-msgid "days"
-msgstr ""
-
 msgid "default"
 msgstr "預設"
 
@@ -11832,14 +11848,6 @@ msgid "horizontal"
 msgstr "水準"
 
 #, fuzzy
-msgid "hour"
-msgstr "%d jam"
-
-#, fuzzy
-msgid "hours"
-msgstr "%d jam"
-
-#, fuzzy
 msgid "in menu and plugins"
 msgstr "移除插件"
 
@@ -11951,14 +11959,6 @@ msgstr "%d 分鐘"
 
 msgid "mins"
 msgstr "分鐘"
-
-#, fuzzy
-msgid "minute"
-msgstr "%d menit"
-
-#, fuzzy
-msgid "minutes"
-msgstr "%d menit"
 
 #, fuzzy
 msgid "module disabled"
@@ -12460,15 +12460,7 @@ msgstr "等待"
 msgid "water sport"
 msgstr ""
 
-#, fuzzy
-msgid "week"
-msgstr "每週"
-
 msgid "weekly"
-msgstr "每週"
-
-#, fuzzy
-msgid "weeks"
 msgstr "每週"
 
 msgid "west"
