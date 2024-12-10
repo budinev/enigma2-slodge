@@ -50,13 +50,15 @@ def getSlotImageInfo(slot, imagedir="/"):
 	if os.path.isfile(os.path.join(imagedir, "usr/lib/enigma.info")):
 		print("[multiboot] [GetImagelist] using enigma.info")
 		BoxInfoInstance = BoxInformation(root=imagedir) if getCurrentImage() != slot else BoxInfo
-		Creator = BoxInfoInstance.getItem("distro", "").capitalize()
+		Creator = BoxInfoInstance.getItem("displaydistro", "")
 		BuildImgVersion = BoxInfoInstance.getItem("imgversion")
 		BuildType = BoxInfoInstance.getItem("imagetype", "")[0:3]
 		BuildVer = BoxInfoInstance.getItem("imagebuild")
 		BuildDate = estimateSlotImageDate(imagedir, BoxInfoInstance.getItem("compiledate"), BuildVer)
-		BuildDev = str(idb).zfill(3) if BuildType and BuildType != "rel" and (idb := BoxInfoInstance.getItem("imagedevbuild")) else ""
-		return " ".join([str(x).strip() for x in (Creator, BuildImgVersion, BuildType, BuildDev, BuildVer, BuildDate) if x and str(x).strip()])
+		BuildDev = str(idb).zfill(3) if BuildType and BuildType != "rev" and (idb := BoxInfoInstance.getItem("imagedevbuild")) else ""
+		if BuildType == "rev":
+			return " ".join([str(x).strip() for x in (Creator, BuildImgVersion, BuildType, BuildVer, BuildDate) if x and str(x).strip()])
+		return " ".join([str(x).strip() for x in (Creator, BuildImgVersion, BuildDate) if x and str(x).strip()])
 	else:
 		print("[multiboot] [GetImagelist] using etc/issue")
 		try:

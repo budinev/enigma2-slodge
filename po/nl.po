@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-08 13:16+0100\n"
+"POT-Creation-Date: 2024-12-08 15:08+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frenske <voorzitter@openpli.org>\n"
 "Language-Team: PLiteam <translators@openpli.org>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.5\n"
 
 msgid ""
 "\n"
@@ -82,9 +82,8 @@ msgstr " (TV)"
 msgid " (auto detection)"
 msgstr " (auto detectie)"
 
-#, fuzzy
 msgid " (circular LNB)"
-msgstr "Gebruik de circulaire LNB"
+msgstr " (circulaire LNB)"
 
 msgid " (disabled)"
 msgstr " (uitgeschakeld)"
@@ -163,7 +162,7 @@ msgid "%H:%M"
 msgstr "%H:%M"
 
 msgid "%R"
-msgstr ""
+msgstr "%R"
 
 #. TRANSLATORS: full date representations short dayname daynum monthname long year in strftime() format! See 'man strftime'
 msgid "%a %e %B %Y"
@@ -272,11 +271,11 @@ msgid_plural "%d subdirectories"
 msgstr[0] "%d subdirectory"
 msgstr[1] "%d subdirectories"
 
-#, fuzzy, python-format
+#, python-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "wekelijks"
-msgstr[1] "wekelijks"
+msgstr[0] "%d week"
+msgstr[1] "%d weken"
 
 #, python-format
 msgid "%d wireless network found!"
@@ -334,6 +333,10 @@ msgstr ""
 msgid "%s %d.%d"
 msgstr "%s %d.%d"
 
+#, fuzzy, python-format
+msgid "%s (%s)"
+msgstr "%s (bestanden)"
+
 #, python-format
 msgid "%s (files)"
 msgstr "%s (bestanden)"
@@ -367,7 +370,7 @@ msgstr[1] "%s nieuwe pakketten beschikbaar"
 
 #, python-format
 msgid "%s%s(Default: %s)"
-msgstr ""
+msgstr "%s%s(Standaard: %s)"
 
 msgid "'Minimum send interval' needs to be enabled to use this option."
 msgstr "De 'Minimum verzendinterval' moet ingeschakeld zijn om deze optie te gebruiken."
@@ -385,9 +388,8 @@ msgstr "(ZAP)"
 msgid "(activated +%d min)"
 msgstr "(geactiveerd +%d min)"
 
-#, fuzzy
 msgid "(current image)"
-msgstr "(huidige)"
+msgstr "(huidige image)"
 
 msgid "(empty)"
 msgstr "(leeg)"
@@ -402,10 +404,14 @@ msgid "(unknown)"
 msgstr "(onbekend)"
 
 msgid "* = Restart Required"
-msgstr ""
+msgstr "* = Herstart noodzakelijk"
 
 msgid "* Only available if more than one interface is active."
 msgstr "* Alleen beschikbaar indien meer dan één interface is geactiveerd."
+
+msgctxt "Text list separator"
+msgid ", "
+msgstr ""
 
 msgid "-NO SERVICE\n"
 msgstr "-GEEN ZENDER\n"
@@ -420,9 +426,8 @@ msgstr "/s"
 msgid "0"
 msgstr "0"
 
-#, fuzzy
 msgid "0 minutes"
-msgstr "%d minuten"
+msgstr "0 minuten"
 
 msgid "1"
 msgstr "1"
@@ -566,6 +571,9 @@ msgstr "Een bestand op uw (opslag)medium is in gebruik!"
 msgid "A graphical EPG for all services of a specific bouquet"
 msgstr "Grafische EPG voor alle zenders uit een specifiek bouquet"
 
+msgid "A highlight on the remote control image shows which button the help refers to. If more than one button performs the indicated function, more than one highlight will be shown. Text below the list indicates whether the function is for a long press of the button(s)."
+msgstr ""
+
 #, python-format
 msgid ""
 "A recording has started:\n"
@@ -637,6 +645,9 @@ msgstr "AAC transcoding"
 msgid "AAC+ downmix"
 msgstr "AAC downmix"
 
+msgid "ABOUT"
+msgstr ""
+
 msgid "AC3"
 msgstr "AC3"
 
@@ -652,11 +663,23 @@ msgstr "VERKRIJG TSID/ONID"
 msgid "AGC:"
 msgstr "AGC:"
 
+msgid "ARROWLEFT"
+msgstr ""
+
+msgid "ARROWRIGHT"
+msgstr ""
+
 msgid "ASS file"
 msgstr "ASS bestand"
 
 msgid "ATSC provider"
 msgstr "ATSC aanbieder"
+
+msgid "AUDIO"
+msgstr ""
+
+msgid "AUTOTIMER"
+msgstr ""
 
 msgid "Abort"
 msgstr "Afbreken"
@@ -897,6 +920,9 @@ msgstr "Indien geactiveerd, dan kiest u ervoor om met de afstandsbediening van d
 
 msgid "Alpha"
 msgstr "Transparantie"
+
+msgid "Alphabetical under headings"
+msgstr ""
 
 msgid "Also import at reboot/restart enigma2"
 msgstr "Importeer ook bij een herstart van de ontvanger of Enigma"
@@ -1202,9 +1228,8 @@ msgstr "(Auto)installatie is afgerond"
 msgid "Autoinstalling please wait for packages being updated"
 msgstr "Autoinstallatie, wacht totdat alle packages ge-update zijn"
 
-#, fuzzy
 msgid "Automatic Language"
-msgstr "Automatische scan"
+msgstr "Automatische taal"
 
 msgid "Automatic Scan"
 msgstr "Automatische scan"
@@ -1242,11 +1267,23 @@ msgstr "Azerbaijan"
 msgid "B"
 msgstr "B"
 
+msgid "BACK"
+msgstr ""
+
 msgid "BER"
 msgstr "BER"
 
 msgid "BER:"
 msgstr "BER:"
+
+msgid "BLUE"
+msgstr ""
+
+msgid "BOUQUET+"
+msgstr ""
+
+msgid "BOUQUET-"
+msgstr ""
 
 msgid "Back"
 msgstr "Terug"
@@ -1311,6 +1348,10 @@ msgstr "Basis-informatie"
 
 msgid "Basque"
 msgstr "Baskisch"
+
+#, fuzzy
+msgid "Before sending the command to switch the TV to standby, the receiver tests if PC connected to TV is in standby. If it is not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgstr "Indien geactiveerd, dan stelt u in dat voordat de TV naar stand-by gaat, de ontvanger test of alle andere ontvangers die op de TV zijn aangesloten, in stand-by staan. Als dit niet het geval is, dan wordt een 'source-active' signaal in plaats van een 'standaard' signaal naar de TV gestuurd."
 
 msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
 msgstr "Indien geactiveerd, dan stelt u in dat voordat de TV naar stand-by gaat, de ontvanger test of alle andere ontvangers die op de TV zijn aangesloten, in stand-by staan. Als dit niet het geval is, dan wordt een 'source-active' signaal in plaats van een 'standaard' signaal naar de TV gestuurd."
@@ -1378,9 +1419,8 @@ msgstr "Blokruisvermindering"
 msgid "Blue"
 msgstr "Blauw"
 
-#, fuzzy
 msgid "Blue button function"
-msgstr "Kies de gewenste functie"
+msgstr "Functie van de blauwe toets"
 
 msgid "Bolivia (Plurinational State of)"
 msgstr "Bolivia"
@@ -1416,15 +1456,17 @@ msgstr "Bosnië Herzegovina"
 msgid "Botswana"
 msgstr "Botswana"
 
-#, fuzzy
 msgid "Bottom"
-msgstr "onder"
+msgstr "Onder"
 
 msgid "Bouvet Island"
 msgstr "Bouvet eilanden"
 
 msgid "Brazil"
 msgstr "Brasilië"
+
+msgid "Brief help information for buttons in your current context."
+msgstr ""
 
 msgid "Brightness"
 msgstr "Helderheid display indien actief"
@@ -1476,6 +1518,11 @@ msgstr "Sla de HDMI EDID controle over"
 msgid "C"
 msgstr "C"
 
+#, fuzzy
+msgctxt "Abbreviation of \"Configurable\""
+msgid "C"
+msgstr "C"
+
 msgid "C-Band"
 msgstr "C-Band"
 
@@ -1500,6 +1547,10 @@ msgstr "CI geactiveerd"
 
 msgid "CI slot: "
 msgstr "CI slot: "
+
+#, fuzzy
+msgid "CONTEXT"
+msgstr "Tekst"
 
 msgid "CPU: "
 msgstr "CPU: "
@@ -1586,13 +1637,11 @@ msgstr "Canada"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#, fuzzy
 msgid "Cancel any changed settings and exit"
-msgstr "Annuleer alle wijzigingen en stop"
+msgstr "Annuleer alle eerdere wijzigingen en stop"
 
-#, fuzzy
 msgid "Cancel any changed settings and exit all menus"
-msgstr "Annuleer alle wijzigingen in de huidig ​​actieve skin en verlaat het menu"
+msgstr "Annuleer alle eerdere wijzigingen en verlaat het menu"
 
 msgid "Cancel any changes to the currently active skin"
 msgstr "Annuleer alle wijzigingen in de huidig actieve skin"
@@ -1790,6 +1839,9 @@ msgstr "Kies bouquet"
 msgid "Choose the option to correct invalid EPG data."
 msgstr "Selecteer de optie om de onjuiste EPG info te wijzigen."
 
+msgid "Choose the order in which items are displayed in Help windows"
+msgstr ""
+
 msgid "Choose whether AAC sound tracks should be transcoded."
 msgstr "Bepaal of geluid in AAC opmaak getranscodeerd moeten worden."
 
@@ -1917,9 +1969,8 @@ msgstr "Common Interface"
 msgid "Common Interface assignment"
 msgstr "Common Interface taken"
 
-#, fuzzy
 msgid "Common Setup Actions"
-msgstr "Skin selectie actie(s)"
+msgstr "Algemene instellingen"
 
 msgid "Communication"
 msgstr "Mededeling"
@@ -1994,12 +2045,10 @@ msgstr ""
 "\n"
 "U kunt kiezen tussen 'geen timeout' of van 1 tot 11 sec."
 
-#, fuzzy
 msgid "Configure how long finished events should remain visible in the EPG. Useful when you need information about an event which has just finished, or has been delayed (or for plugins that support catchup)."
 msgstr ""
 "Configureer hoe lang afgelopen programma's zichtbaar moet blijven in de EPG. Dit is vooral handig wanneer u informatie wenst over een programma wat net afgelopen is, of vertraagd is.\n"
-"\n"
-"U kunt kiezen tussen 0-120 min in stappen van 15 min."
+" Ook handig bij plug-ins die 'terugkijken' ondersteunen."
 
 msgid "Configure how many channels are shown in the selection list."
 msgstr ""
@@ -2155,9 +2204,8 @@ msgstr ""
 "\n"
 "U kunt kiezen om dit tussen 0 - 60 minuten in te stellen."
 
-#, fuzzy
 msgid "Configure the duration in minutes for the sleeptimer. Select this entry and press blue to start/restart the sleeptimer or use yellow for stop active sleeptimer."
-msgstr "Stel de tijd in voor de sleeptimer. Selecteer deze invoer en druk op 'Ok' of de groene toets om de sleeptimer te starten/stoppen."
+msgstr "Stel de tijdsduur in minuten in voor de slaaptimer. Selecteer dit item en druk op blauw om de slaaptimer te starten/herstarten of gebruik geel om de actieve slaaptimer te stoppen."
 
 msgid "Configure the duration when the receiver should go to shut down in case the receiver is in standby mode."
 msgstr "Configureer na hoeveel tijd de ontvanger volledig moet afsluiten in het geval dat deze in stand-by staat."
@@ -2398,7 +2446,7 @@ msgstr ""
 
 msgid "Configure whether (and for how long) a second infobar will be shown when OK is pressed twice. The second infobar contains additional information about the current channel."
 msgstr ""
-"Met deze optie stelt u in of, en zo ja, hoe lang het uitgebreide informatiescherm getoond moet worden. Het uitgebreide informatiescherm toont aanvullende informatie betreffende de huidige zender.\n"
+"Met deze optie stelt u in of, en zo ja, hoe lang de uitgebreide informatiebalk getoond moet worden. De uitgebreide informatiebalk toont aanvullende informatie betreffende de huidige zender.\n"
 "\n"
 "U kunt kiezen uit, geen weergave, geen timeout, 1-11 sec of bij een EPG update."
 
@@ -2553,10 +2601,10 @@ msgid "Could not record due to invalid service %s"
 msgstr "Kon niet opnemen vanwege een ongeldige service %s"
 
 msgid "Could not retrieve basic bouquets files"
-msgstr ""
+msgstr "De standaard boeketten konden niet geladen worden"
 
 msgid "Could not retrieve the remote support files"
-msgstr ""
+msgstr "De externe supportbestanden konden niet gevonden worden"
 
 msgid "Country"
 msgstr "Land"
@@ -2687,6 +2735,9 @@ msgstr "DMM geavanceerd"
 msgid "DMM normal"
 msgstr "DMM normaal"
 
+msgid "DOWN"
+msgstr ""
+
 msgid "DTS"
 msgstr "DTS"
 
@@ -2781,9 +2832,9 @@ msgstr "Standaard type timer"
 msgid "Default+Picon"
 msgstr "Standaard + Picon"
 
-#, fuzzy, python-format
+#, python-format
 msgid "Default: '%s'."
-msgstr "Standaard"
+msgstr "Standaard: '%s'."
 
 msgid "Define additional delay in milliseconds before start of http(s) streams, e.g. to connect a remote tuner, you use a complex system of DiSEqC."
 msgstr "Definieer de startvertraging in milliseconden, voordat de http(s) stream start. Bijvoorbeeld voor verbindingen met andere tuners of bij complexe DiSEqC installaties."
@@ -2869,13 +2920,11 @@ msgstr "Verwijder dit image"
 msgid "Delete all the text"
 msgstr "Verwijder alle tekst"
 
-#, fuzzy
 msgid "Delete character to left of cursor or select AM times"
-msgstr "Verwijder het teken links van de tekst-cursor"
+msgstr "Verwijder het teken links van de cursor of kies AM tijden"
 
-#, fuzzy
 msgid "Delete character under cursor or select PM times"
-msgstr "Verwijder het teken onder de tekst-cursor"
+msgstr "Verwijder het teken onder de cursor of kies PM tijden"
 
 msgid "Delete entry"
 msgstr "Verwijder de invoer"
@@ -2951,6 +3000,14 @@ msgstr "Hier geeft u de locatie van de Fallback (externe) tuner aan t.b.v. DVB-T
 
 msgid "Details for plugin: "
 msgstr "Plugin details: "
+
+#, fuzzy
+msgid "Detect PC before standby"
+msgstr "Detecteer andere hardware voordat de box naar stand-by gaat"
+
+#, python-format
+msgid "Detect box%s via LAN"
+msgstr ""
 
 msgid "Detect next boxes before standby"
 msgstr "Detecteer andere hardware voordat de box naar stand-by gaat"
@@ -3036,9 +3093,8 @@ msgstr "Deactiveer het huidige, maar niet de komende programma's"
 msgid "Disable move mode"
 msgstr "Verplaatsmode deactiveren"
 
-#, fuzzy
 msgid "Disable operator profiles"
-msgstr "Beschikbare formaten"
+msgstr "Annuleer operator-profielen"
 
 msgid "Disable timer"
 msgstr "Timer uitschakelen"
@@ -3086,7 +3142,7 @@ msgid "Display setup"
 msgstr "Instellingen voor het display"
 
 msgid "Display the virtual keyboard for data entry"
-msgstr ""
+msgstr "Toon het virtuele toetsenbord om gegevens in te voeren"
 
 msgid "Djibouti"
 msgstr "Djibouti"
@@ -3095,7 +3151,7 @@ msgid "Do a cable service scan now"
 msgstr "Voer nu een provider gerelateerde kabelscan uit."
 
 msgid "Do a fast service scan now"
-msgstr "Voer een provider gerelateerde fastscan uit.\\."
+msgstr "Voer een provider gerelateerde FastScan uit."
 
 msgid "Do a manual service scan now"
 msgstr "Voer een handmatig ingevoerde zenderscan uit."
@@ -3252,9 +3308,8 @@ msgstr "Dominicaanse republiek"
 msgid "Don't save and stop timeshift"
 msgstr "Stop de timeshift zonder deze op te slaan."
 
-#, fuzzy
 msgid "Don't show default"
-msgstr "Zet als standaard"
+msgstr "Toon geen standaard"
 
 msgid "Don't stop current event but disable coming events"
 msgstr "Huidige timer niet stoppen, maar toekomstige timers uitschakelen"
@@ -3330,6 +3385,15 @@ msgstr "O"
 msgid "ECM Info"
 msgstr "ECM info"
 
+msgid "EJECTCD"
+msgstr ""
+
+msgid "END"
+msgstr ""
+
+msgid "ENTER"
+msgstr ""
+
 msgid "EPG"
 msgstr "EPG"
 
@@ -3351,9 +3415,15 @@ msgstr "EPG instellingen"
 msgid "EPG:"
 msgstr "EPG:"
 
+msgid "EPGSETUP"
+msgstr ""
+
 #, python-format
 msgid "ERROR - failed to scan (%s)!"
 msgstr "Fout - zoeken mislukt (%s)!"
+
+msgid "EXIT"
+msgstr ""
 
 msgid "East"
 msgstr "Oost"
@@ -3599,9 +3669,8 @@ msgstr "Voer pincode in"
 msgid "Enter URL"
 msgstr "Voer een URL in"
 
-#, fuzzy
 msgid "Enter an URL where alternative images could be listed for FlashImage."
-msgstr "Voer een URL in waar alternatieve afbeeldingen kunnen worden gevonden t.b.v. FlashImage. Voer de tekst 'all' in voor automatische toegang tot een aantal alternatieve images."
+msgstr "Voer een URL in waar alternatieve images kunnen worden gevonden t.b.v. FlashImage. Voer de tekst 'all' in voor automatische toegang tot een aantal alternatieve images."
 
 msgid "Enter if you are in the east or west hemisphere."
 msgstr "Geef aan of je je in het oostelijk of westelijk halfrond bevindt."
@@ -3757,7 +3826,7 @@ msgid "Exceeds dual layer medium!"
 msgstr "Overschrijdt een dual layer schijf"
 
 msgid "Exclude first CA device"
-msgstr ""
+msgstr "Negeer het 1e CA device"
 
 msgid "Execution finished!!"
 msgstr "Voortgang voltooid!"
@@ -3883,6 +3952,16 @@ msgstr "F1/F3/F4/F4-TURBO"
 msgid "FAILED"
 msgstr "MISLUKT"
 
+msgid "FASTFORWARD"
+msgstr ""
+
+#, fuzzy
+msgid "FAV"
+msgstr "FTA"
+
+msgid "FAVORITES"
+msgstr ""
+
 msgid "FBC SCR (Unicable/JESS)"
 msgstr "FBC SCR (Unicable/JESS)"
 
@@ -3925,6 +4004,9 @@ msgstr "FEC:"
 
 msgid "FHD"
 msgstr "FHD"
+
+msgid "FORWARD"
+msgstr ""
 
 msgid "FTA"
 msgstr "FTA"
@@ -4071,7 +4153,7 @@ msgid "Finetune"
 msgstr "Fijn afst."
 
 msgid "Finetune the auto DiSEqC order to in your situation the satellites could be found faster."
-msgstr ""
+msgstr "Verfijn de AutoDiSEqC om binnen uw configuratie de satellieten sneller te vinden."
 
 msgid "Finished"
 msgstr "Voltooid"
@@ -4111,8 +4193,22 @@ msgstr ""
 "Het flashen van de image is mislukt\n"
 "%s"
 
+#, fuzzy
+msgid "Flat alphabetical"
+msgstr "Enkel alfabetisch"
+
+msgid "Flat by key group on remote"
+msgstr ""
+
+#, fuzzy
+msgid "Flat by position on remote"
+msgstr "Eindpositie op"
+
 msgid "Following tasks will be done after you press OK!"
 msgstr "Nadat u op Ok drukt worden de volgende taken uitgevoerd!"
+
+msgid "For detection next receivers use ethernet LAN instead HDMI-CEC protocol."
+msgstr ""
 
 msgid "Force legacy signal stats"
 msgstr "Forceer oude signaal Statistieken"
@@ -4217,6 +4313,9 @@ msgstr "G"
 
 msgid "GB"
 msgstr "GB"
+
+msgid "GREEN"
+msgstr ""
 
 msgid "GUI Settings"
 msgstr "GUI instellingen"
@@ -4435,9 +4534,8 @@ msgstr "HDMI-CEC adres"
 msgid "HDMI-CEC setup"
 msgstr "HDMI-CEC instellingen"
 
-#, fuzzy
 msgid "HDMI-In"
-msgstr "HDMI"
+msgstr "HDMI-In"
 
 msgid "HDR10 support"
 msgstr "HDR10 ondersteuning"
@@ -4448,8 +4546,17 @@ msgstr "HDx1/HD1xxx/HD5x0C/VS1x00/et7x00/et8500/et7000mini"
 msgid "HELP"
 msgstr "HELP"
 
+msgid "HISTORY"
+msgstr ""
+
 msgid "HLG support"
 msgstr "HLG ondersteuning"
+
+msgid "HOME"
+msgstr ""
+
+msgid "HOMEPAGE"
+msgstr ""
 
 msgid "Haiti"
 msgstr "Haiti"
@@ -4486,6 +4593,13 @@ msgstr "Heard en McDonaldeilanden"
 
 msgid "Hebrew"
 msgstr "Hebreeuws"
+
+msgid "Help"
+msgstr ""
+
+#, fuzzy
+msgid "Help Screen"
+msgstr "Stilstaand beeld"
 
 msgid "Helps setting up your antenna"
 msgstr "Hulp om de schotel in te stellen"
@@ -4598,9 +4712,8 @@ msgstr "I"
 msgid "I do not want to perform any service scans"
 msgstr "Ik wil verder geen (aanvullende) zenderscan uitvoeren."
 
-#, fuzzy
 msgid "I55SE/H7(new model)/H9(new model)/H9COMBO/H9TWIN/H9SE/H9COMBOSE/H10/H11/H17"
-msgstr "I55SE / H7(nieuw model) / H9(nieuw model) / H9COMBO / H9TWIN / H9SE / H9COMBOSE / H10"
+msgstr "I55SE/H7(new model)/H9(new model)/H9COMBO/H9TWIN/H9SE/H9COMBOSE/H10/H11/H17"
 
 msgid "IDLE"
 msgstr "INACTIEF"
@@ -4610,6 +4723,10 @@ msgstr "INFO"
 
 msgid "INS"
 msgstr "Invoegen"
+
+#, fuzzy
+msgid "IP"
+msgstr "I"
 
 msgid "IP address"
 msgstr "IP-adres:"
@@ -4628,6 +4745,9 @@ msgstr "Ijsland"
 
 msgid "Icons"
 msgstr "Iconen"
+
+msgid "If an action is user-configurable, its help entry will be flagged (C)"
+msgstr ""
 
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr "Indien niet geactiveerd, dan worden onderstreepte tekens in bestandsnamen of namen vervangen door spaties."
@@ -4748,7 +4868,7 @@ msgid "Import remote receiver URL"
 msgstr "Locatie van de externe ontvanger"
 
 msgid "In Setup screens choose whether to show the default value of the selected item in the description field."
-msgstr ""
+msgstr "Kies binnen de setup of de standaardwaarde van het geselecteerde item getoond moet worden in de omschrijving."
 
 msgid "In order to record a timer, the TV was switched to the recording service!\n"
 msgstr "Vanwege een geplande opname is naar het juiste kanaal geschakeld!\n"
@@ -4858,13 +4978,11 @@ msgstr "Invoerapparaat setup"
 msgid "Input devices"
 msgstr "Invoerapparaten"
 
-#, fuzzy
 msgid "Insert Service"
-msgstr "Zender"
+msgstr "Voeg een zender toe"
 
-#, fuzzy
 msgid "Insert entry"
-msgstr "Timerinvoer"
+msgstr "Voeg een item in"
 
 msgid "Install"
 msgstr "Installeer"
@@ -4982,7 +5100,6 @@ msgstr "Italiaans"
 msgid "Italy"
 msgstr "Italië"
 
-#, fuzzy
 msgid "Items per page"
 msgstr "Items per pagina"
 
@@ -5014,10 +5131,10 @@ msgid "Jump to end of list"
 msgstr "Spring naar het eind van de lijst"
 
 msgid "Jump to first item in list or the start of text"
-msgstr ""
+msgstr "Spring naar het eerste item in de lijst of het begin van de tekst"
 
 msgid "Jump to last item in list or the end of text"
-msgstr ""
+msgstr "Spring naar het laatste item in de lijst of het einde van de tekst"
 
 msgid "Jump to next marked position"
 msgstr "Spring naar de volgende markering"
@@ -5091,17 +5208,31 @@ msgstr "Koeweit"
 msgid "Kyrgyzstan"
 msgstr "Kirgizië"
 
+#, fuzzy
+msgid "LAN"
+msgstr "LNB"
+
 msgid "LAN adapter"
 msgstr "LANadapter"
 
 msgid "LAN connection"
 msgstr "LAN verbinding"
 
+msgid "LEFT"
+msgstr ""
+
+msgid "LIST"
+msgstr ""
+
 msgid "LNB"
 msgstr "LNB"
 
 msgid "LOSTLOCK"
-msgstr ""
+msgstr "LOSTLOCK"
+
+#, fuzzy
+msgid "Label not defined"
+msgstr "Niet vastgelegd"
 
 msgid "Language"
 msgstr "Taal"
@@ -5284,6 +5415,10 @@ msgstr "Lange bestandsnamen"
 msgid "Long key press"
 msgstr "Lange toetsdruk"
 
+#, fuzzy
+msgid "Long press: "
+msgstr "Lange toetsdruk"
+
 msgid "Longitude"
 msgstr "Lengtegraad"
 
@@ -5308,6 +5443,9 @@ msgstr "Luxemburgs"
 msgid "MB"
 msgstr "MB"
 
+msgid "MEDIA"
+msgstr ""
+
 msgid "MENU"
 msgstr "Menu"
 
@@ -5319,6 +5457,9 @@ msgstr "MMC kaart"
 
 msgid "MORE"
 msgstr "MEER"
+
+msgid "MUTE"
+msgstr ""
 
 msgid "Macao"
 msgstr "Macao"
@@ -5456,9 +5597,8 @@ msgstr "Geheugenindex"
 msgid "Menu"
 msgstr "Menu"
 
-#, fuzzy
 msgid "Menu button function"
-msgstr "Kies de gewenste functie"
+msgstr "Functie van de Menutoets"
 
 #, python-format
 msgid "Menusort (%s)"
@@ -5566,13 +5706,11 @@ msgstr "Verplaats het PIP beeld naar het hoofdbeeld"
 msgid "Move Picture in Picture"
 msgstr "Verplaats het PIP scherm"
 
-#, fuzzy
 msgid "Move down a line"
-msgstr "Ga naar beneden"
+msgstr "Ga één regel naar beneden"
 
-#, fuzzy
 msgid "Move down a screen"
-msgstr "verplaats omlaag naar laatste ingave"
+msgstr "Ga één scherm naar beneden"
 
 msgid "Move east"
 msgstr "Draai oost"
@@ -5601,13 +5739,11 @@ msgstr "Beweeg de tekst-cursor naar het eerste teken"
 msgid "Move the text cursor to the last character"
 msgstr "Beweeg de tekst-cursor naar het laatste teken"
 
-#, fuzzy
 msgid "Move to first line / screen"
-msgstr "Verplaats naar de volgende skin"
+msgstr "Ga naar eerste regel/scherm"
 
-#, fuzzy
 msgid "Move to last line / screen"
-msgstr "Verplaats naar de volgende skin"
+msgstr "Ga naar laatste regel/scherm"
 
 msgid "Move to position X"
 msgstr "Ga naar positie X"
@@ -5624,12 +5760,11 @@ msgstr "Verplaats naar de vorige pagina"
 msgid "Move to the previous skin"
 msgstr "Verplaats naar de vorige skin"
 
-#, fuzzy
 msgid "Move up a line"
-msgstr "Gedraaid naar positie op index"
+msgstr "Ga één regel naar boven"
 
 msgid "Move up a screen"
-msgstr ""
+msgstr "Ga één scherm naar boven."
 
 msgid "Move west"
 msgstr "Draai west"
@@ -5718,6 +5853,10 @@ msgstr "0.0 "
 msgid "NEXT"
 msgstr "VOLGENDE"
 
+#, fuzzy
+msgid "NEXTSONG"
+msgstr "VOLGENDE"
+
 msgid "NIM & Type"
 msgstr "NIM & Type"
 
@@ -5747,6 +5886,9 @@ msgstr "Namibië"
 
 msgid "Nauru"
 msgstr "Nauru"
+
+msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. EXIT to return to the help screen. OK to perform the action described in the currently highlighted help."
+msgstr ""
 
 msgid "Nepal"
 msgstr "Nepal"
@@ -5831,6 +5973,10 @@ msgctxt "now/next: 'next' event label"
 msgid "Next"
 msgstr "Straks"
 
+#, fuzzy
+msgid "Next Wizard"
+msgstr "Netwerkwizard"
+
 msgid "Next day starts at"
 msgstr "Dag start om"
 
@@ -5867,9 +6013,8 @@ msgstr "Geen actieve onderliggen zenders beschikbaar."
 msgid "No age block"
 msgstr "Geen leeftijdsbeperking"
 
-#, fuzzy
 msgid "No config items available"
-msgstr "Geen updates beschikbaar."
+msgstr "Geen configuratie-items beschikbaar"
 
 msgid ""
 "No data on transponder!\n"
@@ -6101,6 +6246,9 @@ msgstr "Bevestigen"
 msgid "ONID"
 msgstr "ONID"
 
+msgid "OPTION"
+msgstr ""
+
 msgid "OSD 3D setup"
 msgstr "OSD 3D instelling"
 
@@ -6224,6 +6372,13 @@ msgstr "Andere image"
 msgid "Other Subtitles & lang"
 msgstr "Andere Ondertitels & lang"
 
+msgid "Other buttons will jump to the help for that button, if there is help."
+msgstr ""
+
+#, fuzzy
+msgid "Other functions"
+msgstr "Meer educatie"
+
 msgid "Output"
 msgstr "Uitgang"
 
@@ -6239,8 +6394,17 @@ msgstr "Configuratie bestanden tijdens de software update overschrijven?"
 msgid "Overwrite configuration files?"
 msgstr "Configuratie bestanden overschrijven?"
 
+msgid "PAGEDOWN"
+msgstr ""
+
+msgid "PAGEUP"
+msgstr ""
+
 msgid "PAL"
 msgstr "PAL"
+
+msgid "PAUSE"
+msgstr ""
 
 msgid "PCR PID"
 msgstr "PCR PID"
@@ -6257,6 +6421,15 @@ msgstr "PID filter"
 msgid "PIN code needed"
 msgstr "Pincode nodig"
 
+msgid "PLAY"
+msgstr ""
+
+msgid "PLAYLIST"
+msgstr ""
+
+msgid "PLAYPAUSE"
+msgstr ""
+
 msgid "PLP ID"
 msgstr "PLP ID"
 
@@ -6266,8 +6439,20 @@ msgstr "PLS Code"
 msgid "PLS Mode"
 msgstr "PLS modus"
 
+msgid "PLUGIN"
+msgstr ""
+
 msgid "PMT PID"
 msgstr "PMT PID"
+
+msgid "PORTAL"
+msgstr ""
+
+msgid "POWER"
+msgstr ""
+
+msgid "POWER2"
+msgstr ""
 
 msgid "PPanel"
 msgstr "PPanel"
@@ -6275,8 +6460,16 @@ msgstr "PPanel"
 msgid "PREVIOUS"
 msgstr "Vorige"
 
+#, fuzzy
+msgid "PREVIOUSSONG"
+msgstr "Vorige"
+
 msgid "PULSe 4K(mini)"
 msgstr "PULSe 4K (mini)"
+
+#, fuzzy
+msgid "PVR"
+msgstr "OVR"
 
 msgid "Package list update"
 msgstr "Pakketlijst vernieuwen"
@@ -6488,7 +6681,7 @@ msgstr ""
 "Bevestig uw keuze met Ok. "
 
 msgid "Please contact the manufacturer for clarification."
-msgstr ""
+msgstr "Benader de fabrikant om dit te verhelderen.."
 
 msgid "Please do not change any values unless you know what you are doing!"
 msgstr "Wijzig hier geen instellingen tenzij u precies weet wat u doet"
@@ -6959,8 +7152,15 @@ msgstr "Voorbeeld menu"
 msgid "Preview selected channel"
 msgstr "Preview geselecteerd kanaal"
 
+msgid "Previous Wizard"
+msgstr ""
+
 msgid "Primary DNS"
 msgstr "Primaire DNS:"
+
+#, fuzzy
+msgid "Prime Time"
+msgstr "Prime time"
 
 msgid "Prime time"
 msgstr "Prime time"
@@ -7067,11 +7267,30 @@ msgstr "Snel"
 msgid "Quick zap"
 msgstr "Snelzap"
 
+msgid "RADIO"
+msgstr ""
+
 msgid "REC"
 msgstr "REC"
 
+msgid "RECALL"
+msgstr ""
+
+msgid "RECORD"
+msgstr ""
+
+#, fuzzy
+msgid "RED"
+msgstr "REC"
+
+msgid "REWIND"
+msgstr ""
+
 msgid "RF output"
 msgstr "RF modulator"
+
+msgid "RIGHT"
+msgstr ""
 
 msgid "Radio"
 msgstr "Radio"
@@ -7409,9 +7628,8 @@ msgstr "Herstarten"
 msgid "Restart GUI now?"
 msgstr "Herstart Enigma2 nu?"
 
-#, fuzzy
 msgid "Restart Sleeptimer"
-msgstr "Sleeptimer"
+msgstr "Herstart de sleeptimer"
 
 msgid "Restart both"
 msgstr "Herstart beiden"
@@ -7552,6 +7770,10 @@ msgstr "Russische federatie"
 msgid "Rwanda"
 msgstr "Ruanda"
 
+#, fuzzy
+msgid "SAT"
+msgstr "KA-SAT"
+
 msgid "SCPC optimized search range"
 msgstr "SCPC geoptimaliseerd zoekbereik"
 
@@ -7564,8 +7786,23 @@ msgstr "SCR JESS"
 msgid "SCR Unicable"
 msgstr "SCR Unicable"
 
+msgid "SCREEN"
+msgstr ""
+
+msgid "SETUP"
+msgstr ""
+
+msgid "SHIFT: "
+msgstr ""
+
 msgid "SINGLE LAYER DVD"
 msgstr "SINGLE LAYER DVD"
+
+msgid "SLEEP"
+msgstr ""
+
+msgid "SLOW"
+msgstr ""
 
 msgid "SNR"
 msgstr "SNR"
@@ -7584,6 +7821,15 @@ msgstr "SSA bestand"
 
 msgid "SSID:"
 msgstr "SSID:"
+
+msgid "STOP"
+msgstr ""
+
+msgid "SUBTITLE"
+msgstr ""
+
+msgid "SUSPEND"
+msgstr ""
 
 msgid "Saint Barthelemy"
 msgstr "Sint-Bartholomeus"
@@ -7660,9 +7906,8 @@ msgstr "Opslaan"
 msgid "Save / Enter text and exit"
 msgstr "Sla de tekst op / Voer tekst in en stop"
 
-#, fuzzy
 msgid "Save all changed settings and exit"
-msgstr "Sla de tekst op / Voer tekst in en stop"
+msgstr "Sla alle wijzigingen op en stop"
 
 msgid "Save and activate the currently selected skin"
 msgstr "Sla de huidige gekozen op en activeer deze."
@@ -7910,9 +8155,8 @@ msgstr "Kies voor snelle DiSEqC indien uw systeem dit ondersteunt. Bij twijfel d
 msgid "Select HDD"
 msgstr "Kies harde schijf"
 
-#, fuzzy
 msgid "Select Service"
-msgstr "Kies een film"
+msgstr "Kies een zender"
 
 msgid "Select Softcam"
 msgstr "Kies de Softcam"
@@ -8033,16 +8277,14 @@ msgstr "Selecteer herhalingsfrequentie"
 msgid "Select satellites"
 msgstr "Kies de satellieten"
 
-#, fuzzy
 msgid "Select service name"
-msgstr "Zendernaam"
+msgstr "Kies een zendernaam"
 
 msgid "Select service to add..."
 msgstr "Selecteer zender om toe te voegen..."
 
-#, fuzzy
 msgid "Select service type"
-msgstr "Selecteer zender om toe te voegen..."
+msgstr "Kies een zendertype"
 
 msgid "Select slot"
 msgstr "Kies slot"
@@ -8050,13 +8292,11 @@ msgstr "Kies slot"
 msgid "Select sort method:"
 msgstr "Kies de sorteermethode:"
 
-#, fuzzy
 msgid "Select stream URL"
-msgstr "Kies de Softcam"
+msgstr "Kies de URL van de stream"
 
-#, fuzzy
 msgid "Select stream type"
-msgstr "Kies een tuner"
+msgstr "Kies het type stream"
 
 msgid "Select target folder"
 msgstr "Kies de doelmap"
@@ -8085,12 +8325,11 @@ msgstr "Kies het modelnummer van uw Unicable device. Indien het model niet verme
 msgid "Select the movie path"
 msgstr "Selecteer het opnamepad"
 
-#, fuzzy
 msgid "Select the next item in list or move cursor right"
-msgstr "Kies de tijdzone binnen het gebied / regio."
+msgstr "Kies het volgende item in de lijst of verplaats de cursor naar rechts"
 
 msgid "Select the previous item in list or move cursor left"
-msgstr ""
+msgstr "Kies het vorige item in de lijst of verplaats de cursor naar links"
 
 msgid "Select the protocol used by your SCR device. Choices are 'SCR Unicable' (Unicable), or 'SCR JESS' (JESS, also known as Unicable II)."
 msgstr "Kies het protocol van het betreffende Unicable device. Je kunt kiezen uit 'SCR Unicable' (Unicable) of 'SCR JESS' (Jess of Unicable II)."
@@ -8122,9 +8361,8 @@ msgstr "Kies enkel een hoofdletter voor het volgende teken"
 msgid "Select the time zone within the area or region."
 msgstr "Kies de tijdzone binnen het gebied / regio."
 
-#, fuzzy
 msgid "Select the timer from the fallback tuner by default"
-msgstr "Indien geactiveerd, dan worden ook de timers van de externe tuner geïmporteerd."
+msgstr "Selecteer standaard de timer vanaf de fallback tuner"
 
 msgid "Select the tuner that controls the motorised dish."
 msgstr "Kies de tuner die de gemotoriseerde schotel aanstuurt."
@@ -8191,7 +8429,7 @@ msgid "Select your time zone area or region."
 msgstr "Selecteer uw tijdzone of regio."
 
 msgid "Select, toggle, process or edit the current entry"
-msgstr ""
+msgstr "Schakel om, kies, verwerk of bewerk, de huidige invoer"
 
 msgid "Selecting satellites 1 (USALS)"
 msgstr "Kies satelieten1 (USALS)"
@@ -8241,13 +8479,11 @@ msgstr "Service & PIDs"
 msgid "Service ID"
 msgstr "Service ID"
 
-#, fuzzy
 msgid "Service Name"
 msgstr "Zendernaam"
 
-#, fuzzy
 msgid "Service Type"
-msgstr "Zendernaam"
+msgstr "Zendertype"
 
 msgid "Service belongs to a parental protected bouquet"
 msgstr "Kanaal valt onder het kinderslot"
@@ -8343,7 +8579,7 @@ msgid "Set all hotkey to default?"
 msgstr "Zet alle Hotkey instellingen terug?"
 
 msgid "Set all the settings back as they were"
-msgstr ""
+msgstr "Herstel alle eerdere wijzigingen"
 
 msgid "Set alternative fallback tuners for DVB-T/C or ATSC"
 msgstr "Indien geactiveerd, dan kunt u alternatieve Fallback tuners ingeven t.b.v. DVB-T/C or ATSC ontvangst."
@@ -8352,7 +8588,7 @@ msgid "Set as startup service"
 msgstr "Kanaal kiezen bij opstarten"
 
 msgid "Set auto DiSEqC search order"
-msgstr ""
+msgstr "Stel de AutoDiSEqC volgorde in"
 
 msgid "Set blocktimes by weekday"
 msgstr "Stel bloktijden in als wekelijks"
@@ -8501,9 +8737,8 @@ msgstr "Toon VCR scart in het hoofdmenu"
 msgid "Show WLAN status"
 msgstr "WIFIstatus weergeven"
 
-#, fuzzy
 msgid "Show additional information on infobar"
-msgstr "Toon coderingsinfo in de informatiebalk"
+msgstr "Toon aanvullende informatie op de informatiebalk"
 
 msgid "Show alternatives"
 msgstr "Alternatieven weergeven"
@@ -8535,13 +8770,11 @@ msgstr "Toon icoon indien gecodeerd"
 msgid "Show crypto info in infobar"
 msgstr "Toon coderingsinfo in de informatiebalk"
 
-#, fuzzy
 msgid "Show default after description"
-msgstr "Weergave met uitgebreide informatie"
+msgstr "Geef standaard weer na de omschrijving"
 
-#, fuzzy
 msgid "Show default on new line"
-msgstr "Toon de infolijn"
+msgstr "Toon dit standaard op een volgende regel"
 
 msgid "Show detailed event info"
 msgstr "Gedetailleerde EPG info weergeven"
@@ -8664,7 +8897,7 @@ msgid "Show second InfoBar"
 msgstr "Toon de extra informatiebalk"
 
 msgid "Show second infobar"
-msgstr "Uitgebreid informatiescherm weergeven"
+msgstr "Toon de 2e informatiebalk"
 
 msgid "Show service list"
 msgstr "Toon de zenderlijst"
@@ -8675,20 +8908,17 @@ msgstr "Weergaveopties van het type tuner"
 msgid "Show servicelist or movies"
 msgstr "Toon de zenderlijst of de films"
 
-#, fuzzy
 msgid "Show setup default values"
-msgstr "EPG details weergeven"
+msgstr "Toon de standaardinstellingen"
 
-#, fuzzy
 msgid "Show simple second infobar"
-msgstr "Uitgebreid informatiescherm weergeven"
+msgstr "Toon de basis informatiebalk"
 
 msgid "Show single service EPG"
 msgstr "Toon de EPG van een enkel kanaal"
 
-#, fuzzy
 msgid "Show softcam information"
-msgstr "Softwarebeheerinformatie"
+msgstr "Toon de SoftCam informatie"
 
 msgid "Show softcam setup in extensions menu"
 msgstr "Toon de softcam-instellingen in het applicatie-menu"
@@ -8829,9 +9059,8 @@ msgstr "Lengtegraad van de locatie"
 msgid "Skin & Resolution: %s (%sx%s)\n"
 msgstr "Skin & Resolutie: %s (%sx%s)\n"
 
-#, fuzzy
 msgid "Skin Selection"
-msgstr "Skin selectie actie(s)"
+msgstr "Skin keuze"
 
 msgid "Skin Selection Actions"
 msgstr "Skin selectie actie(s)"
@@ -8989,6 +9218,10 @@ msgstr "Sorteer de lijst conform de standaard en stop?"
 msgid "Sort list:"
 msgstr "Sorteren op:"
 
+#, fuzzy
+msgid "Sort order for help screen"
+msgstr "Alfabetische sortering van de menu-items"
+
 msgid "Sort order for menu entries"
 msgstr "Sorteer of verberg menu-items"
 
@@ -9109,21 +9342,17 @@ msgstr "Stand-by ventilator %d spanning"
 msgid "Standby in "
 msgstr "Stand-by na "
 
-#, fuzzy
 msgid "Start CableScan"
-msgstr "Kabel scan"
+msgstr "Start de KabelScan"
 
-#, fuzzy
 msgid "Start Cablescan"
-msgstr "Start test"
+msgstr "Start de KabelScan"
 
-#, fuzzy
 msgid "Start Fastscan"
-msgstr "FastScan"
+msgstr "Start de FastScan"
 
-#, fuzzy
 msgid "Start Sleeptimer"
-msgstr "Sleeptimer"
+msgstr "Start de Sleeptimer"
 
 msgid "Start directory"
 msgstr "Start map"
@@ -9197,9 +9426,8 @@ msgstr "Stop"
 msgid "Stop PiP"
 msgstr "Beëindig de PIP"
 
-#, fuzzy
 msgid "Stop Sleeptimer"
-msgstr "Sleeptimer"
+msgstr "Stop de Sleeptimer"
 
 msgid "Stop all current recordings"
 msgstr "Beëindig alle lopende opnames"
@@ -9297,13 +9525,11 @@ msgstr "Stream"
 msgid "Stream Relay delay"
 msgstr "Streamrelay vertraging."
 
-#, fuzzy
 msgid "Stream Type"
-msgstr "Stream"
+msgstr "Type van de stream"
 
-#, fuzzy
 msgid "Stream URL"
-msgstr "Stream"
+msgstr "URL van de Stream"
 
 msgid "Stream request"
 msgstr "Stream verzoek"
@@ -9528,11 +9754,17 @@ msgstr "T2MI RAW Modus"
 msgid "TEXT"
 msgstr "Tekst"
 
+msgid "TIMER"
+msgstr ""
+
+msgid "TIMESHIFT"
+msgstr ""
+
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr ""
 "Deze Nederlandse vertaling wordt u aangeboden door het OpenPLi team.\n"
-"De laatste aanpassingen in deze vertaling zijn gedaan op 30 Januari 2024.\n"
+"De laatste aanpassingen in deze vertaling zijn gedaan op 17 November 2024.\n"
 "Voor aanvullende vertalingen of opmerkingen stuurt u een mail naar translators@openpli.org."
 
 msgid "TS file is too large for ISO9660 level 1!"
@@ -9546,6 +9778,9 @@ msgstr "TUNER:"
 
 msgid "TUNING"
 msgstr "AFSTEMMEN"
+
+msgid "TV"
+msgstr ""
 
 msgid "TV physical address report"
 msgstr "TV fysiek adres overzicht"
@@ -9694,6 +9929,9 @@ msgstr ""
 
 msgid "The number of steps to change the volume on the device the keys are forwarded to."
 msgstr "Het aantal stappen waarmee het volume wijzigt op het apparaat waarnaar de toetsen worden doorgestuurd."
+
+msgid "The order and grouping of the help information list can be controlled using MENU>Setup>User Interface>Settings>Sort order for help screen."
+msgstr ""
 
 msgid ""
 "The overscan wizard has been completed.\n"
@@ -10127,9 +10365,8 @@ msgstr ""
 msgid "Timer overview"
 msgstr "Timeroverzicht"
 
-#, fuzzy
 msgid "Timer recording failed. No space left on device!\n"
-msgstr "Opnamelocatie timeropnames"
+msgstr "De timer-opname is mislukt. Er is onvoldoende ruimte!\n"
 
 msgid "Timer recording location"
 msgstr "Opnamelocatie timeropnames"
@@ -10196,9 +10433,8 @@ msgstr "Naar ondertitelselectie"
 msgid "Today"
 msgstr "Vandaag"
 
-#, fuzzy
 msgid "Toggle Configuration Mode or AutoDisqc"
-msgstr "Configuratiemodus: %s"
+msgstr "Kies tussen Configuratiemodus of AutoDISEqC"
 
 msgid "Toggle HDMI In"
 msgstr "Activeer HDMI in"
@@ -10260,9 +10496,8 @@ msgstr "Toneburst A/B"
 msgid "Tonga"
 msgstr "Tonga"
 
-#, fuzzy
 msgid "Top"
-msgstr "Twee"
+msgstr "Bovenaan"
 
 msgid "Top and bottom"
 msgstr "Boven en onderzijde"
@@ -10411,6 +10646,9 @@ msgstr "Zoekmodus"
 msgid "UNKNOWN"
 msgstr "ONBEKEND"
 
+msgid "UP"
+msgstr ""
+
 msgid "URL"
 msgstr "URL"
 
@@ -10510,9 +10748,8 @@ msgstr "Universeel LNB"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#, fuzzy
 msgid "Unknown image"
-msgstr "Onbekend"
+msgstr "Onbekende image"
 
 msgid "Unmark service as dedicated 3D service"
 msgstr "Déselecteer deze zender als 3D zender."
@@ -10627,9 +10864,8 @@ msgstr "Indien geactiveerd kunt u, indien deze beschikbaar is, de Virgin EPG inf
 msgid "Use a gateway"
 msgstr "Gateway gebruiken"
 
-#, fuzzy
 msgid "Use alternative skin"
-msgstr "Voeg alternatieven toe"
+msgstr "Gebruik een alternatieve skin"
 
 msgid "Use as PiP if possible"
 msgstr "Gebruik indien mogelijk als PIP"
@@ -10667,9 +10903,8 @@ msgstr "Meet stroomopname"
 msgid "Use skin default"
 msgstr "Gebruik conform de skin"
 
-#, fuzzy
 msgid "Use the alternative screen"
-msgstr "Alternatieven bewerken"
+msgstr "Gebruik het alternatieve scherm"
 
 msgid "Use the network wizard to configure selected network adapter"
 msgstr "Gebruik de netwerkwizard om de geselecteerde netwerkadapter te configureren"
@@ -10749,14 +10984,29 @@ msgstr "Oezbekistan"
 msgid "VCR scart"
 msgstr "VCR scart"
 
+msgid "VIDEO"
+msgstr ""
+
+msgid "VKEY"
+msgstr ""
+
 msgid "VLAN connection"
 msgstr "VLAN verbinding"
 
 msgid "VMGM (intro trailer)"
 msgstr "VMGM (intro trailer)"
 
+msgid "VMODE"
+msgstr ""
+
 msgid "VOB file"
 msgstr "VOB bestand"
+
+msgid "VOL+"
+msgstr ""
+
+msgid "VOL-"
+msgstr ""
 
 msgid "VU+"
 msgstr "Vu+"
@@ -10818,7 +11068,6 @@ msgstr ""
 msgid "Video output"
 msgstr "Video uitgang"
 
-#, fuzzy
 msgid "Video settings"
 msgstr "A/V instellingen"
 
@@ -10935,6 +11184,12 @@ msgstr "Volume +"
 msgid "W"
 msgstr "W"
 
+msgid "WAKEUP"
+msgstr ""
+
+msgid "WIZTV"
+msgstr ""
+
 msgid "WLAN connection"
 msgstr "WLAN connectie"
 
@@ -10943,6 +11198,9 @@ msgstr "WMA Pro downmix"
 
 msgid "WSS on 4:3"
 msgstr "WSS bij 4:3"
+
+msgid "WWW"
+msgstr ""
 
 msgid "Waiting"
 msgstr "Wacht..."
@@ -11090,13 +11348,13 @@ msgstr ""
 "Maak uw keuze en volg de aanwijzingen op het scherm. "
 
 msgid "When enabled a simplified version from the second infobar is shown. This can also be toggled instantly by holding the OK buttin when the second infobar is visible. The infobar will shortly disappear and then shown in the other mode."
-msgstr ""
+msgstr "Indien geactiveerd. dan wordt een vereenvoudigde versie van de 2e informatiebalk getoond. Dit kan ook direct worden omgeschakeld door OK ingedrukt te houden terwijl de 2e informatiebalk zichtbaar is. De informatiebalk verdwijnt dan even en wordt dan in de alternatieve modus getoond."
 
 msgid "When enabled enigma2 will load unlinked userbouquets. This means that userbouquets that are available, but not included in the bouquets.tv or bouquets.radio files, will still be loaded. This allows you for example to keep your own user bouquet while installed settings are updated"
 msgstr "Indien geactiveerd, dan zal Enigma de niet gelinkte zenderbouquetten laden. Dit houdt in, dat aanwezige gebruikerslijsten die niet aanwezig zijn in bouquets.tv of bouquets.radio alsnog geladen worden. Hiermee kunt u uw eigen wijzigingen in de zenderlijst behouden ondanks een mogelijke update van deze lijst. "
 
 msgid "When enabled extra information is shown on the infobar. This can also be toggled instantly by holding the OK button when the inforbar is not visible."
-msgstr ""
+msgstr "Indien geactiveerd, dan, wordt er extra informatie weergegeven op de informatiebalk. Dit kan ook direct worden ingeschakeld door OK ingedrukt te houden wanneer de infobalk niet zichtbaar is."
 
 msgid "When enabled the Picture in Picture window can be closed with 'exit' button."
 msgstr ""
@@ -11122,9 +11380,8 @@ msgstr "Indien geactiveerd, dan is het mogelijk om de 'Wake On Lan functie' te g
 msgid "When enabled the timer from the fallback tuner is imported"
 msgstr "Indien geactiveerd, dan worden ook de timers van de externe tuner geïmporteerd."
 
-#, fuzzy
 msgid "When enabled the timer from the fallback tuner is the default timer"
-msgstr "Indien geactiveerd, dan worden ook de timers van de externe tuner geïmporteerd."
+msgstr "Indien geactiveerd, dan is de timer van de fallback tuner de standaardtimer"
 
 msgid "When enabled then when you select a new channel in the channel selection the channel selection will not close. It will only close when you select the current playing service. This is a kind of preview mode"
 msgstr "Indien geactiveerd, dan zal, indien u een keuze gemaakt heeft, het selectievenster niet sluiten maar een voorvertoning van de betreffende zender laten zien. Met tweemaal 'Ok' sluit het selectievenster weer."
@@ -11336,10 +11593,9 @@ msgstr "Indien geactiveerd, dan stuurt de ontvanger na inschakelen een signaal n
 msgid "When selected this allows video modes to be selected even if they are not reported as supported."
 msgstr "Indien geactiveerd, dan wordt het mogelijk om een video-modus te kiezen waarvan niet bekend is of deze ondersteund wordt."
 
-#, fuzzy
 msgid "When set to 'Yes', all locations where SNR is displayed in dB's will show an SNR percentage, and vice versa."
 msgstr ""
-"Indien ingesteld op 'Ja' tonen alle locaties waar de SNR wordt weergegeven in dB's een SNR-percentage, en omgekeerd,\n"
+"Indien ingesteld op 'Ja' worden op alle locaties waar de SNR werd weergegeven in dB's signaal in percentage getoond en omgekeerd,\n"
 "Weergave in dB werkt enkel indien dit door de tuner wordt ondersteund.\n"
 "N.B. Dit is een relatieve waarde gegenereerd door de betreffende tuner. Vergelijken tussen verschillende type tuners is vaak niet zinvol."
 
@@ -11425,6 +11681,9 @@ msgstr "Schrijven mislukt!"
 msgid "Write to /tmp/positionersetup.log"
 msgstr "Schrijf naar /tmp/positionersetup.log"
 
+msgid "YELLOW"
+msgstr ""
+
 msgid "YES"
 msgstr "JA"
 
@@ -11437,9 +11696,8 @@ msgstr "Geel"
 msgid "Yellow DVB subtitles"
 msgstr "Activeer de gele DVB ondertiteling"
 
-#, fuzzy
 msgid "Yellow button function"
-msgstr "Kies de gewenste functie"
+msgstr "Functie van de gele toets"
 
 msgid "Yemen"
 msgstr "Yemen"
@@ -11673,6 +11931,9 @@ msgstr ""
 "Is de USB WLAN Stick in de box geplaatst?\n"
 "\n"
 "Kies wat u vervolgens wilt doen."
+
+msgid "ZOOM"
+msgstr ""
 
 msgid "Zambia"
 msgstr "Zambia"
@@ -12417,6 +12678,10 @@ msgstr "Een ogenblik geduld, de foto wordt geladen..."
 
 msgid "popular culture/traditional arts"
 msgstr "Moderne cultuur/Traditionele kunst"
+
+#, fuzzy
+msgid "port"
+msgstr "Sport"
 
 msgid "pre-school children's program"
 msgstr "Peuter/Kleuterprogramma"

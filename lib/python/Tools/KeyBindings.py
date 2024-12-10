@@ -384,7 +384,7 @@ def getKeyDescription(key):
 
 
 def getKeyBindingKeys(filterfn=lambda key: True):
-	return list(filter(filterfn, keyBindings))
+	return filter(filterfn, keyBindings)
 
 # Remove all entries of domain "domain".
 #
@@ -393,3 +393,7 @@ def getKeyBindingKeys(filterfn=lambda key: True):
 def removeKeyBindings(domain):
 	for x in keyBindings:
 		keyBindings[x] = [e for e in keyBindings[x] if e[1] != domain]
+
+
+def getFpAndKbdKeys():  # used by HelpMenuList
+	return {k for i in keyDescriptions for k, v in i.items() if len(v) > 1 and v[1] in ("fp", "kbd")}
