@@ -49,7 +49,7 @@ def getUpdateDateString():
 
 def getEnigmaVersionString():
 	import enigma
-	enigma_version = enigma.getEnigmaVersionString().title()
+	enigma_version = enigma.getEnigmaVersionString()
 	if '-(no branch)' in enigma_version:
 		enigma_version = enigma_version[:-12]
 	enigma_version = enigma_version.rsplit("-", enigma_version.count("-") - 2)
@@ -87,9 +87,9 @@ def getHardwareTypeString():
 
 
 def getImageTypeString():
-	if BoxInfo.getItem("imageversion"):
-		return "%s %s %s" % (BoxInfo.getItem("displaydistro"), BoxInfo.getItem("imageversion"), BoxInfo.getItem("imagetype").title())
-	return "%s %s" % (BoxInfo.getItem("displaydistro"), BoxInfo.getItem("imagetype").title())
+	if BoxInfo.getItem("imagetype") != "rev":
+		return "%s %s %s" % (BoxInfo.getItem("displaydistro"), BoxInfo.getItem("imagetype").title(), BoxInfo.getItem("imageversion"))
+	return "%s %s" % (BoxInfo.getItem("displaydistro"), BoxInfo.getItem("imageversion").title())
 
 
 def getOEVersionString():
