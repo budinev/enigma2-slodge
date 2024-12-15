@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenPLi enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-08 15:08+0100\n"
+"POT-Creation-Date: 2024-12-15 13:08+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: IMS <ims@openpli.org>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -411,6 +411,9 @@ msgstr "%s%s(Výchozí: %s)"
 
 msgid "'Minimum send interval' needs to be enabled to use this option."
 msgstr "K použití této volby musí být nastaven 'Minimální interval posílání'."
+
+msgid "'Ping' is used for detection device on this address."
+msgstr "'Ping' se používá pro detekci zařízení s touto IP adresou."
 
 msgid "(VU+ type)"
 msgstr "(VU+ typ)"
@@ -1553,8 +1556,8 @@ msgstr "Základní informace"
 msgid "Basque"
 msgstr "Baskicky"
 
-msgid "Before sending the command to switch the TV to standby, the receiver tests if PC connected to TV is in standby. If it is not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
-msgstr "Před odesláním příkazu pro přepnutí TV do pohotovostního režimu přijímač testuje, zda PC připojené do TV je v pohotovostním režimu. Jestliže ano, odesílá se příkaz 'sourceinactive' místo 'standby'."
+msgid "Before sending the command to switch the TV to standby, the receiver can test if a device connected to the TV responds to a network 'ping'. If it does, instead of the 'standby' command the 'sourceinactive' command will be sent to the TV."
+msgstr "Před odesláním příkazu pro přepnutí TV do pohotovostního režimu přijímač může otestovat, zda zařízení připojené do TV odpovídá na 'ping'. Jestliže ano, odesílá se příkaz 'sourceinactive' místo příkazu 'standby'."
 
 msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
 msgstr "Před odesláním příkazu pro přepnutí TV do pohotovostního režimu přijímač testuje, zda ostatní přijímače zapojené do TV jsou též v pohotovostním režimu. Jestliže ne, odesílá se příkaz 'sourceinactive' místo 'standby'."
@@ -3213,14 +3216,11 @@ msgstr "Umístění záložního přijímače pro DVB-T"
 msgid "Details for plugin: "
 msgstr "Detaily pluginu: "
 
-msgid "Detect PC before standby"
-msgstr "Detekovat PC před standby"
-
 #, python-format
-msgid "Detect box%s via LAN"
-msgstr "Detekovat box%s pomocí LAN"
+msgid "Detect box%s via network"
+msgstr "Detekovat box%s pomocí sítě"
 
-msgid "Detect next boxes before standby"
+msgid "Detect other boxes before standby"
 msgstr "Detekovat ostatní boxy před standby"
 
 #
@@ -4309,7 +4309,7 @@ msgid "FASTFORWARD"
 msgstr "FASTFORWARD"
 
 msgid "FAV"
-msgstr "ZGEMMA H8.2H DVB T2/C + DVB S2"
+msgstr "FAV"
 
 msgid "FAVORITES"
 msgstr "FAVORITES"
@@ -4584,8 +4584,8 @@ msgstr "Podle rozmístění na dálkovém ovládání"
 msgid "Following tasks will be done after you press OK!"
 msgstr "Následující úlohy budou provedeny po stisknutí OK!"
 
-msgid "For detection next receivers use ethernet LAN instead HDMI-CEC protocol."
-msgstr "Pro detekování dalších přijímačů se použije LAN místo HDMI-CEC protokolu."
+msgid "For this box, the network connection can also be used for detection."
+msgstr "Pro tento box může být použita detekce též pomocí síťového připojení."
 
 msgid "Force legacy signal stats"
 msgstr "Vynutit starší signálové statistiky"
@@ -5154,7 +5154,7 @@ msgid "INS"
 msgstr "INS"
 
 msgid "IP"
-msgstr "ZGEMMA H8.2H DVB T2/C + DVB S2"
+msgstr "IP"
 
 msgid "IP address"
 msgstr "IP adresa"
@@ -6992,6 +6992,9 @@ msgstr "Otevřít nastavení tuneru "
 msgid "Open the movie list"
 msgstr "Otevřít seznam filmů"
 
+msgid "OpenWebif is used for detection on box with this IP address."
+msgstr "Pro detekci je použit OpenWebif na boxu s touto IP adresou."
+
 msgid "Operating LED status in deep standby mode"
 msgstr "Stav provozní LED v hlubokém spánku"
 
@@ -7272,6 +7275,9 @@ msgstr "Pilot"
 #
 msgid "Pin Userbouquet"
 msgstr "Připnout uživatelský přehled"
+
+msgid "Ping device before standby"
+msgstr "Odesílat 'ping' do zařízení před standby"
 
 msgid "Pitcairn"
 msgstr "Pitcairnovy ostrovy"
@@ -7665,6 +7671,9 @@ msgstr "Port D"
 
 msgid "Port of fallback remote receiver"
 msgstr "Port vzdáleného záložního přijímače"
+
+msgid "Port used by OpenWebif on tested box."
+msgstr "Port, který používá OpenWebif na testovaném boxu."
 
 #
 msgid "Portugal"
@@ -10889,7 +10898,7 @@ msgstr ""
 "Pro případné korekce můžete kontaktovat autora\n"
 "na výše uvedené adrese.\n"
 "\n"
-"®8.12.2024"
+"®10.12.2024"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"

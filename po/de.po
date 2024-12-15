@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-08 15:08+0100\n"
+"POT-Creation-Date: 2024-12-15 13:08+0100\n"
 "PO-Revision-Date: 2024-12-06 17:39+0100\n"
 "Last-Translator: kueken\n"
 "Language-Team: OpenPLi\n"
@@ -376,6 +376,9 @@ msgstr ""
 
 msgid "'Minimum send interval' needs to be enabled to use this option."
 msgstr "\"kleinstes Sendeintervall\" kann hier aktiviert werden."
+
+msgid "'Ping' is used for detection device on this address."
+msgstr ""
 
 msgid "(VU+ type)"
 msgstr "(VU + Typ)"
@@ -1356,7 +1359,7 @@ msgid "Basque"
 msgstr "Baskisch"
 
 #, fuzzy
-msgid "Before sending the command to switch the TV to standby, the receiver tests if PC connected to TV is in standby. If it is not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgid "Before sending the command to switch the TV to standby, the receiver can test if a device connected to the TV responds to a network 'ping'. If it does, instead of the 'standby' command the 'sourceinactive' command will be sent to the TV."
 msgstr "Receiver sucht aktive HDMI-Geräte am TV und schaltet den TV nur dann in den Standby-Modus, wenn alles inaktiv ist."
 
 msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
@@ -2853,15 +2856,12 @@ msgstr "Bestimmungsort vom Reserve-Receiver für DVB-T"
 msgid "Details for plugin: "
 msgstr "Details des Plugins: "
 
+#, fuzzy, python-format
+msgid "Detect box%s via network"
+msgstr "Funk-Netzwerk auswählen"
+
 #, fuzzy
-msgid "Detect PC before standby"
-msgstr "Erkennen Sie die nächsten Kästchen vor dem Standby"
-
-#, python-format
-msgid "Detect box%s via LAN"
-msgstr ""
-
-msgid "Detect next boxes before standby"
+msgid "Detect other boxes before standby"
 msgstr "Erkennen Sie die nächsten Kästchen vor dem Standby"
 
 msgid "Detected NIMs:"
@@ -4044,7 +4044,7 @@ msgstr "Endposition auf"
 msgid "Following tasks will be done after you press OK!"
 msgstr "Folgendes wird ausgeführt, nachdem Sie OK gedrückt haben!"
 
-msgid "For detection next receivers use ethernet LAN instead HDMI-CEC protocol."
+msgid "For this box, the network connection can also be used for detection."
 msgstr ""
 
 msgid "Force legacy signal stats"
@@ -6166,6 +6166,9 @@ msgstr "Öffnen Sie den Setup-Tuner"
 msgid "Open the movie list"
 msgstr "Zurück zur Videoliste"
 
+msgid "OpenWebif is used for detection on box with this IP address."
+msgstr ""
+
 msgid "Operating LED status in deep standby mode"
 msgstr "Status LED im Deep Standby"
 
@@ -6425,6 +6428,10 @@ msgstr "Pilot"
 #, fuzzy
 msgid "Pin Userbouquet"
 msgstr "Benutzer bouquets"
+
+#, fuzzy
+msgid "Ping device before standby"
+msgstr "Erkennen Sie die nächsten Kästchen vor dem Standby"
 
 msgid "Pitcairn"
 msgstr "Pitcairn"
@@ -6745,6 +6752,9 @@ msgstr "Port D"
 
 msgid "Port of fallback remote receiver"
 msgstr "Port des Reserve-Receivers"
+
+msgid "Port used by OpenWebif on tested box."
+msgstr ""
 
 msgid "Portugal"
 msgstr "Portugal"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-08 15:08+0100\n"
-"PO-Revision-Date: 2024-12-01 11:02+0200\n"
+"POT-Creation-Date: 2024-12-15 13:08+0100\n"
+"PO-Revision-Date: 2024-12-12 17:09+0200\n"
 "Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
 "Language-Team: openPLi Dimitrij\n"
 "Language: ru\n"
@@ -346,9 +346,9 @@ msgstr ""
 msgid "%s %d.%d"
 msgstr "%s %d.%d"
 
-#, fuzzy, python-format
+#, python-format
 msgid "%s (%s)"
-msgstr "%s (файлов)"
+msgstr "%s (%s)"
 
 #, python-format
 msgid "%s (files)"
@@ -389,6 +389,9 @@ msgstr "%s%s(Дефолт: %s)"
 msgid "'Minimum send interval' needs to be enabled to use this option."
 msgstr "'Минимальный интервал отправки' должен быть включен, чтобы использовать эту опцию."
 
+msgid "'Ping' is used for detection device on this address."
+msgstr "'Ping' используется для обнаружения устройства с этим IP-адресом."
+
 msgid "(VU+ type)"
 msgstr "(VU+ тип)"
 
@@ -425,7 +428,7 @@ msgstr "* Доступно, если более чем один интерфей
 
 msgctxt "Text list separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 msgid "-NO SERVICE\n"
 msgstr "-НЕТ СЕРВИСА\n"
@@ -586,7 +589,7 @@ msgid "A graphical EPG for all services of a specific bouquet"
 msgstr "Графический EPG для всех сервисов в выбранных букетах"
 
 msgid "A highlight on the remote control image shows which button the help refers to. If more than one button performs the indicated function, more than one highlight will be shown. Text below the list indicates whether the function is for a long press of the button(s)."
-msgstr ""
+msgstr "Подсветка на изображении пульта дистанционного управления показывает, к какой кнопке относится помощь. Если указанную функцию выполняет более одной кнопки, будет показано более одного подсветки. Текст под списком указывает, относится ли функция к длительному нажатию кнопки."
 
 #, python-format
 msgid ""
@@ -662,7 +665,7 @@ msgid "AAC+ downmix"
 msgstr "Микширование AAC+"
 
 msgid "ABOUT"
-msgstr ""
+msgstr "ABOUT"
 
 msgid "AC3"
 msgstr "AC3"
@@ -680,10 +683,10 @@ msgid "AGC:"
 msgstr "AGC:"
 
 msgid "ARROWLEFT"
-msgstr ""
+msgstr "ARROWLEFT"
 
 msgid "ARROWRIGHT"
-msgstr ""
+msgstr "ARROWRIGHT"
 
 msgid "ASS file"
 msgstr "ASS файл"
@@ -692,10 +695,10 @@ msgid "ATSC provider"
 msgstr "Провайдер ATSC"
 
 msgid "AUDIO"
-msgstr ""
+msgstr "AUDIO"
 
 msgid "AUTOTIMER"
-msgstr ""
+msgstr "AUTOTIMER"
 
 msgid "Abort"
 msgstr "Прервать"
@@ -938,7 +941,7 @@ msgid "Alpha"
 msgstr "Прозрачность"
 
 msgid "Alphabetical under headings"
-msgstr ""
+msgstr "По алфавиту под заголовками"
 
 msgid "Also import at reboot/restart enigma2"
 msgstr "Импорт при перезагрузке ресивера/рестарт enigma2"
@@ -1283,7 +1286,7 @@ msgid "B"
 msgstr "B"
 
 msgid "BACK"
-msgstr ""
+msgstr "BACK"
 
 msgid "BER"
 msgstr "BER"
@@ -1292,13 +1295,13 @@ msgid "BER:"
 msgstr "BER:"
 
 msgid "BLUE"
-msgstr ""
+msgstr "BLUE"
 
 msgid "BOUQUET+"
-msgstr ""
+msgstr "BOUQUET+"
 
 msgid "BOUQUET-"
-msgstr ""
+msgstr "BOUQUET-"
 
 msgid "Back"
 msgstr "Назад"
@@ -1364,11 +1367,11 @@ msgstr "Базовые данные"
 msgid "Basque"
 msgstr "Баскский"
 
-msgid "Before sending the command to switch the TV to standby, the receiver tests if PC connected to TV is in standby. If it is not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
+msgid "Before sending the command to switch the TV to standby, the receiver can test if a device connected to the TV responds to a network 'ping'. If it does, instead of the 'standby' command the 'sourceinactive' command will be sent to the TV."
 msgstr "Перед отправкой команды на переключение ТВ в режим ожидания, ресивер проверяет пингом, включен ли подключенный к ТВ ПК(персональный компьютер). Если ПК пингуется, то вместо команды 'standby' на ТВ будет отправлена ​​команда 'sourceinactive'."
 
 msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
-msgstr "Перед отправкой команды на переключение ТВ в режим ожидания ресивер проверяет, все ли другие устройства, подключенные к ТВ, находятся в режиме ожидания. В противном случае на ТВ будет отправлена команда 'sourceinactive' вместо команды 'standby'."
+msgstr "Перед отправкой команды на переключение ТВ в режим ожидания, ресивер проверяет, все ли устройства, подключенные к этому же ТВ, находятся в режиме ожидания. В противном случае на ТВ будет отправлена команда 'sourceinactive' вместо команды 'standby'."
 
 msgid "Begin time"
 msgstr "Время начала"
@@ -1480,7 +1483,7 @@ msgid "Brazil"
 msgstr "Brazil"
 
 msgid "Brief help information for buttons in your current context."
-msgstr ""
+msgstr "Краткая справочная информация по кнопкам в текущем контексте."
 
 msgid "Brightness"
 msgstr "Яркость"
@@ -1562,9 +1565,8 @@ msgstr "CI включен"
 msgid "CI slot: "
 msgstr "Слот CI: "
 
-#, fuzzy
 msgid "CONTEXT"
-msgstr "TEXT"
+msgstr "CONTEXT"
 
 msgid "CPU: "
 msgstr "CPU: "
@@ -1846,7 +1848,7 @@ msgid "Choose the option to correct invalid EPG data."
 msgstr "Выберите параметр для исправления неверных данных EPG."
 
 msgid "Choose the order in which items are displayed in Help windows"
-msgstr ""
+msgstr "Выберите порядок отображения элементов в окнах помощи."
 
 msgid "Choose whether AAC sound tracks should be transcoded."
 msgstr "Выберите, следует ли перекодировать звуковые дорожки AAC."
@@ -2576,7 +2578,7 @@ msgid "DMM normal"
 msgstr "DMM нормальный"
 
 msgid "DOWN"
-msgstr ""
+msgstr "DOWN"
 
 msgid "DTS"
 msgstr "DTS"
@@ -2841,14 +2843,11 @@ msgstr "Назначение запасного удаленного ресив�
 msgid "Details for plugin: "
 msgstr "Подробнее о плагине: "
 
-msgid "Detect PC before standby"
-msgstr "Проверка ПК перед выключением ТВ"
-
 #, python-format
-msgid "Detect box%s via LAN"
-msgstr ""
+msgid "Detect box%s via network"
+msgstr "Обнаружение ресивера%s через сеть"
 
-msgid "Detect next boxes before standby"
+msgid "Detect other boxes before standby"
 msgstr "Обнаружение следующих ресиверов перед режимом ожидания"
 
 msgid "Detected NIMs:"
@@ -3216,13 +3215,13 @@ msgid "ECM Info"
 msgstr "ECM инфо"
 
 msgid "EJECTCD"
-msgstr ""
+msgstr "EJECTCD"
 
 msgid "END"
-msgstr ""
+msgstr "END"
 
 msgid "ENTER"
-msgstr ""
+msgstr "ENTER"
 
 msgid "EPG"
 msgstr "EPG"
@@ -3246,14 +3245,14 @@ msgid "EPG:"
 msgstr "EPG:"
 
 msgid "EPGSETUP"
-msgstr ""
+msgstr "EPGSETUP"
 
 #, python-format
 msgid "ERROR - failed to scan (%s)!"
 msgstr "ОШИБКА - сканирование не удалось (%s)!"
 
 msgid "EXIT"
-msgstr ""
+msgstr "EXIT"
 
 msgid "East"
 msgstr "Восток"
@@ -3776,14 +3775,13 @@ msgid "FAILED"
 msgstr "ОШИБКА"
 
 msgid "FASTFORWARD"
-msgstr ""
+msgstr "FASTFORWARD"
 
-#, fuzzy
 msgid "FAV"
-msgstr "FTA"
+msgstr "FAV"
 
 msgid "FAVORITES"
-msgstr ""
+msgstr "FAVORITES"
 
 msgid "FBC SCR (Unicable/JESS)"
 msgstr "FBC SCR (Unicable/JESS)"
@@ -3829,7 +3827,7 @@ msgid "FHD"
 msgstr "FHD"
 
 msgid "FORWARD"
-msgstr ""
+msgstr "FORWARD"
 
 msgid "FTA"
 msgstr "FTA"
@@ -4016,22 +4014,20 @@ msgstr ""
 "Прошивка имиджа не закончилась успехом\n"
 "%s"
 
-#, fuzzy
 msgid "Flat alphabetical"
-msgstr "сортировать по алфавиту"
+msgstr "алфавитный"
 
 msgid "Flat by key group on remote"
-msgstr ""
+msgstr "по группе кнопок на пульте"
 
-#, fuzzy
 msgid "Flat by position on remote"
-msgstr "Итоговая позиция в"
+msgstr "по позиции на пульте"
 
 msgid "Following tasks will be done after you press OK!"
 msgstr "Выполнение процесса начнется после того, как вы нажмете ОК!"
 
-msgid "For detection next receivers use ethernet LAN instead HDMI-CEC protocol."
-msgstr ""
+msgid "For this box, the network connection can also be used for detection."
+msgstr "Для этого ресивера также можно использовать обнаружение с использованием сетевого подключения."
 
 msgid "Force legacy signal stats"
 msgstr "Статистика уровня snr/db из E2(если поддерживается)"
@@ -4138,7 +4134,7 @@ msgid "GB"
 msgstr "GB"
 
 msgid "GREEN"
-msgstr ""
+msgstr "GREEN"
 
 msgid "GUI Settings"
 msgstr "Настройки GUI"
@@ -4370,16 +4366,16 @@ msgid "HELP"
 msgstr "HELP"
 
 msgid "HISTORY"
-msgstr ""
+msgstr "HISTORY"
 
 msgid "HLG support"
 msgstr "HLG поддержка"
 
 msgid "HOME"
-msgstr ""
+msgstr "HOME"
 
 msgid "HOMEPAGE"
-msgstr ""
+msgstr "HOMEPAGE"
 
 msgid "Haiti"
 msgstr "Haiti"
@@ -4418,11 +4414,10 @@ msgid "Hebrew"
 msgstr "Иврит"
 
 msgid "Help"
-msgstr ""
+msgstr "Помощь"
 
-#, fuzzy
 msgid "Help Screen"
-msgstr "Держать экран"
+msgstr "Экран помощи"
 
 msgid "Helps setting up your antenna"
 msgstr "Помощь в настройке Вашей антенны"
@@ -4547,9 +4542,8 @@ msgstr "INFO"
 msgid "INS"
 msgstr "INS"
 
-#, fuzzy
 msgid "IP"
-msgstr "I"
+msgstr "IP"
 
 msgid "IP address"
 msgstr "IP-адрес"
@@ -4570,7 +4564,7 @@ msgid "Icons"
 msgstr "Иконка"
 
 msgid "If an action is user-configurable, its help entry will be flagged (C)"
-msgstr ""
+msgstr "Если действие настраивается пользователем, его строка помощи будет помечена (C)"
 
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
 msgstr "Если отключено, то символы подчеркивания в именах файлов и каталогов не отображаются и заменяются пробелами."
@@ -5022,9 +5016,8 @@ msgstr "Kuwait"
 msgid "Kyrgyzstan"
 msgstr "Kyrgyzstan"
 
-#, fuzzy
 msgid "LAN"
-msgstr "LNB"
+msgstr "LAN"
 
 msgid "LAN adapter"
 msgstr "Адаптер LAN"
@@ -5033,10 +5026,10 @@ msgid "LAN connection"
 msgstr "Подключение LAN"
 
 msgid "LEFT"
-msgstr ""
+msgstr "LEFT"
 
 msgid "LIST"
-msgstr ""
+msgstr "LIST"
 
 msgid "LNB"
 msgstr "LNB"
@@ -5044,9 +5037,8 @@ msgstr "LNB"
 msgid "LOSTLOCK"
 msgstr "LOSTLOCK"
 
-#, fuzzy
 msgid "Label not defined"
-msgstr "Не определено"
+msgstr "Метка не определена"
 
 msgid "Language"
 msgstr "Выбор языка"
@@ -5230,9 +5222,8 @@ msgstr "Длинное название"
 msgid "Long key press"
 msgstr "Длительное нажатие"
 
-#, fuzzy
 msgid "Long press: "
-msgstr "Длительное нажатие"
+msgstr "Длительное нажатие: "
 
 msgid "Longitude"
 msgstr "Долгота"
@@ -5259,7 +5250,7 @@ msgid "MB"
 msgstr "MB"
 
 msgid "MEDIA"
-msgstr ""
+msgstr "MEDIA"
 
 msgid "MENU"
 msgstr "MENU"
@@ -5274,7 +5265,7 @@ msgid "MORE"
 msgstr "ЗАТЕМ"
 
 msgid "MUTE"
-msgstr ""
+msgstr "MUTE"
 
 msgid "Macao"
 msgstr "Macao"
@@ -5668,9 +5659,8 @@ msgstr "N/A"
 msgid "NEXT"
 msgstr "ДАЛЕЕ"
 
-#, fuzzy
 msgid "NEXTSONG"
-msgstr "ДАЛЕЕ"
+msgstr "NEXTSONG"
 
 msgid "NIM & Type"
 msgstr "NIM & Тип тюнера"
@@ -5703,7 +5693,7 @@ msgid "Nauru"
 msgstr "Nauru"
 
 msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. EXIT to return to the help screen. OK to perform the action described in the currently highlighted help."
-msgstr ""
+msgstr "Для перемещения вверх/вниз используйте кнопки ВВЕРХ/ВНИЗ, а для перехода вверх/вниз — ВЛЕВО/ВПРАВО. EXIT для возврата на экран помощи. OK для выполнения действия, описанного в текущей выделенной справке."
 
 msgid "Nepal"
 msgstr "Nepal"
@@ -5786,9 +5776,8 @@ msgctxt "now/next: 'next' event label"
 msgid "Next"
 msgstr "Далее"
 
-#, fuzzy
 msgid "Next Wizard"
-msgstr "Мастер настройки сети"
+msgstr "Мастер - далее"
 
 msgid "Next day starts at"
 msgstr "Следующий день начинается в"
@@ -6057,7 +6046,7 @@ msgid "ONID"
 msgstr "ONID"
 
 msgid "OPTION"
-msgstr ""
+msgstr "OPTION"
 
 msgid "OSD 3D setup"
 msgstr "Настройки экранного меню (OSD) 3D"
@@ -6140,6 +6129,9 @@ msgstr "Открыть настройки тюнера "
 msgid "Open the movie list"
 msgstr "Открыть список видео"
 
+msgid "OpenWebif is used for detection on box with this IP address."
+msgstr "OpenWebif используется для обнаружения ресивера с этим IP-адресом."
+
 msgid "Operating LED status in deep standby mode"
 msgstr "Состояние LED в режиме глубокого ожидания"
 
@@ -6183,11 +6175,10 @@ msgid "Other Subtitles & lang"
 msgstr "Другие субтитры & язык"
 
 msgid "Other buttons will jump to the help for that button, if there is help."
-msgstr ""
+msgstr "Другие кнопки перейдут к справке по этой кнопке, если таковая имеется."
 
-#, fuzzy
 msgid "Other functions"
-msgstr "дальнейшее образование"
+msgstr "Дальнейшие функции"
 
 msgid "Output"
 msgstr "Выход"
@@ -6205,16 +6196,16 @@ msgid "Overwrite configuration files?"
 msgstr "Переписать файлы конфигурации?"
 
 msgid "PAGEDOWN"
-msgstr ""
+msgstr "PAGEDOWN"
 
 msgid "PAGEUP"
-msgstr ""
+msgstr "PAGEUP"
 
 msgid "PAL"
 msgstr "PAL"
 
 msgid "PAUSE"
-msgstr ""
+msgstr "PAUSE"
 
 msgid "PCR PID"
 msgstr "PCR PID"
@@ -6232,13 +6223,13 @@ msgid "PIN code needed"
 msgstr "Необходим PIN-код"
 
 msgid "PLAY"
-msgstr ""
+msgstr "PLAY"
 
 msgid "PLAYLIST"
-msgstr ""
+msgstr "PLAYLIST"
 
 msgid "PLAYPAUSE"
-msgstr ""
+msgstr "PLAYPAUSE"
 
 msgid "PLP ID"
 msgstr "PLP ID"
@@ -6250,19 +6241,19 @@ msgid "PLS Mode"
 msgstr "PLS режим"
 
 msgid "PLUGIN"
-msgstr ""
+msgstr "PLUGIN"
 
 msgid "PMT PID"
 msgstr "РМТ PID"
 
 msgid "PORTAL"
-msgstr ""
+msgstr "PORTAL"
 
 msgid "POWER"
-msgstr ""
+msgstr "POWER"
 
 msgid "POWER2"
-msgstr ""
+msgstr "POWER2"
 
 msgid "PPanel"
 msgstr "PPanel (shell скрипты)"
@@ -6270,16 +6261,14 @@ msgstr "PPanel (shell скрипты)"
 msgid "PREVIOUS"
 msgstr "ПРЕДЫДУЩИЙ"
 
-#, fuzzy
 msgid "PREVIOUSSONG"
-msgstr "ПРЕДЫДУЩИЙ"
+msgstr "PREVIOUSSONG"
 
 msgid "PULSe 4K(mini)"
 msgstr "PULSe 4K(mini)"
 
-#, fuzzy
 msgid "PVR"
-msgstr "OVR"
+msgstr "PVR"
 
 msgid "Package list update"
 msgstr "Список пакетов обновления"
@@ -6399,6 +6388,9 @@ msgstr "Пилот"
 
 msgid "Pin Userbouquet"
 msgstr "Закрепить пользовательский букет"
+
+msgid "Ping device before standby"
+msgstr "Отправьте 'пинг' на устройство перед переходом в режим ожидания"
 
 msgid "Pitcairn"
 msgstr "Pitcairn"
@@ -6719,6 +6711,9 @@ msgstr "Порт D"
 msgid "Port of fallback remote receiver"
 msgstr "Порт запасного удаленного ресивера"
 
+msgid "Port used by OpenWebif on tested box."
+msgstr "Порт, используемый OpenWebif на тестируемом устройстве."
+
 msgid "Portugal"
 msgstr "Portugal"
 
@@ -6934,7 +6929,7 @@ msgid "Preview selected channel"
 msgstr "Превью выбранного канала"
 
 msgid "Previous Wizard"
-msgstr ""
+msgstr "Мастер - предыдущее"
 
 msgid "Primary DNS"
 msgstr "Первичный DNS"
@@ -7048,29 +7043,28 @@ msgid "Quick zap"
 msgstr "Быстрое переключение"
 
 msgid "RADIO"
-msgstr ""
+msgstr "RADIO"
 
 msgid "REC"
 msgstr "REC"
 
 msgid "RECALL"
-msgstr ""
+msgstr "RECALL"
 
 msgid "RECORD"
-msgstr ""
+msgstr "RECORD"
 
-#, fuzzy
 msgid "RED"
-msgstr "REC"
+msgstr "RED"
 
 msgid "REWIND"
-msgstr ""
+msgstr "REWIND"
 
 msgid "RF output"
 msgstr "RF выход"
 
 msgid "RIGHT"
-msgstr ""
+msgstr "RIGHT"
 
 msgid "Radio"
 msgstr "Радио"
@@ -7546,9 +7540,8 @@ msgstr "Russian Federation"
 msgid "Rwanda"
 msgstr "Rwanda"
 
-#, fuzzy
 msgid "SAT"
-msgstr "KA-спутник"
+msgstr "SAT"
 
 msgid "SCPC optimized search range"
 msgstr "SCPC оптимизированный диапазон поиска"
@@ -7563,22 +7556,22 @@ msgid "SCR Unicable"
 msgstr "SCR Unicable"
 
 msgid "SCREEN"
-msgstr ""
+msgstr "SCREEN"
 
 msgid "SETUP"
-msgstr ""
+msgstr "SETUP"
 
 msgid "SHIFT: "
-msgstr ""
+msgstr "СДВИГ: "
 
 msgid "SINGLE LAYER DVD"
 msgstr "SINGLE LAYER (один слой) DVD"
 
 msgid "SLEEP"
-msgstr ""
+msgstr "SLEEP"
 
 msgid "SLOW"
-msgstr ""
+msgstr "SLOW"
 
 msgid "SNR"
 msgstr "SNR"
@@ -7599,13 +7592,13 @@ msgid "SSID:"
 msgstr "SSID:"
 
 msgid "STOP"
-msgstr ""
+msgstr "STOP"
 
 msgid "SUBTITLE"
-msgstr ""
+msgstr "SUBTITLE"
 
 msgid "SUSPEND"
-msgstr ""
+msgstr "SUSPEND"
 
 msgid "Saint Barthelemy"
 msgstr "Saint Barthelemy"
@@ -8981,9 +8974,8 @@ msgstr "Сортировать список по умолчанию и выйт�
 msgid "Sort list:"
 msgstr "Сортировка списка:"
 
-#, fuzzy
 msgid "Sort order for help screen"
-msgstr "Сортировка пунктов настроек"
+msgstr "Порядок сортировки окна помощи"
 
 msgid "Sort order for menu entries"
 msgstr "Порядок сортировки пунктов меню"
@@ -9515,14 +9507,14 @@ msgid "TEXT"
 msgstr "TEXT"
 
 msgid "TIMER"
-msgstr ""
+msgstr "TIMER"
 
 msgid "TIMESHIFT"
-msgstr ""
+msgstr "TIMESHIFT"
 
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
-msgstr "Dmitrij - 06.10.2024"
+msgstr "Dmitrij - 12.12.2024"
 
 msgid "TS file is too large for ISO9660 level 1!"
 msgstr "TS файл слишком большой для ISO9660 level 1!"
@@ -9537,7 +9529,7 @@ msgid "TUNING"
 msgstr "НАСТРОЙКА СИГНАЛА"
 
 msgid "TV"
-msgstr ""
+msgstr "TV"
 
 msgid "TV physical address report"
 msgstr "Оповещение физического адреса ТВ"
@@ -9681,7 +9673,7 @@ msgid "The number of steps to change the volume on the device the keys are forwa
 msgstr "Количество шагов для изменения громкости на устройстве, на которое идет команда."
 
 msgid "The order and grouping of the help information list can be controlled using MENU>Setup>User Interface>Settings>Sort order for help screen."
-msgstr ""
+msgstr "Порядок и группировку списка справочной информации можно контролировать с помощью МЕНЮ>Настройка>Пользовательский интерфейс>Настройки>Порядок сортировки для экрана помощи."
 
 msgid ""
 "The overscan wizard has been completed.\n"
@@ -10384,7 +10376,7 @@ msgid "UNKNOWN"
 msgstr "НЕИЗВЕСТНО"
 
 msgid "UP"
-msgstr ""
+msgstr "UP"
 
 msgid "URL"
 msgstr "URL"
@@ -10717,10 +10709,10 @@ msgid "VCR scart"
 msgstr "Видеомагнитофон (VCR скарт)"
 
 msgid "VIDEO"
-msgstr ""
+msgstr "VIDEO"
 
 msgid "VKEY"
-msgstr ""
+msgstr "VKEY"
 
 msgid "VLAN connection"
 msgstr "VLAN подключение"
@@ -10729,16 +10721,16 @@ msgid "VMGM (intro trailer)"
 msgstr "VMGM (трейлер)"
 
 msgid "VMODE"
-msgstr ""
+msgstr "VMODE"
 
 msgid "VOB file"
 msgstr "VOB файл"
 
 msgid "VOL+"
-msgstr ""
+msgstr "VOL+"
 
 msgid "VOL-"
-msgstr ""
+msgstr "VOL-"
 
 msgid "VU+"
 msgstr "VU+"
@@ -10912,10 +10904,10 @@ msgid "W"
 msgstr "W"
 
 msgid "WAKEUP"
-msgstr ""
+msgstr "WAKEUP"
 
 msgid "WIZTV"
-msgstr ""
+msgstr "WIZTV"
 
 msgid "WLAN connection"
 msgstr "WLAN соединение"
@@ -10927,7 +10919,7 @@ msgid "WSS on 4:3"
 msgstr "WSS на 4:3"
 
 msgid "WWW"
-msgstr ""
+msgstr "WWW"
 
 msgid "Waiting"
 msgstr "Ожидание"
@@ -11367,7 +11359,7 @@ msgid "Write to /tmp/positionersetup.log"
 msgstr "Запись в /tmp/positionersetup.log"
 
 msgid "YELLOW"
-msgstr ""
+msgstr "YELLOW"
 
 msgid "YES"
 msgstr "ДА"
@@ -11616,7 +11608,7 @@ msgstr ""
 "Выберите, что будете делать дальше."
 
 msgid "ZOOM"
-msgstr ""
+msgstr "ZOOM"
 
 msgid "Zambia"
 msgstr "Zambia"
@@ -12362,9 +12354,8 @@ msgstr "Пожалуйста, подождите ... загрузка изобр
 msgid "popular culture/traditional arts"
 msgstr "популярные культура/традиции искусства"
 
-#, fuzzy
 msgid "port"
-msgstr "Спорт"
+msgstr "порт"
 
 msgid "pre-school children's program"
 msgstr "дошкольные детские программы"
