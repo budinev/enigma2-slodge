@@ -77,56 +77,67 @@ class UpdatePlugin(Screen, ProtectedScreen):
 		message = None
 		abort = False
 		picon = MessageBox.TYPE_ERROR
-		url = "https://openpli.org/trafficlight"
 
-		# try to fetch the trafficlight json from the website
+		# check for general web connectivity first
+		url = "http://downloads.openpli.org/online.php"
 		try:
-			status = dict(load(urlopen(url, timeout=5)))
-			print("[SoftwareUpdate] status is: ", status)
+			status = urlopen(url, timeout=5)
 		except Exception as er:
-			print('[UpdatePlugin] Error in get status', er)
+			pass
 
-		# process the status fetched
-		if status is not None:
-
-			try:
-				# get image version and machine name
-				machine = HardwareInfo().get_machine_name()
-				version = open("/etc/issue").readlines()[-2].split()[1]
-
-				# do we have an entry for this version
-				if (version in status or 'all' in status) and (machine in status[version]['machines'] or 'all' in status[version]['machines']):
-					if 'abort' in status[version]:
-						abort = status[version]['abort']
-					if 'from' in status[version]:
-						starttime = datetime.strptime(status[version]['from'], '%Y%m%d%H%M%S')
-					else:
-						starttime = 0
-					if 'to' in status[version]:
-						endtime = datetime.strptime(status[version]['to'], '%Y%m%d%H%M%S')
-					else:
-						endtime = datetime.now() + 1
-					if 'message' in status[version]:
-						if (starttime <= datetime.now() and endtime >= datetime.now()):
-							message = status[version]['message']
-
-				# check if we have per-language messages
-				if isinstance(message, dict):
-					lang = language.getLanguage()
-					if lang in message:
-						message = message[lang]
-					elif 'en_EN' in message:
-						message = message['en_EN']
-					else:
-						message = _("The current image might not be stable.\nFor more information see %s.") % ("https://forums.openpli.org")
-
-			except Exception as er:
-				print("[UpdatePlugin] status error", er)
-				message = _("The current image might not be stable.\nFor more information see %s.") % ("https://forums.openpli.org")
-
-		# or display a generic warning if fetching failed
+		if status is None:
+			message = _("You can't update the software because %s can not be reached.") % ("http://downloads.openpli.org")
+			abort = True
 		else:
-			message = _("The status of the current image could not be checked because %s can not be reached.") % ("https://openpli.org")
+			# try to fetch the trafficlight json from the website
+			url = "https://openpli.org/trafficlight"
+			try:
+				status = dict(load(urlopen(url, timeout=5)))
+				print("[SoftwareUpdate] status is: ", status)
+			except Exception as er:
+				print('[UpdatePlugin] Error in get status', er)
+
+			# process the status fetched
+			if status is not None:
+
+				try:
+					# get image version and machine name
+					machine = HardwareInfo().get_machine_name()
+					version = open("/etc/issue").readlines()[-2].split()[1]
+	
+					# do we have an entry for this version
+					if (version in status or 'all' in status) and (machine in status[version]['machines'] or 'all' in status[version]['machines']):
+						if 'abort' in status[version]:
+							abort = status[version]['abort']
+						if 'from' in status[version]:
+							starttime = datetime.strptime(status[version]['from'], '%Y%m%d%H%M%S')
+						else:
+							starttime = 0
+						if 'to' in status[version]:
+							endtime = datetime.strptime(status[version]['to'], '%Y%m%d%H%M%S')
+						else:
+							endtime = datetime.now() + 1
+						if 'message' in status[version]:
+							if (starttime <= datetime.now() and endtime >= datetime.now()):
+								message = status[version]['message']
+
+					# check if we have per-language messages
+					if isinstance(message, dict):
+						lang = language.getLanguage()
+						if lang in message:
+							message = message[lang]
+						elif 'en_EN' in message:
+							message = message['en_EN']
+						else:
+							message = _("The current image might not be stable.\nFor more information see %s.") % ("https://forums.openpli.org")
+
+				except Exception as er:
+					print("[UpdatePlugin] status error", er)
+					message = _("The current image might not be stable.\nFor more information see %s.") % ("https://forums.openpli.org")
+
+			# or display a generic warning if fetching failed
+			else:
+				message = _("The status of the current image could not be checked because %s can not be reached.") % ("https://openpli.org")
 
 		# show the user the message first
 		if message is not None:
