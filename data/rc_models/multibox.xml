@@ -28,7 +28,7 @@
 		<button name="BOUQUET+" pos="100,192"/>
 		<button name="BOUQUET-" pos="100,222"/>
 
-		<button name="BACK" pos="22,260"/>
+		<button name="RECALL" pos="22,260"/>
 		<button name="UP" pos="60,260"/>
 		<button name="INFO" pos="98,258"/>
 		<button name="LEFT" pos="22,295"/>

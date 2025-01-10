@@ -49,15 +49,19 @@ class HelpMenuList(List):
 	def __init__(self, helplist, callback, rcPos=None):
 		List.__init__(self)
 		self.callback = callback
-		formatFlags = 0
 		self.rcPos = rcPos
+		self.helplist=helplist
+		self.createHelpList()
+
+	def createHelpList(self):
+		def getActionmapGroupKey(actionmap, context):
+			return getattr(actionmap, "description", None) or context
+
 		self.rcKeyIndex = None
 		self.buttonMap = {}
 		self.longSeen = False
 		self.skipKeys = getFpAndKbdKeys()
-
-		def actMapId():
-			return getattr(actionmap, "description", None) or id(actionmap)
+		formatFlags = 0
 
 		headings, sortKey = {
 			"headings+alphabetic": (True, self._sortKeyAlpha),
@@ -66,16 +70,16 @@ class HelpMenuList(List):
 			"flat+remotegroups": (False, self._sortInd)
 		}.get(config.usage.help_sortorder.value, (False, None))
 
-		if rcPos is None:
+		if self.rcPos is None:
 			if sortKey in (self._sortPos, self._sortInd):
 				sortKey = None
 		else:
 			if sortKey == self._sortInd:
-				self.rcKeyIndex = dict((x[1], x[0]) for x in enumerate(rcPos.getRcKeyList()))
+				self.rcKeyIndex = dict((x[1], x[0]) for x in enumerate(self.rcPos.getRcKeyList()))
 
 		buttonsProcessed = set()
 		helpSeen = defaultdict(list)
-		sortedHelplist = sorted(helplist, key=lambda hle: hle[0].prio)
+		sortedHelplist = sorted(self.helplist, key=lambda hle: hle[0].prio)
 		actionMapHelp = defaultdict(list)
 
 		for (actionmap, context, actions) in sortedHelplist:
@@ -132,40 +136,31 @@ class HelpMenuList(List):
 
 				entry = [(actionmap, context, action, buttonLabels), help]
 				if self._filterHelpList(entry, helpSeen):
-					actionMapHelp[actMapId()].append(entry)
+					actionMapHelp[getActionmapGroupKey(actionmap, context)].append(entry)
 
-		l = []
+		self.list = []
 		extendedPadding = (None, ) if formatFlags & self.EXTENDED else ()
-
-		for (actionmap, context, actions) in sorted(helplist, key=self._sortHeadingsAlpha):
-			amId = actMapId()
-			if headings and amId in actionMapHelp:
-				if sortKey:
-					actionMapHelp[amId].sort(key=sortKey)
-				self.addListBoxContext(actionMapHelp[amId], formatFlags)
-
-				l.append((None, actionmap.description or _(re.sub(r"(\w)([A-Z])([a-z])", r"\1 \2\3", context)), None) + extendedPadding)
-				l.extend(actionMapHelp[amId])
-				del actionMapHelp[amId]
-
-		if actionMapHelp:
-			# Add a header if other actionmaps have descriptions
-			if formatFlags & self.HEADINGS:
-				l.append((None, _("Other functions"), None) + extendedPadding)
-
-			otherHelp = []
-			for (actionmap, context, actions) in helplist:
-				amId = actMapId()
-				if amId in actionMapHelp:
-					otherHelp.extend(actionMapHelp[amId])
-					del actionMapHelp[amId]
-
+		if headings:
+			for (actionmap, context, actions) in sorted(self.helplist, key=self._sortHeadingsAlpha):
+				actionmapGroupKey = getActionmapGroupKey(actionmap, context)
+				if actionmapGroupKey in actionMapHelp:
+					if sortKey:
+						actionMapHelp[actionmapGroupKey].sort(key=sortKey)
+					self.addListBoxContext(actionMapHelp[actionmapGroupKey], formatFlags)
+					self.list.append((None, actionmap.description if getattr(actionmap, "description", None) else _(re.sub(r"(?:(?=(?<=[^A-Z])[A-Z])|(?=Actions|Select))(?!(?<=Pi)P)", " ", context)), None) + extendedPadding)
+					self.list.extend(actionMapHelp[actionmapGroupKey])
+					del actionMapHelp[actionmapGroupKey]
+		else:
+			for (actionmap, context, actions) in self.helplist:
+				actionmapGroupKey = getActionmapGroupKey(actionmap, context)
+				if actionmapGroupKey in actionMapHelp:
+					self.list.extend(actionMapHelp[actionmapGroupKey])
+					del actionMapHelp[actionmapGroupKey]
 			if sortKey:
-				otherHelp.sort(key=sortKey)
-			self.addListBoxContext(otherHelp, formatFlags)
-			l.extend(otherHelp)
+				self.list.sort(key=sortKey)
+			self.addListBoxContext(self.list, formatFlags)
 
-		for i, ent in enumerate(l):
+		for i, ent in enumerate(self.list):
 			if ent[0] is not None:
 				# Ignore "break" events from
 				# OK and EXIT on return from
@@ -180,8 +175,6 @@ class HelpMenuList(List):
 			"extended",
 			"extended+headings",
 		)[formatFlags]
-
-		self.list = l
 
 	def _mergeButLists(self, bl1, bl2):
 		bl1.extend([b for b in bl2 if b not in bl1])
@@ -234,7 +227,7 @@ class HelpMenuList(List):
 
 	def _sortHeadingsAlpha(self, a):
 		# ignore case
-		return (getattr(a[0], "description", None) or "").lower()
+		return (getattr(a[0], "description", None) or _(re.sub(r"(?:(?=(?<=[^A-Z])[A-Z])|(?=Actions|Select))(?!(?<=Pi)P)", " ", a[1]))).lower()
 
 	def ok(self):
 		# a list entry has a "private" tuple as first entry...

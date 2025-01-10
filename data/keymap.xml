@@ -37,8 +37,10 @@
 
 	<map context="HelpActions">
 		<key id="KEY_HELP" mapto="displayHelp" flags="b" />
+		<key id="KEY_HELP" mapto="toggleConfig" flags="l" />
 		<!-- Keyboard specific buttons -->
 		<key id="KEY_F1" mapto="displayHelp" flags="b" />
+		<key id="KEY_F1" mapto="toggleConfig" flags="l" />
 	</map>
 
 	<map context="NavigationActions">
@@ -623,6 +625,8 @@
 		<key id="KEY_TV2" mapto="toggleTvRadio" flags="b" />
 		<key id="KEY_RADIO" mapto="keyRadio" flags="b" />
 		<key id="KEY_AUDIO" mapto="audio" flags="b" />
+		<key id="KEY_INFO" mapto="epg" flags="m" />
+		<key id="KEY_EPG" mapto="epg" flags="m" />
 	</map>
 
 	<map context="TimerEditActions">
