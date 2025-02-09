@@ -829,11 +829,11 @@ def InitUsageConfig():
 
 	def timesyncChanged(configElement):
 		if configElement.value == "ntp":
-			Console().ePopen('ntpd -g')
+			Console().ePopen('/usr/sbin/ntpd -gq')
 			print("[UsageConfig] NTP enabled, DVB time disabled")
 			eDVBLocalTimeHandler.getInstance().setUseDVBTime(False)
 		elif configElement.value == "auto":
-			Console().ePopen('ntpd -g')
+			Console().ePopen('/usr/sbin/ntpd -gq')
 			result = ""
 			try:
 				result = subprocess.check_output('ntpq -pn', shell=True, text=True)
