@@ -6085,8 +6085,8 @@ msgstr "NEE"
 msgid "NOW"
 msgstr "NU"
 
-msgid "NTP Hostname"
-msgstr "NTP Hostnaam"
+msgid "Optional local NTP server"
+msgstr "Lokale NTP server"
 
 msgid "NTSC"
 msgstr "NTSC"
@@ -10266,7 +10266,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "De volgende bestanden werden gevonden..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "De hostnaam of ip adres van de NTP server waarmee de tijd gesynchroniseerd wordt."
 
 msgid ""
