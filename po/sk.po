@@ -5904,7 +5904,7 @@ msgstr "NIE"
 msgid "NOW"
 msgstr "TERAZ"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "NTP adresa"
 
 msgid "NTSC"
@@ -10023,7 +10023,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Boli nájdené tieto súbory..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "Hostname alebo IP adresa NTP serveru, cez ktory sa bude aktualizovať čas."
 
 msgid ""
