@@ -5987,7 +5987,7 @@ msgstr "NE"
 msgid "NOW"
 msgstr "DABAR"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "NTP pagrindinio kompiuterio vardas"
 
 msgid "NTSC"
@@ -10157,7 +10157,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Kiti failai buvo surasti..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "NTP serverio pagrindinio kompiuterio vardas arba IP adresas, su kuriuo reikia sinchronizuoti laiką."
 
 msgid ""

@@ -6944,7 +6944,7 @@ msgstr ""
 msgid "NOW"
 msgstr "SADA"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr ""
 
 #
@@ -11886,7 +11886,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Sledeće datoteke su pronađene..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr ""
 
 #
