@@ -6062,7 +6062,7 @@ msgstr "NO"
 msgid "NOW"
 msgstr "IN ONDA"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr ""
 
 msgid "NTSC"
@@ -10262,7 +10262,7 @@ msgstr "Il file enigma.info per boxinformation non è disponibile o il contenuto
 msgid "The following files were found..."
 msgstr "Trovati i seguenti file..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "Il nome host o l'indirizzo IP del server NTP con cui sincronizzare l'ora."
 
 msgid ""

@@ -5888,7 +5888,7 @@ msgstr "NĒ"
 msgid "NOW"
 msgstr "PAŠREIZ"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "NTP serveris"
 
 msgid "NTSC"
@@ -9992,7 +9992,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Tika atrasti sekojoši faili..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "NTP servera nosaukums vai IP adrese ar kuru sinhronizēt laiku."
 
 msgid ""
