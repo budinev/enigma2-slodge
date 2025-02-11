@@ -6617,7 +6617,7 @@ msgstr "NO"
 msgid "NOW"
 msgstr "AHORA"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "Nombre de host NTP"
 
 #
@@ -11259,7 +11259,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Los siguientes ficheros fueron encontrados..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "El nombre de host o la dirección IP del servidor NTP con el que sincronizar la hora."
 
 msgid ""
