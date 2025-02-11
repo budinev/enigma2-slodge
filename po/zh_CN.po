@@ -5887,7 +5887,7 @@ msgstr "否"
 msgid "NOW"
 msgstr "现在"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "NTP 主机名"
 
 msgid "NTSC"
@@ -10000,7 +10000,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "找到以下文件..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "用于同步时间的 NTP 服务器的主机名或 IP 地址。"
 
 msgid ""

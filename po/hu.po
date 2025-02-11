@@ -5998,8 +5998,8 @@ msgstr "NEM"
 msgid "NOW"
 msgstr "MOST"
 
-msgid "NTP Hostname"
-msgstr "NTP Hostname"
+msgid "Optional local NTP server"
+msgstr "Optional local NTP server"
 
 msgid "NTSC"
 msgstr "NTSC"
@@ -10184,7 +10184,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Az alábbi fájlokat találta a rendszer..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "Az NTP szerver host neve vagy IP címe, amivel az időt szinkronizálja."
 
 msgid ""
