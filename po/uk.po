@@ -5918,7 +5918,7 @@ msgstr "НІ"
 msgid "NOW"
 msgstr "ЗАРАЗ"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "Назва NTP хосту"
 
 msgid "NTSC"
@@ -10049,7 +10049,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Наступні файли було знайдено..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "Ім'я хоста або IP-адреса сервера NTP для синхронізації часу."
 
 msgid ""

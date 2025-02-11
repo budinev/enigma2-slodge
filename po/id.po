@@ -6184,7 +6184,7 @@ msgstr "TIDAK"
 msgid "NOW"
 msgstr "Sekarang"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "Nama host NTP"
 
 msgid "NTSC"
@@ -10464,7 +10464,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Ditemukan berkas berikut..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "Nama host atau alamat ip server NTP untuk menyinkronkan waktu."
 
 msgid ""
