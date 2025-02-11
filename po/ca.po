@@ -6620,7 +6620,7 @@ msgstr "NO"
 msgid "NOW"
 msgstr "ARA"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "Nom d’amfitrió NTP"
 
 #
@@ -11275,7 +11275,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "S’han trobat els fitxers següents…"
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "El nom de l’amfitrió o l’adreça IP del servidor NTP amb el qual sincronitzar l’hora."
 
 msgid ""

@@ -5985,7 +5985,7 @@ msgstr "KHÔNG"
 msgid "NOW"
 msgstr "HIỆN NAY"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr "Tên máy chủ NTP"
 
 msgid "NTSC"
@@ -10160,7 +10160,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Các tập tin sau đã được tìm thấy ..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr "Tên máy chủ hoặc địa chỉ IP của máy chủ NTP để đồng bộ hóa thời gian với."
 
 msgid ""
