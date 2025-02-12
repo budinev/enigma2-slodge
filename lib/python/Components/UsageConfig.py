@@ -827,7 +827,7 @@ def InitUsageConfig():
 
 	config.ntp = ConfigSubsection()
 
-	def chronyStatusFinished(self, result, retval, action):
+	def chronyStatusFinished(result, retval, action):
 		match action:
 			case 'disable':
 				if retval == 0:
