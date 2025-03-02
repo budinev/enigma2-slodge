@@ -7,7 +7,7 @@ class RcModel:
 	RcModels = {}
 
 	def __init__(self):
-		self.model = BoxInfo.getItem("machine")
+		self.model = BoxInfo.getItem("model")
 		# cfg files has modelname  rcname entries.
 		# modelname is boxname optionally followed by .rctype
 		for line in open((resolveFilename(SCOPE_SKIN, 'rc_models/rc_models.cfg')), 'r'):

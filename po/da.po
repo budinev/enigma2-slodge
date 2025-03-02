@@ -6747,7 +6747,7 @@ msgstr "NEJ"
 msgid "NOW"
 msgstr "NU"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr ""
 
 #
@@ -11452,7 +11452,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "Følgende filer fandtes..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr ""
 
 #
