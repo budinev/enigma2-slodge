@@ -44,24 +44,9 @@ def findMountPoint(path):
 	return path
 
 
-DEVTYPE_UDEV = 0
-DEVTYPE_DEVFS = 1
-
-
 class Harddisk:
 	def __init__(self, device, removable=False):
 		self.device = device
-
-		if os.access("/dev/.udev", 0):
-			self.type = DEVTYPE_UDEV
-		elif os.access("/dev/udev_network_queue", 0):
-			self.type = DEVTYPE_UDEV
-		elif os.access("/dev/.devfsd", 0):
-			self.type = DEVTYPE_DEVFS
-		else:
-			print("[Harddisk] Unable to determine structure of /dev")
-			self.type = -1
-			self.card = False
 
 		self.max_idle_time = 0
 		self.idle_running = False
@@ -84,27 +69,9 @@ class Harddisk:
 		except:
 			self.rotational = True
 
-		if self.type == DEVTYPE_UDEV:
-			self.dev_path = '/dev/' + self.device
-			self.disk_path = self.dev_path
-			self.card = "sdhci" in self.phys_path or "mmc" in self.device
-
-		elif self.type == DEVTYPE_DEVFS:
-			tmp = readFile(self.sysfsPath('dev')).split(':')
-			s_major = int(tmp[0])
-			s_minor = int(tmp[1])
-			for disc in os.listdir("/dev/discs"):
-				dev_path = os.path.realpath('/dev/discs/' + disc)
-				disk_path = dev_path + '/disc'
-				try:
-					rdev = os.stat(disk_path).st_rdev
-				except OSError:
-					continue
-				if s_major == os.major(rdev) and s_minor == os.minor(rdev):
-					self.dev_path = dev_path
-					self.disk_path = disk_path
-					break
-			self.card = self.device[:2] == "hd" and "host0" not in self.dev_path
+		self.dev_path = '/dev/' + self.device
+		self.disk_path = self.dev_path
+		self.card = "sdhci" in self.phys_path or "mmc" in self.device
 
 		print("[Harddisk] new device=%s dev_path=%s disk_path=%s removable=%s internal=%s rotational=%s card=%s" % (self.device, self.dev_path, self.disk_path, removable, self.internal, self.rotational, self.card))
 		if (self.internal or not removable) and not self.card:
@@ -114,13 +81,10 @@ class Harddisk:
 		return self.device < ob.device
 
 	def partitionPath(self, n):
-		if self.type == DEVTYPE_UDEV:
-			if self.dev_path.startswith('/dev/mmcblk'):
-				return self.dev_path + "p" + n
-			else:
-				return self.dev_path + n
-		elif self.type == DEVTYPE_DEVFS:
-			return self.dev_path + '/part' + n
+		if self.dev_path.startswith('/dev/mmcblk'):
+			return self.dev_path + "p" + n
+		else:
+			return self.dev_path + n
 
 	def sysfsPath(self, filename):
 		return os.path.join('/sys/block/', self.device, filename)
@@ -133,11 +97,8 @@ class Harddisk:
 	def bus(self):
 		ret = _("External")
 		# SD/MMC(F1 specific)
-		if self.type == DEVTYPE_UDEV:
-			type_name = " (SD/MMC)"
-		# CF(7025 specific)
-		elif self.type == DEVTYPE_DEVFS:
-			type_name = " (CF)"
+		type_name = " (SD/MMC)"
+		# CF(DM8000 specific)
 
 		if self.card:
 			ret += type_name
@@ -201,25 +162,13 @@ class Harddisk:
 
 	def numPartitions(self):
 		numPart = -1
-		if self.type == DEVTYPE_UDEV:
-			try:
-				devdir = os.listdir('/dev')
-			except OSError:
-				return -1
-			for filename in devdir:
-				if filename.startswith(self.device):
-					numPart += 1
-
-		elif self.type == DEVTYPE_DEVFS:
-			try:
-				idedir = os.listdir(self.dev_path)
-			except OSError:
-				return -1
-			for filename in idedir:
-				if filename.startswith("disc"):
-					numPart += 1
-				if filename.startswith("part"):
-					numPart += 1
+		try:
+			devdir = os.listdir('/dev')
+		except OSError:
+			return -1
+		for filename in devdir:
+			if filename.startswith(self.device):
+				numPart += 1
 		return numPart
 
 	def mountDevice(self):
@@ -282,12 +231,11 @@ class Harddisk:
 				return (res >> 8)
 		# device is not in fstab
 		res = -1
-		if self.type == DEVTYPE_UDEV:
-			# we can let udev do the job, re-read the partition table
-			res = os.system("hdparm -z %s" % self.disk_path)
-			# give udev some time to make the mount, which it will do asynchronously
-			from time import sleep
-			sleep(3)
+		# we can let udev do the job, re-read the partition table
+		res = os.system("hdparm -z %s" % self.disk_path)
+		# give udev some time to make the mount, which it will do asynchronously
+		from time import sleep
+		sleep(3)
 		return (res >> 8)
 
 	def fsck(self):
@@ -375,8 +323,7 @@ class Harddisk:
 		task.check = lambda: os.path.exists(self.partitionPath("1"))
 		task.weighting = 1
 
-		if self.type == DEVTYPE_UDEV:
-			task = UnmountTask(job, self)
+		task = UnmountTask(job, self)
 		task = MkfsTask(job, _("Creating filesystem"))
 		big_o_options = ["dir_index"]
 		if isFileSystemSupported("ext4"):
@@ -889,11 +836,10 @@ class MountTask(Task.LoggingTask):
 				self.postconditions.append(Task.ReturncodePostcondition())
 				return
 		# device is not in fstab
-		if self.hdd.type == DEVTYPE_UDEV:
-			# we can let udev do the job, re-read the partition table
-			# Sorry for the sleep 2 hack...
-			self.setCmdline('sleep 2; hdparm -z ' + self.hdd.disk_path)
-			self.postconditions.append(Task.ReturncodePostcondition())
+		# we can let udev do the job, re-read the partition table
+		# Sorry for the sleep 2 hack...
+		self.setCmdline('sleep 2; hdparm -z ' + self.hdd.disk_path)
+		self.postconditions.append(Task.ReturncodePostcondition())
 
 
 class MkfsTask(Task.LoggingTask):
