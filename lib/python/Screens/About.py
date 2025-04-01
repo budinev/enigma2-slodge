@@ -230,7 +230,7 @@ class CommitInfo(Screen):
 			("https://api.github.com/repos/openpli/enigma2-binary-plugins/commits" + branch_e2plugins, "Enigma2 Binary Plugins", API_GITHUB),
 			("https://api.github.com/repos/openpli/aio-grab/commits", "Aio Grab", API_GITHUB),
 			("https://api.github.com/repos/openpli/enigma2-plugin-extensions-epgimport/commits", "Plugin EPGImport", API_GITHUB),
-			("https://api.github.com/repos/littlesat/skin-PLiHD/commits", "Skin PLi HD", API_GITHUB),
+			("https://api.github.com/repos/DimitarCC/E2-DarkOS-skin/commits", "Skin PLi DarkOS", API_GITHUB),
 			("https://api.github.com/repos/oe-alliance/OpenWebif/commits", "OpenWebif", API_GITHUB),
 			("https://gitlab.openpli.org/api/v4/projects/5/repository/commits", "Hans settings", API_GITLAB)
 		]
