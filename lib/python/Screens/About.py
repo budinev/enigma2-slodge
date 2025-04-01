@@ -249,12 +249,7 @@ class CommitInfo(Screen):
 			commitlog += 80 * '-' + '\n'
 			commitlog += url.split('/')[-2] + '\n'
 			commitlog += 80 * '-' + '\n'
-			try:
-				# OpenPli 5.0 uses python 2.7.11 and here we need to bypass the certificate check
-				from ssl import _create_unverified_context
-				log = loads(urlopen(url, timeout=5, context=_create_unverified_context()).read())
-			except:
-				log = loads(urlopen(url, timeout=5).read())
+			log = loads(urlopen(url, timeout=5).read())
 
 			if self.projects[self.project][2] == API_GITHUB:
 				for c in log:
