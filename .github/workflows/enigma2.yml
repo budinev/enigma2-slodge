@@ -2,24 +2,24 @@ name: Enigma2 CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ scarthgap ]
     paths-ignore:
       - '**/README'
   pull_request:
-    branches: [ develop ]
+    branches: [ scarthgap ]
     paths-ignore:
       - '**/README'
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
-        gcc: [10]
-        python: ['3.9']
+        gcc: [13]
+        python: ['3.12']
     env:
-      CC: "gcc-10"
-      CXX: "g++-10"
+      CC: "gcc-${{ matrix.gcc }}"
+      CXX: "g++-${{ matrix.gcc }}"
     steps:
     - uses: actions/checkout@v3
     - name: Setup Python
@@ -33,6 +33,7 @@ jobs:
       run: |
         sudo apt-get -q update
         sudo apt install docbook-xsl gettext libunwind-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libfribidi-dev libavahi-client-dev libgif-dev mm-common
+        sudo apt install libfreetype6-dev libjpeg-turbo8-dev
     - name: build enigma2 dependencies
       run: |
         echo installing libdvbsi++
