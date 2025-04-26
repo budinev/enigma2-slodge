@@ -150,15 +150,19 @@ def resolveFilename(scope, base="", path_prefix=None):
 		if not skinResolveList:
 			# This import must be here as this module finds the config file as part of the config initialisation.
 			from Components.config import config
-			skin = os.path.dirname(config.skin.primary_skin.value)
+			skin_primary = os.path.dirname(config.skin.primary_skin.value)
+			skin_default = os.path.dirname(config.skin.primary_skin.default)
 			skinResolveList = addInList(
-				os.path.join(scopeConfig, skin),
+				os.path.join(scopeConfig, skin_primary),
+				os.path.join(scopeConfig, skin_default),
 				os.path.join(scopeConfig, "skin_common"),
 				scopeConfig,
-				os.path.join(scopeGUISkin, skin),
+				os.path.join(scopeGUISkin, skin_primary),
+				os.path.join(scopeGUISkin, skin_default),
 				os.path.join(scopeGUISkin, "skin_default"),
 				scopeGUISkin
 			)
+			print('     &&&&>     ', skinResolveList)
 		path = itemExists(skinResolveList, base)
 	elif scope == SCOPE_LCDSKIN:
 		global lcdskinResolveList
@@ -183,12 +187,15 @@ def resolveFilename(scope, base="", path_prefix=None):
 		if not fontsResolveList:
 			# This import must be here as this module finds the config file as part of the config initialisation.
 			from Components.config import config
-			skin = os.path.dirname(config.skin.primary_skin.value)
+			skin_primary = os.path.dirname(config.skin.primary_skin.value)
+			skin_default = os.path.dirname(config.skin.primary_skin.default)
 			display = os.path.dirname(config.skin.display_skin.value) if hasattr(config.skin, "display_skin") else None
 			fontsResolveList = addInList(
 				os.path.join(scopeConfig, "fonts"),
-				os.path.join(scopeConfig, skin, "fonts"),
-				os.path.join(scopeConfig, skin)
+				os.path.join(scopeConfig, skin_primary, "fonts"),
+				os.path.join(scopeConfig, skin_primary),
+				os.path.join(scopeConfig, skin_default, "fonts"),
+				os.path.join(scopeConfig, skin_default)
 			)
 			if display:
 				fontsResolveList += addInList(
@@ -198,8 +205,10 @@ def resolveFilename(scope, base="", path_prefix=None):
 			fontsResolveList += addInList(
 				os.path.join(scopeConfig, "skin_common"),
 				scopeConfig,
-				os.path.join(scopeGUISkin, skin, "fonts"),
-				os.path.join(scopeGUISkin, skin),
+				os.path.join(scopeGUISkin, skin_primary, "fonts"),
+				os.path.join(scopeGUISkin, skin_primary),
+				os.path.join(scopeGUISkin, skin_default, "fonts"),
+				os.path.join(scopeGUISkin, skin_default),
 				os.path.join(scopeGUISkin, "skin_default", "fonts"),
 				os.path.join(scopeGUISkin, "skin_default")
 			)
