@@ -236,7 +236,7 @@ class Screen(dict):
 	def screenContentChanged(self):
 		for f in self.onContentChanged:
 			if not isinstance(f, type(self.close)):
-				exec(f, globals(), locals())  # Python 3
+				exec(f, globals(), locals())
 			else:
 				f()
 
