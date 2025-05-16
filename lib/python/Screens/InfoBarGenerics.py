@@ -1,7 +1,7 @@
 from Screens.ChannelSelection import ChannelSelection, BouquetSelector, SilentBouquetSelector
 
 from Components.ActionMap import ActionMap, HelpableActionMap
-from Components.ActionMap import NumberActionMap
+from Components.ActionMap import NumberActionMap, HelpableNumberActionMap
 from Components.Harddisk import harddiskmanager, findMountPoint
 from Components.Input import Input
 from Components.Label import Label
@@ -734,39 +734,50 @@ class InfoBarNumberZap:
 	""" Handles an initial number for NumberZapping """
 
 	def __init__(self):
-		self["NumberActions"] = NumberActionMap(["NumberActions"],
+		self.__event_tracker = ServiceEventTracker(screen=self, eventmap={
+				iPlayableService.evStart: self.__serviceStarted,
+			})
+		self.toggleSeekStatus = False
+		self["NumberActions"] = HelpableNumberActionMap(self, ["NumberActions", "InfobarSeekActions"],
 			{
-				"1": self.keyNumberGlobal,
-				"2": self.keyNumberGlobal,
-				"3": self.keyNumberGlobal,
-				"4": self.keyNumberGlobal,
-				"5": self.keyNumberGlobal,
-				"6": self.keyNumberGlobal,
-				"7": self.keyNumberGlobal,
-				"8": self.keyNumberGlobal,
-				"9": self.keyNumberGlobal,
-				"0": self.keyNumberGlobal,
+				"1": (self.keyNumberGlobal, _('Numberzap or seek backward small step')),
+				"2": (self.keyNumberGlobal, _('Numberzap')),
+				"3": (self.keyNumberGlobal, _('Numberzap or seek forward small step')),
+				"4": (self.keyNumberGlobal, _('Numberzap or seek backward medium step')),
+				"5": (self.keyNumberGlobal, _('Numberzap')),
+				"6": (self.keyNumberGlobal, _('Numberzap or seek forward medium step')),
+				"7": (self.keyNumberGlobal, _('Numberzap or seek backward big step')),
+				"8": (self.keyNumberGlobal, _('Numberzap')),
+				"9": (self.keyNumberGlobal, _('Numberzap or seek backward big step')),
+				"0": (self.keyNumberGlobal, _('Numberzap or zap to previous service')),
+				"toggleSeek": (self.toggleSeek, _("Toggle between zap and seek mode")),
 			})
 
-	def keyNumberGlobal(self, number):
-		seekable = self.getSeek()
-		if seekable:
-			length = seekable.getLength() or (None, 0)
-			if length[1] > 0:
-				key = int(number)
-				time = (-config.seek.selfdefined_13.value, False, config.seek.selfdefined_13.value,
-					-config.seek.selfdefined_46.value, False, config.seek.selfdefined_46.value,
-					-config.seek.selfdefined_79.value, False, config.seek.selfdefined_79.value)[key - 1]
+	def __serviceStarted(self):
+		self.toggleSeekStatus = False
 
-				time = time * 90000
-				seekable.seekRelative(time < 0 and -1 or 1, abs(time))
-				return
+	def toggleSeek(self):
+		self.seekable = self.getSeek()
+		if self.seekable:
+			self.toggleSeekStatus = not self.toggleSeekStatus
+			self.VideoMode_window.setText(_("Numberbuttons Seek") if self.toggleSeekStatus else _("Numberbuttons Zap"))
+
+	def keyNumberGlobal(self, number):
 		if number == 0:
 			if isinstance(self, InfoBarPiP) and self.pipHandles0Action():
 				self.pipDoHandle0Action()
 			elif len(self.servicelist.history) > 1:
 				self.checkTimeshiftRunning(self.recallPrevService)
 		else:
+			if self.toggleSeekStatus:
+				length = self.seekable.getLength() or (None, 0)
+				if length[1] > 0:
+					key = int(number)
+					time = (-config.seek.selfdefined_13.value, False, config.seek.selfdefined_13.value,
+						-config.seek.selfdefined_46.value, False, config.seek.selfdefined_46.value,
+						-config.seek.selfdefined_79.value, False, config.seek.selfdefined_79.value)[key - 1]
+					self.seekable.seekRelative(time < 0 and -1 or 1, abs(time * 90000))
+				return
 			if "TimeshiftActions" in self and self.timeshiftEnabled():
 				ts = self.getTimeshift()
 				if ts and ts.isTimeshiftActive():
