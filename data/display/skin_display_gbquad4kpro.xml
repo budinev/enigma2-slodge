@@ -29,10 +29,10 @@
 
 <!-- main-->
 	<screen name="InfoBarSummary" position="0,0" size="400,240">
-		<widget source="session.CurrentService" render="Label" position="0,5" size="400,70" font="LCD_display;30" valign="center" halign="center" foregroundColor="#FFFF00" >
+		<widget source="session.CurrentService" render="Label" position="120,0" size="270,90" font="LCD_display;30" halign="center" valign="center" foregroundColor="#FFFF00" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="0,85" size="400,50" font="LCD_display;20" valign="center" halign="center" >
+		<widget source="session.Event_Now" render="Label" position="0,70" size="400,50" font="LCD_display;20" valign="center" halign="center"  foregroundColor="#FFFF00" >
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Progress" position="0,145" size="275,20" borderWidth="1" >
@@ -116,7 +116,7 @@
 
 <!-- channelselection-->
 	<screen name="ChannelSelection_summary" position="fill">
-		<widget source="parent.ServiceEvent" render="Label" position="160,0" size="240,90" font="LCD_display;30" halign="center" valign="center" >
+		<widget source="parent.ServiceEvent" render="Label" position="120,0" size="270,90" font="LCD_display;30" halign="center" valign="center" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="parent.ServiceEvent" render="Label" position="0,110" size="400,80" font="LCD_display;35" halign="center" valign="center" >
