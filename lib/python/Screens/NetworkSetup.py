@@ -490,8 +490,8 @@ class AdapterSetup(ConfigListScreen, HelpableScreen, Screen):
 	def hideInputHelp(self):
 		current = self["config"].getCurrent()
 		if current == self.wlanSSID or (current and current == self.encryptionKey and config.plugins.wlan.encryption.value != "Unencrypted"):
-			if current[1].helpWindow.instance is not None:
-				current[1].helpWindow.instance.hide()
+			if current[1].help_window.instance is not None:
+				current[1].help_window.instance.hide()
 
 
 class AdapterSetupConfiguration(Screen, HelpableScreen):
