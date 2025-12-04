@@ -5,12 +5,14 @@ from Components.config import config, ConfigClock
 from Components.Pixmap import Pixmap
 from Components.Label import Label
 from Components.EpgList import EPGList, EPG_TYPE_SINGLE, EPG_TYPE_SIMILAR, EPG_TYPE_MULTI, EPG_TYPE_PARTIAL
-from Components.ActionMap import ActionMap
+from Components.ActionMap import ActionMap, HelpableActionMap
+from Screens.HelpMenu import HelpableScreen
 from Components.UsageConfig import preferredTimerPath
 from Components.Sources.ServiceEvent import ServiceEvent
 from Components.Sources.StaticText import StaticText
 from Components.Sources.Event import Event
 from Screens.ChoiceBox import ChoiceBox
+from Screens.MessageBox import MessageBox
 from Screens.TimerEdit import TimerSanityConflict, TimerEditList
 from Screens.EventView import EventViewSimple
 from Screens.TimeDateInput import TimeDateInput
@@ -27,7 +29,7 @@ from Tools.FallbackTimer import FallbackTimerList
 mepg_config_initialized = False
 
 
-class EPGSelection(Screen):
+class EPGSelection(Screen, HelpableScreen):
 	EMPTY = 0
 	ADD_TIMER = 1
 	REMOVE_TIMER = 2
@@ -36,6 +38,7 @@ class EPGSelection(Screen):
 
 	def __init__(self, session, service, zapFunc=None, eventid=None, bouquetChangeCB=None, serviceChangeCB=None, parent=None):
 		Screen.__init__(self, session)
+		HelpableScreen.__init__(self)
 		self.bouquetChangeCB = bouquetChangeCB
 		self.serviceChangeCB = serviceChangeCB
 		self.ask_time = -1 #now
@@ -46,6 +49,7 @@ class EPGSelection(Screen):
 		self.saved_title = None
 		self["Service"] = ServiceEvent()
 		self["Event"] = Event()
+		self.filtering = 0
 		if isinstance(service, str) and eventid is not None:
 			self.type = EPG_TYPE_SIMILAR
 			self.setTitle(_("Similar EPG"))
@@ -70,6 +74,8 @@ class EPGSelection(Screen):
 			self.currentService = ServiceReference(service)
 			self.zapFunc = zapFunc
 			self.sort_type = 0
+			self.original_cfg_filter_start = config.epg.filter_start.value[:]
+			self.original_cfg_filter_end = config.epg.filter_end.value[:]
 			self.setSortDescription()
 		else:
 			self.setTitle(_("Multi EPG"))
@@ -111,6 +117,15 @@ class EPGSelection(Screen):
 				"prevService": self.prevService, # just used in single epg yet
 				"preview": self.eventPreview,
 			})
+		self["EPGFilterActions"] = HelpableActionMap(self, ["EPGFilterActions"],
+			{
+				"filter": (self.stopButtonPressed, _("EPG filter switching")),
+				"startDown": (self.filterStartDown, _("Start time") + " -"),
+				"startUp": (self.filterStartUp, _("Start time") + " +"),
+				"endDown": (self.filterEndDown, _("End time") + " -"),
+				"endUp": (self.filterEndUp, _("End time") + " +"),
+				"saveTimes": (self.saveFilterValues, _("Use current filter values as default")),
+			})
 		self["actions"].csel = self
 		if parent and hasattr(parent, "fallbackTimer"):
 			self.fallbackTimer = parent.fallbackTimer
@@ -120,6 +135,7 @@ class EPGSelection(Screen):
 
 	def nextBouquet(self):
 		if self.type == EPG_TYPE_SINGLE:
+			self.resetFiltering()
 			self.resetSortStatus()
 			self.session.openWithCallback(self.channelSelectionCallback, ChannelSelection.SimpleChannelSelection, _("Select channel"), True, True, self.currentService.ref, self.parent and self.parent.epg_bouquet)
 		if self.bouquetChangeCB:
@@ -127,6 +143,7 @@ class EPGSelection(Screen):
 
 	def prevBouquet(self):
 		if self.type == EPG_TYPE_SINGLE:
+			self.resetFiltering()
 			self.resetSortStatus()
 			self.session.openWithCallback(self.channelSelectionCallback, ChannelSelection.SimpleChannelSelection, _("Select channel"), True, True, self.currentService.ref, self.parent and self.parent.epg_bouquet)
 		if self.bouquetChangeCB:
@@ -134,11 +151,13 @@ class EPGSelection(Screen):
 
 	def nextService(self):
 		if self.serviceChangeCB:
+			self.resetFiltering()
 			self.resetSortStatus()
 			self.serviceChangeCB(1, self)
 
 	def prevService(self):
 		if self.serviceChangeCB:
+			self.resetFiltering()
 			self.resetSortStatus()
 			self.serviceChangeCB(-1, self)
 
@@ -184,6 +203,8 @@ class EPGSelection(Screen):
 				self["list"].fillMultiEPG(self.services, ret[1])
 
 	def closeScreen(self):
+		if self.type == EPG_TYPE_SINGLE:
+			self.restoreFilterValues()
 		if self.zapFunc:
 			self.zapFunc(None, zapback=True)
 		self.close(self.closeRecursive)
@@ -219,14 +240,17 @@ class EPGSelection(Screen):
 		elif self.type == EPG_TYPE_SINGLE:
 			service = self.currentService
 			self["Service"].newService(service.ref)
-			if not self.saved_title:
-				self.saved_title = self.instance.getTitle()
-			self.setTitle(self.saved_title + ' - ' + service.getServiceName())
+			self.serviceToTitle(service)
 			li.fillSingleEPG(service)
 		elif self.type == EPG_TYPE_PARTIAL:
 			li.fill_partial_list(self.eventid)
 		else:
 			li.fillSimilarList(self.currentService, self.eventid)
+
+	def serviceToTitle(self, service):
+		if not self.saved_title:
+			self.saved_title = self.instance.getTitle()
+		self.setTitle(self.saved_title + ' - ' + service.getServiceName())
 
 	def eventViewCallback(self, setEvent, setService, val):
 		l = self["list"]
@@ -275,6 +299,63 @@ class EPGSelection(Screen):
 				self.session.open(EPGSelection, ref)
 		else:
 			self.infoKeyPressed()
+
+	def stopButtonPressed(self):
+		if config.epg.filter.value:
+			if self.type == EPG_TYPE_SINGLE:
+				if not config.epg.filter_keepsorting.value:
+					self.resetSortStatus()
+				if config.epg.filter_reversal.value:
+					self.filtering = self.filtering - 1 if self.filtering else 2
+				else:
+					self.filtering = (self.filtering + 1) % 3
+				self.fillFilteredSingleEPG('' if self.filtering == 0 else "   " + self.getTimespanText())
+
+	def fillFilteredSingleEPG(self, timespan):
+		self.serviceToTitle(self.currentService)
+		self.setTitle(self.instance.getTitle() + timespan)
+		self["list"].fillSingleEPG(self.currentService, self.sort_type, self.filtering)
+
+	def resetFiltering(self):
+		self.filtering = 0
+
+	def saveFilterValues(self):
+		def save(answer):
+			if answer:
+				config.epg.filter_start.save()
+				config.epg.filter_end.save()
+				self.original_cfg_filter_start = config.epg.filter_start.value
+				self.original_cfg_filter_end = config.epg.filter_end.value
+		if self.filtering:
+			self.session.openWithCallback(save, MessageBox, _("Set %s as default?") % self.getTimespanText(), type=MessageBox.TYPE_YESNO, simple=True)
+
+	def restoreFilterValues(self):
+		if hasattr(self, "original_cfg_filter_start") and hasattr(self, "original_cfg_filter_end"):
+			config.epg.filter_start.value = self.original_cfg_filter_start
+			config.epg.filter_end.value = self.original_cfg_filter_end
+
+	def filterShiftTimespan(self, filter_side, delta):
+		def shiftHour(clock, delta):
+			hour, minute = clock.value
+			clock.value = [(hour + delta) % 24, minute]
+
+		clock_start, clock_end = config.epg.filter_start, config.epg.filter_end
+		target = clock_end if (self.filtering == 2 and filter_side == 'start') or (self.filtering != 2 and filter_side == 'end') else clock_start
+		shiftHour(target, delta)
+		self.fillFilteredSingleEPG("   " + self.getTimespanText())
+
+	def getTimespanText(self):
+		begin, end = config.epg.filter_start.value, config.epg.filter_end.value
+		return  "(%02d:%02d - %02d:%02d)" % ((*begin, *end) if self.filtering == 1 else (*end, *begin))
+
+	def filterStartDown(self):
+		self.filtering and self.filterShiftTimespan('start', -1)
+	def filterStartUp(self):
+		self.filtering and self.filterShiftTimespan('start', 1)
+	def filterEndDown(self):
+		self.filtering and self.filterShiftTimespan('end', -1)
+	def filterEndUp(self):
+		self.filtering and self.filterShiftTimespan('end', 1)
 
 	def yellowButtonPressed(self):
 		if self.type == EPG_TYPE_MULTI:

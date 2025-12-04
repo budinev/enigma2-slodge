@@ -81,6 +81,9 @@ class hotkey:
 		("Skip back", "skip_back", ""),
 		("Skip forward", "skip_forward", ""),
 		("Activate PiP", "activatePiP", ""),
+		("Activate PiP" + " " + _("long"), "activatePiP_long", ""),
+		("History", "history", ""),
+		("History" + " " + _("long"), "history_long", ""),
 		("Timer", "timer", ""),
 		("Timer" + " " + _("long"), "timer_long", ""),
 		("Playlist", "playlist", ""),
@@ -716,10 +719,10 @@ class InfoBarHotkey:
 				if os.path.isfile(command):
 					if ".hidden." in command:
 						from enigma import eConsoleAppContainer
-						eConsoleAppContainer().execute("python %s" % command)
+						eConsoleAppContainer().execute("python3 %s" % command)
 					else:
 						from Screens.Console import Console
-						self.session.open(Console, selected[1] + " pythonscript", "python %s" % command, closeOnSuccess=selected[1].startswith('!'), showStartStopText=False)
+						self.session.open(Console, selected[1] + " pythonscript", "python3 %s" % command, closeOnSuccess=selected[1].startswith('!'), showStartStopText=False)
 			elif selected[0] == "Menu":
 				from Screens.Menu import MainMenu, mdom
 				root = mdom.getroot()

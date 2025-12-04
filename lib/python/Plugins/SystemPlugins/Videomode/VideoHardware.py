@@ -228,6 +228,10 @@ class VideoHardware:
 			except IOError:
 				print("[VideoHardware] cannot open /proc/stb/video/videomode_24hz")
 
+		if BoxInfo.getItem("ForceSet10bitMode2160p") and mode.startswith("2160p"):  # Hack for GB QUAD 4K Pro
+			config.av.hdmicolordepth.value = "10bit"
+			config.av.hdmicolordepth.save()
+
 		self.updateAspect(None)
 
 	def saveMode(self, port, mode, rate):

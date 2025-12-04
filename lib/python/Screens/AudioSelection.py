@@ -10,6 +10,7 @@ from Components.config import config, ConfigSubsection, ConfigNothing, ConfigSel
 from Components.Label import Label
 from Components.Sources.List import List
 from Components.Sources.Boolean import Boolean
+from Components.Sources.StaticText import StaticText
 from Components.SystemInfo import BoxInfo
 from Components.VolumeControl import VolumeControl
 from Components.UsageConfig import originalAudioTracks, visuallyImpairedCommentary
@@ -37,6 +38,7 @@ class AudioSelection(ConfigListScreen, Screen):
 		self["key_green"] = Boolean(False)
 		self["key_yellow"] = Boolean(True)
 		self["key_blue"] = Boolean(False)
+		self["key_menu"] = StaticText(_("MENU"))
 		self.protectContextMenu = True
 		self.Plugins = []
 		ConfigListScreen.__init__(self, [])
@@ -60,6 +62,8 @@ class AudioSelection(ConfigListScreen, Screen):
 			"cancel": self.cancel,
 			"up": self.keyUp,
 			"down": self.keyDown,
+			"left": self.keyLeft,
+			"right": self.keyRight,
 			"volumeUp": self.volumeUp,
 			"volumeDown": self.volumeDown,
 			"volumeMute": self.volumeMute,
@@ -241,7 +245,6 @@ class AudioSelection(ConfigListScreen, Screen):
 						description = types[x[2]]
 					except:
 						description = _("unknown") + ": %s" % x[2]
-					number = str(int(number) + 1)
 
 				streams.append((x, "", number, description, language, selected, selectionpng if selected == "X" else None))
 				idx += 1
@@ -289,7 +292,7 @@ class AudioSelection(ConfigListScreen, Screen):
 		track = int(audio)
 		if isinstance(track, int):
 			service = self.session.nav.getCurrentService()
-			ref = self.session.nav.getCurrentlyPlayingServiceReference()
+			ref = self.session.nav.getCurrentServiceReferenceOriginal()
 			#ref = ref and eServiceReference(ref.toString())
 			if service.audioTracks().getNumberOfTracks() > track:
 				self.audioTracks.selectTrack(track)
@@ -466,7 +469,7 @@ class QuickSubtitlesConfigMenu(ConfigListScreen, Screen):
 		sub = self.infobar.selected_subtitle
 		if sub[0] == 0:  # dvb
 			menu = [
-				getConfigMenuItem("config.subtitles.dvb_subtitles_yellow"),
+				getConfigMenuItem("config.subtitles.dvb_subtitles_color"),
 				getConfigMenuItem("config.subtitles.dvb_subtitles_backtrans"),
 				getConfigMenuItem("config.subtitles.dvb_subtitles_original_position"),
 				(_("Center DVB subtitles"), self.center_dvb_subs),

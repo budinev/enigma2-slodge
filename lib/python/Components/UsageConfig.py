@@ -1,6 +1,6 @@
 from Components.Harddisk import harddiskmanager
 from Components.Console import Console
-from Components.config import ConfigSubsection, ConfigYesNo, config, ConfigSelection, ConfigText, ConfigNumber, ConfigSet, ConfigLocations, ConfigSelectionNumber, ConfigClock, ConfigSlider, ConfigEnableDisable, ConfigSubDict, ConfigDictionarySet, ConfigInteger, ConfigPassword, ConfigIP
+from Components.config import ConfigSubsection, ConfigYesNo, config, ConfigSelection, ConfigText, ConfigNumber, ConfigSet, ConfigLocations, ConfigSelectionNumber, ConfigClock, ConfigSlider, ConfigEnableDisable, ConfigSubDict, ConfigDictionarySet, ConfigInteger, ConfigPassword, ConfigIP, NoSave
 from Tools.Directories import defaultRecordingLocation
 from enigma import setTunerTypePriorityOrder, setPreferredTuner, setSpinnerOnOff, setEnableTtCachingOnOff, eEnv, eDVBDB, Misc_Options, eBackgroundFileEraser, eServiceEvent, eDVBLocalTimeHandler, eEPGCache
 from Components.About import GetIPsFromNetworkInterfaces
@@ -13,7 +13,7 @@ import time
 import subprocess
 
 
-originalAudioTracks = "orj dos ory org esl qaa qaf und mis mul ORY ORJ Audio_ORJ oth"
+originalAudioTracks = "orj dos ory org esl qaa qaf und qae mis mul ORY ORJ Audio_ORJ oth"
 visuallyImpairedCommentary = "NAR qad"
 
 
@@ -85,7 +85,7 @@ def InitUsageConfig():
 	config.usage.show_infobar_on_zap = ConfigYesNo(default=True)
 	config.usage.show_infobar_on_skip = ConfigYesNo(default=True)
 	config.usage.show_infobar_on_event_change = ConfigYesNo(default=False)
-	config.usage.show_second_infobar = ConfigSelection(default="0", choices=[("", _("None"))] + choicelist + [("EPG", _("EPG"))])
+	config.usage.show_second_infobar = ConfigSelection(default="0", choices=[("no", _("None"))] + choicelist + [("EPG", _("EPG"))])
 	config.usage.show_simple_second_infobar = ConfigYesNo(default=False)
 	config.usage.show_infobar_adds = ConfigYesNo(default=False)
 	config.usage.infobar_frontend_source = ConfigSelection(default="settings", choices=[("settings", _("Settings")), ("tuner", _("Tuner"))])
@@ -155,6 +155,12 @@ def InitUsageConfig():
 		("simple", _("Normal")),
 		("intermediate", _("Advanced")),
 		("expert", _("Expert"))])
+
+	config.usage.help_sortorder = ConfigSelection(default="headings+alphabetic", choices=[
+		("headings+alphabetic", _("Alphabetical under headings")),
+		("flat+alphabetic", _("Flat alphabetical")),
+		("flat+remotepos", _("Flat by position on remote")),
+		("flat+remotegroups", _("Flat by key group on remote"))])
 
 	config.usage.startup_to_standby = ConfigSelection(default="no", choices=[
 		("no", _("no")),
@@ -434,7 +440,7 @@ def InitUsageConfig():
 	config.usage.multiboot_order = ConfigYesNo(default=True)
 
 	config.usage.setupShowDefault = ConfigSelection(default="spaces", choices=[
-		("", _("Don't show default")),
+		("no", _("Don't show default")),
 		("spaces", _("Show default after description")),
 		("newline", _("Show default on new line"))
 	])
@@ -475,17 +481,45 @@ def InitUsageConfig():
 	config.epg.virgin.addNotifier(EpgSettingsChanged)
 	config.epg.opentv.addNotifier(EpgSettingsChanged)
 
-	config.epg.histminutes = ConfigSelectionNumber(min=0, max=120, stepwidth=15, default=0, wraparound=True)
-
+	def wdhm(number):
+		units = (7 * 24 * 60, 24 * 60, 60, 1)
+		for i, d in enumerate(units):
+			if unit := int(number / d):
+				if i == 3:
+					return "%s" % (ngettext("%d minute", "%d minuts", unit) % unit)
+				elif i == 2:
+					return "%s" % (ngettext("%d hour", "%d hours", unit) % unit)
+				elif i == 1:
+					return "%s" % (ngettext("%d day", "%d days", unit) % unit)
+				else:
+					return "%s" % (ngettext("%d week", "%d weeks", unit) % unit)
+		return _("0 minutes")
+	choices = [(0, _('None'))] + [(i, wdhm(i)) for i in [i * 15 for i in range(1, 4)] + [i * 60 for i in range(1, 9)] + [i * 120 for i in range(5, 12)] + [i * 24 * 60 for i in range(1, 8)]]
+	config.epg.histminutes = ConfigSelection(default=0, choices=choices)
 	def EpgHistorySecondsChanged(configElement):
 		from enigma import eEPGCache
-		eEPGCache.getInstance().setEpgHistorySeconds(config.epg.histminutes.getValue() * 60)
+		eEPGCache.getInstance().setEpgHistorySeconds(int(configElement.value) * 60)
 	config.epg.histminutes.addNotifier(EpgHistorySecondsChanged)
 
 	choicelist = [("newline", _("new line")), ("2newlines", _("2 new lines")), ("space", _("space")), ("dot", " . "), ("dash", " - "), ("asterisk", " * "), ("nothing", _("nothing"))]
 	config.epg.fulldescription_separator = ConfigSelection(default="2newlines", choices=choicelist)
 	choicelist = [("no", _("no")), ("nothing", _("omit")), ("space", _("space")), ("dot", ". "), ("dash", " - "), ("asterisk", " * "), ("hashtag", " # ")]
 	config.epg.replace_newlines = ConfigSelection(default="no", choices=choicelist)
+
+	config.epg.filter = ConfigYesNo(default=False)
+	config.epg.filter_start = ConfigClock(default=time.mktime((1970, 1, 1, 6, 0, 0, 0, 0, 0)))
+	config.epg.filter_end = ConfigClock(default=time.mktime((1970, 1, 1, 20, 0, 0, 0, 0, 0)))
+	def validateEPGFilterTimes(configElement):
+		def minutes(t):
+			return t[0] * 60 + t[1]
+		start, end = minutes(config.epg.filter_start.value), minutes(config.epg.filter_end.value)
+		if start == end:
+			config.epg.filter_end.value = [(config.epg.filter_end.value[0] + 1) % 24, config.epg.filter_end.value[1]]
+			print("[UsageConfig] EPG filter - start and end times must be different.")
+	config.epg.filter_start.addNotifier(validateEPGFilterTimes)
+	config.epg.filter_end.addNotifier(validateEPGFilterTimes)
+	config.epg.filter_reversal = ConfigYesNo(default=False)
+	config.epg.filter_keepsorting = ConfigYesNo(default=False)
 
 	def correctInvalidEPGDataChange(configElement):
 		eServiceEvent.setUTF8CorrectMode(int(configElement.value))
@@ -602,6 +636,12 @@ def InitUsageConfig():
 		config.usage.vfd_final_scroll_delay = ConfigSelection(default="1000", choices=choicelist)
 		config.usage.vfd_final_scroll_delay.addNotifier(final_scroll_delay, immediate_feedback=False)
 
+	def quadpip_mode_notifier(configElement):
+		if BoxInfo.getItem("HasQuadpip"):
+			open(BoxInfo.getItem("HasQuadpip"), "w").write("mosaic" if configElement.value else "normal")
+	config.usage.QuadpipMode = NoSave(ConfigYesNo(default=False))
+	config.usage.QuadpipMode.addNotifier(quadpip_mode_notifier)
+
 	config.subtitles = ConfigSubsection()
 	config.subtitles.show = ConfigYesNo(default=True)
 	config.subtitles.ttx_subtitle_colors = ConfigSelection(default="1", choices=[
@@ -625,11 +665,12 @@ def InitUsageConfig():
 			subtitle_delay_choicelist.append((str(i), _("%2.1f sec") % (i / 90000.)))
 	config.subtitles.subtitle_noPTSrecordingdelay = ConfigSelection(default="315000", choices=subtitle_delay_choicelist)
 
-	config.subtitles.dvb_subtitles_yellow = ConfigYesNo(default=False)
+	config.subtitles.dvb_subtitles_color = ConfigSelection(default="0", choices=[("0", _("Off")), ("1", _("Yellow")), ("2", _("Green")), ("3", _("Magenta")), ("4", _("Cyan"))])
 	config.subtitles.dvb_subtitles_original_position = ConfigSelection(default="0", choices=[("0", _("Original")), ("1", _("Fixed")), ("2", _("Relative"))])
 	config.subtitles.dvb_subtitles_centered = ConfigYesNo(default=False)
 	config.subtitles.subtitle_bad_timing_delay = ConfigSelection(default="0", choices=subtitle_delay_choicelist)
-	config.subtitles.dvb_subtitles_backtrans = ConfigSelection(default="0", choices=[
+	config.subtitles.dvb_subtitles_backtrans = ConfigSelection(default="-1", choices=[
+		("-1", _("Original")),
 		("0", _("No transparency")),
 		("25", "10%"),
 		("50", "20%"),
@@ -685,7 +726,7 @@ def InitUsageConfig():
 		("nor", _("Norwegian")),
 		("fas per fa pes", _("Persian")),
 		("pol", _("Polish")),
-		("por dub Dub DUB ud1", _("Portuguese")),
+		("por dub Dub DUB ud1 LEG", _("Portuguese")),
 		("ron rum", _("Romanian")),
 		("rus", _("Russian")),
 		("srp scc", _("Serbian")),
@@ -786,47 +827,73 @@ def InitUsageConfig():
 
 	config.ntp = ConfigSubsection()
 
+	def chronyStatusFinished(result, retval, action):
+		match action:
+			case 'disable':
+				if retval == 0:
+					Console().ePopen('/etc/init.d/chronyd stop')
+				Console().ePopen('update-rc.d chronyd disable 3')
+			case 'enable':
+				Console().ePopen('update-rc.d chronyd enable 3')
+				if retval == 3:
+					Console().ePopen('/etc/init.d/chronyd start')
+			case 'sync' if retval == 0:
+				if retval == 0:
+					Console().ePopen('/etc/init.d/chronyd reload')
+				else:
+					Console().ePopen('/etc/init.d/chronyd start')
+			case _:
+				print("[UsageConfig] Unsupported Chrony status action: %s" % action)
+
 	def timesyncChanged(configElement):
-		if configElement.value == "ntp":
-			os.system('ntpd -q')
-			print("[UsageConfig] NTP enabled, DVB time disabled")
-			eDVBLocalTimeHandler.getInstance().setUseDVBTime(False)
-		elif configElement.value == "auto":
-			os.system('ntpd -q')
-			result = ""
-			try:
-				result = subprocess.check_output('ntpq -pn', shell=True, text=True)
-			except subprocess.CalledProcessError as e:
-				print("[Usageconfig]", e)
-			if "No association ID's returned" in result:
-				print("[UsageConfig] NTP disabled, DVB time enabled")
-				eDVBLocalTimeHandler.getInstance().setUseDVBTime(True)
-			else:
-				print("[UsageConfig] NTP enabled, DVB time disabled")
-				eDVBLocalTimeHandler.getInstance().setUseDVBTime(False)
-		else:
-			print("[UsageConfig] NTP disabled, DVB time enabled")
+		if configElement.value == "dvb":
+			Console().ePopen('/etc/init.d/chronyd status', chronyStatusFinished, 'disable')
 			eDVBLocalTimeHandler.getInstance().setUseDVBTime(True)
+			print("[UsageConfig] NTP disabled, DVB time enabled")
+		elif configElement.value == "auto":
+			Console().ePopen('/etc/init.d/chronyd status', chronyStatusFinished, 'sync')
+			try:
+				result = subprocess.check_output('chronyc tracking', shell=True, text=True)
+			except subprocess.CalledProcessError as e:
+				result = ""
+				print("[Usageconfig]", e)
+			if "Reference ID    : 00000000 ()" in result:
+				Console().ePopen('/etc/init.d/chronyd status', chronyStatusFinished, 'disable')
+				eDVBLocalTimeHandler.getInstance().setUseDVBTime(True)
+				print("[UsageConfig] NTP disabled, DVB time enabled")
+			else:
+				Console().ePopen('/etc/init.d/chronyd status', chronyStatusFinished, 'enable')
+				eDVBLocalTimeHandler.getInstance().setUseDVBTime(False)
+				print("[UsageConfig] NTP enabled, DVB time disabled")
+		elif configElement.value == "ntp":
+			Console().ePopen('/etc/init.d/chronyd status', chronyStatusFinished, 'enable')
+			eDVBLocalTimeHandler.getInstance().setUseDVBTime(False)
+			print("[UsageConfig] NTP enabled, DVB time disabled")
 
 		eEPGCache.getInstance().timeUpdated()
 
 	config.ntp.timesync = ConfigSelection(default="auto", choices=[("auto", _("auto")), ("dvb", _("Transponder Time")), ("ntp", _("Internet (ntp)"))])
-	config.ntp.timesync.addNotifier(timesyncChanged)
-	config.ntp.server = ConfigText("pool.ntp.org", fixed_size=False)
-	config.ntp.server_old = ConfigText("pool.ntp.org")
+	config.ntp.timesync.addNotifier(timesyncChanged, initial_call=False)
+	config.ntp.server = ConfigText("", fixed_size=False)
+	config.ntp.server_old = ConfigText("")
 	def setNTPServer(configElement):
-		if configElement.value != config.ntp.server_old.value and configElement.value != "" and " " not in configElement.value:
-			f = open("/etc/ntp.conf", "r")
+		if configElement.value != config.ntp.server_old.value and " " not in configElement.value:
+			f = open("/etc/chrony.conf", "r")
 			lst = f.readlines()
-			f = open("/etc/ntp.conf", "w")
+			f = open("/etc/chrony.conf", "w")
 			for x in lst:
 				x1 = x.split()
-				if len(x1) > 1 and x1[0] == "server":
-					x1[1] = configElement.value
-					x = " ".join(x1) +"\n"
+				if len(x1) > 1 and (x1[0] == "server" or x1[0] == "#server"):
+					if configElement.value == "":
+						x1[0] = "#server"
+						x = " ".join(x1) +"\n"
+					else:
+						x = "server %s iburst minpoll 3 prefer\n" % configElement.value
 				f.write(x)
 			f.close()
 			config.ntp.server_old.value = configElement.value
+			Console().ePopen('/etc/init.d/chronyd status', chronyStatusFinished, 'sync')
+			print("[UsageConfig] NTP enabled, local server is set to: %s" % configElement.value)
 	config.ntp.server.addNotifier(setNTPServer, immediate_feedback=False)
 
 def updateChoices(sel, choices):

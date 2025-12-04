@@ -43,7 +43,8 @@ class About(Screen):
 		# [WanWizard] Removed until we find a reliable way to determine the installation date
 		# AboutText += _("Installed: ") + about.getFlashDateString() + "\n"
 
-		EnigmaVersion = _("Enigma version: ") + about.getEnigmaVersionString()
+		EnigmaVersion = about.getEnigmaVersionString()
+		EnigmaVersion = "%s%s (%s)" % (_("Enigma version: "), EnigmaVersion[:10], EnigmaVersion[11:])
 		self["EnigmaVersion"] = StaticText(EnigmaVersion)
 		AboutText += "\n" + EnigmaVersion + "\n"
 
@@ -130,7 +131,7 @@ class About(Screen):
 		self["key_yellow"] = Button(_("Troubleshoot"))
 		self["key_blue"] = Button(_("Memory Info"))
 
-		self["actions"] = ActionMap(["ColorActions", "SetupActions", "DirectionActions"],
+		self["actions"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"],
 			{
 				"cancel": self.close,
 				"ok": self.close,
@@ -216,7 +217,7 @@ class CommitInfo(Screen):
 
 		# get the branch to display from the Enigma version
 		try:
-			branch = "?sha=" + about.getEnigmaVersionString().split("(")[1].split(")")[0].lower()
+			branch = f"?sha={about.getEnigmaBranchString()}"
 		except:
 			branch = ""
 		branch_e2plugins = "?sha=python3"
@@ -226,10 +227,11 @@ class CommitInfo(Screen):
 			("https://api.github.com/repos/openpli/enigma2/commits" + branch, "Enigma2", API_GITHUB),
 			("https://api.github.com/repos/openpli/openpli-oe-core/commits" + branch, "Openpli Oe Core", API_GITHUB),
 			("https://api.github.com/repos/openpli/enigma2-plugins/commits" + branch_e2plugins, "Enigma2 Plugins", API_GITHUB),
+			("https://api.github.com/repos/openpli/enigma2-binary-plugins/commits" + branch_e2plugins, "Enigma2 Binary Plugins", API_GITHUB),
 			("https://api.github.com/repos/openpli/aio-grab/commits", "Aio Grab", API_GITHUB),
 			("https://api.github.com/repos/openpli/enigma2-plugin-extensions-epgimport/commits", "Plugin EPGImport", API_GITHUB),
-			("https://api.github.com/repos/littlesat/skin-PLiHD/commits", "Skin PLi HD", API_GITHUB),
-			("https://api.github.com/repos/E2OpenPlugins/e2openplugin-OpenWebif/commits", "OpenWebif", API_GITHUB),
+			("https://api.github.com/repos/DimitarCC/E2-DarkOS-skin/commits", "Skin PLi DarkOS", API_GITHUB),
+			("https://api.github.com/repos/oe-alliance/OpenWebif/commits", "OpenWebif", API_GITHUB),
 			("https://gitlab.openpli.org/api/v4/projects/5/repository/commits", "Hans settings", API_GITLAB)
 		]
 		self.cachedProjects = {}
@@ -247,12 +249,7 @@ class CommitInfo(Screen):
 			commitlog += 80 * '-' + '\n'
 			commitlog += url.split('/')[-2] + '\n'
 			commitlog += 80 * '-' + '\n'
-			try:
-				# OpenPli 5.0 uses python 2.7.11 and here we need to bypass the certificate check
-				from ssl import _create_unverified_context
-				log = loads(urlopen(url, timeout=5, context=_create_unverified_context()).read())
-			except:
-				log = loads(urlopen(url, timeout=5).read())
+			log = loads(urlopen(url, timeout=5).read())
 
 			if self.projects[self.project][2] == API_GITHUB:
 				for c in log:
@@ -427,7 +424,7 @@ class Troubleshoot(Screen):
 	def green(self):
 		if self.commandIndex >= self.numberOfCommands:
 			try:
-				os.remove(self.commands[self.commandIndex][4:])
+				os.remove(self.commands[self.commandIndex].rsplit(" ", 1)[1])
 			except:
 				pass
 			self.updateOptions()
@@ -435,7 +432,7 @@ class Troubleshoot(Screen):
 
 	def removeAllLogfiles(self, answer):
 		if answer:
-			for fileName in self.getLogFilesList():
+			for fileName in self.getLogFilesList() + self.getDebugFilesList():
 				try:
 					os.remove(fileName)
 				except:

@@ -218,7 +218,7 @@ class SelectImage(Screen):
 			self["key_green"].setText("")
 		else:
 			if currentSelected[0][1] == "Expander":
-				self["key_green"].setText(_("Compress") if currentSelected[0][0] in self.expanded else _("Expand"))
+				self["key_green"].setText(_("Collapse") if currentSelected[0][0] in self.expanded else _("Expand"))
 				self["description"].setText("")
 			else:
 				self["key_green"].setText(_("Flash Image"))
@@ -551,7 +551,7 @@ class MultibootSelection(SelectImage):
 				recovery_booted = fileHas("/proc/cmdline", "rootsubdir=linuxrootfs0")
 				self["description"].setText(_("Attention - forced loading recovery image!\nCreate an empty STARTUP_RECOVERY file at the root of your HDD/USB drive and hold the Power button for more than 12 seconds for reboot receiver!"))
 				list.append(ChoiceEntryComponent('', (_("Boot to Recovery image - slot0 %s") % (recovery_booted and _("(current image)") or ""), "Recovery")))
-			else:
+			elif BoxInfo.getItem("model") != "gbquad4kpro":
 				list.append(ChoiceEntryComponent('', (_("Boot to Recovery menu"), "Recovery")))
 		if os.path.isfile(os.path.join(self.tmp_dir, "STARTUP_ANDROID")):
 			list.append(ChoiceEntryComponent('', ((_("Boot to Android image")), "Android")))

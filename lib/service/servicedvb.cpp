@@ -383,10 +383,6 @@ RESULT eStaticServiceDVBPVRInformation::getName(const eServiceReference &ref, st
 		m_parser.m_name = name;
 	}
 
-	std::string res_name = "";
-	std::string res_provider = "";
-	eServiceReference::parseNameAndProviderFromName(name, res_name, res_provider);
-	name = res_name;
 	m_parser.m_name = name;
 	if (m_parser.m_prov.empty() && !ref.prov.empty()) m_parser.m_prov = ref.prov;
 	
@@ -997,9 +993,7 @@ RESULT eServiceFactoryDVB::offlineOperations(const eServiceReference &ref, ePtr<
 
 RESULT eServiceFactoryDVB::lookupService(ePtr<eDVBService> &service, const eServiceReference &ref)
 {
-	eServiceReferenceDVB sRelayOrigSref;
-	bool res = ((const eServiceReferenceDVB&)ref).getSROriginal(sRelayOrigSref);
-	if (!ref.path.empty() && !res) // playback
+	if (!ref.path.empty() && !ref.isStreamRelay) // playback
 	{
 		eDVBMetaParser parser;
 		int ret=parser.parseFile(ref.path);
@@ -1012,10 +1006,10 @@ RESULT eServiceFactoryDVB::lookupService(ePtr<eDVBService> &service, const eServ
 		if (!ret)
 			eDVBDB::getInstance()->parseServiceData(service, parser.m_service_data);
 	}
-	else if (res)
+	else if (ref.isStreamRelay)
 	{
 		int err;
-		if ((err = eDVBDB::getInstance()->getService(sRelayOrigSref, service)) != 0)
+		if ((err = eDVBDB::getInstance()->getService(eServiceReferenceDVB(ref.compareSref), service)) != 0)
 		{
 			eTrace("[eServiceFactoryDVB] lookupService SR original service failed!");
 			return err;
@@ -1486,9 +1480,9 @@ RESULT eDVBServicePlay::connectEvent(const sigc::slot<void(iPlayableService*,int
 RESULT eDVBServicePlay::pause(ePtr<iPauseableService> &ptr)
 {
 		/* note: we check for timeshift to be enabled,
-		   not neccessary active. if you pause when timeshift
-		   is not active, you should activate it when unpausing */
-	if ((!m_is_pvr) && (!m_timeshift_enabled))
+			not neccessary active. if you pause when timeshift
+			is not active, you should activate it when unpausing */
+	if ((!m_is_pvr) && (!m_timeshift_enabled) && (m_reference.path.empty() || m_reference.isStreamRelay))
 	{
 		ptr = nullptr;
 		return -1;
@@ -1583,7 +1577,7 @@ RESULT eDVBServicePlay::setFastForward_internal(int ratio, bool final_seek)
 
 RESULT eDVBServicePlay::seek(ePtr<iSeekableService> &ptr)
 {
-	if (m_is_pvr || m_timeshift_enabled)
+	if (m_is_pvr || m_timeshift_enabled || (!m_reference.path.empty() && !m_reference.isStreamRelay))
 	{
 		ptr = this;
 		return 0;
@@ -2034,6 +2028,14 @@ int eDVBServicePlay::getInfo(int w)
 	case sTSID:
 		return ((const eServiceReferenceDVB&)m_reference).getTransportStreamID().get();
 	case sNamespace:
+		// use origiginal namespace
+		if (m_reference.isStreamRelay){
+			eServiceReferenceDVB m_parsed_ref = eServiceReferenceDVB(m_reference.compareSref);
+			if (m_parsed_ref.valid()) 
+			{
+				return ((const eServiceReferenceDVB&)m_parsed_ref).getDVBNamespace().get();
+			}
+		}
 		return ((const eServiceReferenceDVB&)m_reference).getDVBNamespace().get();
 	case sProvider:
 		if (!m_dvb_service) return -1;
@@ -2055,17 +2057,16 @@ std::string eDVBServicePlay::getInfoString(int w)
 	case sProvider:
 	{
 		if (!m_dvb_service) return "";
-		std::string prov = m_dvb_service->m_provider_name;
-		if (prov.empty()) {
-			eServiceReferenceDVB sRelayOrigSref;
-			bool res = ((const eServiceReferenceDVB&)m_reference).getSROriginal(sRelayOrigSref);
-			if (res) {
+		if (m_dvb_service->m_provider_name.empty() && m_reference.isStreamRelay) {
+			eServiceReferenceDVB sRelaySref = eServiceReferenceDVB(m_reference.compareSref);
+			if (sRelaySref.valid())
+			{
 				ePtr<eDVBService> sRelayServiceOrigSref;
-				eDVBDB::getInstance()->getService(sRelayOrigSref, sRelayServiceOrigSref);
-				return sRelayServiceOrigSref->m_provider_name;
+				eDVBDB::getInstance()->getService(sRelaySref, sRelayServiceOrigSref);
+				m_dvb_service->m_provider_name = std::string(sRelayServiceOrigSref->m_provider_name);
 			}
 		}
-		return prov;
+		return m_dvb_service->m_provider_name;
 	}
 	case sServiceref:
 		return m_reference.toString();
@@ -2091,10 +2092,13 @@ std::string eDVBServicePlay::getInfoString(int w)
 
 ePtr<iDVBTransponderData> eDVBServicePlay::getTransponderData()
 {
-	eServiceReferenceDVB orig;
-	bool res = ((const eServiceReferenceDVB&)m_reference).getSROriginal(orig);
-	if (res) {
-		return eStaticServiceDVBInformation().getTransponderData(orig);
+	if(m_reference.isStreamRelay)
+	{
+		eServiceReferenceDVB srRef = eServiceReferenceDVB(m_reference.compareSref);
+		if (srRef.valid())
+		{
+			return eStaticServiceDVBInformation().getTransponderData(srRef);
+		}
 	}
 	return eStaticServiceDVBInformation().getTransponderData(m_reference);
 }
@@ -2272,10 +2276,10 @@ int eDVBServicePlay::selectAudioStream(int i)
 				a.) we have an entry in the service db for the current service,
 				b.) we are not playing back something,
 				c.) we are not selecting the default entry. (we wouldn't change
-				    anything in the best case, or destroy the default setting in
-				    case the real default is not yet available.)
+					anything in the best case, or destroy the default setting in
+					case the real default is not yet available.)
 				d.) we have only one audiostream (overwrite the cache to make sure
-				    the cache contains the correct audio pid and type)
+					the cache contains the correct audio pid and type)
 			*/
 	if (m_dvb_service && ((i != -1) || (program.audioStreams.size() == 1)
 		|| ((m_dvb_service->getCacheEntry(eDVBService::cMPEGAPID) == -1)
@@ -2654,13 +2658,13 @@ int eDVBServicePlay::isTimeshiftActive()
 
 int eDVBServicePlay::isTimeshiftEnabled()
 {
-        return m_timeshift_enabled;
+	return m_timeshift_enabled;
 }
 
 RESULT eDVBServicePlay::saveTimeshiftFile()
 {
 	if (!m_timeshift_enabled)
-                return -1;
+		return -1;
 
 	m_save_timeshift = 1;
 

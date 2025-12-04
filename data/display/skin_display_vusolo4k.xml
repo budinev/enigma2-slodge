@@ -61,6 +61,7 @@
 		<widget source="SetupEntry" render="Label" position="0,90" size="480,90" font="Medium" halign="center" valign="center" />
 		<widget source="SetupValue" render="Label" position="0,200" size="480,70" font="Medium" halign="center" valign="center" />
 	</screen>
+	<!-- Infobar-->
 	<screen name="InfoBarSummary" position="fill">
 		<widget source="session.CurrentService" render="Picon" isFrontDisplayPicon="1" position="5,5" size="230,140" transparent="1" halign="center" valign="center" alphatest="blend" >
 			<convert type="ServiceName">Reference</convert>
@@ -106,28 +107,33 @@
 	</screen>
 	<!-- channelselection-->
 	<screen name="ChannelSelection_summary" position="fill">
-		<widget source="parent.ServiceEvent" render="Label" position="0,5" size="480,45" font="Medium" halign="center" valign="center" foregroundColor="lcd_yellow" >
+		<widget source="parent.ServiceEvent" render="Picon" isFrontDisplayPicon="1" position="5,5" size="230,140" transparent="1" halign="center" valign="center" alphatest="blend" >
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="240,5" size="230,90" halign="center" font="FdLcD;82" foregroundColor="lcd_lightcyan" >
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="parent.ServiceEvent" render="Label" position="5,150" size="470,50" font="Medium" halign="center" valign="center" foregroundColor="lcd_yellow" >
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="parent.ServiceEvent" render="Label" position="0,70" size="480,90" font="Medium" halign="center" valign="center" >
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="parent.ServiceEvent" render="Progress" position="20,170" size="440,20" borderWidth="1" >
+		<widget source="parent.ServiceEvent" render="Progress" position="5,200" size="470,10" borderWidth="0" foregroundColor="lcd_lightcyan" backgroundColor="lcd_darkgrey" >
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="parent.ServiceEvent" render="Label" position="20,200" size="130,40" font="Medium" halign="center" valign="center" >
+		<widget source="parent.ServiceEvent" render="Label" position="5,210" size="470,45" font="Medium" halign="center" valign="center" >
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="parent.ServiceEvent" render="Label" position="5,260" size="100,40" font="Small" valign="center" foregroundColor="lcd_lightgrey">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="parent.ServiceEvent" render="Label" position="150,200" size="130,40" font="Medium" halign="center" valign="center" >
+		<widget source="parent.ServiceEvent" render="Label" position="100,260" size="110,40" font="Small" valign="center" foregroundColor="lcd_lightgrey">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget source="parent.ServiceEvent" render="Label" position="350,200" size="100,40" font="Medium" halign="right" valign="center" >
+		<widget source="parent.ServiceEvent" render="Label" position="375,260" size="100,40" font="Small" halign="right" valign="center" foregroundColor="lcd_lightgrey">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">FOLLOW</convert>
 		</widget>
-		<panel name="SummaryClockPanel" position="bottom" size="*,64" />
 	</screen>
 	<!-- EPG Screens -->
 	<screen name="EPGSelection_summary" position="fill">

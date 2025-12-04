@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-01 15:48+0200\n"
+"POT-Creation-Date: 2025-07-01 17:09+0200\n"
 "PO-Revision-Date: 2012-03-08 10:40+0330\n"
 "Last-Translator: \n"
 "Language-Team: Arabic <moustafagamal@hotmail.com>\n"
@@ -86,6 +86,11 @@ msgstr ""
 
 msgid " (auto detection)"
 msgstr ""
+
+#
+#, fuzzy
+msgid " (circular LNB)"
+msgstr "circular left"
 
 msgid " (disabled)"
 msgstr ""
@@ -284,6 +289,13 @@ msgstr[1] "התחל תיקיה"
 
 #
 #, fuzzy, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "שבועי"
+msgstr[1] "שבועי"
+
+#
+#, fuzzy, python-format
 msgid "%d wireless network found!"
 msgid_plural "%d wireless networks found!"
 msgstr[0] "נמצאה רשת אלחוטית אחת"
@@ -334,6 +346,10 @@ msgid "%s %d.%d"
 msgstr ""
 
 #, python-format
+msgid "%s (%s)"
+msgstr ""
+
+#, python-format
 msgid "%s (files)"
 msgstr ""
 
@@ -372,6 +388,9 @@ msgstr ""
 msgid "'Minimum send interval' needs to be enabled to use this option."
 msgstr ""
 
+msgid "'Ping' is used for detection device on this address."
+msgstr ""
+
 msgid "(VU+ type)"
 msgstr ""
 
@@ -395,6 +414,11 @@ msgstr "(ריק)"
 msgid "(not activated)"
 msgstr ""
 
+#
+#, fuzzy
+msgid "(old model)"
+msgstr "Voltage mode"
+
 msgid "(show optional DVD audio menu)"
 msgstr "(הצג תפריטי קול אפשריים לדי וי די)"
 
@@ -408,6 +432,10 @@ msgstr ""
 msgid "* Only available if more than one interface is active."
 msgstr "אפשרי רק מעל לממשק אחד פעיל *"
 
+msgctxt "Text list separator"
+msgid ", "
+msgstr ""
+
 msgid "-NO SERVICE\n"
 msgstr ""
 
@@ -420,6 +448,11 @@ msgstr ""
 
 msgid "0"
 msgstr "0"
+
+#
+#, fuzzy
+msgid "0 minutes"
+msgstr "דקות %d"
 
 msgid "1"
 msgstr "1"
@@ -562,6 +595,9 @@ msgstr ""
 msgid "A"
 msgstr "A"
 
+msgid "A color filter can be used for better readability of DVB subtitles."
+msgstr ""
+
 msgid "A completed recording timer is about to put your receiver in standby mode. Would you like to proceed?"
 msgstr ""
 
@@ -578,6 +614,9 @@ msgstr ""
 #, fuzzy
 msgid "A graphical EPG for all services of a specific bouquet"
 msgstr "תצוגה גראפית לאי.פי.גי לכל התחנות בתיקייה ספציפית"
+
+msgid "A highlight on the remote control image shows which button the help refers to. If more than one button performs the indicated function, more than one highlight will be shown. Text below the list indicates whether the function is for a long press of the button(s)."
+msgstr ""
 
 #, python-format
 msgid ""
@@ -656,6 +695,9 @@ msgstr ""
 msgid "AAC+ downmix"
 msgstr ""
 
+msgid "ABOUT"
+msgstr ""
+
 msgid "AC3"
 msgstr ""
 
@@ -671,10 +713,22 @@ msgstr ""
 msgid "AGC:"
 msgstr ""
 
+msgid "ARROWLEFT"
+msgstr ""
+
+msgid "ARROWRIGHT"
+msgstr ""
+
 msgid "ASS file"
 msgstr ""
 
 msgid "ATSC provider"
+msgstr ""
+
+msgid "AUDIO"
+msgstr ""
+
+msgid "AUTOTIMER"
 msgstr ""
 
 #
@@ -962,6 +1016,9 @@ msgstr ""
 msgid "Alpha"
 msgstr "Alpha"
 
+msgid "Alphabetical under headings"
+msgstr ""
+
 msgid "Also import at reboot/restart enigma2"
 msgstr ""
 
@@ -1183,6 +1240,10 @@ msgstr ""
 msgid "Audio PID%s, codec & lang"
 msgstr ""
 
+#, fuzzy
+msgid "Audio Selection Actions"
+msgstr "בחר מקום גיבוי"
+
 msgid "Audio auto volume level"
 msgstr ""
 
@@ -1325,15 +1386,15 @@ msgstr "Available format variables"
 msgid "Available locales are:"
 msgstr "Available format variables"
 
-msgid "Axas E4HD Ultra"
-msgstr ""
-
 msgid "Azerbaijan"
 msgstr ""
 
 #
 msgid "B"
 msgstr "B"
+
+msgid "BACK"
+msgstr ""
 
 #
 msgid "BER"
@@ -1342,6 +1403,15 @@ msgstr "BER"
 #
 msgid "BER:"
 msgstr "BER:"
+
+msgid "BLUE"
+msgstr ""
+
+msgid "BOUQUET+"
+msgstr ""
+
+msgid "BOUQUET-"
+msgstr ""
 
 msgid "Back"
 msgstr "Back"
@@ -1410,6 +1480,9 @@ msgid "Basic info"
 msgstr "Serviceinfo"
 
 msgid "Basque"
+msgstr ""
+
+msgid "Before sending the command to switch the TV to standby, the receiver can test if a device connected to the TV responds to a network 'ping'. If it does, instead of the 'standby' command the 'sourceinactive' command will be sent to the TV."
 msgstr ""
 
 msgid "Before sending the command to switch the TV to standby, the receiver tests if all the other devices plugged to TV are in standby. If they are not, the 'sourceinactive' command will be sent to the TV instead of the 'standby' command."
@@ -1527,10 +1600,23 @@ msgstr ""
 msgid "Botswana"
 msgstr ""
 
+msgid "Bottom"
+msgstr ""
+
+#, fuzzy
+msgid "Bouquet down"
+msgstr "כיבוי"
+
+msgid "Bouquet up"
+msgstr ""
+
 msgid "Bouvet Island"
 msgstr ""
 
 msgid "Brazil"
+msgstr ""
+
+msgid "Brief help information for buttons in your current context."
 msgstr ""
 
 #
@@ -1590,6 +1676,11 @@ msgstr ""
 msgid "C"
 msgstr "C"
 
+#, fuzzy
+msgctxt "Abbreviation of \"Configurable\""
+msgid "C"
+msgstr "C"
+
 msgid "C-Band"
 msgstr "C-Band"
 
@@ -1615,6 +1706,9 @@ msgid "CI enabled"
 msgstr "אופשר"
 
 msgid "CI slot: "
+msgstr ""
+
+msgid "CONTEXT"
 msgstr ""
 
 msgid "CPU: "
@@ -1789,11 +1883,31 @@ msgid "Change timer"
 msgstr ""
 
 #
+#, fuzzy
+msgid "Change view mode"
+msgstr "Change step size"
+
+#
 msgid "Channel"
 msgstr "ערוץ"
 
 msgid "Channel Info"
 msgstr ""
+
+#
+#, fuzzy
+msgid "Channel Select Base Actions"
+msgstr "בחירת ערוץ"
+
+#
+#, fuzzy
+msgid "Channel Select EPG Actions"
+msgstr "בחירת ערוץ"
+
+#
+#, fuzzy
+msgid "Channel Select Edit Actions"
+msgstr "בחירת ערוץ"
 
 #
 #, fuzzy
@@ -1905,6 +2019,9 @@ msgstr ""
 msgid "Choose the option to correct invalid EPG data."
 msgstr ""
 
+msgid "Choose the order in which items are displayed in Help windows"
+msgstr ""
+
 msgid "Choose whether AAC sound tracks should be transcoded."
 msgstr ""
 
@@ -1931,6 +2048,10 @@ msgstr ""
 
 msgid "Christmas Island"
 msgstr ""
+
+#, fuzzy
+msgid "Ci Selection Actions"
+msgstr "בחר מקום גיבוי"
 
 msgid "Circular LNB"
 msgstr ""
@@ -1995,6 +2116,9 @@ msgstr ""
 msgid "Codec & lang%s"
 msgstr ""
 
+msgid "Collapse"
+msgstr ""
+
 msgid "Collection name"
 msgstr "שם האוסף"
 
@@ -2008,6 +2132,10 @@ msgstr "תבנית צבע"
 #, fuzzy
 msgid "Color"
 msgstr "תבנית צבע"
+
+#, fuzzy
+msgid "Color Actions"
+msgstr "בחר מקום גיבוי"
 
 #, fuzzy
 msgid "Color format"
@@ -2040,10 +2168,6 @@ msgstr "ממשק משותף"
 msgid "Common Interface assignment"
 msgstr "הקצאת ממשק משותף"
 
-#, fuzzy
-msgid "Common Setup Actions"
-msgstr "בחר מקום גיבוי"
-
 msgid "Communication"
 msgstr "תקשורת"
 
@@ -2064,8 +2188,8 @@ msgid "Composition of the recording filenames"
 msgstr ""
 
 #, fuzzy
-msgid "Compress"
-msgstr "שלם"
+msgid "Config List Actions"
+msgstr "בחר מקום גיבוי"
 
 msgid "Config Scan Details"
 msgstr ""
@@ -2114,7 +2238,7 @@ msgstr "הגדרת ממשק"
 msgid "Configure for how long the infobar will remain visible after activation."
 msgstr ""
 
-msgid "Configure for how many minutes finished events should remain visible in the EPG. Useful when you need information about an event which has just finished, or has been delayed."
+msgid "Configure how long finished events should remain visible in the EPG. Useful when you need information about an event which has just finished, or has been delayed (or for plugins that support catchup)."
 msgstr ""
 
 msgid "Configure how many channels are shown in the selection list."
@@ -2478,6 +2602,10 @@ msgstr ""
 msgid "Content does not fit on DVD!"
 msgstr "!תכולה לא מתאימה לדי.וי.די"
 
+#, fuzzy
+msgid "Context Menu"
+msgstr "תפריט רשימת הערוצים"
+
 msgid "Continue"
 msgstr ""
 
@@ -2535,6 +2663,12 @@ msgstr "%s לא יכול להקליט עקב התנגשות בטיימר"
 #, fuzzy, python-format
 msgid "Could not record due to invalid service %s"
 msgstr "%s לא יכול להקליט עקב התנגשות בטיימר"
+
+msgid "Could not retrieve basic bouquets files"
+msgstr ""
+
+msgid "Could not retrieve the remote support files"
+msgstr ""
 
 msgid "Country"
 msgstr ""
@@ -2640,11 +2774,23 @@ msgstr ""
 msgid "Cut"
 msgstr "חתוך"
 
+#, fuzzy
+msgid "Cut List Editor Actions"
+msgstr "Cutlist עורך..."
+
+#
+#, fuzzy
+msgid "Cutlist Seek Actions"
+msgstr "בחירת תרגום"
+
 msgid "Cutlist editor"
 msgstr ""
 
 msgid "Cutlist editor..."
 msgstr "Cutlist עורך..."
+
+msgid "Cyan"
+msgstr ""
 
 msgid "Cyprus"
 msgstr ""
@@ -2672,6 +2818,9 @@ msgstr "מתקדם"
 msgid "DMM normal"
 msgstr ""
 
+msgid "DOWN"
+msgstr ""
+
 msgid "DTS"
 msgstr ""
 
@@ -2696,6 +2845,9 @@ msgid "DVB driver version: "
 msgstr ":גרסה חדשה"
 
 msgid "DVB subtitle black transparency"
+msgstr ""
+
+msgid "DVB subtitles color filter"
 msgstr ""
 
 msgid "DVB type"
@@ -2729,6 +2881,19 @@ msgstr "DVD Titlelist"
 #, fuzzy
 msgid "DVDPlayer"
 msgstr "DVD נגן"
+
+#, fuzzy
+msgid "DVDPlayer Actions"
+msgstr "DVD נגן"
+
+#, fuzzy
+msgid "DVDTitle List"
+msgstr "DVD Titlelist"
+
+#
+#, fuzzy
+msgid "DVDToolbox"
+msgstr "DVD media toolbox"
 
 msgid "Danish"
 msgstr "דנית"
@@ -2960,8 +3125,13 @@ msgstr ""
 msgid "Details for plugin: "
 msgstr ""
 
-msgid "Detect next boxes before standby"
-msgstr ""
+#, fuzzy, python-format
+msgid "Detect box%s via network"
+msgstr "בחר רשת אלחוטית"
+
+#, fuzzy
+msgid "Detect other boxes before standby"
+msgstr "המתנה עמוקה"
 
 #
 msgid "Detected NIMs:"
@@ -3016,6 +3186,10 @@ msgstr "Digital contour removal"
 
 msgid "Direct playback of linked titles without menu"
 msgstr "Direct playback of linked titles without menu"
+
+#, fuzzy
+msgid "Direction Actions"
+msgstr "בחר מקום גיבוי"
 
 msgid "Directory"
 msgstr ""
@@ -3161,6 +3335,10 @@ msgid ""
 msgstr ""
 "? האם ברצונך לסמן את קבצי המערכת\n"
 "!זה עלול לקחת הרבה זמן"
+
+#, fuzzy
+msgid "Do you really want to clear this playlist?"
+msgstr "? %s האם ברצוך למחוק את"
 
 #, python-format
 msgid "Do you really want to delete %s?"
@@ -3360,8 +3538,26 @@ msgstr ""
 msgid "ECM Info"
 msgstr "פרטים"
 
+msgid "EJECTCD"
+msgstr ""
+
+msgid "END"
+msgstr ""
+
+msgid "ENTER"
+msgstr ""
+
 msgid "EPG"
 msgstr ""
+
+#
+#, fuzzy
+msgid "EPG Select Actions"
+msgstr "EPG בחירת"
+
+#, fuzzy
+msgid "EPG filter switching"
+msgstr "Auto scart switching"
 
 msgid "EPG language selection 1"
 msgstr ""
@@ -3384,9 +3580,20 @@ msgid "EPG:"
 msgstr ""
 
 #
+#, fuzzy
+msgid "EPGFilter Actions"
+msgstr "EPG בחירת"
+
+msgid "EPGSETUP"
+msgstr ""
+
+#
 #, python-format
 msgid "ERROR - failed to scan (%s)!"
 msgstr "(%s) !שגיאה - נכשל בסריקה"
+
+msgid "EXIT"
+msgstr ""
 
 #
 msgid "East"
@@ -3531,6 +3738,9 @@ msgstr ""
 msgid "Enable favourites edit"
 msgstr "Enable favourites edit"
 
+msgid "Enable filtering in SingleEPG"
+msgstr ""
+
 msgid "Enable freesat EPG"
 msgstr ""
 
@@ -3557,6 +3767,9 @@ msgid "Enable power off timer"
 msgstr "Enable move mode"
 
 msgid "Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally (e.g. tuner is occupied or service type is unavailable on the local tuner. Specify complete URL including http:// and port number (normally ...:8001), e.g. http://second_box:8001."
+msgstr ""
+
+msgid "Enable setting a time interval for filtering events in SingleEPG using the 'Stop' button."
 msgstr ""
 
 msgid "Enable teletext caching"
@@ -3612,6 +3825,9 @@ msgstr "End bouquet edit"
 #
 msgid "End favourites edit"
 msgstr "End favourites edit"
+
+msgid "End of the time interval during which events must begin to be displayed. If the filter is active, use keys 3 and 6 to adjust the end time, and key 0 to save."
+msgstr ""
 
 #
 msgid "End time"
@@ -3778,6 +3994,16 @@ msgstr ""
 msgid "Ethiopia"
 msgstr ""
 
+#
+#, fuzzy
+msgid "Event View Actions"
+msgstr "Eventview"
+
+#
+#, fuzzy
+msgid "Event View EPG Actions"
+msgstr "Eventview"
+
 msgid "Event font size (relative to skin size)"
 msgstr ""
 
@@ -3941,10 +4167,16 @@ msgstr ""
 msgid "F"
 msgstr ""
 
-msgid "F1/F3/F4/F4-TURBO"
+msgid "FAILED"
 msgstr ""
 
-msgid "FAILED"
+msgid "FASTFORWARD"
+msgstr ""
+
+msgid "FAV"
+msgstr ""
+
+msgid "FAVORITES"
 msgstr ""
 
 msgid "FBC SCR (Unicable/JESS)"
@@ -3985,6 +4217,9 @@ msgid "FEC:"
 msgstr ""
 
 msgid "FHD"
+msgstr ""
+
+msgid "FORWARD"
 msgstr ""
 
 msgid "FTA"
@@ -4141,6 +4376,9 @@ msgstr ""
 msgid "Finetune"
 msgstr "כיוונון עדין"
 
+msgid "Finetune the auto DiSEqC order to in your situation the satellites could be found faster."
+msgstr ""
+
 msgid "Finished"
 msgstr "הסתיים"
 
@@ -4180,8 +4418,21 @@ msgid ""
 "%s"
 msgstr ""
 
+#, fuzzy
+msgid "Flat alphabetical"
+msgstr "alphabetic sort"
+
+msgid "Flat by key group on remote"
+msgstr ""
+
+msgid "Flat by position on remote"
+msgstr ""
+
 msgid "Following tasks will be done after you press OK!"
 msgstr "OK הפעולה הבאה תתבצע לאחר לחיצה על"
+
+msgid "For this box, the network connection can also be used for detection."
+msgstr ""
 
 msgid "Force legacy signal stats"
 msgstr ""
@@ -4284,6 +4535,10 @@ msgstr ""
 msgid "Fullbackup Images"
 msgstr "Flash"
 
+#, fuzzy
+msgid "Function Key Actions"
+msgstr "בחר מקום גיבוי"
+
 msgid "Function of OK button"
 msgstr ""
 
@@ -4299,6 +4554,14 @@ msgstr ""
 #, fuzzy
 msgid "GB"
 msgstr "RGB"
+
+#
+#, fuzzy
+msgid "GMEPG Select Actions"
+msgstr "EPG בחירת"
+
+msgid "GREEN"
+msgstr ""
 
 #, fuzzy
 msgid "GUI Settings"
@@ -4356,6 +4619,9 @@ msgid "Ghana"
 msgstr ""
 
 msgid "Gibraltar"
+msgstr ""
+
+msgid "Global Actions"
 msgstr ""
 
 msgid "Go down the list"
@@ -4503,12 +4769,6 @@ msgstr "D"
 msgid "HD list"
 msgstr ""
 
-msgid "HD2400"
-msgstr ""
-
-msgid "HD60/HD66SE/Multibox/Multibox SE"
-msgstr ""
-
 msgid "HDMI"
 msgstr ""
 
@@ -4544,15 +4804,21 @@ msgstr ""
 msgid "HDR10 support"
 msgstr ""
 
-msgid "HDx1/HD1xxx/HD5x0C/VS1x00/et7x00/et8500/et7000mini"
+msgid "HELP"
 msgstr ""
 
-msgid "HELP"
+msgid "HISTORY"
 msgstr ""
 
 #, fuzzy
 msgid "HLG support"
 msgstr "לא נתמך"
+
+msgid "HOME"
+msgstr ""
+
+msgid "HOMEPAGE"
+msgstr ""
 
 #
 #, fuzzy
@@ -4595,6 +4861,16 @@ msgid "Heard Island and McDonald Islands"
 msgstr ""
 
 msgid "Hebrew"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+#, fuzzy
+msgid "Help Actions"
+msgstr "בחר מקום גיבוי"
+
+msgid "Help Screen"
 msgstr ""
 
 msgid "Helps setting up your antenna"
@@ -4674,6 +4950,10 @@ msgstr ""
 msgid "Hotkey"
 msgstr ""
 
+#, fuzzy
+msgid "Hotkey Actions"
+msgstr "בחר מקום גיבוי"
+
 msgid "Hotkey Panic"
 msgstr ""
 
@@ -4716,9 +4996,6 @@ msgstr ""
 msgid "I do not want to perform any service scans"
 msgstr "?האם ברצונך לבצע סריקת שירותים"
 
-msgid "I55SE/H7(new model)/H9(new model)/H9COMBO/H9TWIN/H9SE/H9COMBOSE/H10/H11/H17"
-msgstr ""
-
 msgid "IDLE"
 msgstr ""
 
@@ -4726,6 +5003,9 @@ msgid "INFO"
 msgstr ""
 
 msgid "INS"
+msgstr ""
+
+msgid "IP"
 msgstr ""
 
 #
@@ -4746,6 +5026,9 @@ msgid "Iceland"
 msgstr ""
 
 msgid "Icons"
+msgstr ""
+
+msgid "If an action is user-configurable, its help entry will be flagged (C)"
 msgstr ""
 
 msgid "If disabled, underline characters in file and directory names are not shown and are replaced with spaces."
@@ -4917,6 +5200,91 @@ msgstr "InfoBar"
 msgid "Info bar timeout"
 msgstr "Infobar timeout"
 
+#, fuzzy
+msgid "Infobar Actions"
+msgstr "Infobar timeout"
+
+#, fuzzy
+msgid "Infobar Audio Selection Actions"
+msgstr "בחר מקום גיבוי"
+
+#
+#, fuzzy
+msgid "Infobar Channel Selection"
+msgstr "בחירת ערוץ"
+
+msgid "Infobar Cue Sheet Actions"
+msgstr ""
+
+#, fuzzy
+msgid "Infobar EPG Actions"
+msgstr "Infobar timeout"
+
+#, fuzzy
+msgid "Infobar Extensions"
+msgstr "תוספות"
+
+#, fuzzy
+msgid "Infobar Instant Record"
+msgstr "הקלטה מיידית"
+
+#, fuzzy
+msgid "Infobar Menu Actions"
+msgstr "Infobar timeout"
+
+#, fuzzy
+msgid "Infobar Movie List Actions"
+msgstr "Tuner הגדרת"
+
+#, fuzzy
+msgid "Infobar PiP Actions"
+msgstr "Infobar timeout"
+
+#, fuzzy
+msgid "Infobar Rds Actions"
+msgstr "Infobar timeout"
+
+msgid "Infobar Red Button Actions"
+msgstr ""
+
+#, fuzzy
+msgid "Infobar Seek Actions"
+msgstr "בחר מקום גיבוי"
+
+msgid "Infobar Show Hide Actions"
+msgstr ""
+
+msgid "Infobar Subservice Quickzap Actions"
+msgstr ""
+
+#, fuzzy
+msgid "Infobar Subservice Selection Actions"
+msgstr "בחר מקום גיבוי"
+
+#, fuzzy
+msgid "Infobar Subtitle Selection Actions"
+msgstr "בחר מקום גיבוי"
+
+#, fuzzy
+msgid "Infobar Teletext Actions"
+msgstr "בחר מקום גיבוי"
+
+msgid "Infobar Timer Button Actions"
+msgstr ""
+
+#
+#, fuzzy
+msgid "Infobar Timeshift Actions"
+msgstr "Timeshift מיקום ה"
+
+#
+#, fuzzy
+msgid "Infobar Timeshift Activate Actions"
+msgstr "Timeshift מיקום ה"
+
+msgid "Infobar Vmode Button Actions"
+msgstr ""
+
 msgid "Infobar frontend data source"
 msgstr ""
 
@@ -4974,6 +5342,16 @@ msgstr "Input"
 msgid "Input "
 msgstr "Input"
 
+#, fuzzy
+msgid "Input Actions"
+msgstr "Input"
+
+msgid "Input Ascii Actions"
+msgstr ""
+
+msgid "Input Box Actions"
+msgstr ""
+
 msgid "Input Stream ID"
 msgstr ""
 
@@ -5007,8 +5385,9 @@ msgstr ""
 msgid "Install local extension"
 msgstr "התקן תוספת מקומית"
 
-msgid "Install picons on"
-msgstr ""
+#, fuzzy
+msgid "Install plugin"
+msgstr "מתקין"
 
 #, fuzzy
 msgid "Installation has completed."
@@ -5050,6 +5429,10 @@ msgstr " פנימי Flash"
 
 msgid "Internal hdd only"
 msgstr ""
+
+#, fuzzy
+msgid "Internet"
+msgstr ":ממשק"
 
 msgid "Internet (ntp)"
 msgstr ""
@@ -5169,7 +5552,17 @@ msgstr "Stored position"
 
 #
 #, fuzzy
+msgid "Jump to next marker"
+msgstr "Stored position"
+
+#
+#, fuzzy
 msgid "Jump to previous marked position"
+msgstr "play from previous mark or playlist entry"
+
+#
+#, fuzzy
+msgid "Jump to previous marker"
 msgstr "play from previous mark or playlist entry"
 
 #. TRANSLATORS: (aspect ratio policy: scale as close to fullscreen as possible)
@@ -5184,6 +5577,10 @@ msgstr ""
 
 msgid "Keep service"
 msgstr ""
+
+#, fuzzy
+msgid "Keep sorting"
+msgstr "עובד"
 
 msgid "Kenya"
 msgstr ""
@@ -5211,6 +5608,11 @@ msgstr ""
 
 msgid "Keyboard"
 msgstr "מקלדת"
+
+#
+#, fuzzy
+msgid "Keyboard Input Actions"
+msgstr "מקלדת וירטואלית"
 
 #
 #, fuzzy
@@ -5243,6 +5645,9 @@ msgstr "ממתין"
 msgid "Kyrgyzstan"
 msgstr ""
 
+msgid "LAN"
+msgstr ""
+
 #
 #, fuzzy
 msgid "LAN adapter"
@@ -5251,9 +5656,23 @@ msgstr "מתאם רשת"
 msgid "LAN connection"
 msgstr "חיבור רשת"
 
+msgid "LEFT"
+msgstr ""
+
+msgid "LIST"
+msgstr ""
+
 #
 msgid "LNB"
 msgstr ""
+
+msgid "LOSTLOCK"
+msgstr ""
+
+#
+#, fuzzy
+msgid "Label not defined"
+msgstr "User defined"
 
 #
 msgid "Language"
@@ -5397,6 +5816,13 @@ msgstr[0] ""
 msgstr[1] ""
 
 #, fuzzy
+msgid "Listbox Actions"
+msgstr "מיקום"
+
+msgid "Listbox Help Menu Actions"
+msgstr ""
+
+#, fuzzy
 msgid "Listen to the radio..."
 msgstr "hear radio..."
 
@@ -5470,6 +5896,11 @@ msgid "Long key press"
 msgstr "לחיצת מקש ארוכה"
 
 #
+#, fuzzy
+msgid "Long press: "
+msgstr "לחיצת מקש ארוכה"
+
+#
 msgid "Longitude"
 msgstr "Longitude"
 
@@ -5496,6 +5927,9 @@ msgstr ""
 msgid "MB"
 msgstr "B"
 
+msgid "MEDIA"
+msgstr ""
+
 msgid "MENU"
 msgstr ""
 
@@ -5508,10 +5942,16 @@ msgstr ""
 msgid "MORE"
 msgstr "עוד"
 
+msgid "MUTE"
+msgstr ""
+
 msgid "Macao"
 msgstr ""
 
 msgid "Madagascar"
+msgstr ""
+
+msgid "Magenta"
 msgstr ""
 
 #
@@ -5636,6 +6076,17 @@ msgid "Mayotte"
 msgstr ""
 
 #
+#, fuzzy
+msgid "Media Player Actions"
+msgstr "נגן המוזיקה"
+
+msgid "Media Player Cue Sheet Actions"
+msgstr ""
+
+msgid "Media Player Seek Actions"
+msgstr ""
+
+#
 msgid "Media player"
 msgstr "נגן המוזיקה"
 
@@ -5663,6 +6114,10 @@ msgstr ""
 #
 msgid "Menu"
 msgstr "תפריט"
+
+#, fuzzy
+msgid "Menu Actions"
+msgstr "בחר מקום גיבוי"
 
 #, fuzzy
 msgid "Menu button function"
@@ -5696,6 +6151,10 @@ msgstr ""
 
 msgid "Minimum send interval"
 msgstr ""
+
+#, fuzzy
+msgid "Minute Input Actions"
+msgstr "בחר מקום גיבוי"
 
 msgid "Missing "
 msgstr ""
@@ -5803,6 +6262,10 @@ msgstr "move down to last entry"
 msgid "Move down a screen"
 msgstr "move down to last entry"
 
+#, fuzzy
+msgid "Move down in bouquet list"
+msgstr "move down to last entry"
+
 msgid "Move east"
 msgstr "Move east"
 
@@ -5865,6 +6328,11 @@ msgstr ""
 msgid "Move up a screen"
 msgstr ""
 
+#
+#, fuzzy
+msgid "Move up in bouquet list"
+msgstr "End bouquet edit"
+
 msgid "Move west"
 msgstr "Move west"
 
@@ -5876,6 +6344,14 @@ msgstr ""
 
 msgid "Movement"
 msgstr ""
+
+#, fuzzy
+msgid "Movie Player Actions"
+msgstr "מיקום סרטים"
+
+#, fuzzy
+msgid "Movie Selection Actions"
+msgstr "בחר מקום גיבוי"
 
 #, fuzzy
 msgid "Movie list configuration"
@@ -5904,6 +6380,9 @@ msgid "Moving west..."
 msgstr ""
 
 msgid "Mozambique"
+msgstr ""
+
+msgid "Msg Box Actions"
 msgstr ""
 
 #
@@ -5963,6 +6442,11 @@ msgstr "N/A"
 msgid "NEXT"
 msgstr "הבא"
 
+#
+#, fuzzy
+msgid "NEXTSONG"
+msgstr "הבא"
+
 msgid "NIM & Type"
 msgstr ""
 
@@ -5972,7 +6456,7 @@ msgstr ""
 msgid "NOW"
 msgstr "עכשיו"
 
-msgid "NTP Hostname"
+msgid "Optional local NTP server"
 msgstr ""
 
 #
@@ -5994,6 +6478,13 @@ msgstr ""
 
 msgid "Nauru"
 msgstr ""
+
+msgid "Navigate up/down with UP/DOWN buttons and page up/down with LEFT/RIGHT. EXIT to return to the help screen. OK to perform the action described in the currently highlighted help."
+msgstr ""
+
+#, fuzzy
+msgid "Navigation Actions"
+msgstr "בחר מקום גיבוי"
 
 msgid "Nepal"
 msgstr ""
@@ -6082,6 +6573,10 @@ msgstr ""
 msgctxt "now/next: 'next' event label"
 msgid "Next"
 msgstr ""
+
+#, fuzzy
+msgid "Next Wizard"
+msgstr "אשף הרשת"
 
 msgid "Next day starts at"
 msgstr ""
@@ -6365,6 +6860,10 @@ msgstr "כעת מתנגן"
 msgid "Now, use the contrast setting to turn up the brightness of the background as much as possible, but make sure that you can still see the difference between the two brightest levels of shades.If you have done that, press OK."
 msgstr "Now, use the contrast setting to turn up the brightness of the background as much as possible, but make sure that you can still see the difference between the two brightest levels of shades.If you have done that, press OK."
 
+#, fuzzy
+msgid "Number Actions"
+msgstr "בחר מקום גיבוי"
+
 msgid "Number of channels shown in channel selection list"
 msgstr ""
 
@@ -6373,6 +6872,36 @@ msgstr ""
 
 msgid "Number or SMS style data entry"
 msgstr ""
+
+#, fuzzy
+msgid "Numberbuttons Seek"
+msgstr "בחר מקום גיבוי"
+
+#, fuzzy
+msgid "Numberbuttons Zap"
+msgstr "בחר מקום גיבוי"
+
+msgid "Numberzap"
+msgstr ""
+
+msgid "Numberzap or seek backward big step"
+msgstr ""
+
+msgid "Numberzap or seek backward medium step"
+msgstr ""
+
+msgid "Numberzap or seek backward small step"
+msgstr ""
+
+msgid "Numberzap or seek forward medium step"
+msgstr ""
+
+msgid "Numberzap or seek forward small step"
+msgstr ""
+
+#, fuzzy
+msgid "Numberzap or zap to previous service"
+msgstr "Return to previous service"
 
 #
 #, fuzzy
@@ -6384,6 +6913,9 @@ msgid "OK"
 msgstr "אשר"
 
 msgid "ONID"
+msgstr ""
+
+msgid "OPTION"
 msgstr ""
 
 msgid "OSD 3D setup"
@@ -6409,6 +6941,11 @@ msgstr "כבוי"
 
 msgid "Offline decode delay (ms)"
 msgstr ""
+
+#
+#, fuzzy
+msgid "Ok Cancel Actions"
+msgstr "בחירת ערוץ"
 
 msgid "Oman"
 msgstr ""
@@ -6478,6 +7015,9 @@ msgstr ""
 msgid "Open the movie list"
 msgstr "חזור לרשימת הסרטים"
 
+msgid "OpenWebif is used for detection on box with this IP address."
+msgstr ""
+
 msgid "Operating LED status in deep standby mode"
 msgstr ""
 
@@ -6521,6 +7061,9 @@ msgstr "מחק קובץ"
 msgid "Other Subtitles & lang"
 msgstr ""
 
+msgid "Other buttons will jump to the help for that button, if there is help."
+msgstr ""
+
 msgid "Output"
 msgstr ""
 
@@ -6537,9 +7080,18 @@ msgstr ""
 msgid "Overwrite configuration files?"
 msgstr "Tuner הגדרת"
 
+msgid "PAGEDOWN"
+msgstr ""
+
+msgid "PAGEUP"
+msgstr ""
+
 #
 msgid "PAL"
 msgstr "PAL"
+
+msgid "PAUSE"
+msgstr ""
 
 msgid "PCR PID"
 msgstr ""
@@ -6557,6 +7109,15 @@ msgstr ""
 msgid "PIN code needed"
 msgstr "קוד נדרש"
 
+msgid "PLAY"
+msgstr ""
+
+msgid "PLAYLIST"
+msgstr ""
+
+msgid "PLAYPAUSE"
+msgstr ""
+
 msgid "PLP ID"
 msgstr ""
 
@@ -6568,7 +7129,19 @@ msgstr ""
 msgid "PLS Mode"
 msgstr "מוד"
 
+msgid "PLUGIN"
+msgstr ""
+
 msgid "PMT PID"
+msgstr ""
+
+msgid "PORTAL"
+msgstr ""
+
+msgid "POWER"
+msgstr ""
+
+msgid "POWER2"
 msgstr ""
 
 msgid "PPanel"
@@ -6577,7 +7150,10 @@ msgstr ""
 msgid "PREVIOUS"
 msgstr ""
 
-msgid "PULSe 4K(mini)"
+msgid "PREVIOUSSONG"
+msgstr ""
+
+msgid "PVR"
 msgstr ""
 
 #
@@ -6592,6 +7168,12 @@ msgstr "Packet management"
 
 msgid "Packet manager"
 msgstr "Packet manager"
+
+msgid "Page down"
+msgstr ""
+
+msgid "Page up"
+msgstr ""
 
 msgid "Pakistan"
 msgstr ""
@@ -6695,6 +7277,10 @@ msgstr ""
 msgid "PiP setup"
 msgstr "הגדרת תמונה בתוך תמונה"
 
+#, fuzzy
+msgid "PiPSetup Actions"
+msgstr "בחר מקום גיבוי"
+
 msgid "Picon"
 msgstr ""
 
@@ -6716,6 +7302,10 @@ msgstr ""
 #, fuzzy
 msgid "Pin Userbouquet"
 msgstr "Add bouquet"
+
+#, fuzzy
+msgid "Ping device before standby"
+msgstr "המתנה עמוקה"
 
 msgid "Pitcairn"
 msgstr ""
@@ -6803,7 +7393,7 @@ msgstr "אנא שנה את זמן סוף ההקלטה"
 msgid "Please choose an extension..."
 msgstr "Please choose an extension..."
 
-msgid "Please configure the fallback tuner setup"
+msgid "Please configure the fallback receiver setup"
 msgstr ""
 
 msgid ""
@@ -7075,6 +7665,9 @@ msgstr "Port D"
 msgid "Port of fallback remote receiver"
 msgstr ""
 
+msgid "Port used by OpenWebif on tested box."
+msgstr ""
+
 #
 #, fuzzy
 msgid "Portugal"
@@ -7104,6 +7697,9 @@ msgid "Positioner setup"
 msgstr "Positioner setup"
 
 msgid "Positioner setup log"
+msgstr ""
+
+msgid "Power Key Actions"
 msgstr ""
 
 msgid "Power LED"
@@ -7301,8 +7897,14 @@ msgstr "תצוגה מקדימה לתפריט"
 msgid "Preview selected channel"
 msgstr ""
 
+msgid "Previous Wizard"
+msgstr ""
+
 msgid "Primary DNS"
 msgstr "Primary DNS"
+
+msgid "Prime Time"
+msgstr ""
 
 msgid "Prime time"
 msgstr ""
@@ -7412,13 +8014,35 @@ msgstr "מהיר"
 msgid "Quick zap"
 msgstr "זיפזופ מהיר"
 
+msgid "RADIO"
+msgstr ""
+
 msgid "REC"
+msgstr ""
+
+msgid "RECALL"
+msgstr ""
+
+msgid "RECORD"
+msgstr ""
+
+msgid "RED"
+msgstr ""
+
+msgid "REWIND"
 msgstr ""
 
 msgid "RF output"
 msgstr "RF output"
 
+msgid "RIGHT"
+msgstr ""
+
 msgid "Radio"
+msgstr "רדיו"
+
+#, fuzzy
+msgid "Radio mode"
 msgstr "רדיו"
 
 #
@@ -7428,6 +8052,9 @@ msgstr "כונן קשיח"
 
 msgid "Random"
 msgstr "רנדומלי"
+
+msgid "Rass Interactive Actions"
+msgstr ""
 
 #, python-format
 msgid "Rating defined by broadcaster - %d"
@@ -7665,6 +8292,10 @@ msgstr ""
 #
 msgid "Remove new found flag"
 msgstr "Remove new found flag"
+
+#, fuzzy
+msgid "Remove plugin"
+msgstr "הסר פלאגינים"
 
 msgid "Remove plugins"
 msgstr "הסר פלאגינים"
@@ -7932,6 +8563,9 @@ msgstr ""
 msgid "Rwanda"
 msgstr ""
 
+msgid "SAT"
+msgstr ""
+
 msgid "SCPC optimized search range"
 msgstr ""
 
@@ -7944,9 +8578,24 @@ msgstr ""
 msgid "SCR Unicable"
 msgstr ""
 
+msgid "SCREEN"
+msgstr ""
+
+msgid "SETUP"
+msgstr ""
+
+msgid "SHIFT: "
+msgstr ""
+
 #
 msgid "SINGLE LAYER DVD"
 msgstr "SINGLE LAYER DVD"
+
+msgid "SLEEP"
+msgstr ""
+
+msgid "SLOW"
+msgstr ""
 
 #
 msgid "SNR"
@@ -7968,6 +8617,15 @@ msgstr ""
 #
 msgid "SSID:"
 msgstr "SSID:"
+
+msgid "STOP"
+msgstr ""
+
+msgid "SUBTITLE"
+msgstr ""
+
+msgid "SUSPEND"
+msgstr ""
 
 msgid "Saint Barthelemy"
 msgstr ""
@@ -8034,6 +8692,9 @@ msgstr ""
 #
 msgid "Satellites"
 msgstr "לוויינים"
+
+msgid "Satlist Shortcut Action"
+msgstr ""
 
 #
 msgid "Sats"
@@ -8208,6 +8869,10 @@ msgstr "Search east"
 msgid "Search east"
 msgstr "Search east"
 
+#, fuzzy
+msgid "Search in SMS mode"
+msgstr "Select video mode"
+
 msgid "Search west"
 msgstr "Search west"
 
@@ -8308,6 +8973,10 @@ msgstr ""
 
 msgid "Select 'yes' to only send the DiSEqC command when changing from one satellite to another, or select 'no' for the DiSEqC command to be resent on every zap."
 msgstr ""
+
+#, fuzzy
+msgid "Select Audio"
+msgstr "בחר"
 
 #, fuzzy
 msgid "Select CAId"
@@ -8472,6 +9141,11 @@ msgstr ""
 
 #
 #, fuzzy
+msgid "Select service"
+msgstr "Select a movie"
+
+#
+#, fuzzy
 msgid "Select service name"
 msgstr "סרוקת שירות"
 
@@ -8567,7 +9241,7 @@ msgid "Select the time zone within the area or region."
 msgstr ""
 
 #, fuzzy
-msgid "Select the timer from the fallback tuner by default"
+msgid "Select the timer from the fallback receiver by default"
 msgstr "select the movie path"
 
 msgid "Select the tuner that controls the motorised dish."
@@ -8800,6 +9474,10 @@ msgstr ""
 msgid "Services"
 msgstr "שירותים"
 
+#, fuzzy, python-format
+msgid "Set %s as default?"
+msgstr "שחזור גיבויים"
+
 msgid "Set CI assignment for detection of available services."
 msgstr ""
 
@@ -8821,6 +9499,9 @@ msgid "Set alternative fallback tuners for DVB-T/C or ATSC"
 msgstr ""
 
 msgid "Set as startup service"
+msgstr ""
+
+msgid "Set auto DiSEqC search order"
 msgstr ""
 
 msgid "Set blocktimes by weekday"
@@ -8913,6 +9594,10 @@ msgstr ""
 msgid "Setup"
 msgstr "הגדרות"
 
+#, fuzzy
+msgid "Setup Actions"
+msgstr "בחר מקום גיבוי"
+
 #
 #, fuzzy
 msgid "Setup hard disk"
@@ -8947,10 +9632,19 @@ msgstr ""
 msgid "Short filenames"
 msgstr ""
 
+#, fuzzy
+msgid "Shortcut Actions"
+msgstr "בחר מקום גיבוי"
+
 #
 #, fuzzy
 msgid "Show"
 msgstr "הצג מידע"
+
+#
+#, fuzzy
+msgid "Show All Services"
+msgstr "שירותים"
 
 msgid "Show Audioselection"
 msgstr ""
@@ -8970,11 +9664,26 @@ msgstr "Show infobar on event change"
 msgid "Show EPG..."
 msgstr " הראה EPG..."
 
+#
+#, fuzzy
+msgid "Show Favorites"
+msgstr "מועדפים"
+
 msgid "Show InfoBar"
 msgstr ""
 
 msgid "Show PiP"
 msgstr ""
+
+#
+#, fuzzy
+msgid "Show Providers"
+msgstr "Providers"
+
+#
+#, fuzzy
+msgid "Show Satellites"
+msgstr "לוויינים"
 
 msgid "Show True/False as graphical switch"
 msgstr ""
@@ -9367,6 +10076,9 @@ msgstr ""
 msgid "Skip jumping to live TV while timeshifting with plugins"
 msgstr ""
 
+msgid "Sleep Timer Editor Actions"
+msgstr ""
+
 #
 #, fuzzy
 msgid "Sleep timer"
@@ -9524,6 +10236,9 @@ msgstr ""
 msgid "Sort list:"
 msgstr ""
 
+msgid "Sort order for help screen"
+msgstr ""
+
 msgid "Sort order for menu entries"
 msgstr ""
 
@@ -9641,6 +10356,10 @@ msgid "Standby / restart"
 msgstr " איתחול / המתנה"
 
 #, fuzzy
+msgid "Standby Actions"
+msgstr "המתנה"
+
+#, fuzzy
 msgid "Standby LED"
 msgstr "המתנה"
 
@@ -9685,6 +10404,9 @@ msgid "Start from the beginning"
 msgstr "התחל מההתחלה"
 
 msgid "Start instant recording"
+msgstr ""
+
+msgid "Start of the time interval during which events must begin to be displayed. If the filter is active, use keys 1 and 4 to adjust the start time, and key 0 to save."
 msgstr ""
 
 msgid "Start offline decode"
@@ -9885,6 +10607,16 @@ msgstr ""
 
 msgid "Stream request"
 msgstr ""
+
+#
+#, fuzzy
+msgid "Stream-tv"
+msgstr "Transponder"
+
+#
+#, fuzzy
+msgid "Streaming"
+msgstr "Transponder"
 
 msgid "Streaming clients info"
 msgstr ""
@@ -10147,6 +10879,12 @@ msgstr ""
 msgid "TEXT"
 msgstr ""
 
+msgid "TIMER"
+msgstr ""
+
+msgid "TIMESHIFT"
+msgstr ""
+
 #
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
@@ -10164,6 +10902,14 @@ msgstr ""
 
 msgid "TUNING"
 msgstr ""
+
+msgid "TV"
+msgstr ""
+
+#
+#, fuzzy
+msgid "TV mode"
+msgstr "Test mode"
 
 msgid "TV physical address report"
 msgstr ""
@@ -10190,6 +10936,10 @@ msgstr ""
 
 msgid "Tanzania, United Republic of"
 msgstr ""
+
+#, fuzzy
+msgid "Teletext Actions"
+msgstr "בחר מקום גיבוי"
 
 msgid "Teletext subtitle color"
 msgstr ""
@@ -10223,6 +10973,14 @@ msgstr ""
 msgid "Testscreens that are helpfull to fine-tune your display"
 msgstr ""
 
+#
+#, fuzzy
+msgid "Text Edit Actions"
+msgstr "EPG בחירת"
+
+msgid "Text Entry Actions"
+msgstr ""
+
 msgid "Text View On"
 msgstr ""
 
@@ -10246,7 +11004,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Thank you for using the wizard. Your receiver is now ready for use.\n"
-"Press OK to start using your receiver."
+"Press Blue or OK to start using your receiver."
 msgstr ""
 "Thank you for using the wizard.\n"
 "Please press OK to continue."
@@ -10301,7 +11059,7 @@ msgstr ""
 msgid "The following files were found..."
 msgstr "The following files were found..."
 
-msgid "The hostname or the IP address of the NTP server to synchronise the time with."
+msgid "The hostname or the IP address of a local NTP server to synchronise the time with."
 msgstr ""
 
 #, fuzzy
@@ -10313,6 +11071,9 @@ msgstr ""
 "Please install it."
 
 msgid "The number of steps to change the volume on the device the keys are forwarded to."
+msgstr ""
+
+msgid "The order and grouping of the help information list can be controlled using MENU>Setup>User Interface>Settings>Sort order for help screen or pressing long help"
 msgstr ""
 
 msgid ""
@@ -10713,6 +11474,11 @@ msgstr "איזור זמן"
 msgid "Timer"
 msgstr "טיימר"
 
+#
+#, fuzzy
+msgid "Timer Edit Actions"
+msgstr "בחירת טיימר"
+
 msgid "Timer Overview"
 msgstr ""
 
@@ -10829,6 +11595,10 @@ msgstr "היום"
 msgid "Toggle Configuration Mode or AutoDisqc"
 msgstr "תצורת הגדרה"
 
+#, fuzzy
+msgid "Toggle Filter Order"
+msgstr "Select video mode"
+
 msgid "Toggle HDMI In"
 msgstr ""
 
@@ -10838,10 +11608,17 @@ msgstr ""
 msgid "Toggle PiPzap"
 msgstr ""
 
+#, fuzzy
+msgid "Toggle TV Radio mode"
+msgstr "Select video mode"
+
 msgid "Toggle TV/RADIO mode"
 msgstr ""
 
 msgid "Toggle a cut mark at the current position"
+msgstr ""
+
+msgid "Toggle between zap and seek mode"
 msgstr ""
 
 msgid "Toggle dashed flickering line for this service"
@@ -10849,6 +11626,10 @@ msgstr ""
 
 msgid "Toggle infoBar"
 msgstr ""
+
+#, fuzzy
+msgid "Toggle movemode"
+msgstr "Select video mode"
 
 msgid "Toggle new text inserts before or overwrites existing text"
 msgstr ""
@@ -10894,6 +11675,11 @@ msgstr "Toneburst A/B"
 
 msgid "Tonga"
 msgstr ""
+
+#
+#, fuzzy
+msgid "Top"
+msgstr "שתיים"
 
 msgid "Top and bottom"
 msgstr ""
@@ -11039,6 +11825,9 @@ msgstr ""
 msgid "Tuvalu"
 msgstr ""
 
+msgid "Tv Radio Actions"
+msgstr ""
+
 #
 msgid "Two"
 msgstr "שתיים"
@@ -11067,10 +11856,13 @@ msgstr "סוג סריקה"
 msgid "UNKNOWN"
 msgstr ""
 
+msgid "UP"
+msgstr ""
+
 msgid "URL"
 msgstr ""
 
-msgid "URL of fallback remote receiver"
+msgid "URL of remote receiver for imports"
 msgstr ""
 
 msgid "USALS automatically moves a motorised dish to the correct satellite based on the coordinates entered by the user. Without USALS each satellite will need to be setup and saved individually."
@@ -11307,6 +12099,9 @@ msgstr ""
 msgid "Use circular LNB"
 msgstr ""
 
+msgid "Use current filter values as default"
+msgstr ""
+
 msgid "Use fastscan channel names"
 msgstr ""
 
@@ -11351,7 +12146,8 @@ msgstr "Use the Networkwizard to configure selected network adapter"
 msgid "Use the network wizard to configure your network\n"
 msgstr "Use the Networkwizard to configure your Network\n"
 
-msgid "Use the up/down keys on your remote control to select an option. After that, press OK."
+#, fuzzy
+msgid "Use the up/down keys on your remote control to select an option. After that, press Blue or OK."
 msgstr ".השתמש במקשי השלט על מנת לבחור באפשרות. בסוף, לחץ אשר"
 
 #, fuzzy
@@ -11416,6 +12212,9 @@ msgstr ""
 msgid "Using fixed address"
 msgstr ""
 
+msgid "Using the 'Stop' button will cyclically switch displaying events starting: 'outside the interval', 'within the interval', and 'without filtering', instead of 'within the interval', 'outside the interval', and 'without filtering'."
+msgstr ""
+
 #, python-format
 msgid "Using tuner %s"
 msgstr ""
@@ -11430,6 +12229,12 @@ msgstr ""
 msgid "VCR scart"
 msgstr "VCR scart"
 
+msgid "VIDEO"
+msgstr ""
+
+msgid "VKEY"
+msgstr ""
+
 #, fuzzy
 msgid "VLAN connection"
 msgstr "חיבור רשת"
@@ -11438,10 +12243,16 @@ msgstr "חיבור רשת"
 msgid "VMGM (intro trailer)"
 msgstr ""
 
+msgid "VMODE"
+msgstr ""
+
 msgid "VOB file"
 msgstr ""
 
-msgid "VU+"
+msgid "VOL+"
+msgstr ""
+
+msgid "VOL-"
 msgstr ""
 
 msgid "Valid ONID/TSID look at www.lyngsat.com..."
@@ -11599,12 +12410,22 @@ msgstr ""
 
 #
 #, fuzzy
+msgid "Virtual Key Board Actions"
+msgstr "מקלדת וירטואלית"
+
+#
+#, fuzzy
 msgid "Virtual KeyBoard Functions"
 msgstr "מקלדת וירטואלית"
 
 #
 #, fuzzy
 msgid "Virtual KeyBoard Text:"
+msgstr "מקלדת וירטואלית"
+
+#
+#, fuzzy
+msgid "Virtual Keyboard Actions"
 msgstr "מקלדת וירטואלית"
 
 #
@@ -11636,6 +12457,12 @@ msgstr ""
 msgid "W"
 msgstr ""
 
+msgid "WAKEUP"
+msgstr ""
+
+msgid "WIZTV"
+msgstr ""
+
 msgid "WLAN connection"
 msgstr "WLAN connection"
 
@@ -11644,6 +12471,9 @@ msgstr ""
 
 #
 msgid "WSS on 4:3"
+msgstr ""
+
+msgid "WWW"
 msgstr ""
 
 #
@@ -11754,7 +12584,7 @@ msgid ""
 "Welcome.\n"
 "\n"
 "This start wizard will guide you through the basic setup of your receiver.\n"
-"Press the OK button on your remote control to move to the next step."
+"Press the Blue or OK button on your remote control to move to the next step."
 msgstr ""
 
 #
@@ -11801,10 +12631,10 @@ msgstr ""
 msgid "When enabled the set top box is able to wakeup on LAN"
 msgstr ""
 
-msgid "When enabled the timer from the fallback tuner is imported"
+msgid "When enabled the timer from the fallback receiver is imported"
 msgstr ""
 
-msgid "When enabled the timer from the fallback tuner is the default timer"
+msgid "When enabled the timer from the fallback receiver is the default timer"
 msgstr ""
 
 msgid "When enabled then when you select a new channel in the channel selection the channel selection will not close. It will only close when you select the current playing service. This is a kind of preview mode"
@@ -11813,7 +12643,7 @@ msgstr ""
 msgid "When enabled you can control the volume with the arrow buttons instead of getting the channel selection list"
 msgstr ""
 
-msgid "When enabled you can customize the OpenWebIf settings for the fallback tuner"
+msgid "When enabled you can customize the OpenWebIf settings for the fallback receiver"
 msgstr ""
 
 msgid "When enabled you can specify a timeframe to ignore the shutdown timer when the receiver is in standby mode"
@@ -11896,9 +12726,6 @@ msgid "When enabled, graphical DVB subtitles will be centered horizontally."
 msgstr ""
 
 msgid "When enabled, graphical DVB subtitles will be displayed at their original position."
-msgstr ""
-
-msgid "When enabled, graphical DVB subtitles will be displayed in yellow, instead of the original color."
 msgstr ""
 
 msgid "When enabled, http streams are descrambled on the server side. The (remote) client receiver does not have to do descrambling. Default on."
@@ -12005,6 +12832,9 @@ msgstr ""
 msgid "When set to 'Yes', all locations where SNR is displayed in dB's will show an SNR percentage, and vice versa."
 msgstr "אם מוגדר ככן, כל המקומות שבהם ה-SNR ב-dB מוצג יציגו את אחוז ה-SNR ולהיפך."
 
+msgid "When switching the filter, the selected EPG sorting is preserved."
+msgstr ""
+
 msgid "When the content has an aspect ratio of 16:9, choose whether to scale/stretch the picture."
 msgstr ""
 
@@ -12017,6 +12847,10 @@ msgstr ""
 #
 msgid "Where to save temporary timeshift recordings?"
 msgstr "Where to save temporary timeshift recordings?"
+
+#, fuzzy
+msgid "Window Actions"
+msgstr "בחר מקום גיבוי"
 
 msgid "Wireless LAN"
 msgstr "Wireless LAN"
@@ -12065,6 +12899,11 @@ msgstr ""
 
 #
 #, fuzzy
+msgid "Wizard Actions"
+msgstr "Video הגדרת"
+
+#
+#, fuzzy
 msgid "Wizard setup"
 msgstr "Video הגדרת"
 
@@ -12084,6 +12923,9 @@ msgstr "Write failed!"
 msgid "Write to /tmp/positionersetup.log"
 msgstr ""
 
+msgid "YELLOW"
+msgstr ""
+
 msgid "YES"
 msgstr ""
 
@@ -12091,9 +12933,6 @@ msgid "Year"
 msgstr "שנה"
 
 msgid "Yellow"
-msgstr ""
-
-msgid "Yellow DVB subtitles"
 msgstr ""
 
 #, fuzzy
@@ -12187,6 +13026,10 @@ msgstr ""
 #, fuzzy
 msgid "You can set sorting type for items in movielist."
 msgstr "טען אורך הסרט ברשימת הסרטים"
+
+#, python-format
+msgid "You can't update the software because %s can not be reached."
+msgstr ""
 
 #
 msgid "You cannot delete this!"
@@ -12311,6 +13154,9 @@ msgid ""
 "Please choose what you want to do next."
 msgstr ""
 
+msgid "ZOOM"
+msgstr ""
+
 msgid "Zambia"
 msgstr ""
 
@@ -12346,6 +13192,9 @@ msgstr ""
 msgid "Zap to"
 msgstr ""
 
+msgid "Zap to channel number"
+msgstr ""
+
 msgid "Zap to selected channel"
 msgstr ""
 
@@ -12365,15 +13214,6 @@ msgstr ""
 #, fuzzy, python-format
 msgid "Zapped to timer service %s!"
 msgstr "move up to first entry"
-
-msgid "Zgemma H.S/H.2S/H.2H/H5/H7(old model)"
-msgstr ""
-
-msgid "Zgemma H9(old model)/I55Plus/H8"
-msgstr ""
-
-msgid "Zgemma Star S/2S/H1/H2"
-msgstr ""
 
 msgid "Zimbabwe"
 msgstr ""
@@ -12672,21 +13512,6 @@ msgid "error starting scan"
 msgstr ""
 
 msgid "error while scanning"
-msgstr ""
-
-msgid "et4000"
-msgstr ""
-
-msgid "et5000/et6000"
-msgstr ""
-
-msgid "et8000/et10000"
-msgstr ""
-
-msgid "et9000/et9100"
-msgstr ""
-
-msgid "et9200/et9500/et6500"
 msgstr ""
 
 msgid "execute cuts (requires MovieCut plugin)"
@@ -13111,6 +13936,9 @@ msgstr "...נא המתן, טוען תמונה"
 msgid "popular culture/traditional arts"
 msgstr ""
 
+msgid "port"
+msgstr ""
+
 msgid "pre-school children's program"
 msgstr ""
 
@@ -13502,9 +14330,6 @@ msgid "with tuner name"
 msgstr ""
 
 msgid "with_errors"
-msgstr ""
-
-msgid "xp1000"
 msgstr ""
 
 msgid "yellow"

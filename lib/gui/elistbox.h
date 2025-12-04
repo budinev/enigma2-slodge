@@ -54,6 +54,7 @@ protected:
 	virtual int getItemWidth() { return -1; }
 	virtual int getOrientation() { return 1; }
 	virtual int getMaxItemTextWidth() { return 1; }
+	virtual int getListSize() { return 0; }
 
 	eListbox *m_listbox;
 #endif
@@ -157,7 +158,7 @@ public:
 	void setItemWidth(int w);
 	void setSelectionEnable(int en);
 
-	void setBackgroundColor(gRGB &col);
+	void setBackgroundColor(const gRGB &col);
 	void setBackgroundColorSelected(gRGB &col);
 	void setForegroundColor(gRGB &col);
 	void setForegroundColorSelected(gRGB &col);

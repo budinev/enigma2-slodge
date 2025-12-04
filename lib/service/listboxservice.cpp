@@ -22,41 +22,6 @@ std::string toLower(std::string& data) {
     return data_tmp;
 }
 
-// Next two functions are used for finding correct recording in case of dynamic iptv service url
-
-bool compareServices(const eServiceReference &ref1, const eServiceReference &ref2, bool alternativeMatching) {
-	std::vector<std::string> ref_split = split(ref1.toString(), ":");
-	std::vector<std::string> s_split = split(ref2.toString(), ":");
-
-	if (ref_split[1] == "7" || s_split[1] == "7") {
-		return ref1 == ref2;
-	}
-
-	std::vector<std::string> ref_split_r(ref_split.begin(), ref_split.begin() + 10);
-	std::string ref_s;
-	join_str(ref_split_r, ':', ref_s);
-
-	std::vector<std::string> s_split_r(s_split.begin(), s_split.begin() + 10);
-	std::string s_s;
-	join_str(s_split_r, ':', s_s);
-
-	if (!alternativeMatching) {
-		if (ref1 == ref2) return true;
-	} else {
-		if (ref_s == s_s) return true;
-	}
-	// If "127.0.0.1" is in the service reference this is probably a stream relay
-	// so use partial matching logic
-	if (ref2.toString().find("127.0.0.1") != std::string::npos) {
-		std::string url_sr = s_split[s_split.size() - 2];
-		std::vector<std::string> sr_split = split(url_sr, "/");
-		std::string ref_orig = sr_split.back();
-		ref_orig = replace_all(ref_orig, "%3a", ":");
-		return ref1.toString() == ref_orig;
-	}
-
-	return false;
-}
 
 void eListboxServiceContent::addService(const eServiceReference &service, bool beforeCurrent)
 {
@@ -672,13 +637,13 @@ bool eListboxServiceContent::checkServiceIsRecorded(eServiceReference ref)
 			if (!db->getBouquet(ref, bouquet))
 			{
 				for (std::list<eServiceReference>::iterator i(bouquet->m_services.begin()); i != bouquet->m_services.end(); ++i){
-					if (compareServices(*i, it->second, m_alternative_record_match))
+					if (*i == it->second)
 						return true;
 				}
 			}
 		}
 		else {
-			if (compareServices(ref, it->second, m_alternative_record_match))
+			if (ref == it->second)
 				return true;
 		}
 	}
@@ -705,12 +670,18 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 
 	eListboxStyle *local_style = 0;
 	eRect itemRect = eRect(offset, m_itemsize);
+	int widget_radius = 0;
+	uint8_t widget_edges = 0;
 	int radius = 0;
 	int edges = 0;
 
 		/* get local listbox style, if present */
 	if (m_listbox)
+	{
 		local_style = m_listbox->getLocalStyle();
+		widget_radius = m_listbox->getCornerRadius();
+		widget_edges = m_listbox->getCornerRadiusEdges();
+	}
 
 	if (local_style) {
 		radius = local_style->cornerRadius(selected ? 1:0);
@@ -760,8 +731,17 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 	{
 		/* blit background picture, if available (otherwise, clear only) */
 		if (local_style && local_style->m_background)
+		{
+			if (widget_radius)
+				painter.setRadius(widget_radius, widget_edges);
 			painter.blit(local_style->m_background, offset, eRect(), 0);
-		else if (local_style && !local_style->m_background && radius)
+			if(radius)
+			{
+				painter.setRadius(radius, edges);
+			}
+			painter.drawRectangle(itemRect);
+		}
+		else if (local_style && !local_style->m_background)
 		{
 			if(radius)
 				painter.setRadius(radius, edges);
@@ -772,17 +752,37 @@ void eListboxServiceContent::paint(gPainter &painter, eWindowStyle &style, const
 	} else
 	{
 		if (local_style->m_background)
+		{
+			if (widget_radius)
+				painter.setRadius(widget_radius, widget_edges);
 			painter.blit(local_style->m_background, offset, eRect(), gPainter::BT_ALPHABLEND);
-		else if (selected && !local_style->m_selection && !local_style->m_selection_large && !radius)
-			painter.clear();
+		}
+
+		if (selected && !local_style->m_selection && !local_style->m_selection_large)
+		{
+			if (!radius)
+				painter.clear();
+			else
+			{
+				painter.setRadius(radius, edges);
+				painter.drawRectangle(itemRect);
+			}
+		}
 	}
 
 	if (cursorValid())
 	{
-		if (selected && local_style && local_style->m_selection && m_visual_mode != visSkinDefined){
+		
+		if (selected && local_style && local_style->m_selection && m_visual_mode != visSkinDefined)
+		{
+			if (radius)
+				painter.setRadius(radius, edges);
 			painter.blit(local_style->m_selection, offset, eRect(), gPainter::BT_ALPHABLEND);
 		}
-		if (selected && local_style && local_style->m_selection_large && m_visual_mode == visSkinDefined){
+		if (selected && local_style && local_style->m_selection_large && m_visual_mode == visSkinDefined)
+		{
+			if (radius)
+				painter.setRadius(radius, edges);
 			painter.blit(local_style->m_selection_large, offset, eRect(), gPainter::BT_ALPHABLEND);
 		}
 

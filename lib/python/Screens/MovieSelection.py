@@ -610,6 +610,7 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 				"down": (self.keyDown, _("Go down the list"))
 			}, prio=-2)
 
+		self.initUserDefinedActions()
 		def getinitUserDefinedActionsDescription(key):
 			return _(userDefinedActions.get(eval("config.movielist.%s.value" % key), _("Not defined")))
 
@@ -754,22 +755,23 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 		self._updateButtonTexts()
 
 	def _callButton(self, name):
-		if name.startswith('@'):
-			item = self.getCurrentSelection()
-			if isSimpleFile(item):
-				name = name[1:]
-				for p in plugins.getPlugins(PluginDescriptor.WHERE_MOVIELIST):
-					if name == p.name:
-						p(self.session, item[0])
-		elif name.startswith('/'):
-			self.gotFilename(name)
-		else:
-			try:
-				a = getattr(self, 'do_' + name)
-			except Exception:
-				# Undefined action
-				return
-			a()
+		if not self["waitingtext"].getVisible():
+			if name.startswith('@'):
+				item = self.getCurrentSelection()
+				if isSimpleFile(item):
+					name = name[1:]
+					for p in plugins.getPlugins(PluginDescriptor.WHERE_MOVIELIST):
+						if name == p.name:
+							p(self.session, item[0])
+			elif name.startswith('/'):
+				self.gotFilename(name)
+			else:
+				try:
+					a = getattr(self, 'do_' + name)
+				except Exception:
+					# Undefined action
+					return
+				a()
 
 	def btn_red(self):
 		self._callButton(config.movielist.btn_red.value)
@@ -1305,8 +1307,7 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 				"description": config.movielist.description.value,
 				"movieoff": config.usage.on_movie_eof.value})
 			self.saveLocalSettings()
-			self._updateButtonTexts()
-			self.reloadList()
+			self.close(True)
 
 	def can_sortby(self, item):
 		return True
@@ -1401,7 +1402,6 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 	def enablePathSelect(self):
 		self.pathselectEnabled = True
 		if self.initialRun:
-			self.callLater(self.initUserDefinedActions)
 			self.initialRun = False
 
 	def doPathSelect(self):
@@ -1986,8 +1986,8 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 						moveServiceFiles(current, trash, name, allowCopy=False)
 						self["list"].removeService(current)
 						# Files were moved to .Trash, ok.
-						from Screens.InfoBarGenerics import delResumePoint
-						delResumePoint(current)
+						from Screens.InfoBarGenerics import resumePointsInstance
+						resumePointsInstance.delResumePoint(current)
 						self.showActionFeedback(_("Deleted") + " " + name)
 						return
 				except OSError as e:
@@ -2024,8 +2024,8 @@ class MovieSelection(Screen, HelpableScreen, SelectionEventInfo, InfoBarBase, Pr
 				if offline.deleteFromDisk(0):
 					raise Exception("Offline delete failed")
 			self["list"].removeService(current)
-			from Screens.InfoBarGenerics import delResumePoint
-			delResumePoint(current)
+			from Screens.InfoBarGenerics import resumePointsInstance
+			resumePointsInstance.delResumePoint(current)
 			self.showActionFeedback(_("Deleted") + " " + name)
 		except Exception as ex:
 			self.session.open(MessageBox, _("Delete failed!") + "\n" + name + "\n" + str(ex), MessageBox.TYPE_ERROR)

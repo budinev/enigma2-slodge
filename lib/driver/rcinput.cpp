@@ -190,6 +190,13 @@ public:
 	{
 		eDebug("[eInputDeviceInit] adding device %s", filename);
 		eRCInputEventDriver *p = new eRCInputEventDriver(filename);
+		for (itemlist::iterator it = items.begin(); it != items.end(); ++it)
+		{
+			if (strcmp((*it)->filename, filename) == 0)
+			{
+				return;
+			}
+		}
 		items.push_back(new element(filename, p, new eRCDeviceInputDev(p, consoleFd)));
 	}
 

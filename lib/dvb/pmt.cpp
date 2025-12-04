@@ -969,15 +969,14 @@ int eDVBServicePMTHandler::tuneExt(eServiceReferenceDVB &ref, ePtr<iTsSource> &s
 	if (!simulate)
 	{
 		// If is stream relay service then allocate the real channel so to provide correct frontend info
-		eDVBChannelID chid;
-		eServiceReferenceDVB sRelayOrigSref;
-		bool isStreamRelay = ref.getSROriginal(sRelayOrigSref);
 
-		if (isStreamRelay) {
+		if (ref.isStreamRelay) {
+			eDVBChannelID chid;
+			eServiceReferenceDVB sRelayOrigSref = eServiceReferenceDVB(ref.compareSref);
 			sRelayOrigSref.getChannelID(chid);
 			res = m_resourceManager->allocateChannel(chid, m_sr_channel, simulate);
 		}
-
+			
 
 		if (m_sr_channel) {
 			m_sr_channel->connectStateChange(
@@ -1083,6 +1082,7 @@ void eDVBServicePMTHandler::free()
 	m_PAT.stop();
 	m_service = 0;
 	m_channel = 0;
+	m_sr_channel = 0;
 	m_pvr_channel = 0;
 	m_demux = 0;
 }

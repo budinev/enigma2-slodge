@@ -1,7 +1,7 @@
 from Screens.ChannelSelection import ChannelSelection, BouquetSelector, SilentBouquetSelector
 
 from Components.ActionMap import ActionMap, HelpableActionMap
-from Components.ActionMap import NumberActionMap
+from Components.ActionMap import NumberActionMap, HelpableNumberActionMap
 from Components.Harddisk import harddiskmanager, findMountPoint
 from Components.Input import Input
 from Components.Label import Label
@@ -49,6 +49,7 @@ from sys import maxsize
 import itertools
 import datetime
 from re import match
+from pickle import load as pickle_load, dump as pickle_dump, HIGHEST_PROTOCOL as pickle_HIGHEST_PROTOCOL
 
 from RecordTimer import RecordTimerEntry, RecordTimer, findSafeRecordPath
 
@@ -60,88 +61,72 @@ def isStandardInfoBar(self):
 	return self.__class__.__name__ == "InfoBar"
 
 
-def setResumePoint(session):
-	global resumePointCache, resumePointCacheLast
-	service = session.nav.getCurrentService()
-	ref = session.nav.getCurrentlyPlayingServiceOrGroup()
-	if (service is not None) and (ref is not None): # and (ref.type != 1):
-		# ref type 1 has its own memory...
-		seek = service.seek()
-		if seek:
-			pos = seek.getPlayPosition()
-			if not pos[0]:
-				key = ref.toString()
-				lru = int(time())
-				sl = seek.getLength()
-				if sl:
-					sl = sl[1]
-				else:
-					sl = None
-				resumePointCache[key] = [lru, pos[1], sl]
-				for k, v in list(resumePointCache.items()):
-					if v[0] < lru:
-						candidate = k
-						filepath = os.path.realpath(candidate.split(':')[-1])
-						mountpoint = findMountPoint(filepath)
-						if os.path.ismount(mountpoint) and not os.path.exists(filepath):
-							del resumePointCache[candidate]
-				if lru - resumePointCacheLast > 3600:
-					saveResumePoints()
+class ResumePoints():
+	def __init__(self):
+		self.resumePointFile = "/etc/enigma2/resumepoints.pkl"
+		self.resumePointCache = {}
+		self.loadResumePoints()
+		self.cacheCleanTimer = eTimer()
+		self.cacheCleanTimer.callback.append(self.cleanCache)
+		self.cleanCache()  # get rid of stale entries on reboot
 
+	def loadResumePoints(self):
+		self.resumePointCache.clear()
+		if fileExists(self.resumePointFile):
+			with open(self.resumePointFile, "rb") as f:
+				self.resumePointCache.update(pickle_load(f, fix_imports=True, encoding="utf8"))
 
-def delResumePoint(ref):
-	global resumePointCache, resumePointCacheLast
-	try:
-		del resumePointCache[ref.toString()]
-	except KeyError:
-		pass
-	if int(time()) - resumePointCacheLast > 3600:
-		saveResumePoints()
+	def saveResumePoints(self):
+		with open(self.resumePointFile, "wb") as f:
+			pickle_dump(self.resumePointCache, f, pickle_HIGHEST_PROTOCOL)
 
+	def delResumePoint(self, ref):
+		if (sref := ref.toString()) in self.resumePointCache:
+			del self.resumePointCache[sref]
+			self.saveResumePoints()
 
-def getResumePoint(session):
-	global resumePointCache
-	ref = session.nav.getCurrentlyPlayingServiceOrGroup()
-	if (ref is not None) and (ref.type != 1):
-		try:
-			entry = resumePointCache[ref.toString()]
-			entry[0] = int(time()) # update LRU timestamp
+	def cleanCache(self):
+		changed = False
+		now = int(time())
+		self.cacheCleanTimer.stop()
+		for sref, v in list(self.resumePointCache.items()):
+			if "%3a//" in sref:  # resume point is stream
+				if now > v[0] + 7 * 24 * 60 * 60:  # keep stream resume points maximum one week
+					del self.resumePointCache[sref]
+					changed = True
+			else:
+				filepath = os.path.realpath(sref.split(':')[-1])
+				mountpoint = findMountPoint(filepath)
+				if os.path.ismount(mountpoint) and not os.path.exists(filepath):
+					del self.resumePointCache[sref]
+					changed = True
+		if changed:
+			self.saveResumePoints()
+		self.cacheCleanTimer.startLongTimer(24 * 60 * 60)  # clean up daily
+
+	def setResumePoint(self, session):
+		service = session.nav.getCurrentService()
+		ref = session.nav.getCurrentlyPlayingServiceOrGroup()
+		if service is not None and ref is not None:  # and (ref.type != 1):
+			# ref type 1 has its own memory...
+			seek = service.seek()
+			if seek:
+				pos = seek.getPlayPosition()
+				if not pos[0]:
+					sref = ref.toString()
+					sl = x[1] if (x := seek.getLength()) else None
+					self.resumePointCache[sref] = [int(time()), pos[1], sl]
+					self.saveResumePoints()
+
+	def getResumePoint(self, session):
+		ref = session.nav.getCurrentlyPlayingServiceOrGroup()
+		if (ref is not None) and (ref.type != 1) and (sref := ref.toString()) in self.resumePointCache:
+			entry = self.resumePointCache[sref]
+			entry[0] = int(time())  # update LRU timestamp
 			return entry[1]
-		except KeyError:
-			return None
 
 
-def saveResumePoints():
-	global resumePointCache, resumePointCacheLast
-	import pickle
-	try:
-		f = open('/etc/enigma2/resumepoints.pkl', 'wb')
-		pickle.dump(resumePointCache, f, pickle.HIGHEST_PROTOCOL)
-		f.close()
-	except Exception as ex:
-		print("[saveResumePoints] Failed to write resumepoints:", ex)
-	resumePointCacheLast = int(time())
-
-
-def loadResumePoints():
-	import pickle
-	try:
-		f = open('/etc/enigma2/resumepoints.pkl', 'rb')
-		pickleFile = pickle.load(f)
-		f.close()
-		return pickleFile
-	except Exception as ex:
-		print("[loadResumePoints] Failed to load resumepoints:", ex)
-		return {}
-
-
-def updateResumePointCache():
-	global resumePointCache
-	resumePointCache = loadResumePoints()
-
-
-resumePointCache = loadResumePoints()
-resumePointCacheLast = int(time())
+resumePointsInstance = ResumePoints()
 
 
 class whitelist:
@@ -197,6 +182,7 @@ class InfoBarStreamRelay:
 	data = property(getData, setData)
 
 	def streamrelayChecker(self, playref):
+		is_stream_relay = False
 		playrefstring, renamestring = self.splitref(playref.toString())
 		if '%3a//' not in playrefstring and playrefstring in self.__srefs:
 			url = "http://%s:%s/" % (config.misc.softcam_streamrelay_url.getHTML(), config.misc.softcam_streamrelay_port.value)
@@ -205,8 +191,10 @@ class InfoBarStreamRelay:
 			else:
 				playrefmod = playrefstring
 			playref = eServiceReference("%s%s%s:%s" % (playrefmod, url.replace(":", "%3a"), playrefstring.replace(":", "%3a"), renamestring or ServiceReference(playref).getServiceName()))
+			is_stream_relay = True
 			print(f"[{self.__class__.__name__}] Play service {playref.toString()} via streamrelay")
-		return playref
+			playref.setCompareSref(playrefstring, True)
+		return playref, is_stream_relay
 
 	def checkService(self, service):
 		return service and self.splitref(service.toString())[0] in self.__srefs
@@ -258,10 +246,14 @@ def getActiveSubservicesForCurrentChannel(service):
 				if events and len(events) == 1:
 					event = events[0]
 					title = event[2]
-					if title and "Sendepause" not in title:
+					if title and ("Sendepause" not in title and "Sky Sport Kompakt" not in title):
 						starttime = datetime.datetime.fromtimestamp(event[0]).strftime('%H:%M')
 						endtime = datetime.datetime.fromtimestamp(event[0] + event[1]).strftime('%H:%M')
-						current_show_name = "%s [%s-%s]" % (title, str(starttime), str(endtime))
+						try:
+							service_name = ServiceReference(subservice).getServiceName()
+						except:
+							service_name = ""
+						current_show_name = "%s [%s-%s] %s" % (title, str(starttime), str(endtime), service_name)
 						activeSubservices.append((current_show_name, subservice))
 	if not activeSubservices:
 		subservices = service and service.subServices()
@@ -273,7 +265,7 @@ def getActiveSubservicesForCurrentChannel(service):
 
 def hasActiveSubservicesForCurrentChannel(service):
 	activeSubservices = getActiveSubservicesForCurrentChannel(service)
-	return bool(activeSubservices and len(activeSubservices))
+	return bool(activeSubservices and len(activeSubservices) > 1)
 
 
 class InfoBarDish:
@@ -530,7 +522,7 @@ class InfoBarShowHide(InfoBarScreenSaver):
 		if isStandardInfoBar(self) and config.usage.show_second_infobar.value == "EPG":
 			if not (hasattr(self, "hotkeyGlobal") and self.hotkeyGlobal("info") != 0):
 				self.showDefaultEPG()
-		elif self.actualSecondInfoBarScreen and config.usage.show_second_infobar.value and not self.actualSecondInfoBarScreen.shown:
+		elif self.actualSecondInfoBarScreen and config.usage.show_second_infobar.value != "no" and not self.actualSecondInfoBarScreen.shown:
 			self.show()
 			self.actualSecondInfoBarScreen.show()
 			self.startHideTimer()
@@ -742,39 +734,50 @@ class InfoBarNumberZap:
 	""" Handles an initial number for NumberZapping """
 
 	def __init__(self):
-		self["NumberActions"] = NumberActionMap(["NumberActions"],
+		self.__event_tracker = ServiceEventTracker(screen=self, eventmap={
+				iPlayableService.evStart: self.__serviceStarted,
+			})
+		self.toggleSeekStatus = False
+		self["NumberActions"] = HelpableNumberActionMap(self, ["NumberActions", "InfobarSeekActions"],
 			{
-				"1": self.keyNumberGlobal,
-				"2": self.keyNumberGlobal,
-				"3": self.keyNumberGlobal,
-				"4": self.keyNumberGlobal,
-				"5": self.keyNumberGlobal,
-				"6": self.keyNumberGlobal,
-				"7": self.keyNumberGlobal,
-				"8": self.keyNumberGlobal,
-				"9": self.keyNumberGlobal,
-				"0": self.keyNumberGlobal,
+				"1": (self.keyNumberGlobal, _('Numberzap or seek backward small step')),
+				"2": (self.keyNumberGlobal, _('Numberzap')),
+				"3": (self.keyNumberGlobal, _('Numberzap or seek forward small step')),
+				"4": (self.keyNumberGlobal, _('Numberzap or seek backward medium step')),
+				"5": (self.keyNumberGlobal, _('Numberzap')),
+				"6": (self.keyNumberGlobal, _('Numberzap or seek forward medium step')),
+				"7": (self.keyNumberGlobal, _('Numberzap or seek backward big step')),
+				"8": (self.keyNumberGlobal, _('Numberzap')),
+				"9": (self.keyNumberGlobal, _('Numberzap or seek forward big step')),
+				"0": (self.keyNumberGlobal, _('Numberzap or zap to previous service')),
+				"toggleSeek": (self.toggleSeek, _("Toggle between zap and seek mode")),
 			})
 
-	def keyNumberGlobal(self, number):
-		seekable = self.getSeek()
-		if seekable:
-			length = seekable.getLength() or (None, 0)
-			if length[1] > 0:
-				key = int(number)
-				time = (-config.seek.selfdefined_13.value, False, config.seek.selfdefined_13.value,
-					-config.seek.selfdefined_46.value, False, config.seek.selfdefined_46.value,
-					-config.seek.selfdefined_79.value, False, config.seek.selfdefined_79.value)[key - 1]
+	def __serviceStarted(self):
+		self.toggleSeekStatus = False
 
-				time = time * 90000
-				seekable.seekRelative(time < 0 and -1 or 1, abs(time))
-				return
+	def toggleSeek(self):
+		self.seekable = self.getSeek()
+		if self.seekable:
+			self.toggleSeekStatus = not self.toggleSeekStatus
+			self.VideoMode_window.setText(_("Numberbuttons Seek") if self.toggleSeekStatus else _("Numberbuttons Zap"))
+
+	def keyNumberGlobal(self, number):
 		if number == 0:
 			if isinstance(self, InfoBarPiP) and self.pipHandles0Action():
 				self.pipDoHandle0Action()
 			elif len(self.servicelist.history) > 1:
 				self.checkTimeshiftRunning(self.recallPrevService)
 		else:
+			if self.toggleSeekStatus:
+				length = self.seekable.getLength() or (None, 0)
+				if length[1] > 0:
+					key = int(number)
+					time = (-config.seek.selfdefined_13.value, False, config.seek.selfdefined_13.value,
+						-config.seek.selfdefined_46.value, False, config.seek.selfdefined_46.value,
+						-config.seek.selfdefined_79.value, False, config.seek.selfdefined_79.value)[key - 1]
+					self.seekable.seekRelative(time < 0 and -1 or 1, abs(time * 90000))
+				return
 			if "TimeshiftActions" in self and self.timeshiftEnabled():
 				ts = self.getTimeshift()
 				if ts and ts.isTimeshiftActive():
@@ -2522,7 +2525,7 @@ class InfoBarPiP:
 			if self.allowPiP:
 				self.addExtension((self.getShowHideName, self.showPiP, lambda: True), "blue")
 				self.addExtension((self.getMoveName, self.movePiP, self.pipShown), "green")
-				self.addExtension((self.getSwapName, self.swapPiP, self.pipShown), "yellow")
+				self.addExtension((self.getSwapName, self.swapPiP, lambda: self.pipShown() and isStandardInfoBar(self)), "yellow")
 				self.addExtension((self.getTogglePipzapName, self.togglePipzap, lambda: True), "red")
 			else:
 				self.addExtension((self.getShowHideName, self.showPiP, self.pipShown), "blue")
@@ -2585,7 +2588,10 @@ class InfoBarPiP:
 		else:
 			self.session.pip = self.session.instantiateDialog(PictureInPicture)
 			self.session.pip.show()
-			newservice = self.lastPiPService or self.session.nav.getCurrentlyPlayingServiceOrGroup() or (slist and slist.servicelist.getCurrent())
+			if isStandardInfoBar(self):
+				newservice = self.lastPiPService or self.session.nav.getCurrentlyPlayingServiceOrGroup() or (slist and slist.servicelist.getCurrent())
+			else:
+				newservice = self.lastPiPService or (slist and slist.servicelist.getCurrent())
 			if self.session.pip.playService(newservice):
 				self.session.pipshown = True
 				self.session.pip.servicePath = slist and slist.getCurrentServicePath()
@@ -3340,7 +3346,7 @@ class InfoBarCueSheetSupport:
 					last = pts
 					break
 			else:
-				last = getResumePoint(self.session)
+				last = resumePointsInstance.getResumePoint(self.session)
 			if last is None:
 				return
 			# only resume if at least 10 seconds ahead, or <10 seconds before the end.
