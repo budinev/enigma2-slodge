@@ -32,15 +32,25 @@ class CopyFileTask(Components.Task.PythonTask):
 
 	def work(self):
 		print("[CopyFileTask] handles ", len(self.handles))
+
+		BS = 8 * 1024 * 1024  # 8 MB for sendfile
 		for src, dst in self.handles:
 			try:
-				count = os.stat(src).st_size
-				if self.aborted:
-					print("[CopyFileTask] aborting")
-					raise Exception("Aborted")
-				bytesSent = os.sendfile(dst, src, 0, count)
-				if bytesSent < count:
-					raise Exception("sendfile failed!")
+				size = os.stat(src).st_size
+				offset = 0
+
+				while offset < size:
+					if self.aborted:
+						print("[CopyFileTask] aborting")
+						raise Exception("Aborted")
+
+					to_send = min(BS, size - offset)
+					# for 32bit safety (ssize_t):
+					sent = os.sendfile(dst, src, offset, to_send)
+					if sent <= 0:
+						raise Exception("sendfile failed!")
+					offset += sent
+					self.pos += sent
 			except Exception as ex:
 				print("[CopyFileTask]", ex)
 				for s, d in self.fileList:
@@ -54,7 +64,7 @@ class CopyFileTask(Components.Task.PythonTask):
 		for src, dst in self.handles:
 			try:
 				os.close(src)
-				os.clone(dst)
+				os.close(dst)
 			except:
 				pass
 
