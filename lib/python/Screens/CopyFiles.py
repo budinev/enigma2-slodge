@@ -32,31 +32,41 @@ class CopyFileTask(Components.Task.PythonTask):
 
 	def work(self):
 		print("[CopyFileTask] handles ", len(self.handles))
-		for src, dst in self.handles:
-			try:
-				count = os.stat(src).st_size
-				if self.aborted:
-					print("[CopyFileTask] aborting")
-					raise Exception("Aborted")
-				bytesSent = os.sendfile(dst, src, 0, count)
-				if bytesSent < count:
-					raise Exception("sendfile failed!")
-			except Exception as ex:
-				print("[CopyFileTask]", ex)
-				for s, d in self.fileList:
-					# Remove incomplete data.
-					try:
-						os.unlink(d)
-					except:
-						pass
-				raise
-		# In any event, close all handles
-		for src, dst in self.handles:
-			try:
-				os.close(src)
-				os.clone(dst)
-			except:
-				pass
+
+		BS = 8 * 1024 * 1024  # 8 MB for sendfile
+		try:
+			for src, dst in self.handles:
+				size = os.fstat(src).st_size
+				offset = 0
+
+				while offset < size:
+					if self.aborted:
+						print("[CopyFileTask] aborting")
+						raise Exception("Aborted")
+
+					to_send = min(BS, size - offset)
+					sent = os.sendfile(dst, src, offset, to_send)
+					if sent <= 0:
+						raise Exception("sendfile failed!")
+					offset += sent
+					self.pos += sent
+		except Exception as ex:
+			print("[CopyFileTask]", ex)
+			for s, d in self.fileList:
+				# Remove incomplete data.
+				try:
+					os.unlink(d)
+				except:
+					pass
+			raise
+		finally:
+			# In any event, close all handles
+			for src, dst in self.handles:
+				try:
+					os.close(src)
+					os.close(dst)
+				except:
+					pass
 
 
 class MoveFileTask(CopyFileTask):
