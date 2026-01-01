@@ -1186,7 +1186,7 @@ msgid "Audio track (%s) language"
 msgstr "Sprache der Tonspur (%s)"
 
 msgid "Audio volume step size"
-msgstr "Audio-Lautstärke Schrittgröße"
+msgstr "Schrittgröße der Lautstärkeveränderung"
 
 msgid "Australia"
 msgstr "Australien"
@@ -2225,7 +2225,7 @@ msgid "Configure the general audio delay of stereo sound tracks."
 msgstr "Generelle Audio-Verzögerung von Stereo Tonspuren."
 
 msgid "Configure the general audio volume step size (limit 1-10)."
-msgstr "Konfigurieren Sie die allgemeine Audio-Lautstärke Schrittgröße (Grenze 1-10)."
+msgstr "Schrittgröße der Lautstärkeveränderung pro Knopfdruck (zwischen 1-10)."
 
 msgid "Configure the hard disk drive to go to standby after the specified idle time."
 msgstr "Standby der Festplatte nach einer gewissen Zeit."
@@ -2234,10 +2234,10 @@ msgid "Configure the horizontal alignment of the subtitles."
 msgstr "Horizontale Ausrichtung der Untertitel."
 
 msgid "Configure the initial fast forward speed. When you press the fast forward button, winding will start at this speed."
-msgstr "Anfängliche Vorspul-Geschwindigkeit. Wenn die Vorspul-Taste betätigt wird, wird diese Geschwindigkeit zum Spulen verwendet."
+msgstr "Anfangs-Vorspulgeschwindigkeit. Wenn die Vorspul-Taste betätigt wird, wird mit dieser Geschwindigkeit vorgespult."
 
 msgid "Configure the initial rewind speed. When you press the rewind button, winding will start at this speed."
-msgstr "Anfängliche Rückspul-Geschwindigkeit. Wenn die Rückspultaste betätigt wird, wird diese Geschwindigkeit zum Spulen verwendet."
+msgstr "Anfangs-Rückspulgeschwindigkeit. Wenn die Rückspul-Taste betätigt wird, wird mit dieser Geschwindigkeit zurückgespult."
 
 msgid "Configure the latitude of your location."
 msgstr "Breitengrad Ihres Standortes."
@@ -2264,10 +2264,10 @@ msgid "Configure the offline decoding delay in milliseconds. The configured dela
 msgstr "Lokale Dekodierungsverzögerung in Millisekunden. Die gesetzte Verzögerung wird bei jedem Kontrollwortparität-Wechsel beachtet."
 
 msgid "Configure the possible fast forward speeds."
-msgstr "Mögliche Vorspul-Geschwindigkeiten."
+msgstr "Mögliche Vorspulgeschwindigkeiten."
 
 msgid "Configure the possible rewind speeds."
-msgstr "Mögliche Rückspul-Geschwindigkeiten."
+msgstr "Mögliche Rückspulgeschwindigkeiten."
 
 msgid "Configure the primary EPG language."
 msgstr "Primäre EPG-Sprache."
@@ -3484,7 +3484,7 @@ msgstr "Favoriteneditor anschalten"
 
 #, fuzzy
 msgid "Enable filtering in SingleEPG"
-msgstr "Aktiviere Virgin EPG"
+msgstr "Filtern in Single EPG"
 
 msgid "Enable freesat EPG"
 msgstr "Aktiviere Freesat EPG"
@@ -3511,7 +3511,7 @@ msgid "Enable remote enigma2 receiver to be tried to tune into services that can
 msgstr "Aktiviert einen Reserve-Tuner, der versucht wird wenn ein Sender lokal nicht empfangen werden kann. (z.B. wenn Tuner belegt oder Sender lokal nicht verfügbar ist). Angabe der kompletten URL inklusive http:// und Port-Nummer (normal ...:8001), z.B. http://zweite_box:8001 notwendig."
 
 msgid "Enable setting a time interval for filtering events in SingleEPG using the 'Stop' button."
-msgstr ""
+msgstr "Aktiviere einen Zeitintervall um Ereignisse im Single EPG zu filtern. Einstellung mit 'Stop'-Taster."
 
 msgid "Enable teletext caching"
 msgstr "Aktiviere Teletext-Cache"
@@ -4053,7 +4053,7 @@ msgid "Fast epoch"
 msgstr "Schnell Zeitraum"
 
 msgid "Fast forward speeds"
-msgstr "Vorspul-Geschwindigkeiten"
+msgstr "Vorspulgeschwindigkeiten"
 
 msgid "FastScan"
 msgstr "Fast-Scan"
@@ -4953,7 +4953,7 @@ msgid "Init"
 msgstr "Initialisieren"
 
 msgid "Initial fast forward speed"
-msgstr "Initiale Vorspul-Geschwindigkeit"
+msgstr "Anfangs-Vorspulgeschwindigkeit"
 
 msgid "Initial location in new timers"
 msgstr "Initialer Ort für neue Timer"
@@ -4962,16 +4962,16 @@ msgid "Initial lock ratio"
 msgstr "Initiales Signalverhältnis"
 
 msgid "Initial rewind speed"
-msgstr "Initiale Rückspul-Geschwindigkeit"
+msgstr "Anfangs-Rückspulgeschwindigkeit"
 
 msgid "Initial scroll delay"
-msgstr "Anfangsscrollverzögerung"
+msgstr "Anfangs-Scrollverzögerung"
 
 msgid "Initial signal quality"
-msgstr "Initiale Signal Qualität"
+msgstr "Initiale Signalqualität"
 
 msgid "Initial signal quality:"
-msgstr "Initiale Signal Qualität:"
+msgstr "Initiale Signalqualität:"
 
 msgid "Initialization"
 msgstr "Initialisierung"
@@ -7875,7 +7875,7 @@ msgid "Reverse list"
 msgstr "Liste umdrehen"
 
 msgid "Rewind speeds"
-msgstr "Rückspul-Geschwindigkeiten"
+msgstr "Rückspulgeschwindigkeiten"
 
 msgid "Rewrap subtitles"
 msgstr "Untertitel umbrechen"
@@ -9649,13 +9649,13 @@ msgid "Stop Sleeptimer"
 msgstr "Ausschalt-Timer"
 
 msgid "Stop all current recordings"
-msgstr "Alle aktuellen Aufnahmen beenden"
+msgstr "Alle laufenden Aufnahmen beenden"
 
 msgid "Stop all streams"
-msgstr "Stoppen Sie alle Streams"
+msgstr "Alle Streams stoppen"
 
 msgid "Stop and delete all current recordings"
-msgstr "Alle aktuellen Aufnahmen beenden und löschen"
+msgstr "Alle laufenden Aufnahmen beenden und löschen"
 
 msgid "Stop and delete recording"
 msgstr "Aufnahme beenden und löschen"
@@ -9673,7 +9673,7 @@ msgid "Stop current event but not coming events"
 msgstr "Laufendes Ereignis abbrechen, aber kommende ausführen"
 
 msgid "Stop current stream"
-msgstr "Stoppen Sie den aktuellen Stream"
+msgstr "Aktuellen Stream stoppen"
 
 msgid "Stop entry"
 msgstr "Element stoppen"
@@ -9743,7 +9743,7 @@ msgstr "Stream"
 
 #, fuzzy
 msgid "Stream Relay delay"
-msgstr "Scroll Verzögerrung"
+msgstr "Stream Relay Verzögerrung"
 
 #, fuzzy
 msgid "Stream Type"
@@ -11435,7 +11435,7 @@ msgid "Volume"
 msgstr "Lautstärke"
 
 msgid "Volume down"
-msgstr "Lautstärke veringern"
+msgstr "Lautstärke verringern"
 
 msgid "Volume keys on the receiver remote will control the TV volume."
 msgstr "Lautstärke der Fernbedienung steuert auch die Lautstärke des TV"
