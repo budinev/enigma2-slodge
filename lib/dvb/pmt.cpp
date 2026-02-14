@@ -1115,3 +1115,8 @@ void eDVBServicePMTHandler::removeCaHandler()
 	if (m_channel)
 		eDVBCIInterfaces::getInstance()->removePMTHandler(this);
 }
+
+bool eDVBServicePMTHandler::isCiConnected()
+{
+	return eDVBCIInterfaces::getInstance()->isCiConnected(this);
+}

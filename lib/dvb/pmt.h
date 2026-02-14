@@ -137,6 +137,7 @@ public:
 	void sendEventNoPatEntry();
 	void getHBBTVUrl(std::string &ret) const { ret = m_HBBTVUrl; }
 	void setCaDisable(bool disable) { m_ca_disabled = disable; }
+	bool isCiConnected();
 	void allocatePVRChannel();
 
 	enum serviceType
