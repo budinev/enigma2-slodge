@@ -215,7 +215,6 @@ public:
 	void recheckPMTHandlers();
 	void executeRecheckPMTHandlersInMainloop();
 	void gotPMT(eDVBServicePMTHandler *pmthandler);
-	bool isCiConnected(eDVBServicePMTHandler *pmthandler);
 	void ciRemoved(eDVBCISlot *slot);
 	int getSlotState(int slot);
 
