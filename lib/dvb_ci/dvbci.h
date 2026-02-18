@@ -215,7 +215,6 @@ public:
 	void recheckPMTHandlers();
 	void executeRecheckPMTHandlersInMainloop();
 	void gotPMT(eDVBServicePMTHandler *pmthandler);
-	bool isCiConnected(eDVBServicePMTHandler *pmthandler);
 	void ciRemoved(eDVBCISlot *slot);
 	int getSlotState(int slot);
 
@@ -228,6 +227,7 @@ public:
 	int answerEnq(int slot, char *value);
 	int cancelEnq(int slot);
 	int getMMIState(int slot);
+	bool isCiConnected(eDVBServicePMTHandler *pmthandler);
 	int setInputSource(int tunerno, const std::string &source);
 	int setCIClockRate(int slot, int rate);
 	void setCIPlusRouting(int slotid);

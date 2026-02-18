@@ -117,8 +117,6 @@ public:
 
 		eventStopped,
 		eventChannelAllocated,
-		eventStreamCorrupt,
-		eventCIConnected,  // a CI slot was assigned to this service after recheckPMTHandlers
 	};
 #ifndef SWIG
 	sigc::signal<void(int)> serviceEvent;
@@ -139,6 +137,7 @@ public:
 	void sendEventNoPatEntry();
 	void getHBBTVUrl(std::string &ret) const { ret = m_HBBTVUrl; }
 	void setCaDisable(bool disable) { m_ca_disabled = disable; }
+	bool isCiConnected();
 	void allocatePVRChannel();
 
 	enum serviceType
@@ -167,7 +166,6 @@ public:
 	void free();
 	void addCaHandler();
 	void removeCaHandler();
-	bool isCiConnected();
 private:
 	bool m_have_cached_program;
 	program m_cached_program;
