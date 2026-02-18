@@ -405,22 +405,23 @@ void eDVBCAHandler::newConnection(int socket)
 	ePMTClient *client = new ePMTClient(this, client_fd);
 	clients.push_back(client);
 
-	/* Always distribute current CAPMTs first (legacy format, works for all clients) */
-	distributeCAPMT();
-
-	/* Send CLIENT_INFO only when appropriate:
-	 * - Protocol-3 already established (OSCam reconnect): always send
-	 * - First connection ever: send to probe for Protocol-3 support
-	 * - Legacy client detected (no SERVER_INFO after first attempt): skip
-	 *   to avoid unnecessary errors in legacy softcam logs */
 	if (m_protocol3_established)
 	{
+		/* Protocol-3 reconnect: complete handshake first, distributeCAPMT()
+		 * will be called from processServerInfoPacket() */
 		client->sendClientInfo();
 	}
 	else if (!m_handshake_attempted)
 	{
+		/* First connection: send legacy CAPMTs, then probe for Protocol-3 */
+		distributeCAPMT();
 		client->sendClientInfo();
 		m_handshake_attempted = true;
+	}
+	else
+	{
+		/* Legacy softcam - send CAPMTs immediately */
+		distributeCAPMT();
 	}
 }
 
@@ -569,6 +570,25 @@ int eDVBCAHandler::unregisterService(const eServiceReferenceDVB &ref, int adapte
 			{
 				if (!used_demux_slots)  // no more used.. so we remove it
 				{
+					/*
+					 * Send CMD_NOT_SELECTED to tell the softcam to stop
+					 * descrambling this service before we delete it.
+					 * Without this, switching from an encrypted channel
+					 * to FTA/IPTV would leave the softcam in descrambling
+					 * state (e.g. ecm.info not removed).
+					 */
+					if (m_protocol3_established && caservice->getCAPMTVersion() >= 0)
+					{
+						for (ePtrList<ePMTClient>::iterator client_it = clients.begin(); client_it != clients.end(); ++client_it)
+						{
+							if (client_it->state() == eSocket::Connection)
+							{
+								eDebug("[eDVBCAHandler] sending CMD_NOT_SELECTED for service %s", caservice->toString().c_str());
+								caservice->writeCAPMTObject(*client_it, LIST_UPDATE, CMD_NOT_SELECTED);
+							}
+						}
+					}
+
 					delete it->second;
 					services.erase(it);
 
