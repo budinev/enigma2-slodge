@@ -867,13 +867,13 @@ def InitUsageConfig():
 			eDVBLocalTimeHandler.getInstance().setUseDVBTime(False)
 			print("[UsageConfig] NTP enabled, DVB time disabled")
 
-		eEPGCache.getInstance().timeUpdated()
+		if configElement.value != "auto":
+			eEPGCache.getInstance().timeUpdated()
 
 	config.ntp.timesync = ConfigSelection(default="auto", choices=[("auto", _("auto")), ("dvb", _("Transponder Time")), ("ntp", _("Internet (ntp)"))])
 	config.ntp.timesync.addNotifier(timesyncChanged)
 	config.ntp.server = ConfigText("", fixed_size=False)
-	config.ntp.server_old = ConfigText("")
-	config.ntp.server.addNotifier(ntpHandler.setServer, immediate_feedback=False)
+	config.ntp.server.addNotifier(ntpHandler.setServer, initial_call=False, immediate_feedback=False)
 
 
 def updateChoices(sel, choices):
@@ -1024,7 +1024,7 @@ class NtpHandler:
 
 	def isUsable(self):
 		try:
-			result = subprocess.check_output('chronyc tracking', shell=True, text=True)
+			result = subprocess.check_output(["chronyc", "tracking"], text=True)
 		except subprocess.CalledProcessError:
 			return False
 		return "Leap status     : Normal" in result
@@ -1069,7 +1069,7 @@ class NtpHandler:
 				print("[UsageConfig] Unsupported Chrony status action: %s" % action)
 
 	def setServer(self, configElement):
-		if configElement.value != config.ntp.server_old.value and " " not in configElement.value:
+		if " " not in configElement.value:
 			f = open("/etc/chrony.conf", "r")
 			lst = f.readlines()
 			f.close()
@@ -1085,7 +1085,6 @@ class NtpHandler:
 						x = "server %s iburst minpoll 3 prefer\n" % configElement.value
 				f.write(x)
 			f.close()
-			config.ntp.server_old.value = configElement.value
 			self.console.ePopen('/etc/init.d/chronyd status', self.chronyStatusFinished, 'sync')
 			print("[UsageConfig] NTP enabled, local server is set to: %s" % configElement.value)
 
