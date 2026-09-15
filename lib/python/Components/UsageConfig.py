@@ -163,9 +163,10 @@ def InitUsageConfig():
 		("flat+remotegroups", _("Flat by key group on remote"))])
 
 	config.usage.startup_to_standby = ConfigSelection(default="no", choices=[
-		("no", _("no")),
-		("yes", _("yes")),
-		("except", _("No, except Wakeup timer"))])
+		("no", _("No")),
+		("except", _("Yes, only wake-up timers")),
+		("yes", _("Yes, after cold start only")),
+		("restart", _("Yes, always"))])
 
 	config.usage.wakeup_enabled = ConfigSelection(default="no", choices=[
 		("no", _("no")),
@@ -826,6 +827,13 @@ def InitUsageConfig():
 	config.misc.softcam_streamrelay_port = ConfigInteger(default=17999, limits=(0, 65535))
 	config.misc.softcam_streamrelay_delay = ConfigSelectionNumber(min=0, max=2000, stepwidth=50, default=100, wraparound=True)
 
+	config.misc.softcam_softcsa = ConfigSelection(default=0, choices=[
+		(0, _("Off")),
+		(1, _("Whitelist")),
+		(2, _("Auto"))
+	])
+	config.misc.softcam_use_softcsa = ConfigYesNo(default=False)
+
 	config.softcsa = ConfigSubsection()
 	config.softcsa.decoderRelease = ConfigSelection(default=0, choices=[
 		(0, _("Quick")),
@@ -843,8 +851,9 @@ def InitUsageConfig():
 		default=0,
 		choices=[(0, _("Disabled"))] + [(x, _("%d ms") % x) for x in range(100, 2001, 100)]
 	)
-	config.softcsa.useStreamRelayWhitelist = ConfigYesNo(default=True)
 
+	config.streamrelay = ConfigSubsection()
+	config.streamrelay.useWhitelist = ConfigYesNo(default=False)
 
 	config.ntp = ConfigSubsection()
 
