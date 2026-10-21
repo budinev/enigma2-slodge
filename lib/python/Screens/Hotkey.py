@@ -63,6 +63,7 @@ class hotkey:
 		("Up", "cross_up", ""),
 		("Down", "cross_down", ""),
 		("Ok", "ok", ""),
+		("Ok" + " " + _("long"), "ok_long", ""),
 		("Channel up", "channelup", ""),
 		("Channel down", "channeldown", ""),
 		("Page up", "pageUp", ""),
@@ -142,7 +143,7 @@ def getHotkeyFunctions():
 				twinPaths[plugin.path[24:]] = 1
 			hotkey.functions.append((plugin.name, plugin.path[24:] + "/" + str(twinPaths[plugin.path[24:]]), "EPG"))
 			twinPlugins.append(plugin.name)
-	pluginlist = plugins.getPlugins([PluginDescriptor.WHERE_PLUGINMENU, PluginDescriptor.WHERE_EXTENSIONSMENU])
+	pluginlist = plugins.getPlugins([PluginDescriptor.WHERE_PLUGINMENU, PluginDescriptor.WHERE_EXTENSIONSMENU, PluginDescriptor.WHERE_BUTTONSETUP])
 	pluginlist.sort(key=lambda p: p.name)
 	for plugin in pluginlist:
 		if plugin.name not in twinPlugins and plugin.path:
@@ -649,7 +650,7 @@ class InfoBarHotkey:
 							self.runPlugin(plugin)
 							return
 						twinPlugins.append(plugin.name)
-				pluginlist = plugins.getPlugins([PluginDescriptor.WHERE_PLUGINMENU, PluginDescriptor.WHERE_EXTENSIONSMENU])
+				pluginlist = plugins.getPlugins([PluginDescriptor.WHERE_PLUGINMENU, PluginDescriptor.WHERE_EXTENSIONSMENU, PluginDescriptor.WHERE_BUTTONSETUP])
 				pluginlist.sort(key=lambda p: p.name)
 				for plugin in pluginlist:
 					if plugin.name not in twinPlugins and plugin.path:
